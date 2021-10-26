@@ -1,5 +1,5 @@
-# Mutational antigenic profiling of the B.1.351 SARS-CoV-2 RBD
-The effects of mutations on antibody and serum binding to the RBD from the B.1.351 SARS-CoV-2 variant.
+# Mutational antigenic profiling of the Delta SARS-CoV-2 RBD
+The effects of mutations on antibody and serum binding to the RBD from the Delta (B.1.617.2) SARS-CoV-2 variant.
 
 Study and analysis by Allie Greaney, Tyler Starr, [Jesse Bloom](https://research.fhcrc.org/bloom/en.html), and co-authors.
 
