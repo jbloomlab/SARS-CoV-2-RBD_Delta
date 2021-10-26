@@ -1,0 +1,21 @@
+# config for analysis
+aggregate_fract_infect_csvs: results/neut_titers/fracinfect.csv
+
+elisa_data_dir: data/rbd_depletion_elisas
+elisa_data_files:
+  - 08Oct21_ELISA.csv
+  - 15Oct21_ELISA.csv
+
+depletions:
+  - mock depleted
+  - 1x depleted
+  - 2x depleted
+  - 3x depleted
+
+haarvi_rbd_depletions: data/haarvi_rbd_depletion_foldchange_ic50.csv
+
+# enter all the samples and stuff to ignore here
+neut_samples_ignore: False
+
+# the neutralization limit of detection is equal to the starting dilution
+NT50_LOD: 25
