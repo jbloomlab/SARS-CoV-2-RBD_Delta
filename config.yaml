@@ -10,7 +10,7 @@ max_cpus: 16
 amplicons: data/PacBio_amplicons.gb
 
 # the primary target for which we are calling mutations
-primary_target: B1351
+primary_target: Delta
 
 # how to parse the amplicon
 feature_parse_specs: data/feature_parse_specs.yaml
@@ -35,13 +35,7 @@ site_number_offset: 330  # add this to sequential sites to get RBD numbering
 
 # URLs from which we download binding & expression of mutants & variants
 # for the original DMS of SARS-CoV-2 Wuhan-1 RBD
-mut_bind_expr_url: https://media.githubusercontent.com/media/jbloomlab/SARS-CoV-2-RBD_DMS/master/results/single_mut_effects/single_mut_effects.csv
 early2020_mut_bind_expr_url: https://media.githubusercontent.com/media/jbloomlab/SARS-CoV-2-RBD_DMS/master/results/single_mut_effects/single_mut_effects.csv
-
-# use preliminary ACE2 binding and RBD expression values?
-dms_scores_preliminary: True
-# for now, I will download the CSV file that contains preliminary mutant bind and expression scores because the `variants` repo is still private
-prelim_mut_bind_expr: data/final_variant_scores.csv
 
 # GISAID mutation counts file
 gisaid_mutation_counts: data/210801_mutation_counts.csv
