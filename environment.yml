@@ -1,4 +1,4 @@
-name: SARS-CoV-2-RBD_B.1.351
+name: SARS-CoV-2-RBD_Delta
 channels:
   - bioconda
   - conda-forge
@@ -14,7 +14,6 @@ dependencies:
   - minimap2=2.18
   - natsort
   - nodejs
-  - pbccs=6.0.0
   - pip
   - python=3.8
   - scikit-learn

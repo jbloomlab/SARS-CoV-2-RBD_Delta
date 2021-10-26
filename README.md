@@ -25,13 +25,13 @@ The **first time** you check out this repo, run the following command to use thi
 Then don't worry about it anymore.
 
 ### Build the computing environment
-First, set up the computing environment, which is partially done via `conda`.
-Ensure you have `conda` installed; if not install it via Miniconda as described [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/#regular-installation).
+First, set up the computing environment, which is partially done via [`mamba`](https://mamba.readthedocs.io/en/latest/), which is essentially a faster `conda`.
+Ensure you have `mamba` installed; if not install it via Miniconda as described [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/#regular-installation).
 If you have not previously built the conda environment, then build the environment specified in [environment.yml](environment.yml) to `./env` with:
 
-    conda env create -f environment.yml -p ./env
+    mamba env create -f environment.yml -p ./env
 
-After building the environment, activate it with:
+After building the environment, simply activate it with `conda` with:
 
     conda activate ./env
 
