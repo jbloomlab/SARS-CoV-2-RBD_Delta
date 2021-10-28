@@ -78,7 +78,7 @@ rule make_summary:
         rulegraph=os.path.join(config['summary_dir'], 'rulegraph.svg'),
         get_early2020_mut_bind_expr=config['early2020_mut_bind_expr'],
         get_early2020_escape_fracs=config['early2020_escape_fracs'],
-        # bind_expr_filters=nb_markdown('bind_expr_filters.ipynb'),
+        # bind_expr_filters=nb_markdown('bind_expr_filters.ipynb'), # change config['prelim_mut_bind_expr'] to config['final_variant_scores_mut_file']
         process_ccs=nb_markdown('process_ccs.ipynb'),
         build_variants=nb_markdown('build_variants.ipynb'),
         codon_variant_table=config['codon_variant_table'],
@@ -241,7 +241,7 @@ rule make_rulegraph:
 #         escape_profiles_config=config['escape_profiles_config'],
 #         site_color_schemes=config['site_color_schemes'],
 #         wildtype_sequence=config['wildtype_sequence'],
-#         mut_bind_expr=config['mut_bind_expr'],
+#         mut_bind_expr=config['final_variant_scores_mut_file'],
 #         strong_escape_sites=config['strong_escape_sites'],
 #     output:
 #         nb_markdown=nb_markdown('escape_profiles.ipynb'),
@@ -268,9 +268,7 @@ rule make_rulegraph:
 #     input:
 #         config['variant_counts'],
 #         config['wildtype_sequence'],
-#         # config['mut_bind_expr'],
-#         # config['variant_expr'],
-#         # config['variant_bind'],
+        # config['final_variant_scores_mut_file'],
 #     output:
 #         nb_markdown=nb_markdown('counts_to_scores.ipynb'),
 #         escape_scores=config['escape_scores'],
@@ -293,72 +291,149 @@ rule make_rulegraph:
 #     shell:
 #         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
-# rule aggregate_variant_counts:
-#     input:
-#         counts=expand(os.path.join(config['counts_dir'],
-#                                    "{sample_lib}_counts.csv"),
-#                       sample_lib=barcode_runs_expandR1['sample_lib']),
-#         fates=expand(os.path.join(config['counts_dir'],
-#                                   "{sample_lib}_fates.csv"),
-#                      sample_lib=barcode_runs_expandR1['sample_lib']),
-#         variant_table=config['codon_variant_table'],
-#         wt_seq=config['wildtype_sequence'],
-#         barcode_runs=config['barcode_runs'],
-#     output:
-#         config['variant_counts'],
-#         nb_markdown=nb_markdown('aggregate_variant_counts.ipynb')
-#     params:
-#         nb='aggregate_variant_counts.ipynb'
-#     shell:
-#         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+rule bind_expr_filters:
+    """QC checks on bind & expression filters from DMS data.
+    """
+    input:
+        config['final_variant_scores_mut_file'],
+        config['early2020_escape_fracs']
+    output:
+        nb_markdown=nb_markdown('bind_expr_filters.ipynb')
+    params:
+        nb='bind_expr_filters.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
-# rule count_variants:
-#     """Count variants for a specific sample."""
-#     input:
-#         variant_table=config['codon_variant_table'],
-#         wt_seq=config['wildtype_sequence'],
-#         r1s=lambda wildcards: (barcode_runs_expandR1
-#                                .set_index('sample_lib')
-#                                .at[wildcards.sample_lib, 'R1']
-#                                ),
-#     output:
-#         counts=os.path.join(config['counts_dir'], "{sample_lib}_counts.csv"),
-#         fates=os.path.join(config['counts_dir'], "{sample_lib}_fates.csv"),
-#     params:
-#         sample_lib="{sample_lib}"
-#     run:
-#         # parse sample and library from `sample_lib` wildcard
-#         lib = params.sample_lib.split('_')[-1]
-#         sample = params.sample_lib[: -len(lib) - 1]
-#         assert sample == (barcode_runs_expandR1
-#                           .set_index('sample_lib')
-#                           .at[params.sample_lib, 'sample']
-#                           )
-#         assert lib == (barcode_runs_expandR1
-#                        .set_index('sample_lib')
-#                        .at[params.sample_lib, 'library']
-#                        )
-#         # initialize `CodonVariantTable` (used to get valid barcodes)
-#         wt_seqrecord = Bio.SeqIO.read(input.wt_seq, 'fasta')
-#         geneseq = str(wt_seqrecord.seq)
-#         primary_target = wt_seqrecord.name
-#         variants=dms_variants.codonvarianttable.CodonVariantTable(
-#                     geneseq=geneseq,
-#                     barcode_variant_file=input.variant_table,
-#                     substitutions_are_codon=True,
-#                     substitutions_col='codon_substitutions',
-#                     primary_target=primary_target)
-#         # initialize `IlluminaBarcodeParser`
-#         parser = dms_variants.illuminabarcodeparser.IlluminaBarcodeParser(
-#                     valid_barcodes=variants.valid_barcodes(lib),
-#                     **config['illumina_barcode_parser_params'])
-#         # parse barcodes
-#         counts, fates = parser.parse(input.r1s,
-#                                      add_cols={'library': lib,
-#                                                'sample': sample})
-#         # write files
-#         counts.to_csv(output.counts, index=False)
-#         fates.to_csv(output.fates, index=False)
+rule collapse_scores:
+    input:
+        config['Titeseq_Kds_file'],
+        config['expression_sortseq_file'],
+        config['PSR_bind_file']
+    output:
+        config['final_variant_scores_mut_file'],
+        md='results/summary/collapse_scores.md',
+        md_files=directory('results/summary/collapse_scores_files')
+    envmodules:
+        'R/3.6.2-foss-2019b'
+    params:
+        nb='collapse_scores.Rmd',
+        md='collapse_scores.md',
+        md_files='collapse_scores_files'
+    shell:
+        """
+        R -e \"rmarkdown::render(input=\'{params.nb}\')\";
+        mv {params.md} {output.md};
+        mv {params.md_files} {output.md_files}
+        """
+
+rule fit_titrations:
+    input:
+        config['codon_variant_table_file'],
+        config['variant_counts_file']
+    output:
+        config['Titeseq_Kds_file'],
+        md='results/summary/compute_binding_Kd.md',
+        md_files=directory('results/summary/compute_binding_Kd_files')
+    envmodules:
+        'R/3.6.2-foss-2019b'
+    params:
+        nb='compute_binding_Kd.Rmd',
+        md='compute_binding_Kd.md',
+        md_files='compute_binding_Kd_files'
+    shell:
+        """
+        R -e \"rmarkdown::render(input=\'{params.nb}\')\";
+        mv {params.md} {output.md};
+        mv {params.md_files} {output.md_files}
+        """
+        
+rule calculate_expression:
+    input:
+        config['codon_variant_table_file'],
+        config['variant_counts_file']
+    output:
+        config['expression_sortseq_file'],
+        md='results/summary/compute_expression_meanF.md',
+        md_files=directory('results/summary/compute_expression_meanF_files')
+    envmodules:
+        'R/3.6.2-foss-2019b'
+    params:
+        nb='compute_expression_meanF.Rmd',
+        md='compute_expression_meanF.md',
+        md_files='compute_expression_meanF_files'
+    shell:
+        """
+        R -e \"rmarkdown::render(input=\'{params.nb}\')\";
+        mv {params.md} {output.md};
+        mv {params.md_files} {output.md_files}
+        """
+        
+rule aggregate_variant_counts:
+    input:
+        counts=expand(os.path.join(config['counts_dir'],
+                                   "{sample_lib}_counts.csv"),
+                      sample_lib=barcode_runs_expandR1['sample_lib']),
+        fates=expand(os.path.join(config['counts_dir'],
+                                  "{sample_lib}_fates.csv"),
+                     sample_lib=barcode_runs_expandR1['sample_lib']),
+        variant_table=config['codon_variant_table'],
+        wt_seq=config['wildtype_sequence'],
+        barcode_runs=config['barcode_runs'],
+    output:
+        config['variant_counts'],
+        nb_markdown=nb_markdown('aggregate_variant_counts.ipynb')
+    params:
+        nb='aggregate_variant_counts.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+
+rule count_variants:
+    """Count variants for a specific sample."""
+    input:
+        variant_table=config['codon_variant_table'],
+        wt_seq=config['wildtype_sequence'],
+        r1s=lambda wildcards: (barcode_runs_expandR1
+                               .set_index('sample_lib')
+                               .at[wildcards.sample_lib, 'R1']
+                               ),
+    output:
+        counts=os.path.join(config['counts_dir'], "{sample_lib}_counts.csv"),
+        fates=os.path.join(config['counts_dir'], "{sample_lib}_fates.csv"),
+    params:
+        sample_lib="{sample_lib}"
+    run:
+        # parse sample and library from `sample_lib` wildcard
+        lib = params.sample_lib.split('_')[-1]
+        sample = params.sample_lib[: -len(lib) - 1]
+        assert sample == (barcode_runs_expandR1
+                          .set_index('sample_lib')
+                          .at[params.sample_lib, 'sample']
+                          )
+        assert lib == (barcode_runs_expandR1
+                       .set_index('sample_lib')
+                       .at[params.sample_lib, 'library']
+                       )
+        # initialize `CodonVariantTable` (used to get valid barcodes)
+        wt_seqrecord = Bio.SeqIO.read(input.wt_seq, 'fasta')
+        geneseq = str(wt_seqrecord.seq)
+        primary_target = wt_seqrecord.name
+        variants=dms_variants.codonvarianttable.CodonVariantTable(
+                    geneseq=geneseq,
+                    barcode_variant_file=input.variant_table,
+                    substitutions_are_codon=True,
+                    substitutions_col='codon_substitutions',
+                    primary_target=primary_target)
+        # initialize `IlluminaBarcodeParser`
+        parser = dms_variants.illuminabarcodeparser.IlluminaBarcodeParser(
+                    valid_barcodes=variants.valid_barcodes(lib),
+                    **config['illumina_barcode_parser_params'])
+        # parse barcodes
+        counts, fates = parser.parse(input.r1s,
+                                     add_cols={'library': lib,
+                                               'sample': sample})
+        # write files
+        counts.to_csv(output.counts, index=False)
+        fates.to_csv(output.fates, index=False)
 
 rule build_variants:
     """Build variant table from processed CCSs."""
@@ -371,18 +446,6 @@ rule build_variants:
         nb='build_variants.ipynb'
     shell:
         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
-
-# rule bind_expr_filters:
-#     """QC checks on bind & expression filters from DMS data.
-#     """
-#     input:
-#         config['early2020_escape_fracs']
-#     output:
-#         nb_markdown=nb_markdown('bind_expr_filters.ipynb')
-#     params:
-#         nb='bind_expr_filters.ipynb'
-#     shell:
-#         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
 rule get_early2020_escape_fracs:
     """Download escape_fracs for early 2020 polyclonal plasmas
