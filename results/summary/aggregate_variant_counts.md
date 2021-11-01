@@ -149,7 +149,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>210930_s01-b1</td>
       <td>TiteSeq</td>
-      <td>1,051,589</td>
+      <td>1051589</td>
       <td>NaN</td>
       <td>TiteSeq_01_bin1</td>
       <td>TiteSeq_01_bin1_lib1</td>
@@ -165,7 +165,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>210930_s01-b2</td>
       <td>TiteSeq</td>
-      <td>624,665</td>
+      <td>624665</td>
       <td>NaN</td>
       <td>TiteSeq_01_bin2</td>
       <td>TiteSeq_01_bin2_lib1</td>
@@ -181,7 +181,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>210930_s01-b3</td>
       <td>TiteSeq</td>
-      <td>1,279,752</td>
+      <td>1279752</td>
       <td>NaN</td>
       <td>TiteSeq_01_bin3</td>
       <td>TiteSeq_01_bin3_lib1</td>
@@ -197,7 +197,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>210930_s01-b4</td>
       <td>TiteSeq</td>
-      <td>8,085,751</td>
+      <td>8085751</td>
       <td>NaN</td>
       <td>TiteSeq_01_bin4</td>
       <td>TiteSeq_01_bin4_lib1</td>
@@ -213,7 +213,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>210930_s02-b1</td>
       <td>TiteSeq</td>
-      <td>1,295,531</td>
+      <td>1295531</td>
       <td>NaN</td>
       <td>TiteSeq_02_bin1</td>
       <td>TiteSeq_02_bin1_lib1</td>
@@ -229,7 +229,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>210930_s02-b2</td>
       <td>TiteSeq</td>
-      <td>751,800</td>
+      <td>751800</td>
       <td>NaN</td>
       <td>TiteSeq_02_bin2</td>
       <td>TiteSeq_02_bin2_lib1</td>
@@ -245,7 +245,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>210930_s02-b3</td>
       <td>TiteSeq</td>
-      <td>1,384,388</td>
+      <td>1384388</td>
       <td>NaN</td>
       <td>TiteSeq_02_bin3</td>
       <td>TiteSeq_02_bin3_lib1</td>
@@ -261,7 +261,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>210930_s02-b4</td>
       <td>TiteSeq</td>
-      <td>7,525,560</td>
+      <td>7525560</td>
       <td>NaN</td>
       <td>TiteSeq_02_bin4</td>
       <td>TiteSeq_02_bin4_lib1</td>
@@ -277,7 +277,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>210930_s03-b1</td>
       <td>TiteSeq</td>
-      <td>1,907,453</td>
+      <td>1907453</td>
       <td>NaN</td>
       <td>TiteSeq_03_bin1</td>
       <td>TiteSeq_03_bin1_lib1</td>
@@ -293,7 +293,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>210930_s03-b2</td>
       <td>TiteSeq</td>
-      <td>1,014,961</td>
+      <td>1014961</td>
       <td>NaN</td>
       <td>TiteSeq_03_bin2</td>
       <td>TiteSeq_03_bin2_lib1</td>
@@ -309,7 +309,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>210930_s03-b3</td>
       <td>TiteSeq</td>
-      <td>2,828,799</td>
+      <td>2828799</td>
       <td>NaN</td>
       <td>TiteSeq_03_bin3</td>
       <td>TiteSeq_03_bin3_lib1</td>
@@ -325,7 +325,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>210930_s03-b4</td>
       <td>TiteSeq</td>
-      <td>5,160,695</td>
+      <td>5160695</td>
       <td>NaN</td>
       <td>TiteSeq_03_bin4</td>
       <td>TiteSeq_03_bin4_lib1</td>
@@ -341,7 +341,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>210930_s04-b1</td>
       <td>TiteSeq</td>
-      <td>3,974,523</td>
+      <td>3974523</td>
       <td>NaN</td>
       <td>TiteSeq_04_bin1</td>
       <td>TiteSeq_04_bin1_lib1</td>
@@ -357,7 +357,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>210930_s04-b2</td>
       <td>TiteSeq</td>
-      <td>5,063,344</td>
+      <td>5063344</td>
       <td>NaN</td>
       <td>TiteSeq_04_bin2</td>
       <td>TiteSeq_04_bin2_lib1</td>
@@ -373,7 +373,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>210930_s04-b3</td>
       <td>TiteSeq</td>
-      <td>2,535,131</td>
+      <td>2535131</td>
       <td>NaN</td>
       <td>TiteSeq_04_bin3</td>
       <td>TiteSeq_04_bin3_lib1</td>
@@ -389,7 +389,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>210930_s04-b4</td>
       <td>TiteSeq</td>
-      <td>21,217</td>
+      <td>21217</td>
       <td>NaN</td>
       <td>TiteSeq_04_bin4</td>
       <td>TiteSeq_04_bin4_lib1</td>
@@ -405,7 +405,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>210930_s05-b1</td>
       <td>TiteSeq</td>
-      <td>8,755,411</td>
+      <td>8755411</td>
       <td>NaN</td>
       <td>TiteSeq_05_bin1</td>
       <td>TiteSeq_05_bin1_lib1</td>
@@ -421,7 +421,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>210930_s05-b2</td>
       <td>TiteSeq</td>
-      <td>1,388,715</td>
+      <td>1388715</td>
       <td>NaN</td>
       <td>TiteSeq_05_bin2</td>
       <td>TiteSeq_05_bin2_lib1</td>
@@ -437,7 +437,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>210930_s05-b3</td>
       <td>TiteSeq</td>
-      <td>15,062</td>
+      <td>15062</td>
       <td>NaN</td>
       <td>TiteSeq_05_bin3</td>
       <td>TiteSeq_05_bin3_lib1</td>
@@ -453,7 +453,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>210930_s05-b4</td>
       <td>TiteSeq</td>
-      <td>1,177</td>
+      <td>1177</td>
       <td>NaN</td>
       <td>TiteSeq_05_bin4</td>
       <td>TiteSeq_05_bin4_lib1</td>
@@ -469,7 +469,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>210930_s06-b1</td>
       <td>TiteSeq</td>
-      <td>10,867,246</td>
+      <td>10867246</td>
       <td>NaN</td>
       <td>TiteSeq_06_bin1</td>
       <td>TiteSeq_06_bin1_lib1</td>
@@ -485,7 +485,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>210930_s06-b2</td>
       <td>TiteSeq</td>
-      <td>361,944</td>
+      <td>361944</td>
       <td>NaN</td>
       <td>TiteSeq_06_bin2</td>
       <td>TiteSeq_06_bin2_lib1</td>
@@ -501,7 +501,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>210930_s06-b3</td>
       <td>TiteSeq</td>
-      <td>2,821</td>
+      <td>2821</td>
       <td>NaN</td>
       <td>TiteSeq_06_bin3</td>
       <td>TiteSeq_06_bin3_lib1</td>
@@ -533,7 +533,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>210930_s07-b1</td>
       <td>TiteSeq</td>
-      <td>10,674,416</td>
+      <td>10674416</td>
       <td>NaN</td>
       <td>TiteSeq_07_bin1</td>
       <td>TiteSeq_07_bin1_lib1</td>
@@ -549,7 +549,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>210930_s07-b2</td>
       <td>TiteSeq</td>
-      <td>317,920</td>
+      <td>317920</td>
       <td>NaN</td>
       <td>TiteSeq_07_bin2</td>
       <td>TiteSeq_07_bin2_lib1</td>
@@ -565,7 +565,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>210930_s07-b3</td>
       <td>TiteSeq</td>
-      <td>1,751</td>
+      <td>1751</td>
       <td>NaN</td>
       <td>TiteSeq_07_bin3</td>
       <td>TiteSeq_07_bin3_lib1</td>
@@ -597,7 +597,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>210930_s08-b1</td>
       <td>TiteSeq</td>
-      <td>10,498,611</td>
+      <td>10498611</td>
       <td>NaN</td>
       <td>TiteSeq_08_bin1</td>
       <td>TiteSeq_08_bin1_lib1</td>
@@ -613,7 +613,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>210930_s08-b2</td>
       <td>TiteSeq</td>
-      <td>273,334</td>
+      <td>273334</td>
       <td>NaN</td>
       <td>TiteSeq_08_bin2</td>
       <td>TiteSeq_08_bin2_lib1</td>
@@ -629,7 +629,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>210930_s08-b3</td>
       <td>TiteSeq</td>
-      <td>1,358</td>
+      <td>1358</td>
       <td>NaN</td>
       <td>TiteSeq_08_bin3</td>
       <td>TiteSeq_08_bin3_lib1</td>
@@ -661,7 +661,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>210930_s09-b1</td>
       <td>TiteSeq</td>
-      <td>10,330,150</td>
+      <td>10330150</td>
       <td>NaN</td>
       <td>TiteSeq_09_bin1</td>
       <td>TiteSeq_09_bin1_lib1</td>
@@ -677,7 +677,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>210930_s09-b2</td>
       <td>TiteSeq</td>
-      <td>230,095</td>
+      <td>230095</td>
       <td>NaN</td>
       <td>TiteSeq_09_bin2</td>
       <td>TiteSeq_09_bin2_lib1</td>
@@ -693,7 +693,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>210930_s09-b3</td>
       <td>TiteSeq</td>
-      <td>1,127</td>
+      <td>1127</td>
       <td>NaN</td>
       <td>TiteSeq_09_bin3</td>
       <td>TiteSeq_09_bin3_lib1</td>
@@ -725,7 +725,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>211004_s10-b1</td>
       <td>TiteSeq</td>
-      <td>1,489,987</td>
+      <td>1489987</td>
       <td>NaN</td>
       <td>TiteSeq_01_bin1</td>
       <td>TiteSeq_01_bin1_lib2</td>
@@ -741,7 +741,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>211004_s10-b2</td>
       <td>TiteSeq</td>
-      <td>1,041,294</td>
+      <td>1041294</td>
       <td>NaN</td>
       <td>TiteSeq_01_bin2</td>
       <td>TiteSeq_01_bin2_lib2</td>
@@ -757,7 +757,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>211004_s10-b3</td>
       <td>TiteSeq</td>
-      <td>1,440,735</td>
+      <td>1440735</td>
       <td>NaN</td>
       <td>TiteSeq_01_bin3</td>
       <td>TiteSeq_01_bin3_lib2</td>
@@ -773,7 +773,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>211004_s10-b4</td>
       <td>TiteSeq</td>
-      <td>6,805,287</td>
+      <td>6805287</td>
       <td>NaN</td>
       <td>TiteSeq_01_bin4</td>
       <td>TiteSeq_01_bin4_lib2</td>
@@ -789,7 +789,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>211004_s11-b1</td>
       <td>TiteSeq</td>
-      <td>1,503,469</td>
+      <td>1503469</td>
       <td>NaN</td>
       <td>TiteSeq_02_bin1</td>
       <td>TiteSeq_02_bin1_lib2</td>
@@ -805,7 +805,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>211004_s11-b2</td>
       <td>TiteSeq</td>
-      <td>1,195,636</td>
+      <td>1195636</td>
       <td>NaN</td>
       <td>TiteSeq_02_bin2</td>
       <td>TiteSeq_02_bin2_lib2</td>
@@ -821,7 +821,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>211004_s11-b3</td>
       <td>TiteSeq</td>
-      <td>1,369,891</td>
+      <td>1369891</td>
       <td>NaN</td>
       <td>TiteSeq_02_bin3</td>
       <td>TiteSeq_02_bin3_lib2</td>
@@ -837,7 +837,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>211004_s11-b4</td>
       <td>TiteSeq</td>
-      <td>6,199,468</td>
+      <td>6199468</td>
       <td>NaN</td>
       <td>TiteSeq_02_bin4</td>
       <td>TiteSeq_02_bin4_lib2</td>
@@ -853,7 +853,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>211004_s12-b1</td>
       <td>TiteSeq</td>
-      <td>2,516,347</td>
+      <td>2516347</td>
       <td>NaN</td>
       <td>TiteSeq_03_bin1</td>
       <td>TiteSeq_03_bin1_lib2</td>
@@ -869,7 +869,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>211004_s12-b2</td>
       <td>TiteSeq</td>
-      <td>1,563,793</td>
+      <td>1563793</td>
       <td>NaN</td>
       <td>TiteSeq_03_bin2</td>
       <td>TiteSeq_03_bin2_lib2</td>
@@ -885,7 +885,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>211004_s12-b3</td>
       <td>TiteSeq</td>
-      <td>2,866,509</td>
+      <td>2866509</td>
       <td>NaN</td>
       <td>TiteSeq_03_bin3</td>
       <td>TiteSeq_03_bin3_lib2</td>
@@ -901,7 +901,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>211004_s12-b4</td>
       <td>TiteSeq</td>
-      <td>3,348,279</td>
+      <td>3348279</td>
       <td>NaN</td>
       <td>TiteSeq_03_bin4</td>
       <td>TiteSeq_03_bin4_lib2</td>
@@ -917,7 +917,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>211004_s13-b1</td>
       <td>TiteSeq</td>
-      <td>3,995,432</td>
+      <td>3995432</td>
       <td>NaN</td>
       <td>TiteSeq_04_bin1</td>
       <td>TiteSeq_04_bin1_lib2</td>
@@ -933,7 +933,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>211004_s13-b2</td>
       <td>TiteSeq</td>
-      <td>3,771,838</td>
+      <td>3771838</td>
       <td>NaN</td>
       <td>TiteSeq_04_bin2</td>
       <td>TiteSeq_04_bin2_lib2</td>
@@ -949,7 +949,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>211004_s13-b3</td>
       <td>TiteSeq</td>
-      <td>2,599,381</td>
+      <td>2599381</td>
       <td>NaN</td>
       <td>TiteSeq_04_bin3</td>
       <td>TiteSeq_04_bin3_lib2</td>
@@ -965,7 +965,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>211004_s13-b4</td>
       <td>TiteSeq</td>
-      <td>21,124</td>
+      <td>21124</td>
       <td>NaN</td>
       <td>TiteSeq_04_bin4</td>
       <td>TiteSeq_04_bin4_lib2</td>
@@ -981,7 +981,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>211004_s14-b1</td>
       <td>TiteSeq</td>
-      <td>8,309,153</td>
+      <td>8309153</td>
       <td>NaN</td>
       <td>TiteSeq_05_bin1</td>
       <td>TiteSeq_05_bin1_lib2</td>
@@ -997,7 +997,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>211004_s14-b2</td>
       <td>TiteSeq</td>
-      <td>1,832,983</td>
+      <td>1832983</td>
       <td>NaN</td>
       <td>TiteSeq_05_bin2</td>
       <td>TiteSeq_05_bin2_lib2</td>
@@ -1013,7 +1013,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>211004_s14-b3</td>
       <td>TiteSeq</td>
-      <td>13,763</td>
+      <td>13763</td>
       <td>NaN</td>
       <td>TiteSeq_05_bin3</td>
       <td>TiteSeq_05_bin3_lib2</td>
@@ -1029,7 +1029,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>211004_s14-b4</td>
       <td>TiteSeq</td>
-      <td>1,139</td>
+      <td>1139</td>
       <td>NaN</td>
       <td>TiteSeq_05_bin4</td>
       <td>TiteSeq_05_bin4_lib2</td>
@@ -1045,7 +1045,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>211004_s15-b1</td>
       <td>TiteSeq</td>
-      <td>9,251,911</td>
+      <td>9251911</td>
       <td>NaN</td>
       <td>TiteSeq_06_bin1</td>
       <td>TiteSeq_06_bin1_lib2</td>
@@ -1061,7 +1061,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>211004_s15-b2</td>
       <td>TiteSeq</td>
-      <td>877,051</td>
+      <td>877051</td>
       <td>NaN</td>
       <td>TiteSeq_06_bin2</td>
       <td>TiteSeq_06_bin2_lib2</td>
@@ -1077,7 +1077,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>211004_s15-b3</td>
       <td>TiteSeq</td>
-      <td>1,314</td>
+      <td>1314</td>
       <td>NaN</td>
       <td>TiteSeq_06_bin3</td>
       <td>TiteSeq_06_bin3_lib2</td>
@@ -1109,7 +1109,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>211004_s16-b1</td>
       <td>TiteSeq</td>
-      <td>9,666,170</td>
+      <td>9666170</td>
       <td>NaN</td>
       <td>TiteSeq_07_bin1</td>
       <td>TiteSeq_07_bin1_lib2</td>
@@ -1125,7 +1125,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>211004_s16-b2</td>
       <td>TiteSeq</td>
-      <td>751,446</td>
+      <td>751446</td>
       <td>NaN</td>
       <td>TiteSeq_07_bin2</td>
       <td>TiteSeq_07_bin2_lib2</td>
@@ -1173,7 +1173,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>211004_s17-b1</td>
       <td>TiteSeq</td>
-      <td>9,585,938</td>
+      <td>9585938</td>
       <td>NaN</td>
       <td>TiteSeq_08_bin1</td>
       <td>TiteSeq_08_bin1_lib2</td>
@@ -1189,7 +1189,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>211004_s17-b2</td>
       <td>TiteSeq</td>
-      <td>597,086</td>
+      <td>597086</td>
       <td>NaN</td>
       <td>TiteSeq_08_bin2</td>
       <td>TiteSeq_08_bin2_lib2</td>
@@ -1237,7 +1237,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>211004_s18-b1</td>
       <td>TiteSeq</td>
-      <td>9,781,236</td>
+      <td>9781236</td>
       <td>NaN</td>
       <td>TiteSeq_09_bin1</td>
       <td>TiteSeq_09_bin1_lib2</td>
@@ -1253,7 +1253,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>211004_s18-b2</td>
       <td>TiteSeq</td>
-      <td>365,660</td>
+      <td>365660</td>
       <td>NaN</td>
       <td>TiteSeq_09_bin2</td>
       <td>TiteSeq_09_bin2_lib2</td>

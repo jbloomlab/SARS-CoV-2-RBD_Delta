@@ -90,7 +90,7 @@ rule make_summary:
         variant_expression_file=config['expression_sortseq_file'],
         collapse_scores='results/summary/collapse_scores.md',
         mut_phenos_file=config['final_variant_scores_mut_file'],
-        # counts_to_cells_ratio=nb_markdown('counts_to_cells_ratio.ipynb'),
+        counts_to_cells_ratio=nb_markdown('counts_to_cells_ratio.ipynb'),
         # counts_to_cells_csv=config['counts_to_cells_csv'],
         # counts_to_scores=nb_markdown('counts_to_scores.ipynb'),
         # escape_fracs=config['escape_fracs'],
@@ -135,12 +135,18 @@ rule make_summary:
             4. Count variants and then
                 [aggregate counts]({path(input.aggregate_variant_counts)}) 
                 to create [variant counts file]({path(input.variant_counts)}).
+                
+            5. [Analyze sequencing counts to cells ratio]({path(input.counts_to_cells_ratio)});
+               this prints a list of any samples where this ratio too low. Also
+               creates [a CSV]({path(input.counts_to_cells_csv)}) with the
+               sequencing counts, number of sorted cells, and ratios for
+               all samples.
             
-            5. [Fit titration curves]({path(input.fit_titrations)}) to calculate per-barcode K<sub>D</sub>, recorded in [this file]({path(input.variant_Kds_file)}).
+            6. [Fit titration curves]({path(input.fit_titrations)}) to calculate per-barcode K<sub>D</sub>, recorded in [this file]({path(input.variant_Kds_file)}).
             
-            6. [Analyze Sort-seq]({path(input.calculate_expression)}) to calculate per-barcode RBD expression, recorded in [this file]({path(input.variant_expression_file)}).
+            7. [Analyze Sort-seq]({path(input.calculate_expression)}) to calculate per-barcode RBD expression, recorded in [this file]({path(input.variant_expression_file)}).
             
-            7. [Derive final genotype-level phenotypes from replicate barcoded sequences]({path(input.collapse_scores)}).
+            8. [Derive final genotype-level phenotypes from replicate barcoded sequences]({path(input.collapse_scores)}).
                Generates final phenotypes, recorded in [this file]({path(input.mut_phenos_file)}).
 
 
@@ -149,14 +155,6 @@ rule make_summary:
             """
             ).strip())
 
-            
-            #
-            # 5. [Analyze sequencing counts to cells ratio]({path(input.counts_to_cells_ratio)});
-            #    this prints a list of any samples where this ratio too low. Also
-            #    creates [a CSV]({path(input.counts_to_cells_csv)}) with the
-            #    sequencing counts, number of sorted cells, and ratios for
-            #    all samples.
-            #
             # 6. [Escape scores from variant counts]({path(input.counts_to_scores)}).
             #
             # 7. [Call sites of strong escape]({path(input.call_strong_escape_sites)}),
@@ -293,18 +291,18 @@ rule make_rulegraph:
 #     shell:
 #         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 #
-# rule counts_to_cells_ratio:
-#     input:
-#         config['variant_counts'],
-#         config['barcode_runs'],
-#         config['wildtype_sequence'],
-#     output:
-#         nb_markdown=nb_markdown('counts_to_cells_ratio.ipynb'),
-#         counts_to_cells_csv=config['counts_to_cells_csv'],
-#     params:
-#         nb='counts_to_cells_ratio.ipynb'
-#     shell:
-#         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+rule counts_to_cells_ratio:
+    input:
+        config['variant_counts'],
+        config['barcode_runs'],
+        config['wildtype_sequence'],
+    output:
+        nb_markdown=nb_markdown('counts_to_cells_ratio.ipynb'),
+        counts_to_cells_csv=config['counts_to_cells_csv'],
+    params:
+        nb='counts_to_cells_ratio.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
 rule bind_expr_filters:
     """QC checks on bind & expression filters from DMS data.
