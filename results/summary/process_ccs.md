@@ -205,15 +205,15 @@ display(HTML(pacbio_runs.to_html(index=False)))
   <tbody>
     <tr>
       <td>lib1</td>
-      <td>210701_A</td>
-      <td>lib1_210701_A</td>
-      <td>results/ccs/lib1_210701_A_ccs.fastq.gz</td>
+      <td>211026_A</td>
+      <td>lib1_211026_A</td>
+      <td>results/ccs/lib1_211026_A_ccs.fastq.gz</td>
     </tr>
     <tr>
       <td>lib2</td>
-      <td>210701_A</td>
-      <td>lib2_210701_A</td>
-      <td>results/ccs/lib2_210701_A_ccs.fastq.gz</td>
+      <td>211026_A</td>
+      <td>lib2_211026_A</td>
+      <td>results/ccs/lib2_211026_A_ccs.fastq.gz</td>
     </tr>
   </tbody>
 </table>
@@ -432,11 +432,11 @@ display(HTML(aligned_df.head(1).to_html(index=False)))
   <tbody>
     <tr>
       <td>lib1</td>
-      <td>m64076_210624_232647/47/ccs</td>
-      <td>ins55T ins220G G261C A310G A312T A364T G365T A366G A443C A444C G460A A462G ins509C A511T</td>
-      <td>0.998298</td>
-      <td>TAGAAAATAGTGTAAG</td>
-      <td>0.99999</td>
+      <td>m64272e_211027_153445/18/ccs</td>
+      <td>G436T</td>
+      <td>1.0</td>
+      <td>ACTAAGAAATTAAAAT</td>
+      <td>1.0</td>
       <td>Delta</td>
     </tr>
   </tbody>
