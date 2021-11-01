@@ -83,7 +83,13 @@ rule make_summary:
         build_variants=nb_markdown('build_variants.ipynb'),
         codon_variant_table=config['codon_variant_table'],
         aggregate_variant_counts=nb_markdown('aggregate_variant_counts.ipynb'),
-        # variant_counts=config['variant_counts'],
+        variant_counts=config['variant_counts'],
+        fit_titrations='results/summary/compute_binding_Kd.md',
+        variant_Kds_file=config['Titeseq_Kds_file'],
+        calculate_expression='results/summary/compute_expression_meanF.md',
+        variant_expression_file=config['expression_sortseq_file'],
+        collapse_scores='results/summary/collapse_scores.md',
+        mut_phenos_file=config['final_variant_scores_mut_file'],
         # counts_to_cells_ratio=nb_markdown('counts_to_cells_ratio.ipynb'),
         # counts_to_cells_csv=config['counts_to_cells_csv'],
         # counts_to_scores=nb_markdown('counts_to_scores.ipynb'),
@@ -125,6 +131,17 @@ rule make_summary:
             3. [Build variants from CCSs]({path(input.build_variants)}).
                Creates a [codon variant table]({path(input.codon_variant_table)})
                linking barcodes to the mutations in the variants.
+            
+            4. Count variants and then
+                [aggregate counts]({path(input.aggregate_variant_counts)}) 
+                to create [variant counts file]({path(input.variant_counts)}).
+            
+            5. [Fit titration curves]({path(input.fit_titrations)}) to calculate per-barcode K<sub>D</sub>, recorded in [this file]({path(input.variant_Kds_file)}).
+            
+            6. [Analyze Sort-seq]({path(input.calculate_expression)}) to calculate per-barcode RBD expression, recorded in [this file]({path(input.variant_expression_file)}).
+            
+            7. [Derive final genotype-level phenotypes from replicate barcoded sequences]({path(input.collapse_scores)}).
+               Generates final phenotypes, recorded in [this file]({path(input.mut_phenos_file)}).
 
 
 
@@ -132,9 +149,7 @@ rule make_summary:
             """
             ).strip())
 
-            # 4. Count variants and then
-            #    [aggregate counts]({path(input.aggregate_variant_counts)}) to create
-            #    to create [variant counts file]({path(input.variant_counts)}).
+            
             #
             # 5. [Analyze sequencing counts to cells ratio]({path(input.counts_to_cells_ratio)});
             #    this prints a list of any samples where this ratio too low. Also

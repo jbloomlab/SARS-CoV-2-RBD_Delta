@@ -44,26 +44,27 @@ First, we will read in metadata on our sort samples, the table giving number of 
 
 ```{r input_data}
 #read dataframe with list of barcode runs
-barcode_runs <- read.csv(file=config$barcode_runs,stringsAsFactors=F); barcode_runs <- subset(barcode_runs, select=-c(R1,R1_prefix,R1_samplename,R1_postfix))
+barcode_runs <- read.csv(file=config$barcode_runs,stringsAsFactors=F); barcode_runs <- subset(barcode_runs, select=-c(R1,frac_escape, antibody,HutchBase))
 
 #eliminate rows from barcode_runs that are not from an expression sort-seq experiment
-barcode_runs <- barcode_runs[barcode_runs$sample_type == "TiteSeq",]
+barcode_runs <- barcode_runs[barcode_runs$experiment_type == "TiteSeq",]
 
 #read file giving count of each barcode in each sort partition
-counts <- data.table(read.csv(file=config$variant_counts_file,stringsAsFactors=F))
+counts <- data.table(read.csv(file=config$variant_counts,stringsAsFactors=F))
 
 #eliminate rows from counts that are not part of an titration bin sample
-counts <- subset(counts, sample %in% barcode_runs[barcode_runs$sample_type=="TiteSeq","sample"])
+counts <- subset(counts, sample %in% barcode_runs[barcode_runs$experiment_type=="TiteSeq","sample"])
 
 #read in barcode-variant lookup tables
-dt <- data.table(read.csv(file=config$codon_variant_table_file,stringsAsFactors=F))
+dt <- data.table(read.csv(file=config$codon_variant_table,stringsAsFactors=F))
 
-dt <- merge(counts, dt, by=c("library","barcode"));rm(counts);
+dt <- merge(select(counts, library, barcode, sample, count), dt, by=c("library","barcode"));rm(counts);
 
 
 #make tables giving names of Titeseq samples and the corresponding ACE2 incubation concentrations
-samples_TiteSeq <- data.frame(sample=unique(paste(barcode_runs[barcode_runs$sample_type=="TiteSeq","sample_type"],formatC(barcode_runs[barcode_runs$sample_type=="TiteSeq","concentration"], width=2,flag="0"),sep="_")),conc=c(10^-6, 10^-7, 10^-8, 10^-9, 10^-10, 10^-11, 10^-12, 10^-13,0))
+samples_TiteSeq <- data.frame(sample=unique(paste(barcode_runs[barcode_runs$experiment_type=="TiteSeq","experiment_type"],formatC(barcode_runs[barcode_runs$experiment_type=="TiteSeq","concentration"], width=2,flag="0"),sep="_")),conc=c(10^-6, 10^-7, 10^-8, 10^-9, 10^-10, 10^-11, 10^-12, 10^-13,0))
 
+head(dt)
 ```
 
  Convert from Illumina read counts to estimates of the number of cells that were sorted into a bin, and add some other useful information to our data frame.
@@ -255,9 +256,9 @@ plot.titration <- function(row,output.text=F){
 
 Distribution of Kd estimates, with wt/syn barcodes in purple:
 
-```{r Kd_distribution, fig.width=5, fig.height=12, fig.align="center",dpi=300,dev="png"}
+```{r Kd_distribution, fig.width=6, fig.height=4, fig.align="center",dpi=300,dev="png"}
 par(mfrow=c(1,1))
-hist(log10(dt[,Kd_ACE2]),col="gray40",breaks=60,xlab="log10(KD), ACE2 (M)",main="",xlim=c(-13,-5))
+hist(log10(dt[,Kd_ACE2]),col="gray40",breaks=60,xlab="log10(KD), ACE2 (M)",main="",xlim=c(-12,-4))
 hist(log10(dt[variant_class %in% (c("synonymous","wildtype")),Kd_ACE2]),col="#92278F",add=T,breaks=60)
 #save pdf
 invisible(dev.print(pdf, paste(config$Titeseq_Kds_dir,"/hist_Kd-per-barcode.pdf",sep="")))
@@ -350,12 +351,12 @@ Next, let's filter out poor fits using the value we previously computed, the *no
 Look at nMSR metric versus avgcoutn value, and layer on value of nMSR filtering based on 40x the global median (and percentage filtered from each background). Filter to NA fits with nMSR above this cutoff
 
 
-```{r nMSR_v_cell_count, fig.width=8, fig.height=8, fig.align="center",dpi=300,dev="png"}
+```{r nMSR_v_cell_count, fig.width=4, fig.height=4, fig.align="center",dpi=300,dev="png"}
 median.nMSR <- median(dt$nMSR_ACE2,na.rm=T)
 threshold <- 40
-par(mfrow=c(2,2))
+par(mfrow=c(1,1))
 
-plot(log10(dt[,TiteSeq_avgcount]),dt[,nMSR_ACE2],main=bg,pch=19,col="#00000010",xlab="average cell count (log10)",ylab="nMSR",xlim=c(0,6),ylim=c(0,0.5))
+plot(log10(dt[,TiteSeq_avgcount]),dt[,nMSR_ACE2],pch=19,col="#00000010",xlab="average cell count (log10)",ylab="nMSR",xlim=c(0,6),ylim=c(0,0.5))
 abline(h=threshold*median.nMSR,col="red",lty=2)
 legend("topleft",bty="n",cex=1,legend=paste(format(100*nrow(dt[nMSR_ACE2 > threshold*median.nMSR & !is.na(nMSR_ACE2),])/nrow(dt[!is.na(nMSR_ACE2),]),digits=3),"%"))
 
@@ -371,7 +372,7 @@ dt[,log10Ka := -log10(Kd_ACE2),by=c("barcode","library")]
 
 Let's visualize the final binding measurements as violin plots for the different wildtype targets. In next notebook, we'll evaluate count depth and possibly apply further filtering to remove low-count expression estimates
 
-```{r binding_distribution_vioplot, echo=T, fig.width=6, fig.height=18, fig.align="center", dpi=300,dev="png"}
+```{r binding_distribution_vioplot, echo=T, fig.width=6, fig.height=4, fig.align="center", dpi=300,dev="png"}
 p1 <- ggplot(dt[!is.na(log10Ka),],aes(x=variant_class,y=log10Ka))+
   geom_violin(scale="width")+stat_summary(fun=median,geom="point",size=1)+
   ggtitle("huACE2, log10(Ka)")+xlab("variant class")+theme(axis.text.x=element_text(angle=-90,hjust=0))+

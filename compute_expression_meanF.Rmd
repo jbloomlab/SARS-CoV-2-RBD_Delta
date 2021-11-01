@@ -43,25 +43,27 @@ First, we will read in metadata on our sort samples, the table giving number of 
 
 ```{r input_data}
 #read dataframe with list of barcode runs
-barcode_runs <- read.csv(file=config$barcode_runs,stringsAsFactors=F); barcode_runs <- subset(barcode_runs, select=-c(R1,R1_prefix,R1_samplename,R1_postfix))
+barcode_runs <- read.csv(file=config$barcode_runs,stringsAsFactors=F); barcode_runs <- subset(barcode_runs, select=-c(R1,frac_escape, antibody,HutchBase))
 
 #eliminate rows from barcode_runs that are not from an expression sort-seq experiment
-barcode_runs <- barcode_runs[barcode_runs$sample_type == "SortSeq",]
+barcode_runs <- barcode_runs[barcode_runs$experiment_type == "SortSeq",]
 
 #read file giving count of each barcode in each sort partition
-counts <- data.table(read.csv(file=config$variant_counts_file,stringsAsFactors=F))
+counts <- data.table(read.csv(file=config$variant_counts,stringsAsFactors=F))
 
 #eliminate rows from counts that are not part of an expression sort-seq bin
-counts <- subset(counts, sample %in% barcode_runs[barcode_runs$sample_type=="SortSeq","sample"])
+counts <- subset(counts, sample %in% barcode_runs[barcode_runs$experiment_type=="SortSeq","sample"])
+counts <- counts[, c("library", "barcode", "sample", "count")] 
 
 #read in barcode-variant lookup tables
-dt <- data.table(read.csv(file=config$codon_variant_table_file,stringsAsFactors=F))
+dt <- data.table(read.csv(file=config$codon_variant_table,stringsAsFactors=F))
 
 # merge with barcode counts 
-dt <- merge(counts, dt, by=c("library","barcode")); rm(counts)
+dt <- merge(counts, dt, by=c("library","barcode")); rm(counts) 
 
 ```
- Convert from Illumina read counts to estimates of the number of cells that were sorted into a bin, and add some other useful information to our data frame.
+
+Convert from Illumina read counts to estimates of the number of cells that were sorted into a bin, and add some other useful information to our data frame.
  
 ```{r downweight_counts_by_cells}
 #for each bin, normalize the read counts to the observed ratio of cell recovery among bins
@@ -157,16 +159,15 @@ dt[expr_count<min_count, c("expression","ML_sdF","expr_count") := NA]
 
 Do as violin plots, faceted by each target. In next notebook, we'll evaluate count depth and possibly apply further filtering to remove low-count expression estimates
 
-```{r expression_distribution_vioplot, echo=T, fig.width=6, fig.height=18, fig.align="center", dpi=300,dev="png"}
+```{r expression_distribution_vioplot, echo=T, fig.width=6, fig.height=4, fig.align="center", dpi=300,dev="png"}
 p1 <- ggplot(dt[!is.na(expression),],aes(x=variant_class,y=expression))+
   geom_violin(scale="width")+stat_summary(fun=median,geom="point",size=1)+
-  ggtitle("expression")+xlab("variant class")+theme(axis.text.x=element_text(angle=-90,hjust=0))+
-  facet_wrap(~target,nrow=4)
+  ggtitle("expression")+xlab("variant class")+theme(axis.text.x=element_text(angle=-90,hjust=0))
 
 grid.arrange(p1,ncol=1)
 
 #save pdf
-invisible(dev.print(pdf, paste(config$expression_sortseq_dir,"/violin-plot_meanF-by-target.pdf",sep="")))
+invisible(dev.print(pdf, paste(config$expression_sortseq_dir,"/violin-plot_meanF.pdf",sep="")))
 ```
 
 We have generated expression measurements for `r round(nrow(dt[!is.na(expression)])/nrow(dt)*100,digits=2)`% of the barcodes in our libraries.
