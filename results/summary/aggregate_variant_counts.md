@@ -1,0 +1,2449 @@
+# Aggregate variant counts for all samples
+Separate `Snakemake` rules count the observations of each variant in each sample from the Illumina barcode sequencing.
+This Python Jupyter notebook aggregates all of this counts, and then adds them to a codon variant table.
+
+## Set up analysis
+### Import Python modules.
+Use [plotnine](https://plotnine.readthedocs.io/en/stable/) for ggplot2-like plotting.
+
+The analysis relies heavily on the Bloom lab's [dms_variants](https://jbloomlab.github.io/dms_variants) package:
+
+
+```python
+import glob
+import itertools
+import math
+import os
+import warnings
+
+import Bio.SeqIO
+
+import dms_variants.codonvarianttable
+from dms_variants.constants import CBPALETTE
+import dms_variants.utils
+import dms_variants.plotnine_themes
+
+from IPython.display import display, HTML
+
+import pandas as pd
+
+from plotnine import *
+
+import yaml
+```
+
+Set [plotnine](https://plotnine.readthedocs.io/en/stable/) theme to the gray-grid one defined in `dms_variants`:
+
+
+```python
+theme_set(dms_variants.plotnine_themes.theme_graygrid())
+```
+
+Versions of key software:
+
+
+```python
+print(f"Using dms_variants version {dms_variants.__version__}")
+```
+
+    Using dms_variants version 0.8.10
+
+
+Ignore warnings that clutter output:
+
+
+```python
+warnings.simplefilter('ignore')
+```
+
+Read the configuration file:
+
+
+```python
+with open('config.yaml') as f:
+    config = yaml.safe_load(f)
+```
+
+Make output directory if needed:
+
+
+```python
+os.makedirs(config['counts_dir'], exist_ok=True)
+```
+
+## Initialize codon variant table
+Initialize the [CodonVariantTable](https://jbloomlab.github.io/dms_variants/dms_variants.codonvarianttable.html#dms_variants.codonvarianttable.CodonVariantTable) using the wildtype gene sequence and the CSV file with the table of variants:
+
+
+```python
+wt_seqrecord = Bio.SeqIO.read(config['wildtype_sequence'], 'fasta')
+geneseq = str(wt_seqrecord.seq)
+primary_target = wt_seqrecord.name
+print(f"Read sequence of {len(geneseq)} nt for {primary_target} from {config['wildtype_sequence']}")
+      
+print(f"Initializing CodonVariantTable from gene sequence and {config['codon_variant_table']}")
+      
+variants = dms_variants.codonvarianttable.CodonVariantTable(
+                geneseq=geneseq,
+                barcode_variant_file=config['codon_variant_table'],
+                substitutions_are_codon=True,
+                substitutions_col='codon_substitutions',
+                primary_target=primary_target)
+```
+
+    Read sequence of 603 nt for Delta from data/wildtype_sequence.fasta
+    Initializing CodonVariantTable from gene sequence and results/variants/codon_variant_table.csv
+
+
+## Read barcode counts / fates
+Read data frame with list of all samples (barcode runs):
+
+
+```python
+print(f"Reading list of barcode runs from {config['barcode_runs']}")
+
+barcode_runs = (pd.read_csv(config['barcode_runs'])
+                .assign(sample_lib=lambda x: x['sample'] + '_' + x['library'],
+                        counts_file=lambda x: config['counts_dir'] + '/' + x['sample_lib'] + '_counts.csv',
+                        fates_file=lambda x: config['counts_dir'] + '/' + x['sample_lib'] + '_fates.csv',
+                        )
+                .drop(columns='R1')  # don't need this column, and very large
+                )
+
+assert all(map(os.path.isfile, barcode_runs['counts_file'])), 'missing some counts files'
+assert all(map(os.path.isfile, barcode_runs['fates_file'])), 'missing some fates files'
+
+display(HTML(barcode_runs.to_html(index=False)))
+```
+
+    Reading list of barcode runs from data/barcode_runs.csv
+
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>date</th>
+      <th>experiment</th>
+      <th>library</th>
+      <th>antibody</th>
+      <th>concentration</th>
+      <th>sort_bin</th>
+      <th>HutchBase</th>
+      <th>experiment_type</th>
+      <th>number_cells</th>
+      <th>frac_escape</th>
+      <th>sample</th>
+      <th>sample_lib</th>
+      <th>counts_file</th>
+      <th>fates_file</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>210930_s01-b1</td>
+      <td>TiteSeq</td>
+      <td>1,051,589</td>
+      <td>NaN</td>
+      <td>TiteSeq_01_bin1</td>
+      <td>TiteSeq_01_bin1_lib1</td>
+      <td>results/counts/TiteSeq_01_bin1_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_01_bin1_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>1.0</td>
+      <td>2</td>
+      <td>210930_s01-b2</td>
+      <td>TiteSeq</td>
+      <td>624,665</td>
+      <td>NaN</td>
+      <td>TiteSeq_01_bin2</td>
+      <td>TiteSeq_01_bin2_lib1</td>
+      <td>results/counts/TiteSeq_01_bin2_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_01_bin2_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>1.0</td>
+      <td>3</td>
+      <td>210930_s01-b3</td>
+      <td>TiteSeq</td>
+      <td>1,279,752</td>
+      <td>NaN</td>
+      <td>TiteSeq_01_bin3</td>
+      <td>TiteSeq_01_bin3_lib1</td>
+      <td>results/counts/TiteSeq_01_bin3_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_01_bin3_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>1.0</td>
+      <td>4</td>
+      <td>210930_s01-b4</td>
+      <td>TiteSeq</td>
+      <td>8,085,751</td>
+      <td>NaN</td>
+      <td>TiteSeq_01_bin4</td>
+      <td>TiteSeq_01_bin4_lib1</td>
+      <td>results/counts/TiteSeq_01_bin4_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_01_bin4_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>2.0</td>
+      <td>1</td>
+      <td>210930_s02-b1</td>
+      <td>TiteSeq</td>
+      <td>1,295,531</td>
+      <td>NaN</td>
+      <td>TiteSeq_02_bin1</td>
+      <td>TiteSeq_02_bin1_lib1</td>
+      <td>results/counts/TiteSeq_02_bin1_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_02_bin1_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>2.0</td>
+      <td>2</td>
+      <td>210930_s02-b2</td>
+      <td>TiteSeq</td>
+      <td>751,800</td>
+      <td>NaN</td>
+      <td>TiteSeq_02_bin2</td>
+      <td>TiteSeq_02_bin2_lib1</td>
+      <td>results/counts/TiteSeq_02_bin2_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_02_bin2_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>2.0</td>
+      <td>3</td>
+      <td>210930_s02-b3</td>
+      <td>TiteSeq</td>
+      <td>1,384,388</td>
+      <td>NaN</td>
+      <td>TiteSeq_02_bin3</td>
+      <td>TiteSeq_02_bin3_lib1</td>
+      <td>results/counts/TiteSeq_02_bin3_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_02_bin3_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>2.0</td>
+      <td>4</td>
+      <td>210930_s02-b4</td>
+      <td>TiteSeq</td>
+      <td>7,525,560</td>
+      <td>NaN</td>
+      <td>TiteSeq_02_bin4</td>
+      <td>TiteSeq_02_bin4_lib1</td>
+      <td>results/counts/TiteSeq_02_bin4_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_02_bin4_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>3.0</td>
+      <td>1</td>
+      <td>210930_s03-b1</td>
+      <td>TiteSeq</td>
+      <td>1,907,453</td>
+      <td>NaN</td>
+      <td>TiteSeq_03_bin1</td>
+      <td>TiteSeq_03_bin1_lib1</td>
+      <td>results/counts/TiteSeq_03_bin1_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_03_bin1_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>3.0</td>
+      <td>2</td>
+      <td>210930_s03-b2</td>
+      <td>TiteSeq</td>
+      <td>1,014,961</td>
+      <td>NaN</td>
+      <td>TiteSeq_03_bin2</td>
+      <td>TiteSeq_03_bin2_lib1</td>
+      <td>results/counts/TiteSeq_03_bin2_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_03_bin2_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>3.0</td>
+      <td>3</td>
+      <td>210930_s03-b3</td>
+      <td>TiteSeq</td>
+      <td>2,828,799</td>
+      <td>NaN</td>
+      <td>TiteSeq_03_bin3</td>
+      <td>TiteSeq_03_bin3_lib1</td>
+      <td>results/counts/TiteSeq_03_bin3_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_03_bin3_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>3.0</td>
+      <td>4</td>
+      <td>210930_s03-b4</td>
+      <td>TiteSeq</td>
+      <td>5,160,695</td>
+      <td>NaN</td>
+      <td>TiteSeq_03_bin4</td>
+      <td>TiteSeq_03_bin4_lib1</td>
+      <td>results/counts/TiteSeq_03_bin4_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_03_bin4_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>4.0</td>
+      <td>1</td>
+      <td>210930_s04-b1</td>
+      <td>TiteSeq</td>
+      <td>3,974,523</td>
+      <td>NaN</td>
+      <td>TiteSeq_04_bin1</td>
+      <td>TiteSeq_04_bin1_lib1</td>
+      <td>results/counts/TiteSeq_04_bin1_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_04_bin1_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>4.0</td>
+      <td>2</td>
+      <td>210930_s04-b2</td>
+      <td>TiteSeq</td>
+      <td>5,063,344</td>
+      <td>NaN</td>
+      <td>TiteSeq_04_bin2</td>
+      <td>TiteSeq_04_bin2_lib1</td>
+      <td>results/counts/TiteSeq_04_bin2_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_04_bin2_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>4.0</td>
+      <td>3</td>
+      <td>210930_s04-b3</td>
+      <td>TiteSeq</td>
+      <td>2,535,131</td>
+      <td>NaN</td>
+      <td>TiteSeq_04_bin3</td>
+      <td>TiteSeq_04_bin3_lib1</td>
+      <td>results/counts/TiteSeq_04_bin3_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_04_bin3_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>4.0</td>
+      <td>4</td>
+      <td>210930_s04-b4</td>
+      <td>TiteSeq</td>
+      <td>21,217</td>
+      <td>NaN</td>
+      <td>TiteSeq_04_bin4</td>
+      <td>TiteSeq_04_bin4_lib1</td>
+      <td>results/counts/TiteSeq_04_bin4_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_04_bin4_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>5.0</td>
+      <td>1</td>
+      <td>210930_s05-b1</td>
+      <td>TiteSeq</td>
+      <td>8,755,411</td>
+      <td>NaN</td>
+      <td>TiteSeq_05_bin1</td>
+      <td>TiteSeq_05_bin1_lib1</td>
+      <td>results/counts/TiteSeq_05_bin1_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_05_bin1_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>5.0</td>
+      <td>2</td>
+      <td>210930_s05-b2</td>
+      <td>TiteSeq</td>
+      <td>1,388,715</td>
+      <td>NaN</td>
+      <td>TiteSeq_05_bin2</td>
+      <td>TiteSeq_05_bin2_lib1</td>
+      <td>results/counts/TiteSeq_05_bin2_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_05_bin2_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>5.0</td>
+      <td>3</td>
+      <td>210930_s05-b3</td>
+      <td>TiteSeq</td>
+      <td>15,062</td>
+      <td>NaN</td>
+      <td>TiteSeq_05_bin3</td>
+      <td>TiteSeq_05_bin3_lib1</td>
+      <td>results/counts/TiteSeq_05_bin3_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_05_bin3_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>5.0</td>
+      <td>4</td>
+      <td>210930_s05-b4</td>
+      <td>TiteSeq</td>
+      <td>1,177</td>
+      <td>NaN</td>
+      <td>TiteSeq_05_bin4</td>
+      <td>TiteSeq_05_bin4_lib1</td>
+      <td>results/counts/TiteSeq_05_bin4_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_05_bin4_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>6.0</td>
+      <td>1</td>
+      <td>210930_s06-b1</td>
+      <td>TiteSeq</td>
+      <td>10,867,246</td>
+      <td>NaN</td>
+      <td>TiteSeq_06_bin1</td>
+      <td>TiteSeq_06_bin1_lib1</td>
+      <td>results/counts/TiteSeq_06_bin1_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_06_bin1_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>6.0</td>
+      <td>2</td>
+      <td>210930_s06-b2</td>
+      <td>TiteSeq</td>
+      <td>361,944</td>
+      <td>NaN</td>
+      <td>TiteSeq_06_bin2</td>
+      <td>TiteSeq_06_bin2_lib1</td>
+      <td>results/counts/TiteSeq_06_bin2_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_06_bin2_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>6.0</td>
+      <td>3</td>
+      <td>210930_s06-b3</td>
+      <td>TiteSeq</td>
+      <td>2,821</td>
+      <td>NaN</td>
+      <td>TiteSeq_06_bin3</td>
+      <td>TiteSeq_06_bin3_lib1</td>
+      <td>results/counts/TiteSeq_06_bin3_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_06_bin3_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>6.0</td>
+      <td>4</td>
+      <td>210930_s06-b4</td>
+      <td>TiteSeq</td>
+      <td>420</td>
+      <td>NaN</td>
+      <td>TiteSeq_06_bin4</td>
+      <td>TiteSeq_06_bin4_lib1</td>
+      <td>results/counts/TiteSeq_06_bin4_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_06_bin4_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>7.0</td>
+      <td>1</td>
+      <td>210930_s07-b1</td>
+      <td>TiteSeq</td>
+      <td>10,674,416</td>
+      <td>NaN</td>
+      <td>TiteSeq_07_bin1</td>
+      <td>TiteSeq_07_bin1_lib1</td>
+      <td>results/counts/TiteSeq_07_bin1_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_07_bin1_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>7.0</td>
+      <td>2</td>
+      <td>210930_s07-b2</td>
+      <td>TiteSeq</td>
+      <td>317,920</td>
+      <td>NaN</td>
+      <td>TiteSeq_07_bin2</td>
+      <td>TiteSeq_07_bin2_lib1</td>
+      <td>results/counts/TiteSeq_07_bin2_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_07_bin2_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>7.0</td>
+      <td>3</td>
+      <td>210930_s07-b3</td>
+      <td>TiteSeq</td>
+      <td>1,751</td>
+      <td>NaN</td>
+      <td>TiteSeq_07_bin3</td>
+      <td>TiteSeq_07_bin3_lib1</td>
+      <td>results/counts/TiteSeq_07_bin3_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_07_bin3_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>7.0</td>
+      <td>4</td>
+      <td>210930_s07-b4</td>
+      <td>TiteSeq</td>
+      <td>379</td>
+      <td>NaN</td>
+      <td>TiteSeq_07_bin4</td>
+      <td>TiteSeq_07_bin4_lib1</td>
+      <td>results/counts/TiteSeq_07_bin4_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_07_bin4_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>8.0</td>
+      <td>1</td>
+      <td>210930_s08-b1</td>
+      <td>TiteSeq</td>
+      <td>10,498,611</td>
+      <td>NaN</td>
+      <td>TiteSeq_08_bin1</td>
+      <td>TiteSeq_08_bin1_lib1</td>
+      <td>results/counts/TiteSeq_08_bin1_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_08_bin1_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>8.0</td>
+      <td>2</td>
+      <td>210930_s08-b2</td>
+      <td>TiteSeq</td>
+      <td>273,334</td>
+      <td>NaN</td>
+      <td>TiteSeq_08_bin2</td>
+      <td>TiteSeq_08_bin2_lib1</td>
+      <td>results/counts/TiteSeq_08_bin2_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_08_bin2_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>8.0</td>
+      <td>3</td>
+      <td>210930_s08-b3</td>
+      <td>TiteSeq</td>
+      <td>1,358</td>
+      <td>NaN</td>
+      <td>TiteSeq_08_bin3</td>
+      <td>TiteSeq_08_bin3_lib1</td>
+      <td>results/counts/TiteSeq_08_bin3_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_08_bin3_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>8.0</td>
+      <td>4</td>
+      <td>210930_s08-b4</td>
+      <td>TiteSeq</td>
+      <td>326</td>
+      <td>NaN</td>
+      <td>TiteSeq_08_bin4</td>
+      <td>TiteSeq_08_bin4_lib1</td>
+      <td>results/counts/TiteSeq_08_bin4_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_08_bin4_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>9.0</td>
+      <td>1</td>
+      <td>210930_s09-b1</td>
+      <td>TiteSeq</td>
+      <td>10,330,150</td>
+      <td>NaN</td>
+      <td>TiteSeq_09_bin1</td>
+      <td>TiteSeq_09_bin1_lib1</td>
+      <td>results/counts/TiteSeq_09_bin1_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_09_bin1_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>9.0</td>
+      <td>2</td>
+      <td>210930_s09-b2</td>
+      <td>TiteSeq</td>
+      <td>230,095</td>
+      <td>NaN</td>
+      <td>TiteSeq_09_bin2</td>
+      <td>TiteSeq_09_bin2_lib1</td>
+      <td>results/counts/TiteSeq_09_bin2_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_09_bin2_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>9.0</td>
+      <td>3</td>
+      <td>210930_s09-b3</td>
+      <td>TiteSeq</td>
+      <td>1,127</td>
+      <td>NaN</td>
+      <td>TiteSeq_09_bin3</td>
+      <td>TiteSeq_09_bin3_lib1</td>
+      <td>results/counts/TiteSeq_09_bin3_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_09_bin3_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib1</td>
+      <td>monomeric_ACE2</td>
+      <td>9.0</td>
+      <td>4</td>
+      <td>210930_s09-b4</td>
+      <td>TiteSeq</td>
+      <td>306</td>
+      <td>NaN</td>
+      <td>TiteSeq_09_bin4</td>
+      <td>TiteSeq_09_bin4_lib1</td>
+      <td>results/counts/TiteSeq_09_bin4_lib1_counts.csv</td>
+      <td>results/counts/TiteSeq_09_bin4_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>211004_s10-b1</td>
+      <td>TiteSeq</td>
+      <td>1,489,987</td>
+      <td>NaN</td>
+      <td>TiteSeq_01_bin1</td>
+      <td>TiteSeq_01_bin1_lib2</td>
+      <td>results/counts/TiteSeq_01_bin1_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_01_bin1_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>1.0</td>
+      <td>2</td>
+      <td>211004_s10-b2</td>
+      <td>TiteSeq</td>
+      <td>1,041,294</td>
+      <td>NaN</td>
+      <td>TiteSeq_01_bin2</td>
+      <td>TiteSeq_01_bin2_lib2</td>
+      <td>results/counts/TiteSeq_01_bin2_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_01_bin2_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>1.0</td>
+      <td>3</td>
+      <td>211004_s10-b3</td>
+      <td>TiteSeq</td>
+      <td>1,440,735</td>
+      <td>NaN</td>
+      <td>TiteSeq_01_bin3</td>
+      <td>TiteSeq_01_bin3_lib2</td>
+      <td>results/counts/TiteSeq_01_bin3_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_01_bin3_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>1.0</td>
+      <td>4</td>
+      <td>211004_s10-b4</td>
+      <td>TiteSeq</td>
+      <td>6,805,287</td>
+      <td>NaN</td>
+      <td>TiteSeq_01_bin4</td>
+      <td>TiteSeq_01_bin4_lib2</td>
+      <td>results/counts/TiteSeq_01_bin4_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_01_bin4_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>2.0</td>
+      <td>1</td>
+      <td>211004_s11-b1</td>
+      <td>TiteSeq</td>
+      <td>1,503,469</td>
+      <td>NaN</td>
+      <td>TiteSeq_02_bin1</td>
+      <td>TiteSeq_02_bin1_lib2</td>
+      <td>results/counts/TiteSeq_02_bin1_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_02_bin1_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>2.0</td>
+      <td>2</td>
+      <td>211004_s11-b2</td>
+      <td>TiteSeq</td>
+      <td>1,195,636</td>
+      <td>NaN</td>
+      <td>TiteSeq_02_bin2</td>
+      <td>TiteSeq_02_bin2_lib2</td>
+      <td>results/counts/TiteSeq_02_bin2_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_02_bin2_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>2.0</td>
+      <td>3</td>
+      <td>211004_s11-b3</td>
+      <td>TiteSeq</td>
+      <td>1,369,891</td>
+      <td>NaN</td>
+      <td>TiteSeq_02_bin3</td>
+      <td>TiteSeq_02_bin3_lib2</td>
+      <td>results/counts/TiteSeq_02_bin3_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_02_bin3_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>2.0</td>
+      <td>4</td>
+      <td>211004_s11-b4</td>
+      <td>TiteSeq</td>
+      <td>6,199,468</td>
+      <td>NaN</td>
+      <td>TiteSeq_02_bin4</td>
+      <td>TiteSeq_02_bin4_lib2</td>
+      <td>results/counts/TiteSeq_02_bin4_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_02_bin4_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>3.0</td>
+      <td>1</td>
+      <td>211004_s12-b1</td>
+      <td>TiteSeq</td>
+      <td>2,516,347</td>
+      <td>NaN</td>
+      <td>TiteSeq_03_bin1</td>
+      <td>TiteSeq_03_bin1_lib2</td>
+      <td>results/counts/TiteSeq_03_bin1_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_03_bin1_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>3.0</td>
+      <td>2</td>
+      <td>211004_s12-b2</td>
+      <td>TiteSeq</td>
+      <td>1,563,793</td>
+      <td>NaN</td>
+      <td>TiteSeq_03_bin2</td>
+      <td>TiteSeq_03_bin2_lib2</td>
+      <td>results/counts/TiteSeq_03_bin2_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_03_bin2_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>3.0</td>
+      <td>3</td>
+      <td>211004_s12-b3</td>
+      <td>TiteSeq</td>
+      <td>2,866,509</td>
+      <td>NaN</td>
+      <td>TiteSeq_03_bin3</td>
+      <td>TiteSeq_03_bin3_lib2</td>
+      <td>results/counts/TiteSeq_03_bin3_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_03_bin3_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>3.0</td>
+      <td>4</td>
+      <td>211004_s12-b4</td>
+      <td>TiteSeq</td>
+      <td>3,348,279</td>
+      <td>NaN</td>
+      <td>TiteSeq_03_bin4</td>
+      <td>TiteSeq_03_bin4_lib2</td>
+      <td>results/counts/TiteSeq_03_bin4_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_03_bin4_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>4.0</td>
+      <td>1</td>
+      <td>211004_s13-b1</td>
+      <td>TiteSeq</td>
+      <td>3,995,432</td>
+      <td>NaN</td>
+      <td>TiteSeq_04_bin1</td>
+      <td>TiteSeq_04_bin1_lib2</td>
+      <td>results/counts/TiteSeq_04_bin1_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_04_bin1_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>4.0</td>
+      <td>2</td>
+      <td>211004_s13-b2</td>
+      <td>TiteSeq</td>
+      <td>3,771,838</td>
+      <td>NaN</td>
+      <td>TiteSeq_04_bin2</td>
+      <td>TiteSeq_04_bin2_lib2</td>
+      <td>results/counts/TiteSeq_04_bin2_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_04_bin2_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>4.0</td>
+      <td>3</td>
+      <td>211004_s13-b3</td>
+      <td>TiteSeq</td>
+      <td>2,599,381</td>
+      <td>NaN</td>
+      <td>TiteSeq_04_bin3</td>
+      <td>TiteSeq_04_bin3_lib2</td>
+      <td>results/counts/TiteSeq_04_bin3_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_04_bin3_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>4.0</td>
+      <td>4</td>
+      <td>211004_s13-b4</td>
+      <td>TiteSeq</td>
+      <td>21,124</td>
+      <td>NaN</td>
+      <td>TiteSeq_04_bin4</td>
+      <td>TiteSeq_04_bin4_lib2</td>
+      <td>results/counts/TiteSeq_04_bin4_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_04_bin4_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>5.0</td>
+      <td>1</td>
+      <td>211004_s14-b1</td>
+      <td>TiteSeq</td>
+      <td>8,309,153</td>
+      <td>NaN</td>
+      <td>TiteSeq_05_bin1</td>
+      <td>TiteSeq_05_bin1_lib2</td>
+      <td>results/counts/TiteSeq_05_bin1_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_05_bin1_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>5.0</td>
+      <td>2</td>
+      <td>211004_s14-b2</td>
+      <td>TiteSeq</td>
+      <td>1,832,983</td>
+      <td>NaN</td>
+      <td>TiteSeq_05_bin2</td>
+      <td>TiteSeq_05_bin2_lib2</td>
+      <td>results/counts/TiteSeq_05_bin2_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_05_bin2_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>5.0</td>
+      <td>3</td>
+      <td>211004_s14-b3</td>
+      <td>TiteSeq</td>
+      <td>13,763</td>
+      <td>NaN</td>
+      <td>TiteSeq_05_bin3</td>
+      <td>TiteSeq_05_bin3_lib2</td>
+      <td>results/counts/TiteSeq_05_bin3_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_05_bin3_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>5.0</td>
+      <td>4</td>
+      <td>211004_s14-b4</td>
+      <td>TiteSeq</td>
+      <td>1,139</td>
+      <td>NaN</td>
+      <td>TiteSeq_05_bin4</td>
+      <td>TiteSeq_05_bin4_lib2</td>
+      <td>results/counts/TiteSeq_05_bin4_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_05_bin4_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>6.0</td>
+      <td>1</td>
+      <td>211004_s15-b1</td>
+      <td>TiteSeq</td>
+      <td>9,251,911</td>
+      <td>NaN</td>
+      <td>TiteSeq_06_bin1</td>
+      <td>TiteSeq_06_bin1_lib2</td>
+      <td>results/counts/TiteSeq_06_bin1_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_06_bin1_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>6.0</td>
+      <td>2</td>
+      <td>211004_s15-b2</td>
+      <td>TiteSeq</td>
+      <td>877,051</td>
+      <td>NaN</td>
+      <td>TiteSeq_06_bin2</td>
+      <td>TiteSeq_06_bin2_lib2</td>
+      <td>results/counts/TiteSeq_06_bin2_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_06_bin2_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>6.0</td>
+      <td>3</td>
+      <td>211004_s15-b3</td>
+      <td>TiteSeq</td>
+      <td>1,314</td>
+      <td>NaN</td>
+      <td>TiteSeq_06_bin3</td>
+      <td>TiteSeq_06_bin3_lib2</td>
+      <td>results/counts/TiteSeq_06_bin3_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_06_bin3_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>6.0</td>
+      <td>4</td>
+      <td>211004_s15-b4</td>
+      <td>TiteSeq</td>
+      <td>521</td>
+      <td>NaN</td>
+      <td>TiteSeq_06_bin4</td>
+      <td>TiteSeq_06_bin4_lib2</td>
+      <td>results/counts/TiteSeq_06_bin4_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_06_bin4_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>7.0</td>
+      <td>1</td>
+      <td>211004_s16-b1</td>
+      <td>TiteSeq</td>
+      <td>9,666,170</td>
+      <td>NaN</td>
+      <td>TiteSeq_07_bin1</td>
+      <td>TiteSeq_07_bin1_lib2</td>
+      <td>results/counts/TiteSeq_07_bin1_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_07_bin1_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>7.0</td>
+      <td>2</td>
+      <td>211004_s16-b2</td>
+      <td>TiteSeq</td>
+      <td>751,446</td>
+      <td>NaN</td>
+      <td>TiteSeq_07_bin2</td>
+      <td>TiteSeq_07_bin2_lib2</td>
+      <td>results/counts/TiteSeq_07_bin2_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_07_bin2_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>7.0</td>
+      <td>3</td>
+      <td>211004_s16-b3</td>
+      <td>TiteSeq</td>
+      <td>502</td>
+      <td>NaN</td>
+      <td>TiteSeq_07_bin3</td>
+      <td>TiteSeq_07_bin3_lib2</td>
+      <td>results/counts/TiteSeq_07_bin3_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_07_bin3_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>7.0</td>
+      <td>4</td>
+      <td>211004_s16-b4</td>
+      <td>TiteSeq</td>
+      <td>461</td>
+      <td>NaN</td>
+      <td>TiteSeq_07_bin4</td>
+      <td>TiteSeq_07_bin4_lib2</td>
+      <td>results/counts/TiteSeq_07_bin4_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_07_bin4_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>8.0</td>
+      <td>1</td>
+      <td>211004_s17-b1</td>
+      <td>TiteSeq</td>
+      <td>9,585,938</td>
+      <td>NaN</td>
+      <td>TiteSeq_08_bin1</td>
+      <td>TiteSeq_08_bin1_lib2</td>
+      <td>results/counts/TiteSeq_08_bin1_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_08_bin1_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>8.0</td>
+      <td>2</td>
+      <td>211004_s17-b2</td>
+      <td>TiteSeq</td>
+      <td>597,086</td>
+      <td>NaN</td>
+      <td>TiteSeq_08_bin2</td>
+      <td>TiteSeq_08_bin2_lib2</td>
+      <td>results/counts/TiteSeq_08_bin2_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_08_bin2_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>8.0</td>
+      <td>3</td>
+      <td>211004_s17-b3</td>
+      <td>TiteSeq</td>
+      <td>450</td>
+      <td>NaN</td>
+      <td>TiteSeq_08_bin3</td>
+      <td>TiteSeq_08_bin3_lib2</td>
+      <td>results/counts/TiteSeq_08_bin3_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_08_bin3_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>8.0</td>
+      <td>4</td>
+      <td>211004_s17-b4</td>
+      <td>TiteSeq</td>
+      <td>446</td>
+      <td>NaN</td>
+      <td>TiteSeq_08_bin4</td>
+      <td>TiteSeq_08_bin4_lib2</td>
+      <td>results/counts/TiteSeq_08_bin4_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_08_bin4_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>9.0</td>
+      <td>1</td>
+      <td>211004_s18-b1</td>
+      <td>TiteSeq</td>
+      <td>9,781,236</td>
+      <td>NaN</td>
+      <td>TiteSeq_09_bin1</td>
+      <td>TiteSeq_09_bin1_lib2</td>
+      <td>results/counts/TiteSeq_09_bin1_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_09_bin1_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>9.0</td>
+      <td>2</td>
+      <td>211004_s18-b2</td>
+      <td>TiteSeq</td>
+      <td>365,660</td>
+      <td>NaN</td>
+      <td>TiteSeq_09_bin2</td>
+      <td>TiteSeq_09_bin2_lib2</td>
+      <td>results/counts/TiteSeq_09_bin2_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_09_bin2_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>9.0</td>
+      <td>3</td>
+      <td>211004_s18-b3</td>
+      <td>TiteSeq</td>
+      <td>572</td>
+      <td>NaN</td>
+      <td>TiteSeq_09_bin3</td>
+      <td>TiteSeq_09_bin3_lib2</td>
+      <td>results/counts/TiteSeq_09_bin3_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_09_bin3_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210930</td>
+      <td>TiteSeq</td>
+      <td>lib2</td>
+      <td>monomeric_ACE2</td>
+      <td>9.0</td>
+      <td>4</td>
+      <td>211004_s18-b4</td>
+      <td>TiteSeq</td>
+      <td>587</td>
+      <td>NaN</td>
+      <td>TiteSeq_09_bin4</td>
+      <td>TiteSeq_09_bin4_lib2</td>
+      <td>results/counts/TiteSeq_09_bin4_lib2_counts.csv</td>
+      <td>results/counts/TiteSeq_09_bin4_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210927</td>
+      <td>SortSeq</td>
+      <td>lib1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>210927_lib1_bin1</td>
+      <td>SortSeq</td>
+      <td>3496000</td>
+      <td>NaN</td>
+      <td>SortSeq_bin1</td>
+      <td>SortSeq_bin1_lib1</td>
+      <td>results/counts/SortSeq_bin1_lib1_counts.csv</td>
+      <td>results/counts/SortSeq_bin1_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210927</td>
+      <td>SortSeq</td>
+      <td>lib1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>210927_lib1_bin2</td>
+      <td>SortSeq</td>
+      <td>5250000</td>
+      <td>NaN</td>
+      <td>SortSeq_bin2</td>
+      <td>SortSeq_bin2_lib1</td>
+      <td>results/counts/SortSeq_bin2_lib1_counts.csv</td>
+      <td>results/counts/SortSeq_bin2_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210927</td>
+      <td>SortSeq</td>
+      <td>lib1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>210927_lib1_bin3</td>
+      <td>SortSeq</td>
+      <td>4056000</td>
+      <td>NaN</td>
+      <td>SortSeq_bin3</td>
+      <td>SortSeq_bin3_lib1</td>
+      <td>results/counts/SortSeq_bin3_lib1_counts.csv</td>
+      <td>results/counts/SortSeq_bin3_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210927</td>
+      <td>SortSeq</td>
+      <td>lib1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>210927_lib1_bin4</td>
+      <td>SortSeq</td>
+      <td>5016000</td>
+      <td>NaN</td>
+      <td>SortSeq_bin4</td>
+      <td>SortSeq_bin4_lib1</td>
+      <td>results/counts/SortSeq_bin4_lib1_counts.csv</td>
+      <td>results/counts/SortSeq_bin4_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210927</td>
+      <td>SortSeq</td>
+      <td>lib2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>210927_lib2_bin1</td>
+      <td>SortSeq</td>
+      <td>3108000</td>
+      <td>NaN</td>
+      <td>SortSeq_bin1</td>
+      <td>SortSeq_bin1_lib2</td>
+      <td>results/counts/SortSeq_bin1_lib2_counts.csv</td>
+      <td>results/counts/SortSeq_bin1_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210927</td>
+      <td>SortSeq</td>
+      <td>lib2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>210927_lib2_bin2</td>
+      <td>SortSeq</td>
+      <td>4554000</td>
+      <td>NaN</td>
+      <td>SortSeq_bin2</td>
+      <td>SortSeq_bin2_lib2</td>
+      <td>results/counts/SortSeq_bin2_lib2_counts.csv</td>
+      <td>results/counts/SortSeq_bin2_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210927</td>
+      <td>SortSeq</td>
+      <td>lib2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>210927_lib2_bin3</td>
+      <td>SortSeq</td>
+      <td>4050000</td>
+      <td>NaN</td>
+      <td>SortSeq_bin3</td>
+      <td>SortSeq_bin3_lib2</td>
+      <td>results/counts/SortSeq_bin3_lib2_counts.csv</td>
+      <td>results/counts/SortSeq_bin3_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>210927</td>
+      <td>SortSeq</td>
+      <td>lib2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>210927_lib2_bin4</td>
+      <td>SortSeq</td>
+      <td>5352000</td>
+      <td>NaN</td>
+      <td>SortSeq_bin4</td>
+      <td>SortSeq_bin4_lib2</td>
+      <td>results/counts/SortSeq_bin4_lib2_counts.csv</td>
+      <td>results/counts/SortSeq_bin4_lib2_fates.csv</td>
+    </tr>
+  </tbody>
+</table>
+
+
+Confirm sample / library combinations unique:
+
+
+```python
+assert len(barcode_runs) == len(barcode_runs.groupby(['sample', 'library']))
+```
+
+Make sure the the libraries for which we have barcode runs are all in our variant table:
+
+
+```python
+unknown_libs = set(barcode_runs['library']) - set(variants.libraries)
+if unknown_libs:
+    raise ValueError(f"Libraries with barcode runs not in variant table: {unknown_libs}")
+```
+
+Now concatenate the barcode counts and fates for each sample:
+
+
+```python
+counts = pd.concat([pd.read_csv(f) for f in barcode_runs['counts_file']],
+                   sort=False,
+                   ignore_index=True)
+
+print('First few lines of counts data frame:')
+display(HTML(counts.head().to_html(index=False)))
+
+fates = pd.concat([pd.read_csv(f) for f in barcode_runs['fates_file']],
+                  sort=False,
+                  ignore_index=True)
+
+print('First few lines of fates data frame:')
+display(HTML(fates.head().to_html(index=False)))
+```
+
+    First few lines of counts data frame:
+
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>barcode</th>
+      <th>count</th>
+      <th>library</th>
+      <th>sample</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TTAAATCTACTAAAAG</td>
+      <td>2877</td>
+      <td>lib1</td>
+      <td>TiteSeq_01_bin1</td>
+    </tr>
+    <tr>
+      <td>AAAAGCTCCCACCCGA</td>
+      <td>1883</td>
+      <td>lib1</td>
+      <td>TiteSeq_01_bin1</td>
+    </tr>
+    <tr>
+      <td>AATGACATGGAGCTTA</td>
+      <td>1727</td>
+      <td>lib1</td>
+      <td>TiteSeq_01_bin1</td>
+    </tr>
+    <tr>
+      <td>TCACAATATCGCGTGT</td>
+      <td>1708</td>
+      <td>lib1</td>
+      <td>TiteSeq_01_bin1</td>
+    </tr>
+    <tr>
+      <td>ATCCAAACAAATTGCA</td>
+      <td>1630</td>
+      <td>lib1</td>
+      <td>TiteSeq_01_bin1</td>
+    </tr>
+  </tbody>
+</table>
+
+
+    First few lines of fates data frame:
+
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>fate</th>
+      <th>count</th>
+      <th>library</th>
+      <th>sample</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>valid barcode</td>
+      <td>2149473</td>
+      <td>lib1</td>
+      <td>TiteSeq_01_bin1</td>
+    </tr>
+    <tr>
+      <td>invalid barcode</td>
+      <td>667523</td>
+      <td>lib1</td>
+      <td>TiteSeq_01_bin1</td>
+    </tr>
+    <tr>
+      <td>low quality barcode</td>
+      <td>152056</td>
+      <td>lib1</td>
+      <td>TiteSeq_01_bin1</td>
+    </tr>
+    <tr>
+      <td>unparseable barcode</td>
+      <td>55375</td>
+      <td>lib1</td>
+      <td>TiteSeq_01_bin1</td>
+    </tr>
+    <tr>
+      <td>failed chastity filter</td>
+      <td>53116</td>
+      <td>lib1</td>
+      <td>TiteSeq_01_bin1</td>
+    </tr>
+  </tbody>
+</table>
+
+
+## Examine fates of parsed barcodes
+First, we'll analyze the "fates" of the parsed barcodes.
+These fates represent what happened to each Illumina read we parsed:
+ - Did the barcode read fail the Illumina chastity filter?
+ - Was the barcode *unparseable* (i.e., the read didn't appear to be a valid barcode based on flanking regions)?
+ - Was the barcode sequence too *low quality* based on the Illumina quality scores?
+ - Was the barcode parseable but *invalid* (i.e., not in our list of variant-associated barcodes in the codon variant table)?
+ - Was the barcode *valid*, and so will be added to variant counts.
+ 
+First, we just write a CSV file with all the barcode fates:
+
+
+```python
+fatesfile = os.path.join(config['counts_dir'], 'barcode_fates.csv')
+print(f"Writing barcode fates to {fatesfile}")
+fates.to_csv(fatesfile, index=False)
+```
+
+    Writing barcode fates to results/counts/barcode_fates.csv
+
+
+Next, we tabulate the barcode fates in wide format:
+
+
+```python
+display(HTML(fates
+             .pivot_table(columns='fate',
+                          values='count',
+                          index=['sample', 'library'])
+             .applymap('{:.1e}'.format)  # scientific notation
+             .to_html()
+             ))
+```
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>fate</th>
+      <th>failed chastity filter</th>
+      <th>invalid barcode</th>
+      <th>low quality barcode</th>
+      <th>unparseable barcode</th>
+      <th>valid barcode</th>
+    </tr>
+    <tr>
+      <th>sample</th>
+      <th>library</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">SortSeq_bin1</th>
+      <th>lib1</th>
+      <td>2.0e+05</td>
+      <td>2.7e+06</td>
+      <td>5.5e+05</td>
+      <td>2.2e+05</td>
+      <td>7.3e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.8e+05</td>
+      <td>2.6e+06</td>
+      <td>5.1e+05</td>
+      <td>2.2e+05</td>
+      <td>6.8e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">SortSeq_bin2</th>
+      <th>lib1</th>
+      <td>2.4e+05</td>
+      <td>3.0e+06</td>
+      <td>7.0e+05</td>
+      <td>2.6e+05</td>
+      <td>9.7e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>3.2e+05</td>
+      <td>4.0e+06</td>
+      <td>9.0e+05</td>
+      <td>3.3e+05</td>
+      <td>1.2e+07</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">SortSeq_bin3</th>
+      <th>lib1</th>
+      <td>2.7e+05</td>
+      <td>3.3e+06</td>
+      <td>7.8e+05</td>
+      <td>2.8e+05</td>
+      <td>1.1e+07</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>2.2e+05</td>
+      <td>2.6e+06</td>
+      <td>6.2e+05</td>
+      <td>2.1e+05</td>
+      <td>8.4e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">SortSeq_bin4</th>
+      <th>lib1</th>
+      <td>2.8e+05</td>
+      <td>3.1e+06</td>
+      <td>7.8e+05</td>
+      <td>2.8e+05</td>
+      <td>1.1e+07</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>3.0e+05</td>
+      <td>3.5e+06</td>
+      <td>8.4e+05</td>
+      <td>2.9e+05</td>
+      <td>1.2e+07</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_01_bin1</th>
+      <th>lib1</th>
+      <td>5.3e+04</td>
+      <td>6.7e+05</td>
+      <td>1.5e+05</td>
+      <td>5.5e+04</td>
+      <td>2.1e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>5.3e+04</td>
+      <td>6.7e+05</td>
+      <td>1.5e+05</td>
+      <td>5.1e+04</td>
+      <td>2.0e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_01_bin2</th>
+      <th>lib1</th>
+      <td>3.7e+04</td>
+      <td>4.7e+05</td>
+      <td>1.0e+05</td>
+      <td>5.8e+04</td>
+      <td>1.5e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>4.7e+04</td>
+      <td>6.1e+05</td>
+      <td>1.4e+05</td>
+      <td>4.5e+04</td>
+      <td>1.8e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_01_bin3</th>
+      <th>lib1</th>
+      <td>6.7e+04</td>
+      <td>8.3e+05</td>
+      <td>1.9e+05</td>
+      <td>7.0e+04</td>
+      <td>2.7e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>6.5e+04</td>
+      <td>7.8e+05</td>
+      <td>1.8e+05</td>
+      <td>5.9e+04</td>
+      <td>2.5e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_01_bin4</th>
+      <th>lib1</th>
+      <td>4.1e+05</td>
+      <td>4.6e+06</td>
+      <td>1.2e+06</td>
+      <td>3.8e+05</td>
+      <td>1.6e+07</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.0e+05</td>
+      <td>1.3e+06</td>
+      <td>2.9e+05</td>
+      <td>9.9e+04</td>
+      <td>4.3e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_02_bin1</th>
+      <th>lib1</th>
+      <td>6.0e+04</td>
+      <td>7.5e+05</td>
+      <td>1.7e+05</td>
+      <td>6.4e+04</td>
+      <td>2.4e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.4e+04</td>
+      <td>1.9e+05</td>
+      <td>4.1e+04</td>
+      <td>1.4e+04</td>
+      <td>5.6e+05</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_02_bin2</th>
+      <th>lib1</th>
+      <td>3.9e+04</td>
+      <td>4.7e+05</td>
+      <td>1.1e+05</td>
+      <td>4.1e+04</td>
+      <td>1.5e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>2.9e+04</td>
+      <td>3.5e+05</td>
+      <td>7.8e+04</td>
+      <td>2.9e+04</td>
+      <td>1.1e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_02_bin3</th>
+      <th>lib1</th>
+      <td>6.0e+04</td>
+      <td>7.3e+05</td>
+      <td>1.7e+05</td>
+      <td>7.4e+04</td>
+      <td>2.4e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>7.5e+04</td>
+      <td>9.2e+05</td>
+      <td>2.1e+05</td>
+      <td>6.7e+04</td>
+      <td>3.0e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_02_bin4</th>
+      <th>lib1</th>
+      <td>4.2e+05</td>
+      <td>4.8e+06</td>
+      <td>1.2e+06</td>
+      <td>4.1e+05</td>
+      <td>1.7e+07</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.5e+05</td>
+      <td>1.7e+06</td>
+      <td>4.2e+05</td>
+      <td>1.4e+05</td>
+      <td>5.7e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_03_bin1</th>
+      <th>lib1</th>
+      <td>1.1e+05</td>
+      <td>1.3e+06</td>
+      <td>3.1e+05</td>
+      <td>1.1e+05</td>
+      <td>4.2e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.7e+05</td>
+      <td>2.1e+06</td>
+      <td>4.7e+05</td>
+      <td>1.5e+05</td>
+      <td>6.5e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_03_bin2</th>
+      <th>lib1</th>
+      <td>5.6e+04</td>
+      <td>6.8e+05</td>
+      <td>1.5e+05</td>
+      <td>6.0e+04</td>
+      <td>2.2e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>7.0e+04</td>
+      <td>9.3e+05</td>
+      <td>2.0e+05</td>
+      <td>6.8e+04</td>
+      <td>2.9e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_03_bin3</th>
+      <th>lib1</th>
+      <td>1.6e+05</td>
+      <td>1.9e+06</td>
+      <td>4.5e+05</td>
+      <td>1.5e+05</td>
+      <td>6.2e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.3e+05</td>
+      <td>1.5e+06</td>
+      <td>3.5e+05</td>
+      <td>1.2e+05</td>
+      <td>5.0e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_03_bin4</th>
+      <th>lib1</th>
+      <td>1.4e+05</td>
+      <td>1.6e+06</td>
+      <td>3.9e+05</td>
+      <td>1.5e+05</td>
+      <td>5.6e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.4e+05</td>
+      <td>1.7e+06</td>
+      <td>4.1e+05</td>
+      <td>1.4e+05</td>
+      <td>5.9e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_04_bin1</th>
+      <th>lib1</th>
+      <td>2.3e+05</td>
+      <td>2.8e+06</td>
+      <td>6.4e+05</td>
+      <td>2.3e+05</td>
+      <td>9.0e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>2.3e+05</td>
+      <td>2.9e+06</td>
+      <td>6.3e+05</td>
+      <td>2.1e+05</td>
+      <td>8.9e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_04_bin2</th>
+      <th>lib1</th>
+      <td>1.7e+05</td>
+      <td>2.0e+06</td>
+      <td>4.7e+05</td>
+      <td>1.5e+05</td>
+      <td>6.7e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.7e+05</td>
+      <td>2.1e+06</td>
+      <td>4.9e+05</td>
+      <td>1.6e+05</td>
+      <td>6.9e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_04_bin3</th>
+      <th>lib1</th>
+      <td>8.4e+04</td>
+      <td>9.4e+05</td>
+      <td>2.4e+05</td>
+      <td>7.7e+04</td>
+      <td>3.4e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.1e+05</td>
+      <td>1.2e+06</td>
+      <td>3.0e+05</td>
+      <td>1.2e+05</td>
+      <td>4.3e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_04_bin4</th>
+      <th>lib1</th>
+      <td>1.2e+03</td>
+      <td>8.7e+03</td>
+      <td>2.2e+03</td>
+      <td>3.4e+03</td>
+      <td>3.0e+04</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.1e+03</td>
+      <td>8.5e+03</td>
+      <td>1.9e+03</td>
+      <td>4.4e+03</td>
+      <td>2.7e+04</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_05_bin1</th>
+      <th>lib1</th>
+      <td>6.5e+04</td>
+      <td>7.8e+05</td>
+      <td>1.8e+05</td>
+      <td>6.4e+04</td>
+      <td>2.6e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>3.9e+05</td>
+      <td>4.8e+06</td>
+      <td>1.1e+06</td>
+      <td>3.6e+05</td>
+      <td>1.6e+07</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_05_bin2</th>
+      <th>lib1</th>
+      <td>2.2e+04</td>
+      <td>2.3e+05</td>
+      <td>5.5e+04</td>
+      <td>3.4e+04</td>
+      <td>8.0e+05</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>8.7e+03</td>
+      <td>7.4e+04</td>
+      <td>1.8e+04</td>
+      <td>1.6e+04</td>
+      <td>2.5e+05</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_05_bin3</th>
+      <th>lib1</th>
+      <td>1.3e+03</td>
+      <td>5.2e+03</td>
+      <td>1.3e+03</td>
+      <td>5.7e+03</td>
+      <td>1.8e+04</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>4.5e+02</td>
+      <td>3.3e+03</td>
+      <td>7.3e+02</td>
+      <td>3.3e+03</td>
+      <td>1.0e+04</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_05_bin4</th>
+      <th>lib1</th>
+      <td>1.3e+03</td>
+      <td>2.2e+03</td>
+      <td>4.1e+02</td>
+      <td>1.4e+04</td>
+      <td>2.8e+03</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>4.1e+02</td>
+      <td>5.8e+02</td>
+      <td>1.1e+02</td>
+      <td>5.1e+03</td>
+      <td>1.4e+03</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_06_bin1</th>
+      <th>lib1</th>
+      <td>1.6e+03</td>
+      <td>1.9e+04</td>
+      <td>4.6e+03</td>
+      <td>2.6e+03</td>
+      <td>6.4e+04</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>5.2e+05</td>
+      <td>6.3e+06</td>
+      <td>1.5e+06</td>
+      <td>4.7e+05</td>
+      <td>2.1e+07</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_06_bin2</th>
+      <th>lib1</th>
+      <td>1.5e+04</td>
+      <td>1.8e+05</td>
+      <td>4.2e+04</td>
+      <td>1.6e+04</td>
+      <td>6.1e+05</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>3.3e+04</td>
+      <td>4.0e+05</td>
+      <td>9.3e+04</td>
+      <td>3.1e+04</td>
+      <td>1.3e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_06_bin3</th>
+      <th>lib1</th>
+      <td>1.2e+03</td>
+      <td>1.3e+04</td>
+      <td>2.8e+03</td>
+      <td>2.1e+03</td>
+      <td>3.9e+04</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>2.6e+02</td>
+      <td>9.9e+02</td>
+      <td>2.1e+02</td>
+      <td>4.4e+03</td>
+      <td>2.6e+03</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_06_bin4</th>
+      <th>lib1</th>
+      <td>1.1e+03</td>
+      <td>6.7e+03</td>
+      <td>1.6e+03</td>
+      <td>7.7e+03</td>
+      <td>2.2e+04</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>3.4e+02</td>
+      <td>1.7e+02</td>
+      <td>3.0e+01</td>
+      <td>6.1e+03</td>
+      <td>1.8e+02</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_07_bin1</th>
+      <th>lib1</th>
+      <td>5.7e+05</td>
+      <td>6.6e+06</td>
+      <td>1.6e+06</td>
+      <td>5.4e+05</td>
+      <td>2.3e+07</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>5.5e+04</td>
+      <td>6.7e+05</td>
+      <td>1.5e+05</td>
+      <td>5.5e+04</td>
+      <td>2.2e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_07_bin2</th>
+      <th>lib1</th>
+      <td>2.5e+04</td>
+      <td>2.8e+05</td>
+      <td>6.6e+04</td>
+      <td>3.5e+04</td>
+      <td>9.2e+05</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>4.0e+04</td>
+      <td>4.9e+05</td>
+      <td>1.1e+05</td>
+      <td>4.5e+04</td>
+      <td>1.6e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_07_bin3</th>
+      <th>lib1</th>
+      <td>1.4e+03</td>
+      <td>1.4e+04</td>
+      <td>3.2e+03</td>
+      <td>2.3e+03</td>
+      <td>4.5e+04</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>2.4e+02</td>
+      <td>8.0e+02</td>
+      <td>1.9e+02</td>
+      <td>4.5e+03</td>
+      <td>2.2e+03</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_07_bin4</th>
+      <th>lib1</th>
+      <td>4.5e+02</td>
+      <td>2.7e+03</td>
+      <td>6.5e+02</td>
+      <td>1.0e+03</td>
+      <td>8.9e+03</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>2.6e+03</td>
+      <td>1.8e+02</td>
+      <td>3.1e+01</td>
+      <td>1.2e+04</td>
+      <td>2.9e+02</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_08_bin1</th>
+      <th>lib1</th>
+      <td>5.1e+05</td>
+      <td>6.2e+06</td>
+      <td>1.5e+06</td>
+      <td>4.8e+05</td>
+      <td>2.1e+07</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>4.0e+05</td>
+      <td>4.8e+06</td>
+      <td>1.1e+06</td>
+      <td>4.3e+05</td>
+      <td>1.6e+07</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_08_bin2</th>
+      <th>lib1</th>
+      <td>1.1e+04</td>
+      <td>1.1e+05</td>
+      <td>2.5e+04</td>
+      <td>2.3e+04</td>
+      <td>3.5e+05</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>2.3e+04</td>
+      <td>2.8e+05</td>
+      <td>6.6e+04</td>
+      <td>2.6e+04</td>
+      <td>9.1e+05</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_08_bin3</th>
+      <th>lib1</th>
+      <td>1.3e+03</td>
+      <td>1.1e+04</td>
+      <td>2.6e+03</td>
+      <td>2.4e+03</td>
+      <td>3.4e+04</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>4.1e+02</td>
+      <td>5.3e+02</td>
+      <td>1.2e+02</td>
+      <td>8.3e+03</td>
+      <td>1.4e+03</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_08_bin4</th>
+      <th>lib1</th>
+      <td>4.3e+02</td>
+      <td>3.0e+03</td>
+      <td>2.3e+02</td>
+      <td>3.1e+03</td>
+      <td>7.7e+02</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>2.4e+02</td>
+      <td>7.6e+01</td>
+      <td>2.0e+01</td>
+      <td>3.9e+03</td>
+      <td>1.0e+02</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_09_bin1</th>
+      <th>lib1</th>
+      <td>6.5e+05</td>
+      <td>7.6e+06</td>
+      <td>1.8e+06</td>
+      <td>6.1e+05</td>
+      <td>2.6e+07</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>3.0e+05</td>
+      <td>3.6e+06</td>
+      <td>8.7e+05</td>
+      <td>2.9e+05</td>
+      <td>1.2e+07</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_09_bin2</th>
+      <th>lib1</th>
+      <td>8.1e+03</td>
+      <td>9.2e+04</td>
+      <td>2.2e+04</td>
+      <td>1.1e+04</td>
+      <td>3.2e+05</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.2e+04</td>
+      <td>1.5e+05</td>
+      <td>3.4e+04</td>
+      <td>1.4e+04</td>
+      <td>4.8e+05</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_09_bin3</th>
+      <th>lib1</th>
+      <td>8.2e+02</td>
+      <td>7.5e+02</td>
+      <td>1.5e+02</td>
+      <td>5.2e+03</td>
+      <td>1.7e+03</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>7.6e+02</td>
+      <td>1.8e+03</td>
+      <td>1.5e+02</td>
+      <td>9.5e+03</td>
+      <td>3.1e+02</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">TiteSeq_09_bin4</th>
+      <th>lib1</th>
+      <td>1.8e+02</td>
+      <td>8.5e+02</td>
+      <td>2.0e+02</td>
+      <td>1.8e+03</td>
+      <td>2.4e+03</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>3.1e+02</td>
+      <td>1.2e+02</td>
+      <td>3.3e+01</td>
+      <td>3.0e+03</td>
+      <td>1.4e+02</td>
+    </tr>
+  </tbody>
+</table>
+
+
+Now we plot the barcode-read fates for each library / sample, showing the bars for valid barcodes in orange and the others in gray.
+We see that the largest fraction of barcode reads correspond to valid barcodes, and most of the others are invalid barcodes (probably because the map to variants that aren't present in our variant table since we didn't associate all variants with barcodes). The exception to this is lib2 Titeseq_03_bin3; the PCR for this sample in the original sequencing run failed, so we followed it up with a single MiSeq lane. We did not filter out the PhiX reads from this data before parsing, so these PhiX reads will deflate the fraction of valid barcode reads as expected, but does not indicate any problems.
+
+
+```python
+ncol = 4
+nfacets = len(fates.groupby(['sample', 'library']))
+
+barcode_fate_plot = (
+    ggplot(
+        fates
+        .assign(sample=lambda x: pd.Categorical(x['sample'],
+                                                x['sample'].unique(),
+                                                ordered=True),
+                fate=lambda x: pd.Categorical(x['fate'],
+                                              x['fate'].unique(),
+                                              ordered=True),
+                is_valid=lambda x: x['fate'] == 'valid barcode'
+                ), 
+        aes('fate', 'count', fill='is_valid')) +
+    geom_bar(stat='identity') +
+    facet_wrap('~ sample + library', ncol=ncol) +
+    scale_fill_manual(CBPALETTE, guide=False) +
+    theme(figure_size=(3.25 * ncol, 2 * math.ceil(nfacets / ncol)),
+          axis_text_x=element_text(angle=90),
+          panel_grid_major_x=element_blank()
+          ) +
+    scale_y_continuous(labels=dms_variants.utils.latex_sci_not,
+                       name='number of reads')
+    )
+
+_ = barcode_fate_plot.draw()
+```
+
+
+    
+![png](aggregate_variant_counts_files/aggregate_variant_counts_28_0.png)
+    
+
+
+## Add barcode counts to variant table
+Now we use the [CodonVariantTable.add_sample_counts_df](https://jbloomlab.github.io/dms_variants/dms_variants.codonvarianttable.html#dms_variants.codonvarianttable.CodonVariantTable.add_sample_counts_df) method to add the barcode counts to the variant table:
+
+
+```python
+variants.add_sample_counts_df(counts)
+```
+
+The variant table now has a `variant_count_df` attribute that gives a data frame of all the variant counts.
+Here are the first few lines:
+
+
+```python
+display(HTML(variants.variant_count_df.head().to_html(index=False)))
+```
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>target</th>
+      <th>library</th>
+      <th>sample</th>
+      <th>barcode</th>
+      <th>count</th>
+      <th>variant_call_support</th>
+      <th>codon_substitutions</th>
+      <th>aa_substitutions</th>
+      <th>n_codon_substitutions</th>
+      <th>n_aa_substitutions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Delta</td>
+      <td>lib1</td>
+      <td>TiteSeq_01_bin1</td>
+      <td>TTAAATCTACTAAAAG</td>
+      <td>2877</td>
+      <td>80</td>
+      <td>CAG176CCA</td>
+      <td>Q176P</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Delta</td>
+      <td>lib1</td>
+      <td>TiteSeq_01_bin1</td>
+      <td>AAAAGCTCCCACCCGA</td>
+      <td>1883</td>
+      <td>31</td>
+      <td>GGT9GAT CAG176CCA</td>
+      <td>G9D Q176P</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Delta</td>
+      <td>lib1</td>
+      <td>TiteSeq_01_bin1</td>
+      <td>AATGACATGGAGCTTA</td>
+      <td>1727</td>
+      <td>92</td>
+      <td>TTC70GAT AAC171AGA</td>
+      <td>F70D N171R</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Delta</td>
+      <td>lib1</td>
+      <td>TiteSeq_01_bin1</td>
+      <td>TCACAATATCGCGTGT</td>
+      <td>1708</td>
+      <td>59</td>
+      <td>GGC86TTT CTG95CTT GCA192TTG</td>
+      <td>G86F A192L</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Delta</td>
+      <td>lib1</td>
+      <td>TiteSeq_01_bin1</td>
+      <td>ATCCAAACAAATTGCA</td>
+      <td>1630</td>
+      <td>65</td>
+      <td>GGA172TCT</td>
+      <td>G172S</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+
+Write the variant counts data frame to a CSV file.
+It can then be used to re-initialize a [CodonVariantTable](https://jbloomlab.github.io/dms_variants/dms_variants.codonvarianttable.html#dms_variants.codonvarianttable.CodonVariantTable) via its [from_variant_count_df](https://jbloomlab.github.io/dms_variants/dms_variants.codonvarianttable.html#dms_variants.codonvarianttable.CodonVariantTable.from_variant_count_df) method:
+
+
+```python
+print(f"Writing variant counts to {config['variant_counts']}")
+variants.variant_count_df.to_csv(config['variant_counts'], index=False, compression='gzip')
+```
+
+    Writing variant counts to results/counts/variant_counts.csv.gz
+
+
+The [CodonVariantTable](https://jbloomlab.github.io/dms_variants/dms_variants.codonvarianttable.html#dms_variants.codonvarianttable.CodonVariantTable) has lots of nice functions that can be used to analyze the counts it contains.
+However, we do that in the next notebook so we don't have to re-run this entire (rather computationally intensive) notebook every time we want to analyze a new aspect of the counts.

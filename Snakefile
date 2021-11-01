@@ -82,7 +82,7 @@ rule make_summary:
         process_ccs=nb_markdown('process_ccs.ipynb'),
         build_variants=nb_markdown('build_variants.ipynb'),
         codon_variant_table=config['codon_variant_table'],
-        # aggregate_variant_counts=nb_markdown('aggregate_variant_counts.ipynb'),
+        aggregate_variant_counts=nb_markdown('aggregate_variant_counts.ipynb'),
         # variant_counts=config['variant_counts'],
         # counts_to_cells_ratio=nb_markdown('counts_to_cells_ratio.ipynb'),
         # counts_to_cells_csv=config['counts_to_cells_csv'],
