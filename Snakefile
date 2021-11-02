@@ -78,7 +78,7 @@ rule make_summary:
         rulegraph=os.path.join(config['summary_dir'], 'rulegraph.svg'),
         get_early2020_mut_bind_expr=config['early2020_mut_bind_expr'],
         get_early2020_escape_fracs=config['early2020_escape_fracs'],
-        # bind_expr_filters=nb_markdown('bind_expr_filters.ipynb'), # change config['prelim_mut_bind_expr'] to config['final_variant_scores_mut_file']
+        bind_expr_filters=nb_markdown('bind_expr_filters.ipynb'),
         process_ccs=nb_markdown('process_ccs.ipynb'),
         build_variants=nb_markdown('build_variants.ipynb'),
         codon_variant_table=config['codon_variant_table'],
@@ -148,6 +148,8 @@ rule make_summary:
             
             8. [Derive final genotype-level phenotypes from replicate barcoded sequences]({path(input.collapse_scores)}).
                Generates final phenotypes, recorded in [this file]({path(input.mut_phenos_file)}).
+               
+           9. Determine [cutoffs]({path(input.bind_expr_filters)}) for ACE2 binding and RBD expression for serum-escape experiments. 
 
 
 

@@ -80,8 +80,8 @@ escape_score_group_by: barcode
 escape_score_stop_quantile_filter: 0.9
 # Filter variants with mutation with binding or expression scores
 # <= these values
-escape_score_min_bind_mut: -3.0
-escape_score_min_expr_mut: -1.0
+escape_score_min_bind_mut: -1.86
+escape_score_min_expr_mut: -0.75
 # should we just exclude all mutations to sites where the WT is a cysteine?
 exclude_cysteines: True
 # Only retain mutation-level escape fraction estimates when there are
