@@ -1,17 +1,22 @@
----
-title: "Collapse barcodes to final per-RBD/mutant phenotype scores"
-author: "Tyler Starr"
-date: "07/28/2021"
-output:
-  github_document:
-    toc: true
-    html_preview: false
-editor_options: 
-  chunk_output_type: inline
----
-This notebook reads in the per-barcode titration Kds and expression measurements from the `compute_binding_Kd` and `compute_expression_meanF` scripts. It synthesizes these two sets of results and calculates the final 'mean' phenotypes for each variant, and generates some coverage and QC analyses.
+Collapse barcodes to final per-RBD/mutant phenotype scores
+================
+Tyler Starr
+07/28/2021
 
-```{r setup, message=FALSE, warning=FALSE, error=FALSE}
+-   [Setup](#setup)
+-   [Calculate per-variant mean scores within
+    replicates](#calculate-per-variant-mean-scores-within-replicates)
+-   [Calculate per-mutant score across
+    libraries](#calculate-per-mutant-score-across-libraries)
+-   [Heatmaps!](#heatmaps)
+
+This notebook reads in the per-barcode titration Kds and expression
+measurements from the `compute_binding_Kd` and
+`compute_expression_meanF` scripts. It synthesizes these two sets of
+results and calculates the final ‘mean’ phenotypes for each variant, and
+generates some coverage and QC analyses.
+
+``` r
 require("knitr")
 knitr::opts_chunk$set(echo = T)
 knitr::opts_chunk$set(dev.args = list(png = list(type = "cairo")))
@@ -34,16 +39,58 @@ if(!file.exists(config$final_variant_scores_dir)){
   dir.create(file.path(config$final_variant_scores_dir))
 }
 ```
+
 Session info for reproducing environment:
-```{r print_sessionInfo}
+
+``` r
 sessionInfo()
 ```
 
+    ## R version 3.6.2 (2019-12-12)
+    ## Platform: x86_64-pc-linux-gnu (64-bit)
+    ## Running under: Ubuntu 18.04.4 LTS
+    ## 
+    ## Matrix products: default
+    ## BLAS/LAPACK: /app/software/OpenBLAS/0.3.7-GCC-8.3.0/lib/libopenblas_haswellp-r0.3.7.so
+    ## 
+    ## locale:
+    ##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+    ##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+    ##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+    ##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+    ##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+    ## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+    ## 
+    ## attached base packages:
+    ## [1] stats     graphics  grDevices utils     datasets  methods   base     
+    ## 
+    ## other attached packages:
+    ##  [1] egg_0.4.5         gridExtra_2.3     forcats_0.4.0     stringr_1.4.0    
+    ##  [5] dplyr_0.8.3       purrr_0.3.3       readr_1.3.1       tidyr_1.0.0      
+    ##  [9] tibble_3.0.1      ggplot2_3.3.0     tidyverse_1.3.0   data.table_1.12.8
+    ## [13] yaml_2.2.0        knitr_1.26       
+    ## 
+    ## loaded via a namespace (and not attached):
+    ##  [1] tidyselect_0.2.5 xfun_0.11        haven_2.2.0      lattice_0.20-38 
+    ##  [5] colorspace_1.4-1 vctrs_0.2.4      generics_0.0.2   htmltools_0.4.0 
+    ##  [9] rlang_0.4.5      pillar_1.4.3     glue_1.3.1       withr_2.1.2     
+    ## [13] DBI_1.1.0        dbplyr_1.4.2     modelr_0.1.5     readxl_1.3.1    
+    ## [17] lifecycle_0.2.0  munsell_0.5.0    gtable_0.3.0     cellranger_1.1.0
+    ## [21] rvest_0.3.5      evaluate_0.14    fansi_0.4.0      broom_0.5.6     
+    ## [25] Rcpp_1.0.3       scales_1.1.0     backports_1.1.5  jsonlite_1.6    
+    ## [29] fs_1.3.1         hms_0.5.2        digest_0.6.23    stringi_1.4.3   
+    ## [33] grid_3.6.2       cli_2.0.0        tools_3.6.2      magrittr_1.5    
+    ## [37] crayon_1.3.4     pkgconfig_2.0.3  ellipsis_0.3.0   xml2_1.2.2      
+    ## [41] reprex_0.3.0     lubridate_1.7.4  assertthat_0.2.1 rmarkdown_2.0   
+    ## [45] httr_1.4.1       rstudioapi_0.10  R6_2.4.1         nlme_3.1-143    
+    ## [49] compiler_3.6.2
+
 ## Setup
 
-Read in tables of per-barcode expression and binding Kd measurements and combine.
+Read in tables of per-barcode expression and binding Kd measurements and
+combine.
 
-```{r input_data}
+``` r
 dt_bind <- data.table(read.csv(config$Titeseq_Kds_file),stringsAsFactors=F)
 dt_expr <- data.table(read.csv(config$expression_sortseq_file),stringsAsFactors=F)
 
@@ -52,9 +99,11 @@ dt <- merge(dt_bind,dt_expr)
 
 ## Calculate per-variant mean scores within replicates
 
-Calculate the mean binding and expression score collapsed by genotype. Also output the number of barcodes across which a variant score was determined in each library.
+Calculate the mean binding and expression score collapsed by genotype.
+Also output the number of barcodes across which a variant score was
+determined in each library.
 
-```{r calculate_mean_scores}
+``` r
 dt[is.na(log10Ka),TiteSeq_avgcount:=NA]
 dt[is.na(expression),expr_count:=NA]
 
@@ -71,22 +120,30 @@ dt[,avg_count_expr:=mean(expr_count,na.rm=T),by=c("library","target","variant_cl
 dt <- unique(dt[,.(library,target,variant_class,aa_substitutions,n_aa_substitutions,mean_bind,sd_bind,n_bc_bind,avg_count_bind,mean_expr,sd_expr,n_bc_expr,avg_count_expr)])
 ```
 
-Some QC plots. First, look at distribution of number barcodes for binding and expression measurements for single mutant detemrinations. These are 'left-justified' histograms, so the leftmost bar represents the number of genotypes for which no barcodes were collapsed to final measurement in a lib.
+Some QC plots. First, look at distribution of number barcodes for
+binding and expression measurements for single mutant detemrinations.
+These are ‘left-justified’ histograms, so the leftmost bar represents
+the number of genotypes for which no barcodes were collapsed to final
+measurement in a lib.
 
-```{r hist_n_bc_per_mutant, fig.width=6, fig.height=6, fig.align="center", dpi=300,dev="png"}
+``` r
 par(mfrow=c(2,2))
 hist(dt[library=="lib1" & variant_class=="1 nonsynonymous",n_bc_bind],main="lib1, bind",right=F,breaks=max(dt[library=="lib1" & variant_class=="1 nonsynonymous",n_bc_bind],na.rm=T),xlab="")
 hist(dt[library=="lib2" & variant_class=="1 nonsynonymous",n_bc_bind],main="lib2, bind",right=F,breaks=max(dt[library=="lib2" & variant_class=="1 nonsynonymous",n_bc_bind],na.rm=T),xlab="")
 hist(dt[library=="lib1" & variant_class=="1 nonsynonymous",n_bc_expr],main="lib1, expr",right=F,breaks=max(dt[library=="lib1" & variant_class=="1 nonsynonymous",n_bc_expr],na.rm=T),xlab="number barcodes collapsed")
 hist(dt[library=="lib2" & variant_class=="1 nonsynonymous",n_bc_expr],main="lib2, expr",right=F,breaks=max(dt[library=="lib2" & variant_class=="1 nonsynonymous",n_bc_expr],na.rm=T),xlab="number barcodes collapsed")
-
-invisible(dev.print(pdf, paste(config$final_variant_scores_dir,"/histogram_n_bc_per_geno_sep-libs.pdf",sep=""),useDingbats=F))
-
 ```
 
-What about how SEM tracks with number of barcodes collapsed? This could help for choosing a minimum number of barcodes to use.
+<img src="collapse_scores_files/figure-gfm/hist_n_bc_per_mutant-1.png" style="display: block; margin: auto;" />
 
-```{r sem_v_n-bc, fig.width=8, fig.height=8, fig.align="center", dpi=300,dev="png"}
+``` r
+invisible(dev.print(pdf, paste(config$final_variant_scores_dir,"/histogram_n_bc_per_geno_sep-libs.pdf",sep=""),useDingbats=F))
+```
+
+What about how SEM tracks with number of barcodes collapsed? This could
+help for choosing a minimum number of barcodes to use.
+
+``` r
 par(mfrow=c(2,2))
 plot(dt[library=="lib1" & variant_class=="1 nonsynonymous",n_bc_bind],
      dt[library=="lib1" & variant_class=="1 nonsynonymous",sd_bind/sqrt(n_bc_bind)],
@@ -100,14 +157,19 @@ plot(dt[library=="lib1" & variant_class=="1 nonsynonymous",n_bc_expr],
 plot(dt[library=="lib2" & variant_class=="1 nonsynonymous",n_bc_expr],
      dt[library=="lib2" & variant_class=="1 nonsynonymous",sd_expr/sqrt(n_bc_expr)],
      pch=19,col="#00000005",main="lib2, expr",ylab="SEM",xlab="number barcodes collapsed")
+```
 
+<img src="collapse_scores_files/figure-gfm/sem_v_n-bc-1.png" style="display: block; margin: auto;" />
+
+``` r
 invisible(dev.print(pdf, paste(config$final_variant_scores_dir,"/sem_v_n-bc.pdf",sep=""),useDingbats=F))
 ```
 
+Format into a ‘mutation lookup table’, where we focus just on the single
+mutants (and wildtype), breakup the string of mutations, and fill in the
+table to also include any missing mutants.
 
-Format into a 'mutation lookup table', where we focus just on the single mutants (and wildtype), breakup the string of mutations, and fill in the table to also include any missing mutants.
-
-```{r format_mutant_table}
+``` r
 dt_mutant <- dt[variant_class %in% "1 nonsynonymous",]
 
 #split mutation string
@@ -162,22 +224,31 @@ for(lib in c("lib1","lib2")){
 }
 ```
 
-We have duplicates for each measurement. Let's look at correlations!
+We have duplicates for each measurement. Let’s look at correlations!
 
-```{r plot_correlations, echo=T, fig.width=10, fig.height=5, fig.align="center", dpi=300,dev="png"}
+``` r
 par(mfrow=c(1,2))
 x <- dt_mutant[library=="lib1" & wildtype!=mutant,mean_expr]; y <- dt_mutant[library=="lib2" & wildtype!=mutant,mean_expr]; plot(x,y,pch=19,col="#00000020",xlab="replicate 1",ylab="replicate 2",main="expression");model <- lm(y~x);abline(model,lty=2,col="red");legend("topleft",legend=paste("R2: ",round(summary(model)$r.squared,3),sep=""),bty="n")
 
 x <- dt_mutant[library=="lib1" & wildtype!=mutant,mean_bind]; y <- dt_mutant[library=="lib2" & wildtype!=mutant,mean_bind]; plot(x,y,pch=19,col="#00000020",xlab="replicate 1",ylab="replicate 2",main="binding affinity");model <- lm(y~x);abline(model,lty=2,col="red");legend("topleft",legend=paste("R2: ",round(summary(model)$r.squared,3),sep=""),bty="n")
+```
 
+<img src="collapse_scores_files/figure-gfm/plot_correlations-1.png" style="display: block; margin: auto;" />
+
+``` r
 invisible(dev.print(pdf, paste(config$final_variant_scores_dir,"/replicate_correlations.pdf",sep=""),useDingbats=F))
 ```
 
 ## Calculate per-mutant score across libraries
 
-Collapse down to mean from both replicates, and total n barcodes between the two replicates. Also record the number of the replicates the variant was quantified within. Note, we are currently keeping a value even if it's determined from a single bc fit in a single lib. Later on, we'll want to require some combination of minimum number of bcs within or between libraries for retention.
+Collapse down to mean from both replicates, and total n barcodes between
+the two replicates. Also record the number of the replicates the variant
+was quantified within. Note, we are currently keeping a value even if
+it’s determined from a single bc fit in a single lib. Later on, we’ll
+want to require some combination of minimum number of bcs within or
+between libraries for retention.
 
-```{r final_means}
+``` r
 dt_final <- copy(dt_mutant)
 
 dt_final[ ,bind_tot:=mean(mean_bind,na.rm=T),by=c("target","position","mutant")]
@@ -224,11 +295,12 @@ setnames(dt_final,"expr_tot","expr")
 setnames(dt_final,"delta_expr_tot","delta_expr")
 setnames(dt_final,"n_bc_expr_tot","n_bc_expr")
 setnames(dt_final,"n_libs_expr_tot","n_libs_expr")
-
 ```
 
-Censor any measurements that are from <3 bc or only sampled in a single replicate? Don't do this for now.
-```{r censor_n_barcodes_libs, echo=T, fig.width=8, fig.height=4, fig.align="center", dpi=300,dev="png"}
+Censor any measurements that are from \<3 bc or only sampled in a single
+replicate? Don’t do this for now.
+
+``` r
 # min_bc <- 2
 # min_lib <- 2
 # 
@@ -236,20 +308,24 @@ Censor any measurements that are from <3 bc or only sampled in a single replicat
 # dt_final[n_bc_expr < min_bc & n_libs_expr < min_lib, c("expr","delta_expr","n_bc_expr","n_libs_expr") := list(NA,NA,NA,NA)]
 ```
 
+Coverage stats on n_barcodes for different measurements in the final
+libed measurements.
 
-Coverage stats on n_barcodes for different measurements in the final libed measurements.
-
-```{r n_barcode_plots, echo=T, fig.width=8, fig.height=4, fig.align="center", dpi=300,dev="png"}
+``` r
 par(mfrow=c(1,2))
 hist(dt_final[wildtype!=mutant, n_bc_bind],col="gray50",main=paste("mutant bind score,\nmedian ",median(dt_final[wildtype!=mutant, n_bc_bind],na.rm=T),sep=""),right=F,breaks=max(dt_final[wildtype!=mutant, n_bc_bind]),xlab="number barcodes")
 hist(dt_final[wildtype!=mutant, n_bc_expr],col="gray50",main=paste("mutant expr score,\nmedian ",median(dt_final[wildtype!=mutant, n_bc_expr],na.rm=T),sep=""),right=F,breaks=max(dt_final[wildtype!=mutant, n_bc_expr]),xlab="")
+```
 
+<img src="collapse_scores_files/figure-gfm/n_barcode_plots-1.png" style="display: block; margin: auto;" />
+
+``` r
 invisible(dev.print(pdf, paste(config$final_variant_scores_dir,"/histogram_n_bc_per_geno_libed-libs.pdf",sep="")))
 ```
 
-Relationships in mutation effects between bind and express? 
+Relationships in mutation effects between bind and express?
 
-```{r bind_expr_corr, fig.width=4, fig.height=4, fig.align="center", dpi=300,dev="png"}
+``` r
 p <- ggplot(dt_final, aes(x=delta_expr, y=delta_bind)) + 
   geom_point(alpha=0.1) +
   theme_classic()
@@ -257,12 +333,15 @@ p <- ggplot(dt_final, aes(x=delta_expr, y=delta_bind)) +
 grid.arrange(p,ncol=1)
 ```
 
+    ## Warning: Removed 1 rows containing missing values (geom_point).
+
+<img src="collapse_scores_files/figure-gfm/bind_expr_corr-1.png" style="display: block; margin: auto;" />
+
 ## Heatmaps!
 
 Order factor variables for plotting
 
-```{r order_plotting_factors}
-
+``` r
 #order mutant as a factor for grouping by rough biochemical grouping
 dt_final$mutant <- factor(dt_final$mutant, levels=c("C","P","G","V","M","L","I","A","F","W","Y","T","S","N","Q","E","D","H","K","R"))
 #add character vector indicating wildtype to use as plotting symbols for wt
@@ -285,11 +364,12 @@ guide_train.guide_axis_trans <- function(x, ...) {
   trained$key$.label <- x$label_trans(trained$key$.label)
   trained
 }
-
 ```
-Make heatmaps faceted by target, showing raw affinity and delta-affinity of muts relative to respective
 
-```{r heatmap_DMS_log10Ka-by-target, fig.width=25,fig.height=15,fig.align="center", dpi=500,dev="png",echo=T}
+Make heatmaps faceted by target, showing raw affinity and delta-affinity
+of muts relative to respective
+
+``` r
 p1 <- ggplot(temp[measurement=="bind",],aes(position,mutant))+geom_tile(aes(fill=value),color="black",lwd=0.1)+
   scale_fill_gradientn(colours=c("#FFFFFF","#003366"),limits=c(5,11),na.value="yellow")+
   #scale_fill_gradientn(colours=c("#FFFFFF","#FFFFFF","#003366"),limits=c(5,12),values=c(0,1/7,7/7),na.value="yellow")+ #three notches in case I want to 'censor' closer to the 5 boundary condition
@@ -300,13 +380,17 @@ p1 <- ggplot(temp[measurement=="bind",],aes(position,mutant))+geom_tile(aes(fill
   geom_text(aes(label=wildtype_indicator),size=2,color="gray10")
 
 p1
+```
+
+<img src="collapse_scores_files/figure-gfm/heatmap_DMS_log10Ka-by-target-1.png" style="display: block; margin: auto;" />
+
+``` r
 invisible(dev.print(pdf, paste(config$final_variant_scores_dir,"/heatmap_SSM_log10Ka.pdf",sep="")))
 ```
 
-
 Second, illustrating delta_log10Ka grouped by SSM position.
 
-```{r heatmap_DMS_delta-log10Ka-by-target, fig.width=25,fig.height=15,fig.align="center", dpi=500,dev="png",echo=T}
+``` r
 p1 <- ggplot(temp[measurement=="delta_bind",],aes(position,mutant))+geom_tile(aes(fill=value),color="black",lwd=0.1)+
   scale_fill_gradientn(colours=c("#A94E35","#A94E35","#F48365","#FFFFFF","#7378B9","#383C6C"),limits=c(-5,2),values=c(0/7,1/7,3/7,5/7,6/7,7/7),na.value="yellow")+
   scale_x_continuous(expand=c(0,0),breaks=c(331,seq(335,530,by=5)))+
@@ -316,13 +400,18 @@ p1 <- ggplot(temp[measurement=="delta_bind",],aes(position,mutant))+geom_tile(ae
   geom_text(aes(label=wildtype_indicator),size=2,color="gray10")
 
 p1
+```
+
+<img src="collapse_scores_files/figure-gfm/heatmap_DMS_delta-log10Ka-by-target-1.png" style="display: block; margin: auto;" />
+
+``` r
 invisible(dev.print(pdf, paste(config$final_variant_scores_dir,"/heatmap_SSM_delta-log10Ka.pdf",sep="")))
 ```
 
+Make heatmaps faceted by target, showing raw expression and
+delta-expression of muts relative to respective wildtype
 
-Make heatmaps faceted by target, showing raw expression and delta-expression of muts relative to respective wildtype
-
-```{r heatmap_DMS_expression-by-target, fig.width=25,fig.height=15,fig.align="center", dpi=500,dev="png",echo=T}
+``` r
 p1 <- ggplot(temp[measurement=="expr",],aes(position,mutant))+geom_tile(aes(fill=value),color="black",lwd=0.1)+
   scale_fill_gradientn(colours=c("#FFFFFF","#003366"),limits=c(5,11),na.value="yellow")+
   #scale_fill_gradientn(colours=c("#FFFFFF","#FFFFFF","#003366"),limits=c(5,11.2),values=c(0,1/7,7/7),na.value="yellow")+ #three notches in case I want to 'censor' closer to the 5 boundary condition
@@ -333,12 +422,17 @@ p1 <- ggplot(temp[measurement=="expr",],aes(position,mutant))+geom_tile(aes(fill
   geom_text(aes(label=wildtype_indicator),size=2,color="gray10")
 
 p1
+```
+
+<img src="collapse_scores_files/figure-gfm/heatmap_DMS_expression-by-target-1.png" style="display: block; margin: auto;" />
+
+``` r
 invisible(dev.print(pdf, paste(config$final_variant_scores_dir,"/heatmap_SSM_expression.pdf",sep="")))
 ```
 
 Second, illustrating delta_expression grouped by SSM position.
 
-```{r heatmap_DMS_delta-expression-by-target, fig.width=25,fig.height=15,fig.align="center", dpi=500,dev="png",echo=T}
+``` r
 p1 <- ggplot(temp[measurement=="delta_expr",],aes(position,mutant))+geom_tile(aes(fill=value),color="black",lwd=0.1)+
   scale_fill_gradientn(colours=c("#A94E35","#A94E35","#F48365","#FFFFFF","#7378B9","#383C6C"),limits=c(-5.5,1),values=c(0/6.5,1.5/6.5,3.5/6.5,5.5/6.5,6/6.5,6.5/6.5),na.value="yellow")+
   scale_x_continuous(expand=c(0,0),breaks=c(331,seq(335,530,by=5)))+
@@ -348,20 +442,20 @@ p1 <- ggplot(temp[measurement=="delta_expr",],aes(position,mutant))+geom_tile(ae
   geom_text(aes(label=wildtype_indicator),size=2,color="gray10")
 
 p1
+```
+
+<img src="collapse_scores_files/figure-gfm/heatmap_DMS_delta-expression-by-target-1.png" style="display: block; margin: auto;" />
+
+``` r
 invisible(dev.print(pdf, paste(config$final_variant_scores_dir,"/heatmap_SSM_delta-expression.pdf",sep="")))
 ```
 
-That's the data! Other analyses in additional notebooks
+That’s the data! Other analyses in additional notebooks
 
 Save output files.
 
-```{r outputs}
+``` r
 dt_final[,.(target,wildtype,position,mutant,mutation,bind,delta_bind,n_bc_bind,n_libs_bind,bind_rep1,bind_rep2,expr,delta_expr,n_bc_expr,n_libs_expr,expr_rep1,expr_rep2)] %>%
   mutate_if(is.numeric, round, digits=5) %>%
   write.csv(file=config$final_variant_scores_mut_file, row.names=F,quote=F)
 ```
-
-
-
-
-

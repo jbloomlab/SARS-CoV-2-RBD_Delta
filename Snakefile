@@ -91,7 +91,7 @@ rule make_summary:
         collapse_scores='results/summary/collapse_scores.md',
         mut_phenos_file=config['final_variant_scores_mut_file'],
         counts_to_cells_ratio=nb_markdown('counts_to_cells_ratio.ipynb'),
-        # counts_to_cells_csv=config['counts_to_cells_csv'],
+        counts_to_cells_csv=config['counts_to_cells_csv'],
         # counts_to_scores=nb_markdown('counts_to_scores.ipynb'),
         # escape_fracs=config['escape_fracs'],
         # call_strong_escape_sites=nb_markdown('call_strong_escape_sites.ipynb'),

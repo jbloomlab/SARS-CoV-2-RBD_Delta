@@ -18,3 +18,20 @@ Here is the Markdown output of each notebook in the workflow:
 3. [Build variants from CCSs](build_variants.md).
    Creates a [codon variant table](../variants/codon_variant_table.csv)
    linking barcodes to the mutations in the variants.
+
+4. Count variants and then
+    [aggregate counts](aggregate_variant_counts.md) 
+    to create [variant counts file](../counts/variant_counts.csv.gz).
+
+5. [Analyze sequencing counts to cells ratio](counts_to_cells_ratio.md);
+   this prints a list of any samples where this ratio too low. Also
+   creates [a CSV](../counts/counts_to_cells_csv.csv) with the
+   sequencing counts, number of sorted cells, and ratios for
+   all samples.
+
+6. [Fit titration curves](compute_binding_Kd.md) to calculate per-barcode K<sub>D</sub>, recorded in [this file](../binding_Kd/bc_binding.csv).
+
+7. [Analyze Sort-seq](compute_expression_meanF.md) to calculate per-barcode RBD expression, recorded in [this file](../expression_meanF/bc_expression.csv).
+
+8. [Derive final genotype-level phenotypes from replicate barcoded sequences](collapse_scores.md).
+   Generates final phenotypes, recorded in [this file](../final_variant_scores/final_variant_scores.csv).
