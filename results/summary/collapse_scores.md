@@ -48,7 +48,7 @@ sessionInfo()
 
     ## R version 3.6.2 (2019-12-12)
     ## Platform: x86_64-pc-linux-gnu (64-bit)
-    ## Running under: Ubuntu 18.04.4 LTS
+    ## Running under: Ubuntu 18.04.5 LTS
     ## 
     ## Matrix products: default
     ## BLAS/LAPACK: /app/software/OpenBLAS/0.3.7-GCC-8.3.0/lib/libopenblas_haswellp-r0.3.7.so
@@ -370,13 +370,24 @@ Make heatmaps faceted by target, showing raw affinity and delta-affinity
 of muts relative to respective
 
 ``` r
-p1 <- ggplot(temp[measurement=="bind",],aes(position,mutant))+geom_tile(aes(fill=value),color="black",lwd=0.1)+
-  scale_fill_gradientn(colours=c("#FFFFFF","#003366"),limits=c(5,11),na.value="yellow")+
-  #scale_fill_gradientn(colours=c("#FFFFFF","#FFFFFF","#003366"),limits=c(5,12),values=c(0,1/7,7/7),na.value="yellow")+ #three notches in case I want to 'censor' closer to the 5 boundary condition
-  scale_x_continuous(expand=c(0,0),breaks=c(331,seq(335,530,by=5)))+
-  labs(x="",y="")+theme_classic(base_size=9)+
-  coord_equal()+theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.6,face="bold",size=10),axis.text.y=element_text(face="bold",size=10))+
-  guides(y.sec=guide_axis_label_trans())+
+p1 <- ggplot(temp[measurement=="bind",], aes(position,mutant)) +
+  geom_tile(aes(fill=value),color="black",lwd=0.1) +
+  scale_fill_gradientn(colours=c("#FFFFFF","#003366"),
+                         limits=c(5,11),
+                         na.value="yellow") +
+  # three notches in case I want to 'censor' closer to the 5 boundary condition
+  # + scale_fill_gradientn(colours=c("#FFFFFF","#FFFFFF","#003366"),
+  #                        limits=c(5,12),
+  #                        values=c(0,1/7,7/7),
+  #                        na.value="yellow") 
+  scale_x_continuous(expand=c(0,0),breaks=c(331,seq(335,530,by=5))) +
+  labs(x="",y="") +
+  theme_classic(base_size=9) +
+  coord_equal() +
+  theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.6,face="bold",size=10),
+          axis.text.y=element_text(face="bold",size=10)
+          ) +
+  guides(y.sec=guide_axis_label_trans()) +
   geom_text(aes(label=wildtype_indicator),size=2,color="gray10")
 
 p1
@@ -391,12 +402,22 @@ invisible(dev.print(pdf, paste(config$final_variant_scores_dir,"/heatmap_SSM_log
 Second, illustrating delta_log10Ka grouped by SSM position.
 
 ``` r
-p1 <- ggplot(temp[measurement=="delta_bind",],aes(position,mutant))+geom_tile(aes(fill=value),color="black",lwd=0.1)+
-  scale_fill_gradientn(colours=c("#A94E35","#A94E35","#F48365","#FFFFFF","#7378B9","#383C6C"),limits=c(-5,2),values=c(0/7,1/7,3/7,5/7,6/7,7/7),na.value="yellow")+
-  scale_x_continuous(expand=c(0,0),breaks=c(331,seq(335,530,by=5)))+
-  labs(x="",y="")+theme_classic(base_size=9)+
-  coord_equal()+theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.6,face="bold",size=10),axis.text.y=element_text(face="bold",size=10))+
-  guides(y.sec=guide_axis_label_trans())+
+p1 <- ggplot(temp[measurement=="delta_bind",],
+             aes(position,mutant)
+             ) +
+  geom_tile(aes(fill=value),color="black",lwd=0.1) +
+  scale_fill_gradientn(colours=c("#A94E35","#A94E35","#F48365","#FFFFFF","#7378B9","#383C6C"),
+                        limits=c(-5,2),
+                        values=c(0/7,1/7,3/7,5/7,6/7,7/7),
+                        na.value="yellow") +
+  scale_x_continuous(expand=c(0,0),breaks=c(331,seq(335,530,by=5))) +
+  labs(x="",y="") +
+  theme_classic(base_size=9) +
+  coord_equal() +
+  theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.6,face="bold",size=10),
+          axis.text.y=element_text(face="bold",size=10)
+          ) +
+  guides(y.sec=guide_axis_label_trans()) +
   geom_text(aes(label=wildtype_indicator),size=2,color="gray10")
 
 p1
@@ -412,13 +433,25 @@ Make heatmaps faceted by target, showing raw expression and
 delta-expression of muts relative to respective wildtype
 
 ``` r
-p1 <- ggplot(temp[measurement=="expr",],aes(position,mutant))+geom_tile(aes(fill=value),color="black",lwd=0.1)+
-  scale_fill_gradientn(colours=c("#FFFFFF","#003366"),limits=c(5,11),na.value="yellow")+
-  #scale_fill_gradientn(colours=c("#FFFFFF","#FFFFFF","#003366"),limits=c(5,11.2),values=c(0,1/7,7/7),na.value="yellow")+ #three notches in case I want to 'censor' closer to the 5 boundary condition
+p1 <- ggplot(temp[measurement=="expr",]
+             ,aes(position,mutant)) +
+  geom_tile(aes(fill=value),color="black",lwd=0.1) +
+  scale_fill_gradientn(colours=c("#FFFFFF","#003366"),
+                         limits=c(5,11),
+                         na.value="yellow") +
+  # three notches in case I want to 'censor' closer to the 5 boundary condition 
+  # + scale_fill_gradientn(colours=c("#FFFFFF","#FFFFFF","#003366"),
+  #                        limits=c(5,11.2),
+  #                        values=c(0,1/7,7/7),
+  #                        na.value="yellow") +
   scale_x_continuous(expand=c(0,0),breaks=c(331,seq(335,530,by=5)))+
-  labs(x="",y="")+theme_classic(base_size=9)+
-  coord_equal()+theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.6,face="bold",size=10),axis.text.y=element_text(face="bold",size=10))+
-  guides(y.sec=guide_axis_label_trans())+
+  labs(x="",y="") +
+  theme_classic(base_size=9) +
+  coord_equal() +
+  theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.6,face="bold",size=10),
+          axis.text.y=element_text(face="bold",size=10)
+          ) +
+  guides(y.sec=guide_axis_label_trans()) +
   geom_text(aes(label=wildtype_indicator),size=2,color="gray10")
 
 p1
@@ -433,12 +466,19 @@ invisible(dev.print(pdf, paste(config$final_variant_scores_dir,"/heatmap_SSM_exp
 Second, illustrating delta_expression grouped by SSM position.
 
 ``` r
-p1 <- ggplot(temp[measurement=="delta_expr",],aes(position,mutant))+geom_tile(aes(fill=value),color="black",lwd=0.1)+
-  scale_fill_gradientn(colours=c("#A94E35","#A94E35","#F48365","#FFFFFF","#7378B9","#383C6C"),limits=c(-5.5,1),values=c(0/6.5,1.5/6.5,3.5/6.5,5.5/6.5,6/6.5,6.5/6.5),na.value="yellow")+
-  scale_x_continuous(expand=c(0,0),breaks=c(331,seq(335,530,by=5)))+
-  labs(x="",y="")+theme_classic(base_size=9)+
-  coord_equal()+theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.6,face="bold",size=10),axis.text.y=element_text(face="bold",size=10))+
-  guides(y.sec=guide_axis_label_trans())+
+p1 <- ggplot(temp[measurement=="delta_expr",],aes(position,mutant)) +
+  geom_tile(aes(fill=value),color="black",lwd=0.1) +
+  scale_fill_gradientn(colours=c("#A94E35","#A94E35","#F48365","#FFFFFF","#7378B9","#383C6C"),
+                         limits=c(-5.5,1),
+                         values=c(0/6.5,1.5/6.5,3.5/6.5,5.5/6.5,6/6.5,6.5/6.5),
+                         na.value="yellow") +
+  scale_x_continuous(expand=c(0,0),breaks=c(331,seq(335,530,by=5))) +
+  labs(x="",y="") +
+  theme_classic(base_size=9) +
+  coord_equal() +
+  theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.6,face="bold",size=10),
+          axis.text.y=element_text(face="bold",size=10)) +
+  guides(y.sec=guide_axis_label_trans()) +
   geom_text(aes(label=wildtype_indicator),size=2,color="gray10")
 
 p1
