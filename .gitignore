@@ -27,5 +27,8 @@ results/supp_data/*
 !results/prior_DMS_data/
 results/prior_DMS_data/*
 !results/prior_DMS_data/early2020_escape_fracs.csv
+!results/final_variant_scores/
+results/final_variant_scores/*
+!results/final_variant_scores/final_variant_scores.csv
 
 data/spikeprot*
