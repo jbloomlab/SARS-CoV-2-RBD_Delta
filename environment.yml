@@ -11,6 +11,7 @@ dependencies:
   - jupyterlab
   - jupytext
   - lifelines
+  - mafft
   - minimap2=2.18
   - natsort
   - nodejs

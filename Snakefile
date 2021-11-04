@@ -103,6 +103,9 @@ rule make_summary:
         # output_pdbs=nb_markdown('output_pdbs.ipynb'),
         # make_supp_data=nb_markdown('make_supp_data.ipynb'),
         # lineplots_by_group=nb_markdown('lineplots_by_group.ipynb'),
+        gisaid_rbd_mutations=nb_markdown('gisaid_rbd_mutations.ipynb'),
+        gisaid_mutation_counts=config['gisaid_mutation_counts'],
+        # natural_mutations=nb_markdown('natural_mutations.ipynb'),
     output:
         summary = os.path.join(config['summary_dir'], 'summary.md')
     run:
@@ -149,7 +152,10 @@ rule make_summary:
             8. [Derive final genotype-level phenotypes from replicate barcoded sequences]({path(input.collapse_scores)}).
                Generates final phenotypes, recorded in [this file]({path(input.mut_phenos_file)}).
                
-           9. Determine [cutoffs]({path(input.bind_expr_filters)}) for ACE2 binding and RBD expression for serum-escape experiments. 
+            9. Determine [cutoffs]({path(input.bind_expr_filters)}) for ACE2 binding and RBD expression for serum-escape experiments. 
+            
+            10. [Count mutations in GISAID RBD sequences]({path(input.gisaid_rbd_mutations)})
+                to create [this counts file]({path(input.gisaid_mutation_counts)}).
 
 
 
@@ -169,6 +175,8 @@ rule make_summary:
             # 10. [Make supplementary data files]({path(input.make_supp_data)}),
             #     which are [here]({path(config['supp_data_dir'])}). These include
             #     `dms-view` input files.
+            # 
+            # 13. [Analyze GISAID mutations at sites of escape]({path(input.natural_mutations)}).
 
 
 rule make_rulegraph:
@@ -179,6 +187,31 @@ rule make_rulegraph:
         os.path.join(config['summary_dir'], 'rulegraph.svg')
     shell:
         "snakemake --forceall --rulegraph | dot -Tsvg > {output}"
+
+# rule natural_mutations:
+#     input:
+#         config['gisaid_mutation_counts'],
+#         config['strong_escape_sites'],
+#         config['escape_fracs'],
+#         config['escape_profiles_config'],
+#     output:
+#         nb_markdown=nb_markdown('natural_mutations.ipynb')
+#     params:
+#         nb='natural_mutations.ipynb'
+#     shell:
+#         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+
+rule gisaid_rbd_mutations:
+    input:
+        config['gisaid_spikes'],
+        config['wildtype_sequence'],
+    output:
+        config['gisaid_mutation_counts'],
+        nb_markdown=nb_markdown('gisaid_rbd_mutations.ipynb'),
+    params:
+        nb='gisaid_rbd_mutations.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
 # rule lineplots_by_group:
 #     input:
