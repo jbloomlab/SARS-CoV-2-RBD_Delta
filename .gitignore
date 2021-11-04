@@ -13,22 +13,32 @@ env/
 
 results/*
 !results/summary
+
 !resuts/counts
 results/counts/*
 !results/counts/variant_counts.csv.gz
 !results/counts/counts_to_cells_csv.csv
+
 !results/escape_scores
 results/escape_scores/*
 !results/escape_scores/scores.csv
 !results/escape_scores/escape_fracs.csv
+
 !results/supp_data/
 results/supp_data/*
 !results/supp_data/*.csv
+
 !results/prior_DMS_data/
 results/prior_DMS_data/*
 !results/prior_DMS_data/early2020_escape_fracs.csv
+
 !results/final_variant_scores/
 results/final_variant_scores/*
 !results/final_variant_scores/final_variant_scores.csv
 
+!results/GISAID_mutations
+results/GISAID_mutations/*
+!results/GISAID_mutations/mutation_counts.csv 
+
 data/spikeprot*
+data/variant_surveillance*

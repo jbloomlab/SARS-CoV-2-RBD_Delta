@@ -64,6 +64,8 @@ illumina_barcode_parser_params:
 
 # Input files for analyses from the data subdirectory
 RBD_sites: data/RBD_sites.csv
+gisaid_spikes: data/spikeprot1030.fasta
+variant_surveillance: data/variant_surveillance_20211103.tsv
 
 # Parameters used when computed escape scores:
 escape_score_type: frac_escape  # type of escape score, see dms_variants
@@ -180,3 +182,6 @@ pdb_outputs_dir: results/pdb_outputs
 supp_data_dir: results/supp_data
 lineplots_by_group_dir: results/lineplots_by_group
 bind_expr_filters_dir: results/bind_expr_filters
+gisaid_mutations_dir: results/GISAID_mutations
+rbd_alignment: results/GISAID_mutations/RBD_alignment.fasta
+gisaid_mutation_counts: results/GISAID_mutations/mutation_counts.csv
