@@ -46,7 +46,8 @@ assert len(barcode_runs.groupby(['library', 'sample'])) == len(barcode_runs)
 sample_vs_expect = (
     barcode_runs
     .query('experiment_type=="ab_selection"')
-    .assign(expect=lambda x: x[['experiment', 'antibody', 'concentration',
+    .assign(concentration=lambda x: x['concentration'].astype(int),
+            expect=lambda x: x[['experiment', 'antibody', 'concentration',
                                 'sort_bin']]
                              .apply(lambda r: '-'.join(r.values.astype(str)),
                                     axis=1),
@@ -134,26 +135,26 @@ rule make_summary:
             3. [Build variants from CCSs]({path(input.build_variants)}).
                Creates a [codon variant table]({path(input.codon_variant_table)})
                linking barcodes to the mutations in the variants.
-            
+
             4. Count variants and then
-                [aggregate counts]({path(input.aggregate_variant_counts)}) 
+                [aggregate counts]({path(input.aggregate_variant_counts)})
                 to create [variant counts file]({path(input.variant_counts)}).
-                
+
             5. [Analyze sequencing counts to cells ratio]({path(input.counts_to_cells_ratio)});
                this prints a list of any samples where this ratio too low. Also
                creates [a CSV]({path(input.counts_to_cells_csv)}) with the
                sequencing counts, number of sorted cells, and ratios for
                all samples.
-            
+
             6. [Fit titration curves]({path(input.fit_titrations)}) to calculate per-barcode K<sub>D</sub>, recorded in [this file]({path(input.variant_Kds_file)}).
-            
+
             7. [Analyze Sort-seq]({path(input.calculate_expression)}) to calculate per-barcode RBD expression, recorded in [this file]({path(input.variant_expression_file)}).
-            
+
             8. [Derive final genotype-level phenotypes from replicate barcoded sequences]({path(input.collapse_scores)}).
                Generates final phenotypes, recorded in [this file]({path(input.mut_phenos_file)}).
-               
-            9. Determine [cutoffs]({path(input.bind_expr_filters)}) for ACE2 binding and RBD expression for serum-escape experiments. 
-            
+
+            9. Determine [cutoffs]({path(input.bind_expr_filters)}) for ACE2 binding and RBD expression for serum-escape experiments.
+
             10. [Count mutations in GISAID RBD sequences]({path(input.gisaid_rbd_mutations)})
                 to create [this counts file]({path(input.gisaid_mutation_counts)}).
 
@@ -175,7 +176,7 @@ rule make_summary:
             # 10. [Make supplementary data files]({path(input.make_supp_data)}),
             #     which are [here]({path(config['supp_data_dir'])}). These include
             #     `dms-view` input files.
-            # 
+            #
             # 13. [Analyze GISAID mutations at sites of escape]({path(input.natural_mutations)}).
 
 
@@ -376,7 +377,7 @@ rule collapse_scores:
 rule fit_titrations:
     input:
         config['codon_variant_table'],
-        config['variant_counts']
+        # config['variant_counts'] # temporarily commented out so is not re-run every time I get serum mapping data back
     output:
         config['Titeseq_Kds_file'],
         md='results/summary/compute_binding_Kd.md',
@@ -393,11 +394,11 @@ rule fit_titrations:
         mv {params.md} {output.md};
         mv {params.md_files} {output.md_files}
         """
-        
+
 rule calculate_expression:
     input:
         config['codon_variant_table'],
-        config['variant_counts']
+        # config['variant_counts'] # temporarily commented out so is not re-run every time I get serum mapping data back
     output:
         config['expression_sortseq_file'],
         md='results/summary/compute_expression_meanF.md',
@@ -414,7 +415,7 @@ rule calculate_expression:
         mv {params.md} {output.md};
         mv {params.md_files} {output.md_files}
         """
-        
+
 rule aggregate_variant_counts:
     input:
         counts=expand(os.path.join(config['counts_dir'],

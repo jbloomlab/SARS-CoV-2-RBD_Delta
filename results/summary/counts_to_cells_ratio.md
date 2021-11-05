@@ -112,7 +112,7 @@ counts_cells.to_csv(config['counts_to_cells_csv'], index=False, float_format='%.
       <td>monomeric_ACE2</td>
       <td>1</td>
       <td>1</td>
-      <td>1051589</td>
+      <td>1.1e+06</td>
       <td>2.1e+06</td>
       <td>2</td>
       <td>False</td>
@@ -124,7 +124,7 @@ counts_cells.to_csv(config['counts_to_cells_csv'], index=False, float_format='%.
       <td>monomeric_ACE2</td>
       <td>1</td>
       <td>2</td>
-      <td>624665</td>
+      <td>6.2e+05</td>
       <td>1.5e+06</td>
       <td>2.3</td>
       <td>False</td>
@@ -136,7 +136,7 @@ counts_cells.to_csv(config['counts_to_cells_csv'], index=False, float_format='%.
       <td>monomeric_ACE2</td>
       <td>1</td>
       <td>3</td>
-      <td>1279752</td>
+      <td>1.3e+06</td>
       <td>2.7e+06</td>
       <td>2.1</td>
       <td>False</td>
@@ -148,7 +148,7 @@ counts_cells.to_csv(config['counts_to_cells_csv'], index=False, float_format='%.
       <td>monomeric_ACE2</td>
       <td>1</td>
       <td>4</td>
-      <td>8085751</td>
+      <td>8.1e+06</td>
       <td>1.6e+07</td>
       <td>2</td>
       <td>False</td>
@@ -160,7 +160,7 @@ counts_cells.to_csv(config['counts_to_cells_csv'], index=False, float_format='%.
       <td>monomeric_ACE2</td>
       <td>2</td>
       <td>1</td>
-      <td>1295531</td>
+      <td>1.3e+06</td>
       <td>2.4e+06</td>
       <td>1.8</td>
       <td>False</td>
@@ -239,15 +239,29 @@ for var, is_reference, lower_clip, upper_clip, desired_min in [
     plt.close(fig)
 ```
 
-
+    /loc/scratch/40134950/ipykernel_347/1882431916.py:14: SettingWithCopyWarning: 
+    A value is trying to be set on a copy of a slice from a DataFrame.
+    Try using .loc[row_indexer,col_indexer] = value instead
     
-![png](counts_to_cells_ratio_files/counts_to_cells_ratio_14_0.png)
-    
+    See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
 
 
 
     
 ![png](counts_to_cells_ratio_files/counts_to_cells_ratio_14_1.png)
+    
+
+
+    /loc/scratch/40134950/ipykernel_347/1882431916.py:14: SettingWithCopyWarning: 
+    A value is trying to be set on a copy of a slice from a DataFrame.
+    Try using .loc[row_indexer,col_indexer] = value instead
+    
+    See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+
+
+    
+![png](counts_to_cells_ratio_files/counts_to_cells_ratio_14_3.png)
     
 
 
@@ -292,7 +306,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>1</td>
       <td>1</td>
-      <td>1051589</td>
+      <td>1.1e+06</td>
       <td>2.1e+06</td>
       <td>2</td>
       <td>False</td>
@@ -304,7 +318,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>1</td>
       <td>2</td>
-      <td>624665</td>
+      <td>6.2e+05</td>
       <td>1.5e+06</td>
       <td>2.3</td>
       <td>False</td>
@@ -316,7 +330,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>1</td>
       <td>3</td>
-      <td>1279752</td>
+      <td>1.3e+06</td>
       <td>2.7e+06</td>
       <td>2.1</td>
       <td>False</td>
@@ -328,7 +342,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>1</td>
       <td>4</td>
-      <td>8085751</td>
+      <td>8.1e+06</td>
       <td>1.6e+07</td>
       <td>2</td>
       <td>False</td>
@@ -340,7 +354,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>2</td>
       <td>1</td>
-      <td>1295531</td>
+      <td>1.3e+06</td>
       <td>2.4e+06</td>
       <td>1.8</td>
       <td>False</td>
@@ -352,7 +366,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>2</td>
       <td>2</td>
-      <td>751800</td>
+      <td>7.5e+05</td>
       <td>1.5e+06</td>
       <td>2</td>
       <td>False</td>
@@ -364,7 +378,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>2</td>
       <td>3</td>
-      <td>1384388</td>
+      <td>1.4e+06</td>
       <td>2.4e+06</td>
       <td>1.8</td>
       <td>False</td>
@@ -376,7 +390,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>2</td>
       <td>4</td>
-      <td>7525560</td>
+      <td>7.5e+06</td>
       <td>1.7e+07</td>
       <td>2.3</td>
       <td>False</td>
@@ -388,7 +402,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>3</td>
       <td>1</td>
-      <td>1907453</td>
+      <td>1.9e+06</td>
       <td>4.2e+06</td>
       <td>2.2</td>
       <td>False</td>
@@ -400,7 +414,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>3</td>
       <td>2</td>
-      <td>1014961</td>
+      <td>1e+06</td>
       <td>2.2e+06</td>
       <td>2.2</td>
       <td>False</td>
@@ -412,7 +426,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>3</td>
       <td>3</td>
-      <td>2828799</td>
+      <td>2.8e+06</td>
       <td>6.2e+06</td>
       <td>2.2</td>
       <td>False</td>
@@ -424,7 +438,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>3</td>
       <td>4</td>
-      <td>5160695</td>
+      <td>5.2e+06</td>
       <td>5.6e+06</td>
       <td>1.1</td>
       <td>False</td>
@@ -436,7 +450,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>4</td>
       <td>1</td>
-      <td>3974523</td>
+      <td>4e+06</td>
       <td>9e+06</td>
       <td>2.3</td>
       <td>False</td>
@@ -448,7 +462,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>4</td>
       <td>2</td>
-      <td>5063344</td>
+      <td>5.1e+06</td>
       <td>6.7e+06</td>
       <td>1.3</td>
       <td>False</td>
@@ -460,7 +474,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>4</td>
       <td>3</td>
-      <td>2535131</td>
+      <td>2.5e+06</td>
       <td>3.4e+06</td>
       <td>1.3</td>
       <td>False</td>
@@ -472,7 +486,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>4</td>
       <td>4</td>
-      <td>21217</td>
+      <td>2.1e+04</td>
       <td>3e+04</td>
       <td>1.4</td>
       <td>False</td>
@@ -484,7 +498,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>5</td>
       <td>1</td>
-      <td>8755411</td>
+      <td>8.8e+06</td>
       <td>2.6e+06</td>
       <td>0.3</td>
       <td>False</td>
@@ -496,7 +510,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>5</td>
       <td>2</td>
-      <td>1388715</td>
+      <td>1.4e+06</td>
       <td>8e+05</td>
       <td>0.58</td>
       <td>False</td>
@@ -508,7 +522,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>5</td>
       <td>3</td>
-      <td>15062</td>
+      <td>1.5e+04</td>
       <td>1.8e+04</td>
       <td>1.2</td>
       <td>False</td>
@@ -520,7 +534,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>5</td>
       <td>4</td>
-      <td>1177</td>
+      <td>1.2e+03</td>
       <td>2.8e+03</td>
       <td>2.4</td>
       <td>False</td>
@@ -532,7 +546,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>6</td>
       <td>1</td>
-      <td>10867246</td>
+      <td>1.1e+07</td>
       <td>6.4e+04</td>
       <td>0.0059</td>
       <td>False</td>
@@ -544,7 +558,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>6</td>
       <td>2</td>
-      <td>361944</td>
+      <td>3.6e+05</td>
       <td>6.1e+05</td>
       <td>1.7</td>
       <td>False</td>
@@ -556,7 +570,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>7</td>
       <td>1</td>
-      <td>10674416</td>
+      <td>1.1e+07</td>
       <td>2.3e+07</td>
       <td>2.1</td>
       <td>False</td>
@@ -568,7 +582,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>8</td>
       <td>1</td>
-      <td>10498611</td>
+      <td>1e+07</td>
       <td>2.1e+07</td>
       <td>2</td>
       <td>False</td>
@@ -580,7 +594,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>8</td>
       <td>2</td>
-      <td>273334</td>
+      <td>2.7e+05</td>
       <td>3.5e+05</td>
       <td>1.3</td>
       <td>False</td>
@@ -592,7 +606,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>8</td>
       <td>4</td>
-      <td>326</td>
+      <td>3.3e+02</td>
       <td>7.7e+02</td>
       <td>2.4</td>
       <td>False</td>
@@ -604,7 +618,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>9</td>
       <td>2</td>
-      <td>230095</td>
+      <td>2.3e+05</td>
       <td>3.2e+05</td>
       <td>1.4</td>
       <td>False</td>
@@ -616,7 +630,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>9</td>
       <td>3</td>
-      <td>1127</td>
+      <td>1.1e+03</td>
       <td>1.7e+03</td>
       <td>1.5</td>
       <td>False</td>
@@ -628,7 +642,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>1</td>
       <td>1</td>
-      <td>1489987</td>
+      <td>1.5e+06</td>
       <td>2e+06</td>
       <td>1.4</td>
       <td>False</td>
@@ -640,7 +654,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>1</td>
       <td>2</td>
-      <td>1041294</td>
+      <td>1e+06</td>
       <td>1.8e+06</td>
       <td>1.8</td>
       <td>False</td>
@@ -652,7 +666,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>1</td>
       <td>3</td>
-      <td>1440735</td>
+      <td>1.4e+06</td>
       <td>2.5e+06</td>
       <td>1.8</td>
       <td>False</td>
@@ -664,7 +678,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>1</td>
       <td>4</td>
-      <td>6805287</td>
+      <td>6.8e+06</td>
       <td>4.3e+06</td>
       <td>0.63</td>
       <td>False</td>
@@ -676,7 +690,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>2</td>
       <td>1</td>
-      <td>1503469</td>
+      <td>1.5e+06</td>
       <td>5.6e+05</td>
       <td>0.37</td>
       <td>False</td>
@@ -688,7 +702,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>2</td>
       <td>2</td>
-      <td>1195636</td>
+      <td>1.2e+06</td>
       <td>1.1e+06</td>
       <td>0.9</td>
       <td>False</td>
@@ -700,7 +714,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>2</td>
       <td>3</td>
-      <td>1369891</td>
+      <td>1.4e+06</td>
       <td>3e+06</td>
       <td>2.2</td>
       <td>False</td>
@@ -712,7 +726,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>2</td>
       <td>4</td>
-      <td>6199468</td>
+      <td>6.2e+06</td>
       <td>5.7e+06</td>
       <td>0.93</td>
       <td>False</td>
@@ -724,7 +738,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>3</td>
       <td>2</td>
-      <td>1563793</td>
+      <td>1.6e+06</td>
       <td>2.9e+06</td>
       <td>1.8</td>
       <td>False</td>
@@ -736,7 +750,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>3</td>
       <td>3</td>
-      <td>2866509</td>
+      <td>2.9e+06</td>
       <td>5e+06</td>
       <td>1.7</td>
       <td>False</td>
@@ -748,7 +762,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>3</td>
       <td>4</td>
-      <td>3348279</td>
+      <td>3.3e+06</td>
       <td>5.9e+06</td>
       <td>1.8</td>
       <td>False</td>
@@ -760,7 +774,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>4</td>
       <td>1</td>
-      <td>3995432</td>
+      <td>4e+06</td>
       <td>8.9e+06</td>
       <td>2.2</td>
       <td>False</td>
@@ -772,7 +786,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>4</td>
       <td>2</td>
-      <td>3771838</td>
+      <td>3.8e+06</td>
       <td>6.9e+06</td>
       <td>1.8</td>
       <td>False</td>
@@ -784,7 +798,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>4</td>
       <td>3</td>
-      <td>2599381</td>
+      <td>2.6e+06</td>
       <td>4.3e+06</td>
       <td>1.6</td>
       <td>False</td>
@@ -796,7 +810,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>4</td>
       <td>4</td>
-      <td>21124</td>
+      <td>2.1e+04</td>
       <td>2.7e+04</td>
       <td>1.3</td>
       <td>False</td>
@@ -808,7 +822,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>5</td>
       <td>1</td>
-      <td>8309153</td>
+      <td>8.3e+06</td>
       <td>1.6e+07</td>
       <td>1.9</td>
       <td>False</td>
@@ -820,7 +834,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>5</td>
       <td>2</td>
-      <td>1832983</td>
+      <td>1.8e+06</td>
       <td>2.5e+05</td>
       <td>0.14</td>
       <td>False</td>
@@ -832,7 +846,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>5</td>
       <td>3</td>
-      <td>13763</td>
+      <td>1.4e+04</td>
       <td>1e+04</td>
       <td>0.76</td>
       <td>False</td>
@@ -844,7 +858,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>5</td>
       <td>4</td>
-      <td>1139</td>
+      <td>1.1e+03</td>
       <td>1.4e+03</td>
       <td>1.2</td>
       <td>False</td>
@@ -856,7 +870,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>6</td>
       <td>1</td>
-      <td>9251911</td>
+      <td>9.3e+06</td>
       <td>2.1e+07</td>
       <td>2.3</td>
       <td>False</td>
@@ -868,7 +882,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>6</td>
       <td>2</td>
-      <td>877051</td>
+      <td>8.8e+05</td>
       <td>1.3e+06</td>
       <td>1.5</td>
       <td>False</td>
@@ -880,7 +894,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>6</td>
       <td>3</td>
-      <td>1314</td>
+      <td>1.3e+03</td>
       <td>2.6e+03</td>
       <td>1.9</td>
       <td>False</td>
@@ -892,7 +906,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>6</td>
       <td>4</td>
-      <td>521</td>
+      <td>5.2e+02</td>
       <td>1.8e+02</td>
       <td>0.35</td>
       <td>False</td>
@@ -904,7 +918,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>7</td>
       <td>1</td>
-      <td>9666170</td>
+      <td>9.7e+06</td>
       <td>2.2e+06</td>
       <td>0.23</td>
       <td>False</td>
@@ -916,7 +930,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>7</td>
       <td>2</td>
-      <td>751446</td>
+      <td>7.5e+05</td>
       <td>1.6e+06</td>
       <td>2.1</td>
       <td>False</td>
@@ -928,7 +942,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>7</td>
       <td>4</td>
-      <td>461</td>
+      <td>4.6e+02</td>
       <td>2.9e+02</td>
       <td>0.63</td>
       <td>False</td>
@@ -940,7 +954,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>8</td>
       <td>1</td>
-      <td>9585938</td>
+      <td>9.6e+06</td>
       <td>1.6e+07</td>
       <td>1.7</td>
       <td>False</td>
@@ -952,7 +966,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>8</td>
       <td>2</td>
-      <td>597086</td>
+      <td>6e+05</td>
       <td>9.1e+05</td>
       <td>1.5</td>
       <td>False</td>
@@ -964,7 +978,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>8</td>
       <td>4</td>
-      <td>446</td>
+      <td>4.5e+02</td>
       <td>1.0e+02</td>
       <td>0.24</td>
       <td>False</td>
@@ -976,7 +990,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>9</td>
       <td>1</td>
-      <td>9781236</td>
+      <td>9.8e+06</td>
       <td>1.2e+07</td>
       <td>1.2</td>
       <td>False</td>
@@ -988,7 +1002,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>9</td>
       <td>2</td>
-      <td>365660</td>
+      <td>3.7e+05</td>
       <td>4.8e+05</td>
       <td>1.3</td>
       <td>False</td>
@@ -1000,7 +1014,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>9</td>
       <td>3</td>
-      <td>572</td>
+      <td>5.7e+02</td>
       <td>3.1e+02</td>
       <td>0.54</td>
       <td>False</td>
@@ -1012,7 +1026,7 @@ display(HTML(
       <td>monomeric_ACE2</td>
       <td>9</td>
       <td>4</td>
-      <td>587</td>
+      <td>5.9e+02</td>
       <td>1.4e+02</td>
       <td>0.25</td>
       <td>False</td>
@@ -1024,7 +1038,7 @@ display(HTML(
       <td>NaN</td>
       <td>NaN</td>
       <td>1</td>
-      <td>3496000</td>
+      <td>3.5e+06</td>
       <td>7.3e+06</td>
       <td>2.1</td>
       <td>False</td>
@@ -1036,7 +1050,7 @@ display(HTML(
       <td>NaN</td>
       <td>NaN</td>
       <td>2</td>
-      <td>5250000</td>
+      <td>5.2e+06</td>
       <td>9.7e+06</td>
       <td>1.9</td>
       <td>False</td>
@@ -1048,7 +1062,7 @@ display(HTML(
       <td>NaN</td>
       <td>NaN</td>
       <td>4</td>
-      <td>5016000</td>
+      <td>5e+06</td>
       <td>1.1e+07</td>
       <td>2.2</td>
       <td>False</td>
@@ -1060,7 +1074,7 @@ display(HTML(
       <td>NaN</td>
       <td>NaN</td>
       <td>1</td>
-      <td>3108000</td>
+      <td>3.1e+06</td>
       <td>6.8e+06</td>
       <td>2.2</td>
       <td>False</td>
@@ -1072,7 +1086,7 @@ display(HTML(
       <td>NaN</td>
       <td>NaN</td>
       <td>3</td>
-      <td>4050000</td>
+      <td>4.0e+06</td>
       <td>8.4e+06</td>
       <td>2.1</td>
       <td>False</td>
@@ -1084,7 +1098,7 @@ display(HTML(
       <td>NaN</td>
       <td>NaN</td>
       <td>4</td>
-      <td>5352000</td>
+      <td>5.4e+06</td>
       <td>1.2e+07</td>
       <td>2.2</td>
       <td>False</td>
