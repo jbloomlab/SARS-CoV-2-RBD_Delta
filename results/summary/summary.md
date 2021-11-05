@@ -55,3 +55,5 @@ Here is the Markdown output of each notebook in the workflow:
     to create [this counts file](../GISAID_mutations/mutation_counts.csv).
 
 14. [Analyze GISAID mutations at sites of escape](natural_mutations.md).
+
+15. Make [lineplots by serum group](lineplots_by_group.md).

@@ -103,7 +103,7 @@ rule make_summary:
         # early2020_escape_profiles=nb_markdown('early2020_escape_profiles.ipynb'),
         output_pdbs=nb_markdown('output_pdbs.ipynb'),
         make_supp_data=nb_markdown('make_supp_data.ipynb'),
-        # lineplots_by_group=nb_markdown('lineplots_by_group.ipynb'),
+        lineplots_by_group=nb_markdown('lineplots_by_group.ipynb'),
         gisaid_rbd_mutations=nb_markdown('gisaid_rbd_mutations.ipynb'),
         gisaid_mutation_counts=config['gisaid_mutation_counts'],
         natural_mutations=nb_markdown('natural_mutations.ipynb'),
@@ -173,6 +173,7 @@ rule make_summary:
 
             14. [Analyze GISAID mutations at sites of escape]({path(input.natural_mutations)}).
 
+            15. Make [lineplots by serum group]({path(input.lineplots_by_group)}).
 
             """
             ).strip())
@@ -211,18 +212,18 @@ rule gisaid_rbd_mutations:
     shell:
         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
-# rule lineplots_by_group:
-#     input:
-#         config['early2020_escape_fracs'],
-#         config['escape_fracs'],
-#         "data/pdbs/6M0J.pdb",
-#     output:
-#         nb_markdown=nb_markdown('lineplots_by_group.ipynb'),
-#         outdir=directory(config['lineplots_by_group_dir']),
-#     params:
-#         nb='lineplots_by_group.ipynb'
-#     shell:
-#         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+rule lineplots_by_group:
+    input:
+        config['early2020_escape_fracs'],
+        config['escape_fracs'],
+        "data/pdbs/6M0J.pdb",
+    output:
+        nb_markdown=nb_markdown('lineplots_by_group.ipynb'),
+        outdir=directory(config['lineplots_by_group_dir']),
+    params:
+        nb='lineplots_by_group.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
 
 rule make_supp_data:
