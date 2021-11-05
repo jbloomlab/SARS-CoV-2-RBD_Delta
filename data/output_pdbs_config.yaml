@@ -14,9 +14,9 @@
     - E
   conditions: ALL
 
-# 6m0j is ACE2 bound RBD
-7LYQ:
-  pdbfile: data/pdbs/7LYQ.pdb
+# 7V8B is ACE2 bound Delta RBD
+7V8B:
+  pdbfile: data/pdbs/7V8B.pdb
   chains:
-    - B
+    - A
   conditions: ALL
