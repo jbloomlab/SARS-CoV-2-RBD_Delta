@@ -101,8 +101,8 @@ rule make_summary:
         # early2020_call_strong_escape_sites=nb_markdown('early2020_call_strong_escape_sites.ipynb'),
         # early2020_strong_escape_sites=config['early2020_strong_escape_sites'],
         # early2020_escape_profiles=nb_markdown('early2020_escape_profiles.ipynb'),
-        # output_pdbs=nb_markdown('output_pdbs.ipynb'),
-        # make_supp_data=nb_markdown('make_supp_data.ipynb'),
+        output_pdbs=nb_markdown('output_pdbs.ipynb'),
+        make_supp_data=nb_markdown('make_supp_data.ipynb'),
         # lineplots_by_group=nb_markdown('lineplots_by_group.ipynb'),
         gisaid_rbd_mutations=nb_markdown('gisaid_rbd_mutations.ipynb'),
         gisaid_mutation_counts=config['gisaid_mutation_counts'],
@@ -162,6 +162,12 @@ rule make_summary:
 
             12. Plot [escape profiles]({path(input.escape_profiles)}).
 
+            13. Map escape profiles to ``*.pdb`` files using [this notebook]({path(input.output_pdbs)})
+
+            14. [Make supplementary data files]({path(input.make_supp_data)}),
+                 which are [here]({path(config['supp_data_dir'])}). These include
+                 `dms-view` input files.
+
             13. [Count mutations in GISAID RBD sequences]({path(input.gisaid_rbd_mutations)})
                 to create [this counts file]({path(input.gisaid_mutation_counts)}).
 
@@ -172,12 +178,7 @@ rule make_summary:
             ).strip())
 
 
-            #
-            # 9. Map escape profiles to ``*.pdb`` files using [this notebook]({path(input.output_pdbs)})
-            #
-            # 10. [Make supplementary data files]({path(input.make_supp_data)}),
-            #     which are [here]({path(config['supp_data_dir'])}). These include
-            #     `dms-view` input files.
+
             #
             # 13. [Analyze GISAID mutations at sites of escape]({path(input.natural_mutations)}).
 
@@ -230,31 +231,31 @@ rule gisaid_rbd_mutations:
 #         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
 
-# rule make_supp_data:
-#     input:
-#         config['escape_profiles_config'],
-#         config['output_pdbs_config'],
-#         config['escape_fracs'],
-#         config['escape_profiles_dms_colors']
-#     output:
-#         nb_markdown=nb_markdown('make_supp_data.ipynb'),
-#         outdir=directory(config['supp_data_dir']),
-#     params:
-#         nb='make_supp_data.ipynb'
-#     shell:
-#         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+rule make_supp_data:
+    input:
+        config['escape_profiles_config'],
+        config['output_pdbs_config'],
+        config['escape_fracs'],
+        config['escape_profiles_dms_colors']
+    output:
+        nb_markdown=nb_markdown('make_supp_data.ipynb'),
+        outdir=directory(config['supp_data_dir']),
+    params:
+        nb='make_supp_data.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
-# rule output_pdbs:
-#     input:
-#         config['escape_fracs'],
-#         config['output_pdbs_config'],
-#     output:
-#         nb_markdown=nb_markdown('output_pdbs.ipynb'),
-#         outdir=directory(config['pdb_outputs_dir']),
-#     params:
-#         nb='output_pdbs.ipynb'
-#     shell:
-#         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+rule output_pdbs:
+    input:
+        config['escape_fracs'],
+        config['output_pdbs_config'],
+    output:
+        nb_markdown=nb_markdown('output_pdbs.ipynb'),
+        outdir=directory(config['pdb_outputs_dir']),
+    params:
+        nb='output_pdbs.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
 # rule early2020_escape_profiles:
 #     """Make stacked logo plots of antibody escape profiles for early 2020 samples."""

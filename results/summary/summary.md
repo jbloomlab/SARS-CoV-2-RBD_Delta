@@ -45,5 +45,11 @@ Here is the Markdown output of each notebook in the workflow:
 
 12. Plot [escape profiles](escape_profiles.md).
 
+13. Map escape profiles to ``*.pdb`` files using [this notebook](output_pdbs.md)
+
+14. [Make supplementary data files](make_supp_data.md),
+     which are [here](../supp_data). These include
+     `dms-view` input files.
+
 13. [Count mutations in GISAID RBD sequences](gisaid_rbd_mutations.md)
     to create [this counts file](../GISAID_mutations/mutation_counts.csv).
