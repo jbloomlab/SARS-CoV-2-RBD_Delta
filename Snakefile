@@ -106,7 +106,7 @@ rule make_summary:
         # lineplots_by_group=nb_markdown('lineplots_by_group.ipynb'),
         gisaid_rbd_mutations=nb_markdown('gisaid_rbd_mutations.ipynb'),
         gisaid_mutation_counts=config['gisaid_mutation_counts'],
-        # natural_mutations=nb_markdown('natural_mutations.ipynb'),
+        natural_mutations=nb_markdown('natural_mutations.ipynb'),
     output:
         summary = os.path.join(config['summary_dir'], 'summary.md')
     run:
@@ -171,17 +171,11 @@ rule make_summary:
             13. [Count mutations in GISAID RBD sequences]({path(input.gisaid_rbd_mutations)})
                 to create [this counts file]({path(input.gisaid_mutation_counts)}).
 
-
+            14. [Analyze GISAID mutations at sites of escape]({path(input.natural_mutations)}).
 
 
             """
             ).strip())
-
-
-
-            #
-            # 13. [Analyze GISAID mutations at sites of escape]({path(input.natural_mutations)}).
-
 
 rule make_rulegraph:
     # error message, but works: https://github.com/sequana/sequana/issues/115
@@ -192,18 +186,18 @@ rule make_rulegraph:
     shell:
         "snakemake --forceall --rulegraph | dot -Tsvg > {output}"
 
-# rule natural_mutations:
-#     input:
-#         config['gisaid_mutation_counts'],
-#         config['strong_escape_sites'],
-#         config['escape_fracs'],
-#         config['escape_profiles_config'],
-#     output:
-#         nb_markdown=nb_markdown('natural_mutations.ipynb')
-#     params:
-#         nb='natural_mutations.ipynb'
-#     shell:
-#         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+rule natural_mutations:
+    input:
+        config['gisaid_mutation_counts'],
+        config['strong_escape_sites'],
+        config['escape_fracs'],
+        config['escape_profiles_config'],
+    output:
+        nb_markdown=nb_markdown('natural_mutations.ipynb')
+    params:
+        nb='natural_mutations.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
 rule gisaid_rbd_mutations:
     input:

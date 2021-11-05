@@ -56,6 +56,18 @@ Pfizer:
   dmslogo_draw_logo_kwargs:
     widthscale: 0.75
     axisfontscale: 1.5
+  analyze_natural_mutations: true
+  analyze_natural_mutations_specs:
+    plot_average_only: true
+    maxcol: 6
+    also_label: [346,365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
+    label_font_size: 7
+    default_color: '#999999'
+    default_alpha: 0.6
+    escape: tot_site_escape
+    ylabel: total escape at site
+    label_minescape: 2
+    label_minfreq: 5e-5
 
 Delta_breakthrough:
   conditions:
@@ -81,3 +93,15 @@ Delta_breakthrough:
   dmslogo_draw_logo_kwargs:
     widthscale: 0.75
     axisfontscale: 1.5
+  analyze_natural_mutations: true
+  analyze_natural_mutations_specs:
+    plot_average_only: true
+    maxcol: 6
+    also_label: [346,365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
+    label_font_size: 7
+    default_color: '#999999'
+    default_alpha: 0.6
+    escape: tot_site_escape
+    ylabel: total escape at site
+    label_minescape: 2
+    label_minfreq: 5e-5

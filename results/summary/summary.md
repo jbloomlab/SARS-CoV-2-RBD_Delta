@@ -53,3 +53,5 @@ Here is the Markdown output of each notebook in the workflow:
 
 13. [Count mutations in GISAID RBD sequences](gisaid_rbd_mutations.md)
     to create [this counts file](../GISAID_mutations/mutation_counts.csv).
+
+14. [Analyze GISAID mutations at sites of escape](natural_mutations.md).
