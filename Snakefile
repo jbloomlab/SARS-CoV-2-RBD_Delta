@@ -46,7 +46,8 @@ assert len(barcode_runs.groupby(['library', 'sample'])) == len(barcode_runs)
 sample_vs_expect = (
     barcode_runs
     .query('experiment_type=="ab_selection"')
-    .assign(expect=lambda x: x[['experiment', 'antibody', 'concentration',
+    .assign(concentration=lambda x: x['concentration'].astype(int),
+            expect=lambda x: x[['experiment', 'antibody', 'concentration',
                                 'sort_bin']]
                              .apply(lambda r: '-'.join(r.values.astype(str)),
                                     axis=1),
@@ -92,20 +93,20 @@ rule make_summary:
         mut_phenos_file=config['final_variant_scores_mut_file'],
         counts_to_cells_ratio=nb_markdown('counts_to_cells_ratio.ipynb'),
         counts_to_cells_csv=config['counts_to_cells_csv'],
-        # counts_to_scores=nb_markdown('counts_to_scores.ipynb'),
-        # escape_fracs=config['escape_fracs'],
-        # call_strong_escape_sites=nb_markdown('call_strong_escape_sites.ipynb'),
-        # strong_escape_sites=config['strong_escape_sites'],
-        # escape_profiles=nb_markdown('escape_profiles.ipynb'),
+        counts_to_scores=nb_markdown('counts_to_scores.ipynb'),
+        escape_fracs=config['escape_fracs'],
+        call_strong_escape_sites=nb_markdown('call_strong_escape_sites.ipynb'),
+        strong_escape_sites=config['strong_escape_sites'],
+        escape_profiles=nb_markdown('escape_profiles.ipynb'),
         # early2020_call_strong_escape_sites=nb_markdown('early2020_call_strong_escape_sites.ipynb'),
         # early2020_strong_escape_sites=config['early2020_strong_escape_sites'],
         # early2020_escape_profiles=nb_markdown('early2020_escape_profiles.ipynb'),
-        # output_pdbs=nb_markdown('output_pdbs.ipynb'),
-        # make_supp_data=nb_markdown('make_supp_data.ipynb'),
-        # lineplots_by_group=nb_markdown('lineplots_by_group.ipynb'),
+        output_pdbs=nb_markdown('output_pdbs.ipynb'),
+        make_supp_data=nb_markdown('make_supp_data.ipynb'),
+        lineplots_by_group=nb_markdown('lineplots_by_group.ipynb'),
         gisaid_rbd_mutations=nb_markdown('gisaid_rbd_mutations.ipynb'),
         gisaid_mutation_counts=config['gisaid_mutation_counts'],
-        # natural_mutations=nb_markdown('natural_mutations.ipynb'),
+        natural_mutations=nb_markdown('natural_mutations.ipynb'),
     output:
         summary = os.path.join(config['summary_dir'], 'summary.md')
     run:
@@ -134,50 +135,48 @@ rule make_summary:
             3. [Build variants from CCSs]({path(input.build_variants)}).
                Creates a [codon variant table]({path(input.codon_variant_table)})
                linking barcodes to the mutations in the variants.
-            
+
             4. Count variants and then
-                [aggregate counts]({path(input.aggregate_variant_counts)}) 
+                [aggregate counts]({path(input.aggregate_variant_counts)})
                 to create [variant counts file]({path(input.variant_counts)}).
-                
+
             5. [Analyze sequencing counts to cells ratio]({path(input.counts_to_cells_ratio)});
                this prints a list of any samples where this ratio too low. Also
                creates [a CSV]({path(input.counts_to_cells_csv)}) with the
                sequencing counts, number of sorted cells, and ratios for
                all samples.
-            
+
             6. [Fit titration curves]({path(input.fit_titrations)}) to calculate per-barcode K<sub>D</sub>, recorded in [this file]({path(input.variant_Kds_file)}).
-            
+
             7. [Analyze Sort-seq]({path(input.calculate_expression)}) to calculate per-barcode RBD expression, recorded in [this file]({path(input.variant_expression_file)}).
-            
+
             8. [Derive final genotype-level phenotypes from replicate barcoded sequences]({path(input.collapse_scores)}).
                Generates final phenotypes, recorded in [this file]({path(input.mut_phenos_file)}).
-               
-            9. Determine [cutoffs]({path(input.bind_expr_filters)}) for ACE2 binding and RBD expression for serum-escape experiments. 
-            
-            10. [Count mutations in GISAID RBD sequences]({path(input.gisaid_rbd_mutations)})
+
+            9. Determine [cutoffs]({path(input.bind_expr_filters)}) for ACE2 binding and RBD expression for serum-escape experiments.
+
+            10. [Escape scores from variant counts]({path(input.counts_to_scores)}).
+
+            11. [Call sites of strong escape]({path(input.call_strong_escape_sites)}),
+               and write to [a CSV file]({path(input.strong_escape_sites)}).
+
+            12. Plot [escape profiles]({path(input.escape_profiles)}).
+
+            13. Map escape profiles to ``*.pdb`` files using [this notebook]({path(input.output_pdbs)})
+
+            14. [Make supplementary data files]({path(input.make_supp_data)}),
+                 which are [here]({path(config['supp_data_dir'])}). These include
+                 `dms-view` input files.
+
+            13. [Count mutations in GISAID RBD sequences]({path(input.gisaid_rbd_mutations)})
                 to create [this counts file]({path(input.gisaid_mutation_counts)}).
 
+            14. [Analyze GISAID mutations at sites of escape]({path(input.natural_mutations)}).
 
-
+            15. Make [lineplots by serum group]({path(input.lineplots_by_group)}).
 
             """
             ).strip())
-
-            # 6. [Escape scores from variant counts]({path(input.counts_to_scores)}).
-            #
-            # 7. [Call sites of strong escape]({path(input.call_strong_escape_sites)}),
-            #    and write to [a CSV file]({path(input.strong_escape_sites)}).
-            #
-            # 8. Plot [escape profiles]({path(input.escape_profiles)}).
-            #
-            # 9. Map escape profiles to ``*.pdb`` files using [this notebook]({path(input.output_pdbs)})
-            #
-            # 10. [Make supplementary data files]({path(input.make_supp_data)}),
-            #     which are [here]({path(config['supp_data_dir'])}). These include
-            #     `dms-view` input files.
-            # 
-            # 13. [Analyze GISAID mutations at sites of escape]({path(input.natural_mutations)}).
-
 
 rule make_rulegraph:
     # error message, but works: https://github.com/sequana/sequana/issues/115
@@ -188,18 +187,18 @@ rule make_rulegraph:
     shell:
         "snakemake --forceall --rulegraph | dot -Tsvg > {output}"
 
-# rule natural_mutations:
-#     input:
-#         config['gisaid_mutation_counts'],
-#         config['strong_escape_sites'],
-#         config['escape_fracs'],
-#         config['escape_profiles_config'],
-#     output:
-#         nb_markdown=nb_markdown('natural_mutations.ipynb')
-#     params:
-#         nb='natural_mutations.ipynb'
-#     shell:
-#         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+rule natural_mutations:
+    input:
+        config['gisaid_mutation_counts'],
+        config['strong_escape_sites'],
+        config['escape_fracs'],
+        config['escape_profiles_config'],
+    output:
+        nb_markdown=nb_markdown('natural_mutations.ipynb')
+    params:
+        nb='natural_mutations.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
 rule gisaid_rbd_mutations:
     input:
@@ -213,45 +212,45 @@ rule gisaid_rbd_mutations:
     shell:
         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
-# rule lineplots_by_group:
-#     input:
-#         config['early2020_escape_fracs'],
-#         config['escape_fracs'],
-#         "data/pdbs/6M0J.pdb",
-#     output:
-#         nb_markdown=nb_markdown('lineplots_by_group.ipynb'),
-#         outdir=directory(config['lineplots_by_group_dir']),
-#     params:
-#         nb='lineplots_by_group.ipynb'
-#     shell:
-#         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+rule lineplots_by_group:
+    input:
+        config['early2020_escape_fracs'],
+        config['escape_fracs'],
+        "data/pdbs/6M0J.pdb",
+    output:
+        nb_markdown=nb_markdown('lineplots_by_group.ipynb'),
+        outdir=directory(config['lineplots_by_group_dir']),
+    params:
+        nb='lineplots_by_group.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
 
-# rule make_supp_data:
-#     input:
-#         config['escape_profiles_config'],
-#         config['output_pdbs_config'],
-#         config['escape_fracs'],
-#         config['escape_profiles_dms_colors']
-#     output:
-#         nb_markdown=nb_markdown('make_supp_data.ipynb'),
-#         outdir=directory(config['supp_data_dir']),
-#     params:
-#         nb='make_supp_data.ipynb'
-#     shell:
-#         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+rule make_supp_data:
+    input:
+        config['escape_profiles_config'],
+        config['output_pdbs_config'],
+        config['escape_fracs'],
+        config['escape_profiles_dms_colors']
+    output:
+        nb_markdown=nb_markdown('make_supp_data.ipynb'),
+        outdir=directory(config['supp_data_dir']),
+    params:
+        nb='make_supp_data.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
-# rule output_pdbs:
-#     input:
-#         config['escape_fracs'],
-#         config['output_pdbs_config'],
-#     output:
-#         nb_markdown=nb_markdown('output_pdbs.ipynb'),
-#         outdir=directory(config['pdb_outputs_dir']),
-#     params:
-#         nb='output_pdbs.ipynb'
-#     shell:
-#         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+rule output_pdbs:
+    input:
+        config['escape_fracs'],
+        config['output_pdbs_config'],
+    output:
+        nb_markdown=nb_markdown('output_pdbs.ipynb'),
+        outdir=directory(config['pdb_outputs_dir']),
+    params:
+        nb='output_pdbs.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
 # rule early2020_escape_profiles:
 #     """Make stacked logo plots of antibody escape profiles for early 2020 samples."""
@@ -282,50 +281,51 @@ rule gisaid_rbd_mutations:
 #     shell:
 #         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
-# rule escape_profiles:
-#     """Make stacked logo plots of antibody escape profiles."""
-#     input:
-#         escape_fracs=config['escape_fracs'],
-#         escape_profiles_config=config['escape_profiles_config'],
-#         site_color_schemes=config['site_color_schemes'],
-#         wildtype_sequence=config['wildtype_sequence'],
-#         mut_bind_expr=config['final_variant_scores_mut_file'],
-#         strong_escape_sites=config['strong_escape_sites'],
-#     output:
-#         nb_markdown=nb_markdown('escape_profiles.ipynb'),
-#         escape_profiles_dms_colors=config['escape_profiles_dms_colors'],
-#     params:
-#         nb='escape_profiles.ipynb'
-#     shell:
-#         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+rule escape_profiles:
+    """Make stacked logo plots of antibody escape profiles."""
+    input:
+        escape_fracs=config['escape_fracs'],
+        escape_profiles_config=config['escape_profiles_config'],
+        site_color_schemes=config['site_color_schemes'],
+        wildtype_sequence=config['wildtype_sequence'],
+        mut_bind_expr=config['final_variant_scores_mut_file'],
+        strong_escape_sites=config['strong_escape_sites'],
+    output:
+        nb_markdown=nb_markdown('escape_profiles.ipynb'),
+        escape_profiles_dms_colors=config['escape_profiles_dms_colors'],
+    params:
+        nb='escape_profiles.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
-# rule call_strong_escape_sites:
-#     """Call sites of strong escape."""
-#     input:
-#         escape_fracs=config['escape_fracs'],
-#     output:
-#         nb_markdown=nb_markdown('call_strong_escape_sites.ipynb'),
-#         strong_escape_sites=config['strong_escape_sites'],
-#     params:
-#         nb='call_strong_escape_sites.ipynb'
-#     shell:
-#         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+rule call_strong_escape_sites:
+    """Call sites of strong escape."""
+    input:
+        escape_fracs=config['escape_fracs'],
+    output:
+        nb_markdown=nb_markdown('call_strong_escape_sites.ipynb'),
+        strong_escape_sites=config['strong_escape_sites'],
+    params:
+        nb='call_strong_escape_sites.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
-# rule counts_to_scores:
-#     """Analyze variant counts to compute escape scores."""
-#     input:
-#         config['variant_counts'],
-#         config['wildtype_sequence'],
-        # config['final_variant_scores_mut_file'],
-#     output:
-#         nb_markdown=nb_markdown('counts_to_scores.ipynb'),
-#         escape_scores=config['escape_scores'],
-#         escape_score_samples=config['escape_score_samples'],
-#     params:
-#         nb='counts_to_scores.ipynb'
-#     shell:
-#         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
-#
+rule counts_to_scores:
+    """Analyze variant counts to compute escape scores."""
+    input:
+        config['variant_counts'],
+        config['wildtype_sequence'],
+        config['final_variant_scores_mut_file'],
+    output:
+        nb_markdown=nb_markdown('counts_to_scores.ipynb'),
+        escape_scores=config['escape_scores'],
+        escape_score_samples=config['escape_score_samples'],
+        escape_fracs=config['escape_fracs'],
+    params:
+        nb='counts_to_scores.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+
 rule counts_to_cells_ratio:
     input:
         config['variant_counts'],
@@ -376,7 +376,7 @@ rule collapse_scores:
 rule fit_titrations:
     input:
         config['codon_variant_table'],
-        config['variant_counts']
+        # config['variant_counts'] # temporarily commented out so is not re-run every time I get serum mapping data back
     output:
         config['Titeseq_Kds_file'],
         md='results/summary/compute_binding_Kd.md',
@@ -393,11 +393,11 @@ rule fit_titrations:
         mv {params.md} {output.md};
         mv {params.md_files} {output.md_files}
         """
-        
+
 rule calculate_expression:
     input:
         config['codon_variant_table'],
-        config['variant_counts']
+        # config['variant_counts'] # temporarily commented out so is not re-run every time I get serum mapping data back
     output:
         config['expression_sortseq_file'],
         md='results/summary/compute_expression_meanF.md',
@@ -414,7 +414,7 @@ rule calculate_expression:
         mv {params.md} {output.md};
         mv {params.md_files} {output.md_files}
         """
-        
+
 rule aggregate_variant_counts:
     input:
         counts=expand(os.path.join(config['counts_dir'],

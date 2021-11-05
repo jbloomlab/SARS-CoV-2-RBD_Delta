@@ -149,7 +149,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>210930_s01-b1</td>
       <td>TiteSeq</td>
-      <td>1051589</td>
+      <td>1051589.0</td>
       <td>NaN</td>
       <td>TiteSeq_01_bin1</td>
       <td>TiteSeq_01_bin1_lib1</td>
@@ -165,7 +165,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>210930_s01-b2</td>
       <td>TiteSeq</td>
-      <td>624665</td>
+      <td>624665.0</td>
       <td>NaN</td>
       <td>TiteSeq_01_bin2</td>
       <td>TiteSeq_01_bin2_lib1</td>
@@ -181,7 +181,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>210930_s01-b3</td>
       <td>TiteSeq</td>
-      <td>1279752</td>
+      <td>1279752.0</td>
       <td>NaN</td>
       <td>TiteSeq_01_bin3</td>
       <td>TiteSeq_01_bin3_lib1</td>
@@ -197,7 +197,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>210930_s01-b4</td>
       <td>TiteSeq</td>
-      <td>8085751</td>
+      <td>8085751.0</td>
       <td>NaN</td>
       <td>TiteSeq_01_bin4</td>
       <td>TiteSeq_01_bin4_lib1</td>
@@ -213,7 +213,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>210930_s02-b1</td>
       <td>TiteSeq</td>
-      <td>1295531</td>
+      <td>1295531.0</td>
       <td>NaN</td>
       <td>TiteSeq_02_bin1</td>
       <td>TiteSeq_02_bin1_lib1</td>
@@ -229,7 +229,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>210930_s02-b2</td>
       <td>TiteSeq</td>
-      <td>751800</td>
+      <td>751800.0</td>
       <td>NaN</td>
       <td>TiteSeq_02_bin2</td>
       <td>TiteSeq_02_bin2_lib1</td>
@@ -245,7 +245,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>210930_s02-b3</td>
       <td>TiteSeq</td>
-      <td>1384388</td>
+      <td>1384388.0</td>
       <td>NaN</td>
       <td>TiteSeq_02_bin3</td>
       <td>TiteSeq_02_bin3_lib1</td>
@@ -261,7 +261,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>210930_s02-b4</td>
       <td>TiteSeq</td>
-      <td>7525560</td>
+      <td>7525560.0</td>
       <td>NaN</td>
       <td>TiteSeq_02_bin4</td>
       <td>TiteSeq_02_bin4_lib1</td>
@@ -277,7 +277,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>210930_s03-b1</td>
       <td>TiteSeq</td>
-      <td>1907453</td>
+      <td>1907453.0</td>
       <td>NaN</td>
       <td>TiteSeq_03_bin1</td>
       <td>TiteSeq_03_bin1_lib1</td>
@@ -293,7 +293,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>210930_s03-b2</td>
       <td>TiteSeq</td>
-      <td>1014961</td>
+      <td>1014961.0</td>
       <td>NaN</td>
       <td>TiteSeq_03_bin2</td>
       <td>TiteSeq_03_bin2_lib1</td>
@@ -309,7 +309,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>210930_s03-b3</td>
       <td>TiteSeq</td>
-      <td>2828799</td>
+      <td>2828799.0</td>
       <td>NaN</td>
       <td>TiteSeq_03_bin3</td>
       <td>TiteSeq_03_bin3_lib1</td>
@@ -325,7 +325,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>210930_s03-b4</td>
       <td>TiteSeq</td>
-      <td>5160695</td>
+      <td>5160695.0</td>
       <td>NaN</td>
       <td>TiteSeq_03_bin4</td>
       <td>TiteSeq_03_bin4_lib1</td>
@@ -341,7 +341,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>210930_s04-b1</td>
       <td>TiteSeq</td>
-      <td>3974523</td>
+      <td>3974523.0</td>
       <td>NaN</td>
       <td>TiteSeq_04_bin1</td>
       <td>TiteSeq_04_bin1_lib1</td>
@@ -357,7 +357,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>210930_s04-b2</td>
       <td>TiteSeq</td>
-      <td>5063344</td>
+      <td>5063344.0</td>
       <td>NaN</td>
       <td>TiteSeq_04_bin2</td>
       <td>TiteSeq_04_bin2_lib1</td>
@@ -373,7 +373,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>210930_s04-b3</td>
       <td>TiteSeq</td>
-      <td>2535131</td>
+      <td>2535131.0</td>
       <td>NaN</td>
       <td>TiteSeq_04_bin3</td>
       <td>TiteSeq_04_bin3_lib1</td>
@@ -389,7 +389,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>210930_s04-b4</td>
       <td>TiteSeq</td>
-      <td>21217</td>
+      <td>21217.0</td>
       <td>NaN</td>
       <td>TiteSeq_04_bin4</td>
       <td>TiteSeq_04_bin4_lib1</td>
@@ -405,7 +405,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>210930_s05-b1</td>
       <td>TiteSeq</td>
-      <td>8755411</td>
+      <td>8755411.0</td>
       <td>NaN</td>
       <td>TiteSeq_05_bin1</td>
       <td>TiteSeq_05_bin1_lib1</td>
@@ -421,7 +421,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>210930_s05-b2</td>
       <td>TiteSeq</td>
-      <td>1388715</td>
+      <td>1388715.0</td>
       <td>NaN</td>
       <td>TiteSeq_05_bin2</td>
       <td>TiteSeq_05_bin2_lib1</td>
@@ -437,7 +437,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>210930_s05-b3</td>
       <td>TiteSeq</td>
-      <td>15062</td>
+      <td>15062.0</td>
       <td>NaN</td>
       <td>TiteSeq_05_bin3</td>
       <td>TiteSeq_05_bin3_lib1</td>
@@ -453,7 +453,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>210930_s05-b4</td>
       <td>TiteSeq</td>
-      <td>1177</td>
+      <td>1177.0</td>
       <td>NaN</td>
       <td>TiteSeq_05_bin4</td>
       <td>TiteSeq_05_bin4_lib1</td>
@@ -469,7 +469,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>210930_s06-b1</td>
       <td>TiteSeq</td>
-      <td>10867246</td>
+      <td>10867246.0</td>
       <td>NaN</td>
       <td>TiteSeq_06_bin1</td>
       <td>TiteSeq_06_bin1_lib1</td>
@@ -485,7 +485,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>210930_s06-b2</td>
       <td>TiteSeq</td>
-      <td>361944</td>
+      <td>361944.0</td>
       <td>NaN</td>
       <td>TiteSeq_06_bin2</td>
       <td>TiteSeq_06_bin2_lib1</td>
@@ -501,7 +501,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>210930_s06-b3</td>
       <td>TiteSeq</td>
-      <td>2821</td>
+      <td>2821.0</td>
       <td>NaN</td>
       <td>TiteSeq_06_bin3</td>
       <td>TiteSeq_06_bin3_lib1</td>
@@ -517,7 +517,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>210930_s06-b4</td>
       <td>TiteSeq</td>
-      <td>420</td>
+      <td>420.0</td>
       <td>NaN</td>
       <td>TiteSeq_06_bin4</td>
       <td>TiteSeq_06_bin4_lib1</td>
@@ -533,7 +533,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>210930_s07-b1</td>
       <td>TiteSeq</td>
-      <td>10674416</td>
+      <td>10674416.0</td>
       <td>NaN</td>
       <td>TiteSeq_07_bin1</td>
       <td>TiteSeq_07_bin1_lib1</td>
@@ -549,7 +549,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>210930_s07-b2</td>
       <td>TiteSeq</td>
-      <td>317920</td>
+      <td>317920.0</td>
       <td>NaN</td>
       <td>TiteSeq_07_bin2</td>
       <td>TiteSeq_07_bin2_lib1</td>
@@ -565,7 +565,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>210930_s07-b3</td>
       <td>TiteSeq</td>
-      <td>1751</td>
+      <td>1751.0</td>
       <td>NaN</td>
       <td>TiteSeq_07_bin3</td>
       <td>TiteSeq_07_bin3_lib1</td>
@@ -581,7 +581,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>210930_s07-b4</td>
       <td>TiteSeq</td>
-      <td>379</td>
+      <td>379.0</td>
       <td>NaN</td>
       <td>TiteSeq_07_bin4</td>
       <td>TiteSeq_07_bin4_lib1</td>
@@ -597,7 +597,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>210930_s08-b1</td>
       <td>TiteSeq</td>
-      <td>10498611</td>
+      <td>10498611.0</td>
       <td>NaN</td>
       <td>TiteSeq_08_bin1</td>
       <td>TiteSeq_08_bin1_lib1</td>
@@ -613,7 +613,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>210930_s08-b2</td>
       <td>TiteSeq</td>
-      <td>273334</td>
+      <td>273334.0</td>
       <td>NaN</td>
       <td>TiteSeq_08_bin2</td>
       <td>TiteSeq_08_bin2_lib1</td>
@@ -629,7 +629,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>210930_s08-b3</td>
       <td>TiteSeq</td>
-      <td>1358</td>
+      <td>1358.0</td>
       <td>NaN</td>
       <td>TiteSeq_08_bin3</td>
       <td>TiteSeq_08_bin3_lib1</td>
@@ -645,7 +645,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>210930_s08-b4</td>
       <td>TiteSeq</td>
-      <td>326</td>
+      <td>326.0</td>
       <td>NaN</td>
       <td>TiteSeq_08_bin4</td>
       <td>TiteSeq_08_bin4_lib1</td>
@@ -661,7 +661,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>210930_s09-b1</td>
       <td>TiteSeq</td>
-      <td>10330150</td>
+      <td>10330150.0</td>
       <td>NaN</td>
       <td>TiteSeq_09_bin1</td>
       <td>TiteSeq_09_bin1_lib1</td>
@@ -677,7 +677,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>210930_s09-b2</td>
       <td>TiteSeq</td>
-      <td>230095</td>
+      <td>230095.0</td>
       <td>NaN</td>
       <td>TiteSeq_09_bin2</td>
       <td>TiteSeq_09_bin2_lib1</td>
@@ -693,7 +693,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>210930_s09-b3</td>
       <td>TiteSeq</td>
-      <td>1127</td>
+      <td>1127.0</td>
       <td>NaN</td>
       <td>TiteSeq_09_bin3</td>
       <td>TiteSeq_09_bin3_lib1</td>
@@ -709,7 +709,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>210930_s09-b4</td>
       <td>TiteSeq</td>
-      <td>306</td>
+      <td>306.0</td>
       <td>NaN</td>
       <td>TiteSeq_09_bin4</td>
       <td>TiteSeq_09_bin4_lib1</td>
@@ -725,7 +725,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>211004_s10-b1</td>
       <td>TiteSeq</td>
-      <td>1489987</td>
+      <td>1489987.0</td>
       <td>NaN</td>
       <td>TiteSeq_01_bin1</td>
       <td>TiteSeq_01_bin1_lib2</td>
@@ -741,7 +741,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>211004_s10-b2</td>
       <td>TiteSeq</td>
-      <td>1041294</td>
+      <td>1041294.0</td>
       <td>NaN</td>
       <td>TiteSeq_01_bin2</td>
       <td>TiteSeq_01_bin2_lib2</td>
@@ -757,7 +757,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>211004_s10-b3</td>
       <td>TiteSeq</td>
-      <td>1440735</td>
+      <td>1440735.0</td>
       <td>NaN</td>
       <td>TiteSeq_01_bin3</td>
       <td>TiteSeq_01_bin3_lib2</td>
@@ -773,7 +773,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>211004_s10-b4</td>
       <td>TiteSeq</td>
-      <td>6805287</td>
+      <td>6805287.0</td>
       <td>NaN</td>
       <td>TiteSeq_01_bin4</td>
       <td>TiteSeq_01_bin4_lib2</td>
@@ -789,7 +789,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>211004_s11-b1</td>
       <td>TiteSeq</td>
-      <td>1503469</td>
+      <td>1503469.0</td>
       <td>NaN</td>
       <td>TiteSeq_02_bin1</td>
       <td>TiteSeq_02_bin1_lib2</td>
@@ -805,7 +805,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>211004_s11-b2</td>
       <td>TiteSeq</td>
-      <td>1195636</td>
+      <td>1195636.0</td>
       <td>NaN</td>
       <td>TiteSeq_02_bin2</td>
       <td>TiteSeq_02_bin2_lib2</td>
@@ -821,7 +821,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>211004_s11-b3</td>
       <td>TiteSeq</td>
-      <td>1369891</td>
+      <td>1369891.0</td>
       <td>NaN</td>
       <td>TiteSeq_02_bin3</td>
       <td>TiteSeq_02_bin3_lib2</td>
@@ -837,7 +837,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>211004_s11-b4</td>
       <td>TiteSeq</td>
-      <td>6199468</td>
+      <td>6199468.0</td>
       <td>NaN</td>
       <td>TiteSeq_02_bin4</td>
       <td>TiteSeq_02_bin4_lib2</td>
@@ -853,7 +853,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>211004_s12-b1</td>
       <td>TiteSeq</td>
-      <td>2516347</td>
+      <td>2516347.0</td>
       <td>NaN</td>
       <td>TiteSeq_03_bin1</td>
       <td>TiteSeq_03_bin1_lib2</td>
@@ -869,7 +869,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>211004_s12-b2</td>
       <td>TiteSeq</td>
-      <td>1563793</td>
+      <td>1563793.0</td>
       <td>NaN</td>
       <td>TiteSeq_03_bin2</td>
       <td>TiteSeq_03_bin2_lib2</td>
@@ -885,7 +885,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>211004_s12-b3</td>
       <td>TiteSeq</td>
-      <td>2866509</td>
+      <td>2866509.0</td>
       <td>NaN</td>
       <td>TiteSeq_03_bin3</td>
       <td>TiteSeq_03_bin3_lib2</td>
@@ -901,7 +901,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>211004_s12-b4</td>
       <td>TiteSeq</td>
-      <td>3348279</td>
+      <td>3348279.0</td>
       <td>NaN</td>
       <td>TiteSeq_03_bin4</td>
       <td>TiteSeq_03_bin4_lib2</td>
@@ -917,7 +917,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>211004_s13-b1</td>
       <td>TiteSeq</td>
-      <td>3995432</td>
+      <td>3995432.0</td>
       <td>NaN</td>
       <td>TiteSeq_04_bin1</td>
       <td>TiteSeq_04_bin1_lib2</td>
@@ -933,7 +933,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>211004_s13-b2</td>
       <td>TiteSeq</td>
-      <td>3771838</td>
+      <td>3771838.0</td>
       <td>NaN</td>
       <td>TiteSeq_04_bin2</td>
       <td>TiteSeq_04_bin2_lib2</td>
@@ -949,7 +949,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>211004_s13-b3</td>
       <td>TiteSeq</td>
-      <td>2599381</td>
+      <td>2599381.0</td>
       <td>NaN</td>
       <td>TiteSeq_04_bin3</td>
       <td>TiteSeq_04_bin3_lib2</td>
@@ -965,7 +965,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>211004_s13-b4</td>
       <td>TiteSeq</td>
-      <td>21124</td>
+      <td>21124.0</td>
       <td>NaN</td>
       <td>TiteSeq_04_bin4</td>
       <td>TiteSeq_04_bin4_lib2</td>
@@ -981,7 +981,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>211004_s14-b1</td>
       <td>TiteSeq</td>
-      <td>8309153</td>
+      <td>8309153.0</td>
       <td>NaN</td>
       <td>TiteSeq_05_bin1</td>
       <td>TiteSeq_05_bin1_lib2</td>
@@ -997,7 +997,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>211004_s14-b2</td>
       <td>TiteSeq</td>
-      <td>1832983</td>
+      <td>1832983.0</td>
       <td>NaN</td>
       <td>TiteSeq_05_bin2</td>
       <td>TiteSeq_05_bin2_lib2</td>
@@ -1013,7 +1013,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>211004_s14-b3</td>
       <td>TiteSeq</td>
-      <td>13763</td>
+      <td>13763.0</td>
       <td>NaN</td>
       <td>TiteSeq_05_bin3</td>
       <td>TiteSeq_05_bin3_lib2</td>
@@ -1029,7 +1029,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>211004_s14-b4</td>
       <td>TiteSeq</td>
-      <td>1139</td>
+      <td>1139.0</td>
       <td>NaN</td>
       <td>TiteSeq_05_bin4</td>
       <td>TiteSeq_05_bin4_lib2</td>
@@ -1045,7 +1045,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>211004_s15-b1</td>
       <td>TiteSeq</td>
-      <td>9251911</td>
+      <td>9251911.0</td>
       <td>NaN</td>
       <td>TiteSeq_06_bin1</td>
       <td>TiteSeq_06_bin1_lib2</td>
@@ -1061,7 +1061,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>211004_s15-b2</td>
       <td>TiteSeq</td>
-      <td>877051</td>
+      <td>877051.0</td>
       <td>NaN</td>
       <td>TiteSeq_06_bin2</td>
       <td>TiteSeq_06_bin2_lib2</td>
@@ -1077,7 +1077,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>211004_s15-b3</td>
       <td>TiteSeq</td>
-      <td>1314</td>
+      <td>1314.0</td>
       <td>NaN</td>
       <td>TiteSeq_06_bin3</td>
       <td>TiteSeq_06_bin3_lib2</td>
@@ -1093,7 +1093,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>211004_s15-b4</td>
       <td>TiteSeq</td>
-      <td>521</td>
+      <td>521.0</td>
       <td>NaN</td>
       <td>TiteSeq_06_bin4</td>
       <td>TiteSeq_06_bin4_lib2</td>
@@ -1109,7 +1109,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>211004_s16-b1</td>
       <td>TiteSeq</td>
-      <td>9666170</td>
+      <td>9666170.0</td>
       <td>NaN</td>
       <td>TiteSeq_07_bin1</td>
       <td>TiteSeq_07_bin1_lib2</td>
@@ -1125,7 +1125,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>211004_s16-b2</td>
       <td>TiteSeq</td>
-      <td>751446</td>
+      <td>751446.0</td>
       <td>NaN</td>
       <td>TiteSeq_07_bin2</td>
       <td>TiteSeq_07_bin2_lib2</td>
@@ -1141,7 +1141,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>211004_s16-b3</td>
       <td>TiteSeq</td>
-      <td>502</td>
+      <td>502.0</td>
       <td>NaN</td>
       <td>TiteSeq_07_bin3</td>
       <td>TiteSeq_07_bin3_lib2</td>
@@ -1157,7 +1157,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>211004_s16-b4</td>
       <td>TiteSeq</td>
-      <td>461</td>
+      <td>461.0</td>
       <td>NaN</td>
       <td>TiteSeq_07_bin4</td>
       <td>TiteSeq_07_bin4_lib2</td>
@@ -1173,7 +1173,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>211004_s17-b1</td>
       <td>TiteSeq</td>
-      <td>9585938</td>
+      <td>9585938.0</td>
       <td>NaN</td>
       <td>TiteSeq_08_bin1</td>
       <td>TiteSeq_08_bin1_lib2</td>
@@ -1189,7 +1189,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>211004_s17-b2</td>
       <td>TiteSeq</td>
-      <td>597086</td>
+      <td>597086.0</td>
       <td>NaN</td>
       <td>TiteSeq_08_bin2</td>
       <td>TiteSeq_08_bin2_lib2</td>
@@ -1205,7 +1205,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>211004_s17-b3</td>
       <td>TiteSeq</td>
-      <td>450</td>
+      <td>450.0</td>
       <td>NaN</td>
       <td>TiteSeq_08_bin3</td>
       <td>TiteSeq_08_bin3_lib2</td>
@@ -1221,7 +1221,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>211004_s17-b4</td>
       <td>TiteSeq</td>
-      <td>446</td>
+      <td>446.0</td>
       <td>NaN</td>
       <td>TiteSeq_08_bin4</td>
       <td>TiteSeq_08_bin4_lib2</td>
@@ -1237,7 +1237,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>211004_s18-b1</td>
       <td>TiteSeq</td>
-      <td>9781236</td>
+      <td>9781236.0</td>
       <td>NaN</td>
       <td>TiteSeq_09_bin1</td>
       <td>TiteSeq_09_bin1_lib2</td>
@@ -1253,7 +1253,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>211004_s18-b2</td>
       <td>TiteSeq</td>
-      <td>365660</td>
+      <td>365660.0</td>
       <td>NaN</td>
       <td>TiteSeq_09_bin2</td>
       <td>TiteSeq_09_bin2_lib2</td>
@@ -1269,7 +1269,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>211004_s18-b3</td>
       <td>TiteSeq</td>
-      <td>572</td>
+      <td>572.0</td>
       <td>NaN</td>
       <td>TiteSeq_09_bin3</td>
       <td>TiteSeq_09_bin3_lib2</td>
@@ -1285,7 +1285,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>211004_s18-b4</td>
       <td>TiteSeq</td>
-      <td>587</td>
+      <td>587.0</td>
       <td>NaN</td>
       <td>TiteSeq_09_bin4</td>
       <td>TiteSeq_09_bin4_lib2</td>
@@ -1301,7 +1301,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>210927_lib1_bin1</td>
       <td>SortSeq</td>
-      <td>3496000</td>
+      <td>3496000.0</td>
       <td>NaN</td>
       <td>SortSeq_bin1</td>
       <td>SortSeq_bin1_lib1</td>
@@ -1317,7 +1317,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>210927_lib1_bin2</td>
       <td>SortSeq</td>
-      <td>5250000</td>
+      <td>5250000.0</td>
       <td>NaN</td>
       <td>SortSeq_bin2</td>
       <td>SortSeq_bin2_lib1</td>
@@ -1333,7 +1333,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>210927_lib1_bin3</td>
       <td>SortSeq</td>
-      <td>4056000</td>
+      <td>4056000.0</td>
       <td>NaN</td>
       <td>SortSeq_bin3</td>
       <td>SortSeq_bin3_lib1</td>
@@ -1349,7 +1349,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>210927_lib1_bin4</td>
       <td>SortSeq</td>
-      <td>5016000</td>
+      <td>5016000.0</td>
       <td>NaN</td>
       <td>SortSeq_bin4</td>
       <td>SortSeq_bin4_lib1</td>
@@ -1365,7 +1365,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1</td>
       <td>210927_lib2_bin1</td>
       <td>SortSeq</td>
-      <td>3108000</td>
+      <td>3108000.0</td>
       <td>NaN</td>
       <td>SortSeq_bin1</td>
       <td>SortSeq_bin1_lib2</td>
@@ -1381,7 +1381,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>2</td>
       <td>210927_lib2_bin2</td>
       <td>SortSeq</td>
-      <td>4554000</td>
+      <td>4554000.0</td>
       <td>NaN</td>
       <td>SortSeq_bin2</td>
       <td>SortSeq_bin2_lib2</td>
@@ -1397,7 +1397,7 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>3</td>
       <td>210927_lib2_bin3</td>
       <td>SortSeq</td>
-      <td>4050000</td>
+      <td>4050000.0</td>
       <td>NaN</td>
       <td>SortSeq_bin3</td>
       <td>SortSeq_bin3_lib2</td>
@@ -1413,12 +1413,588 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>4</td>
       <td>210927_lib2_bin4</td>
       <td>SortSeq</td>
-      <td>5352000</td>
+      <td>5352000.0</td>
       <td>NaN</td>
       <td>SortSeq_bin4</td>
       <td>SortSeq_bin4_lib2</td>
       <td>results/counts/SortSeq_bin4_lib2_counts.csv</td>
       <td>results/counts/SortSeq_bin4_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211008</td>
+      <td>delta_1</td>
+      <td>lib1</td>
+      <td>P02</td>
+      <td>500.0</td>
+      <td>abneg</td>
+      <td>delta_1_lib1_abneg</td>
+      <td>ab_selection</td>
+      <td>601087.0</td>
+      <td>0.048</td>
+      <td>delta_1-P02-500-abneg</td>
+      <td>delta_1-P02-500-abneg_lib1</td>
+      <td>results/counts/delta_1-P02-500-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_1-P02-500-abneg_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211008</td>
+      <td>delta_1</td>
+      <td>lib2</td>
+      <td>P02</td>
+      <td>500.0</td>
+      <td>abneg</td>
+      <td>delta_1_lib2_abneg</td>
+      <td>ab_selection</td>
+      <td>588481.0</td>
+      <td>0.042</td>
+      <td>delta_1-P02-500-abneg</td>
+      <td>delta_1-P02-500-abneg_lib2</td>
+      <td>results/counts/delta_1-P02-500-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_1-P02-500-abneg_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211008</td>
+      <td>delta_2</td>
+      <td>lib1</td>
+      <td>P03</td>
+      <td>1250.0</td>
+      <td>abneg</td>
+      <td>delta_2_lib1_abneg</td>
+      <td>ab_selection</td>
+      <td>554708.0</td>
+      <td>0.050</td>
+      <td>delta_2-P03-1250-abneg</td>
+      <td>delta_2-P03-1250-abneg_lib1</td>
+      <td>results/counts/delta_2-P03-1250-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_2-P03-1250-abneg_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211008</td>
+      <td>delta_2</td>
+      <td>lib2</td>
+      <td>P03</td>
+      <td>1250.0</td>
+      <td>abneg</td>
+      <td>delta_2_lib2_abneg</td>
+      <td>ab_selection</td>
+      <td>553123.0</td>
+      <td>0.044</td>
+      <td>delta_2-P03-1250-abneg</td>
+      <td>delta_2-P03-1250-abneg_lib2</td>
+      <td>results/counts/delta_2-P03-1250-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_2-P03-1250-abneg_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211008</td>
+      <td>delta_3</td>
+      <td>lib1</td>
+      <td>P04</td>
+      <td>1250.0</td>
+      <td>abneg</td>
+      <td>delta_3_lib1_abneg</td>
+      <td>ab_selection</td>
+      <td>603708.0</td>
+      <td>0.052</td>
+      <td>delta_3-P04-1250-abneg</td>
+      <td>delta_3-P04-1250-abneg_lib1</td>
+      <td>results/counts/delta_3-P04-1250-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_3-P04-1250-abneg_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211008</td>
+      <td>delta_3</td>
+      <td>lib2</td>
+      <td>P04</td>
+      <td>1250.0</td>
+      <td>abneg</td>
+      <td>delta_3_lib2_abneg</td>
+      <td>ab_selection</td>
+      <td>601718.0</td>
+      <td>0.047</td>
+      <td>delta_3-P04-1250-abneg</td>
+      <td>delta_3-P04-1250-abneg_lib2</td>
+      <td>results/counts/delta_3-P04-1250-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_3-P04-1250-abneg_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211008</td>
+      <td>delta_4</td>
+      <td>lib1</td>
+      <td>P05</td>
+      <td>500.0</td>
+      <td>abneg</td>
+      <td>delta_4_lib1_abneg</td>
+      <td>ab_selection</td>
+      <td>387010.0</td>
+      <td>0.035</td>
+      <td>delta_4-P05-500-abneg</td>
+      <td>delta_4-P05-500-abneg_lib1</td>
+      <td>results/counts/delta_4-P05-500-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_4-P05-500-abneg_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211008</td>
+      <td>delta_4</td>
+      <td>lib2</td>
+      <td>P05</td>
+      <td>500.0</td>
+      <td>abneg</td>
+      <td>delta_4_lib2_abneg</td>
+      <td>ab_selection</td>
+      <td>319803.0</td>
+      <td>0.024</td>
+      <td>delta_4-P05-500-abneg</td>
+      <td>delta_4-P05-500-abneg_lib2</td>
+      <td>results/counts/delta_4-P05-500-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_4-P05-500-abneg_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211008</td>
+      <td>delta_5</td>
+      <td>lib1</td>
+      <td>P08</td>
+      <td>500.0</td>
+      <td>abneg</td>
+      <td>delta_5_lib1_abneg</td>
+      <td>ab_selection</td>
+      <td>834746.0</td>
+      <td>0.061</td>
+      <td>delta_5-P08-500-abneg</td>
+      <td>delta_5-P08-500-abneg_lib1</td>
+      <td>results/counts/delta_5-P08-500-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_5-P08-500-abneg_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211008</td>
+      <td>delta_5</td>
+      <td>lib2</td>
+      <td>P08</td>
+      <td>500.0</td>
+      <td>abneg</td>
+      <td>delta_5_lib2_abneg</td>
+      <td>ab_selection</td>
+      <td>762248.0</td>
+      <td>0.053</td>
+      <td>delta_5-P08-500-abneg</td>
+      <td>delta_5-P08-500-abneg_lib2</td>
+      <td>results/counts/delta_5-P08-500-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_5-P08-500-abneg_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211008</td>
+      <td>delta_6</td>
+      <td>lib1</td>
+      <td>P09</td>
+      <td>200.0</td>
+      <td>abneg</td>
+      <td>delta_6_lib1_abneg</td>
+      <td>ab_selection</td>
+      <td>738910.0</td>
+      <td>0.058</td>
+      <td>delta_6-P09-200-abneg</td>
+      <td>delta_6-P09-200-abneg_lib1</td>
+      <td>results/counts/delta_6-P09-200-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_6-P09-200-abneg_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211008</td>
+      <td>delta_6</td>
+      <td>lib2</td>
+      <td>P09</td>
+      <td>200.0</td>
+      <td>abneg</td>
+      <td>delta_6_lib2_abneg</td>
+      <td>ab_selection</td>
+      <td>675626.0</td>
+      <td>0.048</td>
+      <td>delta_6-P09-200-abneg</td>
+      <td>delta_6-P09-200-abneg_lib2</td>
+      <td>results/counts/delta_6-P09-200-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_6-P09-200-abneg_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211008</td>
+      <td>delta_7</td>
+      <td>lib1</td>
+      <td>P12</td>
+      <td>200.0</td>
+      <td>abneg</td>
+      <td>delta_7_lib1_abneg</td>
+      <td>ab_selection</td>
+      <td>652641.0</td>
+      <td>0.051</td>
+      <td>delta_7-P12-200-abneg</td>
+      <td>delta_7-P12-200-abneg_lib1</td>
+      <td>results/counts/delta_7-P12-200-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_7-P12-200-abneg_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211008</td>
+      <td>delta_7</td>
+      <td>lib2</td>
+      <td>P12</td>
+      <td>200.0</td>
+      <td>abneg</td>
+      <td>delta_7_lib2_abneg</td>
+      <td>ab_selection</td>
+      <td>588742.0</td>
+      <td>0.042</td>
+      <td>delta_7-P12-200-abneg</td>
+      <td>delta_7-P12-200-abneg_lib2</td>
+      <td>results/counts/delta_7-P12-200-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_7-P12-200-abneg_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211008</td>
+      <td>delta_8</td>
+      <td>lib1</td>
+      <td>P14</td>
+      <td>1250.0</td>
+      <td>abneg</td>
+      <td>delta_8_lib1_abneg</td>
+      <td>ab_selection</td>
+      <td>765130.0</td>
+      <td>0.057</td>
+      <td>delta_8-P14-1250-abneg</td>
+      <td>delta_8-P14-1250-abneg_lib1</td>
+      <td>results/counts/delta_8-P14-1250-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_8-P14-1250-abneg_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211008</td>
+      <td>delta_8</td>
+      <td>lib2</td>
+      <td>P14</td>
+      <td>1250.0</td>
+      <td>abneg</td>
+      <td>delta_8_lib2_abneg</td>
+      <td>ab_selection</td>
+      <td>711021.0</td>
+      <td>0.050</td>
+      <td>delta_8-P14-1250-abneg</td>
+      <td>delta_8-P14-1250-abneg_lib2</td>
+      <td>results/counts/delta_8-P14-1250-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_8-P14-1250-abneg_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211015</td>
+      <td>delta_9</td>
+      <td>lib1</td>
+      <td>267C</td>
+      <td>200.0</td>
+      <td>abneg</td>
+      <td>delta_9_lib1_abneg</td>
+      <td>ab_selection</td>
+      <td>607515.0</td>
+      <td>0.053</td>
+      <td>delta_9-267C-200-abneg</td>
+      <td>delta_9-267C-200-abneg_lib1</td>
+      <td>results/counts/delta_9-267C-200-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_9-267C-200-abneg_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211015</td>
+      <td>delta_9</td>
+      <td>lib2</td>
+      <td>267C</td>
+      <td>200.0</td>
+      <td>abneg</td>
+      <td>delta_9_lib2_abneg</td>
+      <td>ab_selection</td>
+      <td>573755.0</td>
+      <td>0.044</td>
+      <td>delta_9-267C-200-abneg</td>
+      <td>delta_9-267C-200-abneg_lib2</td>
+      <td>results/counts/delta_9-267C-200-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_9-267C-200-abneg_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211015</td>
+      <td>delta_10</td>
+      <td>lib1</td>
+      <td>268C</td>
+      <td>500.0</td>
+      <td>abneg</td>
+      <td>delta_10_lib1_abneg</td>
+      <td>ab_selection</td>
+      <td>594157.0</td>
+      <td>0.047</td>
+      <td>delta_10-268C-500-abneg</td>
+      <td>delta_10-268C-500-abneg_lib1</td>
+      <td>results/counts/delta_10-268C-500-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_10-268C-500-abneg_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211015</td>
+      <td>delta_10</td>
+      <td>lib2</td>
+      <td>268C</td>
+      <td>500.0</td>
+      <td>abneg</td>
+      <td>delta_10_lib2_abneg</td>
+      <td>ab_selection</td>
+      <td>558357.0</td>
+      <td>0.041</td>
+      <td>delta_10-268C-500-abneg</td>
+      <td>delta_10-268C-500-abneg_lib2</td>
+      <td>results/counts/delta_10-268C-500-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_10-268C-500-abneg_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211015</td>
+      <td>delta_11</td>
+      <td>lib1</td>
+      <td>273C</td>
+      <td>500.0</td>
+      <td>abneg</td>
+      <td>delta_11_lib1_abneg</td>
+      <td>ab_selection</td>
+      <td>611575.0</td>
+      <td>0.046</td>
+      <td>delta_11-273C-500-abneg</td>
+      <td>delta_11-273C-500-abneg_lib1</td>
+      <td>results/counts/delta_11-273C-500-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_11-273C-500-abneg_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211015</td>
+      <td>delta_11</td>
+      <td>lib2</td>
+      <td>273C</td>
+      <td>500.0</td>
+      <td>abneg</td>
+      <td>delta_11_lib2_abneg</td>
+      <td>ab_selection</td>
+      <td>542611.0</td>
+      <td>0.041</td>
+      <td>delta_11-273C-500-abneg</td>
+      <td>delta_11-273C-500-abneg_lib2</td>
+      <td>results/counts/delta_11-273C-500-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_11-273C-500-abneg_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211015</td>
+      <td>delta_12</td>
+      <td>lib1</td>
+      <td>274C</td>
+      <td>500.0</td>
+      <td>abneg</td>
+      <td>delta_12_lib1_abneg</td>
+      <td>ab_selection</td>
+      <td>571317.0</td>
+      <td>0.044</td>
+      <td>delta_12-274C-500-abneg</td>
+      <td>delta_12-274C-500-abneg_lib1</td>
+      <td>results/counts/delta_12-274C-500-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_12-274C-500-abneg_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211015</td>
+      <td>delta_12</td>
+      <td>lib2</td>
+      <td>274C</td>
+      <td>500.0</td>
+      <td>abneg</td>
+      <td>delta_12_lib2_abneg</td>
+      <td>ab_selection</td>
+      <td>560293.0</td>
+      <td>0.044</td>
+      <td>delta_12-274C-500-abneg</td>
+      <td>delta_12-274C-500-abneg_lib2</td>
+      <td>results/counts/delta_12-274C-500-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_12-274C-500-abneg_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211015</td>
+      <td>delta_13</td>
+      <td>lib1</td>
+      <td>276C</td>
+      <td>500.0</td>
+      <td>abneg</td>
+      <td>delta_13_lib1_abneg</td>
+      <td>ab_selection</td>
+      <td>558556.0</td>
+      <td>0.047</td>
+      <td>delta_13-276C-500-abneg</td>
+      <td>delta_13-276C-500-abneg_lib1</td>
+      <td>results/counts/delta_13-276C-500-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_13-276C-500-abneg_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211015</td>
+      <td>delta_13</td>
+      <td>lib2</td>
+      <td>276C</td>
+      <td>500.0</td>
+      <td>abneg</td>
+      <td>delta_13_lib2_abneg</td>
+      <td>ab_selection</td>
+      <td>524897.0</td>
+      <td>0.044</td>
+      <td>delta_13-276C-500-abneg</td>
+      <td>delta_13-276C-500-abneg_lib2</td>
+      <td>results/counts/delta_13-276C-500-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_13-276C-500-abneg_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211015</td>
+      <td>delta_14</td>
+      <td>lib1</td>
+      <td>277C</td>
+      <td>500.0</td>
+      <td>abneg</td>
+      <td>delta_14_lib1_abneg</td>
+      <td>ab_selection</td>
+      <td>548187.0</td>
+      <td>0.045</td>
+      <td>delta_14-277C-500-abneg</td>
+      <td>delta_14-277C-500-abneg_lib1</td>
+      <td>results/counts/delta_14-277C-500-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_14-277C-500-abneg_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211015</td>
+      <td>delta_14</td>
+      <td>lib2</td>
+      <td>277C</td>
+      <td>500.0</td>
+      <td>abneg</td>
+      <td>delta_14_lib2_abneg</td>
+      <td>ab_selection</td>
+      <td>535808.0</td>
+      <td>0.041</td>
+      <td>delta_14-277C-500-abneg</td>
+      <td>delta_14-277C-500-abneg_lib2</td>
+      <td>results/counts/delta_14-277C-500-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_14-277C-500-abneg_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211015</td>
+      <td>delta_15</td>
+      <td>lib1</td>
+      <td>278C</td>
+      <td>1250.0</td>
+      <td>abneg</td>
+      <td>delta_15_lib1_abneg</td>
+      <td>ab_selection</td>
+      <td>551478.0</td>
+      <td>0.046</td>
+      <td>delta_15-278C-1250-abneg</td>
+      <td>delta_15-278C-1250-abneg_lib1</td>
+      <td>results/counts/delta_15-278C-1250-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_15-278C-1250-abneg_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211015</td>
+      <td>delta_15</td>
+      <td>lib2</td>
+      <td>278C</td>
+      <td>1250.0</td>
+      <td>abneg</td>
+      <td>delta_15_lib2_abneg</td>
+      <td>ab_selection</td>
+      <td>550815.0</td>
+      <td>0.043</td>
+      <td>delta_15-278C-1250-abneg</td>
+      <td>delta_15-278C-1250-abneg_lib2</td>
+      <td>results/counts/delta_15-278C-1250-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_15-278C-1250-abneg_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211015</td>
+      <td>delta_16</td>
+      <td>lib1</td>
+      <td>279C</td>
+      <td>1250.0</td>
+      <td>abneg</td>
+      <td>delta_16_lib1_abneg</td>
+      <td>ab_selection</td>
+      <td>540196.0</td>
+      <td>0.044</td>
+      <td>delta_16-279C-1250-abneg</td>
+      <td>delta_16-279C-1250-abneg_lib1</td>
+      <td>results/counts/delta_16-279C-1250-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_16-279C-1250-abneg_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211015</td>
+      <td>delta_16</td>
+      <td>lib2</td>
+      <td>279C</td>
+      <td>1250.0</td>
+      <td>abneg</td>
+      <td>delta_16_lib2_abneg</td>
+      <td>ab_selection</td>
+      <td>525820.0</td>
+      <td>0.040</td>
+      <td>delta_16-279C-1250-abneg</td>
+      <td>delta_16-279C-1250-abneg_lib2</td>
+      <td>results/counts/delta_16-279C-1250-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_16-279C-1250-abneg_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211008</td>
+      <td>delta_1-8</td>
+      <td>lib1</td>
+      <td>none</td>
+      <td>0.0</td>
+      <td>ref</td>
+      <td>delta_1-8_lib1_ref*</td>
+      <td>ab_selection</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>delta_1-8-none-0-ref</td>
+      <td>delta_1-8-none-0-ref_lib1</td>
+      <td>results/counts/delta_1-8-none-0-ref_lib1_counts.csv</td>
+      <td>results/counts/delta_1-8-none-0-ref_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211008</td>
+      <td>delta_1-8</td>
+      <td>lib2</td>
+      <td>none</td>
+      <td>0.0</td>
+      <td>ref</td>
+      <td>delta_1-8_lib2_ref*</td>
+      <td>ab_selection</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>delta_1-8-none-0-ref</td>
+      <td>delta_1-8-none-0-ref_lib2</td>
+      <td>results/counts/delta_1-8-none-0-ref_lib2_counts.csv</td>
+      <td>results/counts/delta_1-8-none-0-ref_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211015</td>
+      <td>delta_9-16</td>
+      <td>lib1</td>
+      <td>none</td>
+      <td>0.0</td>
+      <td>ref</td>
+      <td>delta_9-16_lib1_ref*</td>
+      <td>ab_selection</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>delta_9-16-none-0-ref</td>
+      <td>delta_9-16-none-0-ref_lib1</td>
+      <td>results/counts/delta_9-16-none-0-ref_lib1_counts.csv</td>
+      <td>results/counts/delta_9-16-none-0-ref_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211015</td>
+      <td>delta_9-16</td>
+      <td>lib2</td>
+      <td>none</td>
+      <td>0.0</td>
+      <td>ref</td>
+      <td>delta_9-16_lib2_ref*</td>
+      <td>ab_selection</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>delta_9-16-none-0-ref</td>
+      <td>delta_9-16-none-0-ref_lib2</td>
+      <td>results/counts/delta_9-16-none-0-ref_lib2_counts.csv</td>
+      <td>results/counts/delta_9-16-none-0-ref_lib2_fates.csv</td>
     </tr>
   </tbody>
 </table>
@@ -2291,6 +2867,312 @@ display(HTML(fates
       <td>3.3e+01</td>
       <td>3.0e+03</td>
       <td>1.4e+02</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_1-8-none-0-ref</th>
+      <th>lib1</th>
+      <td>2.5e+06</td>
+      <td>8.5e+06</td>
+      <td>3.1e+06</td>
+      <td>1.0e+06</td>
+      <td>2.9e+07</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>2.7e+06</td>
+      <td>9.3e+06</td>
+      <td>3.4e+06</td>
+      <td>1.2e+06</td>
+      <td>3.1e+07</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_1-P02-500-abneg</th>
+      <th>lib1</th>
+      <td>1.8e+05</td>
+      <td>6.7e+05</td>
+      <td>2.4e+05</td>
+      <td>9.1e+04</td>
+      <td>2.1e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.9e+05</td>
+      <td>7.1e+05</td>
+      <td>2.4e+05</td>
+      <td>8.2e+04</td>
+      <td>2.2e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_10-268C-500-abneg</th>
+      <th>lib1</th>
+      <td>2.0e+05</td>
+      <td>7.2e+05</td>
+      <td>2.5e+05</td>
+      <td>7.8e+04</td>
+      <td>2.2e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.7e+05</td>
+      <td>6.3e+05</td>
+      <td>2.1e+05</td>
+      <td>7.7e+04</td>
+      <td>1.9e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_11-273C-500-abneg</th>
+      <th>lib1</th>
+      <td>2.1e+05</td>
+      <td>7.7e+05</td>
+      <td>2.6e+05</td>
+      <td>9.2e+04</td>
+      <td>2.4e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.7e+05</td>
+      <td>6.3e+05</td>
+      <td>2.1e+05</td>
+      <td>7.6e+04</td>
+      <td>1.9e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_12-274C-500-abneg</th>
+      <th>lib1</th>
+      <td>2.2e+05</td>
+      <td>8.1e+05</td>
+      <td>2.8e+05</td>
+      <td>9.5e+04</td>
+      <td>2.5e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.9e+05</td>
+      <td>7.2e+05</td>
+      <td>2.5e+05</td>
+      <td>9.2e+04</td>
+      <td>2.1e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_13-276C-500-abneg</th>
+      <th>lib1</th>
+      <td>2.2e+05</td>
+      <td>7.8e+05</td>
+      <td>2.7e+05</td>
+      <td>8.7e+04</td>
+      <td>2.4e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.9e+05</td>
+      <td>7.0e+05</td>
+      <td>2.4e+05</td>
+      <td>8.7e+04</td>
+      <td>2.1e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_14-277C-500-abneg</th>
+      <th>lib1</th>
+      <td>1.9e+05</td>
+      <td>6.7e+05</td>
+      <td>2.3e+05</td>
+      <td>7.9e+04</td>
+      <td>2.1e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.6e+05</td>
+      <td>6.3e+05</td>
+      <td>2.0e+05</td>
+      <td>7.4e+04</td>
+      <td>1.9e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_15-278C-1250-abneg</th>
+      <th>lib1</th>
+      <td>2.0e+05</td>
+      <td>7.2e+05</td>
+      <td>2.5e+05</td>
+      <td>8.5e+04</td>
+      <td>2.2e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.8e+05</td>
+      <td>6.7e+05</td>
+      <td>2.2e+05</td>
+      <td>7.9e+04</td>
+      <td>2.0e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_16-279C-1250-abneg</th>
+      <th>lib1</th>
+      <td>1.8e+05</td>
+      <td>6.6e+05</td>
+      <td>2.2e+05</td>
+      <td>7.6e+04</td>
+      <td>2.0e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.6e+05</td>
+      <td>5.8e+05</td>
+      <td>1.9e+05</td>
+      <td>7.0e+04</td>
+      <td>1.8e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_2-P03-1250-abneg</th>
+      <th>lib1</th>
+      <td>1.8e+05</td>
+      <td>6.6e+05</td>
+      <td>2.2e+05</td>
+      <td>7.5e+04</td>
+      <td>2.0e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.9e+05</td>
+      <td>6.9e+05</td>
+      <td>2.3e+05</td>
+      <td>8.6e+04</td>
+      <td>2.1e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_3-P04-1250-abneg</th>
+      <th>lib1</th>
+      <td>2.0e+05</td>
+      <td>7.3e+05</td>
+      <td>2.6e+05</td>
+      <td>9.2e+04</td>
+      <td>2.2e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.9e+05</td>
+      <td>7.0e+05</td>
+      <td>2.3e+05</td>
+      <td>8.9e+04</td>
+      <td>2.1e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_4-P05-500-abneg</th>
+      <th>lib1</th>
+      <td>1.3e+05</td>
+      <td>4.8e+05</td>
+      <td>1.7e+05</td>
+      <td>7.1e+04</td>
+      <td>1.5e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.1e+05</td>
+      <td>4.2e+05</td>
+      <td>1.4e+05</td>
+      <td>5.1e+04</td>
+      <td>1.2e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_5-P08-500-abneg</th>
+      <th>lib1</th>
+      <td>3.2e+05</td>
+      <td>1.2e+06</td>
+      <td>3.9e+05</td>
+      <td>1.4e+05</td>
+      <td>3.6e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>2.6e+05</td>
+      <td>9.8e+05</td>
+      <td>3.3e+05</td>
+      <td>1.2e+05</td>
+      <td>3.0e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_6-P09-200-abneg</th>
+      <th>lib1</th>
+      <td>2.6e+05</td>
+      <td>9.4e+05</td>
+      <td>3.2e+05</td>
+      <td>1.0e+05</td>
+      <td>2.9e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>2.2e+05</td>
+      <td>8.0e+05</td>
+      <td>2.7e+05</td>
+      <td>9.2e+04</td>
+      <td>2.4e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_7-P12-200-abneg</th>
+      <th>lib1</th>
+      <td>2.1e+05</td>
+      <td>7.7e+05</td>
+      <td>2.6e+05</td>
+      <td>8.3e+04</td>
+      <td>2.3e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.9e+05</td>
+      <td>7.2e+05</td>
+      <td>2.4e+05</td>
+      <td>8.4e+04</td>
+      <td>2.2e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_8-P14-1250-abneg</th>
+      <th>lib1</th>
+      <td>3.1e+05</td>
+      <td>1.1e+06</td>
+      <td>3.8e+05</td>
+      <td>1.2e+05</td>
+      <td>3.4e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>2.4e+05</td>
+      <td>8.9e+05</td>
+      <td>3.0e+05</td>
+      <td>1.1e+05</td>
+      <td>2.7e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_9-16-none-0-ref</th>
+      <th>lib1</th>
+      <td>3.0e+06</td>
+      <td>1.0e+07</td>
+      <td>3.7e+06</td>
+      <td>1.2e+06</td>
+      <td>3.5e+07</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>3.2e+06</td>
+      <td>1.1e+07</td>
+      <td>4.1e+06</td>
+      <td>1.3e+06</td>
+      <td>3.8e+07</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_9-267C-200-abneg</th>
+      <th>lib1</th>
+      <td>2.0e+05</td>
+      <td>7.3e+05</td>
+      <td>2.5e+05</td>
+      <td>8.3e+04</td>
+      <td>2.3e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>1.6e+05</td>
+      <td>6.1e+05</td>
+      <td>2.1e+05</td>
+      <td>7.1e+04</td>
+      <td>1.9e+06</td>
     </tr>
   </tbody>
 </table>

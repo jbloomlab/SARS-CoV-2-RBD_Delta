@@ -358,6 +358,7 @@ dependencies:
   - zlib=1.2.11=h36c2ea0_1013
   - zstd=1.5.0=ha95c52a_0
   - pip:
+    - adjusttext==0.7.3
     - alignparse==0.2.4
     - biopython==1.79
     - descartes==1.1.0
