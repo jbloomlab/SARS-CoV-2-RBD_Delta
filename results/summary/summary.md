@@ -38,5 +38,12 @@ Here is the Markdown output of each notebook in the workflow:
 
 9. Determine [cutoffs](bind_expr_filters.md) for ACE2 binding and RBD expression for serum-escape experiments.
 
-10. [Count mutations in GISAID RBD sequences](gisaid_rbd_mutations.md)
+10. [Escape scores from variant counts](counts_to_scores.md).
+
+11. [Call sites of strong escape](call_strong_escape_sites.md),
+   and write to [a CSV file](../escape_profiles/strong_escape_sites.csv).
+
+12. Plot [escape profiles](escape_profiles.md).
+
+13. [Count mutations in GISAID RBD sequences](gisaid_rbd_mutations.md)
     to create [this counts file](../GISAID_mutations/mutation_counts.csv).

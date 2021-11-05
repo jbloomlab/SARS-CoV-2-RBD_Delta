@@ -93,11 +93,11 @@ rule make_summary:
         mut_phenos_file=config['final_variant_scores_mut_file'],
         counts_to_cells_ratio=nb_markdown('counts_to_cells_ratio.ipynb'),
         counts_to_cells_csv=config['counts_to_cells_csv'],
-        # counts_to_scores=nb_markdown('counts_to_scores.ipynb'),
-        # escape_fracs=config['escape_fracs'],
-        # call_strong_escape_sites=nb_markdown('call_strong_escape_sites.ipynb'),
-        # strong_escape_sites=config['strong_escape_sites'],
-        # escape_profiles=nb_markdown('escape_profiles.ipynb'),
+        counts_to_scores=nb_markdown('counts_to_scores.ipynb'),
+        escape_fracs=config['escape_fracs'],
+        call_strong_escape_sites=nb_markdown('call_strong_escape_sites.ipynb'),
+        strong_escape_sites=config['strong_escape_sites'],
+        escape_profiles=nb_markdown('escape_profiles.ipynb'),
         # early2020_call_strong_escape_sites=nb_markdown('early2020_call_strong_escape_sites.ipynb'),
         # early2020_strong_escape_sites=config['early2020_strong_escape_sites'],
         # early2020_escape_profiles=nb_markdown('early2020_escape_profiles.ipynb'),
@@ -155,7 +155,14 @@ rule make_summary:
 
             9. Determine [cutoffs]({path(input.bind_expr_filters)}) for ACE2 binding and RBD expression for serum-escape experiments.
 
-            10. [Count mutations in GISAID RBD sequences]({path(input.gisaid_rbd_mutations)})
+            10. [Escape scores from variant counts]({path(input.counts_to_scores)}).
+
+            11. [Call sites of strong escape]({path(input.call_strong_escape_sites)}),
+               and write to [a CSV file]({path(input.strong_escape_sites)}).
+
+            12. Plot [escape profiles]({path(input.escape_profiles)}).
+
+            13. [Count mutations in GISAID RBD sequences]({path(input.gisaid_rbd_mutations)})
                 to create [this counts file]({path(input.gisaid_mutation_counts)}).
 
 
@@ -164,12 +171,7 @@ rule make_summary:
             """
             ).strip())
 
-            # 6. [Escape scores from variant counts]({path(input.counts_to_scores)}).
-            #
-            # 7. [Call sites of strong escape]({path(input.call_strong_escape_sites)}),
-            #    and write to [a CSV file]({path(input.strong_escape_sites)}).
-            #
-            # 8. Plot [escape profiles]({path(input.escape_profiles)}).
+
             #
             # 9. Map escape profiles to ``*.pdb`` files using [this notebook]({path(input.output_pdbs)})
             #
@@ -283,50 +285,51 @@ rule gisaid_rbd_mutations:
 #     shell:
 #         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
-# rule escape_profiles:
-#     """Make stacked logo plots of antibody escape profiles."""
-#     input:
-#         escape_fracs=config['escape_fracs'],
-#         escape_profiles_config=config['escape_profiles_config'],
-#         site_color_schemes=config['site_color_schemes'],
-#         wildtype_sequence=config['wildtype_sequence'],
-#         mut_bind_expr=config['final_variant_scores_mut_file'],
-#         strong_escape_sites=config['strong_escape_sites'],
-#     output:
-#         nb_markdown=nb_markdown('escape_profiles.ipynb'),
-#         escape_profiles_dms_colors=config['escape_profiles_dms_colors'],
-#     params:
-#         nb='escape_profiles.ipynb'
-#     shell:
-#         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+rule escape_profiles:
+    """Make stacked logo plots of antibody escape profiles."""
+    input:
+        escape_fracs=config['escape_fracs'],
+        escape_profiles_config=config['escape_profiles_config'],
+        site_color_schemes=config['site_color_schemes'],
+        wildtype_sequence=config['wildtype_sequence'],
+        mut_bind_expr=config['final_variant_scores_mut_file'],
+        strong_escape_sites=config['strong_escape_sites'],
+    output:
+        nb_markdown=nb_markdown('escape_profiles.ipynb'),
+        escape_profiles_dms_colors=config['escape_profiles_dms_colors'],
+    params:
+        nb='escape_profiles.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
-# rule call_strong_escape_sites:
-#     """Call sites of strong escape."""
-#     input:
-#         escape_fracs=config['escape_fracs'],
-#     output:
-#         nb_markdown=nb_markdown('call_strong_escape_sites.ipynb'),
-#         strong_escape_sites=config['strong_escape_sites'],
-#     params:
-#         nb='call_strong_escape_sites.ipynb'
-#     shell:
-#         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+rule call_strong_escape_sites:
+    """Call sites of strong escape."""
+    input:
+        escape_fracs=config['escape_fracs'],
+    output:
+        nb_markdown=nb_markdown('call_strong_escape_sites.ipynb'),
+        strong_escape_sites=config['strong_escape_sites'],
+    params:
+        nb='call_strong_escape_sites.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
-# rule counts_to_scores:
-#     """Analyze variant counts to compute escape scores."""
-#     input:
-#         config['variant_counts'],
-#         config['wildtype_sequence'],
-        # config['final_variant_scores_mut_file'],
-#     output:
-#         nb_markdown=nb_markdown('counts_to_scores.ipynb'),
-#         escape_scores=config['escape_scores'],
-#         escape_score_samples=config['escape_score_samples'],
-#     params:
-#         nb='counts_to_scores.ipynb'
-#     shell:
-#         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
-#
+rule counts_to_scores:
+    """Analyze variant counts to compute escape scores."""
+    input:
+        config['variant_counts'],
+        config['wildtype_sequence'],
+        config['final_variant_scores_mut_file'],
+    output:
+        nb_markdown=nb_markdown('counts_to_scores.ipynb'),
+        escape_scores=config['escape_scores'],
+        escape_score_samples=config['escape_score_samples'],
+        escape_fracs=config['escape_fracs'],
+    params:
+        nb='counts_to_scores.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+
 rule counts_to_cells_ratio:
     input:
         config['variant_counts'],
