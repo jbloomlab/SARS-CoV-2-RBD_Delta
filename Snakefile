@@ -95,6 +95,7 @@ rule make_summary:
         counts_to_cells_csv=config['counts_to_cells_csv'],
         counts_to_scores=nb_markdown('counts_to_scores.ipynb'),
         escape_fracs=config['escape_fracs'],
+        investigate_scores=nb_markdown('investigate_scores.ipynb'),
         call_strong_escape_sites=nb_markdown('call_strong_escape_sites.ipynb'),
         strong_escape_sites=config['strong_escape_sites'],
         escape_profiles=nb_markdown('escape_profiles.ipynb'),
@@ -156,6 +157,8 @@ rule make_summary:
             9. Determine [cutoffs]({path(input.bind_expr_filters)}) for ACE2 binding and RBD expression for serum-escape experiments.
 
             10. [Escape scores from variant counts]({path(input.counts_to_scores)}).
+            
+            11. [Investigate scores]({path(input.investigate_scores)}) before applying ACE2 binding and RBD expression filters, to see if there is a relationship between functional scores and serum-escape score. 
 
             11. [Call sites of strong escape]({path(input.call_strong_escape_sites)}),
                and write to [a CSV file]({path(input.strong_escape_sites)}).
@@ -310,6 +313,18 @@ rule call_strong_escape_sites:
     shell:
         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
+rule investigate_scores:
+    """Investigate relationship between RBD expression, ACE2 binding, and serum-escape scores."""
+    input:
+        config['final_variant_scores_mut_file'],
+        config['escape_scores'],
+    output:
+        nb_markdown=nb_markdown('investigate_scores.ipynb'),
+    params:
+        nb='investigate_scores.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+        
 rule counts_to_scores:
     """Analyze variant counts to compute escape scores."""
     input:

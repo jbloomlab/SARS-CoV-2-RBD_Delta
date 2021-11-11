@@ -40,6 +40,8 @@ Here is the Markdown output of each notebook in the workflow:
 
 10. [Escape scores from variant counts](counts_to_scores.md).
 
+11. [Investigate scores](investigate_scores.md) before applying ACE2 binding and RBD expression filters, to see if there is a relationship between functional scores and serum-escape score. 
+
 11. [Call sites of strong escape](call_strong_escape_sites.md),
    and write to [a CSV file](../escape_profiles/strong_escape_sites.csv).
 
