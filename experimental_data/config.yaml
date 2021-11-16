@@ -19,3 +19,8 @@ neut_samples_ignore: False
 
 # the neutralization limit of detection is equal to the starting dilution
 NT50_LOD: 25
+
+rbd_depletions_date:
+  - 2021-11-12
+
+sample_key_file: data/sample_key.csv

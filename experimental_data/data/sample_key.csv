@@ -1,0 +1,17 @@
+﻿subject_name,day,sample_type,sample,sorting concentration
+P02,32,Pfizer,P02-day-32,500
+P03,34,Pfizer,P03-day-34,1250
+P04,31,Pfizer,P04-day-31,1250
+P05,28,Pfizer,P05-day-28,500
+P08,32,Pfizer,P08-day-32,500
+P09,28,Pfizer,P09-day-28,200
+P12,29,Pfizer,P12-day-29,200
+P14,29,Pfizer,P14-day-29,1250
+267C,38,Delta breakthrough,267C-day-38,200
+268C,28,Delta breakthrough,268C-day-28,500
+273C,28,Delta breakthrough,273C-day-28,500
+274C,26,Delta breakthrough,274C-day-26,500
+276C,24,Delta breakthrough,276C-day-24,500
+277C,27,Delta breakthrough,277C-day-27,500
+278C,30,Delta breakthrough,278C-day-30,1250
+279C,25,Delta breakthrough,279C-day-25,1250
