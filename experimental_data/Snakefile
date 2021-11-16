@@ -51,18 +51,18 @@ rule all:
         # 'results/neut_titers/neut_titers.csv',
         'results/summary/rbd_depletion_neuts.md',
         # 'results/summary/analyze_neut_data.md',
-        # 'results/entry_titers/titers.csv',
-        # 'results/summary/calculate_entry_titer.md',
+        'results/entry_titers/titers.csv',
+        'results/summary/calculate_entry_titer.md',
         'results/summary/rbd_depletion_elisas.md',
 
-# rule calculate_entry_titer:
-#     input:
-#         titer_data='data/entry_titers/',
-#     output:
-#         'results/entry_titers/titers.csv',
-#         'results/summary/calculate_entry_titer.md',
-#     run:
-#         run_nb_to_md('calculate_entry_titer.ipynb')
+rule calculate_entry_titer:
+    input:
+        titer_data='data/entry_titers/',
+    output:
+        'results/entry_titers/titers.csv',
+        'results/summary/calculate_entry_titer.md',
+    run:
+        run_nb_to_md('calculate_entry_titer.ipynb')
 
 rule rbd_depletion_elisas:
     input:
