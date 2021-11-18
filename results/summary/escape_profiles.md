@@ -644,7 +644,7 @@ with multiprocessing.Pool(ncpus) as pool:
         
 ```
 
-    Drawing 6 profiles using 8 CPUs...
+    Drawing 9 profiles using 8 CPUs...
     
     Plotted profile 1 to:
      results/escape_profiles/Pfizer_stackedlogo.pdf
@@ -657,18 +657,16 @@ with multiprocessing.Pool(ncpus) as pool:
     
 
 
+
+    
+![png](escape_profiles_files/escape_profiles_26_2.png)
+    
+
+
     
     Plotted profile 2 to:
      results/escape_profiles/Pfizer_color_by_bind_stackedlogo.pdf
      results/escape_profiles/Pfizer_color_by_bind_stackedlogo.png.
-
-
-
-    
-![png](escape_profiles_files/escape_profiles_26_3.png)
-    
-
-
     
     Plotted profile 3 to:
      results/escape_profiles/Pfizer_color_by_expr_stackedlogo.pdf
@@ -677,7 +675,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_26_5.png)
+![png](escape_profiles_files/escape_profiles_26_4.png)
     
 
 
@@ -689,7 +687,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_26_7.png)
+![png](escape_profiles_files/escape_profiles_26_6.png)
     
 
 
@@ -701,7 +699,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_26_9.png)
+![png](escape_profiles_files/escape_profiles_26_8.png)
     
 
 
@@ -713,7 +711,43 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_26_11.png)
+![png](escape_profiles_files/escape_profiles_26_10.png)
+    
+
+
+    
+    Plotted profile 7 to:
+     results/escape_profiles/close_shave_sort_stackedlogo.pdf
+     results/escape_profiles/close_shave_sort_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_26_12.png)
+    
+
+
+    
+    Plotted profile 8 to:
+     results/escape_profiles/close_shave_sort_color_by_bind_stackedlogo.pdf
+     results/escape_profiles/close_shave_sort_color_by_bind_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_26_14.png)
+    
+
+
+    
+    Plotted profile 9 to:
+     results/escape_profiles/close_shave_sort_color_by_expr_stackedlogo.pdf
+     results/escape_profiles/close_shave_sort_color_by_expr_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_26_16.png)
     
 
 

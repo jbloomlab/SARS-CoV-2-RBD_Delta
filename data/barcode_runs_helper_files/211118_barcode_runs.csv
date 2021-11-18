@@ -1,0 +1,9 @@
+﻿date,experiment,library,antibody,concentration,sort_bin,HutchBase,experiment_type,number_cells,frac_escape,sample,R1
+210930,TiteSeq,lib1,monomeric_ACE2,5,1,210930_s05-b1,TiteSeq,"8,755,411",NA,TiteSeq_05_bin1,
+210930,TiteSeq,lib1,monomeric_ACE2,5,2,210930_s05-b2,TiteSeq,"1,388,715",NA,TiteSeq_05_bin2,
+210930,TiteSeq,lib1,monomeric_ACE2,6,1,210930_s06-b1,TiteSeq,"10,867,246",NA,TiteSeq_06_bin1,
+210930,TiteSeq,lib2,monomeric_ACE2,1,4,211004_s10-b4,TiteSeq,"6,805,287",NA,TiteSeq_01_bin4,
+210930,TiteSeq,lib2,monomeric_ACE2,2,1,211004_s11-b1,TiteSeq,"1,503,469",NA,TiteSeq_02_bin1,
+210930,TiteSeq,lib2,monomeric_ACE2,5,2,211004_s14-b2,TiteSeq,"1,832,983",NA,TiteSeq_05_bin2,
+210930,TiteSeq,lib2,monomeric_ACE2,5,3,211004_s14-b3,TiteSeq,"13,763",NA,TiteSeq_05_bin3,
+210930,TiteSeq,lib2,monomeric_ACE2,7,1,211004_s16-b1,TiteSeq,"9,666,170",NA,TiteSeq_07_bin1,

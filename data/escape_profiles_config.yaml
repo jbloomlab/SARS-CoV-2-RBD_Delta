@@ -105,3 +105,36 @@ Delta_breakthrough:
     ylabel: total escape at site
     label_minescape: 2
     label_minfreq: 5e-5
+
+close_shave_sort:
+  conditions:
+    P03_repeat_1250: P03_repeat
+    P08_repeat_500: P08_repeat
+    268C_repeat_500: 268C_repeat
+    279C_repeat_1250: 279C_repeat
+  plot_auto_identified_sites: sensitive
+  add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
+  exclude_sites: [336, 361]
+  site_color_scheme: barnes_serum_epitopes
+  color_by_dms: True
+  make_supp_data: True
+  dmslogo_facet_plot_kwargs:
+    height_per_ax: 2.0
+  dmslogo_draw_line_kwargs:
+    widthscale: 0.5
+    axisfontscale: 1.5
+  dmslogo_draw_logo_kwargs:
+    widthscale: 0.75
+    axisfontscale: 1.5
+  analyze_natural_mutations: true
+  analyze_natural_mutations_specs:
+    plot_average_only: true
+    maxcol: 6
+    also_label: [346,365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
+    label_font_size: 7
+    default_color: '#999999'
+    default_alpha: 0.6
+    escape: tot_site_escape
+    ylabel: total escape at site
+    label_minescape: 2
+    label_minfreq: 5e-5
