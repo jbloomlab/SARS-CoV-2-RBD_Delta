@@ -1996,6 +1996,166 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>results/counts/delta_9-16-none-0-ref_lib2_counts.csv</td>
       <td>results/counts/delta_9-16-none-0-ref_lib2_fates.csv</td>
     </tr>
+    <tr>
+      <td>211112</td>
+      <td>delta_17-20</td>
+      <td>lib1</td>
+      <td>none</td>
+      <td>0.0</td>
+      <td>ref</td>
+      <td>delta_17-20_lib1_ref</td>
+      <td>ab_selection</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>delta_17-20-none-0-ref</td>
+      <td>delta_17-20-none-0-ref_lib1</td>
+      <td>results/counts/delta_17-20-none-0-ref_lib1_counts.csv</td>
+      <td>results/counts/delta_17-20-none-0-ref_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211112</td>
+      <td>delta_17-20</td>
+      <td>lib2</td>
+      <td>none</td>
+      <td>0.0</td>
+      <td>ref</td>
+      <td>delta_17-20_lib2_ref</td>
+      <td>ab_selection</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>delta_17-20-none-0-ref</td>
+      <td>delta_17-20-none-0-ref_lib2</td>
+      <td>results/counts/delta_17-20-none-0-ref_lib2_counts.csv</td>
+      <td>results/counts/delta_17-20-none-0-ref_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211112</td>
+      <td>delta_17</td>
+      <td>lib1</td>
+      <td>P03_repeat</td>
+      <td>1250.0</td>
+      <td>abneg</td>
+      <td>delta_17_lib1_abneg</td>
+      <td>ab_selection</td>
+      <td>1022039.0</td>
+      <td>0.094</td>
+      <td>delta_17-P03_repeat-1250-abneg</td>
+      <td>delta_17-P03_repeat-1250-abneg_lib1</td>
+      <td>results/counts/delta_17-P03_repeat-1250-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_17-P03_repeat-1250-abneg_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211112</td>
+      <td>delta_17</td>
+      <td>lib2</td>
+      <td>P03_repeat</td>
+      <td>1250.0</td>
+      <td>abneg</td>
+      <td>delta_17_lib2_abneg</td>
+      <td>ab_selection</td>
+      <td>1012373.0</td>
+      <td>0.087</td>
+      <td>delta_17-P03_repeat-1250-abneg</td>
+      <td>delta_17-P03_repeat-1250-abneg_lib2</td>
+      <td>results/counts/delta_17-P03_repeat-1250-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_17-P03_repeat-1250-abneg_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211112</td>
+      <td>delta_18</td>
+      <td>lib1</td>
+      <td>P08_repeat</td>
+      <td>500.0</td>
+      <td>abneg</td>
+      <td>delta_18_lib1_abneg</td>
+      <td>ab_selection</td>
+      <td>1015086.0</td>
+      <td>0.112</td>
+      <td>delta_18-P08_repeat-500-abneg</td>
+      <td>delta_18-P08_repeat-500-abneg_lib1</td>
+      <td>results/counts/delta_18-P08_repeat-500-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_18-P08_repeat-500-abneg_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211112</td>
+      <td>delta_18</td>
+      <td>lib2</td>
+      <td>P08_repeat</td>
+      <td>500.0</td>
+      <td>abneg</td>
+      <td>delta_18_lib2_abneg</td>
+      <td>ab_selection</td>
+      <td>1045993.0</td>
+      <td>0.121</td>
+      <td>delta_18-P08_repeat-500-abneg</td>
+      <td>delta_18-P08_repeat-500-abneg_lib2</td>
+      <td>results/counts/delta_18-P08_repeat-500-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_18-P08_repeat-500-abneg_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211112</td>
+      <td>delta_19</td>
+      <td>lib1</td>
+      <td>268C_repeat</td>
+      <td>500.0</td>
+      <td>abneg</td>
+      <td>delta_19_lib1_abneg</td>
+      <td>ab_selection</td>
+      <td>1012056.0</td>
+      <td>0.107</td>
+      <td>delta_19-268C_repeat-500-abneg</td>
+      <td>delta_19-268C_repeat-500-abneg_lib1</td>
+      <td>results/counts/delta_19-268C_repeat-500-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_19-268C_repeat-500-abneg_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211112</td>
+      <td>delta_19</td>
+      <td>lib2</td>
+      <td>268C_repeat</td>
+      <td>500.0</td>
+      <td>abneg</td>
+      <td>delta_19_lib2_abneg</td>
+      <td>ab_selection</td>
+      <td>1023050.0</td>
+      <td>0.119</td>
+      <td>delta_19-268C_repeat-500-abneg</td>
+      <td>delta_19-268C_repeat-500-abneg_lib2</td>
+      <td>results/counts/delta_19-268C_repeat-500-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_19-268C_repeat-500-abneg_lib2_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211112</td>
+      <td>delta_20</td>
+      <td>lib1</td>
+      <td>279C_repeat</td>
+      <td>1250.0</td>
+      <td>abneg</td>
+      <td>delta_20_lib1_abneg</td>
+      <td>ab_selection</td>
+      <td>1026589.0</td>
+      <td>0.097</td>
+      <td>delta_20-279C_repeat-1250-abneg</td>
+      <td>delta_20-279C_repeat-1250-abneg_lib1</td>
+      <td>results/counts/delta_20-279C_repeat-1250-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_20-279C_repeat-1250-abneg_lib1_fates.csv</td>
+    </tr>
+    <tr>
+      <td>211112</td>
+      <td>delta_20</td>
+      <td>lib2</td>
+      <td>279C_repeat</td>
+      <td>1250.0</td>
+      <td>abneg</td>
+      <td>delta_20_lib2_abneg</td>
+      <td>ab_selection</td>
+      <td>1077475.0</td>
+      <td>0.097</td>
+      <td>delta_20-279C_repeat-1250-abneg</td>
+      <td>delta_20-279C_repeat-1250-abneg_lib2</td>
+      <td>results/counts/delta_20-279C_repeat-1250-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_20-279C_repeat-1250-abneg_lib2_fates.csv</td>
+    </tr>
   </tbody>
 </table>
 
@@ -2318,11 +2478,11 @@ display(HTML(fates
     </tr>
     <tr>
       <th>lib2</th>
-      <td>1.0e+05</td>
-      <td>1.3e+06</td>
-      <td>2.9e+05</td>
-      <td>9.9e+04</td>
-      <td>4.3e+06</td>
+      <td>9.4e+05</td>
+      <td>4.7e+06</td>
+      <td>1.6e+06</td>
+      <td>4.4e+05</td>
+      <td>1.6e+07</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">TiteSeq_02_bin1</th>
@@ -2335,11 +2495,11 @@ display(HTML(fates
     </tr>
     <tr>
       <th>lib2</th>
-      <td>1.4e+04</td>
-      <td>1.9e+05</td>
-      <td>4.1e+04</td>
-      <td>1.4e+04</td>
-      <td>5.6e+05</td>
+      <td>2.0e+05</td>
+      <td>1.0e+06</td>
+      <td>3.1e+05</td>
+      <td>8.8e+04</td>
+      <td>3.0e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">TiteSeq_02_bin2</th>
@@ -2531,11 +2691,11 @@ display(HTML(fates
     <tr>
       <th rowspan="2" valign="top">TiteSeq_05_bin1</th>
       <th>lib1</th>
-      <td>6.5e+04</td>
-      <td>7.8e+05</td>
-      <td>1.8e+05</td>
-      <td>6.4e+04</td>
-      <td>2.6e+06</td>
+      <td>1.1e+06</td>
+      <td>5.1e+06</td>
+      <td>1.7e+06</td>
+      <td>5.0e+05</td>
+      <td>1.7e+07</td>
     </tr>
     <tr>
       <th>lib2</th>
@@ -2548,19 +2708,19 @@ display(HTML(fates
     <tr>
       <th rowspan="2" valign="top">TiteSeq_05_bin2</th>
       <th>lib1</th>
-      <td>2.2e+04</td>
-      <td>2.3e+05</td>
-      <td>5.5e+04</td>
-      <td>3.4e+04</td>
-      <td>8.0e+05</td>
+      <td>2.1e+05</td>
+      <td>9.6e+05</td>
+      <td>3.3e+05</td>
+      <td>1.1e+05</td>
+      <td>3.4e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>8.7e+03</td>
-      <td>7.4e+04</td>
-      <td>1.8e+04</td>
-      <td>1.6e+04</td>
       <td>2.5e+05</td>
+      <td>1.1e+06</td>
+      <td>3.8e+05</td>
+      <td>1.1e+05</td>
+      <td>3.6e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">TiteSeq_05_bin3</th>
@@ -2573,11 +2733,11 @@ display(HTML(fates
     </tr>
     <tr>
       <th>lib2</th>
-      <td>4.5e+02</td>
-      <td>3.3e+03</td>
-      <td>7.3e+02</td>
-      <td>3.3e+03</td>
-      <td>1.0e+04</td>
+      <td>4.6e+04</td>
+      <td>1.9e+05</td>
+      <td>6.8e+04</td>
+      <td>1.9e+04</td>
+      <td>6.6e+05</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">TiteSeq_05_bin4</th>
@@ -2599,11 +2759,11 @@ display(HTML(fates
     <tr>
       <th rowspan="2" valign="top">TiteSeq_06_bin1</th>
       <th>lib1</th>
-      <td>1.6e+03</td>
-      <td>1.9e+04</td>
-      <td>4.6e+03</td>
-      <td>2.6e+03</td>
-      <td>6.4e+04</td>
+      <td>1.4e+06</td>
+      <td>5.9e+06</td>
+      <td>2.1e+06</td>
+      <td>6.1e+05</td>
+      <td>2.0e+07</td>
     </tr>
     <tr>
       <th>lib2</th>
@@ -2675,11 +2835,11 @@ display(HTML(fates
     </tr>
     <tr>
       <th>lib2</th>
-      <td>5.5e+04</td>
-      <td>6.7e+05</td>
-      <td>1.5e+05</td>
-      <td>5.5e+04</td>
-      <td>2.2e+06</td>
+      <td>1.5e+06</td>
+      <td>7.0e+06</td>
+      <td>2.3e+06</td>
+      <td>6.5e+05</td>
+      <td>2.3e+07</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">TiteSeq_07_bin2</th>
@@ -3022,6 +3182,74 @@ display(HTML(fates
       <td>1.8e+06</td>
     </tr>
     <tr>
+      <th rowspan="2" valign="top">delta_17-20-none-0-ref</th>
+      <th>lib1</th>
+      <td>3.4e+06</td>
+      <td>1.4e+07</td>
+      <td>5.1e+06</td>
+      <td>1.4e+06</td>
+      <td>4.8e+07</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>3.4e+06</td>
+      <td>1.4e+07</td>
+      <td>5.0e+06</td>
+      <td>1.4e+06</td>
+      <td>4.8e+07</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_17-P03_repeat-1250-abneg</th>
+      <th>lib1</th>
+      <td>3.9e+05</td>
+      <td>1.7e+06</td>
+      <td>5.7e+05</td>
+      <td>1.7e+05</td>
+      <td>5.3e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>3.4e+05</td>
+      <td>1.6e+06</td>
+      <td>5.2e+05</td>
+      <td>1.5e+05</td>
+      <td>4.7e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_18-P08_repeat-500-abneg</th>
+      <th>lib1</th>
+      <td>3.5e+05</td>
+      <td>1.5e+06</td>
+      <td>5.2e+05</td>
+      <td>1.5e+05</td>
+      <td>4.8e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>4.1e+05</td>
+      <td>2.1e+06</td>
+      <td>6.1e+05</td>
+      <td>1.9e+05</td>
+      <td>5.3e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_19-268C_repeat-500-abneg</th>
+      <th>lib1</th>
+      <td>3.3e+05</td>
+      <td>1.4e+06</td>
+      <td>4.9e+05</td>
+      <td>1.4e+05</td>
+      <td>4.5e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>3.5e+05</td>
+      <td>1.6e+06</td>
+      <td>5.4e+05</td>
+      <td>1.7e+05</td>
+      <td>4.9e+06</td>
+    </tr>
+    <tr>
       <th rowspan="2" valign="top">delta_2-P03-1250-abneg</th>
       <th>lib1</th>
       <td>1.8e+05</td>
@@ -3037,6 +3265,23 @@ display(HTML(fates
       <td>2.3e+05</td>
       <td>8.6e+04</td>
       <td>2.1e+06</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_20-279C_repeat-1250-abneg</th>
+      <th>lib1</th>
+      <td>3.9e+05</td>
+      <td>1.7e+06</td>
+      <td>5.7e+05</td>
+      <td>1.6e+05</td>
+      <td>5.3e+06</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>4.3e+05</td>
+      <td>1.9e+06</td>
+      <td>6.4e+05</td>
+      <td>2.0e+05</td>
+      <td>5.9e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_3-P04-1250-abneg</th>

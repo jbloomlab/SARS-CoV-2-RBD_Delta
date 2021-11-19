@@ -177,7 +177,7 @@ escape_fracs
       <td>...</td>
     </tr>
     <tr>
-      <th>35971</th>
+      <th>44875</th>
       <td>P14_1250</td>
       <td>531</td>
       <td>T</td>
@@ -186,7 +186,7 @@ escape_fracs
       <td>0.02416</td>
     </tr>
     <tr>
-      <th>35972</th>
+      <th>44876</th>
       <td>P14_1250</td>
       <td>531</td>
       <td>T</td>
@@ -195,7 +195,7 @@ escape_fracs
       <td>0.02416</td>
     </tr>
     <tr>
-      <th>35973</th>
+      <th>44877</th>
       <td>P14_1250</td>
       <td>531</td>
       <td>T</td>
@@ -204,7 +204,7 @@ escape_fracs
       <td>0.02416</td>
     </tr>
     <tr>
-      <th>35974</th>
+      <th>44878</th>
       <td>P14_1250</td>
       <td>531</td>
       <td>T</td>
@@ -213,7 +213,7 @@ escape_fracs
       <td>0.02416</td>
     </tr>
     <tr>
-      <th>35975</th>
+      <th>44879</th>
       <td>P14_1250</td>
       <td>531</td>
       <td>T</td>
@@ -223,7 +223,7 @@ escape_fracs
     </tr>
   </tbody>
 </table>
-<p>35976 rows × 6 columns</p>
+<p>44880 rows × 6 columns</p>
 </div>
 
 
@@ -282,11 +282,56 @@ display(HTML(sitecounts_strong_sites.head(n=20).to_html(index=False)))
   </thead>
   <tbody>
     <tr>
+      <td>268C_repeat_500</td>
+      <td>sensitive</td>
+      <td>417</td>
+      <td>K</td>
+      <td>1.0640</td>
+      <td>4734</td>
+      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
+    </tr>
+    <tr>
+      <td>268C_repeat_500</td>
+      <td>sensitive_max_mut</td>
+      <td>417</td>
+      <td>K</td>
+      <td>1.0640</td>
+      <td>4734</td>
+      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
+    </tr>
+    <tr>
+      <td>268C_repeat_500</td>
+      <td>sensitive</td>
+      <td>484</td>
+      <td>E</td>
+      <td>1.2820</td>
+      <td>3513</td>
+      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>P08_repeat_500</td>
+      <td>sensitive_max_mut</td>
+      <td>484</td>
+      <td>E</td>
+      <td>0.6405</td>
+      <td>3513</td>
+      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>268C_repeat_500</td>
+      <td>sensitive_max_mut</td>
+      <td>484</td>
+      <td>E</td>
+      <td>1.2820</td>
+      <td>3513</td>
+      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
       <td>276C_500</td>
       <td>sensitive</td>
       <td>484</td>
       <td>E</td>
-      <td>0.135</td>
+      <td>0.1350</td>
       <td>3513</td>
       <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
     </tr>
@@ -295,9 +340,126 @@ display(HTML(sitecounts_strong_sites.head(n=20).to_html(index=False)))
       <td>sensitive_max_mut</td>
       <td>484</td>
       <td>E</td>
-      <td>0.135</td>
+      <td>0.1350</td>
       <td>3513</td>
       <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>279C_repeat_1250</td>
+      <td>default</td>
+      <td>484</td>
+      <td>E</td>
+      <td>1.4430</td>
+      <td>3513</td>
+      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>279C_repeat_1250</td>
+      <td>sensitive</td>
+      <td>484</td>
+      <td>E</td>
+      <td>1.4430</td>
+      <td>3513</td>
+      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>P08_repeat_500</td>
+      <td>sensitive</td>
+      <td>484</td>
+      <td>E</td>
+      <td>0.6405</td>
+      <td>3513</td>
+      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>279C_repeat_1250</td>
+      <td>sensitive_max_mut</td>
+      <td>484</td>
+      <td>E</td>
+      <td>1.4430</td>
+      <td>3513</td>
+      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>P08_repeat_500</td>
+      <td>sensitive_max_mut</td>
+      <td>354</td>
+      <td>N</td>
+      <td>1.4090</td>
+      <td>1033</td>
+      <td>N354K (755), N354T (103), N354S (85), N354D (62), N354H (15), N354Y (13)</td>
+    </tr>
+    <tr>
+      <td>P08_repeat_500</td>
+      <td>sensitive</td>
+      <td>354</td>
+      <td>N</td>
+      <td>1.4090</td>
+      <td>1033</td>
+      <td>N354K (755), N354T (103), N354S (85), N354D (62), N354H (15), N354Y (13)</td>
+    </tr>
+    <tr>
+      <td>P08_repeat_500</td>
+      <td>default</td>
+      <td>354</td>
+      <td>N</td>
+      <td>1.4090</td>
+      <td>1033</td>
+      <td>N354K (755), N354T (103), N354S (85), N354D (62), N354H (15), N354Y (13)</td>
+    </tr>
+    <tr>
+      <td>P08_repeat_500</td>
+      <td>sensitive_max_mut</td>
+      <td>344</td>
+      <td>A</td>
+      <td>0.5086</td>
+      <td>876</td>
+      <td>A344S (678), A344T (144), A344V (44), A344D (6), A344G (3), A344P (1)</td>
+    </tr>
+    <tr>
+      <td>P08_repeat_500</td>
+      <td>sensitive</td>
+      <td>344</td>
+      <td>A</td>
+      <td>0.5086</td>
+      <td>876</td>
+      <td>A344S (678), A344T (144), A344V (44), A344D (6), A344G (3), A344P (1)</td>
+    </tr>
+    <tr>
+      <td>P08_repeat_500</td>
+      <td>sensitive_max_mut</td>
+      <td>348</td>
+      <td>A</td>
+      <td>0.5592</td>
+      <td>816</td>
+      <td>A348S (731), A348V (37), A348T (29), A348E (9), A348P (8), A348G (2)</td>
+    </tr>
+    <tr>
+      <td>P08_repeat_500</td>
+      <td>sensitive</td>
+      <td>348</td>
+      <td>A</td>
+      <td>0.5592</td>
+      <td>816</td>
+      <td>A348S (731), A348V (37), A348T (29), A348E (9), A348P (8), A348G (2)</td>
+    </tr>
+    <tr>
+      <td>P03_repeat_1250</td>
+      <td>sensitive</td>
+      <td>384</td>
+      <td>P</td>
+      <td>0.2952</td>
+      <td>672</td>
+      <td>P384L (480), P384S (165), P384H (9), P384A (9), P384R (8), P384T (1)</td>
+    </tr>
+    <tr>
+      <td>P03_repeat_1250</td>
+      <td>sensitive_max_mut</td>
+      <td>384</td>
+      <td>P</td>
+      <td>0.2952</td>
+      <td>672</td>
+      <td>P384L (480), P384S (165), P384A (9), P384H (9), P384R (8), P384T (1)</td>
     </tr>
   </tbody>
 </table>
@@ -447,6 +609,117 @@ for name, specs in escape_profiles_config.items():
 
     
 ![png](natural_mutations_files/natural_mutations_20_5.png)
+    
+
+
+    
+    Analyzing natural mutations for close_shave_sort
+    Writing counts of mutations at sites of strong escape to results/GISAID_mutations/close_shave_sort_mutation_counts.csv. First few lines:
+
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>condition</th>
+      <th>threshold</th>
+      <th>site</th>
+      <th>wildtype</th>
+      <th>count</th>
+      <th>counts_by_mutation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>268C_repeat</td>
+      <td>sensitive</td>
+      <td>417</td>
+      <td>K</td>
+      <td>4734</td>
+      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
+    </tr>
+    <tr>
+      <td>268C_repeat</td>
+      <td>sensitive</td>
+      <td>484</td>
+      <td>E</td>
+      <td>3513</td>
+      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>279C_repeat</td>
+      <td>sensitive</td>
+      <td>484</td>
+      <td>E</td>
+      <td>3513</td>
+      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>P08_repeat</td>
+      <td>sensitive</td>
+      <td>484</td>
+      <td>E</td>
+      <td>3513</td>
+      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>P08_repeat</td>
+      <td>sensitive</td>
+      <td>354</td>
+      <td>N</td>
+      <td>1033</td>
+      <td>N354K (755), N354T (103), N354S (85), N354D (62), N354H (15), N354Y (13)</td>
+    </tr>
+    <tr>
+      <td>P08_repeat</td>
+      <td>sensitive</td>
+      <td>344</td>
+      <td>A</td>
+      <td>876</td>
+      <td>A344S (678), A344T (144), A344V (44), A344D (6), A344G (3), A344P (1)</td>
+    </tr>
+    <tr>
+      <td>P08_repeat</td>
+      <td>sensitive</td>
+      <td>348</td>
+      <td>A</td>
+      <td>816</td>
+      <td>A348S (731), A348V (37), A348T (29), A348E (9), A348P (8), A348G (2)</td>
+    </tr>
+    <tr>
+      <td>P03_repeat</td>
+      <td>sensitive</td>
+      <td>384</td>
+      <td>P</td>
+      <td>672</td>
+      <td>P384L (480), P384S (165), P384H (9), P384A (9), P384R (8), P384T (1)</td>
+    </tr>
+    <tr>
+      <td>P08_repeat</td>
+      <td>sensitive</td>
+      <td>490</td>
+      <td>F</td>
+      <td>670</td>
+      <td>F490L (370), F490S (245), F490V (44), F490I (10), F490N (1)</td>
+    </tr>
+    <tr>
+      <td>279C_repeat</td>
+      <td>sensitive</td>
+      <td>490</td>
+      <td>F</td>
+      <td>670</td>
+      <td>F490L (370), F490S (245), F490V (44), F490I (10), F490N (1)</td>
+    </tr>
+  </tbody>
+</table>
+
+
+    Plotting which antibodies / sera are escaped by mutations at all sites of escape with at least 5 mutation counts and saving to results/GISAID_mutations/close_shave_sort_mutation_counts.pdf.
+
+
+
+    
+![png](natural_mutations_files/natural_mutations_20_9.png)
     
 
 
@@ -724,15 +997,32 @@ for name, specs in escape_profiles_config.items():
     
 
 
-
     
-![png](natural_mutations_files/natural_mutations_24_4.png)
-    
+    Analyzing natural mutations for close_shave_sort
+    Plotting average across conditions and saving to results/GISAID_mutations/close_shave_sort_escape_vs_freq_average.pdf
 
 
 
     
 ![png](natural_mutations_files/natural_mutations_24_5.png)
+    
+
+
+
+    
+![png](natural_mutations_files/natural_mutations_24_6.png)
+    
+
+
+
+    
+![png](natural_mutations_files/natural_mutations_24_7.png)
+    
+
+
+
+    
+![png](natural_mutations_files/natural_mutations_24_8.png)
     
 
 

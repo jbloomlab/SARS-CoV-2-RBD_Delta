@@ -126,7 +126,7 @@ display(HTML(dms_corrs.head().to_html(index=False)))
       <td>N331A</td>
       <td>331</td>
       <td>A</td>
-      <td>9.05176</td>
+      <td>9.05540</td>
       <td>delta_bind</td>
       <td>lib1</td>
     </tr>
@@ -135,7 +135,7 @@ display(HTML(dms_corrs.head().to_html(index=False)))
       <td>N331C</td>
       <td>331</td>
       <td>C</td>
-      <td>8.89304</td>
+      <td>8.93041</td>
       <td>delta_bind</td>
       <td>lib1</td>
     </tr>
@@ -144,7 +144,7 @@ display(HTML(dms_corrs.head().to_html(index=False)))
       <td>N331D</td>
       <td>331</td>
       <td>D</td>
-      <td>9.03235</td>
+      <td>9.03746</td>
       <td>delta_bind</td>
       <td>lib1</td>
     </tr>
@@ -153,7 +153,7 @@ display(HTML(dms_corrs.head().to_html(index=False)))
       <td>N331E</td>
       <td>331</td>
       <td>E</td>
-      <td>9.04056</td>
+      <td>9.07868</td>
       <td>delta_bind</td>
       <td>lib1</td>
     </tr>
@@ -162,7 +162,7 @@ display(HTML(dms_corrs.head().to_html(index=False)))
       <td>N331F</td>
       <td>331</td>
       <td>F</td>
-      <td>8.93438</td>
+      <td>8.98825</td>
       <td>delta_bind</td>
       <td>lib1</td>
     </tr>
@@ -237,7 +237,7 @@ print(f"Saving plot to {plotfile}")
 p.save(plotfile, verbose=False)
 ```
 
-    /loc/scratch/39897004/ipykernel_22642/2421262410.py:15: FutureWarning: Indexing with multiple keys (implicitly converted to a tuple of keys) will be deprecated, use a list instead.
+    /loc/scratch/41509794/ipykernel_15414/2421262410.py:15: FutureWarning: Indexing with multiple keys (implicitly converted to a tuple of keys) will be deprecated, use a list instead.
 
 
     Saving plot to results/bind_expr_filters/replicates-corr.pdf
@@ -278,7 +278,7 @@ display(HTML(dms_scores.head().to_html(index=False)))
       <td>N331A</td>
       <td>331</td>
       <td>A</td>
-      <td>0.05672</td>
+      <td>0.07778</td>
       <td>0.10465</td>
     </tr>
     <tr>
@@ -286,7 +286,7 @@ display(HTML(dms_scores.head().to_html(index=False)))
       <td>N331C</td>
       <td>331</td>
       <td>C</td>
-      <td>-0.09879</td>
+      <td>-0.10069</td>
       <td>-0.30817</td>
     </tr>
     <tr>
@@ -294,7 +294,7 @@ display(HTML(dms_scores.head().to_html(index=False)))
       <td>N331D</td>
       <td>331</td>
       <td>D</td>
-      <td>-0.11491</td>
+      <td>-0.12331</td>
       <td>-0.08444</td>
     </tr>
     <tr>
@@ -302,7 +302,7 @@ display(HTML(dms_scores.head().to_html(index=False)))
       <td>N331E</td>
       <td>331</td>
       <td>E</td>
-      <td>0.03887</td>
+      <td>0.05512</td>
       <td>0.04665</td>
     </tr>
     <tr>
@@ -310,7 +310,7 @@ display(HTML(dms_scores.head().to_html(index=False)))
       <td>N331F</td>
       <td>331</td>
       <td>F</td>
-      <td>-0.06155</td>
+      <td>-0.05824</td>
       <td>-0.24139</td>
     </tr>
   </tbody>
@@ -366,7 +366,7 @@ display(HTML(dms_scores.head().to_html(index=False)))
       <td>0.0</td>
       <td>0.000000e+00</td>
       <td>delta_bind</td>
-      <td>0.05672</td>
+      <td>0.07778</td>
     </tr>
     <tr>
       <td>N</td>
@@ -377,18 +377,18 @@ display(HTML(dms_scores.head().to_html(index=False)))
       <td>0.0</td>
       <td>0.000000e+00</td>
       <td>delta_bind</td>
-      <td>-0.09879</td>
+      <td>-0.10069</td>
     </tr>
     <tr>
       <td>N</td>
       <td>N331D</td>
       <td>331</td>
       <td>D</td>
-      <td>2.0</td>
-      <td>2.0</td>
-      <td>8.673362e-07</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>5.178956e-07</td>
       <td>delta_bind</td>
-      <td>-0.11491</td>
+      <td>-0.12331</td>
     </tr>
     <tr>
       <td>N</td>
@@ -399,7 +399,7 @@ display(HTML(dms_scores.head().to_html(index=False)))
       <td>0.0</td>
       <td>0.000000e+00</td>
       <td>delta_bind</td>
-      <td>0.03887</td>
+      <td>0.05512</td>
     </tr>
     <tr>
       <td>N</td>
@@ -410,7 +410,7 @@ display(HTML(dms_scores.head().to_html(index=False)))
       <td>0.0</td>
       <td>0.000000e+00</td>
       <td>delta_bind</td>
-      <td>-0.06155</td>
+      <td>-0.05824</td>
     </tr>
   </tbody>
 </table>
@@ -557,14 +557,14 @@ print(f"Saving plot to {plotfile}")
 p.save(plotfile, verbose=False)
 ```
 
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/layer.py:324: PlotnineWarning: stat_bin : Removed 19 rows containing non-finite values.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/layer.py:324: PlotnineWarning: stat_bin : Removed 15 rows containing non-finite values.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/layer.py:401: PlotnineWarning: geom_histogram : Removed 20 rows containing missing values.
 
 
     Saving plot to results/bind_expr_filters/count-score-histogram.pdf
 
 
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/layer.py:324: PlotnineWarning: stat_bin : Removed 19 rows containing non-finite values.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/layer.py:324: PlotnineWarning: stat_bin : Removed 15 rows containing non-finite values.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/layer.py:401: PlotnineWarning: geom_histogram : Removed 20 rows containing missing values.
 
 
@@ -608,13 +608,13 @@ print(f"Saving plot to {plotfile}")
 p.save(plotfile, verbose=False)
 ```
 
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/layer.py:324: PlotnineWarning: stat_density : Removed 17 rows containing non-finite values.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/layer.py:324: PlotnineWarning: stat_density : Removed 13 rows containing non-finite values.
 
 
     Saving plot to results/bind_expr_filters/count-score-density.pdf
 
 
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/layer.py:324: PlotnineWarning: stat_density : Removed 17 rows containing non-finite values.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/layer.py:324: PlotnineWarning: stat_density : Removed 13 rows containing non-finite values.
 
 
 
@@ -723,15 +723,39 @@ for metric in ['bind', 'expr']:
   </thead>
   <tbody>
     <tr>
-      <td>G</td>
-      <td>G404C</td>
-      <td>404</td>
-      <td>C</td>
-      <td>55.0</td>
-      <td>7.0</td>
-      <td>0.000024</td>
+      <td>K</td>
+      <td>K356N</td>
+      <td>356</td>
+      <td>N</td>
+      <td>125.0</td>
+      <td>11.0</td>
+      <td>0.000065</td>
       <td>delta_expr</td>
-      <td>-0.90761</td>
+      <td>-1.78898</td>
+      <td>&gt;=50</td>
+    </tr>
+    <tr>
+      <td>A</td>
+      <td>A363V</td>
+      <td>363</td>
+      <td>V</td>
+      <td>79.0</td>
+      <td>5.0</td>
+      <td>0.000041</td>
+      <td>delta_expr</td>
+      <td>-1.40726</td>
+      <td>&gt;=50</td>
+    </tr>
+    <tr>
+      <td>S</td>
+      <td>S375F</td>
+      <td>375</td>
+      <td>F</td>
+      <td>124.0</td>
+      <td>15.0</td>
+      <td>0.000064</td>
+      <td>delta_expr</td>
+      <td>-1.21666</td>
       <td>&gt;=50</td>
     </tr>
     <tr>
@@ -739,11 +763,23 @@ for metric in ['bind', 'expr']:
       <td>A352V</td>
       <td>352</td>
       <td>V</td>
-      <td>79.0</td>
-      <td>16.0</td>
-      <td>0.000034</td>
+      <td>156.0</td>
+      <td>23.0</td>
+      <td>0.000081</td>
       <td>delta_expr</td>
       <td>-0.83905</td>
+      <td>&gt;=50</td>
+    </tr>
+    <tr>
+      <td>G</td>
+      <td>G413V</td>
+      <td>413</td>
+      <td>V</td>
+      <td>56.0</td>
+      <td>18.0</td>
+      <td>0.000029</td>
+      <td>delta_expr</td>
+      <td>-0.83028</td>
       <td>&gt;=50</td>
     </tr>
   </tbody>
@@ -844,32 +880,32 @@ display(HTML(df.to_html(index=False)))
     <tr>
       <td>50</td>
       <td>1.0</td>
-      <td>-1.288320</td>
-      <td>-0.713331</td>
+      <td>-0.716868</td>
+      <td>-1.250968</td>
     </tr>
     <tr>
       <td>50</td>
       <td>2.5</td>
-      <td>-1.048366</td>
-      <td>-0.604736</td>
+      <td>-0.582601</td>
+      <td>-0.783211</td>
     </tr>
     <tr>
       <td>50</td>
       <td>5.0</td>
-      <td>-0.630546</td>
-      <td>-0.371726</td>
+      <td>-0.467550</td>
+      <td>-0.649335</td>
     </tr>
     <tr>
       <td>50</td>
       <td>10.0</td>
-      <td>-0.382242</td>
-      <td>-0.271092</td>
+      <td>-0.408180</td>
+      <td>-0.471226</td>
     </tr>
     <tr>
       <td>50</td>
       <td>25.0</td>
-      <td>-0.111890</td>
-      <td>-0.144250</td>
+      <td>-0.167790</td>
+      <td>-0.196785</td>
     </tr>
   </tbody>
 </table>
@@ -959,7 +995,7 @@ display(HTML(dms_scores.head().to_html(index=False)))
       <td>0.0</td>
       <td>0.000000e+00</td>
       <td>delta_bind</td>
-      <td>0.05672</td>
+      <td>0.07778</td>
       <td>0</td>
       <td>-0.03</td>
     </tr>
@@ -972,7 +1008,7 @@ display(HTML(dms_scores.head().to_html(index=False)))
       <td>0.0</td>
       <td>0.000000e+00</td>
       <td>delta_bind</td>
-      <td>-0.09879</td>
+      <td>-0.10069</td>
       <td>0</td>
       <td>-0.09</td>
     </tr>
@@ -981,11 +1017,11 @@ display(HTML(dms_scores.head().to_html(index=False)))
       <td>N331D</td>
       <td>331</td>
       <td>D</td>
-      <td>2.0</td>
-      <td>2.0</td>
-      <td>8.673362e-07</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>5.178956e-07</td>
       <td>delta_bind</td>
-      <td>-0.11491</td>
+      <td>-0.12331</td>
       <td>1 to 9</td>
       <td>0.03</td>
     </tr>
@@ -998,7 +1034,7 @@ display(HTML(dms_scores.head().to_html(index=False)))
       <td>0.0</td>
       <td>0.000000e+00</td>
       <td>delta_bind</td>
-      <td>0.03887</td>
+      <td>0.05512</td>
       <td>0</td>
       <td>0.00</td>
     </tr>
@@ -1011,7 +1047,7 @@ display(HTML(dms_scores.head().to_html(index=False)))
       <td>0.0</td>
       <td>0.000000e+00</td>
       <td>delta_bind</td>
-      <td>-0.06155</td>
+      <td>-0.05824</td>
       <td>0</td>
       <td>-0.10</td>
     </tr>
@@ -1140,11 +1176,11 @@ print(f'Total number of possible mutations to non-disulfide sites: {total_muts_n
 ```
 
     Delta mutations that 
-    pass bind: 3262 
+    pass bind: 3260 
     pass expr: 2700 
-    pass both: 2516 
-    pass both and not disulfide: 2448
-    Pass bind, expr, not disulfide, and not WT: 2255
+    pass both: 2512 
+    pass both and not disulfide: 2444
+    Pass bind, expr, not disulfide, and not WT: 2251
     Total number of possible mutations to non-disulfide sites: 3666
 
 
@@ -1177,7 +1213,7 @@ print(round(100-stats.percentileofscore((dms_scores
     This percentage of all variants seen >=50x in GISAID are retained by the binding filter of -1.86
     100.0
     This percentage of all variants seen >=50x in GISAID are retained by the expression filter of -0.75
-    98.9
+    97.3
 
 
 

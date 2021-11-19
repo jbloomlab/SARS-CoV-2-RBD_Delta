@@ -70,6 +70,7 @@ print('Making supplementary data for the following condition sets:\n  ' + '\n  '
     Making supplementary data for the following condition sets:
       Pfizer
       Delta_breakthrough
+      close_shave_sort
 
 
 Read the escape fractions
@@ -208,12 +209,23 @@ for metric_type, (set_name, condition_set) in itertools.product(['mutation', 'si
 
     Saving plot to results/supp_data/Delta_breakthrough-mutation-corr.pdf
     
-    Plotting correlations of site escape for Pfizer
+    Plotting correlations of mutation escape for close_shave_sort
 
 
 
     
 ![png](make_supp_data_files/make_supp_data_16_5.png)
+    
+
+
+    Saving plot to results/supp_data/close_shave_sort-mutation-corr.pdf
+    
+    Plotting correlations of site escape for Pfizer
+
+
+
+    
+![png](make_supp_data_files/make_supp_data_16_7.png)
     
 
 
@@ -224,11 +236,22 @@ for metric_type, (set_name, condition_set) in itertools.product(['mutation', 'si
 
 
     
-![png](make_supp_data_files/make_supp_data_16_7.png)
+![png](make_supp_data_files/make_supp_data_16_9.png)
     
 
 
     Saving plot to results/supp_data/Delta_breakthrough-site-corr.pdf
+    
+    Plotting correlations of site escape for close_shave_sort
+
+
+
+    
+![png](make_supp_data_files/make_supp_data_16_11.png)
+    
+
+
+    Saving plot to results/supp_data/close_shave_sort-site-corr.pdf
 
 
 ## Raw data files
@@ -274,6 +297,9 @@ for set_name, condition_set in condition_sets.items():
     
     Raw data for Delta_breakthrough:
     Writing to results/supp_data/Delta_breakthrough_raw_data.csv
+    
+    Raw data for close_shave_sort:
+    Writing to results/supp_data/close_shave_sort_raw_data.csv
 
 
 ## Data for `dms-view`:
@@ -367,7 +393,7 @@ display(HTML(dms_view_df.head().to_html(index=False)))
       <td>0.001776</td>
       <td>0.04972</td>
       <td>0.008071</td>
-      <td>#762905</td>
+      <td>#772a05</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -382,7 +408,7 @@ display(HTML(dms_view_df.head().to_html(index=False)))
       <td>0.001094</td>
       <td>0.04972</td>
       <td>0.008071</td>
-      <td>#792a05</td>
+      <td>#7a2b05</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -460,6 +486,8 @@ for set_name, condition_set in condition_sets.items():
     Writing `dms-view` input file for Pfizer mapped to PDB 7V8B to results/supp_data/Pfizer_7V8B_dms-view_data.csv
     Writing `dms-view` input file for Delta_breakthrough mapped to PDB 6m0j to results/supp_data/Delta_breakthrough_6m0j_dms-view_data.csv
     Writing `dms-view` input file for Delta_breakthrough mapped to PDB 7V8B to results/supp_data/Delta_breakthrough_7V8B_dms-view_data.csv
+    Writing `dms-view` input file for close_shave_sort mapped to PDB 6m0j to results/supp_data/close_shave_sort_6m0j_dms-view_data.csv
+    Writing `dms-view` input file for close_shave_sort mapped to PDB 7V8B to results/supp_data/close_shave_sort_7V8B_dms-view_data.csv
 
 
 

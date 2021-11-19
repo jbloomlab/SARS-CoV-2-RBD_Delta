@@ -330,7 +330,7 @@ if len(nan_color):
 
     Reading DMS data from results/final_variant_scores/final_variant_scores.csv
     
-    bind ranges from -1.85114 to 0.0, here is the scale bar, which is being saved to results/escape_profiles/bind_scalebar_horizontal.pdf
+    bind ranges from -1.83171 to 0.0, here is the scale bar, which is being saved to results/escape_profiles/bind_scalebar_horizontal.pdf
 
 
 
@@ -340,7 +340,7 @@ if len(nan_color):
 
 
     
-    bind ranges from -1.85114 to 0.0, here is the scale bar, which is being saved to results/escape_profiles/bind_scalebar_vertical.pdf
+    bind ranges from -1.83171 to 0.0, here is the scale bar, which is being saved to results/escape_profiles/bind_scalebar_vertical.pdf
 
 
 
@@ -644,7 +644,7 @@ with multiprocessing.Pool(ncpus) as pool:
         
 ```
 
-    Drawing 6 profiles using 8 CPUs...
+    Drawing 9 profiles using 8 CPUs...
     
     Plotted profile 1 to:
      results/escape_profiles/Pfizer_stackedlogo.pdf
@@ -714,6 +714,42 @@ with multiprocessing.Pool(ncpus) as pool:
 
     
 ![png](escape_profiles_files/escape_profiles_26_11.png)
+    
+
+
+    
+    Plotted profile 7 to:
+     results/escape_profiles/close_shave_sort_stackedlogo.pdf
+     results/escape_profiles/close_shave_sort_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_26_13.png)
+    
+
+
+    
+    Plotted profile 8 to:
+     results/escape_profiles/close_shave_sort_color_by_bind_stackedlogo.pdf
+     results/escape_profiles/close_shave_sort_color_by_bind_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_26_15.png)
+    
+
+
+    
+    Plotted profile 9 to:
+     results/escape_profiles/close_shave_sort_color_by_expr_stackedlogo.pdf
+     results/escape_profiles/close_shave_sort_color_by_expr_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_26_17.png)
     
 
 

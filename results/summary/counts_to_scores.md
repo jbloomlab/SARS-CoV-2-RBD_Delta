@@ -286,12 +286,12 @@ display(HTML(
     <tr>
       <th>TiteSeq_01_bin4</th>
       <td>170.9</td>
-      <td>38.8</td>
+      <td>146.5</td>
     </tr>
     <tr>
       <th>TiteSeq_02_bin1</th>
       <td>25.0</td>
-      <td>5.1</td>
+      <td>27.5</td>
     </tr>
     <tr>
       <th>TiteSeq_02_bin2</th>
@@ -350,18 +350,18 @@ display(HTML(
     </tr>
     <tr>
       <th>TiteSeq_05_bin1</th>
-      <td>27.4</td>
+      <td>180.2</td>
       <td>141.2</td>
     </tr>
     <tr>
       <th>TiteSeq_05_bin2</th>
-      <td>8.4</td>
-      <td>2.3</td>
+      <td>35.3</td>
+      <td>32.8</td>
     </tr>
     <tr>
       <th>TiteSeq_05_bin3</th>
       <td>0.2</td>
-      <td>0.1</td>
+      <td>5.9</td>
     </tr>
     <tr>
       <th>TiteSeq_05_bin4</th>
@@ -370,7 +370,7 @@ display(HTML(
     </tr>
     <tr>
       <th>TiteSeq_06_bin1</th>
-      <td>0.7</td>
+      <td>210.8</td>
       <td>188.9</td>
     </tr>
     <tr>
@@ -391,7 +391,7 @@ display(HTML(
     <tr>
       <th>TiteSeq_07_bin1</th>
       <td>236.4</td>
-      <td>20.0</td>
+      <td>207.8</td>
     </tr>
     <tr>
       <th>TiteSeq_07_bin2</th>
@@ -558,6 +558,31 @@ display(HTML(
       <td>362.2</td>
       <td>343.0</td>
     </tr>
+    <tr>
+      <th>delta_17-20-none-0-ref</th>
+      <td>503.6</td>
+      <td>431.9</td>
+    </tr>
+    <tr>
+      <th>delta_17-P03_repeat-1250-abneg</th>
+      <td>55.9</td>
+      <td>42.3</td>
+    </tr>
+    <tr>
+      <th>delta_18-P08_repeat-500-abneg</th>
+      <td>50.3</td>
+      <td>48.1</td>
+    </tr>
+    <tr>
+      <th>delta_19-268C_repeat-500-abneg</th>
+      <td>47.2</td>
+      <td>44.2</td>
+    </tr>
+    <tr>
+      <th>delta_20-279C_repeat-1250-abneg</th>
+      <td>56.0</td>
+      <td>53.4</td>
+    </tr>
   </tbody>
 </table>
 
@@ -593,6 +618,12 @@ for date, date_df in samples_df.groupby('date', sort=False):
     
 
 
+
+    
+![png](counts_to_scores_files/counts_to_scores_23_2.png)
+    
+
+
 Now similar plots but showing mutation frequency across the gene:
 
 
@@ -620,6 +651,12 @@ for date, date_df in samples_df.groupby('date', sort=False):
 
     
 ![png](counts_to_scores_files/counts_to_scores_25_1.png)
+    
+
+
+
+    
+![png](counts_to_scores_files/counts_to_scores_25_2.png)
     
 
 
@@ -788,7 +825,7 @@ display(HTML(
   </thead>
   <tbody>
     <tr>
-      <th rowspan="2" valign="top">lib1</th>
+      <th rowspan="3" valign="top">lib1</th>
       <th>delta_1-8-none-0-ref</th>
       <td>0.0002</td>
       <td>Delta</td>
@@ -805,7 +842,15 @@ display(HTML(
       <td>GAT68ACT</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">lib2</th>
+      <th>delta_17-20-none-0-ref</th>
+      <td>0.0002</td>
+      <td>Delta</td>
+      <td>TATGTTTCCGACCCGC</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">lib2</th>
       <th>delta_1-8-none-0-ref</th>
       <td>0.0002</td>
       <td>Delta</td>
@@ -815,6 +860,14 @@ display(HTML(
     </tr>
     <tr>
       <th>delta_9-16-none-0-ref</th>
+      <td>0.0002</td>
+      <td>Delta</td>
+      <td>ACACAAACGCCGTTAC</td>
+      <td>A67S</td>
+      <td>GCC67TCT</td>
+    </tr>
+    <tr>
+      <th>delta_17-20-none-0-ref</th>
       <td>0.0002</td>
       <td>Delta</td>
       <td>ACACAAACGCCGTTAC</td>
@@ -1092,6 +1145,30 @@ display(HTML(score_sample_df.to_html(index=False)))
       <td>NaN</td>
     </tr>
     <tr>
+      <td>268C_repeat_500</td>
+      <td>lib1</td>
+      <td>268C_repeat</td>
+      <td>500</td>
+      <td>211112</td>
+      <td>delta_17-20-none-0-ref</td>
+      <td>delta_19-268C_repeat-500-abneg</td>
+      <td>0.107</td>
+      <td>1012056.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>268C_repeat_500</td>
+      <td>lib2</td>
+      <td>268C_repeat</td>
+      <td>500</td>
+      <td>211112</td>
+      <td>delta_17-20-none-0-ref</td>
+      <td>delta_19-268C_repeat-500-abneg</td>
+      <td>0.119</td>
+      <td>1023050.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
       <td>273C_500</td>
       <td>lib1</td>
       <td>273C</td>
@@ -1236,6 +1313,30 @@ display(HTML(score_sample_df.to_html(index=False)))
       <td>NaN</td>
     </tr>
     <tr>
+      <td>279C_repeat_1250</td>
+      <td>lib1</td>
+      <td>279C_repeat</td>
+      <td>1250</td>
+      <td>211112</td>
+      <td>delta_17-20-none-0-ref</td>
+      <td>delta_20-279C_repeat-1250-abneg</td>
+      <td>0.097</td>
+      <td>1026589.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>279C_repeat_1250</td>
+      <td>lib2</td>
+      <td>279C_repeat</td>
+      <td>1250</td>
+      <td>211112</td>
+      <td>delta_17-20-none-0-ref</td>
+      <td>delta_20-279C_repeat-1250-abneg</td>
+      <td>0.097</td>
+      <td>1077475.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
       <td>P02_500</td>
       <td>lib1</td>
       <td>P02</td>
@@ -1281,6 +1382,30 @@ display(HTML(score_sample_df.to_html(index=False)))
       <td>delta_2-P03-1250-abneg</td>
       <td>0.044</td>
       <td>553123.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>P03_repeat_1250</td>
+      <td>lib1</td>
+      <td>P03_repeat</td>
+      <td>1250</td>
+      <td>211112</td>
+      <td>delta_17-20-none-0-ref</td>
+      <td>delta_17-P03_repeat-1250-abneg</td>
+      <td>0.094</td>
+      <td>1022039.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>P03_repeat_1250</td>
+      <td>lib2</td>
+      <td>P03_repeat</td>
+      <td>1250</td>
+      <td>211112</td>
+      <td>delta_17-20-none-0-ref</td>
+      <td>delta_17-P03_repeat-1250-abneg</td>
+      <td>0.087</td>
+      <td>1012373.0</td>
       <td>NaN</td>
     </tr>
     <tr>
@@ -1353,6 +1478,30 @@ display(HTML(score_sample_df.to_html(index=False)))
       <td>delta_5-P08-500-abneg</td>
       <td>0.053</td>
       <td>762248.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>P08_repeat_500</td>
+      <td>lib1</td>
+      <td>P08_repeat</td>
+      <td>500</td>
+      <td>211112</td>
+      <td>delta_17-20-none-0-ref</td>
+      <td>delta_18-P08_repeat-500-abneg</td>
+      <td>0.112</td>
+      <td>1015086.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>P08_repeat_500</td>
+      <td>lib2</td>
+      <td>P08_repeat</td>
+      <td>500</td>
+      <td>211112</td>
+      <td>delta_17-20-none-0-ref</td>
+      <td>delta_18-P08_repeat-500-abneg</td>
+      <td>0.121</td>
+      <td>1045993.0</td>
       <td>NaN</td>
     </tr>
     <tr>
@@ -1685,6 +1834,27 @@ display(HTML(pre_count_filter_cutoffs.to_html(float_format='%.1f')))
       <td>427.0</td>
       <td>552.0</td>
     </tr>
+    <tr>
+      <th rowspan="2" valign="top">delta_17-20-none-0-ref</th>
+      <th>lib1</th>
+      <td>63.0</td>
+      <td>232.1</td>
+      <td>315.1</td>
+      <td>437.1</td>
+      <td>533.0</td>
+      <td>579.0</td>
+      <td>672.0</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>59.0</td>
+      <td>186.0</td>
+      <td>250.0</td>
+      <td>346.0</td>
+      <td>410.0</td>
+      <td>484.1</td>
+      <td>605.0</td>
+    </tr>
   </tbody>
 </table>
 
@@ -1727,6 +1897,18 @@ display(HTML(pre_count_filter_cutoffs.to_html(float_format='%.1f')))
       <td>delta_9-16-none-0-ref</td>
       <td>lib2</td>
       <td>143.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>delta_17-20-none-0-ref</td>
+      <td>lib1</td>
+      <td>232.1</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>delta_17-20-none-0-ref</td>
+      <td>lib2</td>
+      <td>186.0</td>
     </tr>
   </tbody>
 </table>
@@ -1855,12 +2037,12 @@ display(HTML(mut_bind_expr.query('delta_bind < -2.35').head().to_html(index=Fals
       <td>347</td>
       <td>D</td>
       <td>F347D</td>
-      <td>6.58195</td>
-      <td>-2.41351</td>
-      <td>35</td>
+      <td>6.56115</td>
+      <td>-2.47410</td>
+      <td>39</td>
       <td>2</td>
-      <td>6.90067</td>
-      <td>6.26322</td>
+      <td>6.99892</td>
+      <td>6.12338</td>
       <td>7.12826</td>
       <td>-2.66200</td>
       <td>43</td>
@@ -1876,12 +2058,12 @@ display(HTML(mut_bind_expr.query('delta_bind < -2.35').head().to_html(index=Fals
       <td>347</td>
       <td>N</td>
       <td>F347N</td>
-      <td>6.11779</td>
-      <td>-2.87767</td>
-      <td>35</td>
+      <td>6.25934</td>
+      <td>-2.77590</td>
+      <td>38</td>
       <td>2</td>
-      <td>6.09384</td>
-      <td>6.14174</td>
+      <td>6.37534</td>
+      <td>6.14335</td>
       <td>7.29762</td>
       <td>-2.49264</td>
       <td>40</td>
@@ -1897,12 +2079,12 @@ display(HTML(mut_bind_expr.query('delta_bind < -2.35').head().to_html(index=Fals
       <td>349</td>
       <td>F</td>
       <td>S349F</td>
-      <td>6.42483</td>
-      <td>-2.57062</td>
-      <td>27</td>
+      <td>6.41557</td>
+      <td>-2.61967</td>
+      <td>28</td>
       <td>2</td>
-      <td>6.79865</td>
-      <td>6.05101</td>
+      <td>6.76244</td>
+      <td>6.06870</td>
       <td>6.77342</td>
       <td>-3.01685</td>
       <td>30</td>
@@ -1918,12 +2100,12 @@ display(HTML(mut_bind_expr.query('delta_bind < -2.35').head().to_html(index=Fals
       <td>349</td>
       <td>I</td>
       <td>S349I</td>
-      <td>5.50479</td>
-      <td>-3.49067</td>
-      <td>30</td>
+      <td>5.66335</td>
+      <td>-3.37189</td>
+      <td>31</td>
       <td>2</td>
-      <td>5.68495</td>
-      <td>5.32463</td>
+      <td>5.94559</td>
+      <td>5.38111</td>
       <td>6.55953</td>
       <td>-3.23073</td>
       <td>32</td>
@@ -1939,12 +2121,12 @@ display(HTML(mut_bind_expr.query('delta_bind < -2.35').head().to_html(index=Fals
       <td>349</td>
       <td>W</td>
       <td>S349W</td>
-      <td>6.38588</td>
-      <td>-2.60958</td>
-      <td>25</td>
+      <td>6.50440</td>
+      <td>-2.53084</td>
+      <td>26</td>
       <td>2</td>
-      <td>6.66062</td>
-      <td>6.11114</td>
+      <td>7.07355</td>
+      <td>5.93526</td>
       <td>6.70857</td>
       <td>-3.08169</td>
       <td>29</td>
@@ -1982,7 +2164,7 @@ escape_scores['pass_ACE2bind_expr_filter'] = (
 display(HTML(escape_scores.query('not pass_ACE2bind_expr_filter & variant_class != "stop"').head().to_html(index=False)))
 ```
 
-    3262 of 4020 mutations have adequate bind.
+    3260 of 4020 mutations have adequate bind.
     2700 of 4020 mutations have adequate expr.
 
 
@@ -2157,7 +2339,7 @@ else:
 ```
 
     Here are the number of mutations that pass the bind, express, and disulfide filters:
-    2448
+    2444
     There are these many possible mutations (excluding wildtype and disulfides!):
     3667
 
@@ -2452,7 +2634,7 @@ print(f"Read {len(escape_scores_primary)} scores.")
 </table>
 
 
-    Read 1480712 scores.
+    Read 1845760 scores.
 
 
 ### Count number of barcodes per mutation and remove variants with >1 amino acid substitution
@@ -2672,8 +2854,8 @@ print(len(effects_df.query('nlibs==1')))
 ```
 
     Only taking average of mutations with escape fractions in >=2 libraries or with >=2 single-mutant measurements total.
-    35616
-    71952
+    44432
+    89760
 
 
 Plot the correlations of the escape fractions among the two libraries for all selections performed on both libraries. 
