@@ -330,7 +330,7 @@ if len(nan_color):
 
     Reading DMS data from results/final_variant_scores/final_variant_scores.csv
     
-    bind ranges from -1.85114 to 0.0, here is the scale bar, which is being saved to results/escape_profiles/bind_scalebar_horizontal.pdf
+    bind ranges from -1.83171 to 0.0, here is the scale bar, which is being saved to results/escape_profiles/bind_scalebar_horizontal.pdf
 
 
 
@@ -340,7 +340,7 @@ if len(nan_color):
 
 
     
-    bind ranges from -1.85114 to 0.0, here is the scale bar, which is being saved to results/escape_profiles/bind_scalebar_vertical.pdf
+    bind ranges from -1.83171 to 0.0, here is the scale bar, which is being saved to results/escape_profiles/bind_scalebar_vertical.pdf
 
 
 
@@ -657,16 +657,18 @@ with multiprocessing.Pool(ncpus) as pool:
     
 
 
-
-    
-![png](escape_profiles_files/escape_profiles_26_2.png)
-    
-
-
     
     Plotted profile 2 to:
      results/escape_profiles/Pfizer_color_by_bind_stackedlogo.pdf
      results/escape_profiles/Pfizer_color_by_bind_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_26_3.png)
+    
+
+
     
     Plotted profile 3 to:
      results/escape_profiles/Pfizer_color_by_expr_stackedlogo.pdf
@@ -675,7 +677,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_26_4.png)
+![png](escape_profiles_files/escape_profiles_26_5.png)
     
 
 
@@ -687,7 +689,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_26_6.png)
+![png](escape_profiles_files/escape_profiles_26_7.png)
     
 
 
@@ -699,7 +701,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_26_8.png)
+![png](escape_profiles_files/escape_profiles_26_9.png)
     
 
 
@@ -711,7 +713,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_26_10.png)
+![png](escape_profiles_files/escape_profiles_26_11.png)
     
 
 
@@ -723,7 +725,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_26_12.png)
+![png](escape_profiles_files/escape_profiles_26_13.png)
     
 
 
@@ -735,7 +737,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_26_14.png)
+![png](escape_profiles_files/escape_profiles_26_15.png)
     
 
 
@@ -747,7 +749,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_26_16.png)
+![png](escape_profiles_files/escape_profiles_26_17.png)
     
 
 

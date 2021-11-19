@@ -253,10 +253,10 @@ for supergroup, subgroup in line_plot_config.items():
     _ = p.draw()
 ```
 
-    Saving to results/lineplots_by_group/b1351_early2020_day30_grouped_lineplots.pdf
-
-
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/scales/scale_alpha.py:68: PlotnineWarning: Using alpha for a discrete variable is not advised.
+
+
+    Saving to results/lineplots_by_group/b1351_early2020_day30_grouped_lineplots.pdf
 
 
 

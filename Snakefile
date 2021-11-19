@@ -157,8 +157,8 @@ rule make_summary:
             9. Determine [cutoffs]({path(input.bind_expr_filters)}) for ACE2 binding and RBD expression for serum-escape experiments.
 
             10. [Escape scores from variant counts]({path(input.counts_to_scores)}).
-            
-            11. [Investigate scores]({path(input.investigate_scores)}) before applying ACE2 binding and RBD expression filters, to see if there is a relationship between functional scores and serum-escape score. 
+
+            11. [Investigate scores]({path(input.investigate_scores)}) before applying ACE2 binding and RBD expression filters, to see if there is a relationship between functional scores and serum-escape score.
 
             11. [Call sites of strong escape]({path(input.call_strong_escape_sites)}),
                and write to [a CSV file]({path(input.strong_escape_sites)}).
@@ -324,7 +324,7 @@ rule investigate_scores:
         nb='investigate_scores.ipynb'
     shell:
         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
-        
+
 rule counts_to_scores:
     """Analyze variant counts to compute escape scores."""
     input:
@@ -391,7 +391,7 @@ rule collapse_scores:
 rule fit_titrations:
     input:
         config['codon_variant_table'],
-        # config['variant_counts'] # temporarily commented out so is not re-run every time I get serum mapping data back
+        config['variant_counts'] # temporarily commented out so is not re-run every time I get serum mapping data back
     output:
         config['Titeseq_Kds_file'],
         md='results/summary/compute_binding_Kd.md',
@@ -412,7 +412,7 @@ rule fit_titrations:
 rule calculate_expression:
     input:
         config['codon_variant_table'],
-        # config['variant_counts'] # temporarily commented out so is not re-run every time I get serum mapping data back
+        config['variant_counts'] # temporarily commented out so is not re-run every time I get serum mapping data back
     output:
         config['expression_sortseq_file'],
         md='results/summary/compute_expression_meanF.md',

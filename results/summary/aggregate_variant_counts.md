@@ -2478,11 +2478,11 @@ display(HTML(fates
     </tr>
     <tr>
       <th>lib2</th>
-      <td>1.0e+05</td>
-      <td>1.3e+06</td>
-      <td>2.9e+05</td>
-      <td>9.9e+04</td>
-      <td>4.3e+06</td>
+      <td>9.4e+05</td>
+      <td>4.7e+06</td>
+      <td>1.6e+06</td>
+      <td>4.4e+05</td>
+      <td>1.6e+07</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">TiteSeq_02_bin1</th>
@@ -2495,11 +2495,11 @@ display(HTML(fates
     </tr>
     <tr>
       <th>lib2</th>
-      <td>1.4e+04</td>
-      <td>1.9e+05</td>
-      <td>4.1e+04</td>
-      <td>1.4e+04</td>
-      <td>5.6e+05</td>
+      <td>2.0e+05</td>
+      <td>1.0e+06</td>
+      <td>3.1e+05</td>
+      <td>8.8e+04</td>
+      <td>3.0e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">TiteSeq_02_bin2</th>
@@ -2691,11 +2691,11 @@ display(HTML(fates
     <tr>
       <th rowspan="2" valign="top">TiteSeq_05_bin1</th>
       <th>lib1</th>
-      <td>6.5e+04</td>
-      <td>7.8e+05</td>
-      <td>1.8e+05</td>
-      <td>6.4e+04</td>
-      <td>2.6e+06</td>
+      <td>1.1e+06</td>
+      <td>5.1e+06</td>
+      <td>1.7e+06</td>
+      <td>5.0e+05</td>
+      <td>1.7e+07</td>
     </tr>
     <tr>
       <th>lib2</th>
@@ -2708,19 +2708,19 @@ display(HTML(fates
     <tr>
       <th rowspan="2" valign="top">TiteSeq_05_bin2</th>
       <th>lib1</th>
-      <td>2.2e+04</td>
-      <td>2.3e+05</td>
-      <td>5.5e+04</td>
-      <td>3.4e+04</td>
-      <td>8.0e+05</td>
+      <td>2.1e+05</td>
+      <td>9.6e+05</td>
+      <td>3.3e+05</td>
+      <td>1.1e+05</td>
+      <td>3.4e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>8.7e+03</td>
-      <td>7.4e+04</td>
-      <td>1.8e+04</td>
-      <td>1.6e+04</td>
       <td>2.5e+05</td>
+      <td>1.1e+06</td>
+      <td>3.8e+05</td>
+      <td>1.1e+05</td>
+      <td>3.6e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">TiteSeq_05_bin3</th>
@@ -2733,11 +2733,11 @@ display(HTML(fates
     </tr>
     <tr>
       <th>lib2</th>
-      <td>4.5e+02</td>
-      <td>3.3e+03</td>
-      <td>7.3e+02</td>
-      <td>3.3e+03</td>
-      <td>1.0e+04</td>
+      <td>4.6e+04</td>
+      <td>1.9e+05</td>
+      <td>6.8e+04</td>
+      <td>1.9e+04</td>
+      <td>6.6e+05</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">TiteSeq_05_bin4</th>
@@ -2759,11 +2759,11 @@ display(HTML(fates
     <tr>
       <th rowspan="2" valign="top">TiteSeq_06_bin1</th>
       <th>lib1</th>
-      <td>1.6e+03</td>
-      <td>1.9e+04</td>
-      <td>4.6e+03</td>
-      <td>2.6e+03</td>
-      <td>6.4e+04</td>
+      <td>1.4e+06</td>
+      <td>5.9e+06</td>
+      <td>2.1e+06</td>
+      <td>6.1e+05</td>
+      <td>2.0e+07</td>
     </tr>
     <tr>
       <th>lib2</th>
@@ -2835,11 +2835,11 @@ display(HTML(fates
     </tr>
     <tr>
       <th>lib2</th>
-      <td>5.5e+04</td>
-      <td>6.7e+05</td>
-      <td>1.5e+05</td>
-      <td>5.5e+04</td>
-      <td>2.2e+06</td>
+      <td>1.5e+06</td>
+      <td>7.0e+06</td>
+      <td>2.3e+06</td>
+      <td>6.5e+05</td>
+      <td>2.3e+07</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">TiteSeq_07_bin2</th>

@@ -393,7 +393,7 @@ display(HTML(dms_view_df.head().to_html(index=False)))
       <td>0.001776</td>
       <td>0.04972</td>
       <td>0.008071</td>
-      <td>#762905</td>
+      <td>#772a05</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
@@ -408,7 +408,7 @@ display(HTML(dms_view_df.head().to_html(index=False)))
       <td>0.001094</td>
       <td>0.04972</td>
       <td>0.008071</td>
-      <td>#792a05</td>
+      <td>#7a2b05</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>

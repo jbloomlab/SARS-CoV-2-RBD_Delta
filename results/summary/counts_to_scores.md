@@ -286,12 +286,12 @@ display(HTML(
     <tr>
       <th>TiteSeq_01_bin4</th>
       <td>170.9</td>
-      <td>38.8</td>
+      <td>146.5</td>
     </tr>
     <tr>
       <th>TiteSeq_02_bin1</th>
       <td>25.0</td>
-      <td>5.1</td>
+      <td>27.5</td>
     </tr>
     <tr>
       <th>TiteSeq_02_bin2</th>
@@ -350,18 +350,18 @@ display(HTML(
     </tr>
     <tr>
       <th>TiteSeq_05_bin1</th>
-      <td>27.4</td>
+      <td>180.2</td>
       <td>141.2</td>
     </tr>
     <tr>
       <th>TiteSeq_05_bin2</th>
-      <td>8.4</td>
-      <td>2.3</td>
+      <td>35.3</td>
+      <td>32.8</td>
     </tr>
     <tr>
       <th>TiteSeq_05_bin3</th>
       <td>0.2</td>
-      <td>0.1</td>
+      <td>5.9</td>
     </tr>
     <tr>
       <th>TiteSeq_05_bin4</th>
@@ -370,7 +370,7 @@ display(HTML(
     </tr>
     <tr>
       <th>TiteSeq_06_bin1</th>
-      <td>0.7</td>
+      <td>210.8</td>
       <td>188.9</td>
     </tr>
     <tr>
@@ -391,7 +391,7 @@ display(HTML(
     <tr>
       <th>TiteSeq_07_bin1</th>
       <td>236.4</td>
-      <td>20.0</td>
+      <td>207.8</td>
     </tr>
     <tr>
       <th>TiteSeq_07_bin2</th>
@@ -2037,12 +2037,12 @@ display(HTML(mut_bind_expr.query('delta_bind < -2.35').head().to_html(index=Fals
       <td>347</td>
       <td>D</td>
       <td>F347D</td>
-      <td>6.58195</td>
-      <td>-2.41351</td>
-      <td>35</td>
+      <td>6.56115</td>
+      <td>-2.47410</td>
+      <td>39</td>
       <td>2</td>
-      <td>6.90067</td>
-      <td>6.26322</td>
+      <td>6.99892</td>
+      <td>6.12338</td>
       <td>7.12826</td>
       <td>-2.66200</td>
       <td>43</td>
@@ -2058,12 +2058,12 @@ display(HTML(mut_bind_expr.query('delta_bind < -2.35').head().to_html(index=Fals
       <td>347</td>
       <td>N</td>
       <td>F347N</td>
-      <td>6.11779</td>
-      <td>-2.87767</td>
-      <td>35</td>
+      <td>6.25934</td>
+      <td>-2.77590</td>
+      <td>38</td>
       <td>2</td>
-      <td>6.09384</td>
-      <td>6.14174</td>
+      <td>6.37534</td>
+      <td>6.14335</td>
       <td>7.29762</td>
       <td>-2.49264</td>
       <td>40</td>
@@ -2079,12 +2079,12 @@ display(HTML(mut_bind_expr.query('delta_bind < -2.35').head().to_html(index=Fals
       <td>349</td>
       <td>F</td>
       <td>S349F</td>
-      <td>6.42483</td>
-      <td>-2.57062</td>
-      <td>27</td>
+      <td>6.41557</td>
+      <td>-2.61967</td>
+      <td>28</td>
       <td>2</td>
-      <td>6.79865</td>
-      <td>6.05101</td>
+      <td>6.76244</td>
+      <td>6.06870</td>
       <td>6.77342</td>
       <td>-3.01685</td>
       <td>30</td>
@@ -2100,12 +2100,12 @@ display(HTML(mut_bind_expr.query('delta_bind < -2.35').head().to_html(index=Fals
       <td>349</td>
       <td>I</td>
       <td>S349I</td>
-      <td>5.50479</td>
-      <td>-3.49067</td>
-      <td>30</td>
+      <td>5.66335</td>
+      <td>-3.37189</td>
+      <td>31</td>
       <td>2</td>
-      <td>5.68495</td>
-      <td>5.32463</td>
+      <td>5.94559</td>
+      <td>5.38111</td>
       <td>6.55953</td>
       <td>-3.23073</td>
       <td>32</td>
@@ -2121,12 +2121,12 @@ display(HTML(mut_bind_expr.query('delta_bind < -2.35').head().to_html(index=Fals
       <td>349</td>
       <td>W</td>
       <td>S349W</td>
-      <td>6.38588</td>
-      <td>-2.60958</td>
-      <td>25</td>
+      <td>6.50440</td>
+      <td>-2.53084</td>
+      <td>26</td>
       <td>2</td>
-      <td>6.66062</td>
-      <td>6.11114</td>
+      <td>7.07355</td>
+      <td>5.93526</td>
       <td>6.70857</td>
       <td>-3.08169</td>
       <td>29</td>
@@ -2164,7 +2164,7 @@ escape_scores['pass_ACE2bind_expr_filter'] = (
 display(HTML(escape_scores.query('not pass_ACE2bind_expr_filter & variant_class != "stop"').head().to_html(index=False)))
 ```
 
-    3262 of 4020 mutations have adequate bind.
+    3260 of 4020 mutations have adequate bind.
     2700 of 4020 mutations have adequate expr.
 
 
@@ -2339,7 +2339,7 @@ else:
 ```
 
     Here are the number of mutations that pass the bind, express, and disulfide filters:
-    2448
+    2444
     There are these many possible mutations (excluding wildtype and disulfides!):
     3667
 
@@ -2634,7 +2634,7 @@ print(f"Read {len(escape_scores_primary)} scores.")
 </table>
 
 
-    Read 1848312 scores.
+    Read 1845760 scores.
 
 
 ### Count number of barcodes per mutation and remove variants with >1 amino acid substitution
@@ -2854,8 +2854,8 @@ print(len(effects_df.query('nlibs==1')))
 ```
 
     Only taking average of mutations with escape fractions in >=2 libraries or with >=2 single-mutant measurements total.
-    44512
-    89920
+    44432
+    89760
 
 
 Plot the correlations of the escape fractions among the two libraries for all selections performed on both libraries. 

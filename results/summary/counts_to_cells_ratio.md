@@ -239,7 +239,7 @@ for var, is_reference, lower_clip, upper_clip, desired_min in [
     plt.close(fig)
 ```
 
-    /loc/scratch/41466959/ipykernel_5274/1882431916.py:14: SettingWithCopyWarning: 
+    /loc/scratch/41477246/ipykernel_10751/1882431916.py:14: SettingWithCopyWarning: 
     A value is trying to be set on a copy of a slice from a DataFrame.
     Try using .loc[row_indexer,col_indexer] = value instead
     
@@ -252,7 +252,7 @@ for var, is_reference, lower_clip, upper_clip, desired_min in [
     
 
 
-    /loc/scratch/41466959/ipykernel_5274/1882431916.py:14: SettingWithCopyWarning: 
+    /loc/scratch/41477246/ipykernel_10751/1882431916.py:14: SettingWithCopyWarning: 
     A value is trying to be set on a copy of a slice from a DataFrame.
     Try using .loc[row_indexer,col_indexer] = value instead
     
@@ -499,8 +499,8 @@ display(HTML(
       <td>5</td>
       <td>1</td>
       <td>8.8e+06</td>
-      <td>2.6e+06</td>
-      <td>0.3</td>
+      <td>1.7e+07</td>
+      <td>2</td>
       <td>False</td>
     </tr>
     <tr>
@@ -511,8 +511,8 @@ display(HTML(
       <td>5</td>
       <td>2</td>
       <td>1.4e+06</td>
-      <td>8e+05</td>
-      <td>0.58</td>
+      <td>3.4e+06</td>
+      <td>2.4</td>
       <td>False</td>
     </tr>
     <tr>
@@ -547,8 +547,8 @@ display(HTML(
       <td>6</td>
       <td>1</td>
       <td>1.1e+07</td>
-      <td>6.4e+04</td>
-      <td>0.0059</td>
+      <td>2e+07</td>
+      <td>1.9</td>
       <td>False</td>
     </tr>
     <tr>
@@ -679,8 +679,8 @@ display(HTML(
       <td>1</td>
       <td>4</td>
       <td>6.8e+06</td>
-      <td>4.3e+06</td>
-      <td>0.63</td>
+      <td>1.6e+07</td>
+      <td>2.4</td>
       <td>False</td>
     </tr>
     <tr>
@@ -691,8 +691,8 @@ display(HTML(
       <td>2</td>
       <td>1</td>
       <td>1.5e+06</td>
-      <td>5.6e+05</td>
-      <td>0.37</td>
+      <td>3e+06</td>
+      <td>2</td>
       <td>False</td>
     </tr>
     <tr>
@@ -835,20 +835,8 @@ display(HTML(
       <td>5</td>
       <td>2</td>
       <td>1.8e+06</td>
-      <td>2.5e+05</td>
-      <td>0.14</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>TiteSeq_05_bin3, lib2</td>
-      <td>210930</td>
-      <td>TiteSeq</td>
-      <td>monomeric_ACE2</td>
-      <td>5</td>
-      <td>3</td>
-      <td>1.4e+04</td>
-      <td>1e+04</td>
-      <td>0.76</td>
+      <td>3.6e+06</td>
+      <td>2</td>
       <td>False</td>
     </tr>
     <tr>
@@ -919,8 +907,8 @@ display(HTML(
       <td>7</td>
       <td>1</td>
       <td>9.7e+06</td>
-      <td>2.2e+06</td>
-      <td>0.23</td>
+      <td>2.3e+07</td>
+      <td>2.4</td>
       <td>False</td>
     </tr>
     <tr>

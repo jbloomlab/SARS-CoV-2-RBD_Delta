@@ -38,7 +38,7 @@ site_number_offset: 330  # add this to sequential sites to get RBD numbering
 early2020_mut_bind_expr_url: https://media.githubusercontent.com/media/jbloomlab/SARS-CoV-2-RBD_DMS/master/results/single_mut_effects/single_mut_effects.csv
 
 # GISAID mutation counts file
-gisaid_mutation_counts: data/210801_mutation_counts.csv
+gisaid_mutation_counts_all: data/210801_mutation_counts.csv
 
 # escape_fracs for early 2020 plasmas against Wuhan-1 library:
 early2020_escape_fracs_url: https://media.githubusercontent.com/media/jbloomlab/SARS-CoV-2-RBD_MAP_HAARVI_sera/main/results/escape_scores/escape_fracs.csv

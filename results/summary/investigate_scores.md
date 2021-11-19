@@ -364,7 +364,7 @@ display(HTML(scores.head().to_html(index=False)))
       <td>398</td>
       <td>D</td>
       <td>T</td>
-      <td>-0.93713</td>
+      <td>-0.91858</td>
       <td>-2.61807</td>
     </tr>
     <tr>
@@ -380,7 +380,7 @@ display(HTML(scores.head().to_html(index=False)))
       <td>336</td>
       <td>C</td>
       <td>S</td>
-      <td>-0.45494</td>
+      <td>-0.47241</td>
       <td>-0.77123</td>
     </tr>
     <tr>
@@ -396,7 +396,7 @@ display(HTML(scores.head().to_html(index=False)))
       <td>429</td>
       <td>F</td>
       <td>I</td>
-      <td>-0.54590</td>
+      <td>-0.56820</td>
       <td>-2.10913</td>
     </tr>
     <tr>
@@ -412,7 +412,7 @@ display(HTML(scores.head().to_html(index=False)))
       <td>506</td>
       <td>Q</td>
       <td>N</td>
-      <td>-0.10241</td>
+      <td>-0.10570</td>
       <td>-0.49199</td>
     </tr>
     <tr>
@@ -428,7 +428,7 @@ display(HTML(scores.head().to_html(index=False)))
       <td>337</td>
       <td>P</td>
       <td>T</td>
-      <td>-0.07946</td>
+      <td>-0.09541</td>
       <td>-0.24318</td>
     </tr>
   </tbody>

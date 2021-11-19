@@ -40,7 +40,7 @@ sessionInfo()
 
     ## R version 3.6.2 (2019-12-12)
     ## Platform: x86_64-pc-linux-gnu (64-bit)
-    ## Running under: Ubuntu 18.04.5 LTS
+    ## Running under: Ubuntu 18.04.4 LTS
     ## 
     ## Matrix products: default
     ## BLAS/LAPACK: /app/software/OpenBLAS/0.3.7-GCC-8.3.0/lib/libopenblas_haswellp-r0.3.7.so
@@ -166,11 +166,11 @@ for(i in 1:nrow(barcode_runs)){
     ## [1] "read:cell ratio for lib1 TiteSeq_04_bin2 is 1.31815574845399"
     ## [1] "read:cell ratio for lib1 TiteSeq_04_bin3 is 1.34371675467658"
     ## [1] "read:cell ratio for lib1 TiteSeq_04_bin4 is 1.43700805957487"
-    ## [1] "reads < cells for lib1 TiteSeq_05_bin1 , un-normalized (ratio 0.298484331575068 )"
-    ## [1] "reads < cells for lib1 TiteSeq_05_bin2 , un-normalized (ratio 0.575831614118088 )"
+    ## [1] "read:cell ratio for lib1 TiteSeq_05_bin1 is 1.96569264424023"
+    ## [1] "read:cell ratio for lib1 TiteSeq_05_bin2 is 2.42609534713746"
     ## [1] "read:cell ratio for lib1 TiteSeq_05_bin3 is 1.21564201301288"
     ## [1] "read:cell ratio for lib1 TiteSeq_05_bin4 is 2.41631265930331"
-    ## [1] "reads < cells for lib1 TiteSeq_06_bin1 , un-normalized (ratio 0.00586100655124583 )"
+    ## [1] "read:cell ratio for lib1 TiteSeq_06_bin1 is 1.85253605191232"
     ## [1] "read:cell ratio for lib1 TiteSeq_06_bin2 is 1.6755796476803"
     ## [1] "read:cell ratio for lib1 TiteSeq_06_bin3 is 13.8344558667139"
     ## [1] "read:cell ratio for lib1 TiteSeq_06_bin4 is 51.9833333333333"
@@ -189,8 +189,8 @@ for(i in 1:nrow(barcode_runs)){
     ## [1] "read:cell ratio for lib2 TiteSeq_01_bin1 is 1.36315820205143"
     ## [1] "read:cell ratio for lib2 TiteSeq_01_bin2 is 1.77384196970308"
     ## [1] "read:cell ratio for lib2 TiteSeq_01_bin3 is 1.75872106945413"
-    ## [1] "reads < cells for lib2 TiteSeq_01_bin4 , un-normalized (ratio 0.627737669256271 )"
-    ## [1] "reads < cells for lib2 TiteSeq_02_bin1 , un-normalized (ratio 0.374390160355817 )"
+    ## [1] "read:cell ratio for lib2 TiteSeq_01_bin4 is 2.37238958474492"
+    ## [1] "read:cell ratio for lib2 TiteSeq_02_bin1 is 2.01873068217569"
     ## [1] "reads < cells for lib2 TiteSeq_02_bin2 , un-normalized (ratio 0.900843567774808 )"
     ## [1] "read:cell ratio for lib2 TiteSeq_02_bin3 is 2.1737211208775"
     ## [1] "reads < cells for lib2 TiteSeq_02_bin4 , un-normalized (ratio 0.927300858718845 )"
@@ -203,14 +203,14 @@ for(i in 1:nrow(barcode_runs)){
     ## [1] "read:cell ratio for lib2 TiteSeq_04_bin3 is 1.64827664740182"
     ## [1] "read:cell ratio for lib2 TiteSeq_04_bin4 is 1.28796629426245"
     ## [1] "read:cell ratio for lib2 TiteSeq_05_bin1 is 1.87254826093586"
-    ## [1] "reads < cells for lib2 TiteSeq_05_bin2 , un-normalized (ratio 0.136107099738514 )"
-    ## [1] "reads < cells for lib2 TiteSeq_05_bin3 , un-normalized (ratio 0.759354791833176 )"
+    ## [1] "read:cell ratio for lib2 TiteSeq_05_bin2 is 1.97367515137893"
+    ## [1] "read:cell ratio for lib2 TiteSeq_05_bin3 is 47.6428104337717"
     ## [1] "read:cell ratio for lib2 TiteSeq_05_bin4 is 1.20983318700615"
     ## [1] "read:cell ratio for lib2 TiteSeq_06_bin1 is 2.25059255325738"
     ## [1] "read:cell ratio for lib2 TiteSeq_06_bin2 is 1.48310303505725"
     ## [1] "read:cell ratio for lib2 TiteSeq_06_bin3 is 1.94063926940639"
     ## [1] "reads < cells for lib2 TiteSeq_06_bin4 , un-normalized (ratio 0.351247600767754 )"
-    ## [1] "reads < cells for lib2 TiteSeq_07_bin1 , un-normalized (ratio 0.227631005868922 )"
+    ## [1] "read:cell ratio for lib2 TiteSeq_07_bin1 is 2.37013739671452"
     ## [1] "read:cell ratio for lib2 TiteSeq_07_bin2 is 2.12766719098911"
     ## [1] "read:cell ratio for lib2 TiteSeq_07_bin3 is 4.29482071713147"
     ## [1] "reads < cells for lib2 TiteSeq_07_bin4 , un-normalized (ratio 0.629067245119306 )"
@@ -350,8 +350,8 @@ our library barcodes. We will also spot check titration curves from
 across our measurement range, and spot check curves whose fit parameters
 hit the different boundary conditions of the fit variables.
 
-We successfully generated *K*<sub>D</sub> estimates for 80085 of our
-lib1 barcodes (83.85%) and 96117 of our lib2 barcodes (87.2%).
+We successfully generated *K*<sub>D</sub> estimates for 86142 of our
+lib1 barcodes (90.19%) and 98374 of our lib2 barcodes (89.25%).
 
 Why were estimates not returned for some barcodes? The histograms below
 show that many barcodes with unsuccessful titration fits have lower
@@ -617,7 +617,7 @@ grid.arrange(p1,ncol=1)
 invisible(dev.print(pdf, paste(config$Titeseq_Kds_dir,"/violin-plot_log10Ka-by-target.pdf",sep="")))
 ```
 
-We have generated binding measurements for 85.12% of the barcodes in our
+We have generated binding measurements for 88.63% of the barcodes in our
 libraries.
 
 ## Data Output
