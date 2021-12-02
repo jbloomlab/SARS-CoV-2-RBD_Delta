@@ -391,7 +391,7 @@ rule collapse_scores:
 rule fit_titrations:
     input:
         config['codon_variant_table'],
-        config['variant_counts'] # temporarily commented out so is not re-run every time I get serum mapping data back
+        # config['variant_counts'] # temporarily commented out so is not re-run every time I get serum mapping data back
     output:
         config['Titeseq_Kds_file'],
         md='results/summary/compute_binding_Kd.md',
@@ -412,7 +412,7 @@ rule fit_titrations:
 rule calculate_expression:
     input:
         config['codon_variant_table'],
-        config['variant_counts'] # temporarily commented out so is not re-run every time I get serum mapping data back
+        # config['variant_counts'] # temporarily commented out so is not re-run every time I get serum mapping data back
     output:
         config['expression_sortseq_file'],
         md='results/summary/compute_expression_meanF.md',

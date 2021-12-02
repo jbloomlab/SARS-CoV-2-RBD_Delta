@@ -138,3 +138,114 @@ close_shave_sort:
     ylabel: total escape at site
     label_minescape: 2
     label_minfreq: 5e-5
+
+Delta_breakthrough_repeat:
+  conditions:
+    267C_repeat_200: 267C
+    268C_repeat_500: 268C
+    273C_repeat_500: 273C
+    274C_repeat_500: 274C
+    276C_repeat_500: 276C
+    277C_repeat_500: 277C
+    278C_repeat_1250: 278C
+    279C_repeat_1250: 279C
+  plot_auto_identified_sites: sensitive
+  add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
+  exclude_sites: [336, 361]
+  site_color_scheme: barnes_serum_epitopes
+  color_by_dms: True
+  make_supp_data: True
+  dmslogo_facet_plot_kwargs:
+    height_per_ax: 2.0
+  dmslogo_draw_line_kwargs:
+    widthscale: 0.5
+    axisfontscale: 1.5
+  dmslogo_draw_logo_kwargs:
+    widthscale: 0.75
+    axisfontscale: 1.5
+  analyze_natural_mutations: true
+  analyze_natural_mutations_specs:
+    plot_average_only: true
+    maxcol: 6
+    also_label: [346,365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
+    label_font_size: 7
+    default_color: '#999999'
+    default_alpha: 0.6
+    escape: tot_site_escape
+    ylabel: total escape at site
+    label_minescape: 2
+    label_minfreq: 5e-5
+
+Pfizer_repeat:
+  conditions:
+    P02_repeat_500: P02
+    P03_repeat_1250: P03
+    P04_repeat_1250: P04
+    P05_repeat_500: P05
+    P08_repeat_500: P08
+    P09_repeat_200: P09
+    P12_repeat_200: P12
+    P14_repeat_1250: P14
+  plot_auto_identified_sites: sensitive
+  add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
+  exclude_sites: [336, 361]
+  site_color_scheme: barnes_serum_epitopes
+  color_by_dms: True
+  make_supp_data: True
+  dmslogo_facet_plot_kwargs:
+    height_per_ax: 2.0
+  dmslogo_draw_line_kwargs:
+    widthscale: 0.5
+    axisfontscale: 1.5
+  dmslogo_draw_logo_kwargs:
+    widthscale: 0.75
+    axisfontscale: 1.5
+  analyze_natural_mutations: true
+  analyze_natural_mutations_specs:
+    plot_average_only: true
+    maxcol: 6
+    also_label: [346,365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
+    label_font_size: 7
+    default_color: '#999999'
+    default_alpha: 0.6
+    escape: tot_site_escape
+    ylabel: total escape at site
+    label_minescape: 2
+    label_minfreq: 5e-5
+
+primary_Delta:
+  conditions:
+    Delta_1_500: Delta_1
+    Delta_3_350: Delta_3
+    Delta_4_350: Delta_4
+    Delta_6_500: Delta_6
+    Delta_7_1250: Delta_7
+    Delta_8_500: Delta_8
+    Delta_10_1250: Delta_10
+    Delta_11_500: Delta_11
+  plot_auto_identified_sites: sensitive
+  add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
+  exclude_sites: [336, 361]
+  site_color_scheme: barnes_serum_epitopes
+  color_by_dms: True
+  make_supp_data: True
+  dmslogo_facet_plot_kwargs:
+    height_per_ax: 2.0
+  dmslogo_draw_line_kwargs:
+    widthscale: 0.5
+    axisfontscale: 1.5
+  dmslogo_draw_logo_kwargs:
+    widthscale: 0.75
+    axisfontscale: 1.5
+  analyze_natural_mutations: true
+  analyze_natural_mutations_specs:
+    plot_average_only: true
+    maxcol: 6
+    also_label: [346,365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
+    label_font_size: 7
+    default_color: '#999999'
+    default_alpha: 0.6
+    escape: tot_site_escape
+    ylabel: total escape at site
+    label_minescape: 2
+    label_minfreq: 5e-5
