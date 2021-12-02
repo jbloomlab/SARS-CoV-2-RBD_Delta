@@ -644,11 +644,11 @@ with multiprocessing.Pool(ncpus) as pool:
         
 ```
 
-    Drawing 18 profiles using 8 CPUs...
+    Drawing 9 profiles using 8 CPUs...
     
     Plotted profile 1 to:
-     results/escape_profiles/Pfizer_stackedlogo.pdf
-     results/escape_profiles/Pfizer_stackedlogo.png.
+     results/escape_profiles/Delta_breakthrough_repeat_stackedlogo.pdf
+     results/escape_profiles/Delta_breakthrough_repeat_stackedlogo.png.
 
 
 
@@ -659,8 +659,8 @@ with multiprocessing.Pool(ncpus) as pool:
 
     
     Plotted profile 2 to:
-     results/escape_profiles/Pfizer_color_by_bind_stackedlogo.pdf
-     results/escape_profiles/Pfizer_color_by_bind_stackedlogo.png.
+     results/escape_profiles/Delta_breakthrough_repeat_color_by_bind_stackedlogo.pdf
+     results/escape_profiles/Delta_breakthrough_repeat_color_by_bind_stackedlogo.png.
 
 
 
@@ -671,8 +671,8 @@ with multiprocessing.Pool(ncpus) as pool:
 
     
     Plotted profile 3 to:
-     results/escape_profiles/Pfizer_color_by_expr_stackedlogo.pdf
-     results/escape_profiles/Pfizer_color_by_expr_stackedlogo.png.
+     results/escape_profiles/Delta_breakthrough_repeat_color_by_expr_stackedlogo.pdf
+     results/escape_profiles/Delta_breakthrough_repeat_color_by_expr_stackedlogo.png.
 
 
 
@@ -683,8 +683,8 @@ with multiprocessing.Pool(ncpus) as pool:
 
     
     Plotted profile 4 to:
-     results/escape_profiles/Delta_breakthrough_stackedlogo.pdf
-     results/escape_profiles/Delta_breakthrough_stackedlogo.png.
+     results/escape_profiles/Pfizer_repeat_stackedlogo.pdf
+     results/escape_profiles/Pfizer_repeat_stackedlogo.png.
 
 
 
@@ -695,8 +695,8 @@ with multiprocessing.Pool(ncpus) as pool:
 
     
     Plotted profile 5 to:
-     results/escape_profiles/Delta_breakthrough_color_by_bind_stackedlogo.pdf
-     results/escape_profiles/Delta_breakthrough_color_by_bind_stackedlogo.png.
+     results/escape_profiles/Pfizer_repeat_color_by_bind_stackedlogo.pdf
+     results/escape_profiles/Pfizer_repeat_color_by_bind_stackedlogo.png.
 
 
 
@@ -707,8 +707,8 @@ with multiprocessing.Pool(ncpus) as pool:
 
     
     Plotted profile 6 to:
-     results/escape_profiles/Delta_breakthrough_color_by_expr_stackedlogo.pdf
-     results/escape_profiles/Delta_breakthrough_color_by_expr_stackedlogo.png.
+     results/escape_profiles/Pfizer_repeat_color_by_expr_stackedlogo.pdf
+     results/escape_profiles/Pfizer_repeat_color_by_expr_stackedlogo.png.
 
 
 
@@ -719,8 +719,8 @@ with multiprocessing.Pool(ncpus) as pool:
 
     
     Plotted profile 7 to:
-     results/escape_profiles/close_shave_sort_stackedlogo.pdf
-     results/escape_profiles/close_shave_sort_stackedlogo.png.
+     results/escape_profiles/primary_Delta_stackedlogo.pdf
+     results/escape_profiles/primary_Delta_stackedlogo.png.
 
 
 
@@ -731,8 +731,8 @@ with multiprocessing.Pool(ncpus) as pool:
 
     
     Plotted profile 8 to:
-     results/escape_profiles/close_shave_sort_color_by_bind_stackedlogo.pdf
-     results/escape_profiles/close_shave_sort_color_by_bind_stackedlogo.png.
+     results/escape_profiles/primary_Delta_color_by_bind_stackedlogo.pdf
+     results/escape_profiles/primary_Delta_color_by_bind_stackedlogo.png.
 
 
 
@@ -743,121 +743,13 @@ with multiprocessing.Pool(ncpus) as pool:
 
     
     Plotted profile 9 to:
-     results/escape_profiles/close_shave_sort_color_by_expr_stackedlogo.pdf
-     results/escape_profiles/close_shave_sort_color_by_expr_stackedlogo.png.
-
-
-
-    
-![png](escape_profiles_files/escape_profiles_26_17.png)
-    
-
-
-    
-    Plotted profile 10 to:
-     results/escape_profiles/Delta_breakthrough_repeat_stackedlogo.pdf
-     results/escape_profiles/Delta_breakthrough_repeat_stackedlogo.png.
-
-
-
-    
-![png](escape_profiles_files/escape_profiles_26_19.png)
-    
-
-
-    
-    Plotted profile 11 to:
-     results/escape_profiles/Delta_breakthrough_repeat_color_by_bind_stackedlogo.pdf
-     results/escape_profiles/Delta_breakthrough_repeat_color_by_bind_stackedlogo.png.
-
-
-
-    
-![png](escape_profiles_files/escape_profiles_26_21.png)
-    
-
-
-    
-    Plotted profile 12 to:
-     results/escape_profiles/Delta_breakthrough_repeat_color_by_expr_stackedlogo.pdf
-     results/escape_profiles/Delta_breakthrough_repeat_color_by_expr_stackedlogo.png.
-
-
-
-    
-![png](escape_profiles_files/escape_profiles_26_23.png)
-    
-
-
-    
-    Plotted profile 13 to:
-     results/escape_profiles/Pfizer_repeat_stackedlogo.pdf
-     results/escape_profiles/Pfizer_repeat_stackedlogo.png.
-
-
-
-    
-![png](escape_profiles_files/escape_profiles_26_25.png)
-    
-
-
-    
-    Plotted profile 14 to:
-     results/escape_profiles/Pfizer_repeat_color_by_bind_stackedlogo.pdf
-     results/escape_profiles/Pfizer_repeat_color_by_bind_stackedlogo.png.
-
-
-
-    
-![png](escape_profiles_files/escape_profiles_26_27.png)
-    
-
-
-    
-    Plotted profile 15 to:
-     results/escape_profiles/Pfizer_repeat_color_by_expr_stackedlogo.pdf
-     results/escape_profiles/Pfizer_repeat_color_by_expr_stackedlogo.png.
-
-
-
-    
-![png](escape_profiles_files/escape_profiles_26_29.png)
-    
-
-
-    
-    Plotted profile 16 to:
-     results/escape_profiles/primary_Delta_stackedlogo.pdf
-     results/escape_profiles/primary_Delta_stackedlogo.png.
-
-
-
-    
-![png](escape_profiles_files/escape_profiles_26_31.png)
-    
-
-
-    
-    Plotted profile 17 to:
-     results/escape_profiles/primary_Delta_color_by_bind_stackedlogo.pdf
-     results/escape_profiles/primary_Delta_color_by_bind_stackedlogo.png.
-
-
-
-    
-![png](escape_profiles_files/escape_profiles_26_33.png)
-    
-
-
-    
-    Plotted profile 18 to:
      results/escape_profiles/primary_Delta_color_by_expr_stackedlogo.pdf
      results/escape_profiles/primary_Delta_color_by_expr_stackedlogo.png.
 
 
 
     
-![png](escape_profiles_files/escape_profiles_26_35.png)
+![png](escape_profiles_files/escape_profiles_26_17.png)
     
 
 

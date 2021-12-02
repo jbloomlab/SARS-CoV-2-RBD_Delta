@@ -551,179 +551,6 @@ for name, specs in escape_profiles_config.items():
 ```
 
     
-    Analyzing natural mutations for Pfizer
-    Writing counts of mutations at sites of strong escape to results/GISAID_mutations/Pfizer_mutation_counts.csv. First few lines:
-
-
-
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>condition</th>
-      <th>threshold</th>
-      <th>site</th>
-      <th>wildtype</th>
-      <th>count</th>
-      <th>counts_by_mutation</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
-
-
-    There are no strong escape sites for Pfizer
-    
-    Analyzing natural mutations for Delta_breakthrough
-    Writing counts of mutations at sites of strong escape to results/GISAID_mutations/Delta_breakthrough_mutation_counts.csv. First few lines:
-
-
-
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>condition</th>
-      <th>threshold</th>
-      <th>site</th>
-      <th>wildtype</th>
-      <th>count</th>
-      <th>counts_by_mutation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>276C</td>
-      <td>sensitive</td>
-      <td>484</td>
-      <td>E</td>
-      <td>3513</td>
-      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
-    </tr>
-  </tbody>
-</table>
-
-
-    Plotting which antibodies / sera are escaped by mutations at all sites of escape with at least 5 mutation counts and saving to results/GISAID_mutations/Delta_breakthrough_mutation_counts.pdf.
-
-
-
-    
-![png](natural_mutations_files/natural_mutations_20_5.png)
-    
-
-
-    
-    Analyzing natural mutations for close_shave_sort
-    Writing counts of mutations at sites of strong escape to results/GISAID_mutations/close_shave_sort_mutation_counts.csv. First few lines:
-
-
-
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>condition</th>
-      <th>threshold</th>
-      <th>site</th>
-      <th>wildtype</th>
-      <th>count</th>
-      <th>counts_by_mutation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>268C_repeat</td>
-      <td>sensitive</td>
-      <td>417</td>
-      <td>K</td>
-      <td>4734</td>
-      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
-    </tr>
-    <tr>
-      <td>279C_repeat</td>
-      <td>sensitive</td>
-      <td>484</td>
-      <td>E</td>
-      <td>3513</td>
-      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
-    </tr>
-    <tr>
-      <td>P08_repeat</td>
-      <td>sensitive</td>
-      <td>484</td>
-      <td>E</td>
-      <td>3513</td>
-      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
-    </tr>
-    <tr>
-      <td>268C_repeat</td>
-      <td>sensitive</td>
-      <td>484</td>
-      <td>E</td>
-      <td>3513</td>
-      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
-    </tr>
-    <tr>
-      <td>P08_repeat</td>
-      <td>sensitive</td>
-      <td>354</td>
-      <td>N</td>
-      <td>1033</td>
-      <td>N354K (755), N354T (103), N354S (85), N354D (62), N354H (15), N354Y (13)</td>
-    </tr>
-    <tr>
-      <td>P08_repeat</td>
-      <td>sensitive</td>
-      <td>344</td>
-      <td>A</td>
-      <td>876</td>
-      <td>A344S (678), A344T (144), A344V (44), A344D (6), A344G (3), A344P (1)</td>
-    </tr>
-    <tr>
-      <td>P08_repeat</td>
-      <td>sensitive</td>
-      <td>348</td>
-      <td>A</td>
-      <td>816</td>
-      <td>A348S (731), A348V (37), A348T (29), A348E (9), A348P (8), A348G (2)</td>
-    </tr>
-    <tr>
-      <td>P03_repeat</td>
-      <td>sensitive</td>
-      <td>384</td>
-      <td>P</td>
-      <td>672</td>
-      <td>P384L (480), P384S (165), P384A (9), P384H (9), P384R (8), P384T (1)</td>
-    </tr>
-    <tr>
-      <td>P08_repeat</td>
-      <td>sensitive</td>
-      <td>490</td>
-      <td>F</td>
-      <td>670</td>
-      <td>F490L (370), F490S (245), F490V (44), F490I (10), F490N (1)</td>
-    </tr>
-    <tr>
-      <td>279C_repeat</td>
-      <td>sensitive</td>
-      <td>490</td>
-      <td>F</td>
-      <td>670</td>
-      <td>F490L (370), F490S (245), F490V (44), F490I (10), F490N (1)</td>
-    </tr>
-  </tbody>
-</table>
-
-
-    Plotting which antibodies / sera are escaped by mutations at all sites of escape with at least 5 mutation counts and saving to results/GISAID_mutations/close_shave_sort_mutation_counts.pdf.
-
-
-
-    
-![png](natural_mutations_files/natural_mutations_20_9.png)
-    
-
-
-    
     Analyzing natural mutations for Delta_breakthrough_repeat
     Writing counts of mutations at sites of strong escape to results/GISAID_mutations/Delta_breakthrough_repeat_mutation_counts.csv. First few lines:
 
@@ -830,7 +657,7 @@ for name, specs in escape_profiles_config.items():
 
 
     
-![png](natural_mutations_files/natural_mutations_20_13.png)
+![png](natural_mutations_files/natural_mutations_20_3.png)
     
 
 
@@ -941,7 +768,7 @@ for name, specs in escape_profiles_config.items():
 
 
     
-![png](natural_mutations_files/natural_mutations_20_17.png)
+![png](natural_mutations_files/natural_mutations_20_7.png)
     
 
 
@@ -964,7 +791,7 @@ for name, specs in escape_profiles_config.items():
   </thead>
   <tbody>
     <tr>
-      <td>Delta_6</td>
+      <td>Delta 6</td>
       <td>sensitive</td>
       <td>417</td>
       <td>K</td>
@@ -972,7 +799,7 @@ for name, specs in escape_profiles_config.items():
       <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417Q (3), K417M (3)</td>
     </tr>
     <tr>
-      <td>Delta_11</td>
+      <td>Delta 11</td>
       <td>sensitive</td>
       <td>484</td>
       <td>E</td>
@@ -980,7 +807,7 @@ for name, specs in escape_profiles_config.items():
       <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
     </tr>
     <tr>
-      <td>Delta_8</td>
+      <td>Delta 8</td>
       <td>sensitive</td>
       <td>484</td>
       <td>E</td>
@@ -988,7 +815,7 @@ for name, specs in escape_profiles_config.items():
       <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
     </tr>
     <tr>
-      <td>Delta_6</td>
+      <td>Delta 6</td>
       <td>sensitive</td>
       <td>484</td>
       <td>E</td>
@@ -996,7 +823,7 @@ for name, specs in escape_profiles_config.items():
       <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
     </tr>
     <tr>
-      <td>Delta_4</td>
+      <td>Delta 4</td>
       <td>sensitive</td>
       <td>484</td>
       <td>E</td>
@@ -1004,7 +831,7 @@ for name, specs in escape_profiles_config.items():
       <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
     </tr>
     <tr>
-      <td>Delta_3</td>
+      <td>Delta 3</td>
       <td>sensitive</td>
       <td>484</td>
       <td>E</td>
@@ -1012,7 +839,7 @@ for name, specs in escape_profiles_config.items():
       <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
     </tr>
     <tr>
-      <td>Delta_1</td>
+      <td>Delta 1</td>
       <td>sensitive</td>
       <td>484</td>
       <td>E</td>
@@ -1020,7 +847,7 @@ for name, specs in escape_profiles_config.items():
       <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
     </tr>
     <tr>
-      <td>Delta_7</td>
+      <td>Delta 7</td>
       <td>sensitive</td>
       <td>484</td>
       <td>E</td>
@@ -1028,7 +855,7 @@ for name, specs in escape_profiles_config.items():
       <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
     </tr>
     <tr>
-      <td>Delta_4</td>
+      <td>Delta 4</td>
       <td>sensitive</td>
       <td>483</td>
       <td>V</td>
@@ -1036,7 +863,7 @@ for name, specs in escape_profiles_config.items():
       <td>V483F (1465), V483I (169), V483L (83), V483A (66), V483G (16)</td>
     </tr>
     <tr>
-      <td>Delta_11</td>
+      <td>Delta 11</td>
       <td>sensitive</td>
       <td>478</td>
       <td>K</td>
@@ -1052,7 +879,7 @@ for name, specs in escape_profiles_config.items():
 
 
     
-![png](natural_mutations_files/natural_mutations_20_21.png)
+![png](natural_mutations_files/natural_mutations_20_11.png)
     
 
 
@@ -1309,46 +1136,13 @@ for name, specs in escape_profiles_config.items():
 ```
 
     
-    Analyzing natural mutations for Pfizer
-    Plotting average across conditions and saving to results/GISAID_mutations/Pfizer_escape_vs_freq_average.pdf
-
-
-
-    
-![png](natural_mutations_files/natural_mutations_24_1.png)
-    
-
-
-    
-    Analyzing natural mutations for Delta_breakthrough
-    Plotting average across conditions and saving to results/GISAID_mutations/Delta_breakthrough_escape_vs_freq_average.pdf
-
-
-
-    
-![png](natural_mutations_files/natural_mutations_24_3.png)
-    
-
-
-    
-    Analyzing natural mutations for close_shave_sort
-    Plotting average across conditions and saving to results/GISAID_mutations/close_shave_sort_escape_vs_freq_average.pdf
-
-
-
-    
-![png](natural_mutations_files/natural_mutations_24_5.png)
-    
-
-
-    
     Analyzing natural mutations for Delta_breakthrough_repeat
     Plotting average across conditions and saving to results/GISAID_mutations/Delta_breakthrough_repeat_escape_vs_freq_average.pdf
 
 
 
     
-![png](natural_mutations_files/natural_mutations_24_7.png)
+![png](natural_mutations_files/natural_mutations_24_1.png)
     
 
 
@@ -1359,7 +1153,7 @@ for name, specs in escape_profiles_config.items():
 
 
     
-![png](natural_mutations_files/natural_mutations_24_9.png)
+![png](natural_mutations_files/natural_mutations_24_3.png)
     
 
 
@@ -1370,43 +1164,25 @@ for name, specs in escape_profiles_config.items():
 
 
     
-![png](natural_mutations_files/natural_mutations_24_11.png)
+![png](natural_mutations_files/natural_mutations_24_5.png)
     
 
 
 
     
-![png](natural_mutations_files/natural_mutations_24_12.png)
+![png](natural_mutations_files/natural_mutations_24_6.png)
     
 
 
 
     
-![png](natural_mutations_files/natural_mutations_24_13.png)
+![png](natural_mutations_files/natural_mutations_24_7.png)
     
 
 
 
     
-![png](natural_mutations_files/natural_mutations_24_14.png)
-    
-
-
-
-    
-![png](natural_mutations_files/natural_mutations_24_15.png)
-    
-
-
-
-    
-![png](natural_mutations_files/natural_mutations_24_16.png)
-    
-
-
-
-    
-![png](natural_mutations_files/natural_mutations_24_17.png)
+![png](natural_mutations_files/natural_mutations_24_8.png)
     
 
 
