@@ -101,7 +101,7 @@ titration_df = (titration_df
                        )
                )
 
-display(HTML(titration_df.head().to_html(index=False)))
+display(HTML(titration_df.tail().to_html(index=False)))
 
 ncol=8
 nrow=math.ceil(len(titration_df[['ligand', 'serum', 'serum_group']].drop_duplicates())/8)
@@ -149,59 +149,59 @@ p.save(f'{resultsdir}/all_ELISAs.png', limitsize=False)
   </thead>
   <tbody>
     <tr>
-      <td>P02</td>
-      <td>vaccinated</td>
-      <td>1x depleted</td>
-      <td>Delta RBD</td>
-      <td>211008</td>
-      <td>100</td>
-      <td>2.105025</td>
-      <td>0.01</td>
-      <td>P02\n(vaccinated)</td>
-    </tr>
-    <tr>
-      <td>P02</td>
-      <td>vaccinated</td>
-      <td>2x depleted</td>
-      <td>Delta RBD</td>
-      <td>211008</td>
-      <td>100</td>
-      <td>0.598525</td>
-      <td>0.01</td>
-      <td>P02\n(vaccinated)</td>
-    </tr>
-    <tr>
-      <td>P02</td>
-      <td>vaccinated</td>
-      <td>3x depleted</td>
-      <td>Delta RBD</td>
-      <td>211008</td>
-      <td>100</td>
-      <td>0.280025</td>
-      <td>0.01</td>
-      <td>P02\n(vaccinated)</td>
-    </tr>
-    <tr>
-      <td>P02</td>
-      <td>vaccinated</td>
+      <td>Delta_10</td>
+      <td>Delta infection</td>
       <td>mock depleted</td>
       <td>Delta RBD</td>
-      <td>211008</td>
-      <td>100</td>
-      <td>3.622925</td>
-      <td>0.01</td>
-      <td>P02\n(vaccinated)</td>
+      <td>211206</td>
+      <td>8100</td>
+      <td>2.23080</td>
+      <td>0.000123</td>
+      <td>Delta_10\n(Delta infection)</td>
     </tr>
     <tr>
-      <td>P03</td>
-      <td>vaccinated</td>
+      <td>Delta_11</td>
+      <td>Delta infection</td>
       <td>1x depleted</td>
       <td>Delta RBD</td>
-      <td>211008</td>
-      <td>100</td>
-      <td>3.465925</td>
-      <td>0.01</td>
-      <td>P03\n(vaccinated)</td>
+      <td>211206</td>
+      <td>8100</td>
+      <td>0.04130</td>
+      <td>0.000123</td>
+      <td>Delta_11\n(Delta infection)</td>
+    </tr>
+    <tr>
+      <td>Delta_11</td>
+      <td>Delta infection</td>
+      <td>2x depleted</td>
+      <td>Delta RBD</td>
+      <td>211206</td>
+      <td>8100</td>
+      <td>0.01885</td>
+      <td>0.000123</td>
+      <td>Delta_11\n(Delta infection)</td>
+    </tr>
+    <tr>
+      <td>Delta_11</td>
+      <td>Delta infection</td>
+      <td>3x depleted</td>
+      <td>Delta RBD</td>
+      <td>211206</td>
+      <td>8100</td>
+      <td>-0.00085</td>
+      <td>0.000123</td>
+      <td>Delta_11\n(Delta infection)</td>
+    </tr>
+    <tr>
+      <td>Delta_11</td>
+      <td>Delta infection</td>
+      <td>mock depleted</td>
+      <td>Delta RBD</td>
+      <td>211206</td>
+      <td>8100</td>
+      <td>0.98205</td>
+      <td>0.000123</td>
+      <td>Delta_11\n(Delta infection)</td>
     </tr>
   </tbody>
 </table>
