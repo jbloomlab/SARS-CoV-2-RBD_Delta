@@ -15,3 +15,11 @@ P14,29,Pfizer,P14-day-29,1250
 277C,27,Delta breakthrough,277C-day-27,500
 278C,30,Delta breakthrough,278C-day-30,1250
 279C,25,Delta breakthrough,279C-day-25,1250
+Delta_1,34,primary Delta infection,Delta_1-day-34,500
+Delta_3,37,primary Delta infection,Delta_3-day-37,350
+Delta_4,36,primary Delta infection,Delta_4-day-36,350
+Delta_6,36,primary Delta infection,Delta_6-day-36,500
+Delta_7,24,primary Delta infection,Delta_7-day-24,1250
+Delta_8,31,primary Delta infection,Delta_8-day-31,500
+Delta_10,37,primary Delta infection,Delta_10-day-37,1250
+Delta_11,32,primary Delta infection,Delta_11-day-32,500

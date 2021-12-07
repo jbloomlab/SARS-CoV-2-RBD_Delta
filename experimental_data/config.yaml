@@ -5,6 +5,7 @@ elisa_data_dir: data/rbd_depletion_elisas
 elisa_data_files:
   - 08Oct21_ELISA.csv
   - 15Oct21_ELISA.csv
+  - 06Dec21_ELISA.csv
 
 depletions:
   - mock depleted
