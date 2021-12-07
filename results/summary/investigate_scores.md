@@ -126,89 +126,89 @@ display(HTML(escape_scores
   </thead>
   <tbody>
     <tr>
-      <td>268C_repeat_500</td>
+      <td>Delta_6_500</td>
       <td>lib2</td>
-      <td>GACGTGACTACCTTGT</td>
+      <td>ATCGGAAACCGAGCTG</td>
       <td>1.0</td>
-      <td>1052</td>
-      <td>1041</td>
-      <td>Y495P</td>
-      <td>186.0</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>495</td>
-      <td>Y</td>
-      <td>P</td>
-    </tr>
-    <tr>
-      <td>268C_repeat_500</td>
-      <td>lib2</td>
-      <td>TGCCTCGACGTTTTCA</td>
-      <td>1.0</td>
-      <td>626</td>
-      <td>702</td>
-      <td>L425Q</td>
-      <td>186.0</td>
+      <td>67</td>
+      <td>94</td>
+      <td>L425G</td>
+      <td>50.0</td>
       <td>True</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>425</td>
       <td>L</td>
-      <td>Q</td>
-    </tr>
-    <tr>
-      <td>268C_500</td>
-      <td>lib2</td>
-      <td>CACAAGCGCTATTACT</td>
-      <td>1.0</td>
-      <td>193</td>
-      <td>300</td>
-      <td>Y508G</td>
-      <td>143.0</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>508</td>
-      <td>Y</td>
       <td>G</td>
     </tr>
     <tr>
-      <td>P02_500</td>
-      <td>lib2</td>
-      <td>CAAGTGCACCTTTTGA</td>
+      <td>Delta_1_500</td>
+      <td>lib1</td>
+      <td>TACTTTCTAGATTTTA</td>
       <td>1.0</td>
-      <td>196</td>
-      <td>365</td>
-      <td>W353M</td>
-      <td>125.0</td>
+      <td>146</td>
+      <td>209</td>
+      <td>Y495D</td>
+      <td>54.0</td>
       <td>True</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>353</td>
-      <td>W</td>
-      <td>M</td>
+      <td>495</td>
+      <td>Y</td>
+      <td>D</td>
     </tr>
     <tr>
-      <td>P02_500</td>
+      <td>274C_repeat_500</td>
       <td>lib2</td>
-      <td>TTATAATATAAAAGAT</td>
+      <td>AGTTAAACCATTACAA</td>
       <td>1.0</td>
-      <td>193</td>
-      <td>370</td>
-      <td>R454Q</td>
-      <td>125.0</td>
+      <td>47</td>
+      <td>55</td>
+      <td>I358R</td>
+      <td>47.0</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>358</td>
+      <td>I</td>
+      <td>R</td>
+    </tr>
+    <tr>
+      <td>274C_repeat_500</td>
+      <td>lib2</td>
+      <td>CAGCCCCAAGTAAACA</td>
+      <td>1.0</td>
+      <td>47</td>
+      <td>56</td>
+      <td>F497L</td>
+      <td>47.0</td>
       <td>True</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>454</td>
+      <td>497</td>
+      <td>F</td>
+      <td>L</td>
+    </tr>
+    <tr>
+      <td>274C_repeat_500</td>
+      <td>lib2</td>
+      <td>CCACGCACCGCGACCG</td>
+      <td>1.0</td>
+      <td>47</td>
+      <td>70</td>
+      <td>R355E</td>
+      <td>47.0</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>355</td>
       <td>R</td>
-      <td>Q</td>
+      <td>E</td>
     </tr>
   </tbody>
 </table>
@@ -269,7 +269,7 @@ for score_by in ['barcode', 'aa_substitutions']:
         geom_tile(color='white', size=0.5) +
         geom_text(size=8) +
         labs(title=score_by) +
-        theme(figure_size=(0.45 * nsamples * npanels, 0.45 * nsamples),
+        theme(figure_size=(0.25 * nsamples * npanels, 0.25 * nsamples),
               panel_grid_major=element_blank(),
               axis_text_x=element_text(angle=90),
               plot_title=element_text(size=11),
@@ -281,12 +281,12 @@ for score_by in ['barcode', 'aa_substitutions']:
     if score_by == 'barcode' and corr['library'].nunique() > 1:
         p = p + facet_wrap('~ library', nrow=1)
     _ = p.draw()
-    p.save(f'{resultsdir}/escape-corr-by-{score_by}.pdf')
+    p.save(f'{resultsdir}/escape-corr-by-{score_by}.pdf', limitsize=False)
 ```
 
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 18.0 x 9.0 in image.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 20.0 x 10.0 in image.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:722: PlotnineWarning: Filename: results/investigate_scores/escape-corr-by-barcode.pdf
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 18.0 x 18.0 in image.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 20.0 x 20.0 in image.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:722: PlotnineWarning: Filename: results/investigate_scores/escape-corr-by-aa_substitutions.pdf
 
 
@@ -461,7 +461,7 @@ for metric in ['bind', 'expr']:
                 linetype='dashed',
                 color=CBPALETTE[1]) +
          facet_wrap('~ selection', ncol=ncol) +
-         theme(figure_size=(2.5 * ncol, 2.5 * nrow),
+         theme(figure_size=(2 * ncol, 2 * nrow),
                plot_title=element_text(size=14),
               ) +
          ggtitle(f'Relationship between delta {metric} and serum-escape') +
@@ -471,12 +471,12 @@ for metric in ['bind', 'expr']:
 
     _ = p.draw()
     
-    p.save(f'{resultsdir}/escape-vs-{metric}.pdf')
+    p.save(f'{resultsdir}/escape-vs-{metric}.pdf', limitsize=False)
 ```
 
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 10.0 x 12.5 in image.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 8 x 20 in image.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:722: PlotnineWarning: Filename: results/investigate_scores/escape-vs-bind.pdf
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 10.0 x 12.5 in image.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 8 x 20 in image.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:722: PlotnineWarning: Filename: results/investigate_scores/escape-vs-expr.pdf
 
 

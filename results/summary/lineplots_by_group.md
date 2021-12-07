@@ -253,10 +253,10 @@ for supergroup, subgroup in line_plot_config.items():
     _ = p.draw()
 ```
 
+    Saving to results/lineplots_by_group/all_day30_grouped_lineplots.pdf
+
+
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/scales/scale_alpha.py:68: PlotnineWarning: Using alpha for a discrete variable is not advised.
-
-
-    Saving to results/lineplots_by_group/b1351_early2020_day30_grouped_lineplots.pdf
 
 
 
@@ -326,6 +326,11 @@ for supergroup, subgroup in line_plot_config.items():
                                                      missing_metric=missing_metric)
 ```
 
+    
+    Making PDB mappings for the average of 8 conditions for PrimaryDeltainfections to data/pdbs/6M0J.pdb
+    Mapping to the following chain: E
+      Writing B-factor re-assigned PDBs for PrimaryDeltainfections to:
+        results/lineplots_by_group/PrimaryDeltainfections_6m0j_mean_total_escape.pdb
     
     Making PDB mappings for the average of 8 conditions for Pfizer-vaccinated to data/pdbs/6M0J.pdb
     Mapping to the following chain: E

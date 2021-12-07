@@ -68,9 +68,9 @@ print('Making supplementary data for the following condition sets:\n  ' + '\n  '
 ```
 
     Making supplementary data for the following condition sets:
-      Pfizer
-      Delta_breakthrough
-      close_shave_sort
+      Delta_breakthrough_repeat
+      Pfizer_repeat
+      primary_Delta
 
 
 Read the escape fractions
@@ -187,7 +187,7 @@ for metric_type, (set_name, condition_set) in itertools.product(['mutation', 'si
 ```
 
     
-    Plotting correlations of mutation escape for Pfizer
+    Plotting correlations of mutation escape for Delta_breakthrough_repeat
 
 
 
@@ -196,9 +196,9 @@ for metric_type, (set_name, condition_set) in itertools.product(['mutation', 'si
     
 
 
-    Saving plot to results/supp_data/Pfizer-mutation-corr.pdf
+    Saving plot to results/supp_data/Delta_breakthrough_repeat-mutation-corr.pdf
     
-    Plotting correlations of mutation escape for Delta_breakthrough
+    Plotting correlations of mutation escape for Pfizer_repeat
 
 
 
@@ -207,9 +207,9 @@ for metric_type, (set_name, condition_set) in itertools.product(['mutation', 'si
     
 
 
-    Saving plot to results/supp_data/Delta_breakthrough-mutation-corr.pdf
+    Saving plot to results/supp_data/Pfizer_repeat-mutation-corr.pdf
     
-    Plotting correlations of mutation escape for close_shave_sort
+    Plotting correlations of mutation escape for primary_Delta
 
 
 
@@ -218,9 +218,9 @@ for metric_type, (set_name, condition_set) in itertools.product(['mutation', 'si
     
 
 
-    Saving plot to results/supp_data/close_shave_sort-mutation-corr.pdf
+    Saving plot to results/supp_data/primary_Delta-mutation-corr.pdf
     
-    Plotting correlations of site escape for Pfizer
+    Plotting correlations of site escape for Delta_breakthrough_repeat
 
 
 
@@ -229,9 +229,9 @@ for metric_type, (set_name, condition_set) in itertools.product(['mutation', 'si
     
 
 
-    Saving plot to results/supp_data/Pfizer-site-corr.pdf
+    Saving plot to results/supp_data/Delta_breakthrough_repeat-site-corr.pdf
     
-    Plotting correlations of site escape for Delta_breakthrough
+    Plotting correlations of site escape for Pfizer_repeat
 
 
 
@@ -240,9 +240,9 @@ for metric_type, (set_name, condition_set) in itertools.product(['mutation', 'si
     
 
 
-    Saving plot to results/supp_data/Delta_breakthrough-site-corr.pdf
+    Saving plot to results/supp_data/Pfizer_repeat-site-corr.pdf
     
-    Plotting correlations of site escape for close_shave_sort
+    Plotting correlations of site escape for primary_Delta
 
 
 
@@ -251,7 +251,7 @@ for metric_type, (set_name, condition_set) in itertools.product(['mutation', 'si
     
 
 
-    Saving plot to results/supp_data/close_shave_sort-site-corr.pdf
+    Saving plot to results/supp_data/primary_Delta-site-corr.pdf
 
 
 ## Raw data files
@@ -292,14 +292,14 @@ for set_name, condition_set in condition_sets.items():
 ```
 
     
-    Raw data for Pfizer:
-    Writing to results/supp_data/Pfizer_raw_data.csv
+    Raw data for Delta_breakthrough_repeat:
+    Writing to results/supp_data/Delta_breakthrough_repeat_raw_data.csv
     
-    Raw data for Delta_breakthrough:
-    Writing to results/supp_data/Delta_breakthrough_raw_data.csv
+    Raw data for Pfizer_repeat:
+    Writing to results/supp_data/Pfizer_repeat_raw_data.csv
     
-    Raw data for close_shave_sort:
-    Writing to results/supp_data/close_shave_sort_raw_data.csv
+    Raw data for primary_Delta:
+    Writing to results/supp_data/primary_Delta_raw_data.csv
 
 
 ## Data for `dms-view`:
@@ -482,12 +482,12 @@ for set_name, condition_set in condition_sets.items():
         df.to_csv(csv_file, index=False, float_format='%.4g')
 ```
 
-    Writing `dms-view` input file for Pfizer mapped to PDB 6m0j to results/supp_data/Pfizer_6m0j_dms-view_data.csv
-    Writing `dms-view` input file for Pfizer mapped to PDB 7V8B to results/supp_data/Pfizer_7V8B_dms-view_data.csv
-    Writing `dms-view` input file for Delta_breakthrough mapped to PDB 6m0j to results/supp_data/Delta_breakthrough_6m0j_dms-view_data.csv
-    Writing `dms-view` input file for Delta_breakthrough mapped to PDB 7V8B to results/supp_data/Delta_breakthrough_7V8B_dms-view_data.csv
-    Writing `dms-view` input file for close_shave_sort mapped to PDB 6m0j to results/supp_data/close_shave_sort_6m0j_dms-view_data.csv
-    Writing `dms-view` input file for close_shave_sort mapped to PDB 7V8B to results/supp_data/close_shave_sort_7V8B_dms-view_data.csv
+    Writing `dms-view` input file for Delta_breakthrough_repeat mapped to PDB 6m0j to results/supp_data/Delta_breakthrough_repeat_6m0j_dms-view_data.csv
+    Writing `dms-view` input file for Delta_breakthrough_repeat mapped to PDB 7V8B to results/supp_data/Delta_breakthrough_repeat_7V8B_dms-view_data.csv
+    Writing `dms-view` input file for Pfizer_repeat mapped to PDB 6m0j to results/supp_data/Pfizer_repeat_6m0j_dms-view_data.csv
+    Writing `dms-view` input file for Pfizer_repeat mapped to PDB 7V8B to results/supp_data/Pfizer_repeat_7V8B_dms-view_data.csv
+    Writing `dms-view` input file for primary_Delta mapped to PDB 6m0j to results/supp_data/primary_Delta_6m0j_dms-view_data.csv
+    Writing `dms-view` input file for primary_Delta mapped to PDB 7V8B to results/supp_data/primary_Delta_7V8B_dms-view_data.csv
 
 
 
