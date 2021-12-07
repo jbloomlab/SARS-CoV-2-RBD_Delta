@@ -1,513 +1,513 @@
 ,serum,virus,replicate,concentration,fraction infectivity
-0,278C,mock,1,0.04,5.943e-05
-1,278C,mock,1,0.01,8.521e-05
-2,278C,mock,1,0.0025,3.852e-05
-3,278C,mock,1,0.000625,0.0034
-4,278C,mock,1,0.0001563,0.2438
-5,278C,mock,1,3.906e-05,0.7351
-6,278C,mock,1,9.766e-06,0.8817
-7,278C,mock,1,2.441e-06,0.9446
-8,278C,mock,2,0.04,5.943e-05
-9,278C,mock,2,0.01,0.0001013
-10,278C,mock,2,0.0025,6.351e-05
-11,278C,mock,2,0.000625,0.003161
-12,278C,mock,2,0.0001563,0.2995
-13,278C,mock,2,3.906e-05,0.6733
-14,278C,mock,2,9.766e-06,0.8131
-15,278C,mock,2,2.441e-06,0.9715
-16,278C,RBD antibodies depleted,1,0.04,0.6251
-17,278C,RBD antibodies depleted,1,0.01,0.9617
-18,278C,RBD antibodies depleted,1,0.0025,1.895
-19,278C,RBD antibodies depleted,1,0.000625,1.278
-20,278C,RBD antibodies depleted,1,0.0001563,0.9738
-21,278C,RBD antibodies depleted,1,3.906e-05,1.024
-22,278C,RBD antibodies depleted,1,9.766e-06,1.008
-23,278C,RBD antibodies depleted,1,2.441e-06,0.9836
-24,278C,RBD antibodies depleted,2,0.04,0.6617
-25,278C,RBD antibodies depleted,2,0.01,0.9411
-26,278C,RBD antibodies depleted,2,0.0025,1.548
-27,278C,RBD antibodies depleted,2,0.000625,1.377
-28,278C,RBD antibodies depleted,2,0.0001563,1.073
-29,278C,RBD antibodies depleted,2,3.906e-05,0.9461
-30,278C,RBD antibodies depleted,2,9.766e-06,0.951
-31,278C,RBD antibodies depleted,2,2.441e-06,0.9334
-32,279C,mock,1,0.04,6.586e-05
-33,279C,mock,1,0.01,5.313e-05
-34,279C,mock,1,0.0025,2.603e-05
-35,279C,mock,1,0.000625,0.1189
-36,279C,mock,1,0.0001563,0.7368
-37,279C,mock,1,3.906e-05,0.929
-38,279C,mock,1,9.766e-06,0.9552
-39,279C,mock,1,2.441e-06,0.9565
-40,279C,mock,2,0.04,4.658e-05
-41,279C,mock,2,0.01,5.714e-05
-42,279C,mock,2,0.0025,6.351e-05
-43,279C,mock,2,0.000625,0.07709
-44,279C,mock,2,0.0001563,0.7129
-45,279C,mock,2,3.906e-05,0.8558
-46,279C,mock,2,9.766e-06,0.9672
-47,279C,mock,2,2.441e-06,1.121
-48,279C,RBD antibodies depleted,1,0.04,0.4306
-49,279C,RBD antibodies depleted,1,0.01,0.7474
-50,279C,RBD antibodies depleted,1,0.0025,1.471
-51,279C,RBD antibodies depleted,1,0.000625,1.162
-52,279C,RBD antibodies depleted,1,0.0001563,0.941
-53,279C,RBD antibodies depleted,1,3.906e-05,1.093
-54,279C,RBD antibodies depleted,1,9.766e-06,0.9205
-55,279C,RBD antibodies depleted,1,2.441e-06,1.057
-56,279C,RBD antibodies depleted,2,0.04,0.4001
-57,279C,RBD antibodies depleted,2,0.01,0.6777
-58,279C,RBD antibodies depleted,2,0.0025,1.305
-59,279C,RBD antibodies depleted,2,0.000625,1.318
-60,279C,RBD antibodies depleted,2,0.0001563,1.12
-61,279C,RBD antibodies depleted,2,3.906e-05,1.076
-62,279C,RBD antibodies depleted,2,9.766e-06,0.9786
-63,279C,RBD antibodies depleted,2,2.441e-06,0.8628
-64,276C,mock,1,0.04,3.848e-05
-65,276C,mock,1,0.01,4.691e-05
-66,276C,mock,1,0.0025,0.01229
-67,276C,mock,1,0.000625,0.4716
-68,276C,mock,1,0.0001563,0.9406
-69,276C,mock,1,3.906e-05,1.092
-70,276C,mock,1,9.766e-06,0.929
-71,276C,mock,1,2.441e-06,0.9199
-72,276C,mock,2,0.04,7.006e-05
-73,276C,mock,2,0.01,3.219e-05
-74,276C,mock,2,0.0025,0.02175
-75,276C,mock,2,0.000625,0.494
-76,276C,mock,2,0.0001563,0.9098
-77,276C,mock,2,3.906e-05,1.017
-78,276C,mock,2,9.766e-06,0.9251
-79,276C,mock,2,2.441e-06,1.209
-80,276C,RBD antibodies depleted,1,0.04,0.8775
-81,276C,RBD antibodies depleted,1,0.01,1.325
-82,276C,RBD antibodies depleted,1,0.0025,1.605
-83,276C,RBD antibodies depleted,1,0.000625,0.9476
-84,276C,RBD antibodies depleted,1,0.0001563,1.041
-85,276C,RBD antibodies depleted,1,3.906e-05,0.9596
-86,276C,RBD antibodies depleted,1,9.766e-06,0.9687
-87,276C,RBD antibodies depleted,1,2.441e-06,1.057
-88,276C,RBD antibodies depleted,2,0.04,0.914
-89,276C,RBD antibodies depleted,2,0.01,1.562
-90,276C,RBD antibodies depleted,2,0.0025,1.585
-91,276C,RBD antibodies depleted,2,0.000625,0.8789
-92,276C,RBD antibodies depleted,2,0.0001563,1.041
-93,276C,RBD antibodies depleted,2,3.906e-05,0.843
-94,276C,RBD antibodies depleted,2,9.766e-06,1.035
-95,276C,RBD antibodies depleted,2,2.441e-06,1.086
-96,277C,mock,1,0.04,6.217e-05
-97,277C,mock,1,0.01,1.38e-05
-98,277C,mock,1,0.0025,0.05144
-99,277C,mock,1,0.000625,0.607
-100,277C,mock,1,0.0001563,0.9165
-101,277C,mock,1,3.906e-05,0.8944
-102,277C,mock,1,9.766e-06,0.8985
-103,277C,mock,1,2.441e-06,1.061
-104,277C,mock,2,0.04,6.908e-06
-105,277C,mock,2,0.01,3.219e-05
-106,277C,mock,2,0.0025,0.0778
-107,277C,mock,2,0.000625,0.6109
-108,277C,mock,2,0.0001563,0.9675
-109,277C,mock,2,3.906e-05,1.084
-110,277C,mock,2,9.766e-06,1.075
-111,277C,mock,2,2.441e-06,1.074
-112,277C,RBD antibodies depleted,1,0.04,1.027
-113,277C,RBD antibodies depleted,1,0.01,1.271
-114,277C,RBD antibodies depleted,1,0.0025,1.073
-115,277C,RBD antibodies depleted,1,0.000625,1.037
-116,277C,RBD antibodies depleted,1,0.0001563,1.094
-117,277C,RBD antibodies depleted,1,3.906e-05,0.8791
-118,277C,RBD antibodies depleted,1,9.766e-06,1.05
-119,277C,RBD antibodies depleted,1,2.441e-06,0.9976
-120,277C,RBD antibodies depleted,2,0.04,0.8804
-121,277C,RBD antibodies depleted,2,0.01,1.037
-122,277C,RBD antibodies depleted,2,0.0025,1.343
-123,277C,RBD antibodies depleted,2,0.000625,0.9434
-124,277C,RBD antibodies depleted,2,0.0001563,1.112
-125,277C,RBD antibodies depleted,2,3.906e-05,1.048
-126,277C,RBD antibodies depleted,2,9.766e-06,1.37
-127,277C,RBD antibodies depleted,2,2.441e-06,0.9107
-128,273C,mock,1,0.04,4.223e-05
-129,273C,mock,1,0.01,1.402e-05
-130,273C,mock,1,0.0025,3.84e-05
-131,273C,mock,1,0.000625,0.2259
-132,273C,mock,1,0.0001563,0.5445
-133,273C,mock,1,3.906e-05,0.8732
-134,273C,mock,1,9.766e-06,0.9823
-135,273C,mock,1,2.441e-06,1.193
-136,273C,mock,2,0.04,-1.152e-05
-137,273C,mock,2,0.01,3.155e-05
-138,273C,mock,2,0.0025,7.679e-06
-139,273C,mock,2,0.000625,0.1746
-140,273C,mock,2,0.0001563,0.6216
-141,273C,mock,2,3.906e-05,0.9326
-142,273C,mock,2,9.766e-06,1.002
-143,273C,mock,2,2.441e-06,1.168
-144,273C,RBD antibodies depleted,1,0.04,0.3871
-145,273C,RBD antibodies depleted,1,0.01,1.162
-146,273C,RBD antibodies depleted,1,0.0025,1.63
-147,273C,RBD antibodies depleted,1,0.000625,1.248
-148,273C,RBD antibodies depleted,1,0.0001563,0.9893
-149,273C,RBD antibodies depleted,1,3.906e-05,1.03
-150,273C,RBD antibodies depleted,1,9.766e-06,1.013
-151,273C,RBD antibodies depleted,1,2.441e-06,1.072
-152,273C,RBD antibodies depleted,2,0.04,0.2084
-153,273C,RBD antibodies depleted,2,0.01,0.9934
-154,273C,RBD antibodies depleted,2,0.0025,1.676
-155,273C,RBD antibodies depleted,2,0.000625,1.068
-156,273C,RBD antibodies depleted,2,0.0001563,0.9696
-157,273C,RBD antibodies depleted,2,3.906e-05,1.028
-158,273C,RBD antibodies depleted,2,9.766e-06,0.922
-159,273C,RBD antibodies depleted,2,2.441e-06,1.085
-160,274C,mock,1,0.04,7.679e-06
-161,274C,mock,1,0.01,2.454e-05
-162,274C,mock,1,0.0025,0.01108
-163,274C,mock,1,0.000625,0.5173
-164,274C,mock,1,0.0001563,0.8824
-165,274C,mock,1,3.906e-05,1.104
-166,274C,mock,1,9.766e-06,0.9494
-167,274C,mock,1,2.441e-06,0.9762
-168,274C,mock,2,0.04,1.536e-05
-169,274C,mock,2,0.01,5.96e-05
-170,274C,mock,2,0.0025,0.01014
-171,274C,mock,2,0.000625,0.3313
-172,274C,mock,2,0.0001563,0.8074
-173,274C,mock,2,3.906e-05,0.8669
-174,274C,mock,2,9.766e-06,0.9559
-175,274C,mock,2,2.441e-06,1.256
-176,274C,RBD antibodies depleted,1,0.04,0.6966
-177,274C,RBD antibodies depleted,1,0.01,1.083
-178,274C,RBD antibodies depleted,1,0.0025,1.556
-179,274C,RBD antibodies depleted,1,0.000625,1.049
-180,274C,RBD antibodies depleted,1,0.0001563,1.126
-181,274C,RBD antibodies depleted,1,3.906e-05,0.9867
-182,274C,RBD antibodies depleted,1,9.766e-06,1.004
-183,274C,RBD antibodies depleted,1,2.441e-06,0.9612
-184,274C,RBD antibodies depleted,2,0.04,0.6298
-185,274C,RBD antibodies depleted,2,0.01,1.117
-186,274C,RBD antibodies depleted,2,0.0025,1.67
-187,274C,RBD antibodies depleted,2,0.000625,1.145
-188,274C,RBD antibodies depleted,2,0.0001563,0.953
-189,274C,RBD antibodies depleted,2,3.906e-05,0.986
-190,274C,RBD antibodies depleted,2,9.766e-06,0.9269
-191,274C,RBD antibodies depleted,2,2.441e-06,1.054
-192,267C,mock,1,0.04,2.698e-06
-193,267C,mock,1,0.01,0.07196
-194,267C,mock,1,0.0025,0.4271
-195,267C,mock,1,0.000625,0.7941
-196,267C,mock,1,0.0001563,0.8305
-197,267C,mock,1,3.906e-05,1.134
-198,267C,mock,1,9.766e-06,1.098
-199,267C,mock,1,2.441e-06,1.151
-200,267C,mock,2,0.04,1.503e-05
-201,267C,mock,2,0.01,0.08671
-202,267C,mock,2,0.0025,0.4316
-203,267C,mock,2,0.000625,0.7071
-204,267C,mock,2,0.0001563,0.7795
-205,267C,mock,2,3.906e-05,1.145
-206,267C,mock,2,9.766e-06,1.213
-207,267C,mock,2,2.441e-06,1.165
-208,267C,RBD antibodies depleted,1,0.04,1.564
-209,267C,RBD antibodies depleted,1,0.01,1.296
-210,267C,RBD antibodies depleted,1,0.0025,1.083
-211,267C,RBD antibodies depleted,1,0.000625,0.892
-212,267C,RBD antibodies depleted,1,0.0001563,0.8008
-213,267C,RBD antibodies depleted,1,3.906e-05,1.188
-214,267C,RBD antibodies depleted,1,9.766e-06,1.249
-215,267C,RBD antibodies depleted,1,2.441e-06,1.07
-216,267C,RBD antibodies depleted,2,0.04,1.541
-217,267C,RBD antibodies depleted,2,0.01,1.281
-218,267C,RBD antibodies depleted,2,0.0025,1.039
-219,267C,RBD antibodies depleted,2,0.000625,1.01
-220,267C,RBD antibodies depleted,2,0.0001563,0.8453
-221,267C,RBD antibodies depleted,2,3.906e-05,0.9798
-222,267C,RBD antibodies depleted,2,9.766e-06,1.245
-223,267C,RBD antibodies depleted,2,2.441e-06,1.103
-224,268C,mock,1,0.04,-3.854e-07
-225,268C,mock,1,0.01,3.202e-05
-226,268C,mock,1,0.0025,0.00851
-227,268C,mock,1,0.000625,0.4313
-228,268C,mock,1,0.0001563,0.7334
-229,268C,mock,1,3.906e-05,0.8887
-230,268C,mock,1,9.766e-06,1.201
-231,268C,mock,1,2.441e-06,1.227
-232,268C,mock,2,0.04,1.811e-05
-233,268C,mock,2,0.01,2.878e-05
-234,268C,mock,2,0.0025,0.02745
-235,268C,mock,2,0.000625,0.3681
-236,268C,mock,2,0.0001563,0.7714
-237,268C,mock,2,3.906e-05,1.05
-238,268C,mock,2,9.766e-06,1.287
-239,268C,mock,2,2.441e-06,1.139
-240,268C,RBD antibodies depleted,1,0.04,0.6451
-241,268C,RBD antibodies depleted,1,0.01,1.13
-242,268C,RBD antibodies depleted,1,0.0025,1.464
-243,268C,RBD antibodies depleted,1,0.000625,1.174
-244,268C,RBD antibodies depleted,1,0.0001563,0.9683
-245,268C,RBD antibodies depleted,1,3.906e-05,1.082
-246,268C,RBD antibodies depleted,1,9.766e-06,1.051
-247,268C,RBD antibodies depleted,1,2.441e-06,1.098
-248,268C,RBD antibodies depleted,2,0.04,0.7499
-249,268C,RBD antibodies depleted,2,0.01,1.16
-250,268C,RBD antibodies depleted,2,0.0025,1.244
-251,268C,RBD antibodies depleted,2,0.000625,1.258
-252,268C,RBD antibodies depleted,2,0.0001563,1.012
-253,268C,RBD antibodies depleted,2,3.906e-05,1.013
-254,268C,RBD antibodies depleted,2,9.766e-06,1.008
-255,268C,RBD antibodies depleted,2,2.441e-06,1.22
-256,P12,mock,1,0.04,0.003603
-257,P12,mock,1,0.01,0.3578
-258,P12,mock,1,0.0025,0.7987
-259,P12,mock,1,0.000625,0.7776
-260,P12,mock,1,0.0001563,0.8073
-261,P12,mock,1,3.906e-05,1.133
-262,P12,mock,1,9.766e-06,1.032
-263,P12,mock,1,2.441e-06,1.016
-264,P12,mock,2,0.04,0.02046
-265,P12,mock,2,0.01,0.4119
-266,P12,mock,2,0.0025,0.865
-267,P12,mock,2,0.000625,0.8818
-268,P12,mock,2,0.0001563,0.9196
-269,P12,mock,2,3.906e-05,0.9641
-270,P12,mock,2,9.766e-06,1.079
-271,P12,mock,2,2.441e-06,1.019
-272,P12,RBD antibodies depleted,1,0.04,1.87
-273,P12,RBD antibodies depleted,1,0.01,1.514
-274,P12,RBD antibodies depleted,1,0.0025,1.253
-275,P12,RBD antibodies depleted,1,0.000625,0.9127
-276,P12,RBD antibodies depleted,1,0.0001563,0.921
-277,P12,RBD antibodies depleted,1,3.906e-05,1.022
-278,P12,RBD antibodies depleted,1,9.766e-06,0.78
-279,P12,RBD antibodies depleted,1,2.441e-06,1.09
-280,P12,RBD antibodies depleted,2,0.04,1.824
-281,P12,RBD antibodies depleted,2,0.01,1.416
-282,P12,RBD antibodies depleted,2,0.0025,1.262
-283,P12,RBD antibodies depleted,2,0.000625,1.021
-284,P12,RBD antibodies depleted,2,0.0001563,0.9739
-285,P12,RBD antibodies depleted,2,3.906e-05,0.8818
-286,P12,RBD antibodies depleted,2,9.766e-06,0.9756
-287,P12,RBD antibodies depleted,2,2.441e-06,0.9448
-288,P14,mock,1,0.04,0.0001023
-289,P14,mock,1,0.01,0.0002326
-290,P14,mock,1,0.0025,0.1155
-291,P14,mock,1,0.000625,0.3599
-292,P14,mock,1,0.0001563,0.6867
-293,P14,mock,1,3.906e-05,0.7638
-294,P14,mock,1,9.766e-06,1.025
-295,P14,mock,1,2.441e-06,0.9301
-296,P14,mock,2,0.04,5.798e-05
-297,P14,mock,2,0.01,0.0005593
-298,P14,mock,2,0.0025,0.05659
-299,P14,mock,2,0.000625,0.4102
-300,P14,mock,2,0.0001563,0.6861
-301,P14,mock,2,3.906e-05,0.8337
-302,P14,mock,2,9.766e-06,0.8602
-303,P14,mock,2,2.441e-06,0.7957
-304,P14,RBD antibodies depleted,1,0.04,1.255
-305,P14,RBD antibodies depleted,1,0.01,1.506
-306,P14,RBD antibodies depleted,1,0.0025,1.387
-307,P14,RBD antibodies depleted,1,0.000625,1.063
-308,P14,RBD antibodies depleted,1,0.0001563,0.8801
-309,P14,RBD antibodies depleted,1,3.906e-05,0.9537
-310,P14,RBD antibodies depleted,1,9.766e-06,0.874
-311,P14,RBD antibodies depleted,1,2.441e-06,1.126
-312,P14,RBD antibodies depleted,2,0.04,1.146
-313,P14,RBD antibodies depleted,2,0.01,1.357
-314,P14,RBD antibodies depleted,2,0.0025,1.339
-315,P14,RBD antibodies depleted,2,0.000625,1.074
-316,P14,RBD antibodies depleted,2,0.0001563,1.083
-317,P14,RBD antibodies depleted,2,3.906e-05,1.013
-318,P14,RBD antibodies depleted,2,9.766e-06,1.047
-319,P14,RBD antibodies depleted,2,2.441e-06,1.059
-320,P08,mock,1,0.04,6.417e-05
-321,P08,mock,1,0.01,0.01189
-322,P08,mock,1,0.0025,0.1935
-323,P08,mock,1,0.000625,0.48
-324,P08,mock,1,0.0001563,0.7889
-325,P08,mock,1,3.906e-05,0.9785
-326,P08,mock,1,9.766e-06,0.9828
-327,P08,mock,1,2.441e-06,0.9335
-328,P08,mock,2,0.04,3.631e-05
-329,P08,mock,2,0.01,0.002569
-330,P08,mock,2,0.0025,0.2975
-331,P08,mock,2,0.000625,0.5318
-332,P08,mock,2,0.0001563,0.791
-333,P08,mock,2,3.906e-05,0.9124
-334,P08,mock,2,9.766e-06,0.9411
-335,P08,mock,2,2.441e-06,0.9394
-336,P08,RBD antibodies depleted,1,0.04,1.28
-337,P08,RBD antibodies depleted,1,0.01,1.29
-338,P08,RBD antibodies depleted,1,0.0025,1.138
-339,P08,RBD antibodies depleted,1,0.000625,0.9042
-340,P08,RBD antibodies depleted,1,0.0001563,0.9152
-341,P08,RBD antibodies depleted,1,3.906e-05,1.099
-342,P08,RBD antibodies depleted,1,9.766e-06,1.247
-343,P08,RBD antibodies depleted,1,2.441e-06,1.016
-344,P08,RBD antibodies depleted,2,0.04,1.36
-345,P08,RBD antibodies depleted,2,0.01,1.435
-346,P08,RBD antibodies depleted,2,0.0025,1.139
-347,P08,RBD antibodies depleted,2,0.000625,0.8109
-348,P08,RBD antibodies depleted,2,0.0001563,0.7976
-349,P08,RBD antibodies depleted,2,3.906e-05,1.054
-350,P08,RBD antibodies depleted,2,9.766e-06,0.9771
-351,P08,RBD antibodies depleted,2,2.441e-06,1.082
-352,P09,mock,1,0.04,2.039e-05
-353,P09,mock,1,0.01,0.2367
-354,P09,mock,1,0.0025,0.8507
-355,P09,mock,1,0.000625,0.7152
-356,P09,mock,1,0.0001563,0.9688
-357,P09,mock,1,3.906e-05,0.947
-358,P09,mock,1,9.766e-06,1.004
-359,P09,mock,1,2.441e-06,1.006
-360,P09,mock,2,0.04,0.003403
-361,P09,mock,2,0.01,0.2257
-362,P09,mock,2,0.0025,0.9372
-363,P09,mock,2,0.000625,0.7664
-364,P09,mock,2,0.0001563,0.9122
-365,P09,mock,2,3.906e-05,0.883
-366,P09,mock,2,9.766e-06,0.9092
-367,P09,mock,2,2.441e-06,1.07
-368,P09,RBD antibodies depleted,1,0.04,1.8
-369,P09,RBD antibodies depleted,1,0.01,1.382
-370,P09,RBD antibodies depleted,1,0.0025,1.16
-371,P09,RBD antibodies depleted,1,0.000625,0.7984
-372,P09,RBD antibodies depleted,1,0.0001563,0.9559
-373,P09,RBD antibodies depleted,1,3.906e-05,0.8617
-374,P09,RBD antibodies depleted,1,9.766e-06,1.19
-375,P09,RBD antibodies depleted,1,2.441e-06,1.029
-376,P09,RBD antibodies depleted,2,0.04,1.421
-377,P09,RBD antibodies depleted,2,0.01,1.322
-378,P09,RBD antibodies depleted,2,0.0025,1.041
-379,P09,RBD antibodies depleted,2,0.000625,0.8968
-380,P09,RBD antibodies depleted,2,0.0001563,0.9415
-381,P09,RBD antibodies depleted,2,3.906e-05,0.9805
-382,P09,RBD antibodies depleted,2,9.766e-06,1.165
-383,P09,RBD antibodies depleted,2,2.441e-06,1.006
-384,P04,mock,1,0.04,1.538e-05
-385,P04,mock,1,0.01,3.842e-05
-386,P04,mock,1,0.0025,0.1089
-387,P04,mock,1,0.000625,0.356
-388,P04,mock,1,0.0001563,0.6398
-389,P04,mock,1,3.906e-05,0.8373
-390,P04,mock,1,9.766e-06,1.088
-391,P04,mock,1,2.441e-06,0.9904
-392,P04,mock,2,0.04,2.945e-05
-393,P04,mock,2,0.01,2.361e-05
-394,P04,mock,2,0.0025,0.08587
-395,P04,mock,2,0.000625,0.3663
-396,P04,mock,2,0.0001563,0.7063
-397,P04,mock,2,3.906e-05,0.8813
-398,P04,mock,2,9.766e-06,0.992
-399,P04,mock,2,2.441e-06,1.088
-400,P04,RBD antibodies depleted,1,0.04,0.8662
-401,P04,RBD antibodies depleted,1,0.01,1.516
-402,P04,RBD antibodies depleted,1,0.0025,1.643
-403,P04,RBD antibodies depleted,1,0.000625,1.053
-404,P04,RBD antibodies depleted,1,0.0001563,0.9492
-405,P04,RBD antibodies depleted,1,3.906e-05,0.8992
-406,P04,RBD antibodies depleted,1,9.766e-06,0.9938
-407,P04,RBD antibodies depleted,1,2.441e-06,1.149
-408,P04,RBD antibodies depleted,2,0.04,0.9387
-409,P04,RBD antibodies depleted,2,0.01,1.438
-410,P04,RBD antibodies depleted,2,0.0025,1.391
-411,P04,RBD antibodies depleted,2,0.000625,1.121
-412,P04,RBD antibodies depleted,2,0.0001563,0.9097
-413,P04,RBD antibodies depleted,2,3.906e-05,0.9695
-414,P04,RBD antibodies depleted,2,9.766e-06,0.9377
-415,P04,RBD antibodies depleted,2,2.441e-06,1.135
-416,P05,mock,1,0.04,2.242e-05
-417,P05,mock,1,0.01,0.1228
-418,P05,mock,1,0.0025,0.4821
-419,P05,mock,1,0.000625,0.6943
-420,P05,mock,1,0.0001563,0.7693
-421,P05,mock,1,3.906e-05,0.9136
-422,P05,mock,1,9.766e-06,0.9072
-423,P05,mock,1,2.441e-06,1.052
-424,P05,mock,2,0.04,-2.198e-06
-425,P05,mock,2,0.01,0.1082
-426,P05,mock,2,0.0025,0.499
-427,P05,mock,2,0.000625,0.6547
-428,P05,mock,2,0.0001563,0.8808
-429,P05,mock,2,3.906e-05,1.018
-430,P05,mock,2,9.766e-06,1.039
-431,P05,mock,2,2.441e-06,1.135
-432,P05,RBD antibodies depleted,1,0.04,1.71
-433,P05,RBD antibodies depleted,1,0.01,1.516
-434,P05,RBD antibodies depleted,1,0.0025,1.221
-435,P05,RBD antibodies depleted,1,0.000625,0.9868
-436,P05,RBD antibodies depleted,1,0.0001563,0.8474
-437,P05,RBD antibodies depleted,1,3.906e-05,1.006
-438,P05,RBD antibodies depleted,1,9.766e-06,0.8334
-439,P05,RBD antibodies depleted,1,2.441e-06,1.084
-440,P05,RBD antibodies depleted,2,0.04,1.622
-441,P05,RBD antibodies depleted,2,0.01,1.538
-442,P05,RBD antibodies depleted,2,0.0025,1.267
-443,P05,RBD antibodies depleted,2,0.000625,0.979
-444,P05,RBD antibodies depleted,2,0.0001563,0.9235
-445,P05,RBD antibodies depleted,2,3.906e-05,0.964
-446,P05,RBD antibodies depleted,2,9.766e-06,0.8959
-447,P05,RBD antibodies depleted,2,2.441e-06,1.19
-448,P02,mock,1,0.04,2.132e-05
-449,P02,mock,1,0.01,0.06549
-450,P02,mock,1,0.0025,0.7768
-451,P02,mock,1,0.000625,1.002
-452,P02,mock,1,0.0001563,1.16
-453,P02,mock,1,3.906e-05,1.081
-454,P02,mock,1,9.766e-06,0.9087
-455,P02,mock,1,2.441e-06,1.109
-456,P02,mock,2,0.04,4.352e-07
-457,P02,mock,2,0.01,0.08581
-458,P02,mock,2,0.0025,0.7925
-459,P02,mock,2,0.000625,1.151
-460,P02,mock,2,0.0001563,1.022
-461,P02,mock,2,3.906e-05,1.053
-462,P02,mock,2,9.766e-06,0.8141
-463,P02,mock,2,2.441e-06,0.9489
-464,P02,RBD antibodies depleted,1,0.04,1.755
-465,P02,RBD antibodies depleted,1,0.01,2.083
-466,P02,RBD antibodies depleted,1,0.0025,1.29
-467,P02,RBD antibodies depleted,1,0.000625,1.269
-468,P02,RBD antibodies depleted,1,0.0001563,0.9787
-469,P02,RBD antibodies depleted,1,3.906e-05,1.078
-470,P02,RBD antibodies depleted,1,9.766e-06,0.7963
-471,P02,RBD antibodies depleted,1,2.441e-06,1.102
-472,P02,RBD antibodies depleted,2,0.04,1.717
-473,P02,RBD antibodies depleted,2,0.01,2.104
-474,P02,RBD antibodies depleted,2,0.0025,1.442
-475,P02,RBD antibodies depleted,2,0.000625,1.151
-476,P02,RBD antibodies depleted,2,0.0001563,0.9638
-477,P02,RBD antibodies depleted,2,3.906e-05,0.9766
-478,P02,RBD antibodies depleted,2,9.766e-06,0.9078
-479,P02,RBD antibodies depleted,2,2.441e-06,1.026
-480,P03,mock,1,0.04,4.57e-05
-481,P03,mock,1,0.01,0.01103
-482,P03,mock,1,0.0025,0.4364
-483,P03,mock,1,0.000625,0.7103
-484,P03,mock,1,0.0001563,0.9675
-485,P03,mock,1,3.906e-05,0.9495
-486,P03,mock,1,9.766e-06,0.7373
-487,P03,mock,1,2.441e-06,0.9727
-488,P03,mock,2,0.04,1.088e-05
-489,P03,mock,2,0.01,0.01302
-490,P03,mock,2,0.0025,0.3528
-491,P03,mock,2,0.000625,0.7654
-492,P03,mock,2,0.0001563,0.9405
-493,P03,mock,2,3.906e-05,0.8079
-494,P03,mock,2,9.766e-06,0.756
-495,P03,mock,2,2.441e-06,0.8749
-496,P03,RBD antibodies depleted,1,0.04,1.155
-497,P03,RBD antibodies depleted,1,0.01,1.473
-498,P03,RBD antibodies depleted,1,0.0025,1.241
-499,P03,RBD antibodies depleted,1,0.000625,1.001
-500,P03,RBD antibodies depleted,1,0.0001563,1.108
-501,P03,RBD antibodies depleted,1,3.906e-05,1.01
-502,P03,RBD antibodies depleted,1,9.766e-06,0.9503
-503,P03,RBD antibodies depleted,1,2.441e-06,1.09
-504,P03,RBD antibodies depleted,2,0.04,1.282
-505,P03,RBD antibodies depleted,2,0.01,1.455
-506,P03,RBD antibodies depleted,2,0.0025,1.406
-507,P03,RBD antibodies depleted,2,0.000625,1.293
-508,P03,RBD antibodies depleted,2,0.0001563,1.001
-509,P03,RBD antibodies depleted,2,3.906e-05,0.991
-510,P03,RBD antibodies depleted,2,9.766e-06,0.8636
-511,P03,RBD antibodies depleted,2,2.441e-06,1.055
+0,278C,mock depletion (Delta spike),1,0.04,5.943e-05
+1,278C,mock depletion (Delta spike),1,0.01,8.521e-05
+2,278C,mock depletion (Delta spike),1,0.0025,3.852e-05
+3,278C,mock depletion (Delta spike),1,0.000625,0.0034
+4,278C,mock depletion (Delta spike),1,0.0001563,0.2438
+5,278C,mock depletion (Delta spike),1,3.906e-05,0.7351
+6,278C,mock depletion (Delta spike),1,9.766e-06,0.8817
+7,278C,mock depletion (Delta spike),1,2.441e-06,0.9446
+8,278C,mock depletion (Delta spike),2,0.04,5.943e-05
+9,278C,mock depletion (Delta spike),2,0.01,0.0001013
+10,278C,mock depletion (Delta spike),2,0.0025,6.351e-05
+11,278C,mock depletion (Delta spike),2,0.000625,0.003161
+12,278C,mock depletion (Delta spike),2,0.0001563,0.2995
+13,278C,mock depletion (Delta spike),2,3.906e-05,0.6733
+14,278C,mock depletion (Delta spike),2,9.766e-06,0.8131
+15,278C,mock depletion (Delta spike),2,2.441e-06,0.9715
+16,278C,RBD antibodies depleted (Delta spike),1,0.04,0.6617
+17,278C,RBD antibodies depleted (Delta spike),1,0.01,0.9411
+18,278C,RBD antibodies depleted (Delta spike),1,0.0025,1.548
+19,278C,RBD antibodies depleted (Delta spike),1,0.000625,1.377
+20,278C,RBD antibodies depleted (Delta spike),1,0.0001563,1.073
+21,278C,RBD antibodies depleted (Delta spike),1,3.906e-05,0.9461
+22,278C,RBD antibodies depleted (Delta spike),1,9.766e-06,0.951
+23,278C,RBD antibodies depleted (Delta spike),1,2.441e-06,0.9334
+24,278C,RBD antibodies depleted (Delta spike),2,0.04,0.6251
+25,278C,RBD antibodies depleted (Delta spike),2,0.01,0.9617
+26,278C,RBD antibodies depleted (Delta spike),2,0.0025,1.895
+27,278C,RBD antibodies depleted (Delta spike),2,0.000625,1.278
+28,278C,RBD antibodies depleted (Delta spike),2,0.0001563,0.9738
+29,278C,RBD antibodies depleted (Delta spike),2,3.906e-05,1.024
+30,278C,RBD antibodies depleted (Delta spike),2,9.766e-06,1.008
+31,278C,RBD antibodies depleted (Delta spike),2,2.441e-06,0.9836
+32,279C,mock depletion (Delta spike),1,0.04,4.658e-05
+33,279C,mock depletion (Delta spike),1,0.01,5.714e-05
+34,279C,mock depletion (Delta spike),1,0.0025,6.351e-05
+35,279C,mock depletion (Delta spike),1,0.000625,0.07709
+36,279C,mock depletion (Delta spike),1,0.0001563,0.7129
+37,279C,mock depletion (Delta spike),1,3.906e-05,0.8558
+38,279C,mock depletion (Delta spike),1,9.766e-06,0.9672
+39,279C,mock depletion (Delta spike),1,2.441e-06,1.121
+40,279C,mock depletion (Delta spike),2,0.04,6.586e-05
+41,279C,mock depletion (Delta spike),2,0.01,5.313e-05
+42,279C,mock depletion (Delta spike),2,0.0025,2.603e-05
+43,279C,mock depletion (Delta spike),2,0.000625,0.1189
+44,279C,mock depletion (Delta spike),2,0.0001563,0.7368
+45,279C,mock depletion (Delta spike),2,3.906e-05,0.929
+46,279C,mock depletion (Delta spike),2,9.766e-06,0.9552
+47,279C,mock depletion (Delta spike),2,2.441e-06,0.9565
+48,279C,RBD antibodies depleted (Delta spike),1,0.04,0.4306
+49,279C,RBD antibodies depleted (Delta spike),1,0.01,0.7474
+50,279C,RBD antibodies depleted (Delta spike),1,0.0025,1.471
+51,279C,RBD antibodies depleted (Delta spike),1,0.000625,1.162
+52,279C,RBD antibodies depleted (Delta spike),1,0.0001563,0.941
+53,279C,RBD antibodies depleted (Delta spike),1,3.906e-05,1.093
+54,279C,RBD antibodies depleted (Delta spike),1,9.766e-06,0.9205
+55,279C,RBD antibodies depleted (Delta spike),1,2.441e-06,1.057
+56,279C,RBD antibodies depleted (Delta spike),2,0.04,0.4001
+57,279C,RBD antibodies depleted (Delta spike),2,0.01,0.6777
+58,279C,RBD antibodies depleted (Delta spike),2,0.0025,1.305
+59,279C,RBD antibodies depleted (Delta spike),2,0.000625,1.318
+60,279C,RBD antibodies depleted (Delta spike),2,0.0001563,1.12
+61,279C,RBD antibodies depleted (Delta spike),2,3.906e-05,1.076
+62,279C,RBD antibodies depleted (Delta spike),2,9.766e-06,0.9786
+63,279C,RBD antibodies depleted (Delta spike),2,2.441e-06,0.8628
+64,276C,mock depletion (Delta spike),1,0.04,3.848e-05
+65,276C,mock depletion (Delta spike),1,0.01,4.691e-05
+66,276C,mock depletion (Delta spike),1,0.0025,0.01229
+67,276C,mock depletion (Delta spike),1,0.000625,0.4716
+68,276C,mock depletion (Delta spike),1,0.0001563,0.9406
+69,276C,mock depletion (Delta spike),1,3.906e-05,1.092
+70,276C,mock depletion (Delta spike),1,9.766e-06,0.929
+71,276C,mock depletion (Delta spike),1,2.441e-06,0.9199
+72,276C,mock depletion (Delta spike),2,0.04,7.006e-05
+73,276C,mock depletion (Delta spike),2,0.01,3.219e-05
+74,276C,mock depletion (Delta spike),2,0.0025,0.02175
+75,276C,mock depletion (Delta spike),2,0.000625,0.494
+76,276C,mock depletion (Delta spike),2,0.0001563,0.9098
+77,276C,mock depletion (Delta spike),2,3.906e-05,1.017
+78,276C,mock depletion (Delta spike),2,9.766e-06,0.9251
+79,276C,mock depletion (Delta spike),2,2.441e-06,1.209
+80,276C,RBD antibodies depleted (Delta spike),1,0.04,0.914
+81,276C,RBD antibodies depleted (Delta spike),1,0.01,1.562
+82,276C,RBD antibodies depleted (Delta spike),1,0.0025,1.585
+83,276C,RBD antibodies depleted (Delta spike),1,0.000625,0.8789
+84,276C,RBD antibodies depleted (Delta spike),1,0.0001563,1.041
+85,276C,RBD antibodies depleted (Delta spike),1,3.906e-05,0.843
+86,276C,RBD antibodies depleted (Delta spike),1,9.766e-06,1.035
+87,276C,RBD antibodies depleted (Delta spike),1,2.441e-06,1.086
+88,276C,RBD antibodies depleted (Delta spike),2,0.04,0.8775
+89,276C,RBD antibodies depleted (Delta spike),2,0.01,1.325
+90,276C,RBD antibodies depleted (Delta spike),2,0.0025,1.605
+91,276C,RBD antibodies depleted (Delta spike),2,0.000625,0.9476
+92,276C,RBD antibodies depleted (Delta spike),2,0.0001563,1.041
+93,276C,RBD antibodies depleted (Delta spike),2,3.906e-05,0.9596
+94,276C,RBD antibodies depleted (Delta spike),2,9.766e-06,0.9687
+95,276C,RBD antibodies depleted (Delta spike),2,2.441e-06,1.057
+96,277C,mock depletion (Delta spike),1,0.04,6.908e-06
+97,277C,mock depletion (Delta spike),1,0.01,3.219e-05
+98,277C,mock depletion (Delta spike),1,0.0025,0.0778
+99,277C,mock depletion (Delta spike),1,0.000625,0.6109
+100,277C,mock depletion (Delta spike),1,0.0001563,0.9675
+101,277C,mock depletion (Delta spike),1,3.906e-05,1.084
+102,277C,mock depletion (Delta spike),1,9.766e-06,1.075
+103,277C,mock depletion (Delta spike),1,2.441e-06,1.074
+104,277C,mock depletion (Delta spike),2,0.04,6.217e-05
+105,277C,mock depletion (Delta spike),2,0.01,1.38e-05
+106,277C,mock depletion (Delta spike),2,0.0025,0.05144
+107,277C,mock depletion (Delta spike),2,0.000625,0.607
+108,277C,mock depletion (Delta spike),2,0.0001563,0.9165
+109,277C,mock depletion (Delta spike),2,3.906e-05,0.8944
+110,277C,mock depletion (Delta spike),2,9.766e-06,0.8985
+111,277C,mock depletion (Delta spike),2,2.441e-06,1.061
+112,277C,RBD antibodies depleted (Delta spike),1,0.04,1.027
+113,277C,RBD antibodies depleted (Delta spike),1,0.01,1.271
+114,277C,RBD antibodies depleted (Delta spike),1,0.0025,1.073
+115,277C,RBD antibodies depleted (Delta spike),1,0.000625,1.037
+116,277C,RBD antibodies depleted (Delta spike),1,0.0001563,1.094
+117,277C,RBD antibodies depleted (Delta spike),1,3.906e-05,0.8791
+118,277C,RBD antibodies depleted (Delta spike),1,9.766e-06,1.05
+119,277C,RBD antibodies depleted (Delta spike),1,2.441e-06,0.9976
+120,277C,RBD antibodies depleted (Delta spike),2,0.04,0.8804
+121,277C,RBD antibodies depleted (Delta spike),2,0.01,1.037
+122,277C,RBD antibodies depleted (Delta spike),2,0.0025,1.343
+123,277C,RBD antibodies depleted (Delta spike),2,0.000625,0.9434
+124,277C,RBD antibodies depleted (Delta spike),2,0.0001563,1.112
+125,277C,RBD antibodies depleted (Delta spike),2,3.906e-05,1.048
+126,277C,RBD antibodies depleted (Delta spike),2,9.766e-06,1.37
+127,277C,RBD antibodies depleted (Delta spike),2,2.441e-06,0.9107
+128,273C,mock depletion (Delta spike),1,0.04,4.223e-05
+129,273C,mock depletion (Delta spike),1,0.01,1.402e-05
+130,273C,mock depletion (Delta spike),1,0.0025,3.84e-05
+131,273C,mock depletion (Delta spike),1,0.000625,0.2259
+132,273C,mock depletion (Delta spike),1,0.0001563,0.5445
+133,273C,mock depletion (Delta spike),1,3.906e-05,0.8732
+134,273C,mock depletion (Delta spike),1,9.766e-06,0.9823
+135,273C,mock depletion (Delta spike),1,2.441e-06,1.193
+136,273C,mock depletion (Delta spike),2,0.04,-1.152e-05
+137,273C,mock depletion (Delta spike),2,0.01,3.155e-05
+138,273C,mock depletion (Delta spike),2,0.0025,7.679e-06
+139,273C,mock depletion (Delta spike),2,0.000625,0.1746
+140,273C,mock depletion (Delta spike),2,0.0001563,0.6216
+141,273C,mock depletion (Delta spike),2,3.906e-05,0.9326
+142,273C,mock depletion (Delta spike),2,9.766e-06,1.002
+143,273C,mock depletion (Delta spike),2,2.441e-06,1.168
+144,273C,RBD antibodies depleted (Delta spike),1,0.04,0.2084
+145,273C,RBD antibodies depleted (Delta spike),1,0.01,0.9934
+146,273C,RBD antibodies depleted (Delta spike),1,0.0025,1.676
+147,273C,RBD antibodies depleted (Delta spike),1,0.000625,1.068
+148,273C,RBD antibodies depleted (Delta spike),1,0.0001563,0.9696
+149,273C,RBD antibodies depleted (Delta spike),1,3.906e-05,1.028
+150,273C,RBD antibodies depleted (Delta spike),1,9.766e-06,0.922
+151,273C,RBD antibodies depleted (Delta spike),1,2.441e-06,1.085
+152,273C,RBD antibodies depleted (Delta spike),2,0.04,0.3871
+153,273C,RBD antibodies depleted (Delta spike),2,0.01,1.162
+154,273C,RBD antibodies depleted (Delta spike),2,0.0025,1.63
+155,273C,RBD antibodies depleted (Delta spike),2,0.000625,1.248
+156,273C,RBD antibodies depleted (Delta spike),2,0.0001563,0.9893
+157,273C,RBD antibodies depleted (Delta spike),2,3.906e-05,1.03
+158,273C,RBD antibodies depleted (Delta spike),2,9.766e-06,1.013
+159,273C,RBD antibodies depleted (Delta spike),2,2.441e-06,1.072
+160,274C,mock depletion (Delta spike),1,0.04,1.536e-05
+161,274C,mock depletion (Delta spike),1,0.01,5.96e-05
+162,274C,mock depletion (Delta spike),1,0.0025,0.01014
+163,274C,mock depletion (Delta spike),1,0.000625,0.3313
+164,274C,mock depletion (Delta spike),1,0.0001563,0.8074
+165,274C,mock depletion (Delta spike),1,3.906e-05,0.8669
+166,274C,mock depletion (Delta spike),1,9.766e-06,0.9559
+167,274C,mock depletion (Delta spike),1,2.441e-06,1.256
+168,274C,mock depletion (Delta spike),2,0.04,7.679e-06
+169,274C,mock depletion (Delta spike),2,0.01,2.454e-05
+170,274C,mock depletion (Delta spike),2,0.0025,0.01108
+171,274C,mock depletion (Delta spike),2,0.000625,0.5173
+172,274C,mock depletion (Delta spike),2,0.0001563,0.8824
+173,274C,mock depletion (Delta spike),2,3.906e-05,1.104
+174,274C,mock depletion (Delta spike),2,9.766e-06,0.9494
+175,274C,mock depletion (Delta spike),2,2.441e-06,0.9762
+176,274C,RBD antibodies depleted (Delta spike),1,0.04,0.6966
+177,274C,RBD antibodies depleted (Delta spike),1,0.01,1.083
+178,274C,RBD antibodies depleted (Delta spike),1,0.0025,1.556
+179,274C,RBD antibodies depleted (Delta spike),1,0.000625,1.049
+180,274C,RBD antibodies depleted (Delta spike),1,0.0001563,1.126
+181,274C,RBD antibodies depleted (Delta spike),1,3.906e-05,0.9867
+182,274C,RBD antibodies depleted (Delta spike),1,9.766e-06,1.004
+183,274C,RBD antibodies depleted (Delta spike),1,2.441e-06,0.9612
+184,274C,RBD antibodies depleted (Delta spike),2,0.04,0.6298
+185,274C,RBD antibodies depleted (Delta spike),2,0.01,1.117
+186,274C,RBD antibodies depleted (Delta spike),2,0.0025,1.67
+187,274C,RBD antibodies depleted (Delta spike),2,0.000625,1.145
+188,274C,RBD antibodies depleted (Delta spike),2,0.0001563,0.953
+189,274C,RBD antibodies depleted (Delta spike),2,3.906e-05,0.986
+190,274C,RBD antibodies depleted (Delta spike),2,9.766e-06,0.9269
+191,274C,RBD antibodies depleted (Delta spike),2,2.441e-06,1.054
+192,267C,mock depletion (Delta spike),1,0.04,2.698e-06
+193,267C,mock depletion (Delta spike),1,0.01,0.07196
+194,267C,mock depletion (Delta spike),1,0.0025,0.4271
+195,267C,mock depletion (Delta spike),1,0.000625,0.7941
+196,267C,mock depletion (Delta spike),1,0.0001563,0.8305
+197,267C,mock depletion (Delta spike),1,3.906e-05,1.134
+198,267C,mock depletion (Delta spike),1,9.766e-06,1.098
+199,267C,mock depletion (Delta spike),1,2.441e-06,1.151
+200,267C,mock depletion (Delta spike),2,0.04,1.503e-05
+201,267C,mock depletion (Delta spike),2,0.01,0.08671
+202,267C,mock depletion (Delta spike),2,0.0025,0.4316
+203,267C,mock depletion (Delta spike),2,0.000625,0.7071
+204,267C,mock depletion (Delta spike),2,0.0001563,0.7795
+205,267C,mock depletion (Delta spike),2,3.906e-05,1.145
+206,267C,mock depletion (Delta spike),2,9.766e-06,1.213
+207,267C,mock depletion (Delta spike),2,2.441e-06,1.165
+208,267C,RBD antibodies depleted (Delta spike),1,0.04,1.541
+209,267C,RBD antibodies depleted (Delta spike),1,0.01,1.281
+210,267C,RBD antibodies depleted (Delta spike),1,0.0025,1.039
+211,267C,RBD antibodies depleted (Delta spike),1,0.000625,1.01
+212,267C,RBD antibodies depleted (Delta spike),1,0.0001563,0.8453
+213,267C,RBD antibodies depleted (Delta spike),1,3.906e-05,0.9798
+214,267C,RBD antibodies depleted (Delta spike),1,9.766e-06,1.245
+215,267C,RBD antibodies depleted (Delta spike),1,2.441e-06,1.103
+216,267C,RBD antibodies depleted (Delta spike),2,0.04,1.564
+217,267C,RBD antibodies depleted (Delta spike),2,0.01,1.296
+218,267C,RBD antibodies depleted (Delta spike),2,0.0025,1.083
+219,267C,RBD antibodies depleted (Delta spike),2,0.000625,0.892
+220,267C,RBD antibodies depleted (Delta spike),2,0.0001563,0.8008
+221,267C,RBD antibodies depleted (Delta spike),2,3.906e-05,1.188
+222,267C,RBD antibodies depleted (Delta spike),2,9.766e-06,1.249
+223,267C,RBD antibodies depleted (Delta spike),2,2.441e-06,1.07
+224,268C,mock depletion (Delta spike),1,0.04,1.811e-05
+225,268C,mock depletion (Delta spike),1,0.01,2.878e-05
+226,268C,mock depletion (Delta spike),1,0.0025,0.02745
+227,268C,mock depletion (Delta spike),1,0.000625,0.3681
+228,268C,mock depletion (Delta spike),1,0.0001563,0.7714
+229,268C,mock depletion (Delta spike),1,3.906e-05,1.05
+230,268C,mock depletion (Delta spike),1,9.766e-06,1.287
+231,268C,mock depletion (Delta spike),1,2.441e-06,1.139
+232,268C,mock depletion (Delta spike),2,0.04,-3.854e-07
+233,268C,mock depletion (Delta spike),2,0.01,3.202e-05
+234,268C,mock depletion (Delta spike),2,0.0025,0.00851
+235,268C,mock depletion (Delta spike),2,0.000625,0.4313
+236,268C,mock depletion (Delta spike),2,0.0001563,0.7334
+237,268C,mock depletion (Delta spike),2,3.906e-05,0.8887
+238,268C,mock depletion (Delta spike),2,9.766e-06,1.201
+239,268C,mock depletion (Delta spike),2,2.441e-06,1.227
+240,268C,RBD antibodies depleted (Delta spike),1,0.04,0.6451
+241,268C,RBD antibodies depleted (Delta spike),1,0.01,1.13
+242,268C,RBD antibodies depleted (Delta spike),1,0.0025,1.464
+243,268C,RBD antibodies depleted (Delta spike),1,0.000625,1.174
+244,268C,RBD antibodies depleted (Delta spike),1,0.0001563,0.9683
+245,268C,RBD antibodies depleted (Delta spike),1,3.906e-05,1.082
+246,268C,RBD antibodies depleted (Delta spike),1,9.766e-06,1.051
+247,268C,RBD antibodies depleted (Delta spike),1,2.441e-06,1.098
+248,268C,RBD antibodies depleted (Delta spike),2,0.04,0.7499
+249,268C,RBD antibodies depleted (Delta spike),2,0.01,1.16
+250,268C,RBD antibodies depleted (Delta spike),2,0.0025,1.244
+251,268C,RBD antibodies depleted (Delta spike),2,0.000625,1.258
+252,268C,RBD antibodies depleted (Delta spike),2,0.0001563,1.012
+253,268C,RBD antibodies depleted (Delta spike),2,3.906e-05,1.013
+254,268C,RBD antibodies depleted (Delta spike),2,9.766e-06,1.008
+255,268C,RBD antibodies depleted (Delta spike),2,2.441e-06,1.22
+256,P12,mock depletion (Delta spike),1,0.04,0.003603
+257,P12,mock depletion (Delta spike),1,0.01,0.3578
+258,P12,mock depletion (Delta spike),1,0.0025,0.7987
+259,P12,mock depletion (Delta spike),1,0.000625,0.7776
+260,P12,mock depletion (Delta spike),1,0.0001563,0.8073
+261,P12,mock depletion (Delta spike),1,3.906e-05,1.133
+262,P12,mock depletion (Delta spike),1,9.766e-06,1.032
+263,P12,mock depletion (Delta spike),1,2.441e-06,1.016
+264,P12,mock depletion (Delta spike),2,0.04,0.02046
+265,P12,mock depletion (Delta spike),2,0.01,0.4119
+266,P12,mock depletion (Delta spike),2,0.0025,0.865
+267,P12,mock depletion (Delta spike),2,0.000625,0.8818
+268,P12,mock depletion (Delta spike),2,0.0001563,0.9196
+269,P12,mock depletion (Delta spike),2,3.906e-05,0.9641
+270,P12,mock depletion (Delta spike),2,9.766e-06,1.079
+271,P12,mock depletion (Delta spike),2,2.441e-06,1.019
+272,P12,RBD antibodies depleted (Delta spike),1,0.04,1.824
+273,P12,RBD antibodies depleted (Delta spike),1,0.01,1.416
+274,P12,RBD antibodies depleted (Delta spike),1,0.0025,1.262
+275,P12,RBD antibodies depleted (Delta spike),1,0.000625,1.021
+276,P12,RBD antibodies depleted (Delta spike),1,0.0001563,0.9739
+277,P12,RBD antibodies depleted (Delta spike),1,3.906e-05,0.8818
+278,P12,RBD antibodies depleted (Delta spike),1,9.766e-06,0.9756
+279,P12,RBD antibodies depleted (Delta spike),1,2.441e-06,0.9448
+280,P12,RBD antibodies depleted (Delta spike),2,0.04,1.87
+281,P12,RBD antibodies depleted (Delta spike),2,0.01,1.514
+282,P12,RBD antibodies depleted (Delta spike),2,0.0025,1.253
+283,P12,RBD antibodies depleted (Delta spike),2,0.000625,0.9127
+284,P12,RBD antibodies depleted (Delta spike),2,0.0001563,0.921
+285,P12,RBD antibodies depleted (Delta spike),2,3.906e-05,1.022
+286,P12,RBD antibodies depleted (Delta spike),2,9.766e-06,0.78
+287,P12,RBD antibodies depleted (Delta spike),2,2.441e-06,1.09
+288,P14,mock depletion (Delta spike),1,0.04,5.798e-05
+289,P14,mock depletion (Delta spike),1,0.01,0.0005593
+290,P14,mock depletion (Delta spike),1,0.0025,0.05659
+291,P14,mock depletion (Delta spike),1,0.000625,0.4102
+292,P14,mock depletion (Delta spike),1,0.0001563,0.6861
+293,P14,mock depletion (Delta spike),1,3.906e-05,0.8337
+294,P14,mock depletion (Delta spike),1,9.766e-06,0.8602
+295,P14,mock depletion (Delta spike),1,2.441e-06,0.7957
+296,P14,mock depletion (Delta spike),2,0.04,0.0001023
+297,P14,mock depletion (Delta spike),2,0.01,0.0002326
+298,P14,mock depletion (Delta spike),2,0.0025,0.1155
+299,P14,mock depletion (Delta spike),2,0.000625,0.3599
+300,P14,mock depletion (Delta spike),2,0.0001563,0.6867
+301,P14,mock depletion (Delta spike),2,3.906e-05,0.7638
+302,P14,mock depletion (Delta spike),2,9.766e-06,1.025
+303,P14,mock depletion (Delta spike),2,2.441e-06,0.9301
+304,P14,RBD antibodies depleted (Delta spike),1,0.04,1.255
+305,P14,RBD antibodies depleted (Delta spike),1,0.01,1.506
+306,P14,RBD antibodies depleted (Delta spike),1,0.0025,1.387
+307,P14,RBD antibodies depleted (Delta spike),1,0.000625,1.063
+308,P14,RBD antibodies depleted (Delta spike),1,0.0001563,0.8801
+309,P14,RBD antibodies depleted (Delta spike),1,3.906e-05,0.9537
+310,P14,RBD antibodies depleted (Delta spike),1,9.766e-06,0.874
+311,P14,RBD antibodies depleted (Delta spike),1,2.441e-06,1.126
+312,P14,RBD antibodies depleted (Delta spike),2,0.04,1.146
+313,P14,RBD antibodies depleted (Delta spike),2,0.01,1.357
+314,P14,RBD antibodies depleted (Delta spike),2,0.0025,1.339
+315,P14,RBD antibodies depleted (Delta spike),2,0.000625,1.074
+316,P14,RBD antibodies depleted (Delta spike),2,0.0001563,1.083
+317,P14,RBD antibodies depleted (Delta spike),2,3.906e-05,1.013
+318,P14,RBD antibodies depleted (Delta spike),2,9.766e-06,1.047
+319,P14,RBD antibodies depleted (Delta spike),2,2.441e-06,1.059
+320,P08,mock depletion (Delta spike),1,0.04,6.417e-05
+321,P08,mock depletion (Delta spike),1,0.01,0.01189
+322,P08,mock depletion (Delta spike),1,0.0025,0.1935
+323,P08,mock depletion (Delta spike),1,0.000625,0.48
+324,P08,mock depletion (Delta spike),1,0.0001563,0.7889
+325,P08,mock depletion (Delta spike),1,3.906e-05,0.9785
+326,P08,mock depletion (Delta spike),1,9.766e-06,0.9828
+327,P08,mock depletion (Delta spike),1,2.441e-06,0.9335
+328,P08,mock depletion (Delta spike),2,0.04,3.631e-05
+329,P08,mock depletion (Delta spike),2,0.01,0.002569
+330,P08,mock depletion (Delta spike),2,0.0025,0.2975
+331,P08,mock depletion (Delta spike),2,0.000625,0.5318
+332,P08,mock depletion (Delta spike),2,0.0001563,0.791
+333,P08,mock depletion (Delta spike),2,3.906e-05,0.9124
+334,P08,mock depletion (Delta spike),2,9.766e-06,0.9411
+335,P08,mock depletion (Delta spike),2,2.441e-06,0.9394
+336,P08,RBD antibodies depleted (Delta spike),1,0.04,1.36
+337,P08,RBD antibodies depleted (Delta spike),1,0.01,1.435
+338,P08,RBD antibodies depleted (Delta spike),1,0.0025,1.139
+339,P08,RBD antibodies depleted (Delta spike),1,0.000625,0.8109
+340,P08,RBD antibodies depleted (Delta spike),1,0.0001563,0.7976
+341,P08,RBD antibodies depleted (Delta spike),1,3.906e-05,1.054
+342,P08,RBD antibodies depleted (Delta spike),1,9.766e-06,0.9771
+343,P08,RBD antibodies depleted (Delta spike),1,2.441e-06,1.082
+344,P08,RBD antibodies depleted (Delta spike),2,0.04,1.28
+345,P08,RBD antibodies depleted (Delta spike),2,0.01,1.29
+346,P08,RBD antibodies depleted (Delta spike),2,0.0025,1.138
+347,P08,RBD antibodies depleted (Delta spike),2,0.000625,0.9042
+348,P08,RBD antibodies depleted (Delta spike),2,0.0001563,0.9152
+349,P08,RBD antibodies depleted (Delta spike),2,3.906e-05,1.099
+350,P08,RBD antibodies depleted (Delta spike),2,9.766e-06,1.247
+351,P08,RBD antibodies depleted (Delta spike),2,2.441e-06,1.016
+352,P09,mock depletion (Delta spike),1,0.04,0.003403
+353,P09,mock depletion (Delta spike),1,0.01,0.2257
+354,P09,mock depletion (Delta spike),1,0.0025,0.9372
+355,P09,mock depletion (Delta spike),1,0.000625,0.7664
+356,P09,mock depletion (Delta spike),1,0.0001563,0.9122
+357,P09,mock depletion (Delta spike),1,3.906e-05,0.883
+358,P09,mock depletion (Delta spike),1,9.766e-06,0.9092
+359,P09,mock depletion (Delta spike),1,2.441e-06,1.07
+360,P09,mock depletion (Delta spike),2,0.04,2.039e-05
+361,P09,mock depletion (Delta spike),2,0.01,0.2367
+362,P09,mock depletion (Delta spike),2,0.0025,0.8507
+363,P09,mock depletion (Delta spike),2,0.000625,0.7152
+364,P09,mock depletion (Delta spike),2,0.0001563,0.9688
+365,P09,mock depletion (Delta spike),2,3.906e-05,0.947
+366,P09,mock depletion (Delta spike),2,9.766e-06,1.004
+367,P09,mock depletion (Delta spike),2,2.441e-06,1.006
+368,P09,RBD antibodies depleted (Delta spike),1,0.04,1.8
+369,P09,RBD antibodies depleted (Delta spike),1,0.01,1.382
+370,P09,RBD antibodies depleted (Delta spike),1,0.0025,1.16
+371,P09,RBD antibodies depleted (Delta spike),1,0.000625,0.7984
+372,P09,RBD antibodies depleted (Delta spike),1,0.0001563,0.9559
+373,P09,RBD antibodies depleted (Delta spike),1,3.906e-05,0.8617
+374,P09,RBD antibodies depleted (Delta spike),1,9.766e-06,1.19
+375,P09,RBD antibodies depleted (Delta spike),1,2.441e-06,1.029
+376,P09,RBD antibodies depleted (Delta spike),2,0.04,1.421
+377,P09,RBD antibodies depleted (Delta spike),2,0.01,1.322
+378,P09,RBD antibodies depleted (Delta spike),2,0.0025,1.041
+379,P09,RBD antibodies depleted (Delta spike),2,0.000625,0.8968
+380,P09,RBD antibodies depleted (Delta spike),2,0.0001563,0.9415
+381,P09,RBD antibodies depleted (Delta spike),2,3.906e-05,0.9805
+382,P09,RBD antibodies depleted (Delta spike),2,9.766e-06,1.165
+383,P09,RBD antibodies depleted (Delta spike),2,2.441e-06,1.006
+384,P04,mock depletion (Delta spike),1,0.04,1.538e-05
+385,P04,mock depletion (Delta spike),1,0.01,3.842e-05
+386,P04,mock depletion (Delta spike),1,0.0025,0.1089
+387,P04,mock depletion (Delta spike),1,0.000625,0.356
+388,P04,mock depletion (Delta spike),1,0.0001563,0.6398
+389,P04,mock depletion (Delta spike),1,3.906e-05,0.8373
+390,P04,mock depletion (Delta spike),1,9.766e-06,1.088
+391,P04,mock depletion (Delta spike),1,2.441e-06,0.9904
+392,P04,mock depletion (Delta spike),2,0.04,2.945e-05
+393,P04,mock depletion (Delta spike),2,0.01,2.361e-05
+394,P04,mock depletion (Delta spike),2,0.0025,0.08587
+395,P04,mock depletion (Delta spike),2,0.000625,0.3663
+396,P04,mock depletion (Delta spike),2,0.0001563,0.7063
+397,P04,mock depletion (Delta spike),2,3.906e-05,0.8813
+398,P04,mock depletion (Delta spike),2,9.766e-06,0.992
+399,P04,mock depletion (Delta spike),2,2.441e-06,1.088
+400,P04,RBD antibodies depleted (Delta spike),1,0.04,0.9387
+401,P04,RBD antibodies depleted (Delta spike),1,0.01,1.438
+402,P04,RBD antibodies depleted (Delta spike),1,0.0025,1.391
+403,P04,RBD antibodies depleted (Delta spike),1,0.000625,1.121
+404,P04,RBD antibodies depleted (Delta spike),1,0.0001563,0.9097
+405,P04,RBD antibodies depleted (Delta spike),1,3.906e-05,0.9695
+406,P04,RBD antibodies depleted (Delta spike),1,9.766e-06,0.9377
+407,P04,RBD antibodies depleted (Delta spike),1,2.441e-06,1.135
+408,P04,RBD antibodies depleted (Delta spike),2,0.04,0.8662
+409,P04,RBD antibodies depleted (Delta spike),2,0.01,1.516
+410,P04,RBD antibodies depleted (Delta spike),2,0.0025,1.643
+411,P04,RBD antibodies depleted (Delta spike),2,0.000625,1.053
+412,P04,RBD antibodies depleted (Delta spike),2,0.0001563,0.9492
+413,P04,RBD antibodies depleted (Delta spike),2,3.906e-05,0.8992
+414,P04,RBD antibodies depleted (Delta spike),2,9.766e-06,0.9938
+415,P04,RBD antibodies depleted (Delta spike),2,2.441e-06,1.149
+416,P05,mock depletion (Delta spike),1,0.04,-2.198e-06
+417,P05,mock depletion (Delta spike),1,0.01,0.1082
+418,P05,mock depletion (Delta spike),1,0.0025,0.499
+419,P05,mock depletion (Delta spike),1,0.000625,0.6547
+420,P05,mock depletion (Delta spike),1,0.0001563,0.8808
+421,P05,mock depletion (Delta spike),1,3.906e-05,1.018
+422,P05,mock depletion (Delta spike),1,9.766e-06,1.039
+423,P05,mock depletion (Delta spike),1,2.441e-06,1.135
+424,P05,mock depletion (Delta spike),2,0.04,2.242e-05
+425,P05,mock depletion (Delta spike),2,0.01,0.1228
+426,P05,mock depletion (Delta spike),2,0.0025,0.4821
+427,P05,mock depletion (Delta spike),2,0.000625,0.6943
+428,P05,mock depletion (Delta spike),2,0.0001563,0.7693
+429,P05,mock depletion (Delta spike),2,3.906e-05,0.9136
+430,P05,mock depletion (Delta spike),2,9.766e-06,0.9072
+431,P05,mock depletion (Delta spike),2,2.441e-06,1.052
+432,P05,RBD antibodies depleted (Delta spike),1,0.04,1.71
+433,P05,RBD antibodies depleted (Delta spike),1,0.01,1.516
+434,P05,RBD antibodies depleted (Delta spike),1,0.0025,1.221
+435,P05,RBD antibodies depleted (Delta spike),1,0.000625,0.9868
+436,P05,RBD antibodies depleted (Delta spike),1,0.0001563,0.8474
+437,P05,RBD antibodies depleted (Delta spike),1,3.906e-05,1.006
+438,P05,RBD antibodies depleted (Delta spike),1,9.766e-06,0.8334
+439,P05,RBD antibodies depleted (Delta spike),1,2.441e-06,1.084
+440,P05,RBD antibodies depleted (Delta spike),2,0.04,1.622
+441,P05,RBD antibodies depleted (Delta spike),2,0.01,1.538
+442,P05,RBD antibodies depleted (Delta spike),2,0.0025,1.267
+443,P05,RBD antibodies depleted (Delta spike),2,0.000625,0.979
+444,P05,RBD antibodies depleted (Delta spike),2,0.0001563,0.9235
+445,P05,RBD antibodies depleted (Delta spike),2,3.906e-05,0.964
+446,P05,RBD antibodies depleted (Delta spike),2,9.766e-06,0.8959
+447,P05,RBD antibodies depleted (Delta spike),2,2.441e-06,1.19
+448,P02,mock depletion (Delta spike),1,0.04,2.132e-05
+449,P02,mock depletion (Delta spike),1,0.01,0.06549
+450,P02,mock depletion (Delta spike),1,0.0025,0.7768
+451,P02,mock depletion (Delta spike),1,0.000625,1.002
+452,P02,mock depletion (Delta spike),1,0.0001563,1.16
+453,P02,mock depletion (Delta spike),1,3.906e-05,1.081
+454,P02,mock depletion (Delta spike),1,9.766e-06,0.9087
+455,P02,mock depletion (Delta spike),1,2.441e-06,1.109
+456,P02,mock depletion (Delta spike),2,0.04,4.352e-07
+457,P02,mock depletion (Delta spike),2,0.01,0.08581
+458,P02,mock depletion (Delta spike),2,0.0025,0.7925
+459,P02,mock depletion (Delta spike),2,0.000625,1.151
+460,P02,mock depletion (Delta spike),2,0.0001563,1.022
+461,P02,mock depletion (Delta spike),2,3.906e-05,1.053
+462,P02,mock depletion (Delta spike),2,9.766e-06,0.8141
+463,P02,mock depletion (Delta spike),2,2.441e-06,0.9489
+464,P02,RBD antibodies depleted (Delta spike),1,0.04,1.717
+465,P02,RBD antibodies depleted (Delta spike),1,0.01,2.104
+466,P02,RBD antibodies depleted (Delta spike),1,0.0025,1.442
+467,P02,RBD antibodies depleted (Delta spike),1,0.000625,1.151
+468,P02,RBD antibodies depleted (Delta spike),1,0.0001563,0.9638
+469,P02,RBD antibodies depleted (Delta spike),1,3.906e-05,0.9766
+470,P02,RBD antibodies depleted (Delta spike),1,9.766e-06,0.9078
+471,P02,RBD antibodies depleted (Delta spike),1,2.441e-06,1.026
+472,P02,RBD antibodies depleted (Delta spike),2,0.04,1.755
+473,P02,RBD antibodies depleted (Delta spike),2,0.01,2.083
+474,P02,RBD antibodies depleted (Delta spike),2,0.0025,1.29
+475,P02,RBD antibodies depleted (Delta spike),2,0.000625,1.269
+476,P02,RBD antibodies depleted (Delta spike),2,0.0001563,0.9787
+477,P02,RBD antibodies depleted (Delta spike),2,3.906e-05,1.078
+478,P02,RBD antibodies depleted (Delta spike),2,9.766e-06,0.7963
+479,P02,RBD antibodies depleted (Delta spike),2,2.441e-06,1.102
+480,P03,mock depletion (Delta spike),1,0.04,1.088e-05
+481,P03,mock depletion (Delta spike),1,0.01,0.01302
+482,P03,mock depletion (Delta spike),1,0.0025,0.3528
+483,P03,mock depletion (Delta spike),1,0.000625,0.7654
+484,P03,mock depletion (Delta spike),1,0.0001563,0.9405
+485,P03,mock depletion (Delta spike),1,3.906e-05,0.8079
+486,P03,mock depletion (Delta spike),1,9.766e-06,0.756
+487,P03,mock depletion (Delta spike),1,2.441e-06,0.8749
+488,P03,mock depletion (Delta spike),2,0.04,4.57e-05
+489,P03,mock depletion (Delta spike),2,0.01,0.01103
+490,P03,mock depletion (Delta spike),2,0.0025,0.4364
+491,P03,mock depletion (Delta spike),2,0.000625,0.7103
+492,P03,mock depletion (Delta spike),2,0.0001563,0.9675
+493,P03,mock depletion (Delta spike),2,3.906e-05,0.9495
+494,P03,mock depletion (Delta spike),2,9.766e-06,0.7373
+495,P03,mock depletion (Delta spike),2,2.441e-06,0.9727
+496,P03,RBD antibodies depleted (Delta spike),1,0.04,1.155
+497,P03,RBD antibodies depleted (Delta spike),1,0.01,1.473
+498,P03,RBD antibodies depleted (Delta spike),1,0.0025,1.241
+499,P03,RBD antibodies depleted (Delta spike),1,0.000625,1.001
+500,P03,RBD antibodies depleted (Delta spike),1,0.0001563,1.108
+501,P03,RBD antibodies depleted (Delta spike),1,3.906e-05,1.01
+502,P03,RBD antibodies depleted (Delta spike),1,9.766e-06,0.9503
+503,P03,RBD antibodies depleted (Delta spike),1,2.441e-06,1.09
+504,P03,RBD antibodies depleted (Delta spike),2,0.04,1.282
+505,P03,RBD antibodies depleted (Delta spike),2,0.01,1.455
+506,P03,RBD antibodies depleted (Delta spike),2,0.0025,1.406
+507,P03,RBD antibodies depleted (Delta spike),2,0.000625,1.293
+508,P03,RBD antibodies depleted (Delta spike),2,0.0001563,1.001
+509,P03,RBD antibodies depleted (Delta spike),2,3.906e-05,0.991
+510,P03,RBD antibodies depleted (Delta spike),2,9.766e-06,0.8636
+511,P03,RBD antibodies depleted (Delta spike),2,2.441e-06,1.055
