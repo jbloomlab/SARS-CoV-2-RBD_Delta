@@ -6,12 +6,15 @@ elisa_data_files:
   - 08Oct21_ELISA.csv
   - 15Oct21_ELISA.csv
   - 06Dec21_ELISA.csv
+  - 08Dec21_ELISA.csv
+  - 08Dec21_D614G_ELISA.csv
 
 depletions:
   - mock depleted
   - 1x depleted
   - 2x depleted
   - 3x depleted
+  - 4x depleted
 
 haarvi_rbd_depletions: data/haarvi_rbd_depletion_foldchange_ic50.csv
 
