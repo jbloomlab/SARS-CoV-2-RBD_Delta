@@ -103,33 +103,38 @@ titration_df = (titration_df
 
 display(HTML(titration_df.tail().to_html(index=False)))
 
-ncol=8
-nrow=math.ceil(len(titration_df[['ligand', 'serum', 'serum_group']].drop_duplicates())/8)
+for genotype in set([i.split(' ')[0] for i in titration_df['ligand'].unique().tolist()]):
+    
+    df = titration_df.query('ligand.str.contains(@genotype)')
+    
+    ncol=8
+    nrow=math.ceil(len(df[['ligand', 'serum', 'serum_group']].drop_duplicates())/8)
 
-p = (
-    ggplot((titration_df),
-           aes('dilution', 
-               'OD450', 
-               color='depleted',
-               )) +
-    geom_point(size=3) +
-    geom_path(aes(color='depleted'), size=0.75) +
-    scale_x_log10(name='serum dilution', labels=scientific_format(digits=0)) +
-    facet_wrap('~serum_name+ligand', ncol=ncol) +
-    theme(figure_size=(2.5 * ncol, 2.75 * nrow),
-          axis_text_x=element_text(angle=90),
-          strip_background=element_blank(),
-          strip_margin_y=0.35,
-          subplots_adjust={'hspace':0.65},
-         ) +
-    scale_color_manual(values=CBPALETTE[0:], name='Delta RBD-binding\nantibodies depleted?') +
-    ylab('arbitrary binding units (OD450)')
-    )
+    p = (
+        ggplot((df.assign(depleted_date=lambda x: x['depleted'].astype(str)+'_'+x['date'].astype(str))),
+               aes('dilution', 
+                   'OD450', 
+                   color='depleted',
+                   group='depleted_date',
+                   )) +
+        geom_point(size=3) +
+        geom_path(aes(color='depleted'), size=0.75) +
+        scale_x_log10(name='serum dilution', labels=scientific_format(digits=0)) +
+        facet_wrap('~serum_name+ligand', ncol=ncol) +
+        theme(figure_size=(2.5 * ncol, 2.75 * nrow),
+              axis_text_x=element_text(angle=90),
+              strip_background=element_blank(),
+              strip_margin_y=0.35,
+              subplots_adjust={'hspace':0.65},
+             ) +
+        scale_color_manual(values=CBPALETTE[0:], name=f'{genotype} RBD-binding\nantibodies depleted?') +
+        ylab('arbitrary binding units (OD450)')
+        )
 
-_ = p.draw()
+    _ = p.draw()
 
-p.save(f'{resultsdir}/all_ELISAs.pdf', limitsize=False)
-p.save(f'{resultsdir}/all_ELISAs.png', limitsize=False)
+    p.save(f'{resultsdir}/all_ELISAs_{genotype}.pdf', limitsize=False)
+    p.save(f'{resultsdir}/all_ELISAs_{genotype}.png', limitsize=False)
 ```
 
 
@@ -149,59 +154,59 @@ p.save(f'{resultsdir}/all_ELISAs.png', limitsize=False)
   </thead>
   <tbody>
     <tr>
-      <td>Delta_10</td>
-      <td>Delta infection</td>
+      <td>P09</td>
+      <td>vaccinated</td>
       <td>mock depleted</td>
-      <td>Delta RBD</td>
-      <td>211206</td>
-      <td>8100</td>
-      <td>2.23080</td>
-      <td>0.000123</td>
-      <td>Delta_10\n(Delta infection)</td>
+      <td>D614G RBD</td>
+      <td>211208</td>
+      <td>40500</td>
+      <td>0.17485</td>
+      <td>0.000025</td>
+      <td>P09\n(vaccinated)</td>
     </tr>
     <tr>
-      <td>Delta_11</td>
-      <td>Delta infection</td>
-      <td>1x depleted</td>
-      <td>Delta RBD</td>
-      <td>211206</td>
-      <td>8100</td>
-      <td>0.04130</td>
-      <td>0.000123</td>
-      <td>Delta_11\n(Delta infection)</td>
-    </tr>
-    <tr>
-      <td>Delta_11</td>
-      <td>Delta infection</td>
-      <td>2x depleted</td>
-      <td>Delta RBD</td>
-      <td>211206</td>
-      <td>8100</td>
-      <td>0.01885</td>
-      <td>0.000123</td>
-      <td>Delta_11\n(Delta infection)</td>
-    </tr>
-    <tr>
-      <td>Delta_11</td>
-      <td>Delta infection</td>
+      <td>P12</td>
+      <td>vaccinated</td>
       <td>3x depleted</td>
-      <td>Delta RBD</td>
-      <td>211206</td>
-      <td>8100</td>
-      <td>-0.00085</td>
-      <td>0.000123</td>
-      <td>Delta_11\n(Delta infection)</td>
+      <td>D614G RBD</td>
+      <td>211208</td>
+      <td>40500</td>
+      <td>0.02170</td>
+      <td>0.000025</td>
+      <td>P12\n(vaccinated)</td>
     </tr>
     <tr>
-      <td>Delta_11</td>
-      <td>Delta infection</td>
+      <td>P12</td>
+      <td>vaccinated</td>
       <td>mock depleted</td>
-      <td>Delta RBD</td>
-      <td>211206</td>
-      <td>8100</td>
-      <td>0.98205</td>
-      <td>0.000123</td>
-      <td>Delta_11\n(Delta infection)</td>
+      <td>D614G RBD</td>
+      <td>211208</td>
+      <td>40500</td>
+      <td>0.23245</td>
+      <td>0.000025</td>
+      <td>P12\n(vaccinated)</td>
+    </tr>
+    <tr>
+      <td>P14</td>
+      <td>vaccinated</td>
+      <td>3x depleted</td>
+      <td>D614G RBD</td>
+      <td>211208</td>
+      <td>40500</td>
+      <td>0.01170</td>
+      <td>0.000025</td>
+      <td>P14\n(vaccinated)</td>
+    </tr>
+    <tr>
+      <td>P14</td>
+      <td>vaccinated</td>
+      <td>mock depleted</td>
+      <td>D614G RBD</td>
+      <td>211208</td>
+      <td>40500</td>
+      <td>0.59655</td>
+      <td>0.000025</td>
+      <td>P14\n(vaccinated)</td>
     </tr>
   </tbody>
 </table>
@@ -210,6 +215,12 @@ p.save(f'{resultsdir}/all_ELISAs.png', limitsize=False)
 
     
 ![png](rbd_depletion_elisas_files/rbd_depletion_elisas_11_1.png)
+    
+
+
+
+    
+![png](rbd_depletion_elisas_files/rbd_depletion_elisas_11_2.png)
     
 
 
