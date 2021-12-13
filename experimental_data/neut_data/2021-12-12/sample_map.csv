@@ -1,0 +1,33 @@
+Date_Read,Plate,Sample,SampleNum,Virus,PlateLayout,StartDil,DilFactor
+211212,Plate 1-V,Delta_1,1,mock depletion (Delta spike),layout1.csv,0.04,4
+211212,Plate 1-V,Delta_1,2,RBD antibodies depleted (Delta spike),layout1.csv,0.04,4
+211212,Plate 1-V,Delta_3,3,mock depletion (Delta spike),layout1.csv,0.04,4
+211212,Plate 1-V,Delta_3,4,RBD antibodies depleted (Delta spike),layout1.csv,0.04,4
+211212,Plate 2-V,Delta_4,1,mock depletion (Delta spike),layout1.csv,0.04,4
+211212,Plate 2-V,Delta_4,2,RBD antibodies depleted (Delta spike),layout1.csv,0.04,4
+211212,Plate 2-V,Delta_6,3,mock depletion (Delta spike),layout1.csv,0.04,4
+211212,Plate 2-V,Delta_6,4,RBD antibodies depleted (Delta spike),layout1.csv,0.04,4
+211212,Plate 3-V,Delta_7,1,mock depletion (Delta spike),layout1.csv,0.04,4
+211212,Plate 3-V,Delta_7,2,RBD antibodies depleted (Delta spike),layout1.csv,0.04,4
+211212,Plate 3-V,Delta_8,3,mock depletion (Delta spike),layout1.csv,0.04,4
+211212,Plate 3-V,Delta_8,4,RBD antibodies depleted (Delta spike),layout1.csv,0.04,4
+211212,Plate 4-V,Delta_10,1,mock depletion (Delta spike),layout1.csv,0.04,4
+211212,Plate 4-V,Delta_10,2,RBD antibodies depleted (Delta spike),layout1.csv,0.04,4
+211212,Plate 4-V,Delta_11,3,mock depletion (Delta spike),layout1.csv,0.04,4
+211212,Plate 4-V,Delta_11,4,RBD antibodies depleted (Delta spike),layout1.csv,0.04,4
+211212,Plate 5-V,P02,1,mock depletion (D614G spike),layout1.csv,0.04,4
+211212,Plate 5-V,P02,2,RBD antibodies depleted (D614G spike),layout1.csv,0.04,4
+211212,Plate 5-V,P03,3,mock depletion (D614G spike),layout1.csv,0.04,4
+211212,Plate 5-V,P03,4,RBD antibodies depleted (D614G spike),layout1.csv,0.04,4
+211212,Plate 6-V,P04,1,mock depletion (D614G spike),layout1.csv,0.04,4
+211212,Plate 6-V,P04,2,RBD antibodies depleted (D614G spike),layout1.csv,0.04,4
+211212,Plate 6-V,P05,3,mock depletion (D614G spike),layout1.csv,0.04,4
+211212,Plate 6-V,P05,4,RBD antibodies depleted (D614G spike),layout1.csv,0.04,4
+211212,Plate 7-V,P08,1,mock depletion (D614G spike),layout1.csv,0.04,4
+211212,Plate 7-V,P08,2,RBD antibodies depleted (D614G spike),layout1.csv,0.04,4
+211212,Plate 7-V,P09,3,mock depletion (D614G spike),layout1.csv,0.04,4
+211212,Plate 7-V,P09,4,RBD antibodies depleted (D614G spike),layout1.csv,0.04,4
+211212,Plate 8-V,P12,1,mock depletion (D614G spike),layout1.csv,0.04,4
+211212,Plate 8-V,P12,2,RBD antibodies depleted (D614G spike),layout1.csv,0.04,4
+211212,Plate 8-V,P14,3,mock depletion (D614G spike),layout1.csv,0.04,4
+211212,Plate 8-V,P14,4,RBD antibodies depleted (D614G spike),layout1.csv,0.04,4
