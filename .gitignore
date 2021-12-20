@@ -14,7 +14,23 @@ env/
 results/*
 !results/summary
 
-!resuts/counts
+!results/variants
+results/variants/*
+!results/variants/codon_variant_table.csv
+
+!results/binding_Kd
+results/binding_Kd/*
+!results/binding_Kd/bc_binding.csv
+
+!results/expression_meanF
+results/expression_meanF/*
+!results/expression_meanF/bc_expression.csv
+
+!results/escape_profiles
+results/escape_profiles/*
+!results/escape_profiles/strong_escape_sites.csv
+
+!results/counts/
 results/counts/*
 !results/counts/variant_counts.csv.gz
 !results/counts/counts_to_cells_csv.csv

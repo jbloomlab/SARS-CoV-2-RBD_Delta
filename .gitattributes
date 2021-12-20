@@ -1,4 +1,7 @@
+results/variants/codon_variant_table.csv filter=lfs diff=lfs merge=lfs -text
 results/counts/variant_counts.csv.gz filter=lfs diff=lfs merge=lfs -text
 *.ipynb filter=strip-notebook-metadata diff=strip-notebook-metadata
 results/escape_scores/scores.csv filter=lfs diff=lfs merge=lfs -text
 results/prior_DMS_data/early2020_escape_fracs.csv filter=lfs diff=lfs merge=lfs -text
+results/binding_Kd/bc_binding.csv filter=lfs diff=lfs merge=lfs -text
+results/expression_meanF/bc_expression.csv filter=lfs diff=lfs merge=lfs -text
