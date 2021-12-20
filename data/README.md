@@ -20,7 +20,7 @@ These files are used for the basic processing of the deep sequencing data to cal
 
    - [PacBio_runs.csv](PacBio_runs.csv): list of the PacBio runs used to call the variants.
 
-   - [barcode_runs.csv](barcode_runs.csv): list of the Illumina runs used to count the barcodes for different samples. This file is built from [barcode_runs_orig-names.csv](barcode_runs_orig-names.csv) by the Jupyter notebook [build_barcode_runs.ipynb](build_barcode_runs.ipynb).
+   - [barcode_runs.csv](barcode_runs.csv): list of the Illumina runs used to count the barcodes for different samples. This file is manually updated when new sequencing is added.
 
    - [barcode_runs_helper_files](barcode_runs_helper_files): subdirectory containing auxillary notebooks and files to help generate the `barcode_runs.csv` file that maps sample names to file paths on the Hutch cluster.
 
@@ -29,11 +29,11 @@ These files are used for the basic processing of the deep sequencing data to cal
 
 [plasmids](plasmids/): This subdirectory contains the full Genbank maps for key plasmids used in the study:
 
-    - [plasmids/3181_HDM_Spikedelta21_sinobiological_B.1.617.2.gb](plasmids/3181_HDM_Spikedelta21_sinobiological_B.1.617.2.gb): the wildtype Delta (B.1.617.2) spike expression plasmids used to make pseudotyped lentiviral particles,
+  - [plasmids/3181_HDM_Spikedelta21_sinobiological_B.1.617.2.gb](plasmids/3181_HDM_Spikedelta21_sinobiological_B.1.617.2.gb): the wildtype Delta (B.1.617.2) spike expression plasmids used to make pseudotyped lentiviral particles,
 
-    - [plasmids/3159_pETcon-SARS-CoV-2-RBD-L452R-T478K.gb](3159_pETcon-SARS-CoV-2-RBD-L452R-T478K.gb): the Delta wildtype RBD yeast-display plasmid, and
+  - [plasmids/3159_pETcon-SARS-CoV-2-RBD-L452R-T478K.gb](3159_pETcon-SARS-CoV-2-RBD-L452R-T478K.gb): the Delta wildtype RBD yeast-display plasmid, and
 
-    - [plasmids/Twist_delivered.fa](plasmids/Twist_delivered.fa): the fully assembled plasmid, including the Illumina adaptors and Nx16 barcode, that was used as the template for designing the Twist site-saturation variant libraries.
+  - [plasmids/Twist_delivered.fa](plasmids/Twist_delivered.fa): the fully assembled plasmid, including the Illumina adaptors and Nx16 barcode, that was used as the template for designing the Twist site-saturation variant libraries.
 
 ## For visualizing serum-escape data:
 
@@ -43,19 +43,17 @@ These files are used for visualizing the antibody- or serum-escape data:
 
   - [escape_profiles_config.yaml](escape_profiles_config.yaml): Information on how to plot the escape profiles; manually edit this to alter their plotting.
 
-  - [early2020_escape_profiles_config.yaml](early2020_escape_profiles_config.yaml): Same as above, but for early 2020 plasmas mapped against the Wuhan-Hu-1 RBD library.
-
   - [lineplots_config.yaml](lineplots_config.yaml): Config file for making line plots to compare serum-escape scores between cohorts.
 
   - [dms-view_metadata.md](dms-view_metadata.md): Used for rendering the dms-view page to visualize data.
 
-  - [output_pdbs.yaml](output_pdbs.yaml): Used for mapping antibody-escape data to the RBD surface.
+  - [output_pdbs_config.yaml](output_pdbs_config.yaml): Used for mapping antibody-escape data to the RBD surface.
 
 ## PDB files in [pdbs](pdbs/) subdirectory
 
-    - [6M0J](pdbs/6M0J.pdb): Wuhan-Hu-1 RBD bound to huACE2 ([Lan et al. (2020)](https://www.nature.com/articles/s41586-020-2180-5)).
+  - [6M0J](pdbs/6M0J.pdb): Wuhan-Hu-1 RBD bound to huACE2 ([Lan et al. (2020)](https://www.nature.com/articles/s41586-020-2180-5)).
 
-    - [7V8B](pdbs/7V8B.pdb): Delta RBD bound to huACE2. See [here](https://www.rcsb.org/structure/7v8b).
+  - [7V8B](pdbs/7V8B.pdb): Delta RBD bound to huACE2. See [here](https://www.rcsb.org/structure/7v8b).
 
 ## Alignments of different Spikes / RBDs
 
@@ -65,4 +63,4 @@ These files are used for visualizing the antibody- or serum-escape data:
 
 We use some surveillance data in aggregate to count occurrences of mutations in the RBD from [GISAID](https://www.gisaid.org/), but do not track those files in this public repo according to the [terms of use](https://www.gisaid.org/registration/terms-of-use/) for GISAID data sharing and use.
 
-We gratefully acknowledge all contributors to the GISAID EpiCoV database. 
+We gratefully acknowledge all contributors to the GISAID EpiCoV database.
