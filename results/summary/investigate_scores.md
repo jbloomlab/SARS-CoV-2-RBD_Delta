@@ -126,89 +126,89 @@ display(HTML(escape_scores
   </thead>
   <tbody>
     <tr>
-      <td>Delta_6_500</td>
-      <td>lib2</td>
-      <td>ATCGGAAACCGAGCTG</td>
+      <td>277C_repeat_500</td>
+      <td>lib1</td>
+      <td>CCTAGTATTCCGAACG</td>
       <td>1.0</td>
-      <td>67</td>
-      <td>94</td>
-      <td>L425G</td>
-      <td>50.0</td>
+      <td>376</td>
+      <td>439</td>
+      <td>Y380L</td>
+      <td>153.1</td>
+      <td>True</td>
       <td>True</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
-      <td>425</td>
+      <td>380</td>
+      <td>Y</td>
       <td>L</td>
-      <td>G</td>
     </tr>
     <tr>
-      <td>Delta_1_500</td>
-      <td>lib1</td>
-      <td>TACTTTCTAGATTTTA</td>
+      <td>278C_repeat_1250</td>
+      <td>lib2</td>
+      <td>CGCCATGCCTCTTAAC</td>
       <td>1.0</td>
-      <td>146</td>
-      <td>209</td>
-      <td>Y495D</td>
-      <td>54.0</td>
+      <td>774</td>
+      <td>1005</td>
+      <td>F342S</td>
+      <td>116.0</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>342</td>
+      <td>F</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <td>Delta_8_500</td>
+      <td>lib2</td>
+      <td>CGCGAAATCTCACTAT</td>
+      <td>1.0</td>
+      <td>143</td>
+      <td>147</td>
+      <td>Y495A</td>
+      <td>117.0</td>
       <td>True</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>495</td>
       <td>Y</td>
-      <td>D</td>
+      <td>A</td>
     </tr>
     <tr>
-      <td>274C_repeat_500</td>
+      <td>P04_repeat_1250</td>
       <td>lib2</td>
-      <td>AGTTAAACCATTACAA</td>
+      <td>CAATAGCACTATTGAA</td>
       <td>1.0</td>
-      <td>47</td>
-      <td>55</td>
-      <td>I358R</td>
-      <td>47.0</td>
-      <td>True</td>
+      <td>148</td>
+      <td>200</td>
+      <td>I410T</td>
+      <td>122.0</td>
       <td>True</td>
       <td>False</td>
       <td>False</td>
-      <td>358</td>
+      <td>False</td>
+      <td>410</td>
       <td>I</td>
-      <td>R</td>
+      <td>T</td>
     </tr>
     <tr>
-      <td>274C_repeat_500</td>
+      <td>277C_repeat_500</td>
       <td>lib2</td>
-      <td>CAGCCCCAAGTAAACA</td>
+      <td>TGATTCAACGGTAAGA</td>
       <td>1.0</td>
-      <td>47</td>
-      <td>56</td>
-      <td>F497L</td>
-      <td>47.0</td>
+      <td>158</td>
+      <td>197</td>
+      <td>V407P</td>
+      <td>116.0</td>
       <td>True</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>497</td>
-      <td>F</td>
-      <td>L</td>
-    </tr>
-    <tr>
-      <td>274C_repeat_500</td>
-      <td>lib2</td>
-      <td>CCACGCACCGCGACCG</td>
-      <td>1.0</td>
-      <td>47</td>
-      <td>70</td>
-      <td>R355E</td>
-      <td>47.0</td>
-      <td>True</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>355</td>
-      <td>R</td>
-      <td>E</td>
+      <td>407</td>
+      <td>V</td>
+      <td>P</td>
     </tr>
   </tbody>
 </table>

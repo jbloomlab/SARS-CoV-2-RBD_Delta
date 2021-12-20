@@ -585,118 +585,118 @@ display(HTML(
     </tr>
     <tr>
       <th>delta_21-26-none-0-ref</th>
-      <td>151.9</td>
-      <td>117.9</td>
+      <td>374.0</td>
+      <td>292.6</td>
     </tr>
     <tr>
       <th>delta_21-267C_repeat-200-abneg</th>
-      <td>18.2</td>
-      <td>15.2</td>
+      <td>43.9</td>
+      <td>36.7</td>
     </tr>
     <tr>
       <th>delta_22-273C_repeat-500-abneg</th>
-      <td>18.1</td>
-      <td>14.8</td>
+      <td>44.2</td>
+      <td>36.3</td>
     </tr>
     <tr>
       <th>delta_23-274C_repeat-500-abneg</th>
-      <td>18.9</td>
-      <td>14.2</td>
+      <td>46.3</td>
+      <td>34.1</td>
     </tr>
     <tr>
       <th>delta_24-276C_repeat-500-abneg</th>
-      <td>18.3</td>
-      <td>16.1</td>
+      <td>44.1</td>
+      <td>39.3</td>
     </tr>
     <tr>
       <th>delta_25-277C_repeat-500-abneg</th>
-      <td>19.3</td>
-      <td>15.5</td>
+      <td>46.4</td>
+      <td>37.6</td>
     </tr>
     <tr>
       <th>delta_26-278C_repeat-1250-abneg</th>
-      <td>17.3</td>
-      <td>13.7</td>
+      <td>41.4</td>
+      <td>33.8</td>
     </tr>
     <tr>
       <th>delta_27-34-none-0-ref</th>
-      <td>123.2</td>
-      <td>115.6</td>
+      <td>300.7</td>
+      <td>283.0</td>
     </tr>
     <tr>
       <th>delta_27-Delta_1-500-abneg</th>
-      <td>15.4</td>
-      <td>14.4</td>
+      <td>38.0</td>
+      <td>34.5</td>
     </tr>
     <tr>
       <th>delta_28-Delta_3-350-abneg</th>
-      <td>15.8</td>
-      <td>15.4</td>
+      <td>40.0</td>
+      <td>37.3</td>
     </tr>
     <tr>
       <th>delta_29-Delta_4-350-abneg</th>
-      <td>10.7</td>
-      <td>8.9</td>
+      <td>25.8</td>
+      <td>21.6</td>
     </tr>
     <tr>
       <th>delta_30-Delta_6-500-abneg</th>
-      <td>16.5</td>
-      <td>14.7</td>
+      <td>40.6</td>
+      <td>36.1</td>
     </tr>
     <tr>
       <th>delta_31-Delta_7-1250-abneg</th>
-      <td>18.1</td>
-      <td>11.5</td>
+      <td>44.9</td>
+      <td>28.2</td>
     </tr>
     <tr>
       <th>delta_32-Delta_8-500-abneg</th>
-      <td>15.9</td>
-      <td>10.3</td>
+      <td>40.1</td>
+      <td>25.4</td>
     </tr>
     <tr>
       <th>delta_33-Delta_10-1250-abneg</th>
-      <td>12.4</td>
-      <td>9.0</td>
+      <td>30.8</td>
+      <td>22.4</td>
     </tr>
     <tr>
       <th>delta_34-Delta_11-500-abneg</th>
-      <td>15.2</td>
-      <td>11.2</td>
+      <td>36.4</td>
+      <td>27.4</td>
     </tr>
     <tr>
       <th>delta_35-40-none-0-ref</th>
-      <td>103.5</td>
-      <td>108.1</td>
+      <td>258.2</td>
+      <td>266.3</td>
     </tr>
     <tr>
       <th>delta_35-P02_repeat-500-abneg</th>
-      <td>14.6</td>
-      <td>8.8</td>
+      <td>35.5</td>
+      <td>21.2</td>
     </tr>
     <tr>
       <th>delta_36-P04_repeat-1250-abneg</th>
-      <td>13.8</td>
-      <td>10.7</td>
+      <td>35.1</td>
+      <td>26.9</td>
     </tr>
     <tr>
       <th>delta_37-P05_repeat-500-abneg</th>
-      <td>12.6</td>
-      <td>11.8</td>
+      <td>30.9</td>
+      <td>29.2</td>
     </tr>
     <tr>
       <th>delta_38-P09_repeat-200-abneg</th>
-      <td>15.1</td>
-      <td>9.5</td>
+      <td>37.1</td>
+      <td>22.9</td>
     </tr>
     <tr>
       <th>delta_39-P12_repeat-200-abneg</th>
-      <td>13.2</td>
-      <td>11.7</td>
+      <td>32.9</td>
+      <td>29.5</td>
     </tr>
     <tr>
       <th>delta_40-P14_repeat-1250-abneg</th>
-      <td>13.0</td>
-      <td>14.9</td>
+      <td>32.3</td>
+      <td>36.4</td>
     </tr>
   </tbody>
 </table>
@@ -1004,25 +1004,25 @@ display(HTML(
       <th>delta_21-26-none-0-ref</th>
       <td>0.0002</td>
       <td>Delta</td>
-      <td>TATGTTTCCGACCCGC</td>
-      <td></td>
-      <td></td>
+      <td>GCTACAAAGTCCGCAG</td>
+      <td>D68T</td>
+      <td>GAT68ACT</td>
     </tr>
     <tr>
       <th>delta_27-34-none-0-ref</th>
       <td>0.0002</td>
       <td>Delta</td>
-      <td>TATGTTTCCGACCCGC</td>
-      <td></td>
-      <td></td>
+      <td>ATCGAAATTGAGTGAT</td>
+      <td>F99I</td>
+      <td>TTC99ATT</td>
     </tr>
     <tr>
       <th>delta_35-40-none-0-ref</th>
       <td>0.0002</td>
       <td>Delta</td>
-      <td>TATGTTTCCGACCCGC</td>
-      <td></td>
-      <td></td>
+      <td>ATCGAAATTGAGTGAT</td>
+      <td>F99I</td>
+      <td>TTC99ATT</td>
     </tr>
     <tr>
       <th rowspan="6" valign="top">lib2</th>
@@ -1051,27 +1051,27 @@ display(HTML(
     </tr>
     <tr>
       <th>delta_21-26-none-0-ref</th>
-      <td>0.0001</td>
+      <td>0.0002</td>
       <td>Delta</td>
-      <td>CCCGTTGGGAATACCG</td>
-      <td>L187K</td>
-      <td>CTG187AAA</td>
+      <td>ACACAAACGCCGTTAC</td>
+      <td>A67S</td>
+      <td>GCC67TCT</td>
     </tr>
     <tr>
       <th>delta_27-34-none-0-ref</th>
-      <td>0.0001</td>
+      <td>0.0002</td>
       <td>Delta</td>
-      <td>CCCGTTGGGAATACCG</td>
-      <td>L187K</td>
-      <td>CTG187AAA</td>
+      <td>ACACAAACGCCGTTAC</td>
+      <td>A67S</td>
+      <td>GCC67TCT</td>
     </tr>
     <tr>
       <th>delta_35-40-none-0-ref</th>
-      <td>0.0001</td>
+      <td>0.0002</td>
       <td>Delta</td>
-      <td>CCCGTTGGGAATACCG</td>
-      <td>L187K</td>
-      <td>CTG187AAA</td>
+      <td>ACACAAACGCCGTTAC</td>
+      <td>A67S</td>
+      <td>GCC67TCT</td>
     </tr>
   </tbody>
 </table>
@@ -2537,65 +2537,65 @@ display(HTML(pre_count_filter_cutoffs.to_html(float_format='%.1f')))
     <tr>
       <th rowspan="2" valign="top">delta_21-26-none-0-ref</th>
       <th>lib1</th>
-      <td>17.0</td>
-      <td>62.0</td>
-      <td>86.0</td>
-      <td>119.0</td>
-      <td>153.0</td>
-      <td>179.0</td>
-      <td>231.0</td>
+      <td>43.0</td>
+      <td>153.1</td>
+      <td>217.1</td>
+      <td>316.0</td>
+      <td>365.2</td>
+      <td>431.0</td>
+      <td>543.0</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>14.0</td>
-      <td>47.0</td>
-      <td>66.0</td>
-      <td>88.0</td>
-      <td>113.0</td>
-      <td>128.0</td>
-      <td>146.0</td>
+      <td>35.0</td>
+      <td>116.0</td>
+      <td>159.0</td>
+      <td>206.0</td>
+      <td>260.0</td>
+      <td>345.0</td>
+      <td>356.0</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_27-34-none-0-ref</th>
       <th>lib1</th>
-      <td>14.0</td>
-      <td>54.0</td>
-      <td>72.0</td>
-      <td>97.0</td>
-      <td>121.0</td>
-      <td>146.0</td>
-      <td>210.0</td>
+      <td>36.0</td>
+      <td>128.0</td>
+      <td>175.0</td>
+      <td>235.2</td>
+      <td>296.2</td>
+      <td>350.0</td>
+      <td>500.0</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>14.0</td>
-      <td>50.0</td>
-      <td>67.0</td>
-      <td>93.0</td>
-      <td>120.0</td>
-      <td>140.0</td>
-      <td>185.0</td>
+      <td>35.0</td>
+      <td>117.0</td>
+      <td>156.0</td>
+      <td>219.0</td>
+      <td>284.0</td>
+      <td>324.0</td>
+      <td>440.0</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_35-40-none-0-ref</th>
       <th>lib1</th>
-      <td>13.0</td>
-      <td>47.0</td>
-      <td>67.0</td>
-      <td>89.0</td>
-      <td>117.1</td>
-      <td>139.0</td>
-      <td>191.0</td>
+      <td>33.0</td>
+      <td>114.0</td>
+      <td>162.0</td>
+      <td>222.0</td>
+      <td>280.2</td>
+      <td>333.0</td>
+      <td>450.0</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>13.0</td>
-      <td>49.0</td>
-      <td>70.0</td>
-      <td>96.0</td>
-      <td>117.0</td>
-      <td>151.0</td>
-      <td>165.0</td>
+      <td>34.0</td>
+      <td>122.0</td>
+      <td>168.0</td>
+      <td>225.0</td>
+      <td>291.0</td>
+      <td>357.0</td>
+      <td>433.0</td>
     </tr>
   </tbody>
 </table>
@@ -2656,37 +2656,37 @@ display(HTML(pre_count_filter_cutoffs.to_html(float_format='%.1f')))
       <th>6</th>
       <td>delta_21-26-none-0-ref</td>
       <td>lib1</td>
-      <td>62.0</td>
+      <td>153.1</td>
     </tr>
     <tr>
       <th>7</th>
       <td>delta_21-26-none-0-ref</td>
       <td>lib2</td>
-      <td>47.0</td>
+      <td>116.0</td>
     </tr>
     <tr>
       <th>8</th>
       <td>delta_27-34-none-0-ref</td>
       <td>lib1</td>
-      <td>54.0</td>
+      <td>128.0</td>
     </tr>
     <tr>
       <th>9</th>
       <td>delta_27-34-none-0-ref</td>
       <td>lib2</td>
-      <td>50.0</td>
+      <td>117.0</td>
     </tr>
     <tr>
       <th>10</th>
       <td>delta_35-40-none-0-ref</td>
       <td>lib1</td>
-      <td>47.0</td>
+      <td>114.0</td>
     </tr>
     <tr>
       <th>11</th>
       <td>delta_35-40-none-0-ref</td>
       <td>lib2</td>
-      <td>49.0</td>
+      <td>122.0</td>
     </tr>
   </tbody>
 </table>
@@ -3412,7 +3412,7 @@ print(f"Read {len(escape_scores_primary)} scores.")
 </table>
 
 
-    Read 3677824 scores.
+    Read 3702422 scores.
 
 
 ### Count number of barcodes per mutation and remove variants with >1 amino acid substitution
@@ -3632,8 +3632,8 @@ print(len(effects_df.query('nlibs==1')))
 ```
 
     Only taking average of mutations with escape fractions in >=2 libraries or with >=2 single-mutant measurements total.
-    88796
-    179576
+    88830
+    179600
 
 
 Plot the correlations of the escape fractions among the two libraries for all selections performed on both libraries. 

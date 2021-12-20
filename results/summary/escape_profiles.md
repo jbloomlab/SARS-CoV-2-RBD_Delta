@@ -657,18 +657,16 @@ with multiprocessing.Pool(ncpus) as pool:
     
 
 
+
+    
+![png](escape_profiles_files/escape_profiles_26_2.png)
+    
+
+
     
     Plotted profile 2 to:
      results/escape_profiles/Delta_breakthrough_repeat_color_by_bind_stackedlogo.pdf
      results/escape_profiles/Delta_breakthrough_repeat_color_by_bind_stackedlogo.png.
-
-
-
-    
-![png](escape_profiles_files/escape_profiles_26_3.png)
-    
-
-
     
     Plotted profile 3 to:
      results/escape_profiles/Delta_breakthrough_repeat_color_by_expr_stackedlogo.pdf
@@ -677,7 +675,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_26_5.png)
+![png](escape_profiles_files/escape_profiles_26_4.png)
     
 
 
@@ -689,7 +687,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_26_7.png)
+![png](escape_profiles_files/escape_profiles_26_6.png)
     
 
 
@@ -701,7 +699,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_26_9.png)
+![png](escape_profiles_files/escape_profiles_26_8.png)
     
 
 
@@ -713,7 +711,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_26_11.png)
+![png](escape_profiles_files/escape_profiles_26_10.png)
     
 
 
@@ -725,7 +723,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_26_13.png)
+![png](escape_profiles_files/escape_profiles_26_12.png)
     
 
 
@@ -737,7 +735,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_26_15.png)
+![png](escape_profiles_files/escape_profiles_26_14.png)
     
 
 
@@ -749,7 +747,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](escape_profiles_files/escape_profiles_26_17.png)
+![png](escape_profiles_files/escape_profiles_26_16.png)
     
 
 
