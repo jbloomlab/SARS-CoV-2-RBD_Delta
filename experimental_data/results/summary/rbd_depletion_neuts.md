@@ -93,7 +93,7 @@ fitparams['ic50_is_bound'] = fitparams['ic50_bound'].apply(lambda x: True if x!=
 display(HTML(fitparams.to_html(index=False)))
 ```
 
-    Getting data from ['2021-11-12', '2021-11-25']
+    Getting data from ['2021-11-12', '2021-12-12']
 
 
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/neutcurve/hillcurve.py:741: RuntimeWarning: invalid value encountered in power
@@ -117,26 +117,6 @@ display(HTML(fitparams.to_html(index=False)))
   <tbody>
     <tr>
       <td>278C</td>
-      <td>mock depletion (D614G spike)</td>
-      <td>0.000028</td>
-      <td>interpolated</td>
-      <td>D614G</td>
-      <td>36090.374491</td>
-      <td>mock depletion</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>278C</td>
-      <td>RBD antibodies depleted (D614G spike)</td>
-      <td>0.003110</td>
-      <td>interpolated</td>
-      <td>D614G</td>
-      <td>321.503802</td>
-      <td>RBD antibodies depleted</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>278C</td>
       <td>mock depletion (Delta spike)</td>
       <td>0.000069</td>
       <td>interpolated</td>
@@ -157,26 +137,6 @@ display(HTML(fitparams.to_html(index=False)))
     </tr>
     <tr>
       <td>279C</td>
-      <td>mock depletion (D614G spike)</td>
-      <td>0.000059</td>
-      <td>interpolated</td>
-      <td>D614G</td>
-      <td>16972.603092</td>
-      <td>mock depletion</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>279C</td>
-      <td>RBD antibodies depleted (D614G spike)</td>
-      <td>0.002597</td>
-      <td>interpolated</td>
-      <td>D614G</td>
-      <td>385.099148</td>
-      <td>RBD antibodies depleted</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>279C</td>
       <td>mock depletion (Delta spike)</td>
       <td>0.000238</td>
       <td>interpolated</td>
@@ -192,26 +152,6 @@ display(HTML(fitparams.to_html(index=False)))
       <td>interpolated</td>
       <td>Delta</td>
       <td>34.270935</td>
-      <td>RBD antibodies depleted</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>276C</td>
-      <td>mock depletion (D614G spike)</td>
-      <td>0.000141</td>
-      <td>interpolated</td>
-      <td>D614G</td>
-      <td>7083.605666</td>
-      <td>mock depletion</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>276C</td>
-      <td>RBD antibodies depleted (D614G spike)</td>
-      <td>0.007043</td>
-      <td>interpolated</td>
-      <td>D614G</td>
-      <td>141.983209</td>
       <td>RBD antibodies depleted</td>
       <td>False</td>
     </tr>
@@ -237,26 +177,6 @@ display(HTML(fitparams.to_html(index=False)))
     </tr>
     <tr>
       <td>277C</td>
-      <td>mock depletion (D614G spike)</td>
-      <td>0.000195</td>
-      <td>interpolated</td>
-      <td>D614G</td>
-      <td>5116.888249</td>
-      <td>mock depletion</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>277C</td>
-      <td>RBD antibodies depleted (D614G spike)</td>
-      <td>0.015073</td>
-      <td>interpolated</td>
-      <td>D614G</td>
-      <td>66.343287</td>
-      <td>RBD antibodies depleted</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>277C</td>
       <td>mock depletion (Delta spike)</td>
       <td>0.000761</td>
       <td>interpolated</td>
@@ -277,26 +197,6 @@ display(HTML(fitparams.to_html(index=False)))
     </tr>
     <tr>
       <td>273C</td>
-      <td>mock depletion (D614G spike)</td>
-      <td>0.000095</td>
-      <td>interpolated</td>
-      <td>D614G</td>
-      <td>10503.998779</td>
-      <td>mock depletion</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>273C</td>
-      <td>RBD antibodies depleted (D614G spike)</td>
-      <td>0.006106</td>
-      <td>interpolated</td>
-      <td>D614G</td>
-      <td>163.779421</td>
-      <td>RBD antibodies depleted</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>273C</td>
       <td>mock depletion (Delta spike)</td>
       <td>0.000206</td>
       <td>interpolated</td>
@@ -312,26 +212,6 @@ display(HTML(fitparams.to_html(index=False)))
       <td>interpolated</td>
       <td>Delta</td>
       <td>26.716594</td>
-      <td>RBD antibodies depleted</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>274C</td>
-      <td>mock depletion (D614G spike)</td>
-      <td>0.000146</td>
-      <td>interpolated</td>
-      <td>D614G</td>
-      <td>6869.687754</td>
-      <td>mock depletion</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>274C</td>
-      <td>RBD antibodies depleted (D614G spike)</td>
-      <td>0.011438</td>
-      <td>interpolated</td>
-      <td>D614G</td>
-      <td>87.429897</td>
       <td>RBD antibodies depleted</td>
       <td>False</td>
     </tr>
@@ -357,26 +237,6 @@ display(HTML(fitparams.to_html(index=False)))
     </tr>
     <tr>
       <td>267C</td>
-      <td>mock depletion (D614G spike)</td>
-      <td>0.001152</td>
-      <td>interpolated</td>
-      <td>D614G</td>
-      <td>867.751512</td>
-      <td>mock depletion</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>267C</td>
-      <td>RBD antibodies depleted (D614G spike)</td>
-      <td>0.032963</td>
-      <td>interpolated</td>
-      <td>D614G</td>
-      <td>30.336790</td>
-      <td>RBD antibodies depleted</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>267C</td>
       <td>mock depletion (Delta spike)</td>
       <td>0.001664</td>
       <td>interpolated</td>
@@ -394,26 +254,6 @@ display(HTML(fitparams.to_html(index=False)))
       <td>25.000000</td>
       <td>RBD antibodies depleted</td>
       <td>True</td>
-    </tr>
-    <tr>
-      <td>268C</td>
-      <td>mock depletion (D614G spike)</td>
-      <td>0.000185</td>
-      <td>interpolated</td>
-      <td>D614G</td>
-      <td>5391.578554</td>
-      <td>mock depletion</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>268C</td>
-      <td>RBD antibodies depleted (D614G spike)</td>
-      <td>0.015976</td>
-      <td>interpolated</td>
-      <td>D614G</td>
-      <td>62.594594</td>
-      <td>RBD antibodies depleted</td>
-      <td>False</td>
     </tr>
     <tr>
       <td>268C</td>
@@ -437,26 +277,6 @@ display(HTML(fitparams.to_html(index=False)))
     </tr>
     <tr>
       <td>P12</td>
-      <td>mock depletion (D614G spike)</td>
-      <td>0.001586</td>
-      <td>interpolated</td>
-      <td>D614G</td>
-      <td>630.671890</td>
-      <td>mock depletion</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>P12</td>
-      <td>RBD antibodies depleted (D614G spike)</td>
-      <td>0.008507</td>
-      <td>interpolated</td>
-      <td>D614G</td>
-      <td>117.554925</td>
-      <td>RBD antibodies depleted</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>P12</td>
       <td>mock depletion (Delta spike)</td>
       <td>0.006685</td>
       <td>interpolated</td>
@@ -476,24 +296,24 @@ display(HTML(fitparams.to_html(index=False)))
       <td>True</td>
     </tr>
     <tr>
-      <td>P14</td>
+      <td>P12</td>
       <td>mock depletion (D614G spike)</td>
-      <td>0.000238</td>
+      <td>0.002545</td>
       <td>interpolated</td>
       <td>D614G</td>
-      <td>4197.920359</td>
+      <td>392.975455</td>
       <td>mock depletion</td>
       <td>False</td>
     </tr>
     <tr>
-      <td>P14</td>
+      <td>P12</td>
       <td>RBD antibodies depleted (D614G spike)</td>
-      <td>0.001530</td>
-      <td>interpolated</td>
+      <td>0.040000</td>
+      <td>lower</td>
       <td>D614G</td>
-      <td>653.699587</td>
+      <td>25.000000</td>
       <td>RBD antibodies depleted</td>
-      <td>False</td>
+      <td>True</td>
     </tr>
     <tr>
       <td>P14</td>
@@ -516,24 +336,24 @@ display(HTML(fitparams.to_html(index=False)))
       <td>True</td>
     </tr>
     <tr>
-      <td>P08</td>
+      <td>P14</td>
       <td>mock depletion (D614G spike)</td>
-      <td>0.000378</td>
+      <td>0.000313</td>
       <td>interpolated</td>
       <td>D614G</td>
-      <td>2646.977077</td>
+      <td>3191.997182</td>
       <td>mock depletion</td>
       <td>False</td>
     </tr>
     <tr>
-      <td>P08</td>
+      <td>P14</td>
       <td>RBD antibodies depleted (D614G spike)</td>
-      <td>0.004354</td>
-      <td>interpolated</td>
+      <td>0.040000</td>
+      <td>lower</td>
       <td>D614G</td>
-      <td>229.678742</td>
+      <td>25.000000</td>
       <td>RBD antibodies depleted</td>
-      <td>False</td>
+      <td>True</td>
     </tr>
     <tr>
       <td>P08</td>
@@ -556,24 +376,24 @@ display(HTML(fitparams.to_html(index=False)))
       <td>True</td>
     </tr>
     <tr>
-      <td>P09</td>
+      <td>P08</td>
       <td>mock depletion (D614G spike)</td>
-      <td>0.001156</td>
+      <td>0.000415</td>
       <td>interpolated</td>
       <td>D614G</td>
-      <td>865.336838</td>
+      <td>2407.827643</td>
       <td>mock depletion</td>
       <td>False</td>
     </tr>
     <tr>
-      <td>P09</td>
+      <td>P08</td>
       <td>RBD antibodies depleted (D614G spike)</td>
-      <td>0.005483</td>
-      <td>interpolated</td>
+      <td>0.040000</td>
+      <td>lower</td>
       <td>D614G</td>
-      <td>182.387262</td>
+      <td>25.000000</td>
       <td>RBD antibodies depleted</td>
-      <td>False</td>
+      <td>True</td>
     </tr>
     <tr>
       <td>P09</td>
@@ -596,24 +416,24 @@ display(HTML(fitparams.to_html(index=False)))
       <td>True</td>
     </tr>
     <tr>
-      <td>P04</td>
+      <td>P09</td>
       <td>mock depletion (D614G spike)</td>
-      <td>0.000239</td>
+      <td>0.001667</td>
       <td>interpolated</td>
       <td>D614G</td>
-      <td>4186.940971</td>
+      <td>599.924157</td>
       <td>mock depletion</td>
       <td>False</td>
     </tr>
     <tr>
-      <td>P04</td>
+      <td>P09</td>
       <td>RBD antibodies depleted (D614G spike)</td>
-      <td>0.002330</td>
-      <td>interpolated</td>
+      <td>0.040000</td>
+      <td>lower</td>
       <td>D614G</td>
-      <td>429.191946</td>
+      <td>25.000000</td>
       <td>RBD antibodies depleted</td>
-      <td>False</td>
+      <td>True</td>
     </tr>
     <tr>
       <td>P04</td>
@@ -636,24 +456,24 @@ display(HTML(fitparams.to_html(index=False)))
       <td>True</td>
     </tr>
     <tr>
-      <td>P05</td>
+      <td>P04</td>
       <td>mock depletion (D614G spike)</td>
-      <td>0.000708</td>
+      <td>0.000187</td>
       <td>interpolated</td>
       <td>D614G</td>
-      <td>1411.942757</td>
+      <td>5339.949155</td>
       <td>mock depletion</td>
       <td>False</td>
     </tr>
     <tr>
-      <td>P05</td>
+      <td>P04</td>
       <td>RBD antibodies depleted (D614G spike)</td>
-      <td>0.003477</td>
-      <td>interpolated</td>
+      <td>0.040000</td>
+      <td>lower</td>
       <td>D614G</td>
-      <td>287.621777</td>
+      <td>25.000000</td>
       <td>RBD antibodies depleted</td>
-      <td>False</td>
+      <td>True</td>
     </tr>
     <tr>
       <td>P05</td>
@@ -676,24 +496,24 @@ display(HTML(fitparams.to_html(index=False)))
       <td>True</td>
     </tr>
     <tr>
-      <td>P02</td>
+      <td>P05</td>
       <td>mock depletion (D614G spike)</td>
-      <td>0.000867</td>
+      <td>0.000783</td>
       <td>interpolated</td>
       <td>D614G</td>
-      <td>1153.110262</td>
+      <td>1277.868082</td>
       <td>mock depletion</td>
       <td>False</td>
     </tr>
     <tr>
-      <td>P02</td>
+      <td>P05</td>
       <td>RBD antibodies depleted (D614G spike)</td>
-      <td>0.007101</td>
-      <td>interpolated</td>
+      <td>0.040000</td>
+      <td>lower</td>
       <td>D614G</td>
-      <td>140.821081</td>
+      <td>25.000000</td>
       <td>RBD antibodies depleted</td>
-      <td>False</td>
+      <td>True</td>
     </tr>
     <tr>
       <td>P02</td>
@@ -716,24 +536,24 @@ display(HTML(fitparams.to_html(index=False)))
       <td>True</td>
     </tr>
     <tr>
-      <td>P03</td>
+      <td>P02</td>
       <td>mock depletion (D614G spike)</td>
-      <td>0.000412</td>
+      <td>0.001094</td>
       <td>interpolated</td>
       <td>D614G</td>
-      <td>2424.427832</td>
+      <td>914.335212</td>
       <td>mock depletion</td>
       <td>False</td>
     </tr>
     <tr>
-      <td>P03</td>
+      <td>P02</td>
       <td>RBD antibodies depleted (D614G spike)</td>
-      <td>0.007564</td>
-      <td>interpolated</td>
+      <td>0.040000</td>
+      <td>lower</td>
       <td>D614G</td>
-      <td>132.202468</td>
+      <td>25.000000</td>
       <td>RBD antibodies depleted</td>
-      <td>False</td>
+      <td>True</td>
     </tr>
     <tr>
       <td>P03</td>
@@ -754,6 +574,186 @@ display(HTML(fitparams.to_html(index=False)))
       <td>25.000000</td>
       <td>RBD antibodies depleted</td>
       <td>True</td>
+    </tr>
+    <tr>
+      <td>P03</td>
+      <td>mock depletion (D614G spike)</td>
+      <td>0.000530</td>
+      <td>interpolated</td>
+      <td>D614G</td>
+      <td>1886.431039</td>
+      <td>mock depletion</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>P03</td>
+      <td>RBD antibodies depleted (D614G spike)</td>
+      <td>0.040000</td>
+      <td>lower</td>
+      <td>D614G</td>
+      <td>25.000000</td>
+      <td>RBD antibodies depleted</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Delta_10</td>
+      <td>mock depletion (Delta spike)</td>
+      <td>0.000322</td>
+      <td>interpolated</td>
+      <td>Delta</td>
+      <td>3102.893168</td>
+      <td>mock depletion</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Delta_10</td>
+      <td>RBD antibodies depleted (Delta spike)</td>
+      <td>0.038017</td>
+      <td>interpolated</td>
+      <td>Delta</td>
+      <td>26.304217</td>
+      <td>RBD antibodies depleted</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Delta_11</td>
+      <td>mock depletion (Delta spike)</td>
+      <td>0.000499</td>
+      <td>interpolated</td>
+      <td>Delta</td>
+      <td>2005.369715</td>
+      <td>mock depletion</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Delta_11</td>
+      <td>RBD antibodies depleted (Delta spike)</td>
+      <td>0.040000</td>
+      <td>lower</td>
+      <td>Delta</td>
+      <td>25.000000</td>
+      <td>RBD antibodies depleted</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Delta_7</td>
+      <td>mock depletion (Delta spike)</td>
+      <td>0.000339</td>
+      <td>interpolated</td>
+      <td>Delta</td>
+      <td>2949.064142</td>
+      <td>mock depletion</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Delta_7</td>
+      <td>RBD antibodies depleted (Delta spike)</td>
+      <td>0.016832</td>
+      <td>interpolated</td>
+      <td>Delta</td>
+      <td>59.409437</td>
+      <td>RBD antibodies depleted</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Delta_8</td>
+      <td>mock depletion (Delta spike)</td>
+      <td>0.000077</td>
+      <td>interpolated</td>
+      <td>Delta</td>
+      <td>12933.842785</td>
+      <td>mock depletion</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Delta_8</td>
+      <td>RBD antibodies depleted (Delta spike)</td>
+      <td>0.003731</td>
+      <td>interpolated</td>
+      <td>Delta</td>
+      <td>268.004129</td>
+      <td>RBD antibodies depleted</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Delta_4</td>
+      <td>mock depletion (Delta spike)</td>
+      <td>0.000304</td>
+      <td>interpolated</td>
+      <td>Delta</td>
+      <td>3290.082022</td>
+      <td>mock depletion</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Delta_4</td>
+      <td>RBD antibodies depleted (Delta spike)</td>
+      <td>0.018572</td>
+      <td>interpolated</td>
+      <td>Delta</td>
+      <td>53.844651</td>
+      <td>RBD antibodies depleted</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Delta_6</td>
+      <td>mock depletion (Delta spike)</td>
+      <td>0.000182</td>
+      <td>interpolated</td>
+      <td>Delta</td>
+      <td>5484.688275</td>
+      <td>mock depletion</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Delta_6</td>
+      <td>RBD antibodies depleted (Delta spike)</td>
+      <td>0.008768</td>
+      <td>interpolated</td>
+      <td>Delta</td>
+      <td>114.049696</td>
+      <td>RBD antibodies depleted</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Delta_1</td>
+      <td>mock depletion (Delta spike)</td>
+      <td>0.000088</td>
+      <td>interpolated</td>
+      <td>Delta</td>
+      <td>11419.878373</td>
+      <td>mock depletion</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Delta_1</td>
+      <td>RBD antibodies depleted (Delta spike)</td>
+      <td>0.022893</td>
+      <td>interpolated</td>
+      <td>Delta</td>
+      <td>43.681377</td>
+      <td>RBD antibodies depleted</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Delta_3</td>
+      <td>mock depletion (Delta spike)</td>
+      <td>0.000241</td>
+      <td>interpolated</td>
+      <td>Delta</td>
+      <td>4152.213820</td>
+      <td>mock depletion</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Delta_3</td>
+      <td>RBD antibodies depleted (Delta spike)</td>
+      <td>0.028135</td>
+      <td>interpolated</td>
+      <td>Delta</td>
+      <td>35.542781</td>
+      <td>RBD antibodies depleted</td>
+      <td>False</td>
     </tr>
   </tbody>
 </table>
@@ -850,146 +850,8 @@ display(HTML(foldchange.head(10).to_html(index=False)))
   <tbody>
     <tr>
       <td>267C</td>
-      <td>D614G</td>
-      <td>0.032963</td>
-      <td>0.001152</td>
-      <td>28.603933</td>
-      <td>96</td>
-      <td>867.751512</td>
-      <td>30.336790</td>
-      <td>False</td>
-      <td>96%</td>
-      <td>mock depletion (D614G spike)</td>
-      <td>0.001152</td>
-      <td>interpolated</td>
-      <td>867.751512</td>
-      <td>mock depletion</td>
-      <td>False</td>
-      <td>267C</td>
-      <td>38</td>
-      <td>Delta breakthrough</td>
-      <td>267C-day-38</td>
-      <td>200</td>
-    </tr>
-    <tr>
-      <td>267C</td>
-      <td>D614G</td>
-      <td>0.032963</td>
-      <td>0.001152</td>
-      <td>28.603933</td>
-      <td>96</td>
-      <td>867.751512</td>
-      <td>30.336790</td>
-      <td>False</td>
-      <td>96%</td>
-      <td>RBD antibodies depleted (D614G spike)</td>
-      <td>0.032963</td>
-      <td>interpolated</td>
-      <td>30.336790</td>
-      <td>RBD antibodies depleted</td>
-      <td>False</td>
-      <td>267C</td>
-      <td>38</td>
-      <td>Delta breakthrough</td>
-      <td>267C-day-38</td>
-      <td>200</td>
-    </tr>
-    <tr>
-      <td>267C</td>
-      <td>D614G</td>
-      <td>0.032963</td>
-      <td>0.001152</td>
-      <td>28.603933</td>
-      <td>96</td>
-      <td>867.751512</td>
-      <td>30.336790</td>
-      <td>True</td>
-      <td>&gt;96%</td>
-      <td>mock depletion (D614G spike)</td>
-      <td>0.001152</td>
-      <td>interpolated</td>
-      <td>867.751512</td>
-      <td>mock depletion</td>
-      <td>False</td>
-      <td>267C</td>
-      <td>38</td>
-      <td>Delta breakthrough</td>
-      <td>267C-day-38</td>
-      <td>200</td>
-    </tr>
-    <tr>
-      <td>267C</td>
-      <td>D614G</td>
-      <td>0.032963</td>
-      <td>0.001152</td>
-      <td>28.603933</td>
-      <td>96</td>
-      <td>867.751512</td>
-      <td>30.336790</td>
-      <td>True</td>
-      <td>&gt;96%</td>
-      <td>RBD antibodies depleted (D614G spike)</td>
-      <td>0.032963</td>
-      <td>interpolated</td>
-      <td>30.336790</td>
-      <td>RBD antibodies depleted</td>
-      <td>False</td>
-      <td>267C</td>
-      <td>38</td>
-      <td>Delta breakthrough</td>
-      <td>267C-day-38</td>
-      <td>200</td>
-    </tr>
-    <tr>
-      <td>267C</td>
       <td>Delta</td>
-      <td>0.040000</td>
-      <td>0.001664</td>
-      <td>24.043240</td>
-      <td>95</td>
-      <td>601.081003</td>
-      <td>25.000000</td>
-      <td>False</td>
-      <td>95%</td>
-      <td>mock depletion (Delta spike)</td>
-      <td>0.001664</td>
-      <td>interpolated</td>
-      <td>601.081003</td>
-      <td>mock depletion</td>
-      <td>False</td>
-      <td>267C</td>
-      <td>38</td>
-      <td>Delta breakthrough</td>
-      <td>267C-day-38</td>
-      <td>200</td>
-    </tr>
-    <tr>
-      <td>267C</td>
-      <td>Delta</td>
-      <td>0.040000</td>
-      <td>0.001664</td>
-      <td>24.043240</td>
-      <td>95</td>
-      <td>601.081003</td>
-      <td>25.000000</td>
-      <td>False</td>
-      <td>95%</td>
-      <td>RBD antibodies depleted (Delta spike)</td>
-      <td>0.040000</td>
-      <td>lower</td>
-      <td>25.000000</td>
-      <td>RBD antibodies depleted</td>
-      <td>True</td>
-      <td>267C</td>
-      <td>38</td>
-      <td>Delta breakthrough</td>
-      <td>267C-day-38</td>
-      <td>200</td>
-    </tr>
-    <tr>
-      <td>267C</td>
-      <td>Delta</td>
-      <td>0.040000</td>
+      <td>0.04000</td>
       <td>0.001664</td>
       <td>24.043240</td>
       <td>95</td>
@@ -1012,7 +874,7 @@ display(HTML(foldchange.head(10).to_html(index=False)))
     <tr>
       <td>267C</td>
       <td>Delta</td>
-      <td>0.040000</td>
+      <td>0.04000</td>
       <td>0.001664</td>
       <td>24.043240</td>
       <td>95</td>
@@ -1034,19 +896,19 @@ display(HTML(foldchange.head(10).to_html(index=False)))
     </tr>
     <tr>
       <td>268C</td>
-      <td>D614G</td>
-      <td>0.015976</td>
-      <td>0.000185</td>
-      <td>86.134891</td>
+      <td>Delta</td>
+      <td>0.04000</td>
+      <td>0.000413</td>
+      <td>96.753427</td>
       <td>98</td>
-      <td>5391.578554</td>
-      <td>62.594594</td>
-      <td>False</td>
-      <td>98%</td>
-      <td>mock depletion (D614G spike)</td>
-      <td>0.000185</td>
+      <td>2418.835663</td>
+      <td>25.000000</td>
+      <td>True</td>
+      <td>&gt;98%</td>
+      <td>mock depletion (Delta spike)</td>
+      <td>0.000413</td>
       <td>interpolated</td>
-      <td>5391.578554</td>
+      <td>2418.835663</td>
       <td>mock depletion</td>
       <td>False</td>
       <td>268C</td>
@@ -1057,25 +919,163 @@ display(HTML(foldchange.head(10).to_html(index=False)))
     </tr>
     <tr>
       <td>268C</td>
-      <td>D614G</td>
-      <td>0.015976</td>
-      <td>0.000185</td>
-      <td>86.134891</td>
+      <td>Delta</td>
+      <td>0.04000</td>
+      <td>0.000413</td>
+      <td>96.753427</td>
       <td>98</td>
-      <td>5391.578554</td>
-      <td>62.594594</td>
-      <td>False</td>
-      <td>98%</td>
-      <td>RBD antibodies depleted (D614G spike)</td>
-      <td>0.015976</td>
-      <td>interpolated</td>
-      <td>62.594594</td>
+      <td>2418.835663</td>
+      <td>25.000000</td>
+      <td>True</td>
+      <td>&gt;98%</td>
+      <td>RBD antibodies depleted (Delta spike)</td>
+      <td>0.040000</td>
+      <td>lower</td>
+      <td>25.000000</td>
       <td>RBD antibodies depleted</td>
-      <td>False</td>
+      <td>True</td>
       <td>268C</td>
       <td>28</td>
       <td>Delta breakthrough</td>
       <td>268C-day-28</td>
+      <td>500</td>
+    </tr>
+    <tr>
+      <td>273C</td>
+      <td>Delta</td>
+      <td>0.03743</td>
+      <td>0.000206</td>
+      <td>182.093130</td>
+      <td>99</td>
+      <td>4864.908160</td>
+      <td>26.716594</td>
+      <td>False</td>
+      <td>99%</td>
+      <td>mock depletion (Delta spike)</td>
+      <td>0.000206</td>
+      <td>interpolated</td>
+      <td>4864.908160</td>
+      <td>mock depletion</td>
+      <td>False</td>
+      <td>273C</td>
+      <td>28</td>
+      <td>Delta breakthrough</td>
+      <td>273C-day-28</td>
+      <td>500</td>
+    </tr>
+    <tr>
+      <td>273C</td>
+      <td>Delta</td>
+      <td>0.03743</td>
+      <td>0.000206</td>
+      <td>182.093130</td>
+      <td>99</td>
+      <td>4864.908160</td>
+      <td>26.716594</td>
+      <td>False</td>
+      <td>99%</td>
+      <td>RBD antibodies depleted (Delta spike)</td>
+      <td>0.037430</td>
+      <td>interpolated</td>
+      <td>26.716594</td>
+      <td>RBD antibodies depleted</td>
+      <td>False</td>
+      <td>273C</td>
+      <td>28</td>
+      <td>Delta breakthrough</td>
+      <td>273C-day-28</td>
+      <td>500</td>
+    </tr>
+    <tr>
+      <td>274C</td>
+      <td>Delta</td>
+      <td>0.04000</td>
+      <td>0.000490</td>
+      <td>81.689426</td>
+      <td>98</td>
+      <td>2042.235638</td>
+      <td>25.000000</td>
+      <td>True</td>
+      <td>&gt;98%</td>
+      <td>mock depletion (Delta spike)</td>
+      <td>0.000490</td>
+      <td>interpolated</td>
+      <td>2042.235638</td>
+      <td>mock depletion</td>
+      <td>False</td>
+      <td>274C</td>
+      <td>26</td>
+      <td>Delta breakthrough</td>
+      <td>274C-day-26</td>
+      <td>500</td>
+    </tr>
+    <tr>
+      <td>274C</td>
+      <td>Delta</td>
+      <td>0.04000</td>
+      <td>0.000490</td>
+      <td>81.689426</td>
+      <td>98</td>
+      <td>2042.235638</td>
+      <td>25.000000</td>
+      <td>True</td>
+      <td>&gt;98%</td>
+      <td>RBD antibodies depleted (Delta spike)</td>
+      <td>0.040000</td>
+      <td>lower</td>
+      <td>25.000000</td>
+      <td>RBD antibodies depleted</td>
+      <td>True</td>
+      <td>274C</td>
+      <td>26</td>
+      <td>Delta breakthrough</td>
+      <td>274C-day-26</td>
+      <td>500</td>
+    </tr>
+    <tr>
+      <td>276C</td>
+      <td>Delta</td>
+      <td>0.04000</td>
+      <td>0.000597</td>
+      <td>66.995258</td>
+      <td>98</td>
+      <td>1674.881462</td>
+      <td>25.000000</td>
+      <td>True</td>
+      <td>&gt;98%</td>
+      <td>mock depletion (Delta spike)</td>
+      <td>0.000597</td>
+      <td>interpolated</td>
+      <td>1674.881462</td>
+      <td>mock depletion</td>
+      <td>False</td>
+      <td>276C</td>
+      <td>24</td>
+      <td>Delta breakthrough</td>
+      <td>276C-day-24</td>
+      <td>500</td>
+    </tr>
+    <tr>
+      <td>276C</td>
+      <td>Delta</td>
+      <td>0.04000</td>
+      <td>0.000597</td>
+      <td>66.995258</td>
+      <td>98</td>
+      <td>1674.881462</td>
+      <td>25.000000</td>
+      <td>True</td>
+      <td>&gt;98%</td>
+      <td>RBD antibodies depleted (Delta spike)</td>
+      <td>0.040000</td>
+      <td>lower</td>
+      <td>25.000000</td>
+      <td>RBD antibodies depleted</td>
+      <td>True</td>
+      <td>276C</td>
+      <td>24</td>
+      <td>Delta breakthrough</td>
+      <td>276C-day-24</td>
       <td>500</td>
     </tr>
   </tbody>
@@ -1138,7 +1138,7 @@ print(f'Writing to {csvfile}')
 foldchange.to_csv(csvfile, index=False)
 ```
 
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 7 x 4.0 in image.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 7 x 6.0 in image.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:722: PlotnineWarning: Filename: results/rbd_depletion_neuts/NT50_trackplot.pdf
 
 
@@ -1158,7 +1158,8 @@ LOD = config['NT50_LOD']
 NT50_lines = (ggplot((foldchange
                       .replace({'mock depletion':'mock',
                                 'RBD antibodies depleted': 'depleted',
-                                'Delta breakthrough': 'Delta\nbreakthrough'
+                                'Delta breakthrough': 'Delta\nbreakthrough',
+                                'primary Delta infection': 'primary\nDelta infection',
                                }
                               )
                       .assign(depletion=lambda x: pd.Categorical(x['depletion'], categories=['mock', 'depleted'], ordered=True))
@@ -1224,10 +1225,10 @@ _ = p.draw()
 p.save(f'{resultsdir}/compare_percentRBD.pdf')
 ```
 
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/geoms/geom_point.py:61: UserWarning: You passed a edgecolor/edgecolors (['#333333ff', '#333333ff', '#333333ff', '#333333ff']) for an unfilled marker ('').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/geoms/geom_point.py:61: UserWarning: You passed a edgecolor/edgecolors (['#333333ff', '#333333ff']) for an unfilled marker ('').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 8 x 3 in image.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:722: PlotnineWarning: Filename: results/rbd_depletion_neuts/compare_percentRBD.pdf
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/geoms/geom_point.py:61: UserWarning: You passed a edgecolor/edgecolors (['#333333ff', '#333333ff', '#333333ff', '#333333ff']) for an unfilled marker ('').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/geoms/geom_point.py:61: UserWarning: You passed a edgecolor/edgecolors (['#333333ff', '#333333ff']) for an unfilled marker ('').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
 
 
 
@@ -1265,10 +1266,22 @@ print(f"  Cox proportional-hazards censored: P = {cph.summary.at['groupA', 'p']:
 ```
 
     Comparing early 2020 to B.1.351
-      Mann-Whitney test:      P = 3.1e-06
-      Log-rank test:          P = 2e-05
-      Log-rank test censored: P = 0.019
-      Cox proportional-hazards censored: P = 0.054
+      Mann-Whitney test:      P = 0.15
+      Log-rank test:          P = 0.21
+      Log-rank test censored: P = 0.074
+      Cox proportional-hazards censored: P = 1
+
+
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/lifelines/utils/__init__.py:1116: ConvergenceWarning: Column groupA have very low variance when conditioned on death event present or not. This may harm convergence. This could be a form of 'complete separation'. For example, try the following code:
+    
+    >>> events = df['E'].astype(bool)
+    >>> print(df.loc[events, 'groupA'].var())
+    >>> print(df.loc[~events, 'groupA'].var())
+    
+    A very low variance means that the column groupA completely determines whether a subject dies or not. See https://stats.stackexchange.com/questions/11109/how-to-deal-with-perfect-separation-in-logistic-regression.
+    
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/lifelines/fitters/coxph_fitter.py:1594: ConvergenceWarning: Newton-Rhaphson convergence completed successfully but norm(delta) is still high, 0.482. This may imply non-unique solutions to the maximum likelihood. Perhaps there is collinearity or complete separation in the dataset?
+    
 
 
 

@@ -4022,189 +4022,189 @@ display(HTML(fates
     <tr>
       <th rowspan="2" valign="top">delta_21-26-none-0-ref</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>4.2e+06</td>
-      <td>3.6e+06</td>
-      <td>3.4e+05</td>
-      <td>1.5e+07</td>
+      <td>1.0e+06</td>
+      <td>1.0e+07</td>
+      <td>5.4e+06</td>
+      <td>1.1e+06</td>
+      <td>3.6e+07</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>3.9e+06</td>
-      <td>3.2e+06</td>
-      <td>3.0e+05</td>
-      <td>1.3e+07</td>
+      <td>9.7e+05</td>
+      <td>9.8e+06</td>
+      <td>4.9e+06</td>
+      <td>1.1e+06</td>
+      <td>3.2e+07</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_21-267C_repeat-200-abneg</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>5.5e+05</td>
-      <td>4.4e+05</td>
-      <td>4.1e+04</td>
-      <td>1.7e+06</td>
+      <td>1.3e+05</td>
+      <td>1.3e+06</td>
+      <td>6.6e+05</td>
+      <td>2.3e+05</td>
+      <td>4.2e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>5.5e+05</td>
-      <td>4.4e+05</td>
-      <td>4.5e+04</td>
-      <td>1.7e+06</td>
+      <td>1.2e+05</td>
+      <td>1.3e+06</td>
+      <td>6.4e+05</td>
+      <td>2.0e+05</td>
+      <td>4.0e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_22-273C_repeat-500-abneg</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>5.5e+05</td>
-      <td>4.4e+05</td>
-      <td>4.1e+04</td>
-      <td>1.7e+06</td>
+      <td>1.3e+05</td>
+      <td>1.3e+06</td>
+      <td>6.7e+05</td>
+      <td>1.3e+05</td>
+      <td>4.2e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>5.4e+05</td>
-      <td>4.1e+05</td>
-      <td>4.2e+04</td>
-      <td>1.6e+06</td>
+      <td>1.2e+05</td>
+      <td>1.3e+06</td>
+      <td>6.2e+05</td>
+      <td>1.4e+05</td>
+      <td>4.0e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_23-274C_repeat-500-abneg</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>5.7e+05</td>
-      <td>4.7e+05</td>
-      <td>4.3e+04</td>
-      <td>1.8e+06</td>
+      <td>1.3e+05</td>
+      <td>1.4e+06</td>
+      <td>7.0e+05</td>
+      <td>1.2e+05</td>
+      <td>4.4e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>5.2e+05</td>
-      <td>4.1e+05</td>
-      <td>4.1e+04</td>
-      <td>1.6e+06</td>
+      <td>1.1e+05</td>
+      <td>1.2e+06</td>
+      <td>6.0e+05</td>
+      <td>1.1e+05</td>
+      <td>3.8e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_24-276C_repeat-500-abneg</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>5.5e+05</td>
-      <td>4.5e+05</td>
-      <td>4.3e+04</td>
-      <td>1.7e+06</td>
+      <td>1.2e+05</td>
+      <td>1.3e+06</td>
+      <td>6.6e+05</td>
+      <td>1.1e+05</td>
+      <td>4.2e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>5.9e+05</td>
-      <td>4.6e+05</td>
-      <td>4.6e+04</td>
-      <td>1.8e+06</td>
+      <td>1.3e+05</td>
+      <td>1.4e+06</td>
+      <td>6.9e+05</td>
+      <td>1.2e+05</td>
+      <td>4.3e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_25-277C_repeat-500-abneg</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>5.8e+05</td>
-      <td>4.7e+05</td>
-      <td>4.5e+04</td>
-      <td>1.8e+06</td>
+      <td>1.3e+05</td>
+      <td>1.4e+06</td>
+      <td>6.9e+05</td>
+      <td>1.2e+05</td>
+      <td>4.4e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>5.7e+05</td>
-      <td>4.5e+05</td>
-      <td>4.4e+04</td>
-      <td>1.7e+06</td>
+      <td>1.3e+05</td>
+      <td>1.4e+06</td>
+      <td>6.6e+05</td>
+      <td>1.2e+05</td>
+      <td>4.1e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_26-278C_repeat-1250-abneg</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>5.3e+05</td>
-      <td>4.3e+05</td>
-      <td>4.0e+04</td>
-      <td>1.7e+06</td>
+      <td>1.1e+05</td>
+      <td>1.3e+06</td>
+      <td>6.3e+05</td>
+      <td>1.1e+05</td>
+      <td>4.0e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>5.0e+05</td>
-      <td>3.9e+05</td>
-      <td>3.9e+04</td>
-      <td>1.5e+06</td>
+      <td>1.1e+05</td>
+      <td>1.2e+06</td>
+      <td>5.9e+05</td>
+      <td>1.1e+05</td>
+      <td>3.7e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_27-34-none-0-ref</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>3.5e+06</td>
-      <td>3.0e+06</td>
-      <td>2.8e+05</td>
-      <td>1.2e+07</td>
+      <td>8.3e+05</td>
+      <td>8.4e+06</td>
+      <td>4.4e+06</td>
+      <td>7.5e+05</td>
+      <td>2.9e+07</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>3.9e+06</td>
-      <td>3.2e+06</td>
-      <td>2.9e+05</td>
-      <td>1.3e+07</td>
+      <td>9.1e+05</td>
+      <td>9.5e+06</td>
+      <td>4.8e+06</td>
+      <td>8.1e+05</td>
+      <td>3.1e+07</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_27-Delta_1-500-abneg</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>4.7e+05</td>
-      <td>3.8e+05</td>
-      <td>3.6e+04</td>
-      <td>1.5e+06</td>
+      <td>1.1e+05</td>
+      <td>1.2e+06</td>
+      <td>5.7e+05</td>
+      <td>9.9e+04</td>
+      <td>3.6e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>5.2e+05</td>
-      <td>4.1e+05</td>
-      <td>4.1e+04</td>
-      <td>1.6e+06</td>
+      <td>1.1e+05</td>
+      <td>1.2e+06</td>
+      <td>6.0e+05</td>
+      <td>1.1e+05</td>
+      <td>3.8e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_28-Delta_3-350-abneg</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>4.7e+05</td>
-      <td>3.8e+05</td>
-      <td>3.6e+04</td>
-      <td>1.5e+06</td>
+      <td>1.2e+05</td>
+      <td>1.2e+06</td>
+      <td>5.8e+05</td>
+      <td>1.1e+05</td>
+      <td>3.8e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>5.6e+05</td>
-      <td>4.4e+05</td>
-      <td>4.3e+04</td>
-      <td>1.7e+06</td>
+      <td>1.2e+05</td>
+      <td>1.3e+06</td>
+      <td>6.5e+05</td>
+      <td>1.1e+05</td>
+      <td>4.1e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_29-Delta_4-350-abneg</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>3.3e+05</td>
-      <td>2.6e+05</td>
-      <td>2.4e+04</td>
-      <td>1.0e+06</td>
+      <td>7.3e+04</td>
+      <td>7.9e+05</td>
+      <td>3.9e+05</td>
+      <td>6.6e+04</td>
+      <td>2.5e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>3.3e+05</td>
-      <td>2.5e+05</td>
-      <td>2.6e+04</td>
-      <td>9.8e+05</td>
+      <td>7.1e+04</td>
+      <td>7.9e+05</td>
+      <td>3.8e+05</td>
+      <td>7.0e+04</td>
+      <td>2.4e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_3-P04-1250-abneg</th>
@@ -4226,189 +4226,189 @@ display(HTML(fates
     <tr>
       <th rowspan="2" valign="top">delta_30-Delta_6-500-abneg</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>5.0e+05</td>
-      <td>4.0e+05</td>
-      <td>3.7e+04</td>
-      <td>1.6e+06</td>
+      <td>1.2e+05</td>
+      <td>1.2e+06</td>
+      <td>6.0e+05</td>
+      <td>1.0e+05</td>
+      <td>3.9e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>5.3e+05</td>
-      <td>4.2e+05</td>
-      <td>4.2e+04</td>
-      <td>1.6e+06</td>
+      <td>1.2e+05</td>
+      <td>1.3e+06</td>
+      <td>6.2e+05</td>
+      <td>1.2e+05</td>
+      <td>4.0e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_31-Delta_7-1250-abneg</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>5.5e+05</td>
-      <td>4.5e+05</td>
-      <td>4.0e+04</td>
-      <td>1.7e+06</td>
+      <td>1.3e+05</td>
+      <td>1.4e+06</td>
+      <td>6.7e+05</td>
+      <td>1.1e+05</td>
+      <td>4.3e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>4.1e+05</td>
-      <td>3.2e+05</td>
-      <td>3.2e+04</td>
-      <td>1.3e+06</td>
+      <td>9.6e+04</td>
+      <td>1.0e+06</td>
+      <td>4.9e+05</td>
+      <td>9.0e+04</td>
+      <td>3.1e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_32-Delta_8-500-abneg</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>4.8e+05</td>
-      <td>3.8e+05</td>
-      <td>3.5e+04</td>
-      <td>1.5e+06</td>
+      <td>1.1e+05</td>
+      <td>1.2e+06</td>
+      <td>5.8e+05</td>
+      <td>1.0e+05</td>
+      <td>3.8e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>3.8e+05</td>
-      <td>3.0e+05</td>
-      <td>3.0e+04</td>
-      <td>1.1e+06</td>
+      <td>8.7e+04</td>
+      <td>9.3e+05</td>
+      <td>4.5e+05</td>
+      <td>8.6e+04</td>
+      <td>2.8e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_33-Delta_10-1250-abneg</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>3.8e+05</td>
-      <td>3.0e+05</td>
-      <td>2.8e+04</td>
-      <td>1.2e+06</td>
+      <td>9.0e+04</td>
+      <td>9.5e+05</td>
+      <td>4.5e+05</td>
+      <td>8.1e+04</td>
+      <td>2.9e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>3.3e+05</td>
-      <td>2.6e+05</td>
-      <td>2.6e+04</td>
-      <td>9.9e+05</td>
+      <td>7.3e+04</td>
+      <td>8.1e+05</td>
+      <td>3.8e+05</td>
+      <td>7.1e+04</td>
+      <td>2.5e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_34-Delta_11-500-abneg</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>4.6e+05</td>
-      <td>3.7e+05</td>
-      <td>3.5e+04</td>
-      <td>1.5e+06</td>
+      <td>1.0e+05</td>
+      <td>1.1e+06</td>
+      <td>5.4e+05</td>
+      <td>9.8e+04</td>
+      <td>3.5e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>4.1e+05</td>
-      <td>3.2e+05</td>
-      <td>3.4e+04</td>
-      <td>1.2e+06</td>
+      <td>9.1e+04</td>
+      <td>9.9e+05</td>
+      <td>4.8e+05</td>
+      <td>9.0e+04</td>
+      <td>3.0e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_35-40-none-0-ref</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>2.9e+06</td>
-      <td>2.5e+06</td>
-      <td>2.3e+05</td>
-      <td>9.9e+06</td>
+      <td>7.1e+05</td>
+      <td>7.2e+06</td>
+      <td>3.7e+06</td>
+      <td>6.6e+05</td>
+      <td>2.5e+07</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>3.6e+06</td>
-      <td>3.1e+06</td>
-      <td>2.7e+05</td>
-      <td>1.2e+07</td>
+      <td>8.5e+05</td>
+      <td>8.9e+06</td>
+      <td>4.6e+06</td>
+      <td>7.9e+05</td>
+      <td>2.9e+07</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_35-P02_repeat-500-abneg</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>4.5e+05</td>
-      <td>3.5e+05</td>
-      <td>3.5e+04</td>
-      <td>1.4e+06</td>
+      <td>9.9e+04</td>
+      <td>1.1e+06</td>
+      <td>5.3e+05</td>
+      <td>9.8e+04</td>
+      <td>3.4e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>3.2e+05</td>
-      <td>2.5e+05</td>
-      <td>2.5e+04</td>
-      <td>9.7e+05</td>
+      <td>7.1e+04</td>
+      <td>7.8e+05</td>
+      <td>3.7e+05</td>
+      <td>7.3e+04</td>
+      <td>2.3e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_36-P04_repeat-1250-abneg</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>4.3e+05</td>
-      <td>3.3e+05</td>
-      <td>3.2e+04</td>
-      <td>1.3e+06</td>
+      <td>1.0e+05</td>
+      <td>1.1e+06</td>
+      <td>5.1e+05</td>
+      <td>9.9e+04</td>
+      <td>3.4e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>3.9e+05</td>
-      <td>3.1e+05</td>
-      <td>3.0e+04</td>
-      <td>1.2e+06</td>
+      <td>8.9e+04</td>
+      <td>9.8e+05</td>
+      <td>4.6e+05</td>
+      <td>8.8e+04</td>
+      <td>3.0e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_37-P05_repeat-500-abneg</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>3.9e+05</td>
-      <td>3.1e+05</td>
-      <td>2.8e+04</td>
-      <td>1.2e+06</td>
+      <td>8.7e+04</td>
+      <td>9.6e+05</td>
+      <td>4.6e+05</td>
+      <td>7.8e+04</td>
+      <td>3.0e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>4.3e+05</td>
-      <td>3.4e+05</td>
-      <td>3.5e+04</td>
-      <td>1.3e+06</td>
+      <td>9.7e+04</td>
+      <td>1.1e+06</td>
+      <td>5.1e+05</td>
+      <td>1.1e+05</td>
+      <td>3.2e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_38-P09_repeat-200-abneg</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>4.6e+05</td>
-      <td>3.7e+05</td>
-      <td>3.4e+04</td>
-      <td>1.4e+06</td>
+      <td>1.0e+05</td>
+      <td>1.1e+06</td>
+      <td>5.6e+05</td>
+      <td>9.7e+04</td>
+      <td>3.5e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>3.5e+05</td>
-      <td>2.7e+05</td>
-      <td>2.7e+04</td>
-      <td>1.0e+06</td>
+      <td>7.6e+04</td>
+      <td>8.3e+05</td>
+      <td>4.0e+05</td>
+      <td>9.2e+04</td>
+      <td>2.5e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_39-P12_repeat-200-abneg</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>4.0e+05</td>
-      <td>3.3e+05</td>
-      <td>3.0e+04</td>
-      <td>1.3e+06</td>
+      <td>9.5e+04</td>
+      <td>1.0e+06</td>
+      <td>4.9e+05</td>
+      <td>8.3e+04</td>
+      <td>3.1e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>4.3e+05</td>
-      <td>3.3e+05</td>
-      <td>3.4e+04</td>
-      <td>1.3e+06</td>
+      <td>1.0e+05</td>
+      <td>1.1e+06</td>
+      <td>5.1e+05</td>
+      <td>9.4e+04</td>
+      <td>3.3e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_4-P05-500-abneg</th>
@@ -4430,19 +4430,19 @@ display(HTML(fates
     <tr>
       <th rowspan="2" valign="top">delta_40-P14_repeat-1250-abneg</th>
       <th>lib1</th>
-      <td>0.0e+00</td>
-      <td>4.0e+05</td>
-      <td>3.2e+05</td>
-      <td>3.0e+04</td>
-      <td>1.2e+06</td>
+      <td>9.2e+04</td>
+      <td>9.9e+05</td>
+      <td>4.8e+05</td>
+      <td>8.2e+04</td>
+      <td>3.1e+06</td>
     </tr>
     <tr>
       <th>lib2</th>
-      <td>0.0e+00</td>
-      <td>5.5e+05</td>
-      <td>4.3e+05</td>
-      <td>4.3e+04</td>
-      <td>1.6e+06</td>
+      <td>1.2e+05</td>
+      <td>1.3e+06</td>
+      <td>6.4e+05</td>
+      <td>1.2e+05</td>
+      <td>4.0e+06</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">delta_5-P08-500-abneg</th>
