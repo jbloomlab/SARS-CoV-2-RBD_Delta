@@ -8,6 +8,7 @@ elisa_data_files:
   - 06Dec21_ELISA.csv
   - 08Dec21_ELISA.csv
   - 08Dec21_D614G_ELISA.csv
+  - 20Dec21_D614G_ELISA.csv
 
 depletions:
   - mock depleted

@@ -154,59 +154,59 @@ for genotype in set([i.split(' ')[0] for i in titration_df['ligand'].unique().to
   </thead>
   <tbody>
     <tr>
-      <td>P09</td>
-      <td>vaccinated</td>
-      <td>mock depleted</td>
+      <td>Delta_7</td>
+      <td>Delta infection</td>
+      <td>4x depleted</td>
       <td>D614G RBD</td>
-      <td>211208</td>
+      <td>211220</td>
       <td>40500</td>
-      <td>0.17485</td>
+      <td>0.00345</td>
       <td>0.000025</td>
-      <td>P09\n(vaccinated)</td>
+      <td>Delta_7\n(Delta infection)</td>
     </tr>
     <tr>
-      <td>P12</td>
-      <td>vaccinated</td>
-      <td>3x depleted</td>
+      <td>Delta_6</td>
+      <td>Delta infection</td>
+      <td>4x depleted</td>
       <td>D614G RBD</td>
-      <td>211208</td>
+      <td>211220</td>
       <td>40500</td>
-      <td>0.02170</td>
+      <td>0.00140</td>
       <td>0.000025</td>
-      <td>P12\n(vaccinated)</td>
+      <td>Delta_6\n(Delta infection)</td>
     </tr>
     <tr>
-      <td>P12</td>
-      <td>vaccinated</td>
-      <td>mock depleted</td>
+      <td>Delta_4</td>
+      <td>Delta infection</td>
+      <td>4x depleted</td>
       <td>D614G RBD</td>
-      <td>211208</td>
+      <td>211220</td>
       <td>40500</td>
-      <td>0.23245</td>
+      <td>0.00195</td>
       <td>0.000025</td>
-      <td>P12\n(vaccinated)</td>
+      <td>Delta_4\n(Delta infection)</td>
     </tr>
     <tr>
-      <td>P14</td>
-      <td>vaccinated</td>
-      <td>3x depleted</td>
+      <td>Delta_3</td>
+      <td>Delta infection</td>
+      <td>4x depleted</td>
       <td>D614G RBD</td>
-      <td>211208</td>
+      <td>211220</td>
       <td>40500</td>
-      <td>0.01170</td>
+      <td>0.03770</td>
       <td>0.000025</td>
-      <td>P14\n(vaccinated)</td>
+      <td>Delta_3\n(Delta infection)</td>
     </tr>
     <tr>
-      <td>P14</td>
-      <td>vaccinated</td>
-      <td>mock depleted</td>
+      <td>Delta_1</td>
+      <td>Delta infection</td>
+      <td>4x depleted</td>
       <td>D614G RBD</td>
-      <td>211208</td>
+      <td>211220</td>
       <td>40500</td>
-      <td>0.59655</td>
+      <td>0.00095</td>
       <td>0.000025</td>
-      <td>P14\n(vaccinated)</td>
+      <td>Delta_1\n(Delta infection)</td>
     </tr>
   </tbody>
 </table>

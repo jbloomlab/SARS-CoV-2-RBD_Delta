@@ -117,7 +117,7 @@ display(HTML(fracinfect.head().to_html(index=False)))
       <td>D614G</td>
       <td>1</td>
       <td>0.040000</td>
-      <td>0.000005</td>
+      <td>0.000002</td>
       <td>2021-11-25</td>
       <td>1 (2021-11-25)</td>
       <td>1</td>
@@ -127,7 +127,7 @@ display(HTML(fracinfect.head().to_html(index=False)))
       <td>D614G</td>
       <td>1</td>
       <td>0.010000</td>
-      <td>-0.000005</td>
+      <td>0.000002</td>
       <td>2021-11-25</td>
       <td>1 (2021-11-25)</td>
       <td>1</td>
@@ -147,7 +147,7 @@ display(HTML(fracinfect.head().to_html(index=False)))
       <td>D614G</td>
       <td>1</td>
       <td>0.000625</td>
-      <td>0.000594</td>
+      <td>0.002071</td>
       <td>2021-11-25</td>
       <td>1 (2021-11-25)</td>
       <td>1</td>
@@ -157,7 +157,7 @@ display(HTML(fracinfect.head().to_html(index=False)))
       <td>D614G</td>
       <td>1</td>
       <td>0.000156</td>
-      <td>0.065020</td>
+      <td>0.077880</td>
       <td>2021-11-25</td>
       <td>1 (2021-11-25)</td>
       <td>1</td>
@@ -274,7 +274,7 @@ fitparams.head()
       <td>278C</td>
       <td>D614G</td>
       <td>0.000028</td>
-      <td>36194.773838</td>
+      <td>36156.872871</td>
       <td>interpolated</td>
       <td>2021-11-25</td>
       <td>1</td>
@@ -286,7 +286,7 @@ fitparams.head()
       <td>278C</td>
       <td>D614G</td>
       <td>0.000028</td>
-      <td>36156.872871</td>
+      <td>36194.773838</td>
       <td>interpolated</td>
       <td>2021-11-25</td>
       <td>2</td>
@@ -503,7 +503,7 @@ neut_titers.to_csv(neut_titers_file, index=False)
       <td>278C</td>
       <td>D614G</td>
       <td>0.000028</td>
-      <td>36194.773838</td>
+      <td>36156.872871</td>
       <td>interpolated</td>
       <td>2021-11-25</td>
       <td>1</td>
@@ -511,13 +511,13 @@ neut_titers.to_csv(neut_titers_file, index=False)
       <td>False</td>
       <td>0.000063</td>
       <td>Delta breakthrough</td>
-      <td>0.436981</td>
+      <td>0.437439</td>
     </tr>
     <tr>
       <td>278C</td>
       <td>D614G</td>
       <td>0.000028</td>
-      <td>36156.872871</td>
+      <td>36194.773838</td>
       <td>interpolated</td>
       <td>2021-11-25</td>
       <td>2</td>
@@ -525,7 +525,7 @@ neut_titers.to_csv(neut_titers_file, index=False)
       <td>False</td>
       <td>0.000063</td>
       <td>Delta breakthrough</td>
-      <td>0.437439</td>
+      <td>0.436981</td>
     </tr>
     <tr>
       <td>278C</td>
@@ -620,7 +620,7 @@ display(HTML(neut_titers.query('virus==@wildtype & replicate != "average" & (fol
       <td>4631.420274</td>
       <td>interpolated</td>
       <td>2021-12-19</td>
-      <td>2</td>
+      <td>1</td>
       <td>1.0</td>
       <td>False</td>
       <td>0.000273</td>
@@ -672,8 +672,8 @@ display(HTML(neut_titers.query('virus==@wildtype & replicate != "average" & (fol
     <tr>
       <td>273C</td>
       <td>Delta</td>
-      <td>0.000330</td>
-      <td>3027.589222</td>
+      <td>0.000356</td>
+      <td>2810.049343</td>
       <td>interpolated</td>
       <td>2021-12-19</td>
       <td>1</td>
@@ -681,13 +681,13 @@ display(HTML(neut_titers.query('virus==@wildtype & replicate != "average" & (fol
       <td>False</td>
       <td>0.000265</td>
       <td>Delta breakthrough</td>
-      <td>1.246773</td>
+      <td>1.343292</td>
     </tr>
     <tr>
       <td>273C</td>
       <td>Delta</td>
-      <td>0.000356</td>
-      <td>2810.049343</td>
+      <td>0.000330</td>
+      <td>3027.589222</td>
       <td>interpolated</td>
       <td>2021-12-19</td>
       <td>2</td>
@@ -695,7 +695,7 @@ display(HTML(neut_titers.query('virus==@wildtype & replicate != "average" & (fol
       <td>False</td>
       <td>0.000265</td>
       <td>Delta breakthrough</td>
-      <td>1.343292</td>
+      <td>1.246773</td>
     </tr>
     <tr>
       <td>P08</td>
@@ -728,8 +728,8 @@ display(HTML(neut_titers.query('virus==@wildtype & replicate != "average" & (fol
     <tr>
       <td>P12</td>
       <td>Delta</td>
-      <td>0.003754</td>
-      <td>266.357536</td>
+      <td>0.003414</td>
+      <td>292.908383</td>
       <td>interpolated</td>
       <td>2021-12-19</td>
       <td>1</td>
@@ -737,13 +737,13 @@ display(HTML(neut_titers.query('virus==@wildtype & replicate != "average" & (fol
       <td>False</td>
       <td>0.004831</td>
       <td>Pfizer</td>
-      <td>0.777115</td>
+      <td>0.706673</td>
     </tr>
     <tr>
       <td>P12</td>
       <td>Delta</td>
-      <td>0.003414</td>
-      <td>292.908383</td>
+      <td>0.003754</td>
+      <td>266.357536</td>
       <td>interpolated</td>
       <td>2021-12-19</td>
       <td>2</td>
@@ -751,7 +751,7 @@ display(HTML(neut_titers.query('virus==@wildtype & replicate != "average" & (fol
       <td>False</td>
       <td>0.004831</td>
       <td>Pfizer</td>
-      <td>0.706673</td>
+      <td>0.777115</td>
     </tr>
     <tr>
       <td>P14</td>
@@ -788,7 +788,7 @@ display(HTML(neut_titers.query('virus==@wildtype & replicate != "average" & (fol
       <td>2318.502205</td>
       <td>interpolated</td>
       <td>2021-12-19</td>
-      <td>1</td>
+      <td>2</td>
       <td>1.0</td>
       <td>False</td>
       <td>0.000372</td>
