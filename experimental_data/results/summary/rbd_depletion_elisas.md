@@ -160,7 +160,7 @@ for genotype in set([i.split(' ')[0] for i in titration_df['ligand'].unique().to
       <td>D614G RBD</td>
       <td>211220</td>
       <td>40500</td>
-      <td>0.00345</td>
+      <td>0.00070</td>
       <td>0.000025</td>
       <td>Delta_7\n(Delta infection)</td>
     </tr>
@@ -171,7 +171,7 @@ for genotype in set([i.split(' ')[0] for i in titration_df['ligand'].unique().to
       <td>D614G RBD</td>
       <td>211220</td>
       <td>40500</td>
-      <td>0.00140</td>
+      <td>0.00040</td>
       <td>0.000025</td>
       <td>Delta_6\n(Delta infection)</td>
     </tr>
@@ -182,7 +182,7 @@ for genotype in set([i.split(' ')[0] for i in titration_df['ligand'].unique().to
       <td>D614G RBD</td>
       <td>211220</td>
       <td>40500</td>
-      <td>0.00195</td>
+      <td>-0.00175</td>
       <td>0.000025</td>
       <td>Delta_4\n(Delta infection)</td>
     </tr>
@@ -193,7 +193,7 @@ for genotype in set([i.split(' ')[0] for i in titration_df['ligand'].unique().to
       <td>D614G RBD</td>
       <td>211220</td>
       <td>40500</td>
-      <td>0.03770</td>
+      <td>0.00080</td>
       <td>0.000025</td>
       <td>Delta_3\n(Delta infection)</td>
     </tr>
@@ -204,7 +204,7 @@ for genotype in set([i.split(' ')[0] for i in titration_df['ligand'].unique().to
       <td>D614G RBD</td>
       <td>211220</td>
       <td>40500</td>
-      <td>0.00095</td>
+      <td>0.00100</td>
       <td>0.000025</td>
       <td>Delta_1\n(Delta infection)</td>
     </tr>
