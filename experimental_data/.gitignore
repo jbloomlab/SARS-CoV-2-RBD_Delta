@@ -1,0 +1,16 @@
+results/*
+
+!results/summary
+
+!results/entry_titers
+results/entry_titers/*
+!results/entry_titers/titers.csv
+
+!results/neut_titers
+results/neut_titers/*
+!results/neut_titers/fracinfect.csv
+!results/neut_titers/neut_titers.csv
+
+!results/rbd_depletion_neuts
+results/rbd_depletion_neuts/*
+!results/rbd_depletion_neuts/RBD_depletion_NT50.csv

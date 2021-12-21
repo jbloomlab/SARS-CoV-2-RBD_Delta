@@ -48,9 +48,9 @@ def get_single_file_in_subdir(subdir, ending):
 rule all:
     input:
         'results/neut_titers/fracinfect.csv',
-        # 'results/neut_titers/neut_titers.csv',
+        'results/neut_titers/neut_titers.csv',
         'results/summary/rbd_depletion_neuts.md',
-        # 'results/summary/analyze_neut_data.md',
+        'results/summary/analyze_neut_data.md',
         'results/entry_titers/titers.csv',
         'results/summary/calculate_entry_titer.md',
         'results/summary/rbd_depletion_elisas.md',
@@ -72,14 +72,14 @@ rule rbd_depletion_elisas:
     run:
         run_nb_to_md('rbd_depletion_elisas.ipynb')
 
-# rule analyze_neut_curves:
-#     input:
-#         fracinfect='results/neut_titers/fracinfect.csv',
-#     output:
-#         'results/neut_titers/neut_titers.csv',
-#         'results/summary/analyze_neut_data.md',
-#     run:
-#         run_nb_to_md('analyze_neut_data.ipynb')
+rule analyze_neut_curves:
+    input:
+        fracinfect='results/neut_titers/fracinfect.csv',
+    output:
+        'results/neut_titers/neut_titers.csv',
+        'results/summary/analyze_neut_data.md',
+    run:
+        run_nb_to_md('analyze_neut_data.ipynb')
 
 rule rbd_depletion_neuts:
     input:
