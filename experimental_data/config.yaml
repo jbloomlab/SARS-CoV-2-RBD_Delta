@@ -32,12 +32,17 @@ rbd_depletions_date:
 
 sample_key_file: data/sample_key.csv
 
+sample_type_order:
+  - Pfizer
+  - Delta breakthrough
+  - primary Delta infection
+
 virus_key_mutneuts: # how to rename viruses for analyzing mutneuts
-  RBD antibodies depleted (D614G spike): RBD antibodies depleted (D614G)
+  RBD antibodies depleted (D614G spike): Wuhan-1 RBD Abs depleted (x D614G PV)
   mock depletion (D614G spike): D614G
-  RBD antibodies depleted (Delta spike): RBD antibodies depleted (Delta)
+  RBD antibodies depleted (Delta spike): Delta RBD Abs depleted (x Delta PV)
   mock depletion (Delta spike): Delta
-  Delta RBD antibodies depleted x D614G spike PV: L452-binding antibodies
+  Delta RBD antibodies depleted x D614G spike PV: Delta RBD Abs depleted (x D614G PV)
   Delta_E484K: Delta + E484K
   Delta_K417N: Delta + K417N
   Delta: Delta
@@ -46,10 +51,10 @@ virus_order:
   - Delta
   - Delta + K417N
   - Delta + E484K
-  - RBD antibodies depleted (Delta)
+  - Delta RBD Abs depleted (x Delta PV)
   - D614G
-  - RBD antibodies depleted (D614G)
-  - L452-binding antibodies
+  - Wuhan-1 RBD Abs depleted (x D614G PV)
+  - Delta RBD Abs depleted (x D614G PV)
 
 # specify the "wildtype" virus for the purpose of this study
 wildtype_virus: Delta
@@ -60,12 +65,12 @@ virus_subsets:
     - Delta
     - Delta + K417N
     - Delta + E484K
-    - L452-binding antibodies
-    - RBD antibodies depleted (D614G)
-    - RBD antibodies depleted (Delta)
+    - Delta RBD Abs depleted (x D614G PV)
+    - Wuhan-1 RBD Abs depleted (x D614G PV)
+    - Delta RBD Abs depleted (x Delta PV)
   depletions:
     - D614G
     - Delta
-    - L452-binding antibodies
-    - RBD antibodies depleted (D614G)
-    - RBD antibodies depleted (Delta)
+    - Delta RBD Abs depleted (x D614G PV)
+    - Wuhan-1 RBD Abs depleted (x D614G PV)
+    - Delta RBD Abs depleted (x Delta PV)

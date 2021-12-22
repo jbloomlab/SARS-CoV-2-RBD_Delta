@@ -308,7 +308,7 @@ fitparams.head()
     <tr>
       <th>3</th>
       <td>278C</td>
-      <td>L452-binding antibodies</td>
+      <td>Delta RBD Abs depleted (x D614G PV)</td>
       <td>0.003455</td>
       <td>289.406060</td>
       <td>interpolated</td>
@@ -320,7 +320,7 @@ fitparams.head()
     <tr>
       <th>4</th>
       <td>278C</td>
-      <td>L452-binding antibodies</td>
+      <td>Delta RBD Abs depleted (x D614G PV)</td>
       <td>0.002789</td>
       <td>358.494044</td>
       <td>interpolated</td>
@@ -472,7 +472,9 @@ neut_titers = (
            how='left',
            validate='many_to_one',
           )
-    .assign(fold_change=lambda x: x['ic50'] / x['wildtype_ic50'],)
+    .assign(fold_change=lambda x: x['ic50'] / x['wildtype_ic50'],
+            sample_type=lambda x: pd.Categorical(x['sample_type'], ordered=True, categories=config['sample_type_order'])
+           )
     )
 
 
@@ -543,7 +545,7 @@ neut_titers.to_csv(neut_titers_file, index=False)
     </tr>
     <tr>
       <td>278C</td>
-      <td>L452-binding antibodies</td>
+      <td>Delta RBD Abs depleted (x D614G PV)</td>
       <td>0.003455</td>
       <td>289.406060</td>
       <td>interpolated</td>
@@ -557,7 +559,7 @@ neut_titers.to_csv(neut_titers_file, index=False)
     </tr>
     <tr>
       <td>278C</td>
-      <td>L452-binding antibodies</td>
+      <td>Delta RBD Abs depleted (x D614G PV)</td>
       <td>0.002789</td>
       <td>358.494044</td>
       <td>interpolated</td>
@@ -577,7 +579,7 @@ As we can see below, the fold-change in IC50 for each wildtype replicate is no l
 
 
 ```python
-display(HTML(neut_titers.query('virus==@wildtype & replicate != "average" & (fold_change <0.85 | fold_change >1.15)').head(100).to_html(index=False)))
+display(HTML(neut_titers.query('virus==@wildtype & replicate != "average" & (fold_change <0.8 | fold_change >1.2)').head(10).to_html(index=False)))
 ```
 
 
@@ -600,20 +602,6 @@ display(HTML(neut_titers.query('virus==@wildtype & replicate != "average" & (fol
   </thead>
   <tbody>
     <tr>
-      <td>Delta_8</td>
-      <td>Delta</td>
-      <td>0.000058</td>
-      <td>17100.372817</td>
-      <td>interpolated</td>
-      <td>2021-12-19</td>
-      <td>2</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.000070</td>
-      <td>primary Delta infection</td>
-      <td>0.832411</td>
-    </tr>
-    <tr>
       <td>Delta_10</td>
       <td>Delta</td>
       <td>0.000216</td>
@@ -628,20 +616,6 @@ display(HTML(neut_titers.query('virus==@wildtype & replicate != "average" & (fol
       <td>0.790700</td>
     </tr>
     <tr>
-      <td>Delta_1</td>
-      <td>Delta</td>
-      <td>0.000066</td>
-      <td>15115.394507</td>
-      <td>interpolated</td>
-      <td>2021-12-19</td>
-      <td>2</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.000080</td>
-      <td>primary Delta infection</td>
-      <td>0.826808</td>
-    </tr>
-    <tr>
       <td>276C</td>
       <td>Delta</td>
       <td>0.000398</td>
@@ -654,20 +628,6 @@ display(HTML(neut_titers.query('virus==@wildtype & replicate != "average" & (fol
       <td>0.000522</td>
       <td>Delta breakthrough</td>
       <td>0.762389</td>
-    </tr>
-    <tr>
-      <td>267C</td>
-      <td>Delta</td>
-      <td>0.002206</td>
-      <td>453.387064</td>
-      <td>interpolated</td>
-      <td>2021-12-19</td>
-      <td>2</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.001878</td>
-      <td>Delta breakthrough</td>
-      <td>1.174335</td>
     </tr>
     <tr>
       <td>273C</td>
@@ -696,20 +656,6 @@ display(HTML(neut_titers.query('virus==@wildtype & replicate != "average" & (fol
       <td>0.000265</td>
       <td>Delta breakthrough</td>
       <td>1.246773</td>
-    </tr>
-    <tr>
-      <td>P08</td>
-      <td>Delta</td>
-      <td>0.000905</td>
-      <td>1105.112558</td>
-      <td>interpolated</td>
-      <td>2021-12-19</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.000768</td>
-      <td>Pfizer</td>
-      <td>1.178833</td>
     </tr>
     <tr>
       <td>P08</td>
@@ -782,76 +728,6 @@ display(HTML(neut_titers.query('virus==@wildtype & replicate != "average" & (fol
       <td>1.211468</td>
     </tr>
     <tr>
-      <td>P04</td>
-      <td>Delta</td>
-      <td>0.000431</td>
-      <td>2318.502205</td>
-      <td>interpolated</td>
-      <td>2021-12-19</td>
-      <td>2</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.000372</td>
-      <td>Pfizer</td>
-      <td>1.160354</td>
-    </tr>
-    <tr>
-      <td>P05</td>
-      <td>Delta</td>
-      <td>0.002177</td>
-      <td>459.425152</td>
-      <td>interpolated</td>
-      <td>2021-12-19</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.001853</td>
-      <td>Pfizer</td>
-      <td>1.174855</td>
-    </tr>
-    <tr>
-      <td>P05</td>
-      <td>Delta</td>
-      <td>0.002174</td>
-      <td>460.003568</td>
-      <td>interpolated</td>
-      <td>2021-12-19</td>
-      <td>2</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.001853</td>
-      <td>Pfizer</td>
-      <td>1.173377</td>
-    </tr>
-    <tr>
-      <td>276C</td>
-      <td>Delta</td>
-      <td>0.000602</td>
-      <td>1660.048897</td>
-      <td>interpolated</td>
-      <td>2021-11-12</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.000522</td>
-      <td>Delta breakthrough</td>
-      <td>1.154873</td>
-    </tr>
-    <tr>
-      <td>273C</td>
-      <td>Delta</td>
-      <td>0.000218</td>
-      <td>4584.673177</td>
-      <td>interpolated</td>
-      <td>2021-11-12</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.000265</td>
-      <td>Delta breakthrough</td>
-      <td>0.823334</td>
-    </tr>
-    <tr>
       <td>273C</td>
       <td>Delta</td>
       <td>0.000192</td>
@@ -864,188 +740,6 @@ display(HTML(neut_titers.query('virus==@wildtype & replicate != "average" & (fol
       <td>0.000265</td>
       <td>Delta breakthrough</td>
       <td>0.725214</td>
-    </tr>
-    <tr>
-      <td>274C</td>
-      <td>Delta</td>
-      <td>0.000376</td>
-      <td>2657.054596</td>
-      <td>interpolated</td>
-      <td>2021-11-12</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.000527</td>
-      <td>Delta breakthrough</td>
-      <td>0.713516</td>
-    </tr>
-    <tr>
-      <td>274C</td>
-      <td>Delta</td>
-      <td>0.000620</td>
-      <td>1612.732431</td>
-      <td>interpolated</td>
-      <td>2021-11-12</td>
-      <td>2</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.000527</td>
-      <td>Delta breakthrough</td>
-      <td>1.175552</td>
-    </tr>
-    <tr>
-      <td>267C</td>
-      <td>Delta</td>
-      <td>0.001534</td>
-      <td>651.846252</td>
-      <td>interpolated</td>
-      <td>2021-11-12</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.001878</td>
-      <td>Delta breakthrough</td>
-      <td>0.816801</td>
-    </tr>
-    <tr>
-      <td>P12</td>
-      <td>Delta</td>
-      <td>0.007668</td>
-      <td>130.407718</td>
-      <td>interpolated</td>
-      <td>2021-11-12</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.004831</td>
-      <td>Pfizer</td>
-      <td>1.587257</td>
-    </tr>
-    <tr>
-      <td>P14</td>
-      <td>Delta</td>
-      <td>0.000306</td>
-      <td>3266.681667</td>
-      <td>interpolated</td>
-      <td>2021-11-12</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.000395</td>
-      <td>Pfizer</td>
-      <td>0.775034</td>
-    </tr>
-    <tr>
-      <td>P14</td>
-      <td>Delta</td>
-      <td>0.000303</td>
-      <td>3297.017821</td>
-      <td>interpolated</td>
-      <td>2021-11-12</td>
-      <td>2</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.000395</td>
-      <td>Pfizer</td>
-      <td>0.767903</td>
-    </tr>
-    <tr>
-      <td>P08</td>
-      <td>Delta</td>
-      <td>0.000582</td>
-      <td>1717.055795</td>
-      <td>interpolated</td>
-      <td>2021-11-12</td>
-      <td>2</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.000768</td>
-      <td>Pfizer</td>
-      <td>0.758708</td>
-    </tr>
-    <tr>
-      <td>P09</td>
-      <td>Delta</td>
-      <td>0.006350</td>
-      <td>157.487527</td>
-      <td>interpolated</td>
-      <td>2021-11-12</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.005079</td>
-      <td>Pfizer</td>
-      <td>1.250193</td>
-    </tr>
-    <tr>
-      <td>P04</td>
-      <td>Delta</td>
-      <td>0.000303</td>
-      <td>3302.903211</td>
-      <td>interpolated</td>
-      <td>2021-11-12</td>
-      <td>2</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.000372</td>
-      <td>Pfizer</td>
-      <td>0.814520</td>
-    </tr>
-    <tr>
-      <td>P05</td>
-      <td>Delta</td>
-      <td>0.001473</td>
-      <td>678.854843</td>
-      <td>interpolated</td>
-      <td>2021-11-12</td>
-      <td>2</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.001853</td>
-      <td>Pfizer</td>
-      <td>0.795100</td>
-    </tr>
-    <tr>
-      <td>Delta_10</td>
-      <td>Delta</td>
-      <td>0.000337</td>
-      <td>2965.866863</td>
-      <td>interpolated</td>
-      <td>2021-12-12</td>
-      <td>2</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.000273</td>
-      <td>primary Delta infection</td>
-      <td>1.234737</td>
-    </tr>
-    <tr>
-      <td>Delta_8</td>
-      <td>Delta</td>
-      <td>0.000086</td>
-      <td>11692.964462</td>
-      <td>interpolated</td>
-      <td>2021-12-12</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.000070</td>
-      <td>primary Delta infection</td>
-      <td>1.217360</td>
-    </tr>
-    <tr>
-      <td>Delta_1</td>
-      <td>Delta</td>
-      <td>0.000092</td>
-      <td>10835.685581</td>
-      <td>interpolated</td>
-      <td>2021-12-12</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.000080</td>
-      <td>primary Delta infection</td>
-      <td>1.153368</td>
     </tr>
   </tbody>
 </table>
@@ -1155,10 +849,15 @@ for metric in ['fold_change', 'ic50']:
                     .assign(virus=lambda x: pd.Categorical(x['virus'],
                                                               ordered=True,
                                                               categories=virus_subsample))
+                    .groupby(['serum', 'virus', 'sample_type','ic50_is_bound'])
+                    .agg({metric: geometric_mean})
+                    .reset_index()
+                    .dropna()
                     ) +
-             aes('virus', metric, shape='ic50_is_bound',
+             aes('virus', metric, shape='ic50_is_bound', group='serum',
                 ) +
-             geom_point(size=2.5, alpha=0.5, ) + 
+             geom_line(aes(x='virus', y=metric, group='serum'), color=CBPALETTE[0]) +
+             geom_point(size=2.5, alpha=0.5, fill=CBPALETTE[0]) + 
              geom_crossbar(data=(neut_titers
                                  .query("virus in @virus_subsample & replicate== 'average'") # & date in @dates
                                  .groupby(['virus', 'sample_type'])
@@ -1191,7 +890,7 @@ for metric in ['fold_change', 'ic50']:
                        ) +
              scale_shape_manual(values=['o','^'], name='limit of detection') +
              scale_color_manual(values=CBPALETTE*3, guide=False) +
-             scale_fill_manual(values=CBPALETTE*3) +
+             # scale_fill_manual(values=CBPALETTE*3) +
              facet_wrap('~sample_type', scales='free_x')
              )
 
@@ -1203,74 +902,36 @@ for metric in ['fold_change', 'ic50']:
 ```
 
     Making plot for fold_change for mutneuts:
-
-
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/guides/guides.py:197: PlotnineWarning: Cannot generate legend for the 'fill' aesthetic. Make sure you have mapped a variable to it
-
-
     Saving to results/neut_titers/fold_change_mutneuts_aggregate.pdf
-
-
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/guides/guides.py:197: PlotnineWarning: Cannot generate legend for the 'fill' aesthetic. Make sure you have mapped a variable to it
-
-
     Making plot for fold_change for depletions:
-
-
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/guides/guides.py:197: PlotnineWarning: Cannot generate legend for the 'fill' aesthetic. Make sure you have mapped a variable to it
-
-
     Saving to results/neut_titers/fold_change_depletions_aggregate.pdf
-
-
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/guides/guides.py:197: PlotnineWarning: Cannot generate legend for the 'fill' aesthetic. Make sure you have mapped a variable to it
-
-
     Making plot for ic50 for mutneuts:
-
-
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/guides/guides.py:197: PlotnineWarning: Cannot generate legend for the 'fill' aesthetic. Make sure you have mapped a variable to it
-
-
     Saving to results/neut_titers/ic50_mutneuts_aggregate.pdf
-
-
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/guides/guides.py:197: PlotnineWarning: Cannot generate legend for the 'fill' aesthetic. Make sure you have mapped a variable to it
-
-
     Making plot for ic50 for depletions:
-
-
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/guides/guides.py:197: PlotnineWarning: Cannot generate legend for the 'fill' aesthetic. Make sure you have mapped a variable to it
-
-
     Saving to results/neut_titers/ic50_depletions_aggregate.pdf
 
 
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/guides/guides.py:197: PlotnineWarning: Cannot generate legend for the 'fill' aesthetic. Make sure you have mapped a variable to it
-
-
 
     
-![png](analyze_neut_data_files/analyze_neut_data_24_16.png)
+![png](analyze_neut_data_files/analyze_neut_data_24_1.png)
     
 
 
 
     
-![png](analyze_neut_data_files/analyze_neut_data_24_17.png)
+![png](analyze_neut_data_files/analyze_neut_data_24_2.png)
     
 
 
 
     
-![png](analyze_neut_data_files/analyze_neut_data_24_18.png)
+![png](analyze_neut_data_files/analyze_neut_data_24_3.png)
     
 
 
 
     
-![png](analyze_neut_data_files/analyze_neut_data_24_19.png)
+![png](analyze_neut_data_files/analyze_neut_data_24_4.png)
     
 
 
@@ -1314,12 +975,18 @@ for metric in ['fold_change', 'ic50']:
                                                                   ordered=True,
                                                                   categories=virus_subsample),
                            )
+                    .groupby(['serum', 'virus', 'sample_type','ic50_is_bound'])
+                    .agg({metric: geometric_mean})
+                    .reset_index()
+                    .dropna()
                     ) +
              aes('virus', 
                  metric, 
                  fill='sample_type', 
                  color='sample_type',
+                 # shape='ic50_is_bound', 
                 ) +
+             # geom_line(aes(x='virus', y=metric, group='serum'),position=position_dodge(width=0.55),) +
              geom_point(position=position_dodge(width=0.55), size=2.5, alpha=0.5) +
              geom_crossbar(data=(neut_titers
                                  .query("virus in @virus_subsample & replicate=='average'")
@@ -1328,8 +995,8 @@ for metric in ['fold_change', 'ic50']:
                                  .reset_index()
                                  .dropna()
                                 ),
-#                            inherit_aes=False,
-                           mapping=aes(x='virus', y=metric, ymin=metric, ymax=metric),
+                           # inherit_aes=False,
+                           mapping=aes(x='virus', y=metric, ymin=metric, ymax=metric,), #fill='sample_type', color='sample_type',
                            position=position_dodge(width=0.55),
                   ) +
              geom_hline(yintercept=yintercept[metric],
@@ -1342,8 +1009,8 @@ for metric in ['fold_change', 'ic50']:
                    figure_size=(neut_titers.query('virus in @virus_subsample')['virus'].nunique()*0.75, 2.5),
                    axis_text_x=element_text(rotation=90)
                    ) +
-             scale_fill_manual(values=['#44AA99', '#332288', '#AA4499'], name='infecting virus\n')+
-             scale_color_manual(values=['#44AA99', '#332288', '#AA4499'], name='infecting virus\n')
+             scale_fill_manual(values=['#44AA99', '#332288', '#AA4499'], name='exposure history\n')+
+             scale_color_manual(values=['#44AA99', '#332288', '#AA4499'], name='exposure history\n')
              )
 
         _ = p.draw()
@@ -1401,6 +1068,8 @@ geomean_mut_effects=(neut_titers
                      .dropna()
                      .merge((neut_titers
                              .query("replicate=='average'")
+                             [['virus', 'sample_type', 'serum']]
+                             .drop_duplicates()
                              .groupby(['virus', 'sample_type'])
                              .size()
                              .reset_index(name='counts')
@@ -1427,38 +1096,32 @@ display(HTML(geomean_mut_effects.to_html(index=False)))
   <tbody>
     <tr>
       <td>D614G</td>
+      <td>Pfizer</td>
+      <td>0.412284</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>D614G</td>
       <td>Delta breakthrough</td>
       <td>0.347788</td>
       <td>8</td>
     </tr>
     <tr>
-      <td>D614G</td>
+      <td>Delta</td>
       <td>Pfizer</td>
-      <td>0.412284</td>
-      <td>16</td>
+      <td>1.003604</td>
+      <td>8</td>
     </tr>
     <tr>
       <td>Delta</td>
       <td>Delta breakthrough</td>
       <td>1.001336</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <td>Delta</td>
-      <td>Pfizer</td>
-      <td>1.003604</td>
-      <td>16</td>
+      <td>8</td>
     </tr>
     <tr>
       <td>Delta</td>
       <td>primary Delta infection</td>
       <td>1.001430</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <td>Delta + E484K</td>
-      <td>Delta breakthrough</td>
-      <td>3.259109</td>
       <td>8</td>
     </tr>
     <tr>
@@ -1469,14 +1132,14 @@ display(HTML(geomean_mut_effects.to_html(index=False)))
     </tr>
     <tr>
       <td>Delta + E484K</td>
-      <td>primary Delta infection</td>
-      <td>8.403561</td>
+      <td>Delta breakthrough</td>
+      <td>3.259109</td>
       <td>8</td>
     </tr>
     <tr>
-      <td>Delta + K417N</td>
-      <td>Delta breakthrough</td>
-      <td>2.608850</td>
+      <td>Delta + E484K</td>
+      <td>primary Delta infection</td>
+      <td>8.403561</td>
       <td>8</td>
     </tr>
     <tr>
@@ -1487,48 +1150,193 @@ display(HTML(geomean_mut_effects.to_html(index=False)))
     </tr>
     <tr>
       <td>Delta + K417N</td>
+      <td>Delta breakthrough</td>
+      <td>2.608850</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Delta + K417N</td>
       <td>primary Delta infection</td>
       <td>2.178660</td>
       <td>8</td>
     </tr>
     <tr>
-      <td>L452-binding antibodies</td>
-      <td>Delta breakthrough</td>
-      <td>21.777749</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <td>L452-binding antibodies</td>
+      <td>Delta RBD Abs depleted (x D614G PV)</td>
       <td>Pfizer</td>
       <td>2.915247</td>
       <td>8</td>
     </tr>
     <tr>
-      <td>RBD antibodies depleted (D614G)</td>
+      <td>Delta RBD Abs depleted (x D614G PV)</td>
+      <td>Delta breakthrough</td>
+      <td>21.777749</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Delta RBD Abs depleted (x Delta PV)</td>
       <td>Pfizer</td>
       <td>26.630221</td>
       <td>8</td>
     </tr>
     <tr>
-      <td>RBD antibodies depleted (Delta)</td>
+      <td>Delta RBD Abs depleted (x Delta PV)</td>
       <td>Delta breakthrough</td>
       <td>95.939376</td>
       <td>8</td>
     </tr>
     <tr>
-      <td>RBD antibodies depleted (Delta)</td>
-      <td>Pfizer</td>
-      <td>26.630221</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <td>RBD antibodies depleted (Delta)</td>
+      <td>Delta RBD Abs depleted (x Delta PV)</td>
       <td>primary Delta infection</td>
       <td>86.628556</td>
       <td>8</td>
     </tr>
+    <tr>
+      <td>Wuhan-1 RBD Abs depleted (x D614G PV)</td>
+      <td>Pfizer</td>
+      <td>26.630221</td>
+      <td>8</td>
+    </tr>
   </tbody>
 </table>
+
+
+
+```python
+(neut_titers
+                    .query("virus in @virus_subsample & replicate=='average'")
+                    .assign(virus_labels=lambda x: pd.Categorical(x['virus'],
+                                                                  ordered=True,
+                                                                  categories=virus_subsample),
+                           )
+                    .groupby(['serum', 'virus', 'sample_type','ic50_is_bound'])
+                    .agg({metric: geometric_mean})
+                    .reset_index()
+                    .dropna()
+                    )
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>serum</th>
+      <th>virus</th>
+      <th>sample_type</th>
+      <th>ic50_is_bound</th>
+      <th>ic50</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>267C</td>
+      <td>D614G</td>
+      <td>Delta breakthrough</td>
+      <td>False</td>
+      <td>0.001152</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>267C</td>
+      <td>Delta</td>
+      <td>Delta breakthrough</td>
+      <td>False</td>
+      <td>0.001879</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>267C</td>
+      <td>Delta RBD Abs depleted (x D614G PV)</td>
+      <td>Delta breakthrough</td>
+      <td>False</td>
+      <td>0.032963</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>267C</td>
+      <td>Delta RBD Abs depleted (x Delta PV)</td>
+      <td>Delta breakthrough</td>
+      <td>True</td>
+      <td>0.040000</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>268C</td>
+      <td>D614G</td>
+      <td>Delta breakthrough</td>
+      <td>False</td>
+      <td>0.000185</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>690</th>
+      <td>P14</td>
+      <td>D614G</td>
+      <td>Pfizer</td>
+      <td>False</td>
+      <td>0.000273</td>
+    </tr>
+    <tr>
+      <th>696</th>
+      <td>P14</td>
+      <td>Delta</td>
+      <td>Pfizer</td>
+      <td>False</td>
+      <td>0.000396</td>
+    </tr>
+    <tr>
+      <th>702</th>
+      <td>P14</td>
+      <td>Delta RBD Abs depleted (x D614G PV)</td>
+      <td>Pfizer</td>
+      <td>False</td>
+      <td>0.001530</td>
+    </tr>
+    <tr>
+      <th>709</th>
+      <td>P14</td>
+      <td>Delta RBD Abs depleted (x Delta PV)</td>
+      <td>Pfizer</td>
+      <td>True</td>
+      <td>0.040000</td>
+    </tr>
+    <tr>
+      <th>715</th>
+      <td>P14</td>
+      <td>Wuhan-1 RBD Abs depleted (x D614G PV)</td>
+      <td>Pfizer</td>
+      <td>True</td>
+      <td>0.040000</td>
+    </tr>
+  </tbody>
+</table>
+<p>88 rows × 5 columns</p>
+</div>
+
 
 
 
