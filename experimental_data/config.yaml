@@ -72,9 +72,9 @@ virus_subsets:
     - Delta RBD Abs depleted (x D614G PV)
     - Wuhan-1 RBD Abs depleted (x D614G PV)
     - Delta RBD Abs depleted (x Delta PV)
-  depletions:
-    - D614G
-    - Delta
-    - Delta RBD Abs depleted (x D614G PV)
-    - Wuhan-1 RBD Abs depleted (x D614G PV)
-    - Delta RBD Abs depleted (x Delta PV)
+  # depletions:
+  #   - D614G
+  #   - Delta
+  #   - Delta RBD Abs depleted (x D614G PV)
+  #   - Wuhan-1 RBD Abs depleted (x D614G PV)
+  #   - Delta RBD Abs depleted (x Delta PV)
