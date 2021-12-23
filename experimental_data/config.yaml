@@ -27,8 +27,12 @@ NT50_LOD: 25
 
 rbd_depletions_date:
   - 2021-11-12
-  # - 2021-11-25
+  - 2021-11-25
   - 2021-12-12
+  - 2021-12-22
+
+heterologous_depletions_dates:
+  - 2021-11-25
 
 sample_key_file: data/sample_key.csv
 

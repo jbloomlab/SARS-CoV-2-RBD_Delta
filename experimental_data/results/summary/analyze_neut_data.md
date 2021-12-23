@@ -232,8 +232,8 @@ fitparams.head()
 ```
 
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/neutcurve/hillcurve.py:741: RuntimeWarning: invalid value encountered in power
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/scipy/optimize/minpack.py:833: OptimizeWarning: Covariance of the parameters could not be estimated
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/neutcurve/hillcurve.py:451: RuntimeWarning: invalid value encountered in sqrt
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/scipy/optimize/minpack.py:833: OptimizeWarning: Covariance of the parameters could not be estimated
 
 
 
@@ -366,6 +366,14 @@ for d in fracinfect['date'].unique():
 
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/neutcurve/hillcurve.py:741: RuntimeWarning: invalid value encountered in power
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/scipy/optimize/minpack.py:833: OptimizeWarning: Covariance of the parameters could not be estimated
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/neutcurve/hillcurve.py:451: RuntimeWarning: invalid value encountered in sqrt
+
+
+    Saving to results/neut_titers/2021-12-22_mutant_neuts.pdf
+
+
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/neutcurve/hillcurve.py:741: RuntimeWarning: invalid value encountered in power
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/scipy/optimize/minpack.py:833: OptimizeWarning: Covariance of the parameters could not be estimated
 
 
     Saving to results/neut_titers/2021-11-12_mutant_neuts.pdf
@@ -379,18 +387,6 @@ for d in fracinfect['date'].unique():
 
 
     
-![png](analyze_neut_data_files/analyze_neut_data_13_5.png)
-    
-
-
-
-    
-![png](analyze_neut_data_files/analyze_neut_data_13_6.png)
-    
-
-
-
-    
 ![png](analyze_neut_data_files/analyze_neut_data_13_7.png)
     
 
@@ -398,6 +394,24 @@ for d in fracinfect['date'].unique():
 
     
 ![png](analyze_neut_data_files/analyze_neut_data_13_8.png)
+    
+
+
+
+    
+![png](analyze_neut_data_files/analyze_neut_data_13_9.png)
+    
+
+
+
+    
+![png](analyze_neut_data_files/analyze_neut_data_13_10.png)
+    
+
+
+
+    
+![png](analyze_neut_data_files/analyze_neut_data_13_11.png)
     
 
 
@@ -426,6 +440,7 @@ fig.savefig(plotfile, bbox_inches='tight')
 ```
 
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/neutcurve/hillcurve.py:741: RuntimeWarning: invalid value encountered in power
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/neutcurve/hillcurve.py:451: RuntimeWarning: invalid value encountered in sqrt
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/scipy/optimize/minpack.py:833: OptimizeWarning: Covariance of the parameters could not be estimated
 
 
@@ -1103,7 +1118,13 @@ display(HTML(geomean_mut_effects.to_html(index=False)))
     <tr>
       <td>D614G</td>
       <td>Delta breakthrough</td>
-      <td>0.347788</td>
+      <td>0.324272</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>D614G</td>
+      <td>primary Delta infection</td>
+      <td>2.649448</td>
       <td>8</td>
     </tr>
     <tr>
@@ -1196,6 +1217,18 @@ display(HTML(geomean_mut_effects.to_html(index=False)))
       <td>26.630221</td>
       <td>8</td>
     </tr>
+    <tr>
+      <td>Wuhan-1 RBD Abs depleted (x D614G PV)</td>
+      <td>Delta breakthrough</td>
+      <td>45.242717</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Wuhan-1 RBD Abs depleted (x D614G PV)</td>
+      <td>primary Delta infection</td>
+      <td>142.947149</td>
+      <td>8</td>
+    </tr>
   </tbody>
 </table>
 
@@ -1250,7 +1283,7 @@ display(HTML(geomean_mut_effects.to_html(index=False)))
       <td>D614G</td>
       <td>Delta breakthrough</td>
       <td>False</td>
-      <td>0.001152</td>
+      <td>0.000862</td>
     </tr>
     <tr>
       <th>8</th>
@@ -1277,12 +1310,12 @@ display(HTML(geomean_mut_effects.to_html(index=False)))
       <td>0.040000</td>
     </tr>
     <tr>
-      <th>32</th>
-      <td>268C</td>
-      <td>D614G</td>
+      <th>27</th>
+      <td>267C</td>
+      <td>Wuhan-1 RBD Abs depleted (x D614G PV)</td>
       <td>Delta breakthrough</td>
-      <td>False</td>
-      <td>0.000185</td>
+      <td>True</td>
+      <td>0.040000</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1334,7 +1367,7 @@ display(HTML(geomean_mut_effects.to_html(index=False)))
     </tr>
   </tbody>
 </table>
-<p>88 rows × 5 columns</p>
+<p>112 rows × 5 columns</p>
 </div>
 
 
