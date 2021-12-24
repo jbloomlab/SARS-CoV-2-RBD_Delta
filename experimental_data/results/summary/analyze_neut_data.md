@@ -15,6 +15,7 @@ from matplotlib.backends.backend_pdf import PdfPages
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
+import natsort
 import numpy as np
 import pandas as pd
 from plotnine import *
@@ -54,6 +55,7 @@ fracinfect_file = 'results/neut_titers/fracinfect.csv'
 
 # output files
 neut_titers_file = f'{results}/neut_titers.csv'
+neut_titers_summary_file = f'{results}/neut_titers_summary.csv'
 all_replicate_curves = f'{results}/all_replicate_curves.pdf'
 ```
 
@@ -175,6 +177,9 @@ fits = neutcurve.curvefits.CurveFits(
             )
 ```
 
+Plot all replicate curves for each `serum x virus` condition.
+However, note that this is *really slow* when there are a lot of curves to plot! 
+
 
 ```python
 with warnings.catch_warnings():
@@ -201,7 +206,7 @@ plt.close(fig)
 
 
     
-![png](analyze_neut_data_files/analyze_neut_data_9_1.png)
+![png](analyze_neut_data_files/analyze_neut_data_10_1.png)
     
 
 
@@ -336,7 +341,7 @@ fitparams.head()
 
 
 
-Make a plot showing all viruses against each sera:
+Make a plot showing all viruses against each sera from each assay date:
 
 
 ```python
@@ -388,31 +393,31 @@ for d in fracinfect['date'].unique():
 
 
     
-![png](analyze_neut_data_files/analyze_neut_data_13_7.png)
+![png](analyze_neut_data_files/analyze_neut_data_14_7.png)
     
 
 
 
     
-![png](analyze_neut_data_files/analyze_neut_data_13_8.png)
+![png](analyze_neut_data_files/analyze_neut_data_14_8.png)
     
 
 
 
     
-![png](analyze_neut_data_files/analyze_neut_data_13_9.png)
+![png](analyze_neut_data_files/analyze_neut_data_14_9.png)
     
 
 
 
     
-![png](analyze_neut_data_files/analyze_neut_data_13_10.png)
+![png](analyze_neut_data_files/analyze_neut_data_14_10.png)
     
 
 
 
     
-![png](analyze_neut_data_files/analyze_neut_data_13_11.png)
+![png](analyze_neut_data_files/analyze_neut_data_14_11.png)
     
 
 
@@ -432,7 +437,9 @@ fig, axes = fits.plotSera(xlabel=xlab,
                           colors=CBPALETTE*3, 
                           markers=CBMARKERS*3,
                           attempt_shared_legend=True,
-                          fix_lims={'ymax':1.25}
+                          fix_lims={'ymax':1.25},
+                          viruses=config['virus_order'],
+                          sera=natsort.natsorted(fracinfect['serum'].unique()),
                          )
 
 plotfile = f'{results}/all_mutant_neuts.pdf'
@@ -450,11 +457,11 @@ fig.savefig(plotfile, bbox_inches='tight')
 
 
     
-![png](analyze_neut_data_files/analyze_neut_data_15_2.png)
+![png](analyze_neut_data_files/analyze_neut_data_16_2.png)
     
 
 
-### Calculate fold-change IC50 relative to the gemetric mean of the wildtype virus against each serum on each date
+### Calculate fold-change IC50 relative to the geometric mean of the wildtype virus against each serum on each date
 * Get neutralization titers, 
 * Drop "average" replicate
 * Calculate the geometric mean of the wildtype virus against each serum
@@ -595,7 +602,7 @@ As we can see below, the fold-change in IC50 for each wildtype replicate is no l
 
 
 ```python
-display(HTML(neut_titers.query('virus==@wildtype & replicate != "average" & (fold_change <0.8 | fold_change >1.2)').head(10).to_html(index=False)))
+display(HTML(neut_titers.query('virus==@wildtype & replicate != "average" & (fold_change <0.8 | fold_change >1.2)').head(2).to_html(index=False)))
 ```
 
 
@@ -644,118 +651,6 @@ display(HTML(neut_titers.query('virus==@wildtype & replicate != "average" & (fol
       <td>0.000522</td>
       <td>Delta breakthrough</td>
       <td>0.762389</td>
-    </tr>
-    <tr>
-      <td>273C</td>
-      <td>Delta</td>
-      <td>0.000356</td>
-      <td>2810.049343</td>
-      <td>interpolated</td>
-      <td>2021-12-19</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.000265</td>
-      <td>Delta breakthrough</td>
-      <td>1.343292</td>
-    </tr>
-    <tr>
-      <td>273C</td>
-      <td>Delta</td>
-      <td>0.000330</td>
-      <td>3027.589222</td>
-      <td>interpolated</td>
-      <td>2021-12-19</td>
-      <td>2</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.000265</td>
-      <td>Delta breakthrough</td>
-      <td>1.246773</td>
-    </tr>
-    <tr>
-      <td>P08</td>
-      <td>Delta</td>
-      <td>0.000926</td>
-      <td>1080.453858</td>
-      <td>interpolated</td>
-      <td>2021-12-19</td>
-      <td>2</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.000768</td>
-      <td>Pfizer</td>
-      <td>1.205737</td>
-    </tr>
-    <tr>
-      <td>P12</td>
-      <td>Delta</td>
-      <td>0.003414</td>
-      <td>292.908383</td>
-      <td>interpolated</td>
-      <td>2021-12-19</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.004831</td>
-      <td>Pfizer</td>
-      <td>0.706673</td>
-    </tr>
-    <tr>
-      <td>P12</td>
-      <td>Delta</td>
-      <td>0.003754</td>
-      <td>266.357536</td>
-      <td>interpolated</td>
-      <td>2021-12-19</td>
-      <td>2</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.004831</td>
-      <td>Pfizer</td>
-      <td>0.777115</td>
-    </tr>
-    <tr>
-      <td>P14</td>
-      <td>Delta</td>
-      <td>0.000548</td>
-      <td>1825.437980</td>
-      <td>interpolated</td>
-      <td>2021-12-19</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.000395</td>
-      <td>Pfizer</td>
-      <td>1.386950</td>
-    </tr>
-    <tr>
-      <td>P14</td>
-      <td>Delta</td>
-      <td>0.000479</td>
-      <td>2089.854399</td>
-      <td>interpolated</td>
-      <td>2021-12-19</td>
-      <td>2</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.000395</td>
-      <td>Pfizer</td>
-      <td>1.211468</td>
-    </tr>
-    <tr>
-      <td>273C</td>
-      <td>Delta</td>
-      <td>0.000192</td>
-      <td>5204.968295</td>
-      <td>interpolated</td>
-      <td>2021-11-12</td>
-      <td>2</td>
-      <td>1.0</td>
-      <td>False</td>
-      <td>0.000265</td>
-      <td>Delta breakthrough</td>
-      <td>0.725214</td>
     </tr>
   </tbody>
 </table>
@@ -824,100 +719,19 @@ for metric in ['fold_change', 'ic50']:
 
 
     
-![png](analyze_neut_data_files/analyze_neut_data_22_1.png)
+![png](analyze_neut_data_files/analyze_neut_data_23_1.png)
     
 
 
 
     
-![png](analyze_neut_data_files/analyze_neut_data_22_2.png)
+![png](analyze_neut_data_files/analyze_neut_data_23_2.png)
     
 
 
-### Plot the results for all individuals on one plot and add the geometric mean of all 8 measurements (2 replicates * 4 sera) for each virus
+### Plot the NT50 and fold-change IC50 for all individuals, faceting by cohort.
 
-
-```python
-for metric in ['fold_change', 'ic50']:
-    for virus_set, virus_subsample in config['virus_subsets'].items():
-        print(f'Making plot for {metric} for {virus_set}:')
-        
-        ylab={'fold_change':'fold decrease in neutralization', 'ic50':'IC50'}
-
-        p = (ggplot(neut_titers
-                    .query("virus in @virus_subsample & replicate== 'average'") #& date in @dates
-                    .assign(virus=lambda x: pd.Categorical(x['virus'],
-                                                              ordered=True,
-                                                              categories=virus_subsample))
-                    .groupby(['serum', 'virus', 'sample_type','ic50_is_bound'])
-                    .agg({metric: geometric_mean})
-                    .reset_index()
-                    .dropna()
-                    ) +
-             aes('virus', metric, shape='ic50_is_bound', group='serum',
-                ) +
-             geom_line(aes(x='virus', y=metric, group='serum'), color=CBPALETTE[0]) +
-             geom_point(size=2.5, alpha=0.5, fill=CBPALETTE[0]) + 
-             geom_crossbar(data=(neut_titers
-                                 .query("virus in @virus_subsample & replicate== 'average'") # & date in @dates
-                                 .groupby(['virus', 'sample_type'])
-                                 .agg({metric: geometric_mean})
-                                 .reset_index()
-                                 .dropna()
-                                ),
-                           inherit_aes=False,
-                           mapping=aes(x='virus', y=metric, ymin=metric, ymax=metric),
-                  ) +
-             scale_y_log10(name=ylab[metric]) +
-             theme_classic() +
-             theme(axis_text_x=element_text(angle=90),
-                   axis_title_x=element_blank(),
-                   strip_margin_y=0.35,
-                   strip_background_x=element_blank(),
-                   figure_size=(3*neut_titers['sample_type'].nunique(), 2.5),
-                   ) +
-             geom_hline(data=(neut_titers
-                              .query('virus in [@wildtype] & replicate=="average"') # & date in @dates
-                              .groupby(['virus', 'sample_type'])
-                              .agg({metric: geometric_mean})
-                              .reset_index()
-                             ),
-                        inherit_aes=False,
-                        mapping=aes(yintercept=metric, color='virus'),
-                        alpha=0.7,
-                        size=0.5,
-                        linetype='dotted',
-                       ) +
-             scale_shape_manual(values=['o','^'], name='limit of detection') +
-             scale_color_manual(values=CBPALETTE*3, guide=False) +
-             # scale_fill_manual(values=CBPALETTE*3) +
-             facet_wrap('~sample_type', scales='free_x')
-             )
-
-        _ = p.draw()
-
-        plotfile = f'{results}/{metric}_{virus_set}_aggregate.pdf'
-        print(f"Saving to {plotfile}")
-        p.save(plotfile, limitsize=False, verbose=False)
-```
-
-    Making plot for fold_change for mutneuts:
-    Saving to results/neut_titers/fold_change_mutneuts_aggregate.pdf
-    Making plot for ic50 for mutneuts:
-    Saving to results/neut_titers/ic50_mutneuts_aggregate.pdf
-
-
-
-    
-![png](analyze_neut_data_files/analyze_neut_data_24_1.png)
-    
-
-
-
-    
-![png](analyze_neut_data_files/analyze_neut_data_24_2.png)
-    
-
+Add the geometric mean of all for each cohort as well. 
 
 
 ```python
@@ -1020,7 +834,7 @@ for virus_set, virus_subsample in config['virus_subsets'].items():
                 .dropna()
                 .groupby(['virus', 'sample_type'])
                 # .agg({'NT50': geometric_mean})
-                .agg(NT50=('NT50', geometric_mean), sem=('NT50', stats.sem))
+                .agg(NT50=('NT50', geometric_mean), sem=('NT50', stats.gstd))
                 .reset_index()
                 .dropna()
                 .assign(virus=lambda x: pd.Categorical(x['virus'],
@@ -1032,9 +846,13 @@ for virus_set, virus_subsample in config['virus_subsets'].items():
              fill='sample_type', 
              color='sample_type',
             ) +
-         geom_line(aes(x='virus', y='NT50', group='sample_type')) +
-         geom_point(size=2.5, alpha=1) +
-         geom_errorbar(aes(x="virus", ymin="NT50-sem",ymax="NT50+sem"))+
+         geom_line(aes(x='virus', y='NT50', group='sample_type'), position=position_dodge(width=0.5)) +
+         geom_point(size=2.5, alpha=1, position=position_dodge(width=0.5)) +
+         geom_errorbar(aes(x="virus", ymin="NT50/sem",ymax="NT50*sem"),
+                       alpha=0.5,
+                       # width=0.25,
+                       position=position_dodge(width=0.5)
+                      )+
          geom_hline(yintercept=config['NT50_LOD'],
                     linetype='dashed', size=0.5,
                     alpha=0.6, 
@@ -1065,17 +883,7 @@ for virus_set, virus_subsample in config['virus_subsets'].items():
     
 
 
-
-```python
-neut_titers.query('virus==@wildtype')['ic50'].agg(geometric_mean)
-```
-
-
-
-
-    0.0004971162520255163
-
-
+Make essentially the plot shown above, but with each individual point shown. 
 
 
 ```python
@@ -1174,25 +982,35 @@ for metric in ['fold_change', 'ic50']:
 ```python
 geomean_mut_effects=(neut_titers
                      .query("replicate=='average'")
-                     .groupby(['virus', 'sample_type'])
-                     .agg({'fold_change': geometric_mean})
+                     
+                     # if multiple measurements were taken on different days
+                     # for a single serum x virus condition
+                     # take the geometric_mean of the NT50 and fold_change
+                     .groupby(['serum', 'virus', 'sample_type'])
+                     .agg({'NT50': geometric_mean, 'fold_change':geometric_mean})
                      .reset_index()
                      .dropna()
-                     .merge((neut_titers
-                             .query("replicate=='average'")
-                             [['virus', 'sample_type', 'serum']]
-                             .drop_duplicates()
-                             .groupby(['virus', 'sample_type'])
-                             .size()
-                             .reset_index(name='counts')
-                            ),
-                            how='left',
-                            on=['virus', 'sample_type'],
-                            validate='one_to_one'
-                           )
+                     .groupby(['virus', 'sample_type'])
+                     
+                     # now get summary statistics within cohorts
+                     .agg(geomean_fold_change=('fold_change',geometric_mean), 
+                          geomean_NT50=('NT50', geometric_mean), 
+                          gstd=('NT50', stats.gstd),
+                          sample_size=('serum', 'count'),
+                         )
+                     .reset_index()
+                     .dropna()
+                     
+                     # calculate the error bars, 
+                     # multiplying geometric standard error by geometric_mean
+                     .assign(upper_error=lambda x: x['geomean_NT50']*x['gstd'],
+                             lower_error=lambda x: x['geomean_NT50']/x['gstd'],
+                            )
                     )
 
 display(HTML(geomean_mut_effects.to_html(index=False)))
+
+geomean_mut_effects.to_csv(neut_titers_summary_file, index=False)
 ```
 
 
@@ -1201,8 +1019,12 @@ display(HTML(geomean_mut_effects.to_html(index=False)))
     <tr style="text-align: right;">
       <th>virus</th>
       <th>sample_type</th>
-      <th>fold_change</th>
-      <th>counts</th>
+      <th>geomean_fold_change</th>
+      <th>geomean_NT50</th>
+      <th>gstd</th>
+      <th>sample_size</th>
+      <th>upper_error</th>
+      <th>lower_error</th>
     </tr>
   </thead>
   <tbody>
@@ -1210,121 +1032,201 @@ display(HTML(geomean_mut_effects.to_html(index=False)))
       <td>D614G</td>
       <td>Pfizer</td>
       <td>0.412284</td>
+      <td>1614.796842</td>
+      <td>2.205143</td>
       <td>8</td>
+      <td>3560.857983</td>
+      <td>732.286672</td>
     </tr>
     <tr>
       <td>D614G</td>
       <td>Delta breakthrough</td>
       <td>0.324272</td>
+      <td>7758.108234</td>
+      <td>2.738616</td>
       <td>8</td>
+      <td>21246.477640</td>
+      <td>2832.857493</td>
     </tr>
     <tr>
       <td>D614G</td>
       <td>primary Delta infection</td>
       <td>2.649448</td>
+      <td>1838.279141</td>
+      <td>3.128260</td>
       <td>8</td>
+      <td>5750.615143</td>
+      <td>587.636299</td>
     </tr>
     <tr>
       <td>Delta</td>
       <td>Pfizer</td>
       <td>1.003604</td>
+      <td>663.364750</td>
+      <td>2.890681</td>
       <td>8</td>
+      <td>1917.575942</td>
+      <td>229.483892</td>
     </tr>
     <tr>
       <td>Delta</td>
       <td>Delta breakthrough</td>
       <td>1.001336</td>
+      <td>2512.381309</td>
+      <td>2.669072</td>
       <td>8</td>
+      <td>6705.727413</td>
+      <td>941.293830</td>
     </tr>
     <tr>
       <td>Delta</td>
       <td>primary Delta infection</td>
       <td>1.001430</td>
+      <td>4863.472244</td>
+      <td>1.975576</td>
       <td>8</td>
+      <td>9608.156835</td>
+      <td>2461.800184</td>
     </tr>
     <tr>
       <td>Delta + E484K</td>
       <td>Pfizer</td>
       <td>3.208403</td>
+      <td>207.503691</td>
+      <td>2.124967</td>
       <td>8</td>
+      <td>440.938465</td>
+      <td>97.650319</td>
     </tr>
     <tr>
       <td>Delta + E484K</td>
       <td>Delta breakthrough</td>
       <td>3.259109</td>
+      <td>771.909409</td>
+      <td>2.464179</td>
       <td>8</td>
+      <td>1902.123211</td>
+      <td>313.252124</td>
     </tr>
     <tr>
       <td>Delta + E484K</td>
       <td>primary Delta infection</td>
       <td>8.403561</td>
+      <td>579.566905</td>
+      <td>2.592924</td>
       <td>8</td>
+      <td>1502.773208</td>
+      <td>223.518623</td>
     </tr>
     <tr>
       <td>Delta + K417N</td>
       <td>Pfizer</td>
       <td>3.483359</td>
+      <td>191.124580</td>
+      <td>2.763088</td>
       <td>8</td>
+      <td>528.094068</td>
+      <td>69.170641</td>
     </tr>
     <tr>
       <td>Delta + K417N</td>
       <td>Delta breakthrough</td>
       <td>2.608850</td>
+      <td>964.308967</td>
+      <td>2.959634</td>
       <td>8</td>
+      <td>2854.001423</td>
+      <td>325.820364</td>
     </tr>
     <tr>
       <td>Delta + K417N</td>
       <td>primary Delta infection</td>
       <td>2.178660</td>
+      <td>2235.514124</td>
+      <td>2.300774</td>
       <td>8</td>
+      <td>5143.412414</td>
+      <td>971.635754</td>
     </tr>
     <tr>
       <td>Delta RBD Abs depleted (x D614G PV)</td>
       <td>Pfizer</td>
       <td>2.915247</td>
+      <td>228.370164</td>
+      <td>1.835415</td>
       <td>8</td>
+      <td>419.154118</td>
+      <td>124.424238</td>
     </tr>
     <tr>
       <td>Delta RBD Abs depleted (x D614G PV)</td>
       <td>Delta breakthrough</td>
       <td>21.777749</td>
+      <td>115.518702</td>
+      <td>2.369659</td>
       <td>8</td>
+      <td>273.739911</td>
+      <td>48.749086</td>
     </tr>
     <tr>
       <td>Delta RBD Abs depleted (x Delta PV)</td>
       <td>Pfizer</td>
       <td>26.630221</td>
+      <td>25.000000</td>
+      <td>1.000000</td>
       <td>8</td>
+      <td>25.000000</td>
+      <td>25.000000</td>
     </tr>
     <tr>
       <td>Delta RBD Abs depleted (x Delta PV)</td>
       <td>Delta breakthrough</td>
       <td>95.939376</td>
+      <td>26.222155</td>
+      <td>1.116984</td>
       <td>8</td>
+      <td>29.289734</td>
+      <td>23.475851</td>
     </tr>
     <tr>
       <td>Delta RBD Abs depleted (x Delta PV)</td>
       <td>primary Delta infection</td>
       <td>86.628556</td>
+      <td>56.221942</td>
+      <td>2.219946</td>
       <td>8</td>
+      <td>124.809688</td>
+      <td>25.325812</td>
     </tr>
     <tr>
       <td>Wuhan-1 RBD Abs depleted (x D614G PV)</td>
       <td>Pfizer</td>
       <td>26.630221</td>
+      <td>25.000000</td>
+      <td>1.000000</td>
       <td>8</td>
+      <td>25.000000</td>
+      <td>25.000000</td>
     </tr>
     <tr>
       <td>Wuhan-1 RBD Abs depleted (x D614G PV)</td>
       <td>Delta breakthrough</td>
       <td>45.242717</td>
+      <td>55.605353</td>
+      <td>2.332077</td>
       <td>8</td>
+      <td>129.675991</td>
+      <td>23.843699</td>
     </tr>
     <tr>
       <td>Wuhan-1 RBD Abs depleted (x D614G PV)</td>
       <td>primary Delta infection</td>
       <td>142.947149</td>
+      <td>34.071513</td>
+      <td>1.605872</td>
       <td>8</td>
+      <td>54.714488</td>
+      <td>21.216830</td>
     </tr>
   </tbody>
 </table>

@@ -52,13 +52,13 @@ virus_key_mutneuts: # how to rename viruses for analyzing mutneuts
   Delta: Delta
 
 virus_order:
+  - D614G
   - Delta
   - Delta + K417N
   - Delta + E484K
-  - Delta RBD Abs depleted (x Delta PV)
-  - D614G
-  - Wuhan-1 RBD Abs depleted (x D614G PV)
   - Delta RBD Abs depleted (x D614G PV)
+  - Wuhan-1 RBD Abs depleted (x D614G PV)
+  - Delta RBD Abs depleted (x Delta PV)
 
 # specify the "wildtype" virus for the purpose of this study
 wildtype_virus: Delta
