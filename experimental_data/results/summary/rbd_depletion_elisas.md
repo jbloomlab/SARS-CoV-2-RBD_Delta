@@ -103,15 +103,22 @@ titration_df = (titration_df
 
 display(HTML(titration_df.tail().to_html(index=False)))
 
-for genotype in set([i.split(' ')[0] for i in titration_df['ligand'].unique().tolist()]):
+for ligand in titration_df['ligand'].unique():
     
-    df = titration_df.query('ligand.str.contains(@genotype)')
+    df = titration_df.query('ligand==@ligand')
     
     ncol=8
     nrow=math.ceil(len(df[['ligand', 'serum', 'serum_group']].drop_duplicates())/8)
 
     p = (
-        ggplot((df.assign(depleted_date=lambda x: x['depleted'].astype(str)+'_'+x['date'].astype(str))),
+        ggplot((df
+                .assign(depleted_date=lambda x: x['depleted'].astype(str)+'_'+x['date'].astype(str),
+                        serum_name=lambda x: 
+                        pd.Categorical(x['serum_name'],
+                                       categories=natsort.natsorted(df['serum_name'].unique()),
+                                       ordered=True)
+                       )
+               ),
                aes('dilution', 
                    'OD450', 
                    color='depleted',
@@ -127,14 +134,14 @@ for genotype in set([i.split(' ')[0] for i in titration_df['ligand'].unique().to
               strip_margin_y=0.35,
               subplots_adjust={'hspace':0.65},
              ) +
-        scale_color_manual(values=CBPALETTE[0:], name=f'{genotype} RBD-binding\nantibodies depleted?') +
+        scale_color_manual(values=CBPALETTE[0:], name=f'{ligand.split(" ")[0]} RBD-binding\nantibodies depleted?') +
         ylab('arbitrary binding units (OD450)')
         )
 
     _ = p.draw()
 
-    p.save(f'{resultsdir}/all_ELISAs_{genotype}.pdf', limitsize=False)
-    p.save(f'{resultsdir}/all_ELISAs_{genotype}.png', limitsize=False)
+    p.save(f'{resultsdir}/all_ELISAs_{ligand}.pdf', limitsize=False)
+    p.save(f'{resultsdir}/all_ELISAs_{ligand}.png', limitsize=False)
 ```
 
 
@@ -221,6 +228,12 @@ for genotype in set([i.split(' ')[0] for i in titration_df['ligand'].unique().to
 
     
 ![png](rbd_depletion_elisas_files/rbd_depletion_elisas_11_2.png)
+    
+
+
+
+    
+![png](rbd_depletion_elisas_files/rbd_depletion_elisas_11_3.png)
     
 
 
