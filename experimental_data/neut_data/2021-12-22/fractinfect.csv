@@ -1,0 +1,513 @@
+,serum,virus,replicate,concentration,fraction infectivity
+0,Delta_10,mock depletion (D614G spike),1,0.04,-1.182e-05
+1,Delta_10,mock depletion (D614G spike),1,0.01,0.003166
+2,Delta_10,mock depletion (D614G spike),1,0.0025,0.1886
+3,Delta_10,mock depletion (D614G spike),1,0.000625,0.6945
+4,Delta_10,mock depletion (D614G spike),1,0.0001563,0.9303
+5,Delta_10,mock depletion (D614G spike),1,3.906e-05,0.9336
+6,Delta_10,mock depletion (D614G spike),1,9.766e-06,1.076
+7,Delta_10,mock depletion (D614G spike),1,2.441e-06,0.9135
+8,Delta_10,mock depletion (D614G spike),2,0.04,-2.416e-05
+9,Delta_10,mock depletion (D614G spike),2,0.01,0.0004479
+10,Delta_10,mock depletion (D614G spike),2,0.0025,0.1843
+11,Delta_10,mock depletion (D614G spike),2,0.000625,0.771
+12,Delta_10,mock depletion (D614G spike),2,0.0001563,0.9796
+13,Delta_10,mock depletion (D614G spike),2,3.906e-05,0.8416
+14,Delta_10,mock depletion (D614G spike),2,9.766e-06,1.051
+15,Delta_10,mock depletion (D614G spike),2,2.441e-06,0.9489
+16,Delta_10,RBD antibodies depleted (D614G spike),1,0.04,0.7828
+17,Delta_10,RBD antibodies depleted (D614G spike),1,0.01,1.045
+18,Delta_10,RBD antibodies depleted (D614G spike),1,0.0025,1.231
+19,Delta_10,RBD antibodies depleted (D614G spike),1,0.000625,1.109
+20,Delta_10,RBD antibodies depleted (D614G spike),1,0.0001563,1.045
+21,Delta_10,RBD antibodies depleted (D614G spike),1,3.906e-05,0.9381
+22,Delta_10,RBD antibodies depleted (D614G spike),1,9.766e-06,1.016
+23,Delta_10,RBD antibodies depleted (D614G spike),1,2.441e-06,0.9219
+24,Delta_10,RBD antibodies depleted (D614G spike),2,0.04,0.8157
+25,Delta_10,RBD antibodies depleted (D614G spike),2,0.01,1.085
+26,Delta_10,RBD antibodies depleted (D614G spike),2,0.0025,1.194
+27,Delta_10,RBD antibodies depleted (D614G spike),2,0.000625,1.107
+28,Delta_10,RBD antibodies depleted (D614G spike),2,0.0001563,0.9378
+29,Delta_10,RBD antibodies depleted (D614G spike),2,3.906e-05,0.8785
+30,Delta_10,RBD antibodies depleted (D614G spike),2,9.766e-06,0.9385
+31,Delta_10,RBD antibodies depleted (D614G spike),2,2.441e-06,0.98
+32,Delta_11,mock depletion (D614G spike),1,0.04,1.285e-05
+33,Delta_11,mock depletion (D614G spike),1,0.01,0.007962
+34,Delta_11,mock depletion (D614G spike),1,0.0025,0.1581
+35,Delta_11,mock depletion (D614G spike),1,0.000625,0.6408
+36,Delta_11,mock depletion (D614G spike),1,0.0001563,0.8934
+37,Delta_11,mock depletion (D614G spike),1,3.906e-05,0.9352
+38,Delta_11,mock depletion (D614G spike),1,9.766e-06,1.077
+39,Delta_11,mock depletion (D614G spike),1,2.441e-06,0.9651
+40,Delta_11,mock depletion (D614G spike),2,0.04,-1.182e-05
+41,Delta_11,mock depletion (D614G spike),2,0.01,0.00331
+42,Delta_11,mock depletion (D614G spike),2,0.0025,0.1454
+43,Delta_11,mock depletion (D614G spike),2,0.000625,0.6926
+44,Delta_11,mock depletion (D614G spike),2,0.0001563,0.8537
+45,Delta_11,mock depletion (D614G spike),2,3.906e-05,0.9354
+46,Delta_11,mock depletion (D614G spike),2,9.766e-06,1.053
+47,Delta_11,mock depletion (D614G spike),2,2.441e-06,0.9342
+48,Delta_11,RBD antibodies depleted (D614G spike),1,0.04,1.006
+49,Delta_11,RBD antibodies depleted (D614G spike),1,0.01,1.11
+50,Delta_11,RBD antibodies depleted (D614G spike),1,0.0025,1.128
+51,Delta_11,RBD antibodies depleted (D614G spike),1,0.000625,0.9858
+52,Delta_11,RBD antibodies depleted (D614G spike),1,0.0001563,1.038
+53,Delta_11,RBD antibodies depleted (D614G spike),1,3.906e-05,0.9527
+54,Delta_11,RBD antibodies depleted (D614G spike),1,9.766e-06,1.064
+55,Delta_11,RBD antibodies depleted (D614G spike),1,2.441e-06,1.023
+56,Delta_11,RBD antibodies depleted (D614G spike),2,0.04,1.095
+57,Delta_11,RBD antibodies depleted (D614G spike),2,0.01,1.169
+58,Delta_11,RBD antibodies depleted (D614G spike),2,0.0025,1.094
+59,Delta_11,RBD antibodies depleted (D614G spike),2,0.000625,0.998
+60,Delta_11,RBD antibodies depleted (D614G spike),2,0.0001563,0.9933
+61,Delta_11,RBD antibodies depleted (D614G spike),2,3.906e-05,1.01
+62,Delta_11,RBD antibodies depleted (D614G spike),2,9.766e-06,1.135
+63,Delta_11,RBD antibodies depleted (D614G spike),2,2.441e-06,0.915
+64,Delta_7,mock depletion (D614G spike),1,0.04,1.748e-05
+65,Delta_7,mock depletion (D614G spike),1,0.01,0.01443
+66,Delta_7,mock depletion (D614G spike),1,0.0025,0.232
+67,Delta_7,mock depletion (D614G spike),1,0.000625,0.6372
+68,Delta_7,mock depletion (D614G spike),1,0.0001563,0.9209
+69,Delta_7,mock depletion (D614G spike),1,3.906e-05,0.8523
+70,Delta_7,mock depletion (D614G spike),1,9.766e-06,0.8337
+71,Delta_7,mock depletion (D614G spike),1,2.441e-06,0.9334
+72,Delta_7,mock depletion (D614G spike),2,0.04,-2.497e-06
+73,Delta_7,mock depletion (D614G spike),2,0.01,0.02567
+74,Delta_7,mock depletion (D614G spike),2,0.0025,0.2633
+75,Delta_7,mock depletion (D614G spike),2,0.000625,0.7523
+76,Delta_7,mock depletion (D614G spike),2,0.0001563,0.9613
+77,Delta_7,mock depletion (D614G spike),2,3.906e-05,0.9276
+78,Delta_7,mock depletion (D614G spike),2,9.766e-06,0.9547
+79,Delta_7,mock depletion (D614G spike),2,2.441e-06,0.8835
+80,Delta_7,RBD antibodies depleted (D614G spike),1,0.04,0.3235
+81,Delta_7,RBD antibodies depleted (D614G spike),1,0.01,0.9514
+82,Delta_7,RBD antibodies depleted (D614G spike),1,0.0025,1.111
+83,Delta_7,RBD antibodies depleted (D614G spike),1,0.000625,1.047
+84,Delta_7,RBD antibodies depleted (D614G spike),1,0.0001563,1.031
+85,Delta_7,RBD antibodies depleted (D614G spike),1,3.906e-05,1.018
+86,Delta_7,RBD antibodies depleted (D614G spike),1,9.766e-06,0.9206
+87,Delta_7,RBD antibodies depleted (D614G spike),1,2.441e-06,1.112
+88,Delta_7,RBD antibodies depleted (D614G spike),2,0.04,0.3067
+89,Delta_7,RBD antibodies depleted (D614G spike),2,0.01,0.8718
+90,Delta_7,RBD antibodies depleted (D614G spike),2,0.0025,1.035
+91,Delta_7,RBD antibodies depleted (D614G spike),2,0.000625,0.9047
+92,Delta_7,RBD antibodies depleted (D614G spike),2,0.0001563,0.8935
+93,Delta_7,RBD antibodies depleted (D614G spike),2,3.906e-05,0.8757
+94,Delta_7,RBD antibodies depleted (D614G spike),2,9.766e-06,0.9378
+95,Delta_7,RBD antibodies depleted (D614G spike),2,2.441e-06,0.8642
+96,Delta_8,mock depletion (D614G spike),1,0.04,0.005681
+97,Delta_8,mock depletion (D614G spike),1,0.01,0.02647
+98,Delta_8,mock depletion (D614G spike),1,0.0025,0.05592
+99,Delta_8,mock depletion (D614G spike),1,0.000625,0.1218
+100,Delta_8,mock depletion (D614G spike),1,0.0001563,0.3745
+101,Delta_8,mock depletion (D614G spike),1,3.906e-05,0.6231
+102,Delta_8,mock depletion (D614G spike),1,9.766e-06,0.8193
+103,Delta_8,mock depletion (D614G spike),1,2.441e-06,0.9357
+104,Delta_8,mock depletion (D614G spike),2,0.04,0.0004603
+105,Delta_8,mock depletion (D614G spike),2,0.01,0.0215
+106,Delta_8,mock depletion (D614G spike),2,0.0025,0.03866
+107,Delta_8,mock depletion (D614G spike),2,0.000625,0.1506
+108,Delta_8,mock depletion (D614G spike),2,0.0001563,0.4323
+109,Delta_8,mock depletion (D614G spike),2,3.906e-05,0.7209
+110,Delta_8,mock depletion (D614G spike),2,9.766e-06,0.8086
+111,Delta_8,mock depletion (D614G spike),2,2.441e-06,0.9755
+112,Delta_8,RBD antibodies depleted (D614G spike),1,0.04,0.3845
+113,Delta_8,RBD antibodies depleted (D614G spike),1,0.01,1.149
+114,Delta_8,RBD antibodies depleted (D614G spike),1,0.0025,1.198
+115,Delta_8,RBD antibodies depleted (D614G spike),1,0.000625,1.049
+116,Delta_8,RBD antibodies depleted (D614G spike),1,0.0001563,1.065
+117,Delta_8,RBD antibodies depleted (D614G spike),1,3.906e-05,0.9773
+118,Delta_8,RBD antibodies depleted (D614G spike),1,9.766e-06,0.8931
+119,Delta_8,RBD antibodies depleted (D614G spike),1,2.441e-06,0.9742
+120,Delta_8,RBD antibodies depleted (D614G spike),2,0.04,0.3818
+121,Delta_8,RBD antibodies depleted (D614G spike),2,0.01,1.013
+122,Delta_8,RBD antibodies depleted (D614G spike),2,0.0025,1.34
+123,Delta_8,RBD antibodies depleted (D614G spike),2,0.000625,1.127
+124,Delta_8,RBD antibodies depleted (D614G spike),2,0.0001563,1.115
+125,Delta_8,RBD antibodies depleted (D614G spike),2,3.906e-05,0.8523
+126,Delta_8,RBD antibodies depleted (D614G spike),2,9.766e-06,0.9935
+127,Delta_8,RBD antibodies depleted (D614G spike),2,2.441e-06,1.043
+128,Delta_4,mock depletion (D614G spike),1,0.04,3.042e-05
+129,Delta_4,mock depletion (D614G spike),1,0.01,0.01051
+130,Delta_4,mock depletion (D614G spike),1,0.0025,0.2001
+131,Delta_4,mock depletion (D614G spike),1,0.000625,0.6247
+132,Delta_4,mock depletion (D614G spike),1,0.0001563,0.8526
+133,Delta_4,mock depletion (D614G spike),1,3.906e-05,0.9111
+134,Delta_4,mock depletion (D614G spike),1,9.766e-06,1.002
+135,Delta_4,mock depletion (D614G spike),1,2.441e-06,1.055
+136,Delta_4,mock depletion (D614G spike),2,0.04,-1.121e-05
+137,Delta_4,mock depletion (D614G spike),2,0.01,0.008352
+138,Delta_4,mock depletion (D614G spike),2,0.0025,0.1812
+139,Delta_4,mock depletion (D614G spike),2,0.000625,0.5164
+140,Delta_4,mock depletion (D614G spike),2,0.0001563,0.8376
+141,Delta_4,mock depletion (D614G spike),2,3.906e-05,0.9429
+142,Delta_4,mock depletion (D614G spike),2,9.766e-06,0.9924
+143,Delta_4,mock depletion (D614G spike),2,2.441e-06,1.007
+144,Delta_4,RBD antibodies depleted (D614G spike),1,0.04,0.2159
+145,Delta_4,RBD antibodies depleted (D614G spike),1,0.01,0.6241
+146,Delta_4,RBD antibodies depleted (D614G spike),1,0.0025,1.084
+147,Delta_4,RBD antibodies depleted (D614G spike),1,0.000625,1.113
+148,Delta_4,RBD antibodies depleted (D614G spike),1,0.0001563,1.02
+149,Delta_4,RBD antibodies depleted (D614G spike),1,3.906e-05,0.9831
+150,Delta_4,RBD antibodies depleted (D614G spike),1,9.766e-06,1.054
+151,Delta_4,RBD antibodies depleted (D614G spike),1,2.441e-06,1.036
+152,Delta_4,RBD antibodies depleted (D614G spike),2,0.04,0.2047
+153,Delta_4,RBD antibodies depleted (D614G spike),2,0.01,0.7157
+154,Delta_4,RBD antibodies depleted (D614G spike),2,0.0025,1.054
+155,Delta_4,RBD antibodies depleted (D614G spike),2,0.000625,1.04
+156,Delta_4,RBD antibodies depleted (D614G spike),2,0.0001563,0.9977
+157,Delta_4,RBD antibodies depleted (D614G spike),2,3.906e-05,0.9579
+158,Delta_4,RBD antibodies depleted (D614G spike),2,9.766e-06,0.9593
+159,Delta_4,RBD antibodies depleted (D614G spike),2,2.441e-06,1.134
+160,Delta_6,mock depletion (D614G spike),1,0.04,0.002109
+161,Delta_6,mock depletion (D614G spike),1,0.01,0.0002448
+162,Delta_6,mock depletion (D614G spike),1,0.0025,0.006972
+163,Delta_6,mock depletion (D614G spike),1,0.000625,0.0753
+164,Delta_6,mock depletion (D614G spike),1,0.0001563,0.4063
+165,Delta_6,mock depletion (D614G spike),1,3.906e-05,0.7785
+166,Delta_6,mock depletion (D614G spike),1,9.766e-06,0.835
+167,Delta_6,mock depletion (D614G spike),1,2.441e-06,0.9858
+168,Delta_6,mock depletion (D614G spike),2,0.04,-8.005e-06
+169,Delta_6,mock depletion (D614G spike),2,0.01,0.0001638
+170,Delta_6,mock depletion (D614G spike),2,0.0025,0.0115
+171,Delta_6,mock depletion (D614G spike),2,0.000625,0.1056
+172,Delta_6,mock depletion (D614G spike),2,0.0001563,0.4389
+173,Delta_6,mock depletion (D614G spike),2,3.906e-05,0.7891
+174,Delta_6,mock depletion (D614G spike),2,9.766e-06,0.8458
+175,Delta_6,mock depletion (D614G spike),2,2.441e-06,0.9508
+176,Delta_6,RBD antibodies depleted (D614G spike),1,0.04,0.1701
+177,Delta_6,RBD antibodies depleted (D614G spike),1,0.01,0.5482
+178,Delta_6,RBD antibodies depleted (D614G spike),1,0.0025,0.892
+179,Delta_6,RBD antibodies depleted (D614G spike),1,0.000625,0.9792
+180,Delta_6,RBD antibodies depleted (D614G spike),1,0.0001563,0.9887
+181,Delta_6,RBD antibodies depleted (D614G spike),1,3.906e-05,0.9912
+182,Delta_6,RBD antibodies depleted (D614G spike),1,9.766e-06,0.9283
+183,Delta_6,RBD antibodies depleted (D614G spike),1,2.441e-06,0.9712
+184,Delta_6,RBD antibodies depleted (D614G spike),2,0.04,0.1525
+185,Delta_6,RBD antibodies depleted (D614G spike),2,0.01,0.5437
+186,Delta_6,RBD antibodies depleted (D614G spike),2,0.0025,0.9804
+187,Delta_6,RBD antibodies depleted (D614G spike),2,0.000625,1.07
+188,Delta_6,RBD antibodies depleted (D614G spike),2,0.0001563,1.005
+189,Delta_6,RBD antibodies depleted (D614G spike),2,3.906e-05,0.9445
+190,Delta_6,RBD antibodies depleted (D614G spike),2,9.766e-06,1.037
+191,Delta_6,RBD antibodies depleted (D614G spike),2,2.441e-06,0.9517
+192,Delta_1,mock depletion (D614G spike),1,0.04,-4.638e-06
+193,Delta_1,mock depletion (D614G spike),1,0.01,0.01333
+194,Delta_1,mock depletion (D614G spike),1,0.0025,0.06456
+195,Delta_1,mock depletion (D614G spike),1,0.000625,0.4732
+196,Delta_1,mock depletion (D614G spike),1,0.0001563,0.8574
+197,Delta_1,mock depletion (D614G spike),1,3.906e-05,0.8907
+198,Delta_1,mock depletion (D614G spike),1,9.766e-06,1.127
+199,Delta_1,mock depletion (D614G spike),1,2.441e-06,1.085
+200,Delta_1,mock depletion (D614G spike),2,0.04,-4.638e-06
+201,Delta_1,mock depletion (D614G spike),2,0.01,0.00901
+202,Delta_1,mock depletion (D614G spike),2,0.0025,0.08316
+203,Delta_1,mock depletion (D614G spike),2,0.000625,0.363
+204,Delta_1,mock depletion (D614G spike),2,0.0001563,0.8811
+205,Delta_1,mock depletion (D614G spike),2,3.906e-05,1.04
+206,Delta_1,mock depletion (D614G spike),2,9.766e-06,1.115
+207,Delta_1,mock depletion (D614G spike),2,2.441e-06,1.053
+208,Delta_1,RBD antibodies depleted (D614G spike),1,0.04,0.3946
+209,Delta_1,RBD antibodies depleted (D614G spike),1,0.01,0.9665
+210,Delta_1,RBD antibodies depleted (D614G spike),1,0.0025,1.056
+211,Delta_1,RBD antibodies depleted (D614G spike),1,0.000625,1.003
+212,Delta_1,RBD antibodies depleted (D614G spike),1,0.0001563,1.137
+213,Delta_1,RBD antibodies depleted (D614G spike),1,3.906e-05,0.9939
+214,Delta_1,RBD antibodies depleted (D614G spike),1,9.766e-06,1.06
+215,Delta_1,RBD antibodies depleted (D614G spike),1,2.441e-06,1.028
+216,Delta_1,RBD antibodies depleted (D614G spike),2,0.04,0.4013
+217,Delta_1,RBD antibodies depleted (D614G spike),2,0.01,1.232
+218,Delta_1,RBD antibodies depleted (D614G spike),2,0.0025,0.9484
+219,Delta_1,RBD antibodies depleted (D614G spike),2,0.000625,1.039
+220,Delta_1,RBD antibodies depleted (D614G spike),2,0.0001563,0.9811
+221,Delta_1,RBD antibodies depleted (D614G spike),2,3.906e-05,0.9417
+222,Delta_1,RBD antibodies depleted (D614G spike),2,9.766e-06,0.9623
+223,Delta_1,RBD antibodies depleted (D614G spike),2,2.441e-06,1.04
+224,Delta_3,mock depletion (D614G spike),1,0.04,0.06662
+225,Delta_3,mock depletion (D614G spike),1,0.01,0.1751
+226,Delta_3,mock depletion (D614G spike),1,0.0025,0.3995
+227,Delta_3,mock depletion (D614G spike),1,0.000625,0.7692
+228,Delta_3,mock depletion (D614G spike),1,0.0001563,1.009
+229,Delta_3,mock depletion (D614G spike),1,3.906e-05,0.8878
+230,Delta_3,mock depletion (D614G spike),1,9.766e-06,1.037
+231,Delta_3,mock depletion (D614G spike),1,2.441e-06,1.111
+232,Delta_3,mock depletion (D614G spike),2,0.04,0.04934
+233,Delta_3,mock depletion (D614G spike),2,0.01,0.215
+234,Delta_3,mock depletion (D614G spike),2,0.0025,0.3517
+235,Delta_3,mock depletion (D614G spike),2,0.000625,0.8981
+236,Delta_3,mock depletion (D614G spike),2,0.0001563,1.127
+237,Delta_3,mock depletion (D614G spike),2,3.906e-05,0.927
+238,Delta_3,mock depletion (D614G spike),2,9.766e-06,1.127
+239,Delta_3,mock depletion (D614G spike),2,2.441e-06,1.001
+240,Delta_3,RBD antibodies depleted (D614G spike),1,0.04,0.6563
+241,Delta_3,RBD antibodies depleted (D614G spike),1,0.01,1.281
+242,Delta_3,RBD antibodies depleted (D614G spike),1,0.0025,1.109
+243,Delta_3,RBD antibodies depleted (D614G spike),1,0.000625,0.9741
+244,Delta_3,RBD antibodies depleted (D614G spike),1,0.0001563,0.9129
+245,Delta_3,RBD antibodies depleted (D614G spike),1,3.906e-05,0.997
+246,Delta_3,RBD antibodies depleted (D614G spike),1,9.766e-06,1.142
+247,Delta_3,RBD antibodies depleted (D614G spike),1,2.441e-06,1.107
+248,Delta_3,RBD antibodies depleted (D614G spike),2,0.04,0.5578
+249,Delta_3,RBD antibodies depleted (D614G spike),2,0.01,1.318
+250,Delta_3,RBD antibodies depleted (D614G spike),2,0.0025,1.029
+251,Delta_3,RBD antibodies depleted (D614G spike),2,0.000625,0.9791
+252,Delta_3,RBD antibodies depleted (D614G spike),2,0.0001563,1.152
+253,Delta_3,RBD antibodies depleted (D614G spike),2,3.906e-05,0.9521
+254,Delta_3,RBD antibodies depleted (D614G spike),2,9.766e-06,1.172
+255,Delta_3,RBD antibodies depleted (D614G spike),2,2.441e-06,1.009
+256,278C,mock depletion (D614G spike),1,0.04,1.033e-05
+257,278C,mock depletion (D614G spike),1,0.01,1.135e-05
+258,278C,mock depletion (D614G spike),1,0.0025,8.394e-06
+259,278C,mock depletion (D614G spike),1,0.000625,3.28e-06
+260,278C,mock depletion (D614G spike),1,0.0001563,0.05165
+261,278C,mock depletion (D614G spike),1,3.906e-05,0.4833
+262,278C,mock depletion (D614G spike),1,9.766e-06,0.7544
+263,278C,mock depletion (D614G spike),1,2.441e-06,0.9393
+264,278C,mock depletion (D614G spike),2,0.04,2.159e-05
+265,278C,mock depletion (D614G spike),2,0.01,-1.755e-05
+266,278C,mock depletion (D614G spike),2,0.0025,2.758e-05
+267,278C,mock depletion (D614G spike),2,0.000625,-9.839e-06
+268,278C,mock depletion (D614G spike),2,0.0001563,0.03469
+269,278C,mock depletion (D614G spike),2,3.906e-05,0.4608
+270,278C,mock depletion (D614G spike),2,9.766e-06,0.6836
+271,278C,mock depletion (D614G spike),2,2.441e-06,0.8509
+272,278C,RBD antibodies depleted (D614G spike),1,0.04,0.2314
+273,278C,RBD antibodies depleted (D614G spike),1,0.01,0.4268
+274,278C,RBD antibodies depleted (D614G spike),1,0.0025,0.7028
+275,278C,RBD antibodies depleted (D614G spike),1,0.000625,0.9628
+276,278C,RBD antibodies depleted (D614G spike),1,0.0001563,1.011
+277,278C,RBD antibodies depleted (D614G spike),1,3.906e-05,0.9313
+278,278C,RBD antibodies depleted (D614G spike),1,9.766e-06,0.9123
+279,278C,RBD antibodies depleted (D614G spike),1,2.441e-06,1.037
+280,278C,RBD antibodies depleted (D614G spike),2,0.04,0.2584
+281,278C,RBD antibodies depleted (D614G spike),2,0.01,0.3803
+282,278C,RBD antibodies depleted (D614G spike),2,0.0025,0.7509
+283,278C,RBD antibodies depleted (D614G spike),2,0.000625,0.915
+284,278C,RBD antibodies depleted (D614G spike),2,0.0001563,0.8828
+285,278C,RBD antibodies depleted (D614G spike),2,3.906e-05,0.9437
+286,278C,RBD antibodies depleted (D614G spike),2,9.766e-06,0.9273
+287,278C,RBD antibodies depleted (D614G spike),2,2.441e-06,0.98
+288,279C,mock depletion (D614G spike),1,0.04,6.571e-06
+289,279C,mock depletion (D614G spike),1,0.01,-1.342e-05
+290,279C,mock depletion (D614G spike),1,0.0025,-1.079e-05
+291,279C,mock depletion (D614G spike),1,0.000625,0.00554
+292,279C,mock depletion (D614G spike),1,0.0001563,0.1912
+293,279C,mock depletion (D614G spike),1,3.906e-05,0.67
+294,279C,mock depletion (D614G spike),1,9.766e-06,0.8817
+295,279C,mock depletion (D614G spike),1,2.441e-06,0.9156
+296,279C,mock depletion (D614G spike),2,0.04,-9.387e-07
+297,279C,mock depletion (D614G spike),2,0.01,7.225e-06
+298,279C,mock depletion (D614G spike),2,0.0025,8.394e-06
+299,279C,mock depletion (D614G spike),2,0.000625,0.00554
+300,279C,mock depletion (D614G spike),2,0.0001563,0.2185
+301,279C,mock depletion (D614G spike),2,3.906e-05,0.701
+302,279C,mock depletion (D614G spike),2,9.766e-06,0.8308
+303,279C,mock depletion (D614G spike),2,2.441e-06,0.9358
+304,279C,RBD antibodies depleted (D614G spike),1,0.04,0.2125
+305,279C,RBD antibodies depleted (D614G spike),1,0.01,0.4092
+306,279C,RBD antibodies depleted (D614G spike),1,0.0025,0.8148
+307,279C,RBD antibodies depleted (D614G spike),1,0.000625,1.132
+308,279C,RBD antibodies depleted (D614G spike),1,0.0001563,1.089
+309,279C,RBD antibodies depleted (D614G spike),1,3.906e-05,1.003
+310,279C,RBD antibodies depleted (D614G spike),1,9.766e-06,0.9573
+311,279C,RBD antibodies depleted (D614G spike),1,2.441e-06,0.9715
+312,279C,RBD antibodies depleted (D614G spike),2,0.04,0.2288
+313,279C,RBD antibodies depleted (D614G spike),2,0.01,0.3782
+314,279C,RBD antibodies depleted (D614G spike),2,0.0025,0.6834
+315,279C,RBD antibodies depleted (D614G spike),2,0.000625,1.119
+316,279C,RBD antibodies depleted (D614G spike),2,0.0001563,0.9525
+317,279C,RBD antibodies depleted (D614G spike),2,3.906e-05,0.9696
+318,279C,RBD antibodies depleted (D614G spike),2,9.766e-06,0.8508
+319,279C,RBD antibodies depleted (D614G spike),2,2.441e-06,0.9922
+320,276C,mock depletion (D614G spike),1,0.04,5.632e-07
+321,276C,mock depletion (D614G spike),1,0.01,-9.016e-06
+322,276C,mock depletion (D614G spike),1,0.0025,-2.043e-05
+323,276C,mock depletion (D614G spike),1,0.000625,0.04905
+324,276C,mock depletion (D614G spike),1,0.0001563,0.4163
+325,276C,mock depletion (D614G spike),1,3.906e-05,0.8541
+326,276C,mock depletion (D614G spike),1,9.766e-06,0.9072
+327,276C,mock depletion (D614G spike),1,2.441e-06,0.9218
+328,276C,mock depletion (D614G spike),2,0.04,1.859e-05
+329,276C,mock depletion (D614G spike),2,0.01,-4.207e-06
+330,276C,mock depletion (D614G spike),2,0.0025,-1.205e-05
+331,276C,mock depletion (D614G spike),2,0.000625,0.02976
+332,276C,mock depletion (D614G spike),2,0.0001563,0.3954
+333,276C,mock depletion (D614G spike),2,3.906e-05,0.9364
+334,276C,mock depletion (D614G spike),2,9.766e-06,0.9887
+335,276C,mock depletion (D614G spike),2,2.441e-06,0.967
+336,276C,RBD antibodies depleted (D614G spike),1,0.04,0.7334
+337,276C,RBD antibodies depleted (D614G spike),1,0.01,0.8702
+338,276C,RBD antibodies depleted (D614G spike),1,0.0025,1.162
+339,276C,RBD antibodies depleted (D614G spike),1,0.000625,1.068
+340,276C,RBD antibodies depleted (D614G spike),1,0.0001563,0.9008
+341,276C,RBD antibodies depleted (D614G spike),1,3.906e-05,0.9337
+342,276C,RBD antibodies depleted (D614G spike),1,9.766e-06,0.9251
+343,276C,RBD antibodies depleted (D614G spike),1,2.441e-06,0.9186
+344,276C,RBD antibodies depleted (D614G spike),2,0.04,0.5612
+345,276C,RBD antibodies depleted (D614G spike),2,0.01,0.7485
+346,276C,RBD antibodies depleted (D614G spike),2,0.0025,1.147
+347,276C,RBD antibodies depleted (D614G spike),2,0.000625,0.9749
+348,276C,RBD antibodies depleted (D614G spike),2,0.0001563,0.9787
+349,276C,RBD antibodies depleted (D614G spike),2,3.906e-05,1.025
+350,276C,RBD antibodies depleted (D614G spike),2,9.766e-06,0.9586
+351,276C,RBD antibodies depleted (D614G spike),2,2.441e-06,0.9556
+352,277C,mock depletion (D614G spike),1,0.04,-8.449e-06
+353,277C,mock depletion (D614G spike),1,0.01,1.022e-05
+354,277C,mock depletion (D614G spike),1,0.0025,0.004141
+355,277C,mock depletion (D614G spike),1,0.000625,0.1203
+356,277C,mock depletion (D614G spike),1,0.0001563,0.6242
+357,277C,mock depletion (D614G spike),1,3.906e-05,0.9567
+358,277C,mock depletion (D614G spike),1,9.766e-06,0.9705
+359,277C,mock depletion (D614G spike),1,2.441e-06,0.9719
+360,277C,mock depletion (D614G spike),2,0.04,-1.295e-05
+361,277C,mock depletion (D614G spike),2,0.01,-9.016e-06
+362,277C,mock depletion (D614G spike),2,0.0025,0.001614
+363,277C,mock depletion (D614G spike),2,0.000625,0.1437
+364,277C,mock depletion (D614G spike),2,0.0001563,0.6303
+365,277C,mock depletion (D614G spike),2,3.906e-05,0.981
+366,277C,mock depletion (D614G spike),2,9.766e-06,1.007
+367,277C,mock depletion (D614G spike),2,2.441e-06,1.015
+368,277C,RBD antibodies depleted (D614G spike),1,0.04,0.5322
+369,277C,RBD antibodies depleted (D614G spike),1,0.01,0.7516
+370,277C,RBD antibodies depleted (D614G spike),1,0.0025,0.9272
+371,277C,RBD antibodies depleted (D614G spike),1,0.000625,1.03
+372,277C,RBD antibodies depleted (D614G spike),1,0.0001563,0.8163
+373,277C,RBD antibodies depleted (D614G spike),1,3.906e-05,1.042
+374,277C,RBD antibodies depleted (D614G spike),1,9.766e-06,0.8944
+375,277C,RBD antibodies depleted (D614G spike),1,2.441e-06,0.9992
+376,277C,RBD antibodies depleted (D614G spike),2,0.04,0.5066
+377,277C,RBD antibodies depleted (D614G spike),2,0.01,0.9286
+378,277C,RBD antibodies depleted (D614G spike),2,0.0025,0.966
+379,277C,RBD antibodies depleted (D614G spike),2,0.000625,0.9182
+380,277C,RBD antibodies depleted (D614G spike),2,0.0001563,1.111
+381,277C,RBD antibodies depleted (D614G spike),2,3.906e-05,1.049
+382,277C,RBD antibodies depleted (D614G spike),2,9.766e-06,0.9947
+383,277C,RBD antibodies depleted (D614G spike),2,2.441e-06,1.052
+384,273C,mock depletion (D614G spike),1,0.04,-8.409e-06
+385,273C,mock depletion (D614G spike),1,0.01,1.44e-05
+386,273C,mock depletion (D614G spike),1,0.0025,6.047e-06
+387,273C,mock depletion (D614G spike),1,0.000625,0.003171
+388,273C,mock depletion (D614G spike),1,0.0001563,0.3151
+389,273C,mock depletion (D614G spike),1,3.906e-05,0.7333
+390,273C,mock depletion (D614G spike),1,9.766e-06,0.8283
+391,273C,mock depletion (D614G spike),1,2.441e-06,0.9859
+392,273C,mock depletion (D614G spike),2,0.04,2.213e-06
+393,273C,mock depletion (D614G spike),2,0.01,6.454e-06
+394,273C,mock depletion (D614G spike),2,0.0025,1.721e-05
+395,273C,mock depletion (D614G spike),2,0.000625,0.004123
+396,273C,mock depletion (D614G spike),2,0.0001563,0.2049
+397,273C,mock depletion (D614G spike),2,3.906e-05,0.7285
+398,273C,mock depletion (D614G spike),2,9.766e-06,0.8957
+399,273C,mock depletion (D614G spike),2,2.441e-06,0.9301
+400,273C,RBD antibodies depleted (D614G spike),1,0.04,0.008808
+401,273C,RBD antibodies depleted (D614G spike),1,0.01,0.2781
+402,273C,RBD antibodies depleted (D614G spike),1,0.0025,0.8225
+403,273C,RBD antibodies depleted (D614G spike),1,0.000625,0.9259
+404,273C,RBD antibodies depleted (D614G spike),1,0.0001563,0.9901
+405,273C,RBD antibodies depleted (D614G spike),1,3.906e-05,0.9654
+406,273C,RBD antibodies depleted (D614G spike),1,9.766e-06,1.018
+407,273C,RBD antibodies depleted (D614G spike),1,2.441e-06,0.9546
+408,273C,RBD antibodies depleted (D614G spike),2,0.04,0.01847
+409,273C,RBD antibodies depleted (D614G spike),2,0.01,0.3128
+410,273C,RBD antibodies depleted (D614G spike),2,0.0025,0.7417
+411,273C,RBD antibodies depleted (D614G spike),2,0.000625,0.9314
+412,273C,RBD antibodies depleted (D614G spike),2,0.0001563,1.068
+413,273C,RBD antibodies depleted (D614G spike),2,3.906e-05,0.9062
+414,273C,RBD antibodies depleted (D614G spike),2,9.766e-06,0.9783
+415,273C,RBD antibodies depleted (D614G spike),2,2.441e-06,1.003
+416,274C,mock depletion (D614G spike),1,0.04,-8.409e-06
+417,274C,mock depletion (D614G spike),1,0.01,4.617e-05
+418,274C,mock depletion (D614G spike),1,0.0025,0.001461
+419,274C,mock depletion (D614G spike),1,0.000625,0.05295
+420,274C,mock depletion (D614G spike),1,0.0001563,0.6204
+421,274C,mock depletion (D614G spike),1,3.906e-05,0.8526
+422,274C,mock depletion (D614G spike),1,9.766e-06,0.8934
+423,274C,mock depletion (D614G spike),1,2.441e-06,0.9331
+424,274C,mock depletion (D614G spike),2,0.04,-4.868e-06
+425,274C,mock depletion (D614G spike),2,0.01,-1.738e-05
+426,274C,mock depletion (D614G spike),2,0.0025,0.0003744
+427,274C,mock depletion (D614G spike),2,0.000625,0.04976
+428,274C,mock depletion (D614G spike),2,0.0001563,0.574
+429,274C,mock depletion (D614G spike),2,3.906e-05,0.8824
+430,274C,mock depletion (D614G spike),2,9.766e-06,0.9674
+431,274C,mock depletion (D614G spike),2,2.441e-06,0.9752
+432,274C,RBD antibodies depleted (D614G spike),1,0.04,0.2201
+433,274C,RBD antibodies depleted (D614G spike),1,0.01,0.6516
+434,274C,RBD antibodies depleted (D614G spike),1,0.0025,0.9462
+435,274C,RBD antibodies depleted (D614G spike),1,0.000625,1.014
+436,274C,RBD antibodies depleted (D614G spike),1,0.0001563,0.9489
+437,274C,RBD antibodies depleted (D614G spike),1,3.906e-05,0.9195
+438,274C,RBD antibodies depleted (D614G spike),1,9.766e-06,0.9691
+439,274C,RBD antibodies depleted (D614G spike),1,2.441e-06,0.9482
+440,274C,RBD antibodies depleted (D614G spike),2,0.04,0.1928
+441,274C,RBD antibodies depleted (D614G spike),2,0.01,0.5793
+442,274C,RBD antibodies depleted (D614G spike),2,0.0025,0.9997
+443,274C,RBD antibodies depleted (D614G spike),2,0.000625,1.086
+444,274C,RBD antibodies depleted (D614G spike),2,0.0001563,1.114
+445,274C,RBD antibodies depleted (D614G spike),2,3.906e-05,0.9346
+446,274C,RBD antibodies depleted (D614G spike),2,9.766e-06,0.9739
+447,274C,RBD antibodies depleted (D614G spike),2,2.441e-06,0.9728
+448,267C,mock depletion (D614G spike),1,0.04,-1.717e-05
+449,267C,mock depletion (D614G spike),1,0.01,0.002701
+450,267C,mock depletion (D614G spike),1,0.0025,0.1536
+451,267C,mock depletion (D614G spike),1,0.000625,0.6172
+452,267C,mock depletion (D614G spike),1,0.0001563,0.7078
+453,267C,mock depletion (D614G spike),1,3.906e-05,0.8797
+454,267C,mock depletion (D614G spike),1,9.766e-06,0.799
+455,267C,mock depletion (D614G spike),1,2.441e-06,0.8612
+456,267C,mock depletion (D614G spike),2,0.04,-8.012e-06
+457,267C,mock depletion (D614G spike),2,0.01,0.008374
+458,267C,mock depletion (D614G spike),2,0.0025,0.1758
+459,267C,mock depletion (D614G spike),2,0.000625,0.5941
+460,267C,mock depletion (D614G spike),2,0.0001563,0.8144
+461,267C,mock depletion (D614G spike),2,3.906e-05,0.9055
+462,267C,mock depletion (D614G spike),2,9.766e-06,0.9311
+463,267C,mock depletion (D614G spike),2,2.441e-06,0.8438
+464,267C,RBD antibodies depleted (D614G spike),1,0.04,0.7968
+465,267C,RBD antibodies depleted (D614G spike),1,0.01,1.239
+466,267C,RBD antibodies depleted (D614G spike),1,0.0025,0.9121
+467,267C,RBD antibodies depleted (D614G spike),1,0.000625,0.9864
+468,267C,RBD antibodies depleted (D614G spike),1,0.0001563,0.7411
+469,267C,RBD antibodies depleted (D614G spike),1,3.906e-05,1.088
+470,267C,RBD antibodies depleted (D614G spike),1,9.766e-06,0.9188
+471,267C,RBD antibodies depleted (D614G spike),1,2.441e-06,0.8682
+472,267C,RBD antibodies depleted (D614G spike),2,0.04,0.8092
+473,267C,RBD antibodies depleted (D614G spike),2,0.01,1.137
+474,267C,RBD antibodies depleted (D614G spike),2,0.0025,1.107
+475,267C,RBD antibodies depleted (D614G spike),2,0.000625,0.9339
+476,267C,RBD antibodies depleted (D614G spike),2,0.0001563,0.8219
+477,267C,RBD antibodies depleted (D614G spike),2,3.906e-05,0.8767
+478,267C,RBD antibodies depleted (D614G spike),2,9.766e-06,0.9423
+479,267C,RBD antibodies depleted (D614G spike),2,2.441e-06,1.007
+480,268C,mock depletion (D614G spike),1,0.04,-8.012e-06
+481,268C,mock depletion (D614G spike),1,0.01,-9.262e-06
+482,268C,mock depletion (D614G spike),1,0.0025,0.001284
+483,268C,mock depletion (D614G spike),1,0.000625,0.07641
+484,268C,mock depletion (D614G spike),1,0.0001563,0.3667
+485,268C,mock depletion (D614G spike),1,3.906e-05,0.8174
+486,268C,mock depletion (D614G spike),1,9.766e-06,0.8661
+487,268C,mock depletion (D614G spike),1,2.441e-06,0.9171
+488,268C,mock depletion (D614G spike),2,0.04,1.145e-06
+489,268C,mock depletion (D614G spike),2,0.01,-9.262e-06
+490,268C,mock depletion (D614G spike),2,0.0025,-2.975e-05
+491,268C,mock depletion (D614G spike),2,0.000625,0.06657
+492,268C,mock depletion (D614G spike),2,0.0001563,0.4181
+493,268C,mock depletion (D614G spike),2,3.906e-05,0.9454
+494,268C,mock depletion (D614G spike),2,9.766e-06,0.9994
+495,268C,mock depletion (D614G spike),2,2.441e-06,0.967
+496,268C,RBD antibodies depleted (D614G spike),1,0.04,0.4055
+497,268C,RBD antibodies depleted (D614G spike),1,0.01,0.9166
+498,268C,RBD antibodies depleted (D614G spike),1,0.0025,0.935
+499,268C,RBD antibodies depleted (D614G spike),1,0.000625,1.046
+500,268C,RBD antibodies depleted (D614G spike),1,0.0001563,0.9597
+501,268C,RBD antibodies depleted (D614G spike),1,3.906e-05,0.9769
+502,268C,RBD antibodies depleted (D614G spike),1,9.766e-06,0.9268
+503,268C,RBD antibodies depleted (D614G spike),1,2.441e-06,0.9775
+504,268C,RBD antibodies depleted (D614G spike),2,0.04,0.4195
+505,268C,RBD antibodies depleted (D614G spike),2,0.01,0.872
+506,268C,RBD antibodies depleted (D614G spike),2,0.0025,0.9784
+507,268C,RBD antibodies depleted (D614G spike),2,0.000625,1.201
+508,268C,RBD antibodies depleted (D614G spike),2,0.0001563,0.9611
+509,268C,RBD antibodies depleted (D614G spike),2,3.906e-05,1.021
+510,268C,RBD antibodies depleted (D614G spike),2,9.766e-06,0.9814
+511,268C,RBD antibodies depleted (D614G spike),2,2.441e-06,0.8349
