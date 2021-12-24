@@ -757,7 +757,7 @@ for metric in ['fold_change', 'NT50']:
                     .reset_index()
                     .dropna()
                     ) +
-             aes('virus', metric, shape='ic50_is_bound', group='serum',
+             aes('virus', metric, group='serum', # shape='ic50_is_bound',
                 ) +
              geom_line(aes(x='virus', y=metric, group='serum'), color=CBPALETTE[0]) +
              geom_point(size=2.5, alpha=0.5, fill=CBPALETTE[0]) + 
@@ -785,7 +785,7 @@ for metric in ['fold_change', 'NT50']:
                         linetype='dotted',
                         color=CBPALETTE[0]
                        ) +
-             scale_shape_manual(values=['o','^'], name='limit of detection') +
+             # scale_shape_manual(values=['o','^'], name='limit of detection') +
              scale_color_manual(values=CBPALETTE*3, guide=False) +
              # scale_fill_manual(values=CBPALETTE*3) +
              facet_wrap('~sample_type', scales='free_x')
