@@ -746,23 +746,28 @@ for metric in ['fold_change', 'NT50']:
         yintercept={'fold_change':1,
                     'NT50': config['NT50_LOD']
                    }
+        
+        # define df to do plotting on:
+        df=(neut_titers
+            .query("virus in @virus_subsample & replicate== 'average'")
+            .assign(virus=lambda x: pd.Categorical(x['virus'],
+                                                       ordered=True,
+                                                       categories=virus_subsample))
+            .groupby(['serum', 'virus', 'sample_type'])
+            .agg({metric: geometric_mean})
+            .reset_index()
+            .dropna()
+           )
+        
+        # define the y-axis limits so I can make them exactly the same between plots
+        limits=(df[metric].min()*0.9, df[metric].max()*1.1)
+        print(limits)
 
-        p = (ggplot(neut_titers
-                    .query("virus in @virus_subsample & replicate== 'average'") #& date in @dates
-                    .assign(virus=lambda x: pd.Categorical(x['virus'],
-                                                              ordered=True,
-                                                              categories=virus_subsample))
-                    .groupby(['serum', 'virus', 'sample_type','ic50_is_bound'])
-                    .agg({metric: geometric_mean})
-                    .reset_index()
-                    .dropna()
-                    ) +
-             aes('virus', metric, group='serum', # shape='ic50_is_bound',
-                ) +
+        p = (ggplot(df) +
+             aes('virus', metric, group='serum') +
              geom_line(aes(x='virus', y=metric, group='serum'), color=CBPALETTE[0]) +
              geom_point(size=2.5, alpha=0.5, fill=CBPALETTE[0]) + 
-             geom_crossbar(data=(neut_titers
-                                 .query("virus in @virus_subsample & replicate== 'average'") # & date in @dates
+             geom_crossbar(data=(df
                                  .groupby(['virus', 'sample_type'])
                                  .agg({metric: geometric_mean})
                                  .reset_index()
@@ -770,8 +775,8 @@ for metric in ['fold_change', 'NT50']:
                                 ),
                            inherit_aes=False,
                            mapping=aes(x='virus', y=metric, ymin=metric, ymax=metric),
-                  ) +
-             scale_y_log10(name=ylab[metric]) +
+                          ) +
+             scale_y_log10(name=ylab[metric], limits=limits) +
              theme_classic() +
              theme(axis_text_x=element_text(angle=90),
                    axis_title_x=element_blank(),
@@ -785,9 +790,7 @@ for metric in ['fold_change', 'NT50']:
                         linetype='dotted',
                         color=CBPALETTE[0]
                        ) +
-             # scale_shape_manual(values=['o','^'], name='limit of detection') +
              scale_color_manual(values=CBPALETTE*3, guide=False) +
-             # scale_fill_manual(values=CBPALETTE*3) +
              facet_wrap('~sample_type', scales='free_x')
              )
 
@@ -799,8 +802,10 @@ for metric in ['fold_change', 'NT50']:
 ```
 
     Making plot for fold_change for mutneuts:
+    (0.22977515116553654, 695.9233012585322)
     Saving to results/neut_titers/fold_change_mutneuts_aggregate_simple.pdf
     Making plot for NT50 for mutneuts:
+    (22.499999999999996, 40495.49949040342)
     Saving to results/neut_titers/NT50_mutneuts_aggregate_simple.pdf
 
 
@@ -821,25 +826,28 @@ Make plot to show NT50 by cohort.
 
 ```python
 for virus_set, virus_subsample in config['virus_subsets'].items():
+    
+    # define df to do plotting on:
+    df=(neut_titers
+        .query("virus in @virus_subsample & replicate== 'average'")
+        .assign(virus=lambda x: pd.Categorical(x['virus'],
+                                                   ordered=True,
+                                                   categories=virus_subsample))
+        .groupby(['serum', 'virus', 'sample_type'])
+        .agg({'NT50': geometric_mean})
+        .reset_index()
+        .dropna()
+       )
 
-    p = (ggplot(neut_titers
-                .query("virus in @virus_subsample & replicate=='average'")
-                .assign(virus_labels=lambda x: pd.Categorical(x['virus'],
-                                                              ordered=True,
-                                                              categories=virus_subsample),
-                       )
-                .groupby(['serum', 'virus', 'sample_type','ic50_is_bound'])
-                .agg({'NT50': geometric_mean})
-                .reset_index()
-                .dropna()
+    # define the y-axis limits so I can make them exactly the same between plots
+    limits=(df['NT50'].min()*0.9, df['NT50'].max()*1.1)
+    print(limits)
+
+    p = (ggplot(df
                 .groupby(['virus', 'sample_type'])
-                # .agg({'NT50': geometric_mean})
                 .agg(NT50=('NT50', geometric_mean), sem=('NT50', stats.gstd))
                 .reset_index()
                 .dropna()
-                .assign(virus=lambda x: pd.Categorical(x['virus'],
-                                                              ordered=True,
-                                                              categories=virus_subsample))
                 ) +
          aes('virus', 
              'NT50', 
@@ -850,14 +858,13 @@ for virus_set, virus_subsample in config['virus_subsets'].items():
          geom_point(size=2.5, alpha=1, position=position_dodge(width=0.5)) +
          geom_errorbar(aes(x="virus", ymin="NT50/sem",ymax="NT50*sem"),
                        alpha=0.5,
-                       # width=0.25,
                        position=position_dodge(width=0.5)
                       )+
          geom_hline(yintercept=config['NT50_LOD'],
                     linetype='dashed', size=0.5,
                     alpha=0.6, 
                     color=CBPALETTE[0]) +
-         scale_y_log10(name='neutralization titer 50%\n(NT50)') +
+         scale_y_log10(name='neutralization titer 50%\n(NT50)', limits=limits) +
          theme_classic() +
          theme(axis_title_x=element_blank(),
                figure_size=(neut_titers.query('virus in @virus_subsample')['virus'].nunique()*0.5, 2.5),
@@ -874,12 +881,21 @@ for virus_set, virus_subsample in config['virus_subsets'].items():
     p.save(plotfile, limitsize=False, verbose=False)
 ```
 
+    (22.499999999999996, 40495.49949040342)
+
+
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/layer.py:401: PlotnineWarning: geom_errorbar : Removed 1 rows containing missing values.
+
+
     Saving to results/neut_titers/NT50_mutneuts_aggregate_nofacet.pdf
+
+
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/layer.py:401: PlotnineWarning: geom_errorbar : Removed 1 rows containing missing values.
 
 
 
     
-![png](analyze_neut_data_files/analyze_neut_data_27_1.png)
+![png](analyze_neut_data_files/analyze_neut_data_27_4.png)
     
 
 
@@ -1008,7 +1024,7 @@ geomean_mut_effects=(neut_titers
                             )
                     )
 
-display(HTML(geomean_mut_effects.to_html(index=False)))
+display(HTML(geomean_mut_effects.head().to_html(index=False)))
 
 geomean_mut_effects.to_csv(neut_titers_summary_file, index=False)
 ```
@@ -1077,156 +1093,6 @@ geomean_mut_effects.to_csv(neut_titers_summary_file, index=False)
       <td>8</td>
       <td>6705.727413</td>
       <td>941.293830</td>
-    </tr>
-    <tr>
-      <td>Delta</td>
-      <td>primary Delta infection</td>
-      <td>1.001430</td>
-      <td>4863.472244</td>
-      <td>1.975576</td>
-      <td>8</td>
-      <td>9608.156835</td>
-      <td>2461.800184</td>
-    </tr>
-    <tr>
-      <td>Delta + E484K</td>
-      <td>Pfizer</td>
-      <td>3.208403</td>
-      <td>207.503691</td>
-      <td>2.124967</td>
-      <td>8</td>
-      <td>440.938465</td>
-      <td>97.650319</td>
-    </tr>
-    <tr>
-      <td>Delta + E484K</td>
-      <td>Delta breakthrough</td>
-      <td>3.259109</td>
-      <td>771.909409</td>
-      <td>2.464179</td>
-      <td>8</td>
-      <td>1902.123211</td>
-      <td>313.252124</td>
-    </tr>
-    <tr>
-      <td>Delta + E484K</td>
-      <td>primary Delta infection</td>
-      <td>8.403561</td>
-      <td>579.566905</td>
-      <td>2.592924</td>
-      <td>8</td>
-      <td>1502.773208</td>
-      <td>223.518623</td>
-    </tr>
-    <tr>
-      <td>Delta + K417N</td>
-      <td>Pfizer</td>
-      <td>3.483359</td>
-      <td>191.124580</td>
-      <td>2.763088</td>
-      <td>8</td>
-      <td>528.094068</td>
-      <td>69.170641</td>
-    </tr>
-    <tr>
-      <td>Delta + K417N</td>
-      <td>Delta breakthrough</td>
-      <td>2.608850</td>
-      <td>964.308967</td>
-      <td>2.959634</td>
-      <td>8</td>
-      <td>2854.001423</td>
-      <td>325.820364</td>
-    </tr>
-    <tr>
-      <td>Delta + K417N</td>
-      <td>primary Delta infection</td>
-      <td>2.178660</td>
-      <td>2235.514124</td>
-      <td>2.300774</td>
-      <td>8</td>
-      <td>5143.412414</td>
-      <td>971.635754</td>
-    </tr>
-    <tr>
-      <td>Delta RBD Abs depleted (x D614G PV)</td>
-      <td>Pfizer</td>
-      <td>2.915247</td>
-      <td>228.370164</td>
-      <td>1.835415</td>
-      <td>8</td>
-      <td>419.154118</td>
-      <td>124.424238</td>
-    </tr>
-    <tr>
-      <td>Delta RBD Abs depleted (x D614G PV)</td>
-      <td>Delta breakthrough</td>
-      <td>21.777749</td>
-      <td>115.518702</td>
-      <td>2.369659</td>
-      <td>8</td>
-      <td>273.739911</td>
-      <td>48.749086</td>
-    </tr>
-    <tr>
-      <td>Delta RBD Abs depleted (x Delta PV)</td>
-      <td>Pfizer</td>
-      <td>26.630221</td>
-      <td>25.000000</td>
-      <td>1.000000</td>
-      <td>8</td>
-      <td>25.000000</td>
-      <td>25.000000</td>
-    </tr>
-    <tr>
-      <td>Delta RBD Abs depleted (x Delta PV)</td>
-      <td>Delta breakthrough</td>
-      <td>95.939376</td>
-      <td>26.222155</td>
-      <td>1.116984</td>
-      <td>8</td>
-      <td>29.289734</td>
-      <td>23.475851</td>
-    </tr>
-    <tr>
-      <td>Delta RBD Abs depleted (x Delta PV)</td>
-      <td>primary Delta infection</td>
-      <td>86.628556</td>
-      <td>56.221942</td>
-      <td>2.219946</td>
-      <td>8</td>
-      <td>124.809688</td>
-      <td>25.325812</td>
-    </tr>
-    <tr>
-      <td>Wuhan-1 RBD Abs depleted (x D614G PV)</td>
-      <td>Pfizer</td>
-      <td>26.630221</td>
-      <td>25.000000</td>
-      <td>1.000000</td>
-      <td>8</td>
-      <td>25.000000</td>
-      <td>25.000000</td>
-    </tr>
-    <tr>
-      <td>Wuhan-1 RBD Abs depleted (x D614G PV)</td>
-      <td>Delta breakthrough</td>
-      <td>45.242717</td>
-      <td>55.605353</td>
-      <td>2.332077</td>
-      <td>8</td>
-      <td>129.675991</td>
-      <td>23.843699</td>
-    </tr>
-    <tr>
-      <td>Wuhan-1 RBD Abs depleted (x D614G PV)</td>
-      <td>primary Delta infection</td>
-      <td>142.947149</td>
-      <td>34.071513</td>
-      <td>1.605872</td>
-      <td>8</td>
-      <td>54.714488</td>
-      <td>21.216830</td>
     </tr>
   </tbody>
 </table>
