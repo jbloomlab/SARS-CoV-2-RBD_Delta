@@ -116,54 +116,54 @@ display(HTML(fracinfect.head().to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>278C</td>
+      <td>Delta_10</td>
       <td>D614G</td>
       <td>1</td>
       <td>0.040000</td>
-      <td>0.000002</td>
-      <td>2021-11-25</td>
-      <td>1 (2021-11-25)</td>
-      <td>1</td>
+      <td>0.000035</td>
+      <td>2022-01-06</td>
+      <td>1 (2022-01-06)</td>
+      <td>4</td>
     </tr>
     <tr>
-      <td>278C</td>
+      <td>Delta_10</td>
       <td>D614G</td>
       <td>1</td>
       <td>0.010000</td>
-      <td>0.000002</td>
-      <td>2021-11-25</td>
-      <td>1 (2021-11-25)</td>
-      <td>1</td>
+      <td>0.007385</td>
+      <td>2022-01-06</td>
+      <td>1 (2022-01-06)</td>
+      <td>4</td>
     </tr>
     <tr>
-      <td>278C</td>
+      <td>Delta_10</td>
       <td>D614G</td>
       <td>1</td>
       <td>0.002500</td>
-      <td>-0.000003</td>
-      <td>2021-11-25</td>
-      <td>1 (2021-11-25)</td>
-      <td>1</td>
+      <td>0.188400</td>
+      <td>2022-01-06</td>
+      <td>1 (2022-01-06)</td>
+      <td>4</td>
     </tr>
     <tr>
-      <td>278C</td>
+      <td>Delta_10</td>
       <td>D614G</td>
       <td>1</td>
       <td>0.000625</td>
-      <td>0.002071</td>
-      <td>2021-11-25</td>
-      <td>1 (2021-11-25)</td>
-      <td>1</td>
+      <td>0.640000</td>
+      <td>2022-01-06</td>
+      <td>1 (2022-01-06)</td>
+      <td>4</td>
     </tr>
     <tr>
-      <td>278C</td>
+      <td>Delta_10</td>
       <td>D614G</td>
       <td>1</td>
       <td>0.000156</td>
-      <td>0.077880</td>
-      <td>2021-11-25</td>
-      <td>1 (2021-11-25)</td>
-      <td>1</td>
+      <td>0.993600</td>
+      <td>2022-01-06</td>
+      <td>1 (2022-01-06)</td>
+      <td>4</td>
     </tr>
   </tbody>
 </table>
@@ -277,63 +277,63 @@ fitparams.head()
   <tbody>
     <tr>
       <th>0</th>
-      <td>278C</td>
+      <td>Delta_10</td>
       <td>D614G</td>
-      <td>0.000028</td>
-      <td>36156.872871</td>
+      <td>0.000942</td>
+      <td>1061.588219</td>
       <td>interpolated</td>
-      <td>2021-11-25</td>
+      <td>2022-01-06</td>
       <td>1</td>
       <td>1.0</td>
       <td>False</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>278C</td>
+      <td>Delta_10</td>
       <td>D614G</td>
-      <td>0.000028</td>
-      <td>36194.773838</td>
+      <td>0.001349</td>
+      <td>741.511063</td>
       <td>interpolated</td>
-      <td>2021-11-25</td>
+      <td>2022-01-06</td>
       <td>2</td>
       <td>1.0</td>
       <td>False</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>278C</td>
+      <td>Delta_10</td>
       <td>D614G</td>
-      <td>0.000028</td>
-      <td>36090.374491</td>
+      <td>0.001134</td>
+      <td>882.157389</td>
       <td>interpolated</td>
-      <td>2021-11-25</td>
+      <td>2022-01-06</td>
       <td>average</td>
       <td>1.0</td>
       <td>False</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>278C</td>
+      <td>Delta_10</td>
       <td>Delta RBD Abs depleted (x D614G PV)</td>
-      <td>0.003455</td>
-      <td>289.406060</td>
-      <td>interpolated</td>
-      <td>2021-11-25</td>
+      <td>0.040000</td>
+      <td>25.000000</td>
+      <td>lower</td>
+      <td>2022-01-06</td>
       <td>1</td>
       <td>1.0</td>
-      <td>False</td>
+      <td>True</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>278C</td>
+      <td>Delta_10</td>
       <td>Delta RBD Abs depleted (x D614G PV)</td>
-      <td>0.002789</td>
-      <td>358.494044</td>
-      <td>interpolated</td>
-      <td>2021-11-25</td>
+      <td>0.040000</td>
+      <td>25.000000</td>
+      <td>lower</td>
+      <td>2022-01-06</td>
       <td>2</td>
       <td>1.0</td>
-      <td>False</td>
+      <td>True</td>
     </tr>
   </tbody>
 </table>
@@ -366,6 +366,11 @@ for d in fracinfect['date'].unique():
     fig.savefig(plotfile, bbox_inches='tight')
 ```
 
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/neutcurve/hillcurve.py:741: RuntimeWarning: invalid value encountered in power
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/scipy/optimize/minpack.py:833: OptimizeWarning: Covariance of the parameters could not be estimated
+
+
+    Saving to results/neut_titers/2022-01-06_mutant_neuts.pdf
     Saving to results/neut_titers/2021-11-25_mutant_neuts.pdf
     Saving to results/neut_titers/2021-12-19_mutant_neuts.pdf
 
@@ -393,12 +398,6 @@ for d in fracinfect['date'].unique():
 
 
     
-![png](analyze_neut_data_files/analyze_neut_data_14_7.png)
-    
-
-
-
-    
 ![png](analyze_neut_data_files/analyze_neut_data_14_8.png)
     
 
@@ -418,6 +417,18 @@ for d in fracinfect['date'].unique():
 
     
 ![png](analyze_neut_data_files/analyze_neut_data_14_11.png)
+    
+
+
+
+    
+![png](analyze_neut_data_files/analyze_neut_data_14_12.png)
+    
+
+
+
+    
+![png](analyze_neut_data_files/analyze_neut_data_14_13.png)
     
 
 
@@ -525,74 +536,74 @@ neut_titers.to_csv(neut_titers_file, index=False)
   </thead>
   <tbody>
     <tr>
-      <td>278C</td>
+      <td>Delta_10</td>
       <td>D614G</td>
-      <td>0.000028</td>
-      <td>36156.872871</td>
+      <td>0.000942</td>
+      <td>1061.588219</td>
       <td>interpolated</td>
-      <td>2021-11-25</td>
+      <td>2022-01-06</td>
       <td>1</td>
       <td>1.0</td>
       <td>False</td>
-      <td>0.000063</td>
-      <td>Delta breakthrough</td>
-      <td>0.437439</td>
+      <td>0.000273</td>
+      <td>primary Delta infection</td>
+      <td>3.449611</td>
     </tr>
     <tr>
-      <td>278C</td>
+      <td>Delta_10</td>
       <td>D614G</td>
-      <td>0.000028</td>
-      <td>36194.773838</td>
+      <td>0.001349</td>
+      <td>741.511063</td>
       <td>interpolated</td>
-      <td>2021-11-25</td>
+      <td>2022-01-06</td>
       <td>2</td>
       <td>1.0</td>
       <td>False</td>
-      <td>0.000063</td>
-      <td>Delta breakthrough</td>
-      <td>0.436981</td>
+      <td>0.000273</td>
+      <td>primary Delta infection</td>
+      <td>4.938653</td>
     </tr>
     <tr>
-      <td>278C</td>
+      <td>Delta_10</td>
       <td>D614G</td>
-      <td>0.000028</td>
-      <td>36090.374491</td>
+      <td>0.001134</td>
+      <td>882.157389</td>
       <td>interpolated</td>
-      <td>2021-11-25</td>
+      <td>2022-01-06</td>
       <td>average</td>
       <td>1.0</td>
       <td>False</td>
-      <td>0.000063</td>
-      <td>Delta breakthrough</td>
-      <td>0.438245</td>
+      <td>0.000273</td>
+      <td>primary Delta infection</td>
+      <td>4.151261</td>
     </tr>
     <tr>
-      <td>278C</td>
+      <td>Delta_10</td>
       <td>Delta RBD Abs depleted (x D614G PV)</td>
-      <td>0.003455</td>
-      <td>289.406060</td>
-      <td>interpolated</td>
-      <td>2021-11-25</td>
+      <td>0.040000</td>
+      <td>25.000000</td>
+      <td>lower</td>
+      <td>2022-01-06</td>
       <td>1</td>
       <td>1.0</td>
-      <td>False</td>
-      <td>0.000063</td>
-      <td>Delta breakthrough</td>
-      <td>54.651373</td>
+      <td>True</td>
+      <td>0.000273</td>
+      <td>primary Delta infection</td>
+      <td>146.482637</td>
     </tr>
     <tr>
-      <td>278C</td>
+      <td>Delta_10</td>
       <td>Delta RBD Abs depleted (x D614G PV)</td>
-      <td>0.002789</td>
-      <td>358.494044</td>
-      <td>interpolated</td>
-      <td>2021-11-25</td>
+      <td>0.040000</td>
+      <td>25.000000</td>
+      <td>lower</td>
+      <td>2022-01-06</td>
       <td>2</td>
       <td>1.0</td>
-      <td>False</td>
-      <td>0.000063</td>
-      <td>Delta breakthrough</td>
-      <td>44.119111</td>
+      <td>True</td>
+      <td>0.000273</td>
+      <td>primary Delta infection</td>
+      <td>146.482637</td>
     </tr>
   </tbody>
 </table>
@@ -1067,12 +1078,12 @@ geomean_mut_effects.to_csv(neut_titers_summary_file, index=False)
     <tr>
       <td>D614G</td>
       <td>primary Delta infection</td>
-      <td>2.649448</td>
-      <td>1838.279141</td>
-      <td>3.128260</td>
+      <td>2.454338</td>
+      <td>1984.414961</td>
+      <td>2.819967</td>
       <td>8</td>
-      <td>5750.615143</td>
-      <td>587.636299</td>
+      <td>5595.985526</td>
+      <td>703.701380</td>
     </tr>
     <tr>
       <td>Delta</td>
