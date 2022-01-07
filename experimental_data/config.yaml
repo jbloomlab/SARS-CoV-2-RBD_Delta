@@ -30,9 +30,11 @@ rbd_depletions_date:
   - 2021-11-25
   - 2021-12-12
   - 2021-12-22
+  - 2022-01-06
 
 heterologous_depletions_dates:
   - 2021-11-25
+  - 2022-01-06
 
 sample_key_file: data/sample_key.csv
 
@@ -42,7 +44,7 @@ sample_type_order:
   - primary Delta infection
 
 virus_key_mutneuts: # how to rename viruses for analyzing mutneuts
-  RBD antibodies depleted (D614G spike): Wuhan-1 RBD Abs depleted (x D614G PV)
+  RBD antibodies depleted (D614G spike): D614G RBD Abs depleted (x D614G PV)
   mock depletion (D614G spike): D614G
   RBD antibodies depleted (Delta spike): Delta RBD Abs depleted (x Delta PV)
   mock depletion (Delta spike): Delta
@@ -57,7 +59,7 @@ virus_order:
   - Delta + K417N
   - Delta + E484K
   - Delta RBD Abs depleted (x D614G PV)
-  - Wuhan-1 RBD Abs depleted (x D614G PV)
+  - D614G RBD Abs depleted (x D614G PV)
   - Delta RBD Abs depleted (x Delta PV)
 
 # specify the "wildtype" virus for the purpose of this study
@@ -70,11 +72,11 @@ virus_subsets:
     - Delta + K417N
     - Delta + E484K
     - Delta RBD Abs depleted (x D614G PV)
-    - Wuhan-1 RBD Abs depleted (x D614G PV)
+    - D614G RBD Abs depleted (x D614G PV)
     - Delta RBD Abs depleted (x Delta PV)
   # depletions:
   #   - D614G
   #   - Delta
   #   - Delta RBD Abs depleted (x D614G PV)
-  #   - Wuhan-1 RBD Abs depleted (x D614G PV)
+  #   - D614G RBD Abs depleted (x D614G PV)
   #   - Delta RBD Abs depleted (x Delta PV)

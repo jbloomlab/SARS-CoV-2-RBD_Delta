@@ -104,12 +104,12 @@ fitparams['ic50_is_bound'] = fitparams['ic50_bound'].apply(lambda x: True if x!=
 display(HTML(fitparams.head().to_html(index=False)))
 ```
 
-    Getting data from ['2021-11-12', '2021-11-25', '2021-12-12', '2021-12-22']
+    Getting data from ['2021-11-12', '2021-11-25', '2021-12-12', '2021-12-22', '2022-01-06']
 
 
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/neutcurve/hillcurve.py:741: RuntimeWarning: invalid value encountered in power
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/neutcurve/hillcurve.py:451: RuntimeWarning: invalid value encountered in sqrt
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/scipy/optimize/minpack.py:833: OptimizeWarning: Covariance of the parameters could not be estimated
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/neutcurve/hillcurve.py:451: RuntimeWarning: invalid value encountered in sqrt
 
 
 
@@ -128,52 +128,52 @@ display(HTML(fitparams.head().to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>278C</td>
+      <td>Delta_10</td>
       <td>heterologous mock depletion (D614G spike)</td>
-      <td>0.000028</td>
+      <td>0.001134</td>
       <td>interpolated</td>
       <td>Delta dep x D614G PV</td>
-      <td>36090.374491</td>
+      <td>882.157389</td>
       <td>mock depletion</td>
       <td>False</td>
     </tr>
     <tr>
-      <td>278C</td>
+      <td>Delta_10</td>
       <td>heterologous Ab depletion (D614G spike)</td>
-      <td>0.003110</td>
-      <td>interpolated</td>
+      <td>0.040000</td>
+      <td>lower</td>
       <td>Delta dep x D614G PV</td>
-      <td>321.503802</td>
+      <td>25.000000</td>
       <td>RBD antibodies depleted</td>
-      <td>False</td>
+      <td>True</td>
     </tr>
     <tr>
-      <td>278C</td>
+      <td>Delta_10</td>
       <td>mock depletion (D614G spike)</td>
-      <td>0.000027</td>
+      <td>0.001088</td>
       <td>interpolated</td>
       <td>D614G</td>
-      <td>37552.318990</td>
+      <td>918.856380</td>
       <td>mock depletion</td>
       <td>False</td>
     </tr>
     <tr>
-      <td>278C</td>
+      <td>Delta_10</td>
       <td>RBD antibodies depleted (D614G spike)</td>
-      <td>0.007820</td>
-      <td>interpolated</td>
+      <td>0.040000</td>
+      <td>lower</td>
       <td>D614G</td>
-      <td>127.879003</td>
+      <td>25.000000</td>
       <td>RBD antibodies depleted</td>
-      <td>False</td>
+      <td>True</td>
     </tr>
     <tr>
-      <td>278C</td>
+      <td>Delta_10</td>
       <td>mock depletion (Delta spike)</td>
-      <td>0.000069</td>
+      <td>0.000322</td>
       <td>interpolated</td>
       <td>Delta</td>
-      <td>14555.535963</td>
+      <td>3102.893168</td>
       <td>mock depletion</td>
       <td>False</td>
     </tr>

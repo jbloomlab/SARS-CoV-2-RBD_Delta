@@ -1086,24 +1086,24 @@ geomean_mut_effects.to_csv(neut_titers_summary_file, index=False)
       <td>703.701380</td>
     </tr>
     <tr>
-      <td>Delta</td>
+      <td>D614G RBD Abs depleted (x D614G PV)</td>
       <td>Pfizer</td>
-      <td>1.003604</td>
-      <td>663.364750</td>
-      <td>2.890681</td>
+      <td>26.630221</td>
+      <td>25.000000</td>
+      <td>1.000000</td>
       <td>8</td>
-      <td>1917.575942</td>
-      <td>229.483892</td>
+      <td>25.000000</td>
+      <td>25.000000</td>
     </tr>
     <tr>
-      <td>Delta</td>
+      <td>D614G RBD Abs depleted (x D614G PV)</td>
       <td>Delta breakthrough</td>
-      <td>1.001336</td>
-      <td>2512.381309</td>
-      <td>2.669072</td>
+      <td>45.242717</td>
+      <td>55.605353</td>
+      <td>2.332077</td>
       <td>8</td>
-      <td>6705.727413</td>
-      <td>941.293830</td>
+      <td>129.675991</td>
+      <td>23.843699</td>
     </tr>
   </tbody>
 </table>
