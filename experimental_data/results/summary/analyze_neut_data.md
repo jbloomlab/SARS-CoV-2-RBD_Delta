@@ -120,7 +120,7 @@ display(HTML(fracinfect.head().to_html(index=False)))
       <td>D614G</td>
       <td>1</td>
       <td>0.040000</td>
-      <td>0.000035</td>
+      <td>0.000008</td>
       <td>2022-01-06</td>
       <td>1 (2022-01-06)</td>
       <td>4</td>
@@ -130,7 +130,7 @@ display(HTML(fracinfect.head().to_html(index=False)))
       <td>D614G</td>
       <td>1</td>
       <td>0.010000</td>
-      <td>0.007385</td>
+      <td>0.004703</td>
       <td>2022-01-06</td>
       <td>1 (2022-01-06)</td>
       <td>4</td>
@@ -140,7 +140,7 @@ display(HTML(fracinfect.head().to_html(index=False)))
       <td>D614G</td>
       <td>1</td>
       <td>0.002500</td>
-      <td>0.188400</td>
+      <td>0.228100</td>
       <td>2022-01-06</td>
       <td>1 (2022-01-06)</td>
       <td>4</td>
@@ -150,7 +150,7 @@ display(HTML(fracinfect.head().to_html(index=False)))
       <td>D614G</td>
       <td>1</td>
       <td>0.000625</td>
-      <td>0.640000</td>
+      <td>0.823500</td>
       <td>2022-01-06</td>
       <td>1 (2022-01-06)</td>
       <td>4</td>
@@ -160,7 +160,7 @@ display(HTML(fracinfect.head().to_html(index=False)))
       <td>D614G</td>
       <td>1</td>
       <td>0.000156</td>
-      <td>0.993600</td>
+      <td>0.961300</td>
       <td>2022-01-06</td>
       <td>1 (2022-01-06)</td>
       <td>4</td>
@@ -279,8 +279,8 @@ fitparams.head()
       <th>0</th>
       <td>Delta_10</td>
       <td>D614G</td>
-      <td>0.000942</td>
-      <td>1061.588219</td>
+      <td>0.001349</td>
+      <td>741.511063</td>
       <td>interpolated</td>
       <td>2022-01-06</td>
       <td>1</td>
@@ -291,8 +291,8 @@ fitparams.head()
       <th>1</th>
       <td>Delta_10</td>
       <td>D614G</td>
-      <td>0.001349</td>
-      <td>741.511063</td>
+      <td>0.000942</td>
+      <td>1061.588219</td>
       <td>interpolated</td>
       <td>2022-01-06</td>
       <td>2</td>
@@ -538,8 +538,8 @@ neut_titers.to_csv(neut_titers_file, index=False)
     <tr>
       <td>Delta_10</td>
       <td>D614G</td>
-      <td>0.000942</td>
-      <td>1061.588219</td>
+      <td>0.001349</td>
+      <td>741.511063</td>
       <td>interpolated</td>
       <td>2022-01-06</td>
       <td>1</td>
@@ -547,13 +547,13 @@ neut_titers.to_csv(neut_titers_file, index=False)
       <td>False</td>
       <td>0.000273</td>
       <td>primary Delta infection</td>
-      <td>3.449611</td>
+      <td>4.938653</td>
     </tr>
     <tr>
       <td>Delta_10</td>
       <td>D614G</td>
-      <td>0.001349</td>
-      <td>741.511063</td>
+      <td>0.000942</td>
+      <td>1061.588219</td>
       <td>interpolated</td>
       <td>2022-01-06</td>
       <td>2</td>
@@ -561,7 +561,7 @@ neut_titers.to_csv(neut_titers_file, index=False)
       <td>False</td>
       <td>0.000273</td>
       <td>primary Delta infection</td>
-      <td>4.938653</td>
+      <td>3.449611</td>
     </tr>
     <tr>
       <td>Delta_10</td>
