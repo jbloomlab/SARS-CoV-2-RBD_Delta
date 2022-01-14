@@ -71,6 +71,12 @@ virus_subsets:
     - Delta
     - Delta + K417N
     - Delta + E484K
+    - Delta RBD Abs depleted (x Delta PV)
+  mutneuts_het:
+    - D614G
+    - Delta
+    - Delta + K417N
+    - Delta + E484K
     - Delta RBD Abs depleted (x D614G PV)
     - D614G RBD Abs depleted (x D614G PV)
     - Delta RBD Abs depleted (x Delta PV)
