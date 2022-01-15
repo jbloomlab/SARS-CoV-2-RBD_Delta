@@ -194,6 +194,7 @@ fig, axes = fits.plotSera(sera=natsort.natsorted(fitparams.query('serum not in @
                           titlesize=20, labelsize=24, ticksize=15, legendfontsize=20, yticklocs=[0,0.5,1],
                           markersize=8, linewidth=2,
                           max_viruses_per_subplot=8,
+                          fix_lims={'ymax':1.25},
                          )
 
 plotfile = PdfPages(f'{resultsdir}/sera_frac_infectivity.pdf')
