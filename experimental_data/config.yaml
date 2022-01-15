@@ -68,9 +68,9 @@ heterologous_depletions_dates:
 sample_key_file: data/sample_key.csv
 
 sample_type_order:
-  - 2x BNT162b2
-  - Delta breakthrough
-  - primary Delta infection
+  2x BNT162b2: "2x\nBNT162b2"
+  Delta breakthrough: "Delta breakthrough\nafter 2x mRNA"
+  primary Delta infection: "primary\nDelta infection"
 
 virus_key_mutneuts: # how to rename viruses for analyzing mutneuts
   RBD antibodies depleted (D614G spike): D614G RBD Abs depleted (x D614G PV)
@@ -114,23 +114,23 @@ previous_studies_mutneuts:
   infection: data/previous_studies_neuts/mutneuts_beta_paper.csv
   moderna: data/previous_studies_neuts/mutneuts_moderna_paper.csv
 
-combined_plot:
-  - D614G
-  - Delta
-  - Delta + K417N
-  - Delta + E484K
-  - Delta RBD Abs depleted (x Delta PV)
-  - D614G + K417N
-  - D614G + E484K
-  - D614G RBD Abs depleted (x D614G PV)
+combined_plot: # values are labels for plots
+  D614G: D614G
+  Delta: Delta
+  Delta + K417N: K417N
+  Delta + E484K: E484K
+  Delta RBD Abs depleted (x Delta PV): "RBD\nantibodies\ndepleted"
+  D614G + K417N: K417N
+  D614G + E484K: E484K
+  D614G RBD Abs depleted (x D614G PV): "RBD\nantibodies\ndepleted"
 
 combined_plot_group_order:
-  - 2x BNT162b2
-  - Delta breakthrough
-  - primary Delta infection
-  - 2x mRNA-1273 (day 100-150)
-  - ancestral infection (day 30-60)
-  - ancestral infection (day 100-150)
+  2x BNT162b2: "2x\nBNT162b2"
+  Delta breakthrough: "Delta\nbreakthrough\nafter 2x mRNA"
+  primary Delta infection: "primary Delta\ninfection"
+  2x mRNA-1273 (day 100-150): "2x mRNA-1273\n(day 100-150)"
+  ancestral infection (day 30-60): "ancestral infection\n(day 30-60)"
+  ancestral infection (day 100-150): "ancestral infection\n(day 100-150)"
 
 combined_plot_background_order:
   - Delta background
