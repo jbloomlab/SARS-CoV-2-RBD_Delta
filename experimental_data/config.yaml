@@ -109,9 +109,29 @@ virus_subsets:
     - Delta RBD Abs depleted (x D614G PV)
     - D614G RBD Abs depleted (x D614G PV)
     - Delta RBD Abs depleted (x Delta PV)
-  # depletions:
-  #   - D614G
-  #   - Delta
-  #   - Delta RBD Abs depleted (x D614G PV)
-  #   - D614G RBD Abs depleted (x D614G PV)
-  #   - Delta RBD Abs depleted (x Delta PV)
+
+previous_studies_mutneuts:
+  infection: data/previous_studies_neuts/mutneuts_beta_paper.csv
+  moderna: data/previous_studies_neuts/mutneuts_moderna_paper.csv
+
+combined_plot:
+  - D614G
+  - Delta
+  - Delta + K417N
+  - Delta + E484K
+  - Delta RBD Abs depleted (x Delta PV)
+  - D614G + K417N
+  - D614G + E484K
+  - D614G RBD Abs depleted (x D614G PV)
+
+combined_plot_group_order:
+  - 2x BNT162b2
+  - Delta breakthrough
+  - primary Delta infection
+  - 2x mRNA-1273 (day 100-150)
+  - ancestral infection (day 30-60)
+  - ancestral infection (day 100-150)
+
+combined_plot_background_order:
+  - Delta background
+  - D614G background
