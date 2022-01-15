@@ -366,7 +366,7 @@ fits = (neutcurve.CurveFits(fracinfect,
                             replicate_col='replicate_all_dates'
                            )
        )
-xlab= 'serum dilution'
+xlab= 'log10(serum dilution)'
 name= 'sera'
 
 fig, axes = fits.plotSera(xlabel=xlab,
@@ -377,7 +377,16 @@ fig, axes = fits.plotSera(xlabel=xlab,
                           fix_lims={'ymax':1.25},
                           viruses=config['virus_order'],
                           sera=natsort.natsorted(fracinfect['serum'].unique()),
+                          widthscale=0.75, 
+                          heightscale=1,
+                          titlesize=20, 
+                          labelsize=20, 
+                          ticksize=15, 
+                          legendfontsize=16, 
+                          ncol=8,
                          )
+_ = axes.ravel()[-1].set_xticks([1e-5, 1e-4, 1e-3, 1e-2])
+_ = axes.ravel()[-1].set_xticklabels(['-5', '-4', '-3', '-2',])
 
 plotfile = f'{results}/all_mutant_neuts.pdf'
 print(f"Saving to {plotfile}")
