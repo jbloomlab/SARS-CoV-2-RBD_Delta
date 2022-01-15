@@ -373,27 +373,6 @@ display(HTML(foldchange.head().to_html(index=False)))
 </table>
 
 
-
-```python
-print(len(foldchange))
-```
-
-    144
-
-
-
-```python
-foldchange['sample_type'].unique()
-```
-
-
-
-
-    array(['Delta breakthrough', 'primary Delta infection', 'Pfizer'],
-          dtype=object)
-
-
-
 Sort the serum names in ascending order for least to most potent against Delta spike. 
 
 
@@ -430,7 +409,7 @@ Define the ways we substitute labels for naming here:
 
 
 ```python
-sample_type_replacement={'Pfizer': '2x BNT162b2',
+sample_type_replacement={'2x BNT162b2': '2x\nBNT162b2',
                          'Delta breakthrough': 'Delta\nbreakthrough\nafter 2x mRNA',
                          'primary Delta infection': 'primary\nDelta infection',
                         }
@@ -483,7 +462,7 @@ p = (ggplot(foldchange
            legend_text=element_text(size=12),
            legend_title=element_text(size=12),
            axis_title_x=element_text(size=14),
-           axis_title_y=element_text(size=14, margin={'r': 16}),
+           axis_title_y=element_text(size=14, margin={'r': 40}),
            legend_position='right',
            strip_background=element_blank(),
            strip_text=element_text(size=14),
@@ -506,7 +485,7 @@ p.save(f'{resultsdir}/NT50_trackplot.pdf')
 
 
     
-![png](rbd_depletion_neuts_files/rbd_depletion_neuts_21_1.png)
+![png](rbd_depletion_neuts_files/rbd_depletion_neuts_19_1.png)
     
 
 
@@ -564,55 +543,43 @@ NT50_lines.save(f'{resultsdir}/compare_RBDtargeting.pdf')
 
 
     
-![png](rbd_depletion_neuts_files/rbd_depletion_neuts_22_1.png)
+![png](rbd_depletion_neuts_files/rbd_depletion_neuts_20_1.png)
     
 
 
 
 ```python
-p = (ggplot((foldchange
-             .drop(columns=['depletion', 'NT50'])
-             .drop_duplicates()
-             .replace(dep_virus_replacement)
-             .replace(sample_type_replacement)
-             .assign(spike=lambda x: pd.Categorical (x['spike'],
-                                                     ordered=True,
-                                                     categories=dep_virus_replacement.values()))
-            )
-           ) +
-     aes('spike', 'percent_RBD') +
-     geom_boxplot(width=0.65,
-                  position=position_dodge(width=0.7),
-                  outlier_shape='') +
-     geom_jitter(position=position_dodge(width=0.7),
-                 alpha=0.25, size=2) +
-     theme(figure_size=(0.75*foldchange['spike'].nunique()*foldchange['sample_type'].nunique(),2.5),
-           strip_background=element_blank(),
-           axis_text_x=element_text(angle=90),
-           strip_text_x=element_text(size=10),
-           text=element_text(size=12),
-           ) +
-     facet_wrap('~sample_type')+
-     scale_y_continuous(limits=[70, 100]) +
-     ylab('percent neutralizing potency\ndue to RBD antibodies') +
-     xlab ('')
-     )
+# p = (ggplot((foldchange
+#              .drop(columns=['depletion', 'NT50'])
+#              .drop_duplicates()
+#              .replace(dep_virus_replacement)
+#              .replace(sample_type_replacement)
+#              .assign(spike=lambda x: pd.Categorical (x['spike'],
+#                                                      ordered=True,
+#                                                      categories=dep_virus_replacement.values()))
+#             )
+#            ) +
+#      aes('spike', 'percent_RBD') +
+#      geom_boxplot(width=0.65,
+#                   position=position_dodge(width=0.7),
+#                   outlier_shape='') +
+#      geom_jitter(position=position_dodge(width=0.7),
+#                  alpha=0.25, size=2) +
+#      theme(figure_size=(0.75*foldchange['spike'].nunique()*foldchange['sample_type'].nunique(),2.5),
+#            strip_background=element_blank(),
+#            axis_text_x=element_text(angle=90),
+#            strip_text_x=element_text(size=12),
+#            text=element_text(size=12),
+#            ) +
+#      facet_wrap('~sample_type')+
+#      scale_y_continuous(limits=[70, 100]) +
+#      ylab('percent neutralizing potency\ndue to RBD antibodies') +
+#      xlab ('')
+#      )
 
-_ = p.draw()
-p.save(f'{resultsdir}/compare_percentRBD.pdf')
+# _ = p.draw()
+# p.save(f'{resultsdir}/compare_percentRBD.pdf')
 ```
-
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/geoms/geom_point.py:61: UserWarning: You passed a edgecolor/edgecolors (['#333333ff', '#333333ff']) for an unfilled marker ('').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 6.75 x 2.5 in image.
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:722: PlotnineWarning: Filename: results/rbd_depletion_neuts/compare_percentRBD.pdf
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/geoms/geom_point.py:61: UserWarning: You passed a edgecolor/edgecolors (['#333333ff', '#333333ff']) for an unfilled marker ('').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
-
-
-
-    
-![png](rbd_depletion_neuts_files/rbd_depletion_neuts_23_1.png)
-    
-
 
 Ok, this ^ is actually a pretty misleading plot, because most of the points are censored, so the percent RBD targeting is actually mostly a function of pre-depletion NT50 (i.e., more potent sera have more "room" to look like they are highly RBD-targeting before they hit the LOD on the low end).
 
@@ -620,146 +587,355 @@ The comparison we actually care about is how much *residual* neutralizing potenc
 
 
 ```python
-p = (ggplot((foldchange
-             .query('depletion=="RBD antibodies depleted"')
-             .drop(columns=['depletion', 'NT50'])
-             .drop_duplicates()
-             .replace(dep_virus_replacement)
-             .replace(sample_type_replacement)
-             .assign(spike=lambda x: pd.Categorical (x['spike'],
-                                                     ordered=True,
-                                                     categories=dep_virus_replacement.values()))
-            )
-           ) +
-     aes('spike', 'NT50_post', group='serum') +
-     geom_line(aes(x='spike', y='NT50_post', group='serum'), color=CBPALETTE[0]) +
-     geom_point(size=2.5, alpha=0.5, fill=CBPALETTE[0]) + 
-     geom_crossbar(data=(foldchange
-                         .groupby(['spike', 'sample_type'])
-                         .agg({'NT50_post': geometric_mean})
-                         .reset_index()
-                         .dropna()
-                         .replace(dep_virus_replacement)
-                         .replace(sample_type_replacement)
-                        ),
-                   inherit_aes=False,
-                   mapping=aes(x='spike', y='NT50_post', ymin='NT50_post', ymax='NT50_post'),
-                  ) +
-     geom_hline(yintercept=config['NT50_LOD'], 
-                linetype='dotted', 
-                size=1, 
-                alpha=0.6, 
-                color=CBPALETTE[7]) +
-     theme(figure_size=(0.75*foldchange['spike'].nunique()*foldchange['sample_type'].nunique(),2.5),
-           strip_background=element_blank(),
-           axis_text_x=element_text(angle=90),
-           strip_text_x=element_text(size=10),
-           text=element_text(size=12),
-           ) +
-     facet_wrap('~sample_type')+
-     scale_y_log10(limits=[config['NT50_LOD'],foldchange['NT50_pre'].max()*3.5], 
-                   name='NT50 post-depletion\nof RBD antibodies') +
-     xlab ('')
-     )
+# p = (ggplot((foldchange
+#              .query('depletion=="RBD antibodies depleted"')
+#              .drop(columns=['depletion', 'NT50'])
+#              .drop_duplicates()
+#              .replace(dep_virus_replacement)
+#              .replace(sample_type_replacement)
+#              .assign(spike=lambda x: pd.Categorical (x['spike'],
+#                                                      ordered=True,
+#                                                      categories=dep_virus_replacement.values()))
+#             )
+#            ) +
+#      aes('spike', 'NT50_post', group='serum') +
+#      geom_line(aes(x='spike', y='NT50_post', group='serum'), color=CBPALETTE[0]) +
+#      geom_point(size=2.5, alpha=0.5, fill=CBPALETTE[0]) + 
+#      geom_crossbar(data=(foldchange
+#                          .groupby(['spike', 'sample_type'])
+#                          .agg({'NT50_post': geometric_mean})
+#                          .reset_index()
+#                          .dropna()
+#                          .replace(dep_virus_replacement)
+#                          .replace(sample_type_replacement)
+#                         ),
+#                    inherit_aes=False,
+#                    mapping=aes(x='spike', y='NT50_post', ymin='NT50_post', ymax='NT50_post'),
+#                   ) +
+#      geom_hline(yintercept=config['NT50_LOD'], 
+#                 linetype='dotted', 
+#                 size=1, 
+#                 alpha=0.6, 
+#                 color=CBPALETTE[7]) +
+#      theme(figure_size=(0.75*foldchange['spike'].nunique()*foldchange['sample_type'].nunique(),2.5),
+#            strip_background=element_blank(),
+#            axis_text_x=element_text(angle=90),
+#            strip_text_x=element_text(size=12),
+#            text=element_text(size=12),
+#            ) +
+#      facet_wrap('~sample_type')+
+#      scale_y_log10(limits=[config['NT50_LOD'],foldchange['NT50_pre'].max()*3.5], 
+#                    name='NT50 post-depletion\nof RBD antibodies') +
+#      xlab ('')
+#      )
 
-_ = p.draw()
-p.save(f'{resultsdir}/compare_residual_NT50.pdf')
+# _ = p.draw()
+# p.save(f'{resultsdir}/compare_residual_NT50.pdf')
 ```
 
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/layer.py:401: PlotnineWarning: geom_crossbar : Removed 2 rows containing missing values.
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 6.75 x 2.5 in image.
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:722: PlotnineWarning: Filename: results/rbd_depletion_neuts/compare_residual_NT50.pdf
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/layer.py:401: PlotnineWarning: geom_crossbar : Removed 2 rows containing missing values.
+
+```python
+# # what if I try plotting the fold-change IC50s?
+# p = (ggplot((foldchange
+#              .query('depletion=="RBD antibodies depleted"')
+#              .drop(columns=['depletion', 'NT50'])
+#              .drop_duplicates()
+#              .replace(dep_virus_replacement)
+#              .replace(sample_type_replacement)
+#              .assign(spike=lambda x: pd.Categorical (x['spike'],
+#                                                      ordered=True,
+#                                                      categories=dep_virus_replacement.values()))
+#             )
+#            ) +
+#      aes('spike', 'fold_change', group='serum', shape='post_ic50_bound') +
+#      geom_line(aes(x='spike', y='fold_change', group='serum'), color=CBPALETTE[0]) +
+#      geom_point(aes(shape='post_ic50_bound'),size=2.5, alpha=0.5, fill=CBPALETTE[0]) + 
+#      geom_crossbar(data=(foldchange
+#                          .groupby(['spike', 'sample_type'])
+#                          .agg({'fold_change': geometric_mean})
+#                          .reset_index()
+#                          .dropna()
+#                          .replace(dep_virus_replacement)
+#                          .replace(sample_type_replacement)
+#                         ),
+#                    inherit_aes=False,
+#                    mapping=aes(x='spike', y='fold_change', ymin='fold_change', ymax='fold_change'),
+#                   ) +
+#      theme(figure_size=(0.75*foldchange['spike'].nunique()*foldchange['sample_type'].nunique(),2.5),
+#            strip_background=element_blank(),
+#            axis_text_x=element_text(angle=90),
+#            strip_text_x=element_text(size=12),
+#            text=element_text(size=12),
+#            ) +
+#      facet_wrap('~sample_type')+
+#      scale_y_log10( #limits=[config['NT50_LOD'],foldchange['NT50_pre'].max()*3.5], 
+#                    name='fold-change post-depletion\nof RBD antibodies') +
+#      xlab ('')+
+#      scale_shape_manual(values=['o','^'],name='NT50 post-depletion\nof RBD antibodies\nNT50 is censored')
+#      )
+
+# _ = p.draw()
+# p.save(f'{resultsdir}/compare_foldchange.pdf')
+```
+
+## Add data from previous studies 
+These are:
+- early 2020 infections (~30 days post-symptom onset)
+- 2x mRNA-1273 vaccinations (~30 days post-dose 1, which is comparable to the 2x BNT162b2 samples we have here)
+- Beta primary infections (~30 days post-symptom onset)
+
+I need to wrangle these data frames (which are supplementary files from previous papers) into the same format as what I have here for the Delta study. 
 
 
+```python
+moderna=(pd.read_csv(config['previous_studies_rbd_depletions']['moderna'])
+         .assign(virus=lambda x: x['depletion']+' ('+x['spike']+' spike)')
+        )
 
-    
-![png](rbd_depletion_neuts_files/rbd_depletion_neuts_25_1.png)
-    
+infection=(pd.read_csv(config['previous_studies_rbd_depletions']['infection'])
+         .assign(virus=lambda x: x['depletion']+' ('+x['spike']+' spike)')
+        )
+
+columns_to_keep=['serum', 'sample_type','spike', 'virus', 'depletion', 
+                 'NT50',  'ic50_is_bound','early_late']
+
+combined_df = (pd.concat([foldchange.assign(early_late='day 30-60')[columns_to_keep],
+                         moderna[columns_to_keep],
+                         infection[columns_to_keep]],
+                        ignore_index=True)
+               .query('early_late=="day 30-60"') # & spike!="Delta dep x D614G PV"
+               .replace(depletion_replacement)
+               .assign(depletion=lambda x: pd.Categorical(x['depletion'],
+                                                          categories=depletion_replacement.values(),
+                                                          ordered=True),
+                       sample_type_spike=lambda x: x['sample_type'] + ' ' + x['spike'] + ' spike',
+                      )
+              )
+
+display(HTML(combined_df.head(2).to_html(index=False)))
+```
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>serum</th>
+      <th>sample_type</th>
+      <th>spike</th>
+      <th>virus</th>
+      <th>depletion</th>
+      <th>NT50</th>
+      <th>ic50_is_bound</th>
+      <th>early_late</th>
+      <th>sample_type_spike</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>267C</td>
+      <td>Delta breakthrough</td>
+      <td>D614G</td>
+      <td>mock depletion (D614G spike)</td>
+      <td>mock</td>
+      <td>1550.066341</td>
+      <td>False</td>
+      <td>day 30-60</td>
+      <td>Delta breakthrough D614G spike</td>
+    </tr>
+    <tr>
+      <td>267C</td>
+      <td>Delta breakthrough</td>
+      <td>D614G</td>
+      <td>RBD antibodies depleted (D614G spike)</td>
+      <td>depleted</td>
+      <td>25.000000</td>
+      <td>True</td>
+      <td>day 30-60</td>
+      <td>Delta breakthrough D614G spike</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
 ```python
-# what if I try plotting the fold-change IC50s?
-p = (ggplot((foldchange
-             .query('depletion=="RBD antibodies depleted"')
-             .drop(columns=['depletion', 'NT50'])
-             .drop_duplicates()
-             .replace(dep_virus_replacement)
-             .replace(sample_type_replacement)
-             .assign(spike=lambda x: pd.Categorical (x['spike'],
-                                                     ordered=True,
-                                                     categories=dep_virus_replacement.values()))
-            )
-           ) +
-     aes('spike', 'fold_change', group='serum', shape='post_ic50_bound') +
-     geom_line(aes(x='spike', y='fold_change', group='serum'), color=CBPALETTE[0]) +
-     geom_point(aes(shape='post_ic50_bound'),size=2.5, alpha=0.5, fill=CBPALETTE[0]) + 
-     geom_crossbar(data=(foldchange
-                         .groupby(['spike', 'sample_type'])
-                         .agg({'fold_change': geometric_mean})
-                         .reset_index()
-                         .dropna()
-                         .replace(dep_virus_replacement)
-                         .replace(sample_type_replacement)
-                        ),
-                   inherit_aes=False,
-                   mapping=aes(x='spike', y='fold_change', ymin='fold_change', ymax='fold_change'),
-                  ) +
-     theme(figure_size=(0.75*foldchange['spike'].nunique()*foldchange['sample_type'].nunique(),2.5),
-           strip_background=element_blank(),
-           axis_text_x=element_text(angle=90),
-           strip_text_x=element_text(size=10),
-           text=element_text(size=12),
-           ) +
-     facet_wrap('~sample_type')+
-     scale_y_log10( #limits=[config['NT50_LOD'],foldchange['NT50_pre'].max()*3.5], 
-                   name='fold-change post-depletion\nof RBD antibodies') +
-     xlab ('')+
-     scale_shape_manual(values=['o','^'],name='NT50 post-depletion\nof RBD antibodies\nNT50 is censored')
-     )
+depletions_NT50_LOD = (pd.DataFrame
+                       .from_dict(config['depletions_NT50_LOD'], orient='index')
+                       .reset_index()
+                      )
 
-_ = p.draw()
-p.save(f'{resultsdir}/compare_foldchange.pdf')
+depletions_NT50_LOD.columns=['sample_type', 'NT50']
+
+depletions_NT50_LOD=(depletions_NT50_LOD
+                     .merge(combined_df[['sample_type', 'sample_type_spike']].drop_duplicates())
+                    )
+
+display(HTML(depletions_NT50_LOD.to_html(index=False)))
 ```
 
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 6.75 x 2.5 in image.
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:722: PlotnineWarning: Filename: results/rbd_depletion_neuts/compare_foldchange.pdf
 
-
-
-    
-![png](rbd_depletion_neuts_files/rbd_depletion_neuts_26_1.png)
-    
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>sample_type</th>
+      <th>NT50</th>
+      <th>sample_type_spike</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Delta breakthrough</td>
+      <td>25</td>
+      <td>Delta breakthrough D614G spike</td>
+    </tr>
+    <tr>
+      <td>Delta breakthrough</td>
+      <td>25</td>
+      <td>Delta breakthrough Delta spike</td>
+    </tr>
+    <tr>
+      <td>Delta breakthrough</td>
+      <td>25</td>
+      <td>Delta breakthrough Delta dep x D614G PV spike</td>
+    </tr>
+    <tr>
+      <td>primary Delta infection</td>
+      <td>25</td>
+      <td>primary Delta infection D614G spike</td>
+    </tr>
+    <tr>
+      <td>primary Delta infection</td>
+      <td>25</td>
+      <td>primary Delta infection Delta spike</td>
+    </tr>
+    <tr>
+      <td>primary Delta infection</td>
+      <td>25</td>
+      <td>primary Delta infection Delta dep x D614G PV spike</td>
+    </tr>
+    <tr>
+      <td>2x BNT162b2</td>
+      <td>25</td>
+      <td>2x BNT162b2 D614G spike</td>
+    </tr>
+    <tr>
+      <td>2x BNT162b2</td>
+      <td>25</td>
+      <td>2x BNT162b2 Delta spike</td>
+    </tr>
+    <tr>
+      <td>2x BNT162b2</td>
+      <td>25</td>
+      <td>2x BNT162b2 Delta dep x D614G PV spike</td>
+    </tr>
+    <tr>
+      <td>2x mRNA-1273</td>
+      <td>25</td>
+      <td>2x mRNA-1273 D614G spike</td>
+    </tr>
+    <tr>
+      <td>primary Beta infection</td>
+      <td>25</td>
+      <td>primary Beta infection Beta spike</td>
+    </tr>
+    <tr>
+      <td>ancestral infection</td>
+      <td>20</td>
+      <td>ancestral infection D614G spike</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
 ```python
-# stat_test_df = (foldchange
-#                 [['serum', 'sample_type', 'fold_change', 'percent_RBD', 'post_ic50_bound']]
-#                 .drop_duplicates()
-#                )
-
-# print(f"Comparing Delta breakthrough to Pfizer")
-# percent_1 = stat_test_df.query('sample_type == "Delta breakthrough"')['percent_RBD']
-# percent_2 = stat_test_df.query('sample_type == "Pfizer"')['percent_RBD']
-# u, p = scipy.stats.mannwhitneyu(percent_1, percent_2)
-# print(f"  Mann-Whitney test:      P = {p:.2g}")
-# res = lifelines.statistics.logrank_test(percent_1, percent_2)
-# print(f"  Log-rank test:          P = {res.p_value:.2g}")
-# censored_1 = (~stat_test_df.query('sample_type == "Delta breakthrough"')['post_ic50_bound']).astype(int)
-# censored_2 = (~stat_test_df.query('sample_type == "Pfizer"')['post_ic50_bound']).astype(int)
-# res = lifelines.statistics.logrank_test(percent_1, percent_2, censored_1, censored_2)
-# print(f"  Log-rank test censored: P = {res.p_value:.2g}")
-# # actually, Cox regression is recommended over log-rank test, see here:
-# # https://lifelines.readthedocs.io/en/latest/lifelines.statistics.html
-# cox_df = pd.concat([
-#         pd.DataFrame({'E': censored_1, 'T': percent_1, 'groupA': 1}),
-#         pd.DataFrame({'E': censored_2, 'T': percent_2, 'groupA': 0})
-#         ])
-# cph = lifelines.CoxPHFitter().fit(cox_df, 'T', 'E')
-# print(f"  Cox proportional-hazards censored: P = {cph.summary.at['groupA', 'p']:.2g}")
+combined_df['NT50'].min()
 ```
+
+
+
+
+    21.31009625
+
+
+
+
+```python
+for subset in config['depletion_subsets']:
+    
+    samples = config['depletion_subsets'][subset].keys()
+    rename_samples = config['depletion_subsets'][subset]
+    
+    df = (combined_df
+          .query('sample_type_spike.isin(@samples)')
+          .replace(rename_samples)
+         )
+    
+    LOD_df = (depletions_NT50_LOD
+              .query('sample_type_spike.isin(@samples)')
+              .replace(rename_samples)
+             )
+    # display(HTML(df.head(1).to_html(index=False)))
+    
+    NT50_lines = (ggplot(df, aes(x='depletion', y='NT50', group='serum')) + 
+                  geom_hline(data=LOD_df,
+                             mapping=aes(yintercept='NT50'),
+                             color=CBPALETTE[7],
+                             alpha=1,
+                             size=1,
+                             linetype='dotted',
+                            ) +
+                  geom_point(size=2.5, alpha=0.25) +
+                  geom_line(alpha=0.25) +
+                  facet_wrap('~sample_type_spike',ncol=5) +
+                  theme(axis_title_y=element_text(margin={'r': 6}),
+                        strip_background=element_blank(),
+                        figure_size=(1.75*df['sample_type_spike'].nunique(),2),
+                        axis_text_x=element_text(angle=90),
+                        text=element_text(size=12),
+                        strip_text_x=element_text(size=12),
+                       ) +
+                  scale_y_log10(name='neutralization titer (NT50)', limits=[20, combined_df['NT50'].max()]) +
+                  xlab('mock or depletion of RBD-binding antibodies')
+                 )
+
+    _ = NT50_lines.draw()
+    NT50_lines.save(f'{resultsdir}/compare_{subset}.pdf')
+```
+
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 8.75 x 2 in image.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:722: PlotnineWarning: Filename: results/rbd_depletion_neuts/compare_vax_vs_infection.pdf
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 3.5 x 2 in image.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:722: PlotnineWarning: Filename: results/rbd_depletion_neuts/compare_breakthrough.pdf
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 3.5 x 2 in image.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:722: PlotnineWarning: Filename: results/rbd_depletion_neuts/compare_mix_match.pdf
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 5.25 x 2 in image.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:722: PlotnineWarning: Filename: results/rbd_depletion_neuts/compare_heterologous.pdf
+
+
+
+    
+![png](rbd_depletion_neuts_files/rbd_depletion_neuts_29_1.png)
+    
+
+
+
+    
+![png](rbd_depletion_neuts_files/rbd_depletion_neuts_29_2.png)
+    
+
+
+
+    
+![png](rbd_depletion_neuts_files/rbd_depletion_neuts_29_3.png)
+    
+
+
+
+    
+![png](rbd_depletion_neuts_files/rbd_depletion_neuts_29_4.png)
+    
+
 
 
 ```python
