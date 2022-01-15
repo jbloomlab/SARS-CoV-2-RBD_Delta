@@ -1,0 +1,87 @@
+serum,depletion,NT50,fold_change,percent_RBD,day,post_ic50_bound,sample_type,early_late,ic50_is_bound,spike
+K007,RBD antibodies depleted,99.40176613,20.80071592,95,40,FALSE,primary Beta infection,day 30-60,FALSE,Beta
+K007,mock depletion,2067.627899,20.80071592,95,40,FALSE,primary Beta infection,day 30-60,FALSE,Beta
+K031,RBD antibodies depleted,190.8526916,16.28813593,93,34,FALSE,primary Beta infection,day 30-60,FALSE,Beta
+K031,mock depletion,3108.634584,16.28813593,93,34,FALSE,primary Beta infection,day 30-60,FALSE,Beta
+K033,RBD antibodies depleted,347.0544945,13.25672742,92,35,FALSE,primary Beta infection,day 30-60,FALSE,Beta
+K033,mock depletion,4600.806832,13.25672742,92,35,FALSE,primary Beta infection,day 30-60,FALSE,Beta
+K040,RBD antibodies depleted,215.3774935,15.64233513,93,37,FALSE,primary Beta infection,day 30-60,FALSE,Beta
+K040,mock depletion,3369.006933,15.64233513,93,37,FALSE,primary Beta infection,day 30-60,FALSE,Beta
+K041,RBD antibodies depleted,98.23122748,25.03576582,96,30,FALSE,primary Beta infection,day 30-60,FALSE,Beta
+K041,mock depletion,2459.294008,25.03576582,96,30,FALSE,primary Beta infection,day 30-60,FALSE,Beta
+K046,RBD antibodies depleted,239.6602411,7.024258768,85,33,FALSE,primary Beta infection,day 30-60,FALSE,Beta
+K046,mock depletion,1683.43555,7.024258768,85,33,FALSE,primary Beta infection,day 30-60,FALSE,Beta
+K114,RBD antibodies depleted,44.78802495,25.41033124,96,31,FALSE,primary Beta infection,day 30-60,FALSE,Beta
+K114,mock depletion,1138.07855,25.41033124,96,31,FALSE,primary Beta infection,day 30-60,FALSE,Beta
+K115,RBD antibodies depleted,53.26673745,4.859624958,79,27,FALSE,primary Beta infection,day 30-60,FALSE,Beta
+K115,mock depletion,258.8563668,4.859624958,79,27,FALSE,primary Beta infection,day 30-60,FALSE,Beta
+K119,RBD antibodies depleted,125.7723593,40.40438752,97,29,FALSE,primary Beta infection,day 30-60,FALSE,Beta
+K119,mock depletion,5081.755145,40.40438752,97,29,FALSE,primary Beta infection,day 30-60,FALSE,Beta
+participant A (day 120),RBD antibodies depleted,20,43.05819712,97,120,TRUE,ancestral infection,day 100-150,TRUE,D614G
+participant A (day 120),mock depletion,861.1639424,43.05819712,97,120,TRUE,ancestral infection,day 100-150,FALSE,D614G
+participant A (day 21),RBD antibodies depleted,845.1464066,8.14205032,87,21,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant A (day 21),mock depletion,6881.22457,8.14205032,87,21,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant B (day 113),RBD antibodies depleted,20,14.24301859,92,113,TRUE,ancestral infection,day 100-150,TRUE,D614G
+participant B (day 113),mock depletion,284.8603719,14.24301859,92,113,TRUE,ancestral infection,day 100-150,FALSE,D614G
+participant B (day 26),RBD antibodies depleted,136.1367557,11.48431404,91,26,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant B (day 26),mock depletion,1563.437255,11.48431404,91,26,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant C (day 104),RBD antibodies depleted,20,69.15235791,98,104,TRUE,ancestral infection,day 100-150,TRUE,D614G
+participant C (day 104),mock depletion,1383.047158,69.15235791,98,104,TRUE,ancestral infection,day 100-150,FALSE,D614G
+participant C (day 32),RBD antibodies depleted,27.75616712,125.3667272,99,32,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant C (day 32),mock depletion,3479.699831,125.3667272,99,32,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant D (day 33),RBD antibodies depleted,303.4386883,2.736580773,63,33,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant D (day 33),mock depletion,830.3844803,2.736580773,63,33,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant D (day 76),RBD antibodies depleted,189.9629945,5.336357325,81,76,FALSE,ancestral infection,day 100-150,FALSE,D614G
+participant D (day 76),mock depletion,1013.710417,5.336357325,81,76,FALSE,ancestral infection,day 100-150,FALSE,D614G
+participant E (day 104),RBD antibodies depleted,20,35.31848497,97,104,TRUE,ancestral infection,day 100-150,TRUE,D614G
+participant E (day 104),mock depletion,706.3696994,35.31848497,97,104,TRUE,ancestral infection,day 100-150,FALSE,D614G
+participant E (day 28),RBD antibodies depleted,231.4809981,3.487434202,71,28,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant E (day 28),mock depletion,807.2747498,3.487434202,71,28,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant F (day 115),RBD antibodies depleted,20,7.041594214,85,115,TRUE,ancestral infection,day 100-150,TRUE,D614G
+participant F (day 115),mock depletion,140.8318843,7.041594214,85,115,TRUE,ancestral infection,day 100-150,FALSE,D614G
+participant F (day 48),RBD antibodies depleted,36.01812423,4.099771734,75,48,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant F (day 48),mock depletion,147.6660876,4.099771734,75,48,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant G (day 18),RBD antibodies depleted,727.5599978,40.36367587,97,18,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant G (day 18),mock depletion,29366.99592,40.36367587,97,18,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant G (day 94),RBD antibodies depleted,20,14.65349053,93,94,TRUE,ancestral infection,day 100-150,TRUE,D614G
+participant G (day 94),mock depletion,293.0698107,14.65349053,93,94,TRUE,ancestral infection,day 100-150,FALSE,D614G
+participant H (day 152),RBD antibodies depleted,165.8366639,3.863613458,74,152,FALSE,ancestral infection,day 100-150,FALSE,D614G
+participant H (day 152),mock depletion,640.7287665,3.863613458,74,152,FALSE,ancestral infection,day 100-150,FALSE,D614G
+participant H (day 61),RBD antibodies depleted,368.8490215,3.370657523,70,61,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant H (day 61),mock depletion,1243.263729,3.370657523,70,61,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant I (day 102),RBD antibodies depleted,50.22456887,11.69565099,91,102,FALSE,ancestral infection,day 100-150,FALSE,D614G
+participant I (day 102),mock depletion,587.4090285,11.69565099,91,102,FALSE,ancestral infection,day 100-150,FALSE,D614G
+participant I (day 26),RBD antibodies depleted,21.31009625,6.581280802,84,26,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant I (day 26),mock depletion,140.2477274,6.581280802,84,26,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant J (day 121),RBD antibodies depleted,20,25.20800347,96,121,TRUE,ancestral infection,day 100-150,TRUE,D614G
+participant J (day 121),mock depletion,504.1600695,25.20800347,96,121,TRUE,ancestral infection,day 100-150,FALSE,D614G
+participant J (day 15),RBD antibodies depleted,166.3607607,3.668848152,72,15,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant J (day 15),mock depletion,610.3523693,3.668848152,72,15,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant K (day 103),RBD antibodies depleted,20,20.44063385,95,103,TRUE,ancestral infection,day 100-150,TRUE,D614G
+participant K (day 103),mock depletion,408.812677,20.44063385,95,103,TRUE,ancestral infection,day 100-150,FALSE,D614G
+participant K (day 29),RBD antibodies depleted,50.4143856,7.029377808,85,29,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant K (day 29),mock depletion,354.3817633,7.029377808,85,29,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant L (day 35),RBD antibodies depleted,49.98282962,12.28913676,91,35,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant L (day 35),mock depletion,614.2458291,12.28913676,91,35,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant L (day 99),RBD antibodies depleted,33.72709002,5.032618187,80,99,FALSE,ancestral infection,day 100-150,FALSE,D614G
+participant L (day 99),mock depletion,169.7355666,5.032618187,80,99,FALSE,ancestral infection,day 100-150,FALSE,D614G
+participant M (day 26),RBD antibodies depleted,383.0750482,5.530511664,81,26,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant M (day 26),mock depletion,2118.601022,5.530511664,81,26,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant M (day 97),RBD antibodies depleted,200.1171129,1.980999569,49,97,FALSE,ancestral infection,day 100-150,FALSE,D614G
+participant M (day 97),mock depletion,396.4319143,1.980999569,49,97,FALSE,ancestral infection,day 100-150,FALSE,D614G
+participant N (day 110),RBD antibodies depleted,20,1.790609485,44,110,TRUE,ancestral infection,day 100-150,TRUE,D614G
+participant N (day 110),mock depletion,35.8121897,1.790609485,44,110,TRUE,ancestral infection,day 100-150,FALSE,D614G
+participant N (day 32),RBD antibodies depleted,34.8769216,3.456372621,71,32,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant N (day 32),mock depletion,120.5476369,3.456372621,71,32,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant P (day 109),RBD antibodies depleted,20,10.85863109,90,109,TRUE,ancestral infection,day 100-150,TRUE,D614G
+participant P (day 109),mock depletion,217.1726218,10.85863109,90,109,TRUE,ancestral infection,day 100-150,FALSE,D614G
+participant P (day 32),RBD antibodies depleted,51.31692938,8.539699267,88,32,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant P (day 32),mock depletion,438.2311442,8.539699267,88,32,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant Q (day 105),RBD antibodies depleted,33.3489618,6.068764301,83,105,FALSE,ancestral infection,day 100-150,FALSE,D614G
+participant Q (day 105),mock depletion,202.3869888,6.068764301,83,105,FALSE,ancestral infection,day 100-150,FALSE,D614G
+participant Q (day 27),RBD antibodies depleted,151.2284468,3.094936192,67,27,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant Q (day 27),mock depletion,468.0423932,3.094936192,67,27,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant R (day 48),RBD antibodies depleted,63.05827347,4.879299644,79,48,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant R (day 48),mock depletion,307.6802113,4.879299644,79,48,FALSE,ancestral infection,day 30-60,FALSE,D614G
+participant R (day 79),RBD antibodies depleted,30.10527675,5.540308973,81,79,FALSE,ancestral infection,day 100-150,FALSE,D614G
+participant R (day 79),mock depletion,166.7925349,5.540308973,81,79,FALSE,ancestral infection,day 100-150,FALSE,D614G

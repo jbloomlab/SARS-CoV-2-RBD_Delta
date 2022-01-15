@@ -17,7 +17,36 @@ depletions:
   - 3x depleted
   - 4x depleted
 
-haarvi_rbd_depletions: data/haarvi_rbd_depletion_foldchange_ic50.csv
+previous_studies_rbd_depletions:
+  infection: data/previous_studies_neuts/RBD_depletion_b1351_haarvi.csv
+  moderna: data/previous_studies_neuts/RBD_depletion_moderna.csv
+
+depletions_NT50_LOD:
+  Delta breakthrough: 25
+  primary Delta infection: 25
+  2x BNT162b2: 25
+  2x mRNA-1273: 25
+  primary Beta infection: 25
+  ancestral infection: 20
+
+depletion_subsets:
+  vax_vs_infection:
+    2x BNT162b2 D614G spike: "2x\nBNT162b2\n(D614G spike)"
+    2x mRNA-1273 D614G spike: "2x\nmRNA-1273\n(D614G spike)"
+    ancestral infection D614G spike: "ancestral\ninfection\n(D614G spike)"
+    primary Beta infection Beta spike: "primary\nBeta infection\n(Beta spike)"
+    primary Delta infection Delta spike: "primary\nDelta infection\n(Delta spike)"
+  breakthrough:
+    Delta breakthrough D614G spike: "Delta\nbreakthrough\nafter 2x mRNA\n(D614G spike)"
+    Delta breakthrough Delta spike: "Delta\nbreakthrough\nafter 2x mRNA\n(Delta spike)"
+  mix_match:
+    2x BNT162b2 Delta spike: "2x BNT162b2\n(Delta spike)"
+    primary Delta infection D614G spike: "primary\nDelta infection\n(D614G spike)"
+  heterologous:
+    2x BNT162b2 Delta dep x D614G PV spike: "2x\nBNT162b2\nDelta RBD Abs dep\n(D614G PV)"
+    Delta breakthrough Delta dep x D614G PV spike: "Delta breakthrough\nDelta RBD Abs dep\n(D614G PV)"
+    primary Delta infection Delta dep x D614G PV spike: "primary\nDelta infection\nDelta RBD Abs dep\n(D614G PV)"
+
 
 # enter all the samples and stuff to ignore here
 neut_samples_ignore: False
@@ -39,7 +68,7 @@ heterologous_depletions_dates:
 sample_key_file: data/sample_key.csv
 
 sample_type_order:
-  - Pfizer
+  - 2x BNT162b2
   - Delta breakthrough
   - primary Delta infection
 
@@ -67,6 +96,12 @@ wildtype_virus: Delta
 
 virus_subsets:
   mutneuts:
+    - D614G
+    - Delta
+    - Delta + K417N
+    - Delta + E484K
+    - Delta RBD Abs depleted (x Delta PV)
+  mutneuts_het:
     - D614G
     - Delta
     - Delta + K417N
