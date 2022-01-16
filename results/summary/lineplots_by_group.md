@@ -253,10 +253,10 @@ for supergroup, subgroup in line_plot_config.items():
     _ = p.draw()
 ```
 
-    Saving to results/lineplots_by_group/all_day30_grouped_lineplots.pdf
-
-
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/scales/scale_alpha.py:68: PlotnineWarning: Using alpha for a discrete variable is not advised.
+
+
+    Saving to results/lineplots_by_group/all_day30_grouped_lineplots.pdf
 
 
 
@@ -327,20 +327,30 @@ for supergroup, subgroup in line_plot_config.items():
 ```
 
     
-    Making PDB mappings for the average of 8 conditions for PrimaryDeltainfections to data/pdbs/6M0J.pdb
+    Making PDB mappings for the average of 8 conditions for 2xBNT162b2 to data/pdbs/6M0J.pdb
     Mapping to the following chain: E
-      Writing B-factor re-assigned PDBs for PrimaryDeltainfections to:
-        results/lineplots_by_group/PrimaryDeltainfections_6m0j_mean_total_escape.pdb
+      Writing B-factor re-assigned PDBs for 2xBNT162b2 to:
+        results/lineplots_by_group/2xBNT162b2_6m0j_mean_total_escape.pdb
     
-    Making PDB mappings for the average of 8 conditions for Pfizer-vaccinated to data/pdbs/6M0J.pdb
+    Making PDB mappings for the average of 8 conditions for Deltabreakthroughafter2xmRNA to data/pdbs/6M0J.pdb
     Mapping to the following chain: E
-      Writing B-factor re-assigned PDBs for Pfizer-vaccinated to:
-        results/lineplots_by_group/Pfizer-vaccinated_6m0j_mean_total_escape.pdb
+      Writing B-factor re-assigned PDBs for Deltabreakthroughafter2xmRNA to:
+        results/lineplots_by_group/Deltabreakthroughafter2xmRNA_6m0j_mean_total_escape.pdb
     
-    Making PDB mappings for the average of 8 conditions for Deltabreakthrough to data/pdbs/6M0J.pdb
+    Making PDB mappings for the average of 8 conditions for primaryDeltainfection to data/pdbs/6M0J.pdb
     Mapping to the following chain: E
-      Writing B-factor re-assigned PDBs for Deltabreakthrough to:
-        results/lineplots_by_group/Deltabreakthrough_6m0j_mean_total_escape.pdb
+      Writing B-factor re-assigned PDBs for primaryDeltainfection to:
+        results/lineplots_by_group/primaryDeltainfection_6m0j_mean_total_escape.pdb
+    
+    Making PDB mappings for the average of 16 conditions for ancestralinfection to data/pdbs/6M0J.pdb
+    Mapping to the following chain: E
+      Writing B-factor re-assigned PDBs for ancestralinfection to:
+        results/lineplots_by_group/ancestralinfection_6m0j_mean_total_escape.pdb
+    
+    Making PDB mappings for the average of 22 conditions for 2xmRNA-1273 to data/pdbs/6M0J.pdb
+    Mapping to the following chain: E
+      Writing B-factor re-assigned PDBs for 2xmRNA-1273 to:
+        results/lineplots_by_group/2xmRNA-1273_6m0j_mean_total_escape.pdb
 
 
 
