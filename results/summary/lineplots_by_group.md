@@ -47,10 +47,14 @@ Read the escape fractions for both the B.1.351 plasmas and the early 2020 plasma
 
 
 ```python
-escape_frac_files = [config['early2020_escape_fracs'], config['escape_fracs']]
+escape_frac_files = [config['early2020_escape_fracs'], 
+                     config['beta_escape_fracs'],
+                     config['escape_fracs']
+                    ]
 
 site_metrics = {config['early2020_escape_fracs']: config['early2020_site_metric'], 
                 config['escape_fracs']: config['site_metric'],
+                config['beta_escape_fracs']: config['beta_site_metric'], 
                }
 
 escape_fracs_dfs = []
@@ -342,15 +346,20 @@ for supergroup, subgroup in line_plot_config.items():
       Writing B-factor re-assigned PDBs for primaryDeltainfection to:
         results/lineplots_by_group/primaryDeltainfection_6m0j_mean_total_escape.pdb
     
+    Making PDB mappings for the average of 22 conditions for 2xmRNA-1273 to data/pdbs/6M0J.pdb
+    Mapping to the following chain: E
+      Writing B-factor re-assigned PDBs for 2xmRNA-1273 to:
+        results/lineplots_by_group/2xmRNA-1273_6m0j_mean_total_escape.pdb
+    
     Making PDB mappings for the average of 16 conditions for ancestralinfection to data/pdbs/6M0J.pdb
     Mapping to the following chain: E
       Writing B-factor re-assigned PDBs for ancestralinfection to:
         results/lineplots_by_group/ancestralinfection_6m0j_mean_total_escape.pdb
     
-    Making PDB mappings for the average of 22 conditions for 2xmRNA-1273 to data/pdbs/6M0J.pdb
+    Making PDB mappings for the average of 9 conditions for primaryBetainfection to data/pdbs/6M0J.pdb
     Mapping to the following chain: E
-      Writing B-factor re-assigned PDBs for 2xmRNA-1273 to:
-        results/lineplots_by_group/2xmRNA-1273_6m0j_mean_total_escape.pdb
+      Writing B-factor re-assigned PDBs for primaryBetainfection to:
+        results/lineplots_by_group/primaryBetainfection_6m0j_mean_total_escape.pdb
 
 
 
