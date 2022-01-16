@@ -41,7 +41,7 @@ early2020_mut_bind_expr_url: https://media.githubusercontent.com/media/jbloomlab
 gisaid_mutation_counts_all: data/210801_mutation_counts.csv
 
 # escape_fracs for early 2020 plasmas against Wuhan-1 library:
-early2020_escape_fracs_url: https://media.githubusercontent.com/media/jbloomlab/SARS-CoV-2-RBD_MAP_HAARVI_sera/main/results/escape_scores/escape_fracs.csv
+early2020_escape_fracs_url: https://media.githubusercontent.com/media/jbloomlab/SARS-CoV-2-RBD_MAP_Moderna/main/results/escape_scores/escape_fracs.csv
 early2020_site_metric: site_total_escape_frac_epistasis_model
 early2020_mut_metric: mut_escape_frac_epistasis_model
 early2020_escape_profiles_config: data/early2020_escape_profiles_config.yaml
