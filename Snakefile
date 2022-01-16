@@ -102,6 +102,7 @@ rule make_summary:
         early2020_call_strong_escape_sites=nb_markdown('early2020_call_strong_escape_sites.ipynb'),
         early2020_strong_escape_sites=config['early2020_strong_escape_sites'],
         early2020_escape_profiles=nb_markdown('early2020_escape_profiles.ipynb'),
+        mds_escape_profiles=nb_markdown('mds_escape_profiles.ipynb'),
         output_pdbs=nb_markdown('output_pdbs.ipynb'),
         make_supp_data=nb_markdown('make_supp_data.ipynb'),
         lineplots_by_group=nb_markdown('lineplots_by_group.ipynb'),
@@ -178,6 +179,8 @@ rule make_summary:
 
             15. Make [lineplots by serum group]({path(input.lineplots_by_group)}).
 
+            16. [Multidimensional scaling]({path(input.mds_escape_profiles)}) on escape profiles.
+
             """
             ).strip())
 
@@ -212,6 +215,20 @@ rule gisaid_rbd_mutations:
         nb_markdown=nb_markdown('gisaid_rbd_mutations.ipynb'),
     params:
         nb='gisaid_rbd_mutations.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+
+rule mds_escape_profiles:
+    """Multi-dimensional scaling on antibody escape profiles."""
+    input:
+        config['early2020_escape_fracs'],
+        escape_fracs=config['escape_fracs'],
+        mds_config=config['mds_config'],
+        site_color_schemes=config['site_color_schemes'],
+    output:
+        nb_markdown=nb_markdown('mds_escape_profiles.ipynb'),
+    params:
+        nb='mds_escape_profiles.ipynb'
     shell:
         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 

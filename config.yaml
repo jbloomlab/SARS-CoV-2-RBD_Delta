@@ -140,6 +140,9 @@ escape_profile_ymax:
   frac: 0.05
   min_ymax: null
 
+# multidimensional scaling configuration
+mds_config: data/mds_config.yaml
+
 # structural mappings configuration
 output_pdbs_config: data/output_pdbs_config.yaml
 
@@ -185,3 +188,4 @@ bind_expr_filters_dir: results/bind_expr_filters
 gisaid_mutations_dir: results/GISAID_mutations
 rbd_alignment: results/GISAID_mutations/RBD_alignment.fasta
 gisaid_mutation_counts: results/GISAID_mutations/mutation_counts.csv
+mds_dir: results/multidimensional_scaling

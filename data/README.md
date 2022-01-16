@@ -43,11 +43,17 @@ These files are used for visualizing the antibody- or serum-escape data:
 
   - [escape_profiles_config.yaml](escape_profiles_config.yaml): Information on how to plot the escape profiles; manually edit this to alter their plotting.
 
+  - [early2020_escape_profiles_config.yaml](early2020_escape_profiles_config.yaml): Same as above, but for early2020 mapping data (as noted in ../config.yaml, the early2020_escape_fracs are imported from the Moderna repo). 
+
   - [lineplots_config.yaml](lineplots_config.yaml): Config file for making line plots to compare serum-escape scores between cohorts.
 
   - [dms-view_metadata.md](dms-view_metadata.md): Used for rendering the dms-view page to visualize data.
 
   - [output_pdbs_config.yaml](output_pdbs_config.yaml): Used for mapping antibody-escape data to the RBD surface.
+
+  - [mds_config.yaml](mds_config.yaml): Config file for making MDS plot to compare serum-escape scores between cohorts, with monoclonal antibodies serving as anchors.
+
+  - [mds_color_schemes.csv](mds_color_schemes.csv): Color scheme designation for MDS plots.
 
 ## PDB files in [pdbs](pdbs/) subdirectory
 
