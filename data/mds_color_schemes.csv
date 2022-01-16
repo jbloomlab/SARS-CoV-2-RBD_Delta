@@ -1,12 +1,12 @@
 ﻿condition,class,class_color
-P02_repeat_500,2x BNT162b2 (Delta mapping),#0000FF
-P03_repeat_1250,2x BNT162b2 (Delta mapping),#0000FF
-P04_repeat_1250,2x BNT162b2 (Delta mapping),#0000FF
-P05_repeat_500,2x BNT162b2 (Delta mapping),#0000FF
-P08_repeat_500,2x BNT162b2 (Delta mapping),#0000FF
-P09_repeat_200,2x BNT162b2 (Delta mapping),#0000FF
-P12_repeat_200,2x BNT162b2 (Delta mapping),#0000FF
-P14_repeat_1250,2x BNT162b2 (Delta mapping),#0000FF
+P02_repeat_500,2x BNT162b2 (Delta mapping),#DDCC77
+P03_repeat_1250,2x BNT162b2 (Delta mapping),#DDCC77
+P04_repeat_1250,2x BNT162b2 (Delta mapping),#DDCC77
+P05_repeat_500,2x BNT162b2 (Delta mapping),#DDCC77
+P08_repeat_500,2x BNT162b2 (Delta mapping),#DDCC77
+P09_repeat_200,2x BNT162b2 (Delta mapping),#DDCC77
+P12_repeat_200,2x BNT162b2 (Delta mapping),#DDCC77
+P14_repeat_1250,2x BNT162b2 (Delta mapping),#DDCC77
 M02-day-36_1250,2x mRNA-1273,#98FB98
 M02-day-119_200,2x mRNA-1273,#98FB98
 M05-day-36_500,2x mRNA-1273,#98FB98
@@ -85,22 +85,22 @@ COV2-2082_400,class 4,#E69F00
 COV2-2094_400,class 4,#E69F00
 COV2-2677_400,class 4,#E69F00
 CR3022_400,class 4,#E69F00
-267C_repeat_200,Delta breakthrough (Delta mapping),#8A2BE2
-268C_repeat_500,Delta breakthrough (Delta mapping),#8A2BE2
-273C_repeat_500,Delta breakthrough (Delta mapping),#8A2BE2
-274C_repeat_500,Delta breakthrough (Delta mapping),#8A2BE2
-276C_repeat_500,Delta breakthrough (Delta mapping),#8A2BE2
-277C_repeat_500,Delta breakthrough (Delta mapping),#8A2BE2
-278C_repeat_1250,Delta breakthrough (Delta mapping),#8A2BE2
-279C_repeat_1250,Delta breakthrough (Delta mapping),#8A2BE2
-Delta_1_500,primary Delta infection,#00008B
-Delta_3_350,primary Delta infection,#00008B
-Delta_4_350,primary Delta infection,#00008B
-Delta_6_500,primary Delta infection,#00008B
-Delta_7_1250,primary Delta infection,#00008B
-Delta_8_500,primary Delta infection,#00008B
-Delta_10_1250,primary Delta infection,#00008B
-Delta_11_500,primary Delta infection,#00008B
+267C_repeat_200,Delta breakthrough (Delta mapping),#332288
+268C_repeat_500,Delta breakthrough (Delta mapping),#332288
+273C_repeat_500,Delta breakthrough (Delta mapping),#332288
+274C_repeat_500,Delta breakthrough (Delta mapping),#332288
+276C_repeat_500,Delta breakthrough (Delta mapping),#332288
+277C_repeat_500,Delta breakthrough (Delta mapping),#332288
+278C_repeat_1250,Delta breakthrough (Delta mapping),#332288
+279C_repeat_1250,Delta breakthrough (Delta mapping),#332288
+Delta_1_500,primary Delta infection,#CC6677
+Delta_3_350,primary Delta infection,#CC6677
+Delta_4_350,primary Delta infection,#CC6677
+Delta_6_500,primary Delta infection,#CC6677
+Delta_7_1250,primary Delta infection,#CC6677
+Delta_8_500,primary Delta infection,#CC6677
+Delta_10_1250,primary Delta infection,#CC6677
+Delta_11_500,primary Delta infection,#CC6677
 2196+2130_400,,
 LY-CoV555+LY-CoV016_400,,
 REGN10933+REGN10987_400,,
