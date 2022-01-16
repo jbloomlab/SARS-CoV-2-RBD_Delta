@@ -15,6 +15,9 @@ Note that all experiments are done with Delta RBD and spike proteins, and Delta 
     The subdirectories should also contain a `sample_map.csv` file that maps the Excel file data to the samples in a format that is readable by the Python script [excel_to_fractinfect.py](excel_to_fractinfect.py) (see [here](https://github.com/jbloomlab/exceltofractinfect) for more on this script, which was written by Kate Crawford).
     The plate layouts referred to by the sample maps are in [./PlateLayouts/](PlateLayouts).
 
+- The [./data/previous_studies/neuts](data/previous_studies_neuts) subdirectory contains relevant NT50s or IC50s from [this study](https://github.com/jbloomlab/SARS-CoV-2-RBD_MAP_Moderna) on the antibody response elicited by mRNA-1273 vaccination [(Greaney, et al. (2021a))](https://www.science.org/doi/10.1126/scitranslmed.abi9915) and [this study](https://github.com/jbloomlab/SARS-CoV-2-RBD_B.1.351) on the antibody response to the Beta variant [(Greaney, et al. (2021b))](https://www.biorxiv.org/content/10.1101/2021.10.12.464114v1).
+    I pre-processed the supplementary files from these studies that contained the neutralization titer information to remove irrelevant or redundant sera and information. 
+
 ### Running the code
 Now you can run the entire analysis.
 The analysis consists primarily of a series of Jupyter notebooks along with some additional code in [Snakefile](Snakefile).

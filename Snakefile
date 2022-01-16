@@ -99,9 +99,9 @@ rule make_summary:
         call_strong_escape_sites=nb_markdown('call_strong_escape_sites.ipynb'),
         strong_escape_sites=config['strong_escape_sites'],
         escape_profiles=nb_markdown('escape_profiles.ipynb'),
-        # early2020_call_strong_escape_sites=nb_markdown('early2020_call_strong_escape_sites.ipynb'),
-        # early2020_strong_escape_sites=config['early2020_strong_escape_sites'],
-        # early2020_escape_profiles=nb_markdown('early2020_escape_profiles.ipynb'),
+        early2020_call_strong_escape_sites=nb_markdown('early2020_call_strong_escape_sites.ipynb'),
+        early2020_strong_escape_sites=config['early2020_strong_escape_sites'],
+        early2020_escape_profiles=nb_markdown('early2020_escape_profiles.ipynb'),
         output_pdbs=nb_markdown('output_pdbs.ipynb'),
         make_supp_data=nb_markdown('make_supp_data.ipynb'),
         lineplots_by_group=nb_markdown('lineplots_by_group.ipynb'),
@@ -506,6 +506,35 @@ rule build_variants:
         nb_markdown=nb_markdown('build_variants.ipynb')
     params:
         nb='build_variants.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+
+rule early2020_escape_profiles:
+    """Make stacked logo plots of antibody escape profiles for early 2020 samples."""
+    input:
+        escape_fracs=config['early2020_escape_fracs'],
+        escape_profiles_config=config['early2020_escape_profiles_config'],
+        site_color_schemes=config['site_color_schemes'],
+        wildtype_sequence=config['early2020_wildtype_sequence'],
+        early2020_mut_bind_expr=config['early2020_mut_bind_expr'],
+        strong_escape_sites=config['early2020_strong_escape_sites'],
+    output:
+        nb_markdown=nb_markdown('early2020_escape_profiles.ipynb'),
+        escape_profiles_dms_colors=config['early2020_escape_profiles_dms_colors'],
+    params:
+        nb='early2020_escape_profiles.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+
+rule early2020_call_strong_escape_sites:
+    """Call sites of strong escape for early 2020 samples."""
+    input:
+        escape_fracs=config['early2020_escape_fracs'],
+    output:
+        nb_markdown=nb_markdown('early2020_call_strong_escape_sites.ipynb'),
+        strong_escape_sites=config['early2020_strong_escape_sites'],
+    params:
+        nb='early2020_call_strong_escape_sites.ipynb'
     shell:
         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
