@@ -36,6 +36,7 @@ site_number_offset: 330  # add this to sequential sites to get RBD numbering
 # URLs from which we download binding & expression of mutants & variants
 # for the original DMS of SARS-CoV-2 Wuhan-1 RBD
 early2020_mut_bind_expr_url: https://media.githubusercontent.com/media/jbloomlab/SARS-CoV-2-RBD_DMS/master/results/single_mut_effects/single_mut_effects.csv
+beta_mut_bind_expr_url: https://raw.githubusercontent.com/jbloomlab/SARS-CoV-2-RBD_B.1.351/main/data/final_variant_scores.csv
 
 # GISAID mutation counts file
 gisaid_mutation_counts_all: data/210801_mutation_counts.csv
@@ -46,6 +47,13 @@ early2020_site_metric: site_total_escape_frac_epistasis_model
 early2020_mut_metric: mut_escape_frac_epistasis_model
 early2020_escape_profiles_config: data/early2020_escape_profiles_config.yaml
 early2020_wildtype_sequence: data/wuhan1_wildtype_sequence.fasta
+
+# escape_fracs for Beta plasmas against Beta library:
+beta_escape_fracs_url: https://raw.githubusercontent.com/jbloomlab/SARS-CoV-2-RBD_B.1.351/main/results/escape_scores/escape_fracs.csv
+beta_site_metric: site_total_escape_frac_single_mut
+beta_mut_metric: mut_escape_frac_single_mut
+# beta_escape_profiles_config: data/beta_escape_profiles_config.yaml # this file doesn't exist yet
+# beta_wildtype_sequence: data/beta_wildtype_sequence.fasta # this file doesn't exist yet
 
 # max error rate in gene / barcode CCSs retained for PacBio processing
 max_error_rate: 0.0001
@@ -156,6 +164,8 @@ early2020_mut_bind_expr: results/prior_DMS_data/early2020_mutant_ACE2binding_exp
 variant_expr: results/prior_DMS_data/variant_expression.csv
 variant_bind: results/prior_DMS_data/variant_ACE2binding.csv
 early2020_escape_fracs: results/prior_DMS_data/early2020_escape_fracs.csv
+beta_mut_bind_expr: results/prior_DMS_data/beta_mutant_ACE2binding_expression.csv
+beta_escape_fracs: results/prior_DMS_data/beta_escape_fracs.csv
 ccs_dir: results/ccs
 process_ccs_dir: results/process_ccs
 processed_ccs_file: results/process_ccs/processed_ccs.csv
@@ -181,6 +191,9 @@ strong_escape_sites: results/escape_profiles/strong_escape_sites.csv
 early2020_escape_profiles_dir: results/early2020_escape_profiles
 early2020_strong_escape_sites: results/early2020_escape_profiles/strong_escape_sites.csv
 early2020_escape_profiles_dms_colors: results/escape_profiles/early2020_escape_profiles_dms_colors.csv
+# beta_escape_profiles_dir: results/beta_escape_profiles
+# beta_strong_escape_sites: results/beta_escape_profiles/strong_escape_sites.csv
+# beta_escape_profiles_dms_colors: results/escape_profiles/beta_escape_profiles_dms_colors.csv
 pdb_outputs_dir: results/pdb_outputs
 supp_data_dir: results/supp_data
 lineplots_by_group_dir: results/lineplots_by_group
