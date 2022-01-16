@@ -1,0 +1,106 @@
+﻿condition,class,class_color
+P02_repeat_500,2x BNT162b2 (Delta mapping),#0000FF
+P03_repeat_1250,2x BNT162b2 (Delta mapping),#0000FF
+P04_repeat_1250,2x BNT162b2 (Delta mapping),#0000FF
+P05_repeat_500,2x BNT162b2 (Delta mapping),#0000FF
+P08_repeat_500,2x BNT162b2 (Delta mapping),#0000FF
+P09_repeat_200,2x BNT162b2 (Delta mapping),#0000FF
+P12_repeat_200,2x BNT162b2 (Delta mapping),#0000FF
+P14_repeat_1250,2x BNT162b2 (Delta mapping),#0000FF
+M02-day-36_1250,2x mRNA-1273,#98FB98
+M02-day-119_200,2x mRNA-1273,#98FB98
+M05-day-36_500,2x mRNA-1273,#98FB98
+M05-day-119_500,2x mRNA-1273,#98FB98
+M08-day-36_1250,2x mRNA-1273,#98FB98
+M08-day-119_200,2x mRNA-1273,#98FB98
+M10-day-36_500,2x mRNA-1273,#98FB98
+M10-day-119_200,2x mRNA-1273,#98FB98
+M12-day-36_1250,2x mRNA-1273,#98FB98
+M12-day-119_200,2x mRNA-1273,#98FB98
+M16-day-119_1250,2x mRNA-1273,#98FB98
+M17-day-119_200,2x mRNA-1273,#98FB98
+M18-day-119_80,2x mRNA-1273,#98FB98
+M19-day-119_200,2x mRNA-1273,#98FB98
+M01-day-119_80,2x mRNA-1273,#98FB98
+M03-day-119_200,2x mRNA-1273,#98FB98
+M04-day-119_200,2x mRNA-1273,#98FB98
+M06-day-119_80,2x mRNA-1273,#98FB98
+M07-day-119_200,2x mRNA-1273,#98FB98
+M09-day-119_500,2x mRNA-1273,#98FB98
+M11-day-119_200,2x mRNA-1273,#98FB98
+M13-day-119_200,2x mRNA-1273,#98FB98
+M14-day-119_500,2x mRNA-1273,#98FB98
+M15-day-119_200,2x mRNA-1273,#98FB98
+M20-day-119_200,2x mRNA-1273,#98FB98
+M21-day-119_200,2x mRNA-1273,#98FB98
+M22-day-119_200,2x mRNA-1273,#98FB98
+M23-day-119_200,2x mRNA-1273,#98FB98
+12C_d152_80,ancestral infection,#006400
+12C_d61_160,ancestral infection,#006400
+13_d121_1250,ancestral infection,#006400
+13_d15_200,ancestral infection,#006400
+1C_d113_200,ancestral infection,#006400
+1C_d26_200,ancestral infection,#006400
+22C_d104_200,ancestral infection,#006400
+22C_d28_200,ancestral infection,#006400
+23C_d102_80,ancestral infection,#006400
+23C_d26_80,ancestral infection,#006400
+23_d120_500,ancestral infection,#006400
+23_d21_1250,ancestral infection,#006400
+23_d45_1250,ancestral infection,#006400
+24C_d104_200,ancestral infection,#006400
+24C_d32_200,ancestral infection,#006400
+25C_d115_80,ancestral infection,#006400
+25C_d48_200,ancestral infection,#006400
+25_d18_500,ancestral infection,#006400
+25_d94_200,ancestral infection,#006400
+6C_d33_500,ancestral infection,#006400
+6C_d76_500,ancestral infection,#006400
+7C_d103_200,ancestral infection,#006400
+7C_d29_500,ancestral infection,#006400
+COV-021_500,ancestral infection,#006400
+COV-047_200,ancestral infection,#006400
+COV-057_50,ancestral infection,#006400
+COV-072_200,ancestral infection,#006400
+COV-107_80,ancestral infection,#006400
+C105_400,class 1,#E52794
+CB6_400,class 1,#E52794
+COV2-2165_400,class 1,#E52794
+COV2-2196_400,class 1,#E52794
+COV2-2832_400,class 1,#E52794
+REGN10933_400,class 1,#E52794
+C002_400,class 2,#6A0DAD
+C121_400,class 2,#6A0DAD
+C144_400,class 2,#6A0DAD
+COV2-2479_400,class 2,#6A0DAD
+LY-CoV555_400,class 2,#6A0DAD
+COV2-2050_400,class 2 ,#6A0DAD
+C110_400,class 3,#66CCEE
+C135_400,class 3,#66CCEE
+COV2-2096_400,class 3,#66CCEE
+COV2-2130_400,class 3,#66CCEE
+COV2-2499_400,class 3,#66CCEE
+REGN10987_400,class 3,#66CCEE
+COV2-2082_400,class 4,#E69F00
+COV2-2094_400,class 4,#E69F00
+COV2-2677_400,class 4,#E69F00
+CR3022_400,class 4,#E69F00
+267C_repeat_200,Delta breakthrough (Delta mapping),#8A2BE2
+268C_repeat_500,Delta breakthrough (Delta mapping),#8A2BE2
+273C_repeat_500,Delta breakthrough (Delta mapping),#8A2BE2
+274C_repeat_500,Delta breakthrough (Delta mapping),#8A2BE2
+276C_repeat_500,Delta breakthrough (Delta mapping),#8A2BE2
+277C_repeat_500,Delta breakthrough (Delta mapping),#8A2BE2
+278C_repeat_1250,Delta breakthrough (Delta mapping),#8A2BE2
+279C_repeat_1250,Delta breakthrough (Delta mapping),#8A2BE2
+Delta_1_500,primary Delta infection,#00008B
+Delta_3_350,primary Delta infection,#00008B
+Delta_4_350,primary Delta infection,#00008B
+Delta_6_500,primary Delta infection,#00008B
+Delta_7_1250,primary Delta infection,#00008B
+Delta_8_500,primary Delta infection,#00008B
+Delta_10_1250,primary Delta infection,#00008B
+Delta_11_500,primary Delta infection,#00008B
+2196+2130_400,,
+LY-CoV555+LY-CoV016_400,,
+REGN10933+REGN10987_400,,

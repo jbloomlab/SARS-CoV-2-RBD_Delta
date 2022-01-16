@@ -1,0 +1,119 @@
+# Specify configuration of multi-dimensional scaling plots
+#
+# Each entry should be a key with the name of the plot. It then can
+# have the following nested keys:
+#   conditions -> antibodies / sera and names to use when plotting
+#   color_scheme -> color points on mds plot by this site-level color
+#                   scheme in `site_color_schemes` or color for all points.
+#   plot_size -> size of plot if you want to change from default; it's a
+#                square this many inches per side)
+#   random_state -> multidimensional scaling is stochastic, so runs with
+#                   different random number seeds will give slightly different
+#                   layouts. Try different seeds here if you want to tweak
+#                   appearance from default.
+#   pie_size -> size of the "pies" representing the antibodies / sera,
+#               bigger means larger.
+#   pie_alpha -> transparency of the pies, smaller means more transparent.
+#   expand_points -> how much to repel text labels from points in plot;
+#                    larger values push text further from points, see
+#                    argument of same name here
+#                    https://adjusttext.readthedocs.io/en/latest/
+#   default_circle_color -> default color for circles around pies; use
+#                           'none' for no circle.
+#   circle_colors -> to color circles around pies for specific conditions,
+#                    give condition name followed by color.
+#   default_label_color -> like `default_circle_color` but for text labels.
+#   label_colors -> like `circl_colors` but for text labels.
+
+all:
+  conditions:
+    P02_repeat_500: P02_repeat_500
+    P03_repeat_1250: P03_repeat_1250
+    P04_repeat_1250: P04_repeat_1250
+    P05_repeat_500: P05_repeat_500
+    P08_repeat_500: P08_repeat_500
+    P09_repeat_200: P09_repeat_200
+    P12_repeat_200: P12_repeat_200
+    P14_repeat_1250: P14_repeat_1250
+    M02-day-119_200: M02-day-119_200
+    M05-day-119_500: M05-day-119_500
+    M08-day-119_200: M08-day-119_200
+    M10-day-119_200: M10-day-119_200
+    M12-day-119_200: M12-day-119_200
+    M16-day-119_1250: M16-day-119_1250
+    M17-day-119_200: M17-day-119_200
+    M18-day-119_80: M18-day-119_80
+    M19-day-119_200: M19-day-119_200
+    M01-day-119_80: M01-day-119_80
+    M03-day-119_200: M03-day-119_200
+    M04-day-119_200: M04-day-119_200
+    M06-day-119_80: M06-day-119_80
+    M07-day-119_200: M07-day-119_200
+    M09-day-119_500: M09-day-119_500
+    M11-day-119_200: M11-day-119_200
+    M13-day-119_200: M13-day-119_200
+    M14-day-119_500: M14-day-119_500
+    M20-day-119_200: M20-day-119_200
+    M21-day-119_200: M21-day-119_200
+    M22-day-119_200: M22-day-119_200
+    M23-day-119_200: M23-day-119_200
+    12C_d61_160: 12C_d61_160
+    13_d15_200: 13_d15_200
+    1C_d26_200: 1C_d26_200
+    22C_d28_200: 22C_d28_200
+    23C_d26_80: 23C_d26_80
+    23_d21_1250: 23_d21_1250
+    24C_d32_200: 24C_d32_200
+    25C_d48_200: 25C_d48_200
+    25_d18_500: 25_d18_500
+    6C_d33_500: 6C_d33_500
+    7C_d29_500: 7C_d29_500
+    COV-021_500: COV-021_500
+    COV-047_200: COV-047_200
+    COV-057_50: COV-057_50
+    COV-072_200: COV-072_200
+    COV-107_80: COV-107_80
+    C105_400: C105_400
+    CB6_400: CB6_400
+    COV2-2165_400: COV2-2165_400
+    COV2-2196_400: COV2-2196_400
+    COV2-2832_400: COV2-2832_400
+    REGN10933_400: REGN10933_400
+    C002_400: C002_400
+    C121_400: C121_400
+    C144_400: C144_400
+    COV2-2479_400: COV2-2479_400
+    LY-CoV555_400: LY-CoV555_400
+    COV2-2050_400: COV2-2050_400
+    C110_400: C110_400
+    C135_400: C135_400
+    COV2-2096_400: COV2-2096_400
+    COV2-2130_400: COV2-2130_400
+    COV2-2499_400: COV2-2499_400
+    REGN10987_400: REGN10987_400
+    COV2-2082_400: COV2-2082_400
+    COV2-2094_400: COV2-2094_400
+    COV2-2677_400: COV2-2677_400
+    CR3022_400: CR3022_400
+    267C_repeat_200: 267C_repeat_200
+    268C_repeat_500: 268C_repeat_500
+    273C_repeat_500: 273C_repeat_500
+    274C_repeat_500: 274C_repeat_500
+    276C_repeat_500: 276C_repeat_500
+    277C_repeat_500: 277C_repeat_500
+    278C_repeat_1250: 278C_repeat_1250
+    279C_repeat_1250: 279C_repeat_1250
+    Delta_1_500: Delta_1_500
+    Delta_3_350: Delta_3_350
+    Delta_4_350: Delta_4_350
+    Delta_6_500: Delta_6_500
+    Delta_7_1250: Delta_7_1250
+    Delta_8_500: Delta_8_500
+    Delta_10_1250: Delta_10_1250
+    Delta_11_500: Delta_11_500
+  color_scheme: [data/mds_color_schemes.csv, class_color]
+  plot_size: 5.5
+  random_state: 1
+  pie_size: 200
+  default_circle_color: "#000000"
+  no_labels: True
