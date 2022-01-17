@@ -644,7 +644,7 @@ with multiprocessing.Pool(ncpus) as pool:
         
 ```
 
-    Drawing 9 profiles using 8 CPUs...
+    Drawing 13 profiles using 8 CPUs...
     
     Plotted profile 1 to:
      results/escape_profiles/Delta_breakthrough_repeat_stackedlogo.pdf
@@ -719,8 +719,8 @@ with multiprocessing.Pool(ncpus) as pool:
 
     
     Plotted profile 7 to:
-     results/escape_profiles/primary_Delta_stackedlogo.pdf
-     results/escape_profiles/primary_Delta_stackedlogo.png.
+     results/escape_profiles/Pfizer_choose_sites_stackedlogo.pdf
+     results/escape_profiles/Pfizer_choose_sites_stackedlogo.png.
 
 
 
@@ -731,8 +731,8 @@ with multiprocessing.Pool(ncpus) as pool:
 
     
     Plotted profile 8 to:
-     results/escape_profiles/primary_Delta_color_by_bind_stackedlogo.pdf
-     results/escape_profiles/primary_Delta_color_by_bind_stackedlogo.png.
+     results/escape_profiles/primary_Delta_stackedlogo.pdf
+     results/escape_profiles/primary_Delta_stackedlogo.png.
 
 
 
@@ -743,13 +743,61 @@ with multiprocessing.Pool(ncpus) as pool:
 
     
     Plotted profile 9 to:
+     results/escape_profiles/primary_Delta_color_by_bind_stackedlogo.pdf
+     results/escape_profiles/primary_Delta_color_by_bind_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_26_17.png)
+    
+
+
+    
+    Plotted profile 10 to:
      results/escape_profiles/primary_Delta_color_by_expr_stackedlogo.pdf
      results/escape_profiles/primary_Delta_color_by_expr_stackedlogo.png.
 
 
 
     
-![png](escape_profiles_files/escape_profiles_26_17.png)
+![png](escape_profiles_files/escape_profiles_26_19.png)
+    
+
+
+    
+    Plotted profile 11 to:
+     results/escape_profiles/all_Delta_lib_stackedlogo.pdf
+     results/escape_profiles/all_Delta_lib_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_26_21.png)
+    
+
+
+    
+    Plotted profile 12 to:
+     results/escape_profiles/all_Delta_lib_color_by_bind_stackedlogo.pdf
+     results/escape_profiles/all_Delta_lib_color_by_bind_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_26_23.png)
+    
+
+
+    
+    Plotted profile 13 to:
+     results/escape_profiles/all_Delta_lib_color_by_expr_stackedlogo.pdf
+     results/escape_profiles/all_Delta_lib_color_by_expr_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_26_25.png)
     
 
 
