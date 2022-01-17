@@ -47,11 +47,9 @@ Read the escape fractions for both the B.1.351 plasmas and the early 2020 plasma
 
 
 ```python
-escape_frac_files = [config['early2020_escape_fracs'], config['escape_fracs']]
-
-site_metrics = {config['early2020_escape_fracs']: config['early2020_site_metric'], 
-                config['escape_fracs']: config['site_metric'],
-               }
+escape_frac_types = config['escape_frac_files']
+escape_frac_files = [config[f] for f in escape_frac_types]
+site_metrics = {config[f]:config[f'{f[:-12]}site_metric'] for f in escape_frac_types}
 
 escape_fracs_dfs = []
 
@@ -111,34 +109,34 @@ display(HTML(escape_fracs.head().to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>12C_d152_80</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>E</td>
-      <td>0.04926</td>
+      <td>0.04972</td>
     </tr>
     <tr>
-      <td>12C_d152_80</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>E</td>
-      <td>0.04926</td>
+      <td>0.04972</td>
     </tr>
     <tr>
-      <td>12C_d152_80</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>E</td>
-      <td>0.04926</td>
+      <td>0.04972</td>
     </tr>
     <tr>
-      <td>12C_d152_80</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>E</td>
-      <td>0.04926</td>
+      <td>0.04972</td>
     </tr>
     <tr>
-      <td>12C_d152_80</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>E</td>
-      <td>0.04926</td>
+      <td>0.04972</td>
     </tr>
   </tbody>
 </table>
@@ -203,6 +201,8 @@ for supergroup, subgroup in line_plot_config.items():
         return list(range(start, end + 1, site_break_freq))
 
     # make plot
+    ncol=1
+    
     p = (ggplot(df_with_mean
                 .assign(group_name=lambda x: pd.Categorical(x['group_name'], ordered=True,
                                                             categories=subgroup.keys()
@@ -220,14 +220,14 @@ for supergroup, subgroup in line_plot_config.items():
                                ymax=np.inf,
                                fill='antibody_class',
                               ),
-                   alpha=0.2,
+                   alpha=0.75,
                    inherit_aes=False,
                   ) +
 
          geom_line() +
-         facet_wrap('~ group_name', ncol=1) +
+         facet_wrap('~ group_name', ncol=ncol) +
          theme_classic() +
-         theme(figure_size=(5, 2 * df_with_mean['group_name'].nunique()),
+         theme(figure_size=(4*ncol, 1.5 * df_with_mean['group_name'].nunique()),
                axis_text_x=element_text(rotation=90, hjust=0.5),
                strip_background=element_blank(),
                ) +
@@ -342,15 +342,20 @@ for supergroup, subgroup in line_plot_config.items():
       Writing B-factor re-assigned PDBs for primaryDeltainfection to:
         results/lineplots_by_group/primaryDeltainfection_6m0j_mean_total_escape.pdb
     
+    Making PDB mappings for the average of 22 conditions for 2xmRNA-1273 to data/pdbs/6M0J.pdb
+    Mapping to the following chain: E
+      Writing B-factor re-assigned PDBs for 2xmRNA-1273 to:
+        results/lineplots_by_group/2xmRNA-1273_6m0j_mean_total_escape.pdb
+    
     Making PDB mappings for the average of 16 conditions for ancestralinfection to data/pdbs/6M0J.pdb
     Mapping to the following chain: E
       Writing B-factor re-assigned PDBs for ancestralinfection to:
         results/lineplots_by_group/ancestralinfection_6m0j_mean_total_escape.pdb
     
-    Making PDB mappings for the average of 22 conditions for 2xmRNA-1273 to data/pdbs/6M0J.pdb
+    Making PDB mappings for the average of 9 conditions for primaryBetainfection to data/pdbs/6M0J.pdb
     Mapping to the following chain: E
-      Writing B-factor re-assigned PDBs for 2xmRNA-1273 to:
-        results/lineplots_by_group/2xmRNA-1273_6m0j_mean_total_escape.pdb
+      Writing B-factor re-assigned PDBs for primaryBetainfection to:
+        results/lineplots_by_group/primaryBetainfection_6m0j_mean_total_escape.pdb
 
 
 

@@ -49,16 +49,14 @@ Extract from configuration what we will use as the site- and mutation-level metr
 
 
 ```python
-escape_frac_files = [config['early2020_escape_fracs'], config['escape_fracs']]
-
-site_metrics = {config['early2020_escape_fracs']: config['early2020_site_metric'], 
-                config['escape_fracs']: config['site_metric'],
-               }
+escape_frac_types = config['escape_frac_files']
+escape_frac_files = [config[f] for f in escape_frac_types]
+site_metrics = {config[f]:config[f'{f[:-12]}site_metric'] for f in escape_frac_types}
 
 print(f"At site level, quantifying selection by {site_metrics}")
 ```
 
-    At site level, quantifying selection by {'results/prior_DMS_data/early2020_escape_fracs.csv': 'site_total_escape_frac_epistasis_model', 'results/escape_scores/escape_fracs.csv': 'site_total_escape_frac_single_mut'}
+    At site level, quantifying selection by {'results/escape_scores/escape_fracs.csv': 'site_total_escape_frac_single_mut', 'results/prior_DMS_data/early2020_escape_fracs.csv': 'site_total_escape_frac_epistasis_model', 'results/prior_DMS_data/beta_escape_fracs.csv': 'site_total_escape_frac_single_mut'}
 
 
 ## Read samples and escape fractions
@@ -344,10 +342,10 @@ for name, specs in mds_config.items():
 
     
     Making plot all, which has the following antibodies:
-    ['P02_repeat_500', 'P03_repeat_1250', 'P04_repeat_1250', 'P05_repeat_500', 'P08_repeat_500', 'P09_repeat_200', 'P12_repeat_200', 'P14_repeat_1250', 'M02-day-119_200', 'M05-day-119_500', 'M08-day-119_200', 'M10-day-119_200', 'M12-day-119_200', 'M16-day-119_1250', 'M17-day-119_200', 'M18-day-119_80', 'M19-day-119_200', 'M01-day-119_80', 'M03-day-119_200', 'M04-day-119_200', 'M06-day-119_80', 'M07-day-119_200', 'M09-day-119_500', 'M11-day-119_200', 'M13-day-119_200', 'M14-day-119_500', 'M20-day-119_200', 'M21-day-119_200', 'M22-day-119_200', 'M23-day-119_200', '12C_d61_160', '13_d15_200', '1C_d26_200', '22C_d28_200', '23C_d26_80', '23_d21_1250', '24C_d32_200', '25C_d48_200', '25_d18_500', '6C_d33_500', '7C_d29_500', 'COV-021_500', 'COV-047_200', 'COV-057_50', 'COV-072_200', 'COV-107_80', 'C105_400', 'CB6_400', 'COV2-2165_400', 'COV2-2196_400', 'COV2-2832_400', 'REGN10933_400', 'C002_400', 'C121_400', 'C144_400', 'COV2-2479_400', 'LY-CoV555_400', 'COV2-2050_400', 'C110_400', 'C135_400', 'COV2-2096_400', 'COV2-2130_400', 'COV2-2499_400', 'REGN10987_400', 'COV2-2082_400', 'COV2-2094_400', 'COV2-2677_400', 'CR3022_400', '267C_repeat_200', '268C_repeat_500', '273C_repeat_500', '274C_repeat_500', '276C_repeat_500', '277C_repeat_500', '278C_repeat_1250', '279C_repeat_1250', 'Delta_1_500', 'Delta_3_350', 'Delta_4_350', 'Delta_6_500', 'Delta_7_1250', 'Delta_8_500', 'Delta_10_1250', 'Delta_11_500']
-    stress = 51.188579579077434 from iteration 255
-    Manual calculus of sklearn stress : 51.188545732481074
-    Kruskal's Stress : 0.2006795749267511
+    ['P02_repeat_500', 'P03_repeat_1250', 'P04_repeat_1250', 'P05_repeat_500', 'P08_repeat_500', 'P09_repeat_200', 'P12_repeat_200', 'P14_repeat_1250', 'M02-day-119_200', 'M05-day-119_500', 'M08-day-119_200', 'M10-day-119_200', 'M12-day-119_200', 'M16-day-119_1250', 'M17-day-119_200', 'M18-day-119_80', 'M19-day-119_200', 'M01-day-119_80', 'M03-day-119_200', 'M04-day-119_200', 'M06-day-119_80', 'M07-day-119_200', 'M09-day-119_500', 'M11-day-119_200', 'M13-day-119_200', 'M14-day-119_500', 'M20-day-119_200', 'M21-day-119_200', 'M22-day-119_200', 'M23-day-119_200', '12C_d61_160', '13_d15_200', '1C_d26_200', '22C_d28_200', '23C_d26_80', '23_d21_1250', '24C_d32_200', '25C_d48_200', '25_d18_500', '6C_d33_500', '7C_d29_500', 'COV-021_500', 'COV-047_200', 'COV-057_50', 'COV-072_200', 'COV-107_80', 'C105_400', 'CB6_400', 'COV2-2165_400', 'COV2-2196_400', 'COV2-2832_400', 'REGN10933_400', 'C002_400', 'C121_400', 'C144_400', 'COV2-2479_400', 'LY-CoV555_400', 'COV2-2050_400', 'C110_400', 'C135_400', 'COV2-2096_400', 'COV2-2130_400', 'COV2-2499_400', 'REGN10987_400', 'COV2-2082_400', 'COV2-2094_400', 'COV2-2677_400', 'CR3022_400', '267C_repeat_200', '268C_repeat_500', '273C_repeat_500', '274C_repeat_500', '276C_repeat_500', '277C_repeat_500', '278C_repeat_1250', '279C_repeat_1250', 'Delta_1_500', 'Delta_3_350', 'Delta_4_350', 'Delta_6_500', 'Delta_7_1250', 'Delta_8_500', 'Delta_10_1250', 'Delta_11_500', 'K007_500', 'K031_500', 'K033_500', 'K040_500', 'K041_500', 'K046_200', 'K114_200', 'K115_old_80', 'K119_200']
+    stress = 63.80033988120528 from iteration 144
+    Manual calculus of sklearn stress : 63.80020748657694
+    Kruskal's Stress : 0.20304026742143952
     [Poor > 0.2 > Fair > 0.1 > Good > 0.05 > Excellent > 0.025 > Perfect > 0.0]
     Using condition-level color scheme in column class_color of data/mds_color_schemes.csv
     Saving plot to results/multidimensional_scaling/all_mds.pdf

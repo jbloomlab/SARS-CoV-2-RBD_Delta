@@ -79,6 +79,7 @@ rule make_summary:
         rulegraph=os.path.join(config['summary_dir'], 'rulegraph.svg'),
         get_early2020_mut_bind_expr=config['early2020_mut_bind_expr'],
         get_early2020_escape_fracs=config['early2020_escape_fracs'],
+        get_beta_escape_fracs=config['beta_escape_fracs'],
         bind_expr_filters=nb_markdown('bind_expr_filters.ipynb'),
         process_ccs=nb_markdown('process_ccs.ipynb'),
         build_variants=nb_markdown('build_variants.ipynb'),
@@ -131,6 +132,8 @@ rule make_summary:
             1. Get prior DMS mutation-level [binding and expression data]({path(input.get_early2020_mut_bind_expr)}).
 
             2. Get prior MAPping [escape_fracs]({path(input.get_early2020_escape_fracs)}) for polyclonal plasmas from early 2020 against the Wuhan-1 RBD library.
+
+            3. Get prior DMS mutation-level [binding and expression data]({path(input.get_beta_mut_bind_expr)}) and MAPping [escape_fracs]({path(input.get_beta_escape_fracs)}) for polyclonal plasmas from Beta infections against the Beta RBD DMS library.
 
             2. [Process PacBio CCSs]({path(input.process_ccs)}).
 
@@ -222,6 +225,7 @@ rule mds_escape_profiles:
     """Multi-dimensional scaling on antibody escape profiles."""
     input:
         config['early2020_escape_fracs'],
+        config['beta_escape_fracs'],
         escape_fracs=config['escape_fracs'],
         mds_config=config['mds_config'],
         site_color_schemes=config['site_color_schemes'],
@@ -235,6 +239,7 @@ rule mds_escape_profiles:
 rule lineplots_by_group:
     input:
         config['early2020_escape_fracs'],
+        config['beta_escape_fracs'],
         config['escape_fracs'],
         "data/pdbs/6M0J.pdb",
     output:
@@ -271,35 +276,6 @@ rule output_pdbs:
         nb='output_pdbs.ipynb'
     shell:
         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
-
-# rule early2020_escape_profiles:
-#     """Make stacked logo plots of antibody escape profiles for early 2020 samples."""
-#     input:
-#         escape_fracs=config['early2020_escape_fracs'],
-#         escape_profiles_config=config['early2020_escape_profiles_config'],
-#         site_color_schemes=config['site_color_schemes'],
-#         wildtype_sequence=config['early2020_wildtype_sequence'],
-#         mut_bind_expr=config['mut_bind_expr'],
-#         strong_escape_sites=config['early2020_strong_escape_sites'],
-#     output:
-#         nb_markdown=nb_markdown('early2020_escape_profiles.ipynb'),
-#         escape_profiles_dms_colors=config['early2020_escape_profiles_dms_colors'],
-#     params:
-#         nb='early2020_escape_profiles.ipynb'
-#     shell:
-#         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
-
-# rule early2020_call_strong_escape_sites:
-#     """Call sites of strong escape for early 2020 samples."""
-#     input:
-#         escape_fracs=config['early2020_escape_fracs'],
-#     output:
-#         nb_markdown=nb_markdown('early2020_call_strong_escape_sites.ipynb'),
-#         strong_escape_sites=config['early2020_strong_escape_sites'],
-#     params:
-#         nb='early2020_call_strong_escape_sites.ipynb'
-#     shell:
-#         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
 rule escape_profiles:
     """Make stacked logo plots of antibody escape profiles."""
@@ -554,6 +530,18 @@ rule early2020_call_strong_escape_sites:
         nb='early2020_call_strong_escape_sites.ipynb'
     shell:
         "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
+
+rule get_beta_escape_fracs:
+    """Download escape_fracs for Beta polyclonal plasmas
+        against Wuhan-1 RBD library from URL and
+        Download SARS-CoV-2 Beta mutation ACE2-binding and expression from URL.
+    """
+    output:
+        beta_escape_fracs=config['beta_escape_fracs'],
+        beta_mut_bind_expr=config['beta_mut_bind_expr']
+    run:
+        urllib.request.urlretrieve(config['beta_escape_fracs_url'], output.beta_escape_fracs)
+        urllib.request.urlretrieve(config['beta_mut_bind_expr_url'], output.beta_mut_bind_expr)
 
 rule get_early2020_escape_fracs:
     """Download escape_fracs for early 2020 polyclonal plasmas
