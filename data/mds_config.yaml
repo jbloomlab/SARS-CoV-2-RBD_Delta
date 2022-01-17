@@ -122,7 +122,7 @@ all:
     K119_200: K119_200
   color_scheme: [data/mds_color_schemes.csv, class_color]
   plot_size: 5.5
-  random_state: 1
+  random_state: 3
   pie_size: 200
   default_circle_color: "#000000"
   no_labels: True
