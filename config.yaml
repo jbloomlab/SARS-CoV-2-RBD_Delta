@@ -148,14 +148,20 @@ escape_profile_ymax:
   frac: 0.05
   min_ymax: null
 
-# multidimensional scaling configuration
-mds_config: data/mds_config.yaml
-
 # structural mappings configuration
 output_pdbs_config: data/output_pdbs_config.yaml
 
+# for making comparisons between cohorts from different studies (lineplots_by_group and mds_escape_profiles):
+escape_frac_files: # give the keys here
+  - escape_fracs
+  - early2020_escape_fracs
+  - beta_escape_fracs
+
 # config for making summary line plots by group
 lineplots_by_group_config: data/lineplots_config.yaml
+
+# multidimensional scaling configuration
+mds_config: data/mds_config.yaml
 
 # output directories / files
 summary_dir: results/summary
