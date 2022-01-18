@@ -1,6 +1,6 @@
 # Specify configuration of lineplots averaged across groups.
 all_day30:
-  2x BNT162b2 (n=8):
+  "2x BNT162b2 (n=8)\nDelta library":
     - P02_repeat_500
     - P03_repeat_1250
     - P04_repeat_1250
@@ -9,25 +9,7 @@ all_day30:
     - P09_repeat_200
     - P12_repeat_200
     - P14_repeat_1250
-  Delta breakthrough after 2x mRNA (n=8):
-    - 267C_repeat_200
-    - 268C_repeat_500
-    - 273C_repeat_500
-    - 274C_repeat_500
-    - 276C_repeat_500
-    - 277C_repeat_500
-    - 278C_repeat_1250
-    - 279C_repeat_1250
-  primary Delta infection (n=8):
-    - Delta_1_500
-    - Delta_3_350
-    - Delta_4_350
-    - Delta_6_500
-    - Delta_7_1250
-    - Delta_8_500
-    - Delta_10_1250
-    - Delta_11_500
-  2x mRNA-1273 (n=22):
+  "2x mRNA-1273 (n=22)\nWuhan-Hu-1 library":
     - M01-day-119_80
     - M02-day-119_200
     - M03-day-119_200
@@ -50,7 +32,16 @@ all_day30:
     - M21-day-119_200
     - M22-day-119_200
     - M23-day-119_200
-  ancestral infection (n=16):
+  "Delta breakthrough after 2x mRNA (n=8)\nDelta library":
+    - 267C_repeat_200
+    - 268C_repeat_500
+    - 273C_repeat_500
+    - 274C_repeat_500
+    - 276C_repeat_500
+    - 277C_repeat_500
+    - 278C_repeat_1250
+    - 279C_repeat_1250
+  "ancestral infection (n=16)\nWuhan-Hu-1 library":
     - 23_d21_1250
     - 1C_d26_200
     - 24C_d32_200
@@ -67,7 +58,16 @@ all_day30:
     - COV-057_50
     - COV-072_200
     - COV-107_80
-  primary Beta infection (n=9):
+  "primary Delta infection (n=8)\nDelta library":
+    - Delta_1_500
+    - Delta_3_350
+    - Delta_4_350
+    - Delta_6_500
+    - Delta_7_1250
+    - Delta_8_500
+    - Delta_10_1250
+    - Delta_11_500
+  "primary Beta infection (n=9)\nBeta library":
     - K007_500
     - K031_500
     - K033_500
