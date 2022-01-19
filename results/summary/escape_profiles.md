@@ -130,63 +130,63 @@ display(HTML(escape_fracs.head().to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>267C_200</td>
+      <td>267C_repeat_200</td>
       <td>331</td>
       <td>N</td>
       <td>A</td>
       <td>E</td>
       <td>331</td>
-      <td>0.000980</td>
-      <td>0.04972</td>
-      <td>0.002617</td>
+      <td>0.003015</td>
+      <td>0.05336</td>
+      <td>0.002808</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>267C_200</td>
+      <td>267C_repeat_200</td>
       <td>331</td>
       <td>N</td>
       <td>C</td>
       <td>E</td>
       <td>331</td>
-      <td>0.001776</td>
-      <td>0.04972</td>
-      <td>0.002617</td>
+      <td>0.003249</td>
+      <td>0.05336</td>
+      <td>0.002808</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>267C_200</td>
+      <td>267C_repeat_200</td>
       <td>331</td>
       <td>N</td>
       <td>D</td>
       <td>E</td>
       <td>331</td>
-      <td>0.001094</td>
-      <td>0.04972</td>
-      <td>0.002617</td>
+      <td>0.001829</td>
+      <td>0.05336</td>
+      <td>0.002808</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>267C_200</td>
+      <td>267C_repeat_200</td>
       <td>331</td>
       <td>N</td>
       <td>E</td>
       <td>E</td>
       <td>331</td>
-      <td>0.001751</td>
-      <td>0.04972</td>
-      <td>0.002617</td>
+      <td>0.004172</td>
+      <td>0.05336</td>
+      <td>0.002808</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>267C_200</td>
+      <td>267C_repeat_200</td>
       <td>331</td>
       <td>N</td>
       <td>F</td>
       <td>E</td>
       <td>331</td>
-      <td>0.004506</td>
-      <td>0.04972</td>
-      <td>0.002617</td>
+      <td>0.001581</td>
+      <td>0.05336</td>
+      <td>0.002808</td>
       <td>2</td>
     </tr>
   </tbody>

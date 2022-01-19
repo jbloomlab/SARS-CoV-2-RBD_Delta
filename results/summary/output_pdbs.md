@@ -107,54 +107,54 @@ display(HTML(escape_fracs.head().to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>267C_200</td>
+      <td>267C_repeat_200</td>
       <td>331</td>
-      <td>0.049719</td>
-      <td>0.008071</td>
-      <td>0.0537</td>
-      <td>0.03087</td>
-      <td>0.925857</td>
-      <td>0.261451</td>
+      <td>0.053354</td>
+      <td>0.005160</td>
+      <td>2.49289</td>
+      <td>0.4069</td>
+      <td>0.021402</td>
+      <td>0.012681</td>
     </tr>
     <tr>
-      <td>267C_200</td>
+      <td>267C_repeat_200</td>
       <td>332</td>
-      <td>0.029756</td>
-      <td>0.003811</td>
-      <td>0.0537</td>
-      <td>0.03087</td>
-      <td>0.554119</td>
-      <td>0.123453</td>
+      <td>0.077189</td>
+      <td>0.007509</td>
+      <td>2.49289</td>
+      <td>0.4069</td>
+      <td>0.030964</td>
+      <td>0.018454</td>
     </tr>
     <tr>
-      <td>267C_200</td>
+      <td>267C_repeat_200</td>
       <td>333</td>
-      <td>0.040990</td>
-      <td>0.013620</td>
-      <td>0.0537</td>
-      <td>0.03087</td>
-      <td>0.763306</td>
-      <td>0.441205</td>
+      <td>0.056405</td>
+      <td>0.005939</td>
+      <td>2.49289</td>
+      <td>0.4069</td>
+      <td>0.022626</td>
+      <td>0.014596</td>
     </tr>
     <tr>
-      <td>267C_200</td>
+      <td>267C_repeat_200</td>
       <td>334</td>
-      <td>0.028385</td>
-      <td>0.004104</td>
-      <td>0.0537</td>
-      <td>0.03087</td>
-      <td>0.528581</td>
-      <td>0.132945</td>
+      <td>0.125584</td>
+      <td>0.020500</td>
+      <td>2.49289</td>
+      <td>0.4069</td>
+      <td>0.050377</td>
+      <td>0.050381</td>
     </tr>
     <tr>
-      <td>267C_200</td>
+      <td>267C_repeat_200</td>
       <td>335</td>
-      <td>0.027019</td>
-      <td>0.002637</td>
-      <td>0.0537</td>
-      <td>0.03087</td>
-      <td>0.503142</td>
-      <td>0.085423</td>
+      <td>0.101017</td>
+      <td>0.014700</td>
+      <td>2.49289</td>
+      <td>0.4069</td>
+      <td>0.040522</td>
+      <td>0.036127</td>
     </tr>
   </tbody>
 </table>
@@ -211,83 +211,43 @@ for name, specs in output_pdbs_config.items():
 
     
     Making PDB mappings for 6m0j to data/pdbs/6M0J.pdb
-    Making mappings for 40 conditions.
+    Making mappings for 24 conditions.
     Mapping to the following chains: E
-      Writing B-factor re-assigned PDBs for 267C_200 to:
-        results/pdb_outputs/267C_200_6m0j_total_escape.pdb
-        results/pdb_outputs/267C_200_6m0j_max_escape.pdb
-        results/pdb_outputs/267C_200_6m0j_norm_total_escape.pdb
-        results/pdb_outputs/267C_200_6m0j_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for 267C_repeat_200 to:
         results/pdb_outputs/267C_repeat_200_6m0j_total_escape.pdb
         results/pdb_outputs/267C_repeat_200_6m0j_max_escape.pdb
         results/pdb_outputs/267C_repeat_200_6m0j_norm_total_escape.pdb
         results/pdb_outputs/267C_repeat_200_6m0j_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for 268C_500 to:
-        results/pdb_outputs/268C_500_6m0j_total_escape.pdb
-        results/pdb_outputs/268C_500_6m0j_max_escape.pdb
-        results/pdb_outputs/268C_500_6m0j_norm_total_escape.pdb
-        results/pdb_outputs/268C_500_6m0j_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for 268C_repeat_500 to:
         results/pdb_outputs/268C_repeat_500_6m0j_total_escape.pdb
         results/pdb_outputs/268C_repeat_500_6m0j_max_escape.pdb
         results/pdb_outputs/268C_repeat_500_6m0j_norm_total_escape.pdb
         results/pdb_outputs/268C_repeat_500_6m0j_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for 273C_500 to:
-        results/pdb_outputs/273C_500_6m0j_total_escape.pdb
-        results/pdb_outputs/273C_500_6m0j_max_escape.pdb
-        results/pdb_outputs/273C_500_6m0j_norm_total_escape.pdb
-        results/pdb_outputs/273C_500_6m0j_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for 273C_repeat_500 to:
         results/pdb_outputs/273C_repeat_500_6m0j_total_escape.pdb
         results/pdb_outputs/273C_repeat_500_6m0j_max_escape.pdb
         results/pdb_outputs/273C_repeat_500_6m0j_norm_total_escape.pdb
         results/pdb_outputs/273C_repeat_500_6m0j_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for 274C_500 to:
-        results/pdb_outputs/274C_500_6m0j_total_escape.pdb
-        results/pdb_outputs/274C_500_6m0j_max_escape.pdb
-        results/pdb_outputs/274C_500_6m0j_norm_total_escape.pdb
-        results/pdb_outputs/274C_500_6m0j_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for 274C_repeat_500 to:
         results/pdb_outputs/274C_repeat_500_6m0j_total_escape.pdb
         results/pdb_outputs/274C_repeat_500_6m0j_max_escape.pdb
         results/pdb_outputs/274C_repeat_500_6m0j_norm_total_escape.pdb
         results/pdb_outputs/274C_repeat_500_6m0j_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for 276C_500 to:
-        results/pdb_outputs/276C_500_6m0j_total_escape.pdb
-        results/pdb_outputs/276C_500_6m0j_max_escape.pdb
-        results/pdb_outputs/276C_500_6m0j_norm_total_escape.pdb
-        results/pdb_outputs/276C_500_6m0j_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for 276C_repeat_500 to:
         results/pdb_outputs/276C_repeat_500_6m0j_total_escape.pdb
         results/pdb_outputs/276C_repeat_500_6m0j_max_escape.pdb
         results/pdb_outputs/276C_repeat_500_6m0j_norm_total_escape.pdb
         results/pdb_outputs/276C_repeat_500_6m0j_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for 277C_500 to:
-        results/pdb_outputs/277C_500_6m0j_total_escape.pdb
-        results/pdb_outputs/277C_500_6m0j_max_escape.pdb
-        results/pdb_outputs/277C_500_6m0j_norm_total_escape.pdb
-        results/pdb_outputs/277C_500_6m0j_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for 277C_repeat_500 to:
         results/pdb_outputs/277C_repeat_500_6m0j_total_escape.pdb
         results/pdb_outputs/277C_repeat_500_6m0j_max_escape.pdb
         results/pdb_outputs/277C_repeat_500_6m0j_norm_total_escape.pdb
         results/pdb_outputs/277C_repeat_500_6m0j_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for 278C_1250 to:
-        results/pdb_outputs/278C_1250_6m0j_total_escape.pdb
-        results/pdb_outputs/278C_1250_6m0j_max_escape.pdb
-        results/pdb_outputs/278C_1250_6m0j_norm_total_escape.pdb
-        results/pdb_outputs/278C_1250_6m0j_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for 278C_repeat_1250 to:
         results/pdb_outputs/278C_repeat_1250_6m0j_total_escape.pdb
         results/pdb_outputs/278C_repeat_1250_6m0j_max_escape.pdb
         results/pdb_outputs/278C_repeat_1250_6m0j_norm_total_escape.pdb
         results/pdb_outputs/278C_repeat_1250_6m0j_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for 279C_1250 to:
-        results/pdb_outputs/279C_1250_6m0j_total_escape.pdb
-        results/pdb_outputs/279C_1250_6m0j_max_escape.pdb
-        results/pdb_outputs/279C_1250_6m0j_norm_total_escape.pdb
-        results/pdb_outputs/279C_1250_6m0j_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for 279C_repeat_1250 to:
         results/pdb_outputs/279C_repeat_1250_6m0j_total_escape.pdb
         results/pdb_outputs/279C_repeat_1250_6m0j_max_escape.pdb
@@ -333,81 +293,41 @@ for name, specs in output_pdbs_config.items():
         results/pdb_outputs/Delta_8_500_6m0j_max_escape.pdb
         results/pdb_outputs/Delta_8_500_6m0j_norm_total_escape.pdb
         results/pdb_outputs/Delta_8_500_6m0j_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for P02_500 to:
-        results/pdb_outputs/P02_500_6m0j_total_escape.pdb
-        results/pdb_outputs/P02_500_6m0j_max_escape.pdb
-        results/pdb_outputs/P02_500_6m0j_norm_total_escape.pdb
-        results/pdb_outputs/P02_500_6m0j_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for P02_repeat_500 to:
         results/pdb_outputs/P02_repeat_500_6m0j_total_escape.pdb
         results/pdb_outputs/P02_repeat_500_6m0j_max_escape.pdb
         results/pdb_outputs/P02_repeat_500_6m0j_norm_total_escape.pdb
         results/pdb_outputs/P02_repeat_500_6m0j_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for P03_1250 to:
-        results/pdb_outputs/P03_1250_6m0j_total_escape.pdb
-        results/pdb_outputs/P03_1250_6m0j_max_escape.pdb
-        results/pdb_outputs/P03_1250_6m0j_norm_total_escape.pdb
-        results/pdb_outputs/P03_1250_6m0j_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for P03_repeat_1250 to:
         results/pdb_outputs/P03_repeat_1250_6m0j_total_escape.pdb
         results/pdb_outputs/P03_repeat_1250_6m0j_max_escape.pdb
         results/pdb_outputs/P03_repeat_1250_6m0j_norm_total_escape.pdb
         results/pdb_outputs/P03_repeat_1250_6m0j_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for P04_1250 to:
-        results/pdb_outputs/P04_1250_6m0j_total_escape.pdb
-        results/pdb_outputs/P04_1250_6m0j_max_escape.pdb
-        results/pdb_outputs/P04_1250_6m0j_norm_total_escape.pdb
-        results/pdb_outputs/P04_1250_6m0j_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for P04_repeat_1250 to:
         results/pdb_outputs/P04_repeat_1250_6m0j_total_escape.pdb
         results/pdb_outputs/P04_repeat_1250_6m0j_max_escape.pdb
         results/pdb_outputs/P04_repeat_1250_6m0j_norm_total_escape.pdb
         results/pdb_outputs/P04_repeat_1250_6m0j_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for P05_500 to:
-        results/pdb_outputs/P05_500_6m0j_total_escape.pdb
-        results/pdb_outputs/P05_500_6m0j_max_escape.pdb
-        results/pdb_outputs/P05_500_6m0j_norm_total_escape.pdb
-        results/pdb_outputs/P05_500_6m0j_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for P05_repeat_500 to:
         results/pdb_outputs/P05_repeat_500_6m0j_total_escape.pdb
         results/pdb_outputs/P05_repeat_500_6m0j_max_escape.pdb
         results/pdb_outputs/P05_repeat_500_6m0j_norm_total_escape.pdb
         results/pdb_outputs/P05_repeat_500_6m0j_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for P08_500 to:
-        results/pdb_outputs/P08_500_6m0j_total_escape.pdb
-        results/pdb_outputs/P08_500_6m0j_max_escape.pdb
-        results/pdb_outputs/P08_500_6m0j_norm_total_escape.pdb
-        results/pdb_outputs/P08_500_6m0j_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for P08_repeat_500 to:
         results/pdb_outputs/P08_repeat_500_6m0j_total_escape.pdb
         results/pdb_outputs/P08_repeat_500_6m0j_max_escape.pdb
         results/pdb_outputs/P08_repeat_500_6m0j_norm_total_escape.pdb
         results/pdb_outputs/P08_repeat_500_6m0j_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for P09_200 to:
-        results/pdb_outputs/P09_200_6m0j_total_escape.pdb
-        results/pdb_outputs/P09_200_6m0j_max_escape.pdb
-        results/pdb_outputs/P09_200_6m0j_norm_total_escape.pdb
-        results/pdb_outputs/P09_200_6m0j_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for P09_repeat_200 to:
         results/pdb_outputs/P09_repeat_200_6m0j_total_escape.pdb
         results/pdb_outputs/P09_repeat_200_6m0j_max_escape.pdb
         results/pdb_outputs/P09_repeat_200_6m0j_norm_total_escape.pdb
         results/pdb_outputs/P09_repeat_200_6m0j_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for P12_200 to:
-        results/pdb_outputs/P12_200_6m0j_total_escape.pdb
-        results/pdb_outputs/P12_200_6m0j_max_escape.pdb
-        results/pdb_outputs/P12_200_6m0j_norm_total_escape.pdb
-        results/pdb_outputs/P12_200_6m0j_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for P12_repeat_200 to:
         results/pdb_outputs/P12_repeat_200_6m0j_total_escape.pdb
         results/pdb_outputs/P12_repeat_200_6m0j_max_escape.pdb
         results/pdb_outputs/P12_repeat_200_6m0j_norm_total_escape.pdb
         results/pdb_outputs/P12_repeat_200_6m0j_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for P14_1250 to:
-        results/pdb_outputs/P14_1250_6m0j_total_escape.pdb
-        results/pdb_outputs/P14_1250_6m0j_max_escape.pdb
-        results/pdb_outputs/P14_1250_6m0j_norm_total_escape.pdb
-        results/pdb_outputs/P14_1250_6m0j_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for P14_repeat_1250 to:
         results/pdb_outputs/P14_repeat_1250_6m0j_total_escape.pdb
         results/pdb_outputs/P14_repeat_1250_6m0j_max_escape.pdb
@@ -415,83 +335,43 @@ for name, specs in output_pdbs_config.items():
         results/pdb_outputs/P14_repeat_1250_6m0j_norm_max_escape.pdb
     
     Making PDB mappings for 7V8B to data/pdbs/7V8B.pdb
-    Making mappings for 40 conditions.
+    Making mappings for 24 conditions.
     Mapping to the following chains: A
-      Writing B-factor re-assigned PDBs for 267C_200 to:
-        results/pdb_outputs/267C_200_7V8B_total_escape.pdb
-        results/pdb_outputs/267C_200_7V8B_max_escape.pdb
-        results/pdb_outputs/267C_200_7V8B_norm_total_escape.pdb
-        results/pdb_outputs/267C_200_7V8B_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for 267C_repeat_200 to:
         results/pdb_outputs/267C_repeat_200_7V8B_total_escape.pdb
         results/pdb_outputs/267C_repeat_200_7V8B_max_escape.pdb
         results/pdb_outputs/267C_repeat_200_7V8B_norm_total_escape.pdb
         results/pdb_outputs/267C_repeat_200_7V8B_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for 268C_500 to:
-        results/pdb_outputs/268C_500_7V8B_total_escape.pdb
-        results/pdb_outputs/268C_500_7V8B_max_escape.pdb
-        results/pdb_outputs/268C_500_7V8B_norm_total_escape.pdb
-        results/pdb_outputs/268C_500_7V8B_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for 268C_repeat_500 to:
         results/pdb_outputs/268C_repeat_500_7V8B_total_escape.pdb
         results/pdb_outputs/268C_repeat_500_7V8B_max_escape.pdb
         results/pdb_outputs/268C_repeat_500_7V8B_norm_total_escape.pdb
         results/pdb_outputs/268C_repeat_500_7V8B_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for 273C_500 to:
-        results/pdb_outputs/273C_500_7V8B_total_escape.pdb
-        results/pdb_outputs/273C_500_7V8B_max_escape.pdb
-        results/pdb_outputs/273C_500_7V8B_norm_total_escape.pdb
-        results/pdb_outputs/273C_500_7V8B_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for 273C_repeat_500 to:
         results/pdb_outputs/273C_repeat_500_7V8B_total_escape.pdb
         results/pdb_outputs/273C_repeat_500_7V8B_max_escape.pdb
         results/pdb_outputs/273C_repeat_500_7V8B_norm_total_escape.pdb
         results/pdb_outputs/273C_repeat_500_7V8B_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for 274C_500 to:
-        results/pdb_outputs/274C_500_7V8B_total_escape.pdb
-        results/pdb_outputs/274C_500_7V8B_max_escape.pdb
-        results/pdb_outputs/274C_500_7V8B_norm_total_escape.pdb
-        results/pdb_outputs/274C_500_7V8B_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for 274C_repeat_500 to:
         results/pdb_outputs/274C_repeat_500_7V8B_total_escape.pdb
         results/pdb_outputs/274C_repeat_500_7V8B_max_escape.pdb
         results/pdb_outputs/274C_repeat_500_7V8B_norm_total_escape.pdb
         results/pdb_outputs/274C_repeat_500_7V8B_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for 276C_500 to:
-        results/pdb_outputs/276C_500_7V8B_total_escape.pdb
-        results/pdb_outputs/276C_500_7V8B_max_escape.pdb
-        results/pdb_outputs/276C_500_7V8B_norm_total_escape.pdb
-        results/pdb_outputs/276C_500_7V8B_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for 276C_repeat_500 to:
         results/pdb_outputs/276C_repeat_500_7V8B_total_escape.pdb
         results/pdb_outputs/276C_repeat_500_7V8B_max_escape.pdb
         results/pdb_outputs/276C_repeat_500_7V8B_norm_total_escape.pdb
         results/pdb_outputs/276C_repeat_500_7V8B_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for 277C_500 to:
-        results/pdb_outputs/277C_500_7V8B_total_escape.pdb
-        results/pdb_outputs/277C_500_7V8B_max_escape.pdb
-        results/pdb_outputs/277C_500_7V8B_norm_total_escape.pdb
-        results/pdb_outputs/277C_500_7V8B_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for 277C_repeat_500 to:
         results/pdb_outputs/277C_repeat_500_7V8B_total_escape.pdb
         results/pdb_outputs/277C_repeat_500_7V8B_max_escape.pdb
         results/pdb_outputs/277C_repeat_500_7V8B_norm_total_escape.pdb
         results/pdb_outputs/277C_repeat_500_7V8B_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for 278C_1250 to:
-        results/pdb_outputs/278C_1250_7V8B_total_escape.pdb
-        results/pdb_outputs/278C_1250_7V8B_max_escape.pdb
-        results/pdb_outputs/278C_1250_7V8B_norm_total_escape.pdb
-        results/pdb_outputs/278C_1250_7V8B_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for 278C_repeat_1250 to:
         results/pdb_outputs/278C_repeat_1250_7V8B_total_escape.pdb
         results/pdb_outputs/278C_repeat_1250_7V8B_max_escape.pdb
         results/pdb_outputs/278C_repeat_1250_7V8B_norm_total_escape.pdb
         results/pdb_outputs/278C_repeat_1250_7V8B_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for 279C_1250 to:
-        results/pdb_outputs/279C_1250_7V8B_total_escape.pdb
-        results/pdb_outputs/279C_1250_7V8B_max_escape.pdb
-        results/pdb_outputs/279C_1250_7V8B_norm_total_escape.pdb
-        results/pdb_outputs/279C_1250_7V8B_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for 279C_repeat_1250 to:
         results/pdb_outputs/279C_repeat_1250_7V8B_total_escape.pdb
         results/pdb_outputs/279C_repeat_1250_7V8B_max_escape.pdb
@@ -537,81 +417,41 @@ for name, specs in output_pdbs_config.items():
         results/pdb_outputs/Delta_8_500_7V8B_max_escape.pdb
         results/pdb_outputs/Delta_8_500_7V8B_norm_total_escape.pdb
         results/pdb_outputs/Delta_8_500_7V8B_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for P02_500 to:
-        results/pdb_outputs/P02_500_7V8B_total_escape.pdb
-        results/pdb_outputs/P02_500_7V8B_max_escape.pdb
-        results/pdb_outputs/P02_500_7V8B_norm_total_escape.pdb
-        results/pdb_outputs/P02_500_7V8B_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for P02_repeat_500 to:
         results/pdb_outputs/P02_repeat_500_7V8B_total_escape.pdb
         results/pdb_outputs/P02_repeat_500_7V8B_max_escape.pdb
         results/pdb_outputs/P02_repeat_500_7V8B_norm_total_escape.pdb
         results/pdb_outputs/P02_repeat_500_7V8B_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for P03_1250 to:
-        results/pdb_outputs/P03_1250_7V8B_total_escape.pdb
-        results/pdb_outputs/P03_1250_7V8B_max_escape.pdb
-        results/pdb_outputs/P03_1250_7V8B_norm_total_escape.pdb
-        results/pdb_outputs/P03_1250_7V8B_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for P03_repeat_1250 to:
         results/pdb_outputs/P03_repeat_1250_7V8B_total_escape.pdb
         results/pdb_outputs/P03_repeat_1250_7V8B_max_escape.pdb
         results/pdb_outputs/P03_repeat_1250_7V8B_norm_total_escape.pdb
         results/pdb_outputs/P03_repeat_1250_7V8B_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for P04_1250 to:
-        results/pdb_outputs/P04_1250_7V8B_total_escape.pdb
-        results/pdb_outputs/P04_1250_7V8B_max_escape.pdb
-        results/pdb_outputs/P04_1250_7V8B_norm_total_escape.pdb
-        results/pdb_outputs/P04_1250_7V8B_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for P04_repeat_1250 to:
         results/pdb_outputs/P04_repeat_1250_7V8B_total_escape.pdb
         results/pdb_outputs/P04_repeat_1250_7V8B_max_escape.pdb
         results/pdb_outputs/P04_repeat_1250_7V8B_norm_total_escape.pdb
         results/pdb_outputs/P04_repeat_1250_7V8B_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for P05_500 to:
-        results/pdb_outputs/P05_500_7V8B_total_escape.pdb
-        results/pdb_outputs/P05_500_7V8B_max_escape.pdb
-        results/pdb_outputs/P05_500_7V8B_norm_total_escape.pdb
-        results/pdb_outputs/P05_500_7V8B_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for P05_repeat_500 to:
         results/pdb_outputs/P05_repeat_500_7V8B_total_escape.pdb
         results/pdb_outputs/P05_repeat_500_7V8B_max_escape.pdb
         results/pdb_outputs/P05_repeat_500_7V8B_norm_total_escape.pdb
         results/pdb_outputs/P05_repeat_500_7V8B_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for P08_500 to:
-        results/pdb_outputs/P08_500_7V8B_total_escape.pdb
-        results/pdb_outputs/P08_500_7V8B_max_escape.pdb
-        results/pdb_outputs/P08_500_7V8B_norm_total_escape.pdb
-        results/pdb_outputs/P08_500_7V8B_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for P08_repeat_500 to:
         results/pdb_outputs/P08_repeat_500_7V8B_total_escape.pdb
         results/pdb_outputs/P08_repeat_500_7V8B_max_escape.pdb
         results/pdb_outputs/P08_repeat_500_7V8B_norm_total_escape.pdb
         results/pdb_outputs/P08_repeat_500_7V8B_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for P09_200 to:
-        results/pdb_outputs/P09_200_7V8B_total_escape.pdb
-        results/pdb_outputs/P09_200_7V8B_max_escape.pdb
-        results/pdb_outputs/P09_200_7V8B_norm_total_escape.pdb
-        results/pdb_outputs/P09_200_7V8B_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for P09_repeat_200 to:
         results/pdb_outputs/P09_repeat_200_7V8B_total_escape.pdb
         results/pdb_outputs/P09_repeat_200_7V8B_max_escape.pdb
         results/pdb_outputs/P09_repeat_200_7V8B_norm_total_escape.pdb
         results/pdb_outputs/P09_repeat_200_7V8B_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for P12_200 to:
-        results/pdb_outputs/P12_200_7V8B_total_escape.pdb
-        results/pdb_outputs/P12_200_7V8B_max_escape.pdb
-        results/pdb_outputs/P12_200_7V8B_norm_total_escape.pdb
-        results/pdb_outputs/P12_200_7V8B_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for P12_repeat_200 to:
         results/pdb_outputs/P12_repeat_200_7V8B_total_escape.pdb
         results/pdb_outputs/P12_repeat_200_7V8B_max_escape.pdb
         results/pdb_outputs/P12_repeat_200_7V8B_norm_total_escape.pdb
         results/pdb_outputs/P12_repeat_200_7V8B_norm_max_escape.pdb
-      Writing B-factor re-assigned PDBs for P14_1250 to:
-        results/pdb_outputs/P14_1250_7V8B_total_escape.pdb
-        results/pdb_outputs/P14_1250_7V8B_max_escape.pdb
-        results/pdb_outputs/P14_1250_7V8B_norm_total_escape.pdb
-        results/pdb_outputs/P14_1250_7V8B_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for P14_repeat_1250 to:
         results/pdb_outputs/P14_repeat_1250_7V8B_total_escape.pdb
         results/pdb_outputs/P14_repeat_1250_7V8B_max_escape.pdb

@@ -109,34 +109,34 @@ display(HTML(escape_fracs.head().to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>267C_200</td>
+      <td>267C_repeat_200</td>
       <td>331</td>
       <td>E</td>
-      <td>0.04972</td>
+      <td>0.05336</td>
     </tr>
     <tr>
-      <td>267C_200</td>
+      <td>267C_repeat_200</td>
       <td>331</td>
       <td>E</td>
-      <td>0.04972</td>
+      <td>0.05336</td>
     </tr>
     <tr>
-      <td>267C_200</td>
+      <td>267C_repeat_200</td>
       <td>331</td>
       <td>E</td>
-      <td>0.04972</td>
+      <td>0.05336</td>
     </tr>
     <tr>
-      <td>267C_200</td>
+      <td>267C_repeat_200</td>
       <td>331</td>
       <td>E</td>
-      <td>0.04972</td>
+      <td>0.05336</td>
     </tr>
     <tr>
-      <td>267C_200</td>
+      <td>267C_repeat_200</td>
       <td>331</td>
       <td>E</td>
-      <td>0.04972</td>
+      <td>0.05336</td>
     </tr>
   </tbody>
 </table>
@@ -201,7 +201,8 @@ for supergroup, subgroup in line_plot_config.items():
         return list(range(start, end + 1, site_break_freq))
 
     # make plot
-    ncol=1
+    ncol=2
+    nrow=math.ceil(df_with_mean['group_name'].nunique()/ncol)
     
     p = (ggplot(df_with_mean
                 .assign(group_name=lambda x: pd.Categorical(x['group_name'], ordered=True,
@@ -227,7 +228,7 @@ for supergroup, subgroup in line_plot_config.items():
          geom_line() +
          facet_wrap('~ group_name', ncol=ncol) +
          theme_classic() +
-         theme(figure_size=(4*ncol, 1.5 * df_with_mean['group_name'].nunique()),
+         theme(figure_size=(4*ncol, 1.5*nrow),
                axis_text_x=element_text(rotation=90, hjust=0.5),
                strip_background=element_blank(),
                ) +
@@ -332,25 +333,25 @@ for supergroup, subgroup in line_plot_config.items():
       Writing B-factor re-assigned PDBs for 2xBNT162b2 to:
         results/lineplots_by_group/2xBNT162b2_6m0j_mean_total_escape.pdb
     
-    Making PDB mappings for the average of 8 conditions for Deltabreakthroughafter2xmRNA to data/pdbs/6M0J.pdb
-    Mapping to the following chain: E
-      Writing B-factor re-assigned PDBs for Deltabreakthroughafter2xmRNA to:
-        results/lineplots_by_group/Deltabreakthroughafter2xmRNA_6m0j_mean_total_escape.pdb
-    
-    Making PDB mappings for the average of 8 conditions for primaryDeltainfection to data/pdbs/6M0J.pdb
-    Mapping to the following chain: E
-      Writing B-factor re-assigned PDBs for primaryDeltainfection to:
-        results/lineplots_by_group/primaryDeltainfection_6m0j_mean_total_escape.pdb
-    
     Making PDB mappings for the average of 22 conditions for 2xmRNA-1273 to data/pdbs/6M0J.pdb
     Mapping to the following chain: E
       Writing B-factor re-assigned PDBs for 2xmRNA-1273 to:
         results/lineplots_by_group/2xmRNA-1273_6m0j_mean_total_escape.pdb
     
+    Making PDB mappings for the average of 8 conditions for Deltabreakthroughafter2xmRNA to data/pdbs/6M0J.pdb
+    Mapping to the following chain: E
+      Writing B-factor re-assigned PDBs for Deltabreakthroughafter2xmRNA to:
+        results/lineplots_by_group/Deltabreakthroughafter2xmRNA_6m0j_mean_total_escape.pdb
+    
     Making PDB mappings for the average of 16 conditions for ancestralinfection to data/pdbs/6M0J.pdb
     Mapping to the following chain: E
       Writing B-factor re-assigned PDBs for ancestralinfection to:
         results/lineplots_by_group/ancestralinfection_6m0j_mean_total_escape.pdb
+    
+    Making PDB mappings for the average of 8 conditions for primaryDeltainfection to data/pdbs/6M0J.pdb
+    Mapping to the following chain: E
+      Writing B-factor re-assigned PDBs for primaryDeltainfection to:
+        results/lineplots_by_group/primaryDeltainfection_6m0j_mean_total_escape.pdb
     
     Making PDB mappings for the average of 9 conditions for primaryBetainfection to data/pdbs/6M0J.pdb
     Mapping to the following chain: E

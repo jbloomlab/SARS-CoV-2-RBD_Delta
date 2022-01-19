@@ -239,7 +239,7 @@ for var, is_reference, lower_clip, upper_clip, desired_min in [
     plt.close(fig)
 ```
 
-    /loc/scratch/46085189/ipykernel_26938/1882431916.py:14: SettingWithCopyWarning: 
+    /loc/scratch/46495075/ipykernel_11923/1882431916.py:14: SettingWithCopyWarning: 
     A value is trying to be set on a copy of a slice from a DataFrame.
     Try using .loc[row_indexer,col_indexer] = value instead
     
@@ -252,7 +252,7 @@ for var, is_reference, lower_clip, upper_clip, desired_min in [
     
 
 
-    /loc/scratch/46085189/ipykernel_26938/1882431916.py:14: SettingWithCopyWarning: 
+    /loc/scratch/46495075/ipykernel_11923/1882431916.py:14: SettingWithCopyWarning: 
     A value is trying to be set on a copy of a slice from a DataFrame.
     Try using .loc[row_indexer,col_indexer] = value instead
     

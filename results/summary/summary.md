@@ -13,6 +13,8 @@ Here is the Markdown output of each notebook in the workflow:
 
 2. Get prior MAPping [escape_fracs](../prior_DMS_data/early2020_escape_fracs.csv) for polyclonal plasmas from early 2020 against the Wuhan-1 RBD library.
 
+3. Get prior DMS mutation-level [binding and expression data](../prior_DMS_data/beta_mutant_ACE2binding_expression.csv) and MAPping [escape_fracs](../prior_DMS_data/beta_escape_fracs.csv) for polyclonal plasmas from Beta infections against the Beta RBD DMS library.
+
 2. [Process PacBio CCSs](process_ccs.md).
 
 3. [Build variants from CCSs](build_variants.md).
@@ -59,3 +61,5 @@ Here is the Markdown output of each notebook in the workflow:
 14. [Analyze GISAID mutations at sites of escape](natural_mutations.md).
 
 15. Make [lineplots by serum group](lineplots_by_group.md).
+
+16. [Multidimensional scaling](mds_escape_profiles.md) on escape profiles.
