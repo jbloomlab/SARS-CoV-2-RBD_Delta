@@ -80,6 +80,7 @@ rule make_summary:
         get_early2020_mut_bind_expr=config['early2020_mut_bind_expr'],
         get_early2020_escape_fracs=config['early2020_escape_fracs'],
         get_beta_escape_fracs=config['beta_escape_fracs'],
+        get_beta_mut_bind_expr=config['beta_mut_bind_expr'],
         bind_expr_filters=nb_markdown('bind_expr_filters.ipynb'),
         process_ccs=nb_markdown('process_ccs.ipynb'),
         build_variants=nb_markdown('build_variants.ipynb'),

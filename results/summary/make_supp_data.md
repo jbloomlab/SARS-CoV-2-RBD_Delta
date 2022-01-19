@@ -395,75 +395,75 @@ display(HTML(dms_view_df.head().to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>267C_200</td>
+      <td>267C_repeat_200</td>
       <td>1</td>
       <td>331</td>
       <td>N</td>
       <td>A</td>
       <td>331</td>
-      <td>0.000980</td>
-      <td>0.04972</td>
-      <td>0.008071</td>
+      <td>0.003015</td>
+      <td>0.05336</td>
+      <td>0.00516</td>
       <td>#662505</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>267C_200</td>
+      <td>267C_repeat_200</td>
       <td>1</td>
       <td>331</td>
       <td>N</td>
       <td>C</td>
       <td>331</td>
-      <td>0.001776</td>
-      <td>0.04972</td>
-      <td>0.008071</td>
+      <td>0.003249</td>
+      <td>0.05336</td>
+      <td>0.00516</td>
       <td>#772a05</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>267C_200</td>
+      <td>267C_repeat_200</td>
       <td>1</td>
       <td>331</td>
       <td>N</td>
       <td>D</td>
       <td>331</td>
-      <td>0.001094</td>
-      <td>0.04972</td>
-      <td>0.008071</td>
+      <td>0.001829</td>
+      <td>0.05336</td>
+      <td>0.00516</td>
       <td>#7a2b05</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>267C_200</td>
+      <td>267C_repeat_200</td>
       <td>1</td>
       <td>331</td>
       <td>N</td>
       <td>E</td>
       <td>331</td>
-      <td>0.001751</td>
-      <td>0.04972</td>
-      <td>0.008071</td>
+      <td>0.004172</td>
+      <td>0.05336</td>
+      <td>0.00516</td>
       <td>#662505</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>267C_200</td>
+      <td>267C_repeat_200</td>
       <td>1</td>
       <td>331</td>
       <td>N</td>
       <td>F</td>
       <td>331</td>
-      <td>0.004506</td>
-      <td>0.04972</td>
-      <td>0.008071</td>
+      <td>0.001581</td>
+      <td>0.05336</td>
+      <td>0.00516</td>
       <td>#6f2705</td>
       <td>NaN</td>
       <td>NaN</td>
