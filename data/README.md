@@ -43,7 +43,7 @@ These files are used for visualizing the antibody- or serum-escape data:
 
   - [escape_profiles_config.yaml](escape_profiles_config.yaml): Information on how to plot the escape profiles; manually edit this to alter their plotting.
 
-  - [early2020_escape_profiles_config.yaml](early2020_escape_profiles_config.yaml): Same as above, but for early2020 mapping data (as noted in ../config.yaml, the early2020_escape_fracs are imported from the Moderna repo). 
+  - [early2020_escape_profiles_config.yaml](early2020_escape_profiles_config.yaml): Same as above, but for early2020 mapping data (as noted in ../config.yaml, the early2020_escape_fracs are imported from the Moderna repo).
 
   - [lineplots_config.yaml](lineplots_config.yaml): Config file for making line plots to compare serum-escape scores between cohorts.
 
@@ -54,6 +54,8 @@ These files are used for visualizing the antibody- or serum-escape data:
   - [mds_config.yaml](mds_config.yaml): Config file for making MDS plot to compare serum-escape scores between cohorts, with monoclonal antibodies serving as anchors.
 
   - [mds_color_schemes.csv](mds_color_schemes.csv): Color scheme designation for MDS plots.
+
+  - [aggregate_escape_scores_metadata.csv](aggregate_escape_scores_metadata.csv): contains information to add to escape scores to make supplementary file with all escape scores from all studies reanalyzed here.
 
 ## PDB files in [pdbs](pdbs/) subdirectory
 
