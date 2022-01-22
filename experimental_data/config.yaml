@@ -30,18 +30,27 @@ depletions_NT50_LOD:
   early 2020 infection: 20
 
 depletion_subsets:
+  # primary_infections:
+  #   early 2020 infection D614G spike: "early 2020\ninfection\n(D614G spike)"
+  #   primary Beta infection Beta spike: "primary\nBeta infection\n(Beta spike)"
+  #   primary Delta infection Delta spike: "primary\nDelta infection\n(Delta spike)"
   vax_vs_infection:
-    2x BNT162b2 D614G spike: "2x\nBNT162b2\n(D614G spike)"
-    2x mRNA-1273 D614G spike: "2x\nmRNA-1273\n(D614G spike)"
     early 2020 infection D614G spike: "early 2020\ninfection\n(D614G spike)"
     primary Beta infection Beta spike: "primary\nBeta infection\n(Beta spike)"
     primary Delta infection Delta spike: "primary\nDelta infection\n(Delta spike)"
-  breakthrough:
+    2x BNT162b2 D614G spike: "2x\nBNT162b2\n(D614G spike)"
+    2x mRNA-1273 D614G spike: "2x\nmRNA-1273\n(D614G spike)"
+  effect_of_breakthrough:
+    2x BNT162b2 D614G spike: "2x\nBNT162b2\n(D614G spike)"
     Delta breakthrough D614G spike: "Delta\nbreakthrough\nafter 2x mRNA\n(D614G spike)"
+    2x BNT162b2 Delta spike: "2x\nBNT162b2\n(Delta spike)"
     Delta breakthrough Delta spike: "Delta\nbreakthrough\nafter 2x mRNA\n(Delta spike)"
-  mix_match:
-    2x BNT162b2 Delta spike: "2x BNT162b2\n(Delta spike)"
-    primary Delta infection D614G spike: "primary\nDelta infection\n(D614G spike)"
+  # breakthrough:
+  #   Delta breakthrough D614G spike: "Delta\nbreakthrough\nafter 2x mRNA\n(D614G spike)"
+  #   Delta breakthrough Delta spike: "Delta\nbreakthrough\nafter 2x mRNA\n(Delta spike)"
+  # mix_match:
+  #   2x BNT162b2 Delta spike: "2x BNT162b2\n(Delta spike)"
+  #   primary Delta infection D614G spike: "primary\nDelta infection\n(D614G spike)"
   heterologous:
     2x BNT162b2 Delta dep x D614G PV spike: "2x\nBNT162b2\nDelta RBD Abs dep\n(D614G PV)"
     Delta breakthrough Delta dep x D614G PV spike: "Delta breakthrough\nDelta RBD Abs dep\n(D614G PV)"
