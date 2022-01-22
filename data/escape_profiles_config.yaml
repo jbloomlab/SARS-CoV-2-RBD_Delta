@@ -32,7 +32,7 @@
 #   dmslogo_draw_logo_kwargs -> any keyword arguments to dmslogo.draw_logo
 #   dmslogo_draw_line_kwargs -> any keyword arguments to dmslogo.draw_line
 
-Delta_breakthrough_repeat:
+Delta_breakthrough:
   conditions:
     267C_repeat_200: 267C
     268C_repeat_500: 268C
@@ -42,8 +42,9 @@ Delta_breakthrough_repeat:
     277C_repeat_500: 277C
     278C_repeat_1250: 278C
     279C_repeat_1250: 279C
-  plot_auto_identified_sites: sensitive
-  add_sites: [346,365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,472,477,478,484,494,501]
+  plot_auto_identified_sites: default # sensitive
+  # add_sites: [346,365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,472,477,478,484,494,501]
+  add_sites: [417,452,477,478,484,501]
   exclude_sites: [336, 361]
   site_color_scheme: barnes_serum_epitopes
   color_by_dms: True
@@ -69,7 +70,7 @@ Delta_breakthrough_repeat:
     label_minescape: 2
     label_minfreq: 5e-5
 
-Pfizer_repeat:
+Pfizer:
   conditions:
     P02_repeat_500: P02
     P03_repeat_1250: P03
@@ -79,8 +80,9 @@ Pfizer_repeat:
     P09_repeat_200: P09
     P12_repeat_200: P12
     P14_repeat_1250: P14
-  plot_auto_identified_sites: sensitive
-  add_sites: [346,365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,472,477,478,484,494,501]
+  plot_auto_identified_sites: default # sensitive
+  add_sites: [417,452,477,478,484,501]
+  # add_sites: [346,365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,472,477,478,484,494,501]
   exclude_sites: [336, 361]
   site_color_scheme: barnes_serum_epitopes
   color_by_dms: True
@@ -106,28 +108,28 @@ Pfizer_repeat:
     label_minescape: 2
     label_minfreq: 5e-5
 
-Pfizer_choose_sites:
-  conditions:
-    P02_repeat_500: P02
-    P03_repeat_1250: P03
-    P04_repeat_1250: P04
-    P05_repeat_500: P05
-    P08_repeat_500: P08
-    P09_repeat_200: P09
-    P12_repeat_200: P12
-    P14_repeat_1250: P14
-  plot_auto_identified_sites: false
-  add_sites: [383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,472,477,478,484,494,501]
-  exclude_sites: [336, 361]
-  site_color_scheme: barnes_serum_epitopes
-  dmslogo_facet_plot_kwargs:
-    height_per_ax: 2.0
-  dmslogo_draw_line_kwargs:
-    widthscale: 0.5
-    axisfontscale: 1.5
-  dmslogo_draw_logo_kwargs:
-    widthscale: 0.75
-    axisfontscale: 1.5
+# Pfizer_choose_sites:
+#   conditions:
+#     P02_repeat_500: P02
+#     P03_repeat_1250: P03
+#     P04_repeat_1250: P04
+#     P05_repeat_500: P05
+#     P08_repeat_500: P08
+#     P09_repeat_200: P09
+#     P12_repeat_200: P12
+#     P14_repeat_1250: P14
+#   plot_auto_identified_sites: false
+#   add_sites: [383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,472,477,478,484,494,501]
+#   exclude_sites: [336, 361]
+#   site_color_scheme: barnes_serum_epitopes
+#   dmslogo_facet_plot_kwargs:
+#     height_per_ax: 2.0
+#   dmslogo_draw_line_kwargs:
+#     widthscale: 0.5
+#     axisfontscale: 1.5
+#   dmslogo_draw_logo_kwargs:
+#     widthscale: 0.75
+#     axisfontscale: 1.5
 
 primary_Delta:
   conditions:
@@ -139,8 +141,9 @@ primary_Delta:
     Delta_8_500: Delta 8
     Delta_10_1250: Delta 10
     Delta_11_500: Delta 11
-  plot_auto_identified_sites: sensitive
-  add_sites: [346,365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,472,477,478,484,494,501]
+  plot_auto_identified_sites: default # sensitive
+  # add_sites: [346,365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,472,477,478,484,494,501]
+  add_sites: [417,452,477,478,484,501]
   exclude_sites: [336, 361]
   site_color_scheme: barnes_serum_epitopes
   color_by_dms: True
@@ -192,8 +195,9 @@ all_Delta_lib:
     Delta_8_500: Delta 8
     Delta_10_1250: Delta 10
     Delta_11_500: Delta 11
-  plot_auto_identified_sites: sensitive
-  add_sites: [346,365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,472,477,478,484,494,501]
+  plot_auto_identified_sites: default # sensitive
+  add_sites: [417,452,477,478,484,501]
+  # add_sites: [346,365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,472,477,478,484,494,501]
   exclude_sites: [336, 361]
   site_color_scheme: barnes_serum_epitopes
   color_by_dms: True

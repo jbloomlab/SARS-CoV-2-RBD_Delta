@@ -1,0 +1,94 @@
+﻿condition,name,class
+P02_repeat_500,P02,2x BNT162b2
+P03_repeat_1250,P03,2x BNT162b2
+P04_repeat_1250,P04,2x BNT162b2
+P05_repeat_500,P05,2x BNT162b2
+P08_repeat_500,P08,2x BNT162b2
+P09_repeat_200,P09,2x BNT162b2
+P12_repeat_200,P12,2x BNT162b2
+P14_repeat_1250,P14,2x BNT162b2
+M02-day-119_200,M02-day-119,2x mRNA-1273
+M05-day-119_500,M05-day-119,2x mRNA-1273
+M08-day-119_200,M08-day-119,2x mRNA-1273
+M10-day-119_200,M10-day-119,2x mRNA-1273
+M12-day-119_200,M12-day-119,2x mRNA-1273
+M16-day-119_1250,M16-day-119,2x mRNA-1273
+M17-day-119_200,M17-day-119,2x mRNA-1273
+M18-day-119_80,M18-day-119,2x mRNA-1273
+M19-day-119_200,M19-day-119,2x mRNA-1273
+M01-day-119_80,M01-day-119,2x mRNA-1273
+M03-day-119_200,M03-day-119,2x mRNA-1273
+M04-day-119_200,M04-day-119,2x mRNA-1273
+M06-day-119_80,M06-day-119,2x mRNA-1273
+M07-day-119_200,M07-day-119,2x mRNA-1273
+M09-day-119_500,M09-day-119,2x mRNA-1273
+M11-day-119_200,M11-day-119,2x mRNA-1273
+M13-day-119_200,M13-day-119,2x mRNA-1273
+M14-day-119_500,M14-day-119,2x mRNA-1273
+M20-day-119_200,M20-day-119,2x mRNA-1273
+M21-day-119_200,M21-day-119,2x mRNA-1273
+M22-day-119_200,M22-day-119,2x mRNA-1273
+M23-day-119_200,M23-day-119,2x mRNA-1273
+23_d21_1250,participant A (day 21),early 2020 infection
+1C_d26_200,participant B (day 26),early 2020 infection
+24C_d32_200,participant C (day 32),early 2020 infection
+6C_d33_500,participant D (day 33),early 2020 infection
+22C_d28_200,participant E (day 28),early 2020 infection
+25C_d48_200,participant F (day 48),early 2020 infection
+25_d18_500,participant G (day 18),early 2020 infection
+12C_d61_160,participant H (day 61),early 2020 infection
+23C_d26_80,participant I (day 26),early 2020 infection
+13_d15_200,participant J (day 15),early 2020 infection
+7C_d29_500,participant K (day 29),early 2020 infection
+COV-021_500,COV-021,early 2020 infection
+COV-047_200,COV-047,early 2020 infection
+COV-057_50,COV-057_50,early 2020 infection
+COV-072_200,COV-072,early 2020 infection
+COV-107_80,COV-107,early 2020 infection
+C105_400,C105,class 1
+CB6_400,LY-CoV016,class 1
+COV2-2165_400,COV2-2165,class 1
+COV2-2196_400,COV2-2196,class 1
+COV2-2832_400,COV2-2832,class 1
+REGN10933_400,REGN10933,class 1
+C002_400,C002,class 2
+C121_400,C121,class 2
+C144_400,C144,class 2
+COV2-2479_400,COV2-2479,class 2
+LY-CoV555_400,LY-CoV555,class 2
+COV2-2050_400,COV2-2050,class 2 
+C110_400,C110,class 3
+C135_400,C135,class 3
+COV2-2096_400,COV2-2096,class 3
+COV2-2130_400,COV2-2130,class 3
+COV2-2499_400,COV2-2499,class 3
+REGN10987_400,REGN10987,class 3
+COV2-2082_400,COV2-2082,class 4
+COV2-2094_400,COV2-2094,class 4
+COV2-2677_400,COV2-2677,class 4
+CR3022_400,CR3022,class 4
+267C_repeat_200,267C,Delta breakthrough
+268C_repeat_500,268C,Delta breakthrough
+273C_repeat_500,273C,Delta breakthrough
+274C_repeat_500,274C,Delta breakthrough
+276C_repeat_500,276C,Delta breakthrough
+277C_repeat_500,277C,Delta breakthrough
+278C_repeat_1250,278C,Delta breakthrough
+279C_repeat_1250,279C,Delta breakthrough
+Delta_1_500,Delta 1,primary Delta infection
+Delta_3_350,Delta 3,primary Delta infection
+Delta_4_350,Delta 4,primary Delta infection
+Delta_6_500,Delta 6,primary Delta infection
+Delta_7_1250,Delta 7,primary Delta infection
+Delta_8_500,Delta 8,primary Delta infection
+Delta_10_1250,Delta 10,primary Delta infection
+Delta_11_500,Delta 11,primary Delta infection
+K007_500,K007,Beta infection
+K031_500,K031,Beta infection
+K033_500,K033,Beta infection
+K040_500,K040,Beta infection
+K041_500,K041,Beta infection
+K046_200,K046,Beta infection
+K114_200,K114,Beta infection
+K115_old_80,K115,Beta infection
+K119_200,K119,Beta infection

@@ -27,13 +27,13 @@ depletions_NT50_LOD:
   2x BNT162b2: 25
   2x mRNA-1273: 25
   primary Beta infection: 25
-  ancestral infection: 20
+  early 2020 infection: 20
 
 depletion_subsets:
   vax_vs_infection:
     2x BNT162b2 D614G spike: "2x\nBNT162b2\n(D614G spike)"
     2x mRNA-1273 D614G spike: "2x\nmRNA-1273\n(D614G spike)"
-    ancestral infection D614G spike: "ancestral\ninfection\n(D614G spike)"
+    early 2020 infection D614G spike: "early 2020\ninfection\n(D614G spike)"
     primary Beta infection Beta spike: "primary\nBeta infection\n(Beta spike)"
     primary Delta infection Delta spike: "primary\nDelta infection\n(Delta spike)"
   breakthrough:
@@ -129,8 +129,8 @@ combined_plot_group_order:
   Delta breakthrough: "Delta\nbreakthrough\nafter 2x mRNA"
   primary Delta infection: "primary Delta\ninfection"
   2x mRNA-1273 (day 100-150): "2x mRNA-1273\n(day 100-150)"
-  ancestral infection (day 30-60): "ancestral infection\n(day 30-60)"
-  ancestral infection (day 100-150): "ancestral infection\n(day 100-150)"
+  early 2020 infection (day 30-60): "early 2020 infection\n(day 30-60)"
+  early 2020 infection (day 100-150): "early 2020 infection\n(day 100-150)"
 
 combined_plot_background_order:
   - Delta background

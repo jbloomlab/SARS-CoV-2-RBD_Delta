@@ -157,11 +157,19 @@ escape_frac_files: # give the keys here
   - early2020_escape_fracs
   - beta_escape_fracs
 
+escape_frac_libraries:
+  escape_fracs: Delta
+  early2020_escape_fracs: Wuhan-Hu-1
+  beta_escape_fracs: Beta
+
 # config for making summary line plots by group
 lineplots_by_group_config: data/lineplots_config.yaml
 
 # multidimensional scaling configuration
 mds_config: data/mds_config.yaml
+
+# file with metadata for aggregating escape escape scores
+aggregate_escape_scores_metadata_file: data/aggregate_escape_scores_metadata.csv
 
 # output directories / files
 summary_dir: results/summary
@@ -208,3 +216,4 @@ gisaid_mutations_dir: results/GISAID_mutations
 rbd_alignment: results/GISAID_mutations/RBD_alignment.fasta
 gisaid_mutation_counts: results/GISAID_mutations/mutation_counts.csv
 mds_dir: results/multidimensional_scaling
+aggregate_escape_scores_file: results/supp_data/aggregate_raw_data.csv

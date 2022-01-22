@@ -63,3 +63,5 @@ Here is the Markdown output of each notebook in the workflow:
 15. Make [lineplots by serum group](lineplots_by_group.md).
 
 16. [Multidimensional scaling](mds_escape_profiles.md) on escape profiles.
+
+17. Aggregate escape scores from all studies and all DMS libraries and output to a [supplementary file](../supp_data/aggregate_raw_data.csv).

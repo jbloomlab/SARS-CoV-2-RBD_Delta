@@ -111,6 +111,7 @@ rule make_summary:
         gisaid_rbd_mutations=nb_markdown('gisaid_rbd_mutations.ipynb'),
         gisaid_mutation_counts=config['gisaid_mutation_counts'],
         natural_mutations=nb_markdown('natural_mutations.ipynb'),
+        aggregate_escape_scores_file=config['aggregate_escape_scores_file'],
     output:
         summary = os.path.join(config['summary_dir'], 'summary.md')
     run:
@@ -185,6 +186,8 @@ rule make_summary:
 
             16. [Multidimensional scaling]({path(input.mds_escape_profiles)}) on escape profiles.
 
+            17. Aggregate escape scores from all studies and all DMS libraries and output to a [supplementary file]({path(input.aggregate_escape_scores_file)}).
+
             """
             ).strip())
 
@@ -196,6 +199,19 @@ rule make_rulegraph:
         os.path.join(config['summary_dir'], 'rulegraph.svg')
     shell:
         "snakemake --forceall --rulegraph | dot -Tsvg > {output}"
+
+rule aggregate_escape_scores:
+    input:
+        config['early2020_escape_fracs'],
+        config['beta_escape_fracs'],
+        config['escape_fracs'],
+    output:
+        config['aggregate_escape_scores_file'],
+        nb_markdown=nb_markdown('aggregate_escape_scores.ipynb'),
+    params:
+        nb='aggregate_escape_scores.ipynb'
+    shell:
+        "python scripts/run_nb.py {params.nb} {output.nb_markdown}"
 
 rule natural_mutations:
     input:
@@ -260,7 +276,7 @@ rule make_supp_data:
         config['escape_profiles_dms_colors']
     output:
         nb_markdown=nb_markdown('make_supp_data.ipynb'),
-        outdir=directory(config['supp_data_dir']),
+        # outdir=directory(config['supp_data_dir']),
     params:
         nb='make_supp_data.ipynb'
     shell:
