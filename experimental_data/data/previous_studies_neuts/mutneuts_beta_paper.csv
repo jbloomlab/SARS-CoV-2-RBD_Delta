@@ -1,21 +1,21 @@
 ﻿serum,virus,ic50,NT50,date,ic50_is_bound,sample_type,early_late
-participant A (day 21),D614G + E484K,0.000444016,2252.169634,8/26/21,FALSE,ancestral infection (day 30-60),day 30-60
-participant A (day 21),D614G + K417N,0.00021378,4677.701243,8/26/21,FALSE,ancestral infection (day 30-60),day 30-60
-participant A (day 21),D614G,0.000225208,4440.347675,8/26/21,FALSE,ancestral infection (day 30-60),day 30-60
-participant C (day 32),D614G + E484K,0.013028522,76.75467972,8/26/21,FALSE,ancestral infection (day 30-60),day 30-60
-participant C (day 32),D614G + K417N,0.000139192,7184.324765,8/26/21,FALSE,ancestral infection (day 30-60),day 30-60
-participant C (day 32),D614G,0.000103511,9660.779729,8/26/21,FALSE,ancestral infection (day 30-60),day 30-60
-participant I (day 26),D614G + E484K,0.04,25,8/26/21,TRUE,ancestral infection (day 30-60),day 30-60
-participant I (day 26),D614G + K417N,0.003344971,298.9562199,8/26/21,FALSE,ancestral infection (day 30-60),day 30-60
-participant I (day 26),D614G,0.002704139,369.8034109,8/26/21,FALSE,ancestral infection (day 30-60),day 30-60
-participant B (day 26),D614G + E484K,0.024156224,41.39719886,8/26/21,FALSE,ancestral infection (day 30-60),day 30-60
-participant B (day 26),D614G + K417N,0.000419577,2383.354109,8/26/21,FALSE,ancestral infection (day 30-60),day 30-60
-participant B (day 26),D614G,0.000567676,1761.567901,8/26/21,FALSE,ancestral infection (day 30-60),day 30-60
-participant A (day 21),D614G RBD Abs depleted (x D614G PV),0.001183227,845.1464066,late2020,FALSE,ancestral infection (day 30-60),day 30-60
-participant A (day 21),D614G,0.000145323,6881.22457,late2020,FALSE,ancestral infection (day 30-60),day 30-60
-participant B (day 26),D614G RBD Abs depleted (x D614G PV),0.007345555,136.1367557,late2020,FALSE,ancestral infection (day 30-60),day 30-60
-participant B (day 26),D614G,0.000639616,1563.437255,late2020,FALSE,ancestral infection (day 30-60),day 30-60
-participant C (day 32),D614G RBD Abs depleted (x D614G PV),0.036028029,27.75616712,late2020,FALSE,ancestral infection (day 30-60),day 30-60
-participant C (day 32),D614G,0.000287381,3479.699831,late2020,FALSE,ancestral infection (day 30-60),day 30-60
-participant I (day 26),D614G RBD Abs depleted (x D614G PV),0.046926114,21.31009625,late2020,FALSE,ancestral infection (day 30-60),day 30-60
-participant I (day 26),D614G,0.00713024,140.2477274,late2020,FALSE,ancestral infection (day 30-60),day 30-60
+participant A (day 21),D614G + E484K,0.000444016,2252.169634,8/26/21,FALSE,early 2020 infection (day 30-60),day 30-60
+participant A (day 21),D614G + K417N,0.00021378,4677.701243,8/26/21,FALSE,early 2020 infection (day 30-60),day 30-60
+participant A (day 21),D614G,0.000225208,4440.347675,8/26/21,FALSE,early 2020 infection (day 30-60),day 30-60
+participant C (day 32),D614G + E484K,0.013028522,76.75467972,8/26/21,FALSE,early 2020 infection (day 30-60),day 30-60
+participant C (day 32),D614G + K417N,0.000139192,7184.324765,8/26/21,FALSE,early 2020 infection (day 30-60),day 30-60
+participant C (day 32),D614G,0.000103511,9660.779729,8/26/21,FALSE,early 2020 infection (day 30-60),day 30-60
+participant I (day 26),D614G + E484K,0.04,25,8/26/21,TRUE,early 2020 infection (day 30-60),day 30-60
+participant I (day 26),D614G + K417N,0.003344971,298.9562199,8/26/21,FALSE,early 2020 infection (day 30-60),day 30-60
+participant I (day 26),D614G,0.002704139,369.8034109,8/26/21,FALSE,early 2020 infection (day 30-60),day 30-60
+participant B (day 26),D614G + E484K,0.024156224,41.39719886,8/26/21,FALSE,early 2020 infection (day 30-60),day 30-60
+participant B (day 26),D614G + K417N,0.000419577,2383.354109,8/26/21,FALSE,early 2020 infection (day 30-60),day 30-60
+participant B (day 26),D614G,0.000567676,1761.567901,8/26/21,FALSE,early 2020 infection (day 30-60),day 30-60
+participant A (day 21),D614G RBD Abs depleted (x D614G PV),0.001183227,845.1464066,late2020,FALSE,early 2020 infection (day 30-60),day 30-60
+participant A (day 21),D614G,0.000145323,6881.22457,late2020,FALSE,early 2020 infection (day 30-60),day 30-60
+participant B (day 26),D614G RBD Abs depleted (x D614G PV),0.007345555,136.1367557,late2020,FALSE,early 2020 infection (day 30-60),day 30-60
+participant B (day 26),D614G,0.000639616,1563.437255,late2020,FALSE,early 2020 infection (day 30-60),day 30-60
+participant C (day 32),D614G RBD Abs depleted (x D614G PV),0.036028029,27.75616712,late2020,FALSE,early 2020 infection (day 30-60),day 30-60
+participant C (day 32),D614G,0.000287381,3479.699831,late2020,FALSE,early 2020 infection (day 30-60),day 30-60
+participant I (day 26),D614G RBD Abs depleted (x D614G PV),0.046926114,21.31009625,late2020,FALSE,early 2020 infection (day 30-60),day 30-60
+participant I (day 26),D614G,0.00713024,140.2477274,late2020,FALSE,early 2020 infection (day 30-60),day 30-60
