@@ -870,11 +870,23 @@ for subset in config['depletion_subsets']:
     df = (combined_df
           .query('sample_type_spike.isin(@samples)')
           .replace(rename_samples)
+          .assign(sample_type_spike=lambda x: 
+                  pd.Categorical(x['sample_type_spike'], 
+                                 ordered=True,
+                                 categories=rename_samples.values()
+                                )
+                 )
          )
     
     LOD_df = (depletions_NT50_LOD
               .query('sample_type_spike.isin(@samples)')
               .replace(rename_samples)
+              .assign(sample_type_spike=lambda x: 
+                  pd.Categorical(x['sample_type_spike'], 
+                                 ordered=True,
+                                 categories=rename_samples.values()
+                                )
+                 )
              )
     # display(HTML(df.head(1).to_html(index=False)))
     
@@ -906,10 +918,8 @@ for subset in config['depletion_subsets']:
 
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 8.75 x 2 in image.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:722: PlotnineWarning: Filename: results/rbd_depletion_neuts/compare_vax_vs_infection.pdf
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 3.5 x 2 in image.
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:722: PlotnineWarning: Filename: results/rbd_depletion_neuts/compare_breakthrough.pdf
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 3.5 x 2 in image.
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:722: PlotnineWarning: Filename: results/rbd_depletion_neuts/compare_mix_match.pdf
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 7.0 x 2 in image.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:722: PlotnineWarning: Filename: results/rbd_depletion_neuts/compare_effect_of_breakthrough.pdf
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:719: PlotnineWarning: Saving 5.25 x 2 in image.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/ggplot.py:722: PlotnineWarning: Filename: results/rbd_depletion_neuts/compare_heterologous.pdf
 
@@ -929,12 +939,6 @@ for subset in config['depletion_subsets']:
 
     
 ![png](rbd_depletion_neuts_files/rbd_depletion_neuts_29_3.png)
-    
-
-
-
-    
-![png](rbd_depletion_neuts_files/rbd_depletion_neuts_29_4.png)
     
 
 
