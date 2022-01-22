@@ -161,10 +161,10 @@ for supergroup, subgroup in line_plot_config.items():
         
         lineplot_df = (pd.concat([lineplot_df,df], axis=0, ignore_index=True))
 
-        label_df = (pd.DataFrame({'xmin': [382,482,454,442,416],
-                                 'xmax': [387,487,457,451,418],
-                                 'antibody_class': ['class 4', 'class 2', 'class 1', 'class 3', 'class 1'],
-                                 'label': ['383-386','483-486','455-456','443-450','417'],
+        label_df = (pd.DataFrame({'xmin': [382,482,454,442,416,471,474,498],
+                                 'xmax': [409,495,457,451,418,473,479,503],
+                                 'antibody_class': ['class 4', 'class 2', 'class 1', 'class 3', 'class 1','class 2','class 1','class 3'],
+                                 'label': ['383-408','483-494','455-456','443-450','417','472','475-478','499-501'],
                                 }
                                )
                     .assign(group_name=name,)
@@ -201,7 +201,8 @@ for supergroup, subgroup in line_plot_config.items():
         return list(range(start, end + 1, site_break_freq))
 
     # make plot
-    ncol=2
+    # have up to 5 plots in one column, otherwise split into 2 columns
+    ncol=math.ceil(df_with_mean['group_name'].nunique()/5)
     nrow=math.ceil(df_with_mean['group_name'].nunique()/ncol)
     
     p = (ggplot(df_with_mean
@@ -221,19 +222,19 @@ for supergroup, subgroup in line_plot_config.items():
                                ymax=np.inf,
                                fill='antibody_class',
                               ),
-                   alpha=0.75,
+                   alpha=0.25,
                    inherit_aes=False,
                   ) +
 
          geom_line() +
-         facet_wrap('~ group_name', ncol=ncol) +
+         facet_wrap('~ group_name', ncol=ncol, scales='free_y') +
          theme_classic() +
          theme(figure_size=(4*ncol, 1.5*nrow),
                axis_text_x=element_text(rotation=90, hjust=0.5),
                strip_background=element_blank(),
                ) +
          scale_x_continuous(expand=(0, 0), breaks=get_site_breaks) +
-         scale_y_continuous(limits=(None, (df_with_mean.query('is_mean')['site_escape'].max()*1.5))) +
+         scale_y_continuous(limits=(None, (df_with_mean.query('is_mean')['site_escape'].max()*1.1))) +
          scale_alpha_discrete(range=(0.25, 1)) +  # transparency of individual and mean lines
          scale_size_manual(values=(0.25, 0.5)) +  # size of individual and mean lines
          scale_color_manual(values=['#e52794', '#6a0dad', '#66ccee', '#E69F00']) +
@@ -254,15 +255,53 @@ for supergroup, subgroup in line_plot_config.items():
     _ = p.draw()
 ```
 
+    Saving to results/lineplots_by_group/primary_infections_grouped_lineplots.pdf
+
+
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/scales/scale_alpha.py:68: PlotnineWarning: Using alpha for a discrete variable is not advised.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/scales/scale_alpha.py:68: PlotnineWarning: Using alpha for a discrete variable is not advised.
+
+
+    Saving to results/lineplots_by_group/Delta_primary_v_breakthrough_grouped_lineplots.pdf
+
+
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/scales/scale_alpha.py:68: PlotnineWarning: Using alpha for a discrete variable is not advised.
+
+
+    Saving to results/lineplots_by_group/mRNAvax_comparelibs_grouped_lineplots.pdf
+
+
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/scales/scale_alpha.py:68: PlotnineWarning: Using alpha for a discrete variable is not advised.
 
 
     Saving to results/lineplots_by_group/all_day30_grouped_lineplots.pdf
 
 
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/facets/facet.py:390: PlotnineWarning: If you need more space for the x-axis tick text use ... + theme(subplots_adjust={'wspace': 0.25}). Choose an appropriate value for 'wspace'.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/facets/facet.py:390: PlotnineWarning: If you need more space for the x-axis tick text use ... + theme(subplots_adjust={'wspace': 0.25}). Choose an appropriate value for 'wspace'.
+
+
 
     
-![png](lineplots_by_group_files/lineplots_by_group_8_2.png)
+![png](lineplots_by_group_files/lineplots_by_group_8_8.png)
+    
+
+
+
+    
+![png](lineplots_by_group_files/lineplots_by_group_8_9.png)
+    
+
+
+
+    
+![png](lineplots_by_group_files/lineplots_by_group_8_10.png)
+    
+
+
+
+    
+![png](lineplots_by_group_files/lineplots_by_group_8_11.png)
     
 
 
@@ -279,6 +318,10 @@ assert os.path.isfile(pdbfile)
 rbd_chain = config['escape_frac_protein_chain']
 assert isinstance(rbd_chain, str)
 
+# since we are plotting each group multiple times
+# make sure we don't waste time replotting the same group repeatedly
+plots_made = []
+
 for supergroup, subgroup in line_plot_config.items():
 
     for name, conditions in subgroup.items():
@@ -287,76 +330,79 @@ for supergroup, subgroup in line_plot_config.items():
         name=name.replace(' ', '')
         name=re.search(r"^[^\(]*", name).group(0)
         
-        print(f"\nMaking PDB mappings for the average of {len(conditions)} conditions for {name} to {pdbfile}")
+        if name not in plots_made:
+            plots_made.append(name)
 
-        # get escape fracs just for conditions of interest
-        df = escape_fracs.query('condition in @conditions')
+            print(f"\nMaking PDB mappings for the average of {len(conditions)} conditions for {name} to {pdbfile}")
 
-        # assign average total_escape at each site across all the conditions in ab_class
-        df = (df
-              .groupby(['site'])
-              .aggregate(mean_total_escape=pd.NamedAgg('site_escape', 'mean'),
-                          )
-              .reset_index()
-              .drop_duplicates()
-             )
+            # get escape fracs just for conditions of interest
+            df = escape_fracs.query('condition in @conditions')
 
-        # get chains
-        print(f'Mapping to the following chain: {rbd_chain}')
-        df = df.assign(chain=rbd_chain)
+            # assign average total_escape at each site across all the conditions in ab_class
+            df = (df
+                  .groupby(['site'])
+                  .aggregate(mean_total_escape=pd.NamedAgg('site_escape', 'mean'),
+                              )
+                  .reset_index()
+                  .drop_duplicates()
+                 )
+
+            # get chains
+            print(f'Mapping to the following chain: {rbd_chain}')
+            df = df.assign(chain=rbd_chain)
 
 
-        # make mappings for each condition and metric
-        print(f"  Writing B-factor re-assigned PDBs for {name} to:")
+            # make mappings for each condition and metric
+            print(f"  Writing B-factor re-assigned PDBs for {name} to:")
 
-        for metric in ['mean_total_escape']: # keeping this as list because we might need to normalize
+            for metric in ['mean_total_escape']: # keeping this as list because we might need to normalize
 
-            # what do we assign to missing sites?
-            missing_metric = collections.defaultdict(lambda: 0)  # non-RBD chains always fill to zero
-            
-            # note that the next line DOESN'T ACTUALLY WORK AS INTENDED because I'm using padded escape fracs
-            missing_metric[rbd_chain] = -1  # missing sites in RBD are -1 for non-normalized metric PDBs
+                # what do we assign to missing sites?
+                missing_metric = collections.defaultdict(lambda: 0)  # non-RBD chains always fill to zero
 
-            fname = os.path.join(results_dir, f"{name}_6m0j_{metric}.pdb")
-            print(f"    {fname}")
+                # note that the next line DOESN'T ACTUALLY WORK AS INTENDED because I'm using padded escape fracs
+                missing_metric[rbd_chain] = -1  # missing sites in RBD are -1 for non-normalized metric PDBs
 
-            dms_variants.pdb_utils.reassign_b_factor(input_pdbfile=pdbfile,
-                                                     output_pdbfile=fname,
-                                                     df=df,
-                                                     metric_col=metric,
-                                                     missing_metric=missing_metric)
+                fname = os.path.join(results_dir, f"{name}_6m0j_{metric}.pdb")
+                print(f"    {fname}")
+
+                dms_variants.pdb_utils.reassign_b_factor(input_pdbfile=pdbfile,
+                                                         output_pdbfile=fname,
+                                                         df=df,
+                                                         metric_col=metric,
+                                                         missing_metric=missing_metric)
 ```
 
     
-    Making PDB mappings for the average of 8 conditions for 2xBNT162b2 to data/pdbs/6M0J.pdb
+    Making PDB mappings for the average of 16 conditions for early2020infection to data/pdbs/6M0J.pdb
     Mapping to the following chain: E
-      Writing B-factor re-assigned PDBs for 2xBNT162b2 to:
-        results/lineplots_by_group/2xBNT162b2_6m0j_mean_total_escape.pdb
+      Writing B-factor re-assigned PDBs for early2020infection to:
+        results/lineplots_by_group/early2020infection_6m0j_mean_total_escape.pdb
     
-    Making PDB mappings for the average of 22 conditions for 2xmRNA-1273 to data/pdbs/6M0J.pdb
+    Making PDB mappings for the average of 9 conditions for primaryBetainfection to data/pdbs/6M0J.pdb
     Mapping to the following chain: E
-      Writing B-factor re-assigned PDBs for 2xmRNA-1273 to:
-        results/lineplots_by_group/2xmRNA-1273_6m0j_mean_total_escape.pdb
-    
-    Making PDB mappings for the average of 8 conditions for Deltabreakthroughafter2xmRNA to data/pdbs/6M0J.pdb
-    Mapping to the following chain: E
-      Writing B-factor re-assigned PDBs for Deltabreakthroughafter2xmRNA to:
-        results/lineplots_by_group/Deltabreakthroughafter2xmRNA_6m0j_mean_total_escape.pdb
-    
-    Making PDB mappings for the average of 16 conditions for ancestralinfection to data/pdbs/6M0J.pdb
-    Mapping to the following chain: E
-      Writing B-factor re-assigned PDBs for ancestralinfection to:
-        results/lineplots_by_group/ancestralinfection_6m0j_mean_total_escape.pdb
+      Writing B-factor re-assigned PDBs for primaryBetainfection to:
+        results/lineplots_by_group/primaryBetainfection_6m0j_mean_total_escape.pdb
     
     Making PDB mappings for the average of 8 conditions for primaryDeltainfection to data/pdbs/6M0J.pdb
     Mapping to the following chain: E
       Writing B-factor re-assigned PDBs for primaryDeltainfection to:
         results/lineplots_by_group/primaryDeltainfection_6m0j_mean_total_escape.pdb
     
-    Making PDB mappings for the average of 9 conditions for primaryBetainfection to data/pdbs/6M0J.pdb
+    Making PDB mappings for the average of 8 conditions for Deltabreakthroughafter2xmRNA to data/pdbs/6M0J.pdb
     Mapping to the following chain: E
-      Writing B-factor re-assigned PDBs for primaryBetainfection to:
-        results/lineplots_by_group/primaryBetainfection_6m0j_mean_total_escape.pdb
+      Writing B-factor re-assigned PDBs for Deltabreakthroughafter2xmRNA to:
+        results/lineplots_by_group/Deltabreakthroughafter2xmRNA_6m0j_mean_total_escape.pdb
+    
+    Making PDB mappings for the average of 22 conditions for 2xmRNA-1273 to data/pdbs/6M0J.pdb
+    Mapping to the following chain: E
+      Writing B-factor re-assigned PDBs for 2xmRNA-1273 to:
+        results/lineplots_by_group/2xmRNA-1273_6m0j_mean_total_escape.pdb
+    
+    Making PDB mappings for the average of 8 conditions for 2xBNT162b2 to data/pdbs/6M0J.pdb
+    Mapping to the following chain: E
+      Writing B-factor re-assigned PDBs for 2xBNT162b2 to:
+        results/lineplots_by_group/2xBNT162b2_6m0j_mean_total_escape.pdb
 
 
 
