@@ -840,9 +840,9 @@ display(HTML(depletions_NT50_LOD.to_html(index=False)))
       <td>primary Beta infection Beta spike</td>
     </tr>
     <tr>
-      <td>ancestral infection</td>
+      <td>early 2020 infection</td>
       <td>20</td>
-      <td>ancestral infection D614G spike</td>
+      <td>early 2020 infection D614G spike</td>
     </tr>
   </tbody>
 </table>

@@ -1579,7 +1579,7 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
     </tr>
     <tr>
       <td>D614G + E484K</td>
-      <td>ancestral infection (day 100-150)</td>
+      <td>early 2020 infection (day 100-150)</td>
       <td>D614G background</td>
       <td>8.734922</td>
       <td>82.325864</td>
@@ -1590,7 +1590,7 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
     </tr>
     <tr>
       <td>D614G</td>
-      <td>ancestral infection (day 100-150)</td>
+      <td>early 2020 infection (day 100-150)</td>
       <td>D614G background</td>
       <td>1.000000</td>
       <td>719.109965</td>
@@ -1601,7 +1601,7 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
     </tr>
     <tr>
       <td>D614G RBD Abs depleted (x D614G PV)</td>
-      <td>ancestral infection (day 100-150)</td>
+      <td>early 2020 infection (day 100-150)</td>
       <td>D614G background</td>
       <td>30.840230</td>
       <td>23.317270</td>
@@ -1612,7 +1612,7 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
     </tr>
     <tr>
       <td>D614G + K417N</td>
-      <td>ancestral infection (day 100-150)</td>
+      <td>early 2020 infection (day 100-150)</td>
       <td>D614G background</td>
       <td>1.086246</td>
       <td>662.013719</td>
@@ -1623,7 +1623,7 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
     </tr>
     <tr>
       <td>D614G RBD Abs depleted (x D614G PV)</td>
-      <td>ancestral infection (day 30-60)</td>
+      <td>early 2020 infection (day 30-60)</td>
       <td>D614G background</td>
       <td>20.539854</td>
       <td>90.826601</td>
@@ -1634,7 +1634,7 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
     </tr>
     <tr>
       <td>D614G + K417N</td>
-      <td>ancestral infection (day 30-60)</td>
+      <td>early 2020 infection (day 30-60)</td>
       <td>D614G background</td>
       <td>0.843348</td>
       <td>2212.094372</td>
@@ -1645,7 +1645,7 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
     </tr>
     <tr>
       <td>D614G + E484K</td>
-      <td>ancestral infection (day 30-60)</td>
+      <td>early 2020 infection (day 30-60)</td>
       <td>D614G background</td>
       <td>16.130810</td>
       <td>115.652289</td>
@@ -1656,7 +1656,7 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
     </tr>
     <tr>
       <td>D614G</td>
-      <td>ancestral infection (day 30-60)</td>
+      <td>early 2020 infection (day 30-60)</td>
       <td>D614G background</td>
       <td>1.000000</td>
       <td>1865.565095</td>
