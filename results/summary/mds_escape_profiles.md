@@ -357,6 +357,57 @@ for name, specs in mds_config.items():
     
 
 
+    
+    Making plot primary_infections, which has the following antibodies:
+    ['12C_d61_160', '13_d15_200', '1C_d26_200', '22C_d28_200', '23C_d26_80', '23_d21_1250', '24C_d32_200', '25C_d48_200', '25_d18_500', '6C_d33_500', '7C_d29_500', 'COV-021_500', 'COV-047_200', 'COV-057_50', 'COV-072_200', 'COV-107_80', 'C105_400', 'CB6_400', 'COV2-2165_400', 'COV2-2196_400', 'COV2-2832_400', 'REGN10933_400', 'C002_400', 'C121_400', 'C144_400', 'COV2-2479_400', 'LY-CoV555_400', 'COV2-2050_400', 'C110_400', 'C135_400', 'COV2-2096_400', 'COV2-2130_400', 'COV2-2499_400', 'REGN10987_400', 'COV2-2082_400', 'COV2-2094_400', 'COV2-2677_400', 'CR3022_400', 'Delta_1_500', 'Delta_3_350', 'Delta_4_350', 'Delta_6_500', 'Delta_7_1250', 'Delta_8_500', 'Delta_10_1250', 'Delta_11_500', 'K007_500', 'K031_500', 'K033_500', 'K040_500', 'K041_500', 'K046_200', 'K114_200', 'K115_old_80', 'K119_200']
+    stress = 27.06344402911881 from iteration 156
+    Manual calculus of sklearn stress : 27.06340618796206
+    Kruskal's Stress : 0.20342145923343238
+    [Poor > 0.2 > Fair > 0.1 > Good > 0.05 > Excellent > 0.025 > Perfect > 0.0]
+    Using condition-level color scheme in column class_color of data/mds_color_schemes.csv
+    Saving plot to results/multidimensional_scaling/primary_infections_mds.pdf
+
+
+
+    
+![png](mds_escape_profiles_files/mds_escape_profiles_18_3.png)
+    
+
+
+    
+    Making plot Delta_vs_breakthrough, which has the following antibodies:
+    ['C105_400', 'CB6_400', 'COV2-2165_400', 'COV2-2196_400', 'COV2-2832_400', 'REGN10933_400', 'C002_400', 'C121_400', 'C144_400', 'COV2-2479_400', 'LY-CoV555_400', 'COV2-2050_400', 'C110_400', 'C135_400', 'COV2-2096_400', 'COV2-2130_400', 'COV2-2499_400', 'REGN10987_400', 'COV2-2082_400', 'COV2-2094_400', 'COV2-2677_400', 'CR3022_400', '267C_repeat_200', '268C_repeat_500', '273C_repeat_500', '274C_repeat_500', '276C_repeat_500', '277C_repeat_500', '278C_repeat_1250', '279C_repeat_1250', 'Delta_1_500', 'Delta_3_350', 'Delta_4_350', 'Delta_6_500', 'Delta_7_1250', 'Delta_8_500', 'Delta_10_1250', 'Delta_11_500']
+    stress = 11.939765275965488 from iteration 141
+    Manual calculus of sklearn stress : 11.938841658603192
+    Kruskal's Stress : 0.1878279851266539
+    [Poor > 0.2 > Fair > 0.1 > Good > 0.05 > Excellent > 0.025 > Perfect > 0.0]
+    Using condition-level color scheme in column class_color of data/mds_color_schemes.csv
+    Saving plot to results/multidimensional_scaling/Delta_vs_breakthrough_mds.pdf
+
+
+
+    
+![png](mds_escape_profiles_files/mds_escape_profiles_18_5.png)
+    
+
+
+    
+    Making plot primaries_breakthrough, which has the following antibodies:
+    ['12C_d61_160', '13_d15_200', '1C_d26_200', '22C_d28_200', '23C_d26_80', '23_d21_1250', '24C_d32_200', '25C_d48_200', '25_d18_500', '6C_d33_500', '7C_d29_500', 'COV-021_500', 'COV-047_200', 'COV-057_50', 'COV-072_200', 'COV-107_80', 'C105_400', 'CB6_400', 'COV2-2165_400', 'COV2-2196_400', 'COV2-2832_400', 'REGN10933_400', 'C002_400', 'C121_400', 'C144_400', 'COV2-2479_400', 'LY-CoV555_400', 'COV2-2050_400', 'C110_400', 'C135_400', 'COV2-2096_400', 'COV2-2130_400', 'COV2-2499_400', 'REGN10987_400', 'COV2-2082_400', 'COV2-2094_400', 'COV2-2677_400', 'CR3022_400', '267C_repeat_200', '268C_repeat_500', '273C_repeat_500', '274C_repeat_500', '276C_repeat_500', '277C_repeat_500', '278C_repeat_1250', '279C_repeat_1250', 'Delta_1_500', 'Delta_3_350', 'Delta_4_350', 'Delta_6_500', 'Delta_7_1250', 'Delta_8_500', 'Delta_10_1250', 'Delta_11_500', 'K007_500', 'K031_500', 'K033_500', 'K040_500', 'K041_500', 'K046_200', 'K114_200', 'K115_old_80', 'K119_200']
+    stress = 31.089955021533697 from iteration 270
+    Manual calculus of sklearn stress : 31.089347121980364
+    Kruskal's Stress : 0.20054844935371646
+    [Poor > 0.2 > Fair > 0.1 > Good > 0.05 > Excellent > 0.025 > Perfect > 0.0]
+    Using condition-level color scheme in column class_color of data/mds_color_schemes.csv
+    Saving plot to results/multidimensional_scaling/primaries_breakthrough_mds.pdf
+
+
+
+    
+![png](mds_escape_profiles_files/mds_escape_profiles_18_7.png)
+    
+
+
 
 ```python
 
