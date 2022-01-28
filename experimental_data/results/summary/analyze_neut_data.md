@@ -693,7 +693,7 @@ for metric in ['fold_change', 'NT50']:
         
         # define the y-axis limits so I can make them exactly the same between plots
         limits={'fold_change':(df[metric].min()*0.9, df[metric].max()*1.1),
-               'NT50':(18, df[metric].max()*1.1),}
+               'NT50':(15, df[metric].max()*1.1),}
         print(limits)
 
         p = (ggplot(df) +
@@ -713,7 +713,6 @@ for metric in ['fold_change', 'NT50']:
              theme_classic() +
              theme(axis_text_x=element_text(angle=90),
                    axis_title_x=element_blank(),
-                   strip_margin_y=0.35,
                    strip_background_x=element_blank(),
                    figure_size=(2*df['sample_type'].nunique(), 2.5),
                    ) +
@@ -735,16 +734,16 @@ for metric in ['fold_change', 'NT50']:
 ```
 
     Making plot for fold_change for mutneuts:
-    {'fold_change': (0.22977515116553654, 695.9233012585322), 'NT50': (18, 695.9233012585322)}
+    {'fold_change': (0.22977515116553654, 695.9233012585322), 'NT50': (15, 695.9233012585322)}
     Saving to results/neut_titers/fold_change_mutneuts_aggregate_simple.pdf
     Making plot for fold_change for mutneuts_het:
-    {'fold_change': (0.22977515116553654, 695.9233012585322), 'NT50': (18, 695.9233012585322)}
+    {'fold_change': (0.22977515116553654, 695.9233012585322), 'NT50': (15, 695.9233012585322)}
     Saving to results/neut_titers/fold_change_mutneuts_het_aggregate_simple.pdf
     Making plot for NT50 for mutneuts:
-    {'fold_change': (22.499999999999996, 40495.49949040342), 'NT50': (18, 40495.49949040342)}
+    {'fold_change': (22.499999999999996, 40495.49949040342), 'NT50': (15, 40495.49949040342)}
     Saving to results/neut_titers/NT50_mutneuts_aggregate_simple.pdf
     Making plot for NT50 for mutneuts_het:
-    {'fold_change': (22.499999999999996, 40495.49949040342), 'NT50': (18, 40495.49949040342)}
+    {'fold_change': (22.499999999999996, 40495.49949040342), 'NT50': (15, 40495.49949040342)}
     Saving to results/neut_titers/NT50_mutneuts_het_aggregate_simple.pdf
 
 
@@ -791,7 +790,7 @@ for virus_set, virus_subsample in config['virus_subsets'].items():
        )
 
     # define the y-axis limits so I can make them exactly the same between plots
-    limits=(18, df['NT50'].max()*1.1)
+    limits=(15, df['NT50'].max()*1.1)
     print(limits)
 
     p = (ggplot(df
@@ -834,9 +833,9 @@ for virus_set, virus_subsample in config['virus_subsets'].items():
     p.save(plotfile, limitsize=False, verbose=False)
 ```
 
-    (18, 40495.49949040342)
+    (15, 40495.49949040342)
     Saving to results/neut_titers/NT50_mutneuts_aggregate_nofacet.pdf
-    (18, 40495.49949040342)
+    (15, 40495.49949040342)
     Saving to results/neut_titers/NT50_mutneuts_het_aggregate_nofacet.pdf
 
 
@@ -1190,143 +1189,196 @@ combined_df.to_csv(combined_neut_titers_file, index=False)
 </table>
 
 
+Define some dictionaries that will be used in the next 2 cells:
+
 
 ```python
-df=(combined_df
-    .query("for_combined_plots & virus in @config['combined_plot']")
-    .replace({'virus': config['combined_plot']})
-    .assign(virus=lambda x: pd.Categorical(x['virus'],
-                                               ordered=True,
-                                               categories=list(dict.fromkeys(config['combined_plot'].values()))),
-            sample_type=lambda x: pd.Categorical(x['sample_type'],
-                                                 ordered=True,
-                                                 categories=config['combined_plot_group_order']
-                                                )
-           )
-    .groupby(['serum', 'virus', 'sample_type', 'background', 'early_late'])
-    .agg({metric: geometric_mean})
-    .reset_index()
-    .dropna()
-   )
+ylab={'fold_change':'fold decrease in neutralization',
+          'NT50': 'neutralization titer 50%\n(NT50)'}
+    
+yintercept={'fold_change':1,
+            'NT50': config['NT50_LOD']
+           }
 
-# define the y-axis limits so I can make them exactly the same between plots
-limits=(18, df[metric].max()*1.1)
 print(limits)
-
-p = (ggplot(df
-            .replace({'sample_type': config['combined_plot_group_order']})
-            .assign(sample_type=lambda x: pd.Categorical(x['sample_type'],
-                                                 ordered=True,
-                                                 categories=list(dict.fromkeys(config['combined_plot_group_order'].values()))
-                                                ))
-           ) +
-     aes('virus', metric, group='serum') +
-     geom_hline(yintercept=config['NT50_LOD'],
-                alpha=0.7,
-                size=0.5,
-                linetype='dotted',
-                color=CBPALETTE[0]
-                ) +
-     geom_line(aes(x='virus', y=metric, group='serum'), color=CBPALETTE[0]) +
-     geom_point(size=2.5, alpha=0.5, fill=CBPALETTE[0]) + 
-     geom_crossbar(data=(df
-                         .replace({'sample_type': config['combined_plot_group_order']})
-                         .assign(sample_type=lambda x: pd.Categorical(x['sample_type'],
-                                                 ordered=True,
-                                                 categories=list(dict.fromkeys(config['combined_plot_group_order'].values()))
-                                                ))
-                         .groupby(['virus', 'sample_type'])
-                         .agg({metric: geometric_mean})
-                         .reset_index()
-                         .dropna()
-                        ),
-                   inherit_aes=False,
-                   mapping=aes(x='virus', y=metric, ymin=metric, ymax=metric),
-                  ) +
-     scale_y_log10(name=ylab[metric], limits=limits) +
-     theme_classic() +
-     theme(axis_text_x=element_text(angle=90),
-           axis_title_x=element_blank(),
-           strip_margin_y=0.35,
-           strip_background_x=element_blank(),
-           figure_size=(2*df['sample_type'].nunique(), 2.5),
-           ) +
-     scale_color_manual(values=CBPALETTE*3, guide=False) +
-     facet_wrap('~sample_type', scales='free_x', ncol=6)
-     )
-
-_ = p.draw()
-
-plotfile = f'{results}/NT50_combined_aggregate.pdf'
-print(f"Saving to {plotfile}")
-p.save(plotfile, limitsize=False, verbose=False)
 ```
 
-    (18, 40495.49949040342)
+    (15, 40495.49949040342)
+
+
+
+```python
+for metric in ['fold_change', 'NT50']:
+    
+    df=(combined_df
+        .query("for_combined_plots & virus in @config['combined_plot']")
+        .replace({'virus': config['combined_plot']})
+        .assign(virus=lambda x: pd.Categorical(x['virus'],
+                                                   ordered=True,
+                                                   categories=list(dict.fromkeys(config['combined_plot'].values()))),
+                sample_type=lambda x: pd.Categorical(x['sample_type'],
+                                                     ordered=True,
+                                                     categories=config['combined_plot_group_order']
+                                                    )
+               )
+        .groupby(['serum', 'virus', 'sample_type', 'background', 'early_late'])
+        .agg({metric: geometric_mean})
+        .reset_index()
+        .dropna()
+       )
+    
+    limits={'fold_change':(df[metric].min()*0.9, df[metric].max()*1.1),
+            'NT50':(15, df[metric].max()*1.1),}
+
+
+    p = (ggplot(df
+                .replace({'sample_type': config['combined_plot_group_order']})
+                .assign(sample_type=lambda x: pd.Categorical(x['sample_type'],
+                                                     ordered=True,
+                                                     categories=list(dict.fromkeys(config['combined_plot_group_order'].values()))
+                                                    ))
+               ) +
+         aes('virus', metric, group='serum') +
+         geom_hline(yintercept=yintercept[metric],
+                    alpha=0.7,
+                    size=0.5,
+                    linetype='dotted',
+                    color=CBPALETTE[0]
+                    ) +
+         geom_line(aes(x='virus', y=metric, group='serum'), color=CBPALETTE[0]) +
+         geom_point(size=2.5, alpha=0.5, fill=CBPALETTE[0]) + 
+         geom_crossbar(data=(df
+                             .replace({'sample_type': config['combined_plot_group_order']})
+                             .assign(sample_type=lambda x: pd.Categorical(x['sample_type'],
+                                                     ordered=True,
+                                                     categories=list(dict.fromkeys(config['combined_plot_group_order'].values()))
+                                                    ))
+                             .groupby(['virus', 'sample_type'])
+                             .agg({metric: geometric_mean})
+                             .reset_index()
+                             .dropna()
+                            ),
+                       inherit_aes=False,
+                       mapping=aes(x='virus', y=metric, ymin=metric, ymax=metric),
+                      ) +
+         scale_y_log10(name=ylab[metric], limits=limits[metric]) +
+         theme_classic() +
+         theme(axis_text_x=element_text(angle=90),
+               axis_title_x=element_blank(),
+               strip_background_x=element_blank(),
+               figure_size=(2*df['sample_type'].nunique(), 2.5),
+               ) +
+         scale_color_manual(values=CBPALETTE*3, guide=False) +
+         facet_wrap('~sample_type', scales='free_x', ncol=6)
+         )
+
+    _ = p.draw()
+
+    plotfile = f'{results}/{metric}_combined_aggregate.pdf'
+    print(f"Saving to {plotfile}")
+    p.save(plotfile, limitsize=False, verbose=False)
+```
+
+    Saving to results/neut_titers/fold_change_combined_aggregate.pdf
     Saving to results/neut_titers/NT50_combined_aggregate.pdf
 
 
 
     
-![png](analyze_neut_data_files/analyze_neut_data_33_1.png)
+![png](analyze_neut_data_files/analyze_neut_data_35_1.png)
+    
+
+
+
+    
+![png](analyze_neut_data_files/analyze_neut_data_35_2.png)
     
 
 
 
 ```python
-p = (ggplot(df
-            .groupby(['virus', 'sample_type', 'background'])
-            .agg(NT50=('NT50', geometric_mean), sem=('NT50', stats.gstd))
-            .reset_index()
-            .dropna()
+for metric in ['fold_change', 'NT50']:
+    
+    df=(combined_df
+        .query("for_combined_plots & virus in @config['combined_plot']")
+        .replace({'virus': config['combined_plot']})
+        .assign(virus=lambda x: pd.Categorical(x['virus'],
+                                                   ordered=True,
+                                                   categories=list(dict.fromkeys(config['combined_plot'].values()))),
+                sample_type=lambda x: pd.Categorical(x['sample_type'],
+                                                     ordered=True,
+                                                     categories=config['combined_plot_group_order']
+                                                    )
+               )
+        .groupby(['serum', 'virus', 'sample_type', 'background', 'early_late'])
+        .agg({metric: geometric_mean})
+        .reset_index()
+        .dropna()
+        .groupby(['virus', 'sample_type', 'background'])
+        .agg(metric=(metric, geometric_mean), sem=(metric, stats.gstd))
+        .reset_index()
+        .dropna()
+        .assign(upper_error=lambda x: x['metric']*x['sem'],
+                lower_error=lambda x: x['metric']/x['sem'],
+               )
+       )
+    
+    limits = (df['lower_error'].min(), df['upper_error'].max())
+    
+    print(limits)
+    
+    p = (ggplot(df
+                ) +
+         aes('virus', 
+             'metric', 
+             fill='sample_type', 
+             color='sample_type',
             ) +
-     aes('virus', 
-         'NT50', 
-         fill='sample_type', 
-         color='sample_type',
-        ) +
-     geom_hline(yintercept=config['NT50_LOD'],
-                alpha=0.7,
-                size=0.5,
-                linetype='dotted',
-                color=CBPALETTE[0]) +
-     geom_line(aes(x='virus', y='NT50', group='sample_type'), position=position_dodge(width=0.5)) +
-     geom_point(size=2.5, alpha=1, position=position_dodge(width=0.5)) +
-     geom_errorbar(aes(x="virus", ymin="NT50/sem",ymax="NT50*sem"),
-                   alpha=0.5,
-                   position=position_dodge(width=0.5)
-                  )+
-     scale_y_log10(name='neutralization titer 50%\n(NT50)', limits=limits) +
-     facet_wrap('~background', scales='free_x')+
-     theme_classic() +
-     theme(axis_title_x=element_blank(),
-           figure_size=(df['virus'].nunique()*df['background'].nunique()*0.5, 2.5),
-           axis_text_x=element_text(rotation=90),
-           strip_background_x=element_blank(),
-           ) +
-     scale_fill_manual(values=['#44AA99', '#332288', '#AA4499', '#117733', '#999933', '#DDCC77'], name='exposure history\n')+
-     scale_color_manual(values=['#44AA99', '#332288', '#AA4499', '#117733', '#999933', '#DDCC77'], name='exposure history\n')
-     )
+         geom_hline(yintercept=yintercept[metric],
+                    alpha=0.7,
+                    size=0.5,
+                    linetype='dotted',
+                    color=CBPALETTE[0]) +
+         geom_line(aes(x='virus', y='metric', group='sample_type'), position=position_dodge(width=0.5)) +
+         geom_point(size=2.5, alpha=1, position=position_dodge(width=0.5)) +
+         geom_errorbar(aes(x="virus", ymin="metric/sem",ymax="metric*sem"),
+                       alpha=0.5,
+                       position=position_dodge(width=0.5)
+                      )+
+         scale_y_log10(name=ylab[metric], limits=limits) +
+         facet_wrap('~background', scales='free_x')+
+         theme_classic() +
+         theme(axis_title_x=element_blank(),
+               figure_size=(df['virus'].nunique()*df['background'].nunique()*0.5, 2.5),
+               axis_text_x=element_text(rotation=90),
+               strip_background_x=element_blank(),
+               ) +
+         scale_fill_manual(values=['#44AA99', '#332288', '#AA4499', '#117733', '#999933', '#DDCC77'], name='exposure history\n')+
+         scale_color_manual(values=['#44AA99', '#332288', '#AA4499', '#117733', '#999933', '#DDCC77'], name='exposure history\n')
+         )
 
-_ = p.draw()
+    _ = p.draw()
 
-plotfile = f'{results}/NT50_combined_aggregate_nofacet.pdf'
-print(f"Saving to {plotfile}")
-p.save(plotfile, limitsize=False, verbose=False)
+    plotfile = f'{results}/{metric}_combined_aggregate_nofacet.pdf'
+    print(f"Saving to {plotfile}")
+    p.save(plotfile, limitsize=False, verbose=False)
 ```
 
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/layer.py:401: PlotnineWarning: geom_errorbar : Removed 3 rows containing missing values.
-
-
+    (0.2594554400312199, 250.07690828285578)
+    Saving to results/neut_titers/fold_change_combined_aggregate_nofacet.pdf
+    (15.16142654566156, 21246.47764030159)
     Saving to results/neut_titers/NT50_combined_aggregate_nofacet.pdf
-
-
-    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/layer.py:401: PlotnineWarning: geom_errorbar : Removed 3 rows containing missing values.
 
 
 
     
-![png](analyze_neut_data_files/analyze_neut_data_34_3.png)
+![png](analyze_neut_data_files/analyze_neut_data_36_1.png)
+    
+
+
+
+    
+![png](analyze_neut_data_files/analyze_neut_data_36_2.png)
     
 
 
@@ -1345,8 +1397,9 @@ geomean_mut_effects=(combined_df
                      
                      # now get summary statistics within cohorts
                      .agg(geomean_fold_change=('fold_change',geometric_mean), 
+                          gstd_fold_change=('fold_change', stats.gstd),
                           geomean_NT50=('NT50', geometric_mean), 
-                          gstd=('NT50', stats.gstd),
+                          gstd_NT50=('NT50', stats.gstd),
                           sample_size=('serum', 'count'),
                          )
                      .reset_index()
@@ -1354,8 +1407,10 @@ geomean_mut_effects=(combined_df
                      
                      # calculate the error bars, 
                      # multiplying geometric standard error by geometric_mean
-                     .assign(upper_error=lambda x: x['geomean_NT50']*x['gstd'],
-                             lower_error=lambda x: x['geomean_NT50']/x['gstd'],
+                     .assign(upper_error_NT50=lambda x: x['geomean_NT50']*x['gstd_NT50'],
+                             lower_error_NT50=lambda x: x['geomean_NT50']/x['gstd_NT50'],
+                             upper_error_fold_change=lambda x: x['geomean_fold_change']*x['gstd_fold_change'],
+                             lower_error_fold_change=lambda x: x['geomean_fold_change']/x['gstd_fold_change'],
                             )
                     )
 
@@ -1371,11 +1426,14 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
       <th>sample_type</th>
       <th>background</th>
       <th>geomean_fold_change</th>
+      <th>gstd_fold_change</th>
       <th>geomean_NT50</th>
-      <th>gstd</th>
+      <th>gstd_NT50</th>
       <th>sample_size</th>
-      <th>upper_error</th>
-      <th>lower_error</th>
+      <th>upper_error_NT50</th>
+      <th>lower_error_NT50</th>
+      <th>upper_error_fold_change</th>
+      <th>lower_error_fold_change</th>
     </tr>
   </thead>
   <tbody>
@@ -1384,363 +1442,462 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
       <td>2x BNT162b2</td>
       <td>Delta background</td>
       <td>0.410804</td>
+      <td>1.407030</td>
       <td>1614.796842</td>
       <td>2.205143</td>
       <td>8</td>
       <td>3560.857983</td>
       <td>732.286672</td>
+      <td>0.578013</td>
+      <td>0.291965</td>
     </tr>
     <tr>
       <td>Delta</td>
       <td>2x BNT162b2</td>
       <td>Delta background</td>
+      <td>1.000000</td>
       <td>1.000000</td>
       <td>663.364750</td>
       <td>2.890681</td>
       <td>8</td>
       <td>1917.575942</td>
       <td>229.483892</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
     </tr>
     <tr>
       <td>Delta + K417N</td>
       <td>2x BNT162b2</td>
       <td>Delta background</td>
       <td>3.470850</td>
+      <td>1.423845</td>
       <td>191.124580</td>
       <td>2.763088</td>
       <td>8</td>
       <td>528.094068</td>
       <td>69.170641</td>
+      <td>4.941954</td>
+      <td>2.437659</td>
     </tr>
     <tr>
       <td>D614G RBD Abs depleted (x D614G PV)</td>
       <td>2x BNT162b2</td>
       <td>Delta background</td>
       <td>26.534590</td>
+      <td>2.890681</td>
       <td>25.000000</td>
       <td>1.000000</td>
       <td>8</td>
       <td>25.000000</td>
       <td>25.000000</td>
+      <td>76.703038</td>
+      <td>9.179356</td>
     </tr>
     <tr>
       <td>Delta RBD Abs depleted (x D614G PV)</td>
       <td>2x BNT162b2</td>
       <td>Delta background</td>
       <td>2.904779</td>
+      <td>1.947386</td>
       <td>228.370164</td>
       <td>1.835415</td>
       <td>8</td>
       <td>419.154118</td>
       <td>124.424238</td>
+      <td>5.656726</td>
+      <td>1.491629</td>
     </tr>
     <tr>
       <td>Delta + E484K</td>
       <td>2x BNT162b2</td>
       <td>Delta background</td>
       <td>3.196882</td>
+      <td>1.576263</td>
       <td>207.503691</td>
       <td>2.124967</td>
       <td>8</td>
       <td>440.938465</td>
       <td>97.650319</td>
+      <td>5.039127</td>
+      <td>2.028139</td>
     </tr>
     <tr>
       <td>Delta RBD Abs depleted (x Delta PV)</td>
       <td>2x BNT162b2</td>
       <td>Delta background</td>
       <td>26.534590</td>
+      <td>2.890681</td>
       <td>25.000000</td>
       <td>1.000000</td>
       <td>8</td>
       <td>25.000000</td>
       <td>25.000000</td>
+      <td>76.703038</td>
+      <td>9.179356</td>
     </tr>
     <tr>
       <td>D614G + E484K</td>
       <td>2x mRNA-1273 (day 100-150)</td>
       <td>D614G background</td>
       <td>2.818936</td>
+      <td>1.176104</td>
       <td>614.618985</td>
       <td>1.224988</td>
       <td>6</td>
       <td>752.900595</td>
       <td>501.734890</td>
+      <td>3.315361</td>
+      <td>2.396842</td>
     </tr>
     <tr>
       <td>D614G + K417N</td>
       <td>2x mRNA-1273 (day 100-150)</td>
       <td>D614G background</td>
       <td>0.754875</td>
+      <td>1.123076</td>
       <td>2295.176813</td>
       <td>1.273351</td>
       <td>6</td>
       <td>2922.565200</td>
       <td>1802.470173</td>
+      <td>0.847782</td>
+      <td>0.672150</td>
     </tr>
     <tr>
       <td>D614G RBD Abs depleted (x D614G PV)</td>
       <td>2x mRNA-1273 (day 100-150)</td>
       <td>D614G background</td>
       <td>51.073290</td>
+      <td>1.713300</td>
       <td>33.923238</td>
       <td>1.619481</td>
       <td>6</td>
       <td>54.938049</td>
       <td>20.946978</td>
+      <td>87.503879</td>
+      <td>29.809889</td>
     </tr>
     <tr>
       <td>D614G</td>
       <td>2x mRNA-1273 (day 100-150)</td>
       <td>D614G background</td>
       <td>1.000000</td>
+      <td>1.000000</td>
       <td>1732.571373</td>
       <td>1.295054</td>
       <td>6</td>
       <td>2243.773093</td>
       <td>1337.837402</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
     </tr>
     <tr>
       <td>Delta + E484K</td>
       <td>Delta breakthrough</td>
       <td>Delta background</td>
       <td>3.254762</td>
+      <td>1.328936</td>
       <td>771.909409</td>
       <td>2.464179</td>
       <td>8</td>
       <td>1902.123211</td>
       <td>313.252124</td>
+      <td>4.325371</td>
+      <td>2.449148</td>
     </tr>
     <tr>
       <td>Delta + K417N</td>
       <td>Delta breakthrough</td>
       <td>Delta background</td>
       <td>2.605370</td>
+      <td>1.221674</td>
       <td>964.308967</td>
       <td>2.959634</td>
       <td>8</td>
       <td>2854.001423</td>
       <td>325.820364</td>
+      <td>3.182912</td>
+      <td>2.132623</td>
     </tr>
     <tr>
       <td>D614G RBD Abs depleted (x D614G PV)</td>
       <td>Delta breakthrough</td>
       <td>Delta background</td>
       <td>45.182364</td>
+      <td>1.938590</td>
       <td>55.605353</td>
       <td>2.332077</td>
       <td>8</td>
       <td>129.675991</td>
       <td>23.843699</td>
+      <td>87.590100</td>
+      <td>23.306813</td>
     </tr>
     <tr>
       <td>Delta RBD Abs depleted (x Delta PV)</td>
       <td>Delta breakthrough</td>
       <td>Delta background</td>
       <td>95.811396</td>
+      <td>2.610096</td>
       <td>26.222155</td>
       <td>1.116984</td>
       <td>8</td>
       <td>29.289734</td>
       <td>23.475851</td>
+      <td>250.076908</td>
+      <td>36.708002</td>
     </tr>
     <tr>
       <td>D614G</td>
       <td>Delta breakthrough</td>
       <td>Delta background</td>
       <td>0.323839</td>
+      <td>1.248150</td>
       <td>7758.108234</td>
       <td>2.738616</td>
       <td>8</td>
       <td>21246.477640</td>
       <td>2832.857493</td>
+      <td>0.404200</td>
+      <td>0.259455</td>
     </tr>
     <tr>
       <td>Delta</td>
       <td>Delta breakthrough</td>
       <td>Delta background</td>
+      <td>1.000000</td>
       <td>1.000000</td>
       <td>2512.381309</td>
       <td>2.669072</td>
       <td>8</td>
       <td>6705.727413</td>
       <td>941.293830</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
     </tr>
     <tr>
       <td>Delta RBD Abs depleted (x D614G PV)</td>
       <td>Delta breakthrough</td>
       <td>Delta background</td>
       <td>21.748698</td>
+      <td>1.634202</td>
       <td>115.518702</td>
       <td>2.369659</td>
       <td>8</td>
       <td>273.739911</td>
       <td>48.749086</td>
+      <td>35.541769</td>
+      <td>13.308450</td>
     </tr>
     <tr>
       <td>D614G + E484K</td>
       <td>early 2020 infection (day 100-150)</td>
       <td>D614G background</td>
       <td>8.734922</td>
+      <td>2.908591</td>
       <td>82.325864</td>
       <td>2.914776</td>
       <td>6</td>
       <td>239.961433</td>
       <td>28.244321</td>
+      <td>25.406317</td>
+      <td>3.003145</td>
     </tr>
     <tr>
       <td>D614G</td>
       <td>early 2020 infection (day 100-150)</td>
       <td>D614G background</td>
+      <td>1.000000</td>
       <td>1.000000</td>
       <td>719.109965</td>
       <td>1.703376</td>
       <td>6</td>
       <td>1224.914330</td>
       <td>422.167600</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
     </tr>
     <tr>
       <td>D614G RBD Abs depleted (x D614G PV)</td>
       <td>early 2020 infection (day 100-150)</td>
       <td>D614G background</td>
       <td>30.840230</td>
+      <td>1.932909</td>
       <td>23.317270</td>
       <td>1.456307</td>
       <td>6</td>
       <td>33.957098</td>
       <td>16.011235</td>
+      <td>59.611367</td>
+      <td>15.955343</td>
     </tr>
     <tr>
       <td>D614G + K417N</td>
       <td>early 2020 infection (day 100-150)</td>
       <td>D614G background</td>
       <td>1.086246</td>
+      <td>1.463796</td>
       <td>662.013719</td>
       <td>1.903423</td>
       <td>6</td>
       <td>1260.092101</td>
       <td>347.801692</td>
+      <td>1.590044</td>
+      <td>0.742075</td>
     </tr>
     <tr>
       <td>D614G RBD Abs depleted (x D614G PV)</td>
       <td>early 2020 infection (day 30-60)</td>
       <td>D614G background</td>
       <td>20.539854</td>
+      <td>4.803449</td>
       <td>90.826601</td>
       <td>5.461293</td>
       <td>4</td>
       <td>496.030680</td>
       <td>16.630970</td>
+      <td>98.662147</td>
+      <td>4.276063</td>
     </tr>
     <tr>
       <td>D614G + K417N</td>
       <td>early 2020 infection (day 30-60)</td>
       <td>D614G background</td>
       <td>0.843348</td>
+      <td>1.262309</td>
       <td>2212.094372</td>
       <td>4.093656</td>
       <td>4</td>
       <td>9055.552945</td>
       <td>540.371366</td>
+      <td>1.064565</td>
+      <td>0.668100</td>
     </tr>
     <tr>
       <td>D614G + E484K</td>
       <td>early 2020 infection (day 30-60)</td>
       <td>D614G background</td>
       <td>16.130810</td>
+      <td>4.649110</td>
       <td>115.652289</td>
       <td>7.628061</td>
       <td>4</td>
       <td>882.202730</td>
       <td>15.161427</td>
+      <td>74.993912</td>
+      <td>3.469655</td>
     </tr>
     <tr>
       <td>D614G</td>
       <td>early 2020 infection (day 30-60)</td>
       <td>D614G background</td>
       <td>1.000000</td>
+      <td>1.000000</td>
       <td>1865.565095</td>
       <td>4.557848</td>
       <td>4</td>
       <td>8502.962978</td>
       <td>409.308277</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
     </tr>
     <tr>
       <td>Delta + E484K</td>
       <td>primary Delta infection</td>
       <td>Delta background</td>
       <td>8.391563</td>
+      <td>2.266892</td>
       <td>579.566905</td>
       <td>2.592924</td>
       <td>8</td>
       <td>1502.773208</td>
       <td>223.518623</td>
+      <td>19.022765</td>
+      <td>3.701793</td>
     </tr>
     <tr>
       <td>D614G RBD Abs depleted (x D614G PV)</td>
       <td>primary Delta infection</td>
       <td>Delta background</td>
       <td>142.743066</td>
+      <td>2.405840</td>
       <td>34.071513</td>
       <td>1.605872</td>
       <td>8</td>
       <td>54.714488</td>
       <td>21.216830</td>
+      <td>343.416908</td>
+      <td>59.331915</td>
     </tr>
     <tr>
       <td>Delta + K417N</td>
       <td>primary Delta infection</td>
       <td>Delta background</td>
       <td>2.175550</td>
+      <td>1.426831</td>
       <td>2235.514124</td>
       <td>2.300774</td>
       <td>8</td>
       <td>5143.412414</td>
       <td>971.635754</td>
+      <td>3.104142</td>
+      <td>1.524742</td>
     </tr>
     <tr>
       <td>D614G</td>
       <td>primary Delta infection</td>
       <td>Delta background</td>
       <td>2.450834</td>
+      <td>2.112353</td>
       <td>1984.414961</td>
       <td>2.819967</td>
       <td>8</td>
       <td>5595.985526</td>
       <td>703.701380</td>
+      <td>5.177027</td>
+      <td>1.160239</td>
     </tr>
     <tr>
       <td>Delta RBD Abs depleted (x D614G PV)</td>
       <td>primary Delta infection</td>
       <td>Delta background</td>
       <td>101.452496</td>
+      <td>2.164971</td>
       <td>47.938419</td>
       <td>1.897148</td>
       <td>8</td>
       <td>90.946282</td>
       <td>25.268674</td>
+      <td>219.641722</td>
+      <td>46.860901</td>
     </tr>
     <tr>
       <td>Delta</td>
       <td>primary Delta infection</td>
       <td>Delta background</td>
       <td>1.000000</td>
+      <td>1.000000</td>
       <td>4863.472244</td>
       <td>1.975576</td>
       <td>8</td>
       <td>9608.156835</td>
       <td>2461.800184</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
     </tr>
     <tr>
       <td>Delta RBD Abs depleted (x Delta PV)</td>
       <td>primary Delta infection</td>
       <td>Delta background</td>
       <td>86.504878</td>
+      <td>1.872192</td>
       <td>56.221942</td>
       <td>2.219946</td>
       <td>8</td>
       <td>124.809688</td>
       <td>25.325812</td>
+      <td>161.953699</td>
+      <td>46.205144</td>
     </tr>
   </tbody>
 </table>
