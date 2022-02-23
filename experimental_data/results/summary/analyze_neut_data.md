@@ -1193,7 +1193,7 @@ Define some dictionaries that will be used in the next 2 cells:
 
 
 ```python
-ylab={'fold_change':'fold decrease in neutralization',
+ylab={'fold_change':'fold-decrease in neutralization',
           'NT50': 'neutralization titer 50%\n(NT50)'}
     
 yintercept={'fold_change':1,
@@ -1379,6 +1379,94 @@ for metric in ['fold_change', 'NT50']:
 
     
 ![png](analyze_neut_data_files/analyze_neut_data_36_2.png)
+    
+
+
+
+```python
+for metric in ['fold_change', 'NT50']:
+    
+    df=(combined_df
+        .query("for_combined_plots & virus in @config['combined_plot']")
+        .replace({'virus': config['combined_plot']})
+        .assign(virus=lambda x: pd.Categorical(x['virus'],
+                                                   ordered=True,
+                                                   categories=list(dict.fromkeys(config['combined_plot'].values()))),
+                sample_type=lambda x: pd.Categorical(x['sample_type'],
+                                                     ordered=True,
+                                                     categories=config['combined_plot_group_order']
+                                                    )
+               )
+        .groupby(['serum', 'virus', 'sample_type', 'background', 'early_late'])
+        .agg({metric: geometric_mean})
+        .reset_index()
+        .dropna()
+        .groupby(['virus', 'sample_type', 'background'])
+        .agg(metric=(metric, geometric_mean), sem=(metric, stats.gstd))
+        .reset_index()
+        .dropna()
+        .assign(upper_error=lambda x: x['metric']*x['sem'],
+                lower_error=lambda x: x['metric']/x['sem'],
+               )
+        .query('virus in ["K417N", "E484K"]')
+       )
+    
+    limits = (df['lower_error'].min(), df['upper_error'].max())
+    
+    print(limits)
+    
+    p = (ggplot(df
+                ) +
+         aes('virus', 
+             'metric', 
+             fill='sample_type', 
+             color='sample_type',
+            ) +
+         geom_hline(yintercept=yintercept[metric],
+                    alpha=0.7,
+                    size=0.5,
+                    linetype='dotted',
+                    color=CBPALETTE[0]) +
+         # geom_line(aes(x='virus', y='metric', group='sample_type'), position=position_dodge(width=0.5)) +
+         geom_point(size=2.5, alpha=1, position=position_dodge(width=0.5)) +
+         geom_errorbar(aes(x="virus", ymin="metric/sem",ymax="metric*sem"),
+                       alpha=0.5,
+                       position=position_dodge(width=0.5)
+                      )+
+         scale_y_log10(name=ylab[metric], limits=limits) +
+         facet_wrap('~background', scales='free_x')+
+         theme_classic() +
+         theme(axis_title_x=element_blank(),
+               figure_size=(df['virus'].nunique()*df['background'].nunique(), 2.5),
+               axis_text_x=element_text(rotation=90),
+               strip_background_x=element_blank(),
+               ) +
+         scale_fill_manual(values=['#44AA99', '#332288', '#AA4499', '#117733', '#999933', '#DDCC77'], name='exposure history\n')+
+         scale_color_manual(values=['#44AA99', '#332288', '#AA4499', '#117733', '#999933', '#DDCC77'], name='exposure history\n')
+         )
+
+    _ = p.draw()
+
+    plotfile = f'{results}/{metric}_417_484.pdf'
+    print(f"Saving to {plotfile}")
+    p.save(plotfile, limitsize=False, verbose=False)
+```
+
+    (0.6680996570490982, 74.993911563222)
+    Saving to results/neut_titers/fold_change_417_484.pdf
+    (15.16142654566156, 9055.552944683937)
+    Saving to results/neut_titers/NT50_417_484.pdf
+
+
+
+    
+![png](analyze_neut_data_files/analyze_neut_data_37_1.png)
+    
+
+
+
+    
+![png](analyze_neut_data_files/analyze_neut_data_37_2.png)
     
 
 
