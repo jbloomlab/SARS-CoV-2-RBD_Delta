@@ -1282,10 +1282,12 @@ for metric in ['fold_change', 'NT50']:
                       ) +
          scale_y_log10(name=ylab[metric], limits=limits[metric]) +
          theme_classic() +
-         theme(axis_text_x=element_text(angle=90),
+         theme(figure_size=(2*df['sample_type'].nunique(), 2.5),
                axis_title_x=element_blank(),
+               axis_text_x=element_text(rotation=90, size=10),
+               axis_text_y=element_text(size=10),
                strip_background_x=element_blank(),
-               figure_size=(2*df['sample_type'].nunique(), 2.5),
+               strip_text=element_text(size=11),
                ) +
          scale_color_manual(values=CBPALETTE*3, guide=False) +
          facet_wrap('~sample_type', scales='free_x', ncol=6)
@@ -1369,8 +1371,11 @@ for metric in ['fold_change', 'NT50']:
          theme_classic() +
          theme(axis_title_x=element_blank(),
                figure_size=(df['virus'].nunique()*df['background'].nunique()*0.5, 2.5),
-               axis_text_x=element_text(rotation=90),
+               axis_text_x=element_text(rotation=90, size=10),
+               axis_text_y=element_text(size=10),
                strip_background_x=element_blank(),
+               strip_text=element_text(size=11),
+               legend_text=element_text(size=10),
                ) +
          scale_fill_manual(values=['#44AA99', '#332288', '#AA4499', '#117733', '#999933', '#DDCC77'], name='exposure history\n')+
          scale_color_manual(values=['#44AA99', '#332288', '#AA4499', '#117733', '#999933', '#DDCC77'], name='exposure history\n')
@@ -1459,8 +1464,11 @@ for metric in ['fold_change', 'NT50']:
          theme_classic() +
          theme(#axis_title_x=element_blank(),
                figure_size=(df['virus'].nunique()*df['background'].nunique(), 2.5),
-               axis_text_x=element_text(rotation=90),
+               axis_text_x=element_text(size=11),
                strip_background_x=element_blank(),
+               axis_text_y=element_text(size=10),
+               strip_text=element_text(size=11),
+               legend_text=element_text(size=10),
                ) +
          scale_fill_manual(values=['#44AA99', '#332288', '#AA4499', '#117733', '#999933', '#DDCC77'], name='exposure history\n')+
          scale_color_manual(values=['#44AA99', '#332288', '#AA4499', '#117733', '#999933', '#DDCC77'], name='exposure history\n')
@@ -1523,7 +1531,7 @@ geomean_mut_effects=(combined_df
                             )
                     )
 
-display(HTML(geomean_mut_effects.sort_values(by='sample_type').to_html(index=False)))
+display(HTML(geomean_mut_effects.sort_values(by='sample_type').head().to_html(index=False)))
 geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
 ```
 
@@ -1615,426 +1623,6 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
       <td>97.650319</td>
       <td>5.039127</td>
       <td>2.028139</td>
-    </tr>
-    <tr>
-      <td>Delta RBD Abs depleted (x D614G PV)</td>
-      <td>2x BNT162b2</td>
-      <td>Delta background</td>
-      <td>2.904779</td>
-      <td>1.947386</td>
-      <td>228.370164</td>
-      <td>1.835415</td>
-      <td>8</td>
-      <td>419.154118</td>
-      <td>124.424238</td>
-      <td>5.656726</td>
-      <td>1.491629</td>
-    </tr>
-    <tr>
-      <td>Delta</td>
-      <td>2x BNT162b2</td>
-      <td>Delta background</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>663.364750</td>
-      <td>2.890681</td>
-      <td>8</td>
-      <td>1917.575942</td>
-      <td>229.483892</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <td>D614G RBD Abs depleted (x D614G PV)</td>
-      <td>2x mRNA-1273 (day 100-150)</td>
-      <td>D614G background</td>
-      <td>51.073290</td>
-      <td>1.713300</td>
-      <td>33.923238</td>
-      <td>1.619481</td>
-      <td>6</td>
-      <td>54.938049</td>
-      <td>20.946978</td>
-      <td>87.503879</td>
-      <td>29.809889</td>
-    </tr>
-    <tr>
-      <td>D614G + K417N</td>
-      <td>2x mRNA-1273 (day 100-150)</td>
-      <td>D614G background</td>
-      <td>0.754875</td>
-      <td>1.123076</td>
-      <td>2295.176813</td>
-      <td>1.273351</td>
-      <td>6</td>
-      <td>2922.565200</td>
-      <td>1802.470173</td>
-      <td>0.847782</td>
-      <td>0.672150</td>
-    </tr>
-    <tr>
-      <td>D614G + E484K</td>
-      <td>2x mRNA-1273 (day 100-150)</td>
-      <td>D614G background</td>
-      <td>2.818936</td>
-      <td>1.176104</td>
-      <td>614.618985</td>
-      <td>1.224988</td>
-      <td>6</td>
-      <td>752.900595</td>
-      <td>501.734890</td>
-      <td>3.315361</td>
-      <td>2.396842</td>
-    </tr>
-    <tr>
-      <td>D614G</td>
-      <td>2x mRNA-1273 (day 100-150)</td>
-      <td>D614G background</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1732.571373</td>
-      <td>1.295054</td>
-      <td>6</td>
-      <td>2243.773093</td>
-      <td>1337.837402</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <td>D614G RBD Abs depleted (x D614G PV)</td>
-      <td>Delta breakthrough</td>
-      <td>Delta background</td>
-      <td>45.182364</td>
-      <td>1.938590</td>
-      <td>55.605353</td>
-      <td>2.332077</td>
-      <td>8</td>
-      <td>129.675991</td>
-      <td>23.843699</td>
-      <td>87.590100</td>
-      <td>23.306813</td>
-    </tr>
-    <tr>
-      <td>Delta RBD Abs depleted (x D614G PV)</td>
-      <td>Delta breakthrough</td>
-      <td>Delta background</td>
-      <td>21.748698</td>
-      <td>1.634202</td>
-      <td>115.518702</td>
-      <td>2.369659</td>
-      <td>8</td>
-      <td>273.739911</td>
-      <td>48.749086</td>
-      <td>35.541769</td>
-      <td>13.308450</td>
-    </tr>
-    <tr>
-      <td>Delta + E484K</td>
-      <td>Delta breakthrough</td>
-      <td>Delta background</td>
-      <td>3.254762</td>
-      <td>1.328936</td>
-      <td>771.909409</td>
-      <td>2.464179</td>
-      <td>8</td>
-      <td>1902.123211</td>
-      <td>313.252124</td>
-      <td>4.325371</td>
-      <td>2.449148</td>
-    </tr>
-    <tr>
-      <td>Delta + K417N</td>
-      <td>Delta breakthrough</td>
-      <td>Delta background</td>
-      <td>2.605370</td>
-      <td>1.221674</td>
-      <td>964.308967</td>
-      <td>2.959634</td>
-      <td>8</td>
-      <td>2854.001423</td>
-      <td>325.820364</td>
-      <td>3.182912</td>
-      <td>2.132623</td>
-    </tr>
-    <tr>
-      <td>D614G</td>
-      <td>Delta breakthrough</td>
-      <td>Delta background</td>
-      <td>0.323839</td>
-      <td>1.248150</td>
-      <td>7758.108234</td>
-      <td>2.738616</td>
-      <td>8</td>
-      <td>21246.477640</td>
-      <td>2832.857493</td>
-      <td>0.404200</td>
-      <td>0.259455</td>
-    </tr>
-    <tr>
-      <td>Delta</td>
-      <td>Delta breakthrough</td>
-      <td>Delta background</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>2512.381309</td>
-      <td>2.669072</td>
-      <td>8</td>
-      <td>6705.727413</td>
-      <td>941.293830</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <td>Delta RBD Abs depleted (x Delta PV)</td>
-      <td>Delta breakthrough</td>
-      <td>Delta background</td>
-      <td>95.811396</td>
-      <td>2.610096</td>
-      <td>26.222155</td>
-      <td>1.116984</td>
-      <td>8</td>
-      <td>29.289734</td>
-      <td>23.475851</td>
-      <td>250.076908</td>
-      <td>36.708002</td>
-    </tr>
-    <tr>
-      <td>D614G RBD Abs depleted (x D614G PV)</td>
-      <td>early 2020 infection (day 100-150)</td>
-      <td>D614G background</td>
-      <td>30.840230</td>
-      <td>1.932909</td>
-      <td>23.317270</td>
-      <td>1.456307</td>
-      <td>6</td>
-      <td>33.957098</td>
-      <td>16.011235</td>
-      <td>59.611367</td>
-      <td>15.955343</td>
-    </tr>
-    <tr>
-      <td>D614G + E484K</td>
-      <td>early 2020 infection (day 100-150)</td>
-      <td>D614G background</td>
-      <td>8.734922</td>
-      <td>2.908591</td>
-      <td>82.325864</td>
-      <td>2.914776</td>
-      <td>6</td>
-      <td>239.961433</td>
-      <td>28.244321</td>
-      <td>25.406317</td>
-      <td>3.003145</td>
-    </tr>
-    <tr>
-      <td>D614G</td>
-      <td>early 2020 infection (day 100-150)</td>
-      <td>D614G background</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>719.109965</td>
-      <td>1.703376</td>
-      <td>6</td>
-      <td>1224.914330</td>
-      <td>422.167600</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <td>D614G + K417N</td>
-      <td>early 2020 infection (day 100-150)</td>
-      <td>D614G background</td>
-      <td>1.086246</td>
-      <td>1.463796</td>
-      <td>662.013719</td>
-      <td>1.903423</td>
-      <td>6</td>
-      <td>1260.092101</td>
-      <td>347.801692</td>
-      <td>1.590044</td>
-      <td>0.742075</td>
-    </tr>
-    <tr>
-      <td>D614G + K417N</td>
-      <td>early 2020 infection (day 30-60)</td>
-      <td>D614G background</td>
-      <td>0.843348</td>
-      <td>1.262309</td>
-      <td>2212.094372</td>
-      <td>4.093656</td>
-      <td>4</td>
-      <td>9055.552945</td>
-      <td>540.371366</td>
-      <td>1.064565</td>
-      <td>0.668100</td>
-    </tr>
-    <tr>
-      <td>D614G + E484K</td>
-      <td>early 2020 infection (day 30-60)</td>
-      <td>D614G background</td>
-      <td>16.130810</td>
-      <td>4.649110</td>
-      <td>115.652289</td>
-      <td>7.628061</td>
-      <td>4</td>
-      <td>882.202730</td>
-      <td>15.161427</td>
-      <td>74.993912</td>
-      <td>3.469655</td>
-    </tr>
-    <tr>
-      <td>D614G</td>
-      <td>early 2020 infection (day 30-60)</td>
-      <td>D614G background</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1865.565095</td>
-      <td>4.557848</td>
-      <td>4</td>
-      <td>8502.962978</td>
-      <td>409.308277</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <td>D614G RBD Abs depleted (x D614G PV)</td>
-      <td>early 2020 infection (day 30-60)</td>
-      <td>D614G background</td>
-      <td>20.539854</td>
-      <td>4.803449</td>
-      <td>90.826601</td>
-      <td>5.461293</td>
-      <td>4</td>
-      <td>496.030680</td>
-      <td>16.630970</td>
-      <td>98.662147</td>
-      <td>4.276063</td>
-    </tr>
-    <tr>
-      <td>Beta</td>
-      <td>primary Beta infection</td>
-      <td>Beta background</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>2042.066921</td>
-      <td>2.479761</td>
-      <td>9</td>
-      <td>5063.837555</td>
-      <td>823.493500</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <td>Beta RBD Abs depleted (x Beta PV)</td>
-      <td>primary Beta infection</td>
-      <td>Beta background</td>
-      <td>15.807993</td>
-      <td>1.932805</td>
-      <td>129.179393</td>
-      <td>1.996372</td>
-      <td>9</td>
-      <td>257.890141</td>
-      <td>64.707071</td>
-      <td>30.553762</td>
-      <td>8.178785</td>
-    </tr>
-    <tr>
-      <td>Delta</td>
-      <td>primary Delta infection</td>
-      <td>Delta background</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>4863.472244</td>
-      <td>1.975576</td>
-      <td>8</td>
-      <td>9608.156835</td>
-      <td>2461.800184</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <td>Delta + K417N</td>
-      <td>primary Delta infection</td>
-      <td>Delta background</td>
-      <td>2.175550</td>
-      <td>1.426831</td>
-      <td>2235.514124</td>
-      <td>2.300774</td>
-      <td>8</td>
-      <td>5143.412414</td>
-      <td>971.635754</td>
-      <td>3.104142</td>
-      <td>1.524742</td>
-    </tr>
-    <tr>
-      <td>D614G RBD Abs depleted (x D614G PV)</td>
-      <td>primary Delta infection</td>
-      <td>Delta background</td>
-      <td>142.743066</td>
-      <td>2.405840</td>
-      <td>34.071513</td>
-      <td>1.605872</td>
-      <td>8</td>
-      <td>54.714488</td>
-      <td>21.216830</td>
-      <td>343.416908</td>
-      <td>59.331915</td>
-    </tr>
-    <tr>
-      <td>D614G</td>
-      <td>primary Delta infection</td>
-      <td>Delta background</td>
-      <td>2.450834</td>
-      <td>2.112353</td>
-      <td>1984.414961</td>
-      <td>2.819967</td>
-      <td>8</td>
-      <td>5595.985526</td>
-      <td>703.701380</td>
-      <td>5.177027</td>
-      <td>1.160239</td>
-    </tr>
-    <tr>
-      <td>Delta RBD Abs depleted (x D614G PV)</td>
-      <td>primary Delta infection</td>
-      <td>Delta background</td>
-      <td>101.452496</td>
-      <td>2.164971</td>
-      <td>47.938419</td>
-      <td>1.897148</td>
-      <td>8</td>
-      <td>90.946282</td>
-      <td>25.268674</td>
-      <td>219.641722</td>
-      <td>46.860901</td>
-    </tr>
-    <tr>
-      <td>Delta + E484K</td>
-      <td>primary Delta infection</td>
-      <td>Delta background</td>
-      <td>8.391563</td>
-      <td>2.266892</td>
-      <td>579.566905</td>
-      <td>2.592924</td>
-      <td>8</td>
-      <td>1502.773208</td>
-      <td>223.518623</td>
-      <td>19.022765</td>
-      <td>3.701793</td>
-    </tr>
-    <tr>
-      <td>Delta RBD Abs depleted (x Delta PV)</td>
-      <td>primary Delta infection</td>
-      <td>Delta background</td>
-      <td>86.504878</td>
-      <td>1.872192</td>
-      <td>56.221942</td>
-      <td>2.219946</td>
-      <td>8</td>
-      <td>124.809688</td>
-      <td>25.325812</td>
-      <td>161.953699</td>
-      <td>46.205144</td>
     </tr>
   </tbody>
 </table>
