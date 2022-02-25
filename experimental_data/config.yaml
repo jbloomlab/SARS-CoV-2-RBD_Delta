@@ -144,3 +144,4 @@ combined_plot_group_order:
 combined_plot_background_order:
   - Delta background
   - D614G background
+  - Beta background # this is to ensure that the Beta RBD depletions get included in the combined NT50 CSV file

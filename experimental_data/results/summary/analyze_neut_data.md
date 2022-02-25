@@ -667,7 +667,7 @@ for metric in ['fold_change', 'NT50']:
     for virus_set, virus_subsample in config['virus_subsets'].items():
         print(f'Making plot for {metric} for {virus_set}:')
         
-        ylab={'fold_change':'fold decrease in neutralization', 
+        ylab={'fold_change':'fold-decrease in neutralization', 
               'NT50':'neutralization titer 50%\n(NT50)'
              }
         
@@ -1049,6 +1049,23 @@ infection=(pd.read_csv(config['previous_studies_mutneuts']['infection'])
                 )
         )
 
+beta_depletions=(pd.read_csv(config['previous_studies_rbd_depletions']['infection'])
+                 .query('spike=="Beta"')
+                 .assign(background='Beta background',
+                         for_combined_plots=False,
+                         ic50=lambda x: 1/x['NT50'],
+                         date='summer2021',
+                        )
+                 .replace({'RBD antibodies depleted':'Beta RBD Abs depleted (x Beta PV)',
+                           'mock depletion':'Beta'
+                          }
+                         )
+                 .rename(columns={'depletion':'virus'})
+                 [['serum', 'virus', 'ic50', 'NT50', 'date', 'ic50_is_bound','sample_type', 'early_late', 
+                   'background', 'for_combined_plots'
+                  ]]
+                )
+
 combined_df = (pd.concat(
     [(neut_titers.query("replicate=='average'")
      [['serum', 'virus', 'ic50', 'NT50', 'date', 'ic50_is_bound', 'sample_type']]
@@ -1062,7 +1079,8 @@ combined_df = (pd.concat(
              )),
       # .query('virus not in ["D614G RBD Abs depleted (x D614G PV)", "Delta RBD Abs depleted (x D614G PV)"]')),
      moderna,
-     infection])
+     infection, 
+     beta_depletions])
                .assign(background=lambda x: 
                        pd.Categorical(x['background'],
                                       ordered=True,
@@ -1075,7 +1093,8 @@ combined_df = (combined_df
                       .assign(is_wildtype=lambda x: 
                               np.where(
                                   ((x['background']=='Delta background') & (x['virus']=='Delta')) | 
-                                  ((x['background']=='D614G background') & (x['virus']=='D614G')), 
+                                  ((x['background']=='D614G background') & (x['virus']=='D614G'))| 
+                                  ((x['background']=='Beta background') & (x['virus']=='Beta')), 
                                   True, False)
                              )
                       .query('is_wildtype')
@@ -1409,6 +1428,7 @@ for metric in ['fold_change', 'NT50']:
                 lower_error=lambda x: x['metric']/x['sem'],
                )
         .query('virus in ["K417N", "E484K"]')
+        .replace({'Delta background': 'Delta', 'D614G background':'D614G'})
        )
     
     limits = (df['lower_error'].min(), df['upper_error'].max())
@@ -1417,7 +1437,7 @@ for metric in ['fold_change', 'NT50']:
     
     p = (ggplot(df
                 ) +
-         aes('virus', 
+         aes('background', 
              'metric', 
              fill='sample_type', 
              color='sample_type',
@@ -1429,14 +1449,15 @@ for metric in ['fold_change', 'NT50']:
                     color=CBPALETTE[0]) +
          # geom_line(aes(x='virus', y='metric', group='sample_type'), position=position_dodge(width=0.5)) +
          geom_point(size=2.5, alpha=1, position=position_dodge(width=0.5)) +
-         geom_errorbar(aes(x="virus", ymin="metric/sem",ymax="metric*sem"),
+         geom_errorbar(aes(x="background", ymin="metric/sem",ymax="metric*sem"),
                        alpha=0.5,
                        position=position_dodge(width=0.5)
                       )+
          scale_y_log10(name=ylab[metric], limits=limits) +
-         facet_wrap('~background', scales='free_x')+
+         scale_x_discrete(name='spike background')+
+         facet_wrap('~virus', scales='free_x')+
          theme_classic() +
-         theme(axis_title_x=element_blank(),
+         theme(#axis_title_x=element_blank(),
                figure_size=(df['virus'].nunique()*df['background'].nunique(), 2.5),
                axis_text_x=element_text(rotation=90),
                strip_background_x=element_blank(),
@@ -1526,34 +1547,6 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
   </thead>
   <tbody>
     <tr>
-      <td>D614G</td>
-      <td>2x BNT162b2</td>
-      <td>Delta background</td>
-      <td>0.410804</td>
-      <td>1.407030</td>
-      <td>1614.796842</td>
-      <td>2.205143</td>
-      <td>8</td>
-      <td>3560.857983</td>
-      <td>732.286672</td>
-      <td>0.578013</td>
-      <td>0.291965</td>
-    </tr>
-    <tr>
-      <td>Delta</td>
-      <td>2x BNT162b2</td>
-      <td>Delta background</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>663.364750</td>
-      <td>2.890681</td>
-      <td>8</td>
-      <td>1917.575942</td>
-      <td>229.483892</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
       <td>Delta + K417N</td>
       <td>2x BNT162b2</td>
       <td>Delta background</td>
@@ -1566,48 +1559,6 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
       <td>69.170641</td>
       <td>4.941954</td>
       <td>2.437659</td>
-    </tr>
-    <tr>
-      <td>D614G RBD Abs depleted (x D614G PV)</td>
-      <td>2x BNT162b2</td>
-      <td>Delta background</td>
-      <td>26.534590</td>
-      <td>2.890681</td>
-      <td>25.000000</td>
-      <td>1.000000</td>
-      <td>8</td>
-      <td>25.000000</td>
-      <td>25.000000</td>
-      <td>76.703038</td>
-      <td>9.179356</td>
-    </tr>
-    <tr>
-      <td>Delta RBD Abs depleted (x D614G PV)</td>
-      <td>2x BNT162b2</td>
-      <td>Delta background</td>
-      <td>2.904779</td>
-      <td>1.947386</td>
-      <td>228.370164</td>
-      <td>1.835415</td>
-      <td>8</td>
-      <td>419.154118</td>
-      <td>124.424238</td>
-      <td>5.656726</td>
-      <td>1.491629</td>
-    </tr>
-    <tr>
-      <td>Delta + E484K</td>
-      <td>2x BNT162b2</td>
-      <td>Delta background</td>
-      <td>3.196882</td>
-      <td>1.576263</td>
-      <td>207.503691</td>
-      <td>2.124967</td>
-      <td>8</td>
-      <td>440.938465</td>
-      <td>97.650319</td>
-      <td>5.039127</td>
-      <td>2.028139</td>
     </tr>
     <tr>
       <td>Delta RBD Abs depleted (x Delta PV)</td>
@@ -1624,32 +1575,74 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
       <td>9.179356</td>
     </tr>
     <tr>
-      <td>D614G + E484K</td>
-      <td>2x mRNA-1273 (day 100-150)</td>
-      <td>D614G background</td>
-      <td>2.818936</td>
-      <td>1.176104</td>
-      <td>614.618985</td>
-      <td>1.224988</td>
-      <td>6</td>
-      <td>752.900595</td>
-      <td>501.734890</td>
-      <td>3.315361</td>
-      <td>2.396842</td>
+      <td>D614G</td>
+      <td>2x BNT162b2</td>
+      <td>Delta background</td>
+      <td>0.410804</td>
+      <td>1.407030</td>
+      <td>1614.796842</td>
+      <td>2.205143</td>
+      <td>8</td>
+      <td>3560.857983</td>
+      <td>732.286672</td>
+      <td>0.578013</td>
+      <td>0.291965</td>
     </tr>
     <tr>
-      <td>D614G + K417N</td>
-      <td>2x mRNA-1273 (day 100-150)</td>
-      <td>D614G background</td>
-      <td>0.754875</td>
-      <td>1.123076</td>
-      <td>2295.176813</td>
-      <td>1.273351</td>
-      <td>6</td>
-      <td>2922.565200</td>
-      <td>1802.470173</td>
-      <td>0.847782</td>
-      <td>0.672150</td>
+      <td>D614G RBD Abs depleted (x D614G PV)</td>
+      <td>2x BNT162b2</td>
+      <td>Delta background</td>
+      <td>26.534590</td>
+      <td>2.890681</td>
+      <td>25.000000</td>
+      <td>1.000000</td>
+      <td>8</td>
+      <td>25.000000</td>
+      <td>25.000000</td>
+      <td>76.703038</td>
+      <td>9.179356</td>
+    </tr>
+    <tr>
+      <td>Delta + E484K</td>
+      <td>2x BNT162b2</td>
+      <td>Delta background</td>
+      <td>3.196882</td>
+      <td>1.576263</td>
+      <td>207.503691</td>
+      <td>2.124967</td>
+      <td>8</td>
+      <td>440.938465</td>
+      <td>97.650319</td>
+      <td>5.039127</td>
+      <td>2.028139</td>
+    </tr>
+    <tr>
+      <td>Delta RBD Abs depleted (x D614G PV)</td>
+      <td>2x BNT162b2</td>
+      <td>Delta background</td>
+      <td>2.904779</td>
+      <td>1.947386</td>
+      <td>228.370164</td>
+      <td>1.835415</td>
+      <td>8</td>
+      <td>419.154118</td>
+      <td>124.424238</td>
+      <td>5.656726</td>
+      <td>1.491629</td>
+    </tr>
+    <tr>
+      <td>Delta</td>
+      <td>2x BNT162b2</td>
+      <td>Delta background</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>663.364750</td>
+      <td>2.890681</td>
+      <td>8</td>
+      <td>1917.575942</td>
+      <td>229.483892</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
     </tr>
     <tr>
       <td>D614G RBD Abs depleted (x D614G PV)</td>
@@ -1666,6 +1659,34 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
       <td>29.809889</td>
     </tr>
     <tr>
+      <td>D614G + K417N</td>
+      <td>2x mRNA-1273 (day 100-150)</td>
+      <td>D614G background</td>
+      <td>0.754875</td>
+      <td>1.123076</td>
+      <td>2295.176813</td>
+      <td>1.273351</td>
+      <td>6</td>
+      <td>2922.565200</td>
+      <td>1802.470173</td>
+      <td>0.847782</td>
+      <td>0.672150</td>
+    </tr>
+    <tr>
+      <td>D614G + E484K</td>
+      <td>2x mRNA-1273 (day 100-150)</td>
+      <td>D614G background</td>
+      <td>2.818936</td>
+      <td>1.176104</td>
+      <td>614.618985</td>
+      <td>1.224988</td>
+      <td>6</td>
+      <td>752.900595</td>
+      <td>501.734890</td>
+      <td>3.315361</td>
+      <td>2.396842</td>
+    </tr>
+    <tr>
       <td>D614G</td>
       <td>2x mRNA-1273 (day 100-150)</td>
       <td>D614G background</td>
@@ -1678,6 +1699,34 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
       <td>1337.837402</td>
       <td>1.000000</td>
       <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>D614G RBD Abs depleted (x D614G PV)</td>
+      <td>Delta breakthrough</td>
+      <td>Delta background</td>
+      <td>45.182364</td>
+      <td>1.938590</td>
+      <td>55.605353</td>
+      <td>2.332077</td>
+      <td>8</td>
+      <td>129.675991</td>
+      <td>23.843699</td>
+      <td>87.590100</td>
+      <td>23.306813</td>
+    </tr>
+    <tr>
+      <td>Delta RBD Abs depleted (x D614G PV)</td>
+      <td>Delta breakthrough</td>
+      <td>Delta background</td>
+      <td>21.748698</td>
+      <td>1.634202</td>
+      <td>115.518702</td>
+      <td>2.369659</td>
+      <td>8</td>
+      <td>273.739911</td>
+      <td>48.749086</td>
+      <td>35.541769</td>
+      <td>13.308450</td>
     </tr>
     <tr>
       <td>Delta + E484K</td>
@@ -1708,34 +1757,6 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
       <td>2.132623</td>
     </tr>
     <tr>
-      <td>D614G RBD Abs depleted (x D614G PV)</td>
-      <td>Delta breakthrough</td>
-      <td>Delta background</td>
-      <td>45.182364</td>
-      <td>1.938590</td>
-      <td>55.605353</td>
-      <td>2.332077</td>
-      <td>8</td>
-      <td>129.675991</td>
-      <td>23.843699</td>
-      <td>87.590100</td>
-      <td>23.306813</td>
-    </tr>
-    <tr>
-      <td>Delta RBD Abs depleted (x Delta PV)</td>
-      <td>Delta breakthrough</td>
-      <td>Delta background</td>
-      <td>95.811396</td>
-      <td>2.610096</td>
-      <td>26.222155</td>
-      <td>1.116984</td>
-      <td>8</td>
-      <td>29.289734</td>
-      <td>23.475851</td>
-      <td>250.076908</td>
-      <td>36.708002</td>
-    </tr>
-    <tr>
       <td>D614G</td>
       <td>Delta breakthrough</td>
       <td>Delta background</td>
@@ -1764,18 +1785,32 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
       <td>1.000000</td>
     </tr>
     <tr>
-      <td>Delta RBD Abs depleted (x D614G PV)</td>
+      <td>Delta RBD Abs depleted (x Delta PV)</td>
       <td>Delta breakthrough</td>
       <td>Delta background</td>
-      <td>21.748698</td>
-      <td>1.634202</td>
-      <td>115.518702</td>
-      <td>2.369659</td>
+      <td>95.811396</td>
+      <td>2.610096</td>
+      <td>26.222155</td>
+      <td>1.116984</td>
       <td>8</td>
-      <td>273.739911</td>
-      <td>48.749086</td>
-      <td>35.541769</td>
-      <td>13.308450</td>
+      <td>29.289734</td>
+      <td>23.475851</td>
+      <td>250.076908</td>
+      <td>36.708002</td>
+    </tr>
+    <tr>
+      <td>D614G RBD Abs depleted (x D614G PV)</td>
+      <td>early 2020 infection (day 100-150)</td>
+      <td>D614G background</td>
+      <td>30.840230</td>
+      <td>1.932909</td>
+      <td>23.317270</td>
+      <td>1.456307</td>
+      <td>6</td>
+      <td>33.957098</td>
+      <td>16.011235</td>
+      <td>59.611367</td>
+      <td>15.955343</td>
     </tr>
     <tr>
       <td>D614G + E484K</td>
@@ -1806,20 +1841,6 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
       <td>1.000000</td>
     </tr>
     <tr>
-      <td>D614G RBD Abs depleted (x D614G PV)</td>
-      <td>early 2020 infection (day 100-150)</td>
-      <td>D614G background</td>
-      <td>30.840230</td>
-      <td>1.932909</td>
-      <td>23.317270</td>
-      <td>1.456307</td>
-      <td>6</td>
-      <td>33.957098</td>
-      <td>16.011235</td>
-      <td>59.611367</td>
-      <td>15.955343</td>
-    </tr>
-    <tr>
       <td>D614G + K417N</td>
       <td>early 2020 infection (day 100-150)</td>
       <td>D614G background</td>
@@ -1832,20 +1853,6 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
       <td>347.801692</td>
       <td>1.590044</td>
       <td>0.742075</td>
-    </tr>
-    <tr>
-      <td>D614G RBD Abs depleted (x D614G PV)</td>
-      <td>early 2020 infection (day 30-60)</td>
-      <td>D614G background</td>
-      <td>20.539854</td>
-      <td>4.803449</td>
-      <td>90.826601</td>
-      <td>5.461293</td>
-      <td>4</td>
-      <td>496.030680</td>
-      <td>16.630970</td>
-      <td>98.662147</td>
-      <td>4.276063</td>
     </tr>
     <tr>
       <td>D614G + K417N</td>
@@ -1890,32 +1897,60 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
       <td>1.000000</td>
     </tr>
     <tr>
-      <td>Delta + E484K</td>
-      <td>primary Delta infection</td>
-      <td>Delta background</td>
-      <td>8.391563</td>
-      <td>2.266892</td>
-      <td>579.566905</td>
-      <td>2.592924</td>
-      <td>8</td>
-      <td>1502.773208</td>
-      <td>223.518623</td>
-      <td>19.022765</td>
-      <td>3.701793</td>
+      <td>D614G RBD Abs depleted (x D614G PV)</td>
+      <td>early 2020 infection (day 30-60)</td>
+      <td>D614G background</td>
+      <td>20.539854</td>
+      <td>4.803449</td>
+      <td>90.826601</td>
+      <td>5.461293</td>
+      <td>4</td>
+      <td>496.030680</td>
+      <td>16.630970</td>
+      <td>98.662147</td>
+      <td>4.276063</td>
     </tr>
     <tr>
-      <td>D614G RBD Abs depleted (x D614G PV)</td>
+      <td>Beta</td>
+      <td>primary Beta infection</td>
+      <td>Beta background</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>2042.066921</td>
+      <td>2.479761</td>
+      <td>9</td>
+      <td>5063.837555</td>
+      <td>823.493500</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>Beta RBD Abs depleted (x Beta PV)</td>
+      <td>primary Beta infection</td>
+      <td>Beta background</td>
+      <td>15.807993</td>
+      <td>1.932805</td>
+      <td>129.179393</td>
+      <td>1.996372</td>
+      <td>9</td>
+      <td>257.890141</td>
+      <td>64.707071</td>
+      <td>30.553762</td>
+      <td>8.178785</td>
+    </tr>
+    <tr>
+      <td>Delta</td>
       <td>primary Delta infection</td>
       <td>Delta background</td>
-      <td>142.743066</td>
-      <td>2.405840</td>
-      <td>34.071513</td>
-      <td>1.605872</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>4863.472244</td>
+      <td>1.975576</td>
       <td>8</td>
-      <td>54.714488</td>
-      <td>21.216830</td>
-      <td>343.416908</td>
-      <td>59.331915</td>
+      <td>9608.156835</td>
+      <td>2461.800184</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
     </tr>
     <tr>
       <td>Delta + K417N</td>
@@ -1930,6 +1965,20 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
       <td>971.635754</td>
       <td>3.104142</td>
       <td>1.524742</td>
+    </tr>
+    <tr>
+      <td>D614G RBD Abs depleted (x D614G PV)</td>
+      <td>primary Delta infection</td>
+      <td>Delta background</td>
+      <td>142.743066</td>
+      <td>2.405840</td>
+      <td>34.071513</td>
+      <td>1.605872</td>
+      <td>8</td>
+      <td>54.714488</td>
+      <td>21.216830</td>
+      <td>343.416908</td>
+      <td>59.331915</td>
     </tr>
     <tr>
       <td>D614G</td>
@@ -1960,18 +2009,18 @@ geomean_mut_effects.to_csv(combined_neut_titers_summary_file, index=False)
       <td>46.860901</td>
     </tr>
     <tr>
-      <td>Delta</td>
+      <td>Delta + E484K</td>
       <td>primary Delta infection</td>
       <td>Delta background</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>4863.472244</td>
-      <td>1.975576</td>
+      <td>8.391563</td>
+      <td>2.266892</td>
+      <td>579.566905</td>
+      <td>2.592924</td>
       <td>8</td>
-      <td>9608.156835</td>
-      <td>2461.800184</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
+      <td>1502.773208</td>
+      <td>223.518623</td>
+      <td>19.022765</td>
+      <td>3.701793</td>
     </tr>
     <tr>
       <td>Delta RBD Abs depleted (x Delta PV)</td>
