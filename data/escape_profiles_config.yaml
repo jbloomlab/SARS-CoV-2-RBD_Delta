@@ -133,14 +133,14 @@ Pfizer:
 
 primary_Delta:
   conditions:
-    Delta_1_500: Delta 1
+    Delta_8_500: Delta 8
     Delta_3_350: Delta 3
     Delta_4_350: Delta 4
-    Delta_6_500: Delta 6
-    Delta_7_1250: Delta 7
-    Delta_8_500: Delta 8
-    Delta_10_1250: Delta 10
+    Delta_1_500: Delta 1
     Delta_11_500: Delta 11
+    Delta_6_500: Delta 6
+    Delta_10_1250: Delta 10
+    Delta_7_1250: Delta 7
   plot_auto_identified_sites: default # sensitive
   # add_sites: [346,365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,472,477,478,484,494,501]
   add_sites: [417,452,477,478,484,501]

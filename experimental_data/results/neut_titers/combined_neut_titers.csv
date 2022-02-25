@@ -303,3 +303,21 @@ participant C (day 32),D614G RBD Abs depleted (x D614G PV),0.036028029,27.756167
 participant C (day 32),D614G,0.000287381,3479.699831,late2020,False,early 2020 infection (day 30-60),day 30-60,D614G background,True,5797.983579687812,1.6662309570597593
 participant I (day 26),D614G RBD Abs depleted (x D614G PV),0.046926114,21.31009625,late2020,False,early 2020 infection (day 30-60),day 30-60,D614G background,True,227.7368831864822,10.686806878522766
 participant I (day 26),D614G,0.00713024,140.2477274,late2020,False,early 2020 infection (day 30-60),day 30-60,D614G background,True,227.7368831864822,1.6238187057174531
+K007,Beta RBD Abs depleted (x Beta PV),0.010060183424630264,99.40176613,summer2021,False,primary Beta infection,day 30-60,Beta background,False,2067.6278989999996,20.800715917822895
+K007,Beta,0.000483646017972405,2067.627899,summer2021,False,primary Beta infection,day 30-60,Beta background,False,2067.6278989999996,0.9999999999999998
+K031,Beta RBD Abs depleted (x Beta PV),0.005239643159426105,190.8526916,summer2021,False,primary Beta infection,day 30-60,Beta background,False,3108.6345840000017,16.288135933211024
+K031,Beta,0.0003216846409503884,3108.634584,summer2021,False,primary Beta infection,day 30-60,Beta background,False,3108.6345840000017,1.0000000000000007
+K033,Beta RBD Abs depleted (x Beta PV),0.0028813918731716644,347.0544945,summer2021,False,primary Beta infection,day 30-60,Beta background,False,4600.806832000001,13.256727415757474
+K033,Beta,0.00021735318097788808,4600.806832,summer2021,False,primary Beta infection,day 30-60,Beta background,False,4600.806832000001,1.0000000000000002
+K040,Beta RBD Abs depleted (x Beta PV),0.00464301066815043,215.3774935,summer2021,False,primary Beta infection,day 30-60,Beta background,False,3369.0069329999997,15.64233513099176
+K040,Beta,0.0002968233725507741,3369.006933,summer2021,False,primary Beta infection,day 30-60,Beta background,False,3369.0069329999997,0.9999999999999999
+K041,Beta RBD Abs depleted (x Beta PV),0.010180062141680976,98.23122748,summer2021,False,primary Beta infection,day 30-60,Beta background,False,2459.294007999999,25.035765826103663
+K041,Beta,0.0004066207605707304,2459.294008,summer2021,False,primary Beta infection,day 30-60,Beta background,False,2459.294007999999,0.9999999999999997
+K046,Beta RBD Abs depleted (x Beta PV),0.004172573620931736,239.6602411,summer2021,False,primary Beta infection,day 30-60,Beta background,False,1683.4355500000004,7.024258768468711
+K046,Beta,0.0005940233351968835,1683.43555,summer2021,False,primary Beta infection,day 30-60,Beta background,False,1683.4355500000004,1.0000000000000002
+K114,Beta RBD Abs depleted (x Beta PV),0.02232739668954748,44.78802495,summer2021,False,primary Beta infection,day 30-60,Beta background,False,1138.0785499999995,25.410331249714986
+K114,Beta,0.0008786739720206484,1138.07855,summer2021,False,primary Beta infection,day 30-60,Beta background,False,1138.0785499999995,0.9999999999999996
+K115,Beta RBD Abs depleted (x Beta PV),0.018773441886480696,53.26673745,summer2021,False,primary Beta infection,day 30-60,Beta background,False,258.8563667999999,4.859624959065329
+K115,Beta,0.0038631462396002385,258.8563668,summer2021,False,primary Beta infection,day 30-60,Beta background,False,258.8563667999999,0.9999999999999996
+K119,Beta RBD Abs depleted (x Beta PV),0.007950872557099276,125.7723593,summer2021,False,primary Beta infection,day 30-60,Beta background,False,5081.755144999996,40.404387524278526
+K119,Beta,0.00019678240518611212,5081.755145,summer2021,False,primary Beta infection,day 30-60,Beta background,False,5081.755144999996,0.9999999999999993
