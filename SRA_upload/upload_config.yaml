@@ -1,0 +1,12 @@
+# the BioSample accession
+biosample_accession:
+
+# name of CSV file listing barcode runs to uploade
+barcode_runs: barcode_runs_Delta_MAP.csv
+
+# the following come from the SRA FTP upload instructions
+ftp_username:
+ftp_account_folder:
+
+# Meaningful name for this sample's FTP folder:
+ftp_subfolder: Delta_MAP_barcodes
