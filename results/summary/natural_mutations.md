@@ -124,7 +124,7 @@ escape_fracs
   <tbody>
     <tr>
       <th>0</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>N</td>
       <td>A</td>
@@ -133,7 +133,7 @@ escape_fracs
     </tr>
     <tr>
       <th>1</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>N</td>
       <td>C</td>
@@ -142,7 +142,7 @@ escape_fracs
     </tr>
     <tr>
       <th>2</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>N</td>
       <td>D</td>
@@ -151,7 +151,7 @@ escape_fracs
     </tr>
     <tr>
       <th>3</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>N</td>
       <td>E</td>
@@ -160,7 +160,7 @@ escape_fracs
     </tr>
     <tr>
       <th>4</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>N</td>
       <td>F</td>
@@ -178,7 +178,7 @@ escape_fracs
     </tr>
     <tr>
       <th>53883</th>
-      <td>P14_repeat_1250</td>
+      <td>P14_1250</td>
       <td>531</td>
       <td>T</td>
       <td>R</td>
@@ -187,7 +187,7 @@ escape_fracs
     </tr>
     <tr>
       <th>53884</th>
-      <td>P14_repeat_1250</td>
+      <td>P14_1250</td>
       <td>531</td>
       <td>T</td>
       <td>S</td>
@@ -196,7 +196,7 @@ escape_fracs
     </tr>
     <tr>
       <th>53885</th>
-      <td>P14_repeat_1250</td>
+      <td>P14_1250</td>
       <td>531</td>
       <td>T</td>
       <td>V</td>
@@ -205,7 +205,7 @@ escape_fracs
     </tr>
     <tr>
       <th>53886</th>
-      <td>P14_repeat_1250</td>
+      <td>P14_1250</td>
       <td>531</td>
       <td>T</td>
       <td>W</td>
@@ -214,7 +214,7 @@ escape_fracs
     </tr>
     <tr>
       <th>53887</th>
-      <td>P14_repeat_1250</td>
+      <td>P14_1250</td>
       <td>531</td>
       <td>T</td>
       <td>Y</td>
@@ -282,7 +282,7 @@ display(HTML(sitecounts_strong_sites.head(n=20).to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>sensitive_max_mut</td>
       <td>417</td>
       <td>K</td>
@@ -300,7 +300,7 @@ display(HTML(sitecounts_strong_sites.head(n=20).to_html(index=False)))
       <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417Q (3), K417M (3)</td>
     </tr>
     <tr>
-      <td>P05_repeat_500</td>
+      <td>P05_500</td>
       <td>sensitive_max_mut</td>
       <td>417</td>
       <td>K</td>
@@ -309,7 +309,7 @@ display(HTML(sitecounts_strong_sites.head(n=20).to_html(index=False)))
       <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417Q (3), K417M (3)</td>
     </tr>
     <tr>
-      <td>268C_repeat_500</td>
+      <td>268C_500</td>
       <td>sensitive_max_mut</td>
       <td>417</td>
       <td>K</td>
@@ -327,7 +327,7 @@ display(HTML(sitecounts_strong_sites.head(n=20).to_html(index=False)))
       <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417Q (3), K417M (3)</td>
     </tr>
     <tr>
-      <td>273C_repeat_500</td>
+      <td>273C_500</td>
       <td>sensitive_max_mut</td>
       <td>417</td>
       <td>K</td>
@@ -345,7 +345,7 @@ display(HTML(sitecounts_strong_sites.head(n=20).to_html(index=False)))
       <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
     </tr>
     <tr>
-      <td>P05_repeat_500</td>
+      <td>P05_500</td>
       <td>sensitive</td>
       <td>417</td>
       <td>K</td>
@@ -381,7 +381,7 @@ display(HTML(sitecounts_strong_sites.head(n=20).to_html(index=False)))
       <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417Q (3), K417M (3)</td>
     </tr>
     <tr>
-      <td>268C_repeat_500</td>
+      <td>268C_500</td>
       <td>sensitive</td>
       <td>417</td>
       <td>K</td>
@@ -390,7 +390,7 @@ display(HTML(sitecounts_strong_sites.head(n=20).to_html(index=False)))
       <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>default</td>
       <td>417</td>
       <td>K</td>
@@ -399,7 +399,7 @@ display(HTML(sitecounts_strong_sites.head(n=20).to_html(index=False)))
       <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
     </tr>
     <tr>
-      <td>278C_repeat_1250</td>
+      <td>278C_1250</td>
       <td>sensitive</td>
       <td>417</td>
       <td>K</td>
@@ -408,7 +408,7 @@ display(HTML(sitecounts_strong_sites.head(n=20).to_html(index=False)))
       <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417Q (3), K417M (3)</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>sensitive</td>
       <td>417</td>
       <td>K</td>
@@ -417,7 +417,7 @@ display(HTML(sitecounts_strong_sites.head(n=20).to_html(index=False)))
       <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
     </tr>
     <tr>
-      <td>273C_repeat_500</td>
+      <td>273C_500</td>
       <td>sensitive</td>
       <td>417</td>
       <td>K</td>
@@ -426,7 +426,7 @@ display(HTML(sitecounts_strong_sites.head(n=20).to_html(index=False)))
       <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
     </tr>
     <tr>
-      <td>277C_repeat_500</td>
+      <td>277C_500</td>
       <td>default</td>
       <td>417</td>
       <td>K</td>
@@ -435,7 +435,7 @@ display(HTML(sitecounts_strong_sites.head(n=20).to_html(index=False)))
       <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417Q (3), K417M (3)</td>
     </tr>
     <tr>
-      <td>278C_repeat_1250</td>
+      <td>278C_1250</td>
       <td>sensitive_max_mut</td>
       <td>417</td>
       <td>K</td>
@@ -444,7 +444,7 @@ display(HTML(sitecounts_strong_sites.head(n=20).to_html(index=False)))
       <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417Q (3), K417M (3)</td>
     </tr>
     <tr>
-      <td>277C_repeat_500</td>
+      <td>277C_500</td>
       <td>sensitive</td>
       <td>417</td>
       <td>K</td>
@@ -453,7 +453,7 @@ display(HTML(sitecounts_strong_sites.head(n=20).to_html(index=False)))
       <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
     </tr>
     <tr>
-      <td>277C_repeat_500</td>
+      <td>277C_500</td>
       <td>sensitive_max_mut</td>
       <td>417</td>
       <td>K</td>
@@ -551,8 +551,8 @@ for name, specs in escape_profiles_config.items():
 ```
 
     
-    Analyzing natural mutations for Delta_breakthrough_repeat
-    Writing counts of mutations at sites of strong escape to results/GISAID_mutations/Delta_breakthrough_repeat_mutation_counts.csv. First few lines:
+    Analyzing natural mutations for Delta_breakthrough
+    Writing counts of mutations at sites of strong escape to results/GISAID_mutations/Delta_breakthrough_mutation_counts.csv. First few lines:
 
 
 
@@ -569,32 +569,8 @@ for name, specs in escape_profiles_config.items():
   </thead>
   <tbody>
     <tr>
-      <td>268C</td>
-      <td>sensitive</td>
-      <td>417</td>
-      <td>K</td>
-      <td>4734</td>
-      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
-    </tr>
-    <tr>
-      <td>278C</td>
-      <td>sensitive</td>
-      <td>417</td>
-      <td>K</td>
-      <td>4734</td>
-      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417Q (3), K417M (3)</td>
-    </tr>
-    <tr>
       <td>267C</td>
-      <td>sensitive</td>
-      <td>417</td>
-      <td>K</td>
-      <td>4734</td>
-      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
-    </tr>
-    <tr>
-      <td>273C</td>
-      <td>sensitive</td>
+      <td>default</td>
       <td>417</td>
       <td>K</td>
       <td>4734</td>
@@ -602,15 +578,15 @@ for name, specs in escape_profiles_config.items():
     </tr>
     <tr>
       <td>277C</td>
-      <td>sensitive</td>
+      <td>default</td>
       <td>417</td>
       <td>K</td>
       <td>4734</td>
-      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
+      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417Q (3), K417M (3)</td>
     </tr>
     <tr>
       <td>274C</td>
-      <td>sensitive</td>
+      <td>default</td>
       <td>484</td>
       <td>E</td>
       <td>3513</td>
@@ -618,7 +594,7 @@ for name, specs in escape_profiles_config.items():
     </tr>
     <tr>
       <td>276C</td>
-      <td>sensitive</td>
+      <td>default</td>
       <td>484</td>
       <td>E</td>
       <td>3513</td>
@@ -626,15 +602,7 @@ for name, specs in escape_profiles_config.items():
     </tr>
     <tr>
       <td>279C</td>
-      <td>sensitive</td>
-      <td>484</td>
-      <td>E</td>
-      <td>3513</td>
-      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
-    </tr>
-    <tr>
-      <td>278C</td>
-      <td>sensitive</td>
+      <td>default</td>
       <td>484</td>
       <td>E</td>
       <td>3513</td>
@@ -642,17 +610,49 @@ for name, specs in escape_profiles_config.items():
     </tr>
     <tr>
       <td>267C</td>
-      <td>sensitive</td>
+      <td>default</td>
       <td>484</td>
       <td>E</td>
       <td>3513</td>
       <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
     </tr>
+    <tr>
+      <td>273C</td>
+      <td>default</td>
+      <td>484</td>
+      <td>E</td>
+      <td>3513</td>
+      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>278C</td>
+      <td>default</td>
+      <td>484</td>
+      <td>E</td>
+      <td>3513</td>
+      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>267C</td>
+      <td>default</td>
+      <td>408</td>
+      <td>R</td>
+      <td>1258</td>
+      <td>R408I (985), R408G (172), R408S (78), R408K (19), R408T (4)</td>
+    </tr>
+    <tr>
+      <td>267C</td>
+      <td>default</td>
+      <td>475</td>
+      <td>A</td>
+      <td>323</td>
+      <td>A475S (171), A475V (136), A475T (16)</td>
+    </tr>
   </tbody>
 </table>
 
 
-    Plotting which antibodies / sera are escaped by mutations at all sites of escape with at least 5 mutation counts and saving to results/GISAID_mutations/Delta_breakthrough_repeat_mutation_counts.pdf.
+    Plotting which antibodies / sera are escaped by mutations at all sites of escape with at least 5 mutation counts and saving to results/GISAID_mutations/Delta_breakthrough_mutation_counts.pdf.
 
 
 
@@ -662,8 +662,8 @@ for name, specs in escape_profiles_config.items():
 
 
     
-    Analyzing natural mutations for Pfizer_repeat
-    Writing counts of mutations at sites of strong escape to results/GISAID_mutations/Pfizer_repeat_mutation_counts.csv. First few lines:
+    Analyzing natural mutations for Pfizer
+    Writing counts of mutations at sites of strong escape to results/GISAID_mutations/Pfizer_mutation_counts.csv. First few lines:
 
 
 
@@ -680,72 +680,16 @@ for name, specs in escape_profiles_config.items():
   </thead>
   <tbody>
     <tr>
-      <td>P05</td>
-      <td>sensitive</td>
-      <td>417</td>
-      <td>K</td>
-      <td>4734</td>
-      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
-    </tr>
-    <tr>
       <td>P08</td>
-      <td>sensitive</td>
-      <td>484</td>
-      <td>E</td>
-      <td>3513</td>
-      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
-    </tr>
-    <tr>
-      <td>P08</td>
-      <td>sensitive</td>
+      <td>default</td>
       <td>354</td>
       <td>N</td>
       <td>1033</td>
       <td>N354K (755), N354T (103), N354S (85), N354D (62), N354H (15), N354Y (13)</td>
     </tr>
     <tr>
-      <td>P08</td>
-      <td>sensitive</td>
-      <td>344</td>
-      <td>A</td>
-      <td>876</td>
-      <td>A344S (678), A344T (144), A344V (44), A344D (6), A344G (3), A344P (1)</td>
-    </tr>
-    <tr>
-      <td>P08</td>
-      <td>sensitive</td>
-      <td>348</td>
-      <td>A</td>
-      <td>816</td>
-      <td>A348S (731), A348V (37), A348T (29), A348E (9), A348P (8), A348G (2)</td>
-    </tr>
-    <tr>
       <td>P09</td>
-      <td>sensitive</td>
-      <td>384</td>
-      <td>P</td>
-      <td>672</td>
-      <td>P384L (480), P384S (165), P384H (9), P384A (9), P384R (8), P384T (1)</td>
-    </tr>
-    <tr>
-      <td>P14</td>
-      <td>sensitive</td>
-      <td>384</td>
-      <td>P</td>
-      <td>672</td>
-      <td>P384L (480), P384S (165), P384A (9), P384H (9), P384R (8), P384T (1)</td>
-    </tr>
-    <tr>
-      <td>P12</td>
-      <td>sensitive</td>
-      <td>384</td>
-      <td>P</td>
-      <td>672</td>
-      <td>P384L (480), P384S (165), P384H (9), P384A (9), P384R (8), P384T (1)</td>
-    </tr>
-    <tr>
-      <td>P05</td>
-      <td>sensitive</td>
+      <td>default</td>
       <td>384</td>
       <td>P</td>
       <td>672</td>
@@ -753,17 +697,73 @@ for name, specs in escape_profiles_config.items():
     </tr>
     <tr>
       <td>P02</td>
-      <td>sensitive</td>
+      <td>default</td>
       <td>384</td>
       <td>P</td>
       <td>672</td>
       <td>P384L (480), P384S (165), P384A (9), P384H (9), P384R (8), P384T (1)</td>
     </tr>
+    <tr>
+      <td>P04</td>
+      <td>default</td>
+      <td>384</td>
+      <td>P</td>
+      <td>672</td>
+      <td>P384L (480), P384S (165), P384H (9), P384A (9), P384R (8), P384T (1)</td>
+    </tr>
+    <tr>
+      <td>P12</td>
+      <td>default</td>
+      <td>384</td>
+      <td>P</td>
+      <td>672</td>
+      <td>P384L (480), P384S (165), P384A (9), P384H (9), P384R (8), P384T (1)</td>
+    </tr>
+    <tr>
+      <td>P05</td>
+      <td>default</td>
+      <td>384</td>
+      <td>P</td>
+      <td>672</td>
+      <td>P384L (480), P384S (165), P384H (9), P384A (9), P384R (8), P384T (1)</td>
+    </tr>
+    <tr>
+      <td>P08</td>
+      <td>default</td>
+      <td>352</td>
+      <td>A</td>
+      <td>481</td>
+      <td>A352S (298), A352V (156), A352T (12), A352D (11), A352G (4)</td>
+    </tr>
+    <tr>
+      <td>P08</td>
+      <td>default</td>
+      <td>356</td>
+      <td>K</td>
+      <td>449</td>
+      <td>K356N (125), K356E (116), K356R (101), K356Q (85), K356M (19), K356T (3)</td>
+    </tr>
+    <tr>
+      <td>P03</td>
+      <td>default</td>
+      <td>356</td>
+      <td>K</td>
+      <td>449</td>
+      <td>K356N (125), K356E (116), K356R (101), K356Q (85), K356M (19), K356T (3)</td>
+    </tr>
+    <tr>
+      <td>P14</td>
+      <td>default</td>
+      <td>362</td>
+      <td>V</td>
+      <td>432</td>
+      <td>V362F (363), V362L (53), V362I (16)</td>
+    </tr>
   </tbody>
 </table>
 
 
-    Plotting which antibodies / sera are escaped by mutations at all sites of escape with at least 5 mutation counts and saving to results/GISAID_mutations/Pfizer_repeat_mutation_counts.pdf.
+    Plotting which antibodies / sera are escaped by mutations at all sites of escape with at least 5 mutation counts and saving to results/GISAID_mutations/Pfizer_mutation_counts.pdf.
 
 
 
@@ -791,48 +791,8 @@ for name, specs in escape_profiles_config.items():
   </thead>
   <tbody>
     <tr>
-      <td>Delta 6</td>
-      <td>sensitive</td>
-      <td>417</td>
-      <td>K</td>
-      <td>4734</td>
-      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
-    </tr>
-    <tr>
-      <td>Delta 10</td>
-      <td>sensitive</td>
-      <td>417</td>
-      <td>K</td>
-      <td>4734</td>
-      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
-    </tr>
-    <tr>
       <td>Delta 11</td>
-      <td>sensitive</td>
-      <td>417</td>
-      <td>K</td>
-      <td>4734</td>
-      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417Q (3), K417M (3)</td>
-    </tr>
-    <tr>
-      <td>Delta 11</td>
-      <td>sensitive</td>
-      <td>484</td>
-      <td>E</td>
-      <td>3513</td>
-      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
-    </tr>
-    <tr>
-      <td>Delta 10</td>
-      <td>sensitive</td>
-      <td>484</td>
-      <td>E</td>
-      <td>3513</td>
-      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
-    </tr>
-    <tr>
-      <td>Delta 3</td>
-      <td>sensitive</td>
+      <td>default</td>
       <td>484</td>
       <td>E</td>
       <td>3513</td>
@@ -840,7 +800,7 @@ for name, specs in escape_profiles_config.items():
     </tr>
     <tr>
       <td>Delta 1</td>
-      <td>sensitive</td>
+      <td>default</td>
       <td>484</td>
       <td>E</td>
       <td>3513</td>
@@ -848,15 +808,7 @@ for name, specs in escape_profiles_config.items():
     </tr>
     <tr>
       <td>Delta 8</td>
-      <td>sensitive</td>
-      <td>484</td>
-      <td>E</td>
-      <td>3513</td>
-      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
-    </tr>
-    <tr>
-      <td>Delta 7</td>
-      <td>sensitive</td>
+      <td>default</td>
       <td>484</td>
       <td>E</td>
       <td>3513</td>
@@ -864,11 +816,59 @@ for name, specs in escape_profiles_config.items():
     </tr>
     <tr>
       <td>Delta 6</td>
-      <td>sensitive</td>
+      <td>default</td>
       <td>484</td>
       <td>E</td>
       <td>3513</td>
       <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>Delta 4</td>
+      <td>default</td>
+      <td>484</td>
+      <td>E</td>
+      <td>3513</td>
+      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>Delta 3</td>
+      <td>default</td>
+      <td>484</td>
+      <td>E</td>
+      <td>3513</td>
+      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>Delta 11</td>
+      <td>default</td>
+      <td>478</td>
+      <td>K</td>
+      <td>852</td>
+      <td>K478T (762), K478R (69), K478I (19), K478E (1), K478N (1)</td>
+    </tr>
+    <tr>
+      <td>Delta 3</td>
+      <td>default</td>
+      <td>478</td>
+      <td>K</td>
+      <td>852</td>
+      <td>K478T (762), K478R (69), K478I (19), K478E (1), K478N (1)</td>
+    </tr>
+    <tr>
+      <td>Delta 7</td>
+      <td>default</td>
+      <td>384</td>
+      <td>P</td>
+      <td>672</td>
+      <td>P384L (480), P384S (165), P384H (9), P384A (9), P384R (8), P384T (1)</td>
+    </tr>
+    <tr>
+      <td>Delta 4</td>
+      <td>default</td>
+      <td>490</td>
+      <td>F</td>
+      <td>670</td>
+      <td>F490L (370), F490S (245), F490V (44), F490I (10), F490N (1)</td>
     </tr>
   </tbody>
 </table>
@@ -902,64 +902,8 @@ for name, specs in escape_profiles_config.items():
   </thead>
   <tbody>
     <tr>
-      <td>Delta 6</td>
-      <td>sensitive</td>
-      <td>417</td>
-      <td>K</td>
-      <td>4734</td>
-      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
-    </tr>
-    <tr>
-      <td>P05</td>
-      <td>sensitive</td>
-      <td>417</td>
-      <td>K</td>
-      <td>4734</td>
-      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
-    </tr>
-    <tr>
-      <td>Delta 10</td>
-      <td>sensitive</td>
-      <td>417</td>
-      <td>K</td>
-      <td>4734</td>
-      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
-    </tr>
-    <tr>
-      <td>Delta 11</td>
-      <td>sensitive</td>
-      <td>417</td>
-      <td>K</td>
-      <td>4734</td>
-      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417Q (3), K417M (3)</td>
-    </tr>
-    <tr>
-      <td>268C</td>
-      <td>sensitive</td>
-      <td>417</td>
-      <td>K</td>
-      <td>4734</td>
-      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
-    </tr>
-    <tr>
-      <td>278C</td>
-      <td>sensitive</td>
-      <td>417</td>
-      <td>K</td>
-      <td>4734</td>
-      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417Q (3), K417M (3)</td>
-    </tr>
-    <tr>
       <td>267C</td>
-      <td>sensitive</td>
-      <td>417</td>
-      <td>K</td>
-      <td>4734</td>
-      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
-    </tr>
-    <tr>
-      <td>273C</td>
-      <td>sensitive</td>
+      <td>default</td>
       <td>417</td>
       <td>K</td>
       <td>4734</td>
@@ -967,15 +911,71 @@ for name, specs in escape_profiles_config.items():
     </tr>
     <tr>
       <td>277C</td>
-      <td>sensitive</td>
+      <td>default</td>
       <td>417</td>
       <td>K</td>
       <td>4734</td>
-      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417M (3), K417Q (3)</td>
+      <td>K417N (4660), K417T (29), K417R (26), K417E (13), K417Q (3), K417M (3)</td>
     </tr>
     <tr>
       <td>274C</td>
-      <td>sensitive</td>
+      <td>default</td>
+      <td>484</td>
+      <td>E</td>
+      <td>3513</td>
+      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>276C</td>
+      <td>default</td>
+      <td>484</td>
+      <td>E</td>
+      <td>3513</td>
+      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>Delta 11</td>
+      <td>default</td>
+      <td>484</td>
+      <td>E</td>
+      <td>3513</td>
+      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>279C</td>
+      <td>default</td>
+      <td>484</td>
+      <td>E</td>
+      <td>3513</td>
+      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>Delta 1</td>
+      <td>default</td>
+      <td>484</td>
+      <td>E</td>
+      <td>3513</td>
+      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>267C</td>
+      <td>default</td>
+      <td>484</td>
+      <td>E</td>
+      <td>3513</td>
+      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>Delta 8</td>
+      <td>default</td>
+      <td>484</td>
+      <td>E</td>
+      <td>3513</td>
+      <td>E484Q (2449), E484K (504), E484A (334), E484D (77), E484G (76), E484V (72), E484S (1)</td>
+    </tr>
+    <tr>
+      <td>Delta 6</td>
+      <td>default</td>
       <td>484</td>
       <td>E</td>
       <td>3513</td>
@@ -1039,7 +1039,7 @@ display(HTML(escape_and_freq.head().to_html()))
   <tbody>
     <tr>
       <th>0</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>N</td>
       <td>A</td>
@@ -1053,7 +1053,7 @@ display(HTML(escape_and_freq.head().to_html()))
     </tr>
     <tr>
       <th>1</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>N</td>
       <td>C</td>
@@ -1067,7 +1067,7 @@ display(HTML(escape_and_freq.head().to_html()))
     </tr>
     <tr>
       <th>2</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>N</td>
       <td>D</td>
@@ -1081,7 +1081,7 @@ display(HTML(escape_and_freq.head().to_html()))
     </tr>
     <tr>
       <th>3</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>N</td>
       <td>E</td>
@@ -1095,7 +1095,7 @@ display(HTML(escape_and_freq.head().to_html()))
     </tr>
     <tr>
       <th>4</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>N</td>
       <td>F</td>
@@ -1247,8 +1247,8 @@ for name, specs in escape_profiles_config.items():
 ```
 
     
-    Analyzing natural mutations for Delta_breakthrough_repeat
-    Plotting average across conditions and saving to results/GISAID_mutations/Delta_breakthrough_repeat_escape_vs_freq_average.pdf
+    Analyzing natural mutations for Delta_breakthrough
+    Plotting average across conditions and saving to results/GISAID_mutations/Delta_breakthrough_escape_vs_freq_average.pdf
 
 
 
@@ -1258,8 +1258,8 @@ for name, specs in escape_profiles_config.items():
 
 
     
-    Analyzing natural mutations for Pfizer_repeat
-    Plotting average across conditions and saving to results/GISAID_mutations/Pfizer_repeat_escape_vs_freq_average.pdf
+    Analyzing natural mutations for Pfizer
+    Plotting average across conditions and saving to results/GISAID_mutations/Pfizer_escape_vs_freq_average.pdf
 
 
 

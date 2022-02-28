@@ -130,7 +130,7 @@ display(HTML(escape_fracs.head().to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>N</td>
       <td>A</td>
@@ -142,7 +142,7 @@ display(HTML(escape_fracs.head().to_html(index=False)))
       <td>2</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>N</td>
       <td>C</td>
@@ -154,7 +154,7 @@ display(HTML(escape_fracs.head().to_html(index=False)))
       <td>2</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>N</td>
       <td>D</td>
@@ -166,7 +166,7 @@ display(HTML(escape_fracs.head().to_html(index=False)))
       <td>2</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>N</td>
       <td>E</td>
@@ -178,7 +178,7 @@ display(HTML(escape_fracs.head().to_html(index=False)))
       <td>2</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>N</td>
       <td>F</td>

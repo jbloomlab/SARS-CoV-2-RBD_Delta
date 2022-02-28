@@ -1456,129 +1456,129 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>211112</td>
       <td>delta_17</td>
       <td>lib1</td>
-      <td>P03_repeat</td>
+      <td>P03</td>
       <td>1250.0</td>
       <td>abneg</td>
       <td>delta_17_lib1_abneg</td>
       <td>ab_selection</td>
       <td>1022039.0</td>
       <td>0.094</td>
-      <td>delta_17-P03_repeat-1250-abneg</td>
-      <td>delta_17-P03_repeat-1250-abneg_lib1</td>
-      <td>results/counts/delta_17-P03_repeat-1250-abneg_lib1_counts.csv</td>
-      <td>results/counts/delta_17-P03_repeat-1250-abneg_lib1_fates.csv</td>
+      <td>delta_17-P03-1250-abneg</td>
+      <td>delta_17-P03-1250-abneg_lib1</td>
+      <td>results/counts/delta_17-P03-1250-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_17-P03-1250-abneg_lib1_fates.csv</td>
     </tr>
     <tr>
       <td>211112</td>
       <td>delta_17</td>
       <td>lib2</td>
-      <td>P03_repeat</td>
+      <td>P03</td>
       <td>1250.0</td>
       <td>abneg</td>
       <td>delta_17_lib2_abneg</td>
       <td>ab_selection</td>
       <td>1012373.0</td>
       <td>0.087</td>
-      <td>delta_17-P03_repeat-1250-abneg</td>
-      <td>delta_17-P03_repeat-1250-abneg_lib2</td>
-      <td>results/counts/delta_17-P03_repeat-1250-abneg_lib2_counts.csv</td>
-      <td>results/counts/delta_17-P03_repeat-1250-abneg_lib2_fates.csv</td>
+      <td>delta_17-P03-1250-abneg</td>
+      <td>delta_17-P03-1250-abneg_lib2</td>
+      <td>results/counts/delta_17-P03-1250-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_17-P03-1250-abneg_lib2_fates.csv</td>
     </tr>
     <tr>
       <td>211112</td>
       <td>delta_18</td>
       <td>lib1</td>
-      <td>P08_repeat</td>
+      <td>P08</td>
       <td>500.0</td>
       <td>abneg</td>
       <td>delta_18_lib1_abneg</td>
       <td>ab_selection</td>
       <td>1015086.0</td>
       <td>0.112</td>
-      <td>delta_18-P08_repeat-500-abneg</td>
-      <td>delta_18-P08_repeat-500-abneg_lib1</td>
-      <td>results/counts/delta_18-P08_repeat-500-abneg_lib1_counts.csv</td>
-      <td>results/counts/delta_18-P08_repeat-500-abneg_lib1_fates.csv</td>
+      <td>delta_18-P08-500-abneg</td>
+      <td>delta_18-P08-500-abneg_lib1</td>
+      <td>results/counts/delta_18-P08-500-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_18-P08-500-abneg_lib1_fates.csv</td>
     </tr>
     <tr>
       <td>211112</td>
       <td>delta_18</td>
       <td>lib2</td>
-      <td>P08_repeat</td>
+      <td>P08</td>
       <td>500.0</td>
       <td>abneg</td>
       <td>delta_18_lib2_abneg</td>
       <td>ab_selection</td>
       <td>1045993.0</td>
       <td>0.121</td>
-      <td>delta_18-P08_repeat-500-abneg</td>
-      <td>delta_18-P08_repeat-500-abneg_lib2</td>
-      <td>results/counts/delta_18-P08_repeat-500-abneg_lib2_counts.csv</td>
-      <td>results/counts/delta_18-P08_repeat-500-abneg_lib2_fates.csv</td>
+      <td>delta_18-P08-500-abneg</td>
+      <td>delta_18-P08-500-abneg_lib2</td>
+      <td>results/counts/delta_18-P08-500-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_18-P08-500-abneg_lib2_fates.csv</td>
     </tr>
     <tr>
       <td>211112</td>
       <td>delta_19</td>
       <td>lib1</td>
-      <td>268C_repeat</td>
+      <td>268C</td>
       <td>500.0</td>
       <td>abneg</td>
       <td>delta_19_lib1_abneg</td>
       <td>ab_selection</td>
       <td>1012056.0</td>
       <td>0.107</td>
-      <td>delta_19-268C_repeat-500-abneg</td>
-      <td>delta_19-268C_repeat-500-abneg_lib1</td>
-      <td>results/counts/delta_19-268C_repeat-500-abneg_lib1_counts.csv</td>
-      <td>results/counts/delta_19-268C_repeat-500-abneg_lib1_fates.csv</td>
+      <td>delta_19-268C-500-abneg</td>
+      <td>delta_19-268C-500-abneg_lib1</td>
+      <td>results/counts/delta_19-268C-500-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_19-268C-500-abneg_lib1_fates.csv</td>
     </tr>
     <tr>
       <td>211112</td>
       <td>delta_19</td>
       <td>lib2</td>
-      <td>268C_repeat</td>
+      <td>268C</td>
       <td>500.0</td>
       <td>abneg</td>
       <td>delta_19_lib2_abneg</td>
       <td>ab_selection</td>
       <td>1023050.0</td>
       <td>0.119</td>
-      <td>delta_19-268C_repeat-500-abneg</td>
-      <td>delta_19-268C_repeat-500-abneg_lib2</td>
-      <td>results/counts/delta_19-268C_repeat-500-abneg_lib2_counts.csv</td>
-      <td>results/counts/delta_19-268C_repeat-500-abneg_lib2_fates.csv</td>
+      <td>delta_19-268C-500-abneg</td>
+      <td>delta_19-268C-500-abneg_lib2</td>
+      <td>results/counts/delta_19-268C-500-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_19-268C-500-abneg_lib2_fates.csv</td>
     </tr>
     <tr>
       <td>211112</td>
       <td>delta_20</td>
       <td>lib1</td>
-      <td>279C_repeat</td>
+      <td>279C</td>
       <td>1250.0</td>
       <td>abneg</td>
       <td>delta_20_lib1_abneg</td>
       <td>ab_selection</td>
       <td>1026589.0</td>
       <td>0.097</td>
-      <td>delta_20-279C_repeat-1250-abneg</td>
-      <td>delta_20-279C_repeat-1250-abneg_lib1</td>
-      <td>results/counts/delta_20-279C_repeat-1250-abneg_lib1_counts.csv</td>
-      <td>results/counts/delta_20-279C_repeat-1250-abneg_lib1_fates.csv</td>
+      <td>delta_20-279C-1250-abneg</td>
+      <td>delta_20-279C-1250-abneg_lib1</td>
+      <td>results/counts/delta_20-279C-1250-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_20-279C-1250-abneg_lib1_fates.csv</td>
     </tr>
     <tr>
       <td>211112</td>
       <td>delta_20</td>
       <td>lib2</td>
-      <td>279C_repeat</td>
+      <td>279C</td>
       <td>1250.0</td>
       <td>abneg</td>
       <td>delta_20_lib2_abneg</td>
       <td>ab_selection</td>
       <td>1077475.0</td>
       <td>0.097</td>
-      <td>delta_20-279C_repeat-1250-abneg</td>
-      <td>delta_20-279C_repeat-1250-abneg_lib2</td>
-      <td>results/counts/delta_20-279C_repeat-1250-abneg_lib2_counts.csv</td>
-      <td>results/counts/delta_20-279C_repeat-1250-abneg_lib2_fates.csv</td>
+      <td>delta_20-279C-1250-abneg</td>
+      <td>delta_20-279C-1250-abneg_lib2</td>
+      <td>results/counts/delta_20-279C-1250-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_20-279C-1250-abneg_lib2_fates.csv</td>
     </tr>
     <tr>
       <td>211119</td>
@@ -1616,193 +1616,193 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>211119</td>
       <td>delta_21</td>
       <td>lib1</td>
-      <td>267C_repeat</td>
+      <td>267C</td>
       <td>200.0</td>
       <td>abneg</td>
       <td>delta_21_lib1_abneg</td>
       <td>ab_selection</td>
       <td>1206433.0</td>
       <td>0.112</td>
-      <td>delta_21-267C_repeat-200-abneg</td>
-      <td>delta_21-267C_repeat-200-abneg_lib1</td>
-      <td>results/counts/delta_21-267C_repeat-200-abneg_lib1_counts.csv</td>
-      <td>results/counts/delta_21-267C_repeat-200-abneg_lib1_fates.csv</td>
+      <td>delta_21-267C-200-abneg</td>
+      <td>delta_21-267C-200-abneg_lib1</td>
+      <td>results/counts/delta_21-267C-200-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_21-267C-200-abneg_lib1_fates.csv</td>
     </tr>
     <tr>
       <td>211119</td>
       <td>delta_21</td>
       <td>lib2</td>
-      <td>267C_repeat</td>
+      <td>267C</td>
       <td>200.0</td>
       <td>abneg</td>
       <td>delta_21_lib2_abneg</td>
       <td>ab_selection</td>
       <td>1078707.0</td>
       <td>0.094</td>
-      <td>delta_21-267C_repeat-200-abneg</td>
-      <td>delta_21-267C_repeat-200-abneg_lib2</td>
-      <td>results/counts/delta_21-267C_repeat-200-abneg_lib2_counts.csv</td>
-      <td>results/counts/delta_21-267C_repeat-200-abneg_lib2_fates.csv</td>
+      <td>delta_21-267C-200-abneg</td>
+      <td>delta_21-267C-200-abneg_lib2</td>
+      <td>results/counts/delta_21-267C-200-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_21-267C-200-abneg_lib2_fates.csv</td>
     </tr>
     <tr>
       <td>211119</td>
       <td>delta_22</td>
       <td>lib1</td>
-      <td>273C_repeat</td>
+      <td>273C</td>
       <td>500.0</td>
       <td>abneg</td>
       <td>delta_22_lib1_abneg</td>
       <td>ab_selection</td>
       <td>1269137.0</td>
       <td>0.126</td>
-      <td>delta_22-273C_repeat-500-abneg</td>
-      <td>delta_22-273C_repeat-500-abneg_lib1</td>
-      <td>results/counts/delta_22-273C_repeat-500-abneg_lib1_counts.csv</td>
-      <td>results/counts/delta_22-273C_repeat-500-abneg_lib1_fates.csv</td>
+      <td>delta_22-273C-500-abneg</td>
+      <td>delta_22-273C-500-abneg_lib1</td>
+      <td>results/counts/delta_22-273C-500-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_22-273C-500-abneg_lib1_fates.csv</td>
     </tr>
     <tr>
       <td>211119</td>
       <td>delta_22</td>
       <td>lib2</td>
-      <td>273C_repeat</td>
+      <td>273C</td>
       <td>500.0</td>
       <td>abneg</td>
       <td>delta_22_lib2_abneg</td>
       <td>ab_selection</td>
       <td>1249629.0</td>
       <td>0.125</td>
-      <td>delta_22-273C_repeat-500-abneg</td>
-      <td>delta_22-273C_repeat-500-abneg_lib2</td>
-      <td>results/counts/delta_22-273C_repeat-500-abneg_lib2_counts.csv</td>
-      <td>results/counts/delta_22-273C_repeat-500-abneg_lib2_fates.csv</td>
+      <td>delta_22-273C-500-abneg</td>
+      <td>delta_22-273C-500-abneg_lib2</td>
+      <td>results/counts/delta_22-273C-500-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_22-273C-500-abneg_lib2_fates.csv</td>
     </tr>
     <tr>
       <td>211119</td>
       <td>delta_23</td>
       <td>lib1</td>
-      <td>274C_repeat</td>
+      <td>274C</td>
       <td>500.0</td>
       <td>abneg</td>
       <td>delta_23_lib1_abneg</td>
       <td>ab_selection</td>
       <td>1233005.0</td>
       <td>0.122</td>
-      <td>delta_23-274C_repeat-500-abneg</td>
-      <td>delta_23-274C_repeat-500-abneg_lib1</td>
-      <td>results/counts/delta_23-274C_repeat-500-abneg_lib1_counts.csv</td>
-      <td>results/counts/delta_23-274C_repeat-500-abneg_lib1_fates.csv</td>
+      <td>delta_23-274C-500-abneg</td>
+      <td>delta_23-274C-500-abneg_lib1</td>
+      <td>results/counts/delta_23-274C-500-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_23-274C-500-abneg_lib1_fates.csv</td>
     </tr>
     <tr>
       <td>211119</td>
       <td>delta_23</td>
       <td>lib2</td>
-      <td>274C_repeat</td>
+      <td>274C</td>
       <td>500.0</td>
       <td>abneg</td>
       <td>delta_23_lib2_abneg</td>
       <td>ab_selection</td>
       <td>1094894.0</td>
       <td>0.108</td>
-      <td>delta_23-274C_repeat-500-abneg</td>
-      <td>delta_23-274C_repeat-500-abneg_lib2</td>
-      <td>results/counts/delta_23-274C_repeat-500-abneg_lib2_counts.csv</td>
-      <td>results/counts/delta_23-274C_repeat-500-abneg_lib2_fates.csv</td>
+      <td>delta_23-274C-500-abneg</td>
+      <td>delta_23-274C-500-abneg_lib2</td>
+      <td>results/counts/delta_23-274C-500-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_23-274C-500-abneg_lib2_fates.csv</td>
     </tr>
     <tr>
       <td>211119</td>
       <td>delta_24</td>
       <td>lib1</td>
-      <td>276C_repeat</td>
+      <td>276C</td>
       <td>500.0</td>
       <td>abneg</td>
       <td>delta_24_lib1_abneg</td>
       <td>ab_selection</td>
       <td>1263014.0</td>
       <td>0.126</td>
-      <td>delta_24-276C_repeat-500-abneg</td>
-      <td>delta_24-276C_repeat-500-abneg_lib1</td>
-      <td>results/counts/delta_24-276C_repeat-500-abneg_lib1_counts.csv</td>
-      <td>results/counts/delta_24-276C_repeat-500-abneg_lib1_fates.csv</td>
+      <td>delta_24-276C-500-abneg</td>
+      <td>delta_24-276C-500-abneg_lib1</td>
+      <td>results/counts/delta_24-276C-500-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_24-276C-500-abneg_lib1_fates.csv</td>
     </tr>
     <tr>
       <td>211119</td>
       <td>delta_24</td>
       <td>lib2</td>
-      <td>276C_repeat</td>
+      <td>276C</td>
       <td>500.0</td>
       <td>abneg</td>
       <td>delta_24_lib2_abneg</td>
       <td>ab_selection</td>
       <td>1091168.0</td>
       <td>0.108</td>
-      <td>delta_24-276C_repeat-500-abneg</td>
-      <td>delta_24-276C_repeat-500-abneg_lib2</td>
-      <td>results/counts/delta_24-276C_repeat-500-abneg_lib2_counts.csv</td>
-      <td>results/counts/delta_24-276C_repeat-500-abneg_lib2_fates.csv</td>
+      <td>delta_24-276C-500-abneg</td>
+      <td>delta_24-276C-500-abneg_lib2</td>
+      <td>results/counts/delta_24-276C-500-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_24-276C-500-abneg_lib2_fates.csv</td>
     </tr>
     <tr>
       <td>211119</td>
       <td>delta_25</td>
       <td>lib1</td>
-      <td>277C_repeat</td>
+      <td>277C</td>
       <td>500.0</td>
       <td>abneg</td>
       <td>delta_25_lib1_abneg</td>
       <td>ab_selection</td>
       <td>1137613.0</td>
       <td>0.112</td>
-      <td>delta_25-277C_repeat-500-abneg</td>
-      <td>delta_25-277C_repeat-500-abneg_lib1</td>
-      <td>results/counts/delta_25-277C_repeat-500-abneg_lib1_counts.csv</td>
-      <td>results/counts/delta_25-277C_repeat-500-abneg_lib1_fates.csv</td>
+      <td>delta_25-277C-500-abneg</td>
+      <td>delta_25-277C-500-abneg_lib1</td>
+      <td>results/counts/delta_25-277C-500-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_25-277C-500-abneg_lib1_fates.csv</td>
     </tr>
     <tr>
       <td>211119</td>
       <td>delta_25</td>
       <td>lib2</td>
-      <td>277C_repeat</td>
+      <td>277C</td>
       <td>500.0</td>
       <td>abneg</td>
       <td>delta_25_lib2_abneg</td>
       <td>ab_selection</td>
       <td>1135069.0</td>
       <td>0.108</td>
-      <td>delta_25-277C_repeat-500-abneg</td>
-      <td>delta_25-277C_repeat-500-abneg_lib2</td>
-      <td>results/counts/delta_25-277C_repeat-500-abneg_lib2_counts.csv</td>
-      <td>results/counts/delta_25-277C_repeat-500-abneg_lib2_fates.csv</td>
+      <td>delta_25-277C-500-abneg</td>
+      <td>delta_25-277C-500-abneg_lib2</td>
+      <td>results/counts/delta_25-277C-500-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_25-277C-500-abneg_lib2_fates.csv</td>
     </tr>
     <tr>
       <td>211119</td>
       <td>delta_26</td>
       <td>lib1</td>
-      <td>278C_repeat</td>
+      <td>278C</td>
       <td>1250.0</td>
       <td>abneg</td>
       <td>delta_26_lib1_abneg</td>
       <td>ab_selection</td>
       <td>1106454.0</td>
       <td>0.110</td>
-      <td>delta_26-278C_repeat-1250-abneg</td>
-      <td>delta_26-278C_repeat-1250-abneg_lib1</td>
-      <td>results/counts/delta_26-278C_repeat-1250-abneg_lib1_counts.csv</td>
-      <td>results/counts/delta_26-278C_repeat-1250-abneg_lib1_fates.csv</td>
+      <td>delta_26-278C-1250-abneg</td>
+      <td>delta_26-278C-1250-abneg_lib1</td>
+      <td>results/counts/delta_26-278C-1250-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_26-278C-1250-abneg_lib1_fates.csv</td>
     </tr>
     <tr>
       <td>211119</td>
       <td>delta_26</td>
       <td>lib2</td>
-      <td>278C_repeat</td>
+      <td>278C</td>
       <td>1250.0</td>
       <td>abneg</td>
       <td>delta_26_lib2_abneg</td>
       <td>ab_selection</td>
       <td>1106060.0</td>
       <td>0.106</td>
-      <td>delta_26-278C_repeat-1250-abneg</td>
-      <td>delta_26-278C_repeat-1250-abneg_lib2</td>
-      <td>results/counts/delta_26-278C_repeat-1250-abneg_lib2_counts.csv</td>
-      <td>results/counts/delta_26-278C_repeat-1250-abneg_lib2_fates.csv</td>
+      <td>delta_26-278C-1250-abneg</td>
+      <td>delta_26-278C-1250-abneg_lib2</td>
+      <td>results/counts/delta_26-278C-1250-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_26-278C-1250-abneg_lib2_fates.csv</td>
     </tr>
     <tr>
       <td>211122</td>
@@ -2128,193 +2128,193 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>211124</td>
       <td>delta_35</td>
       <td>lib1</td>
-      <td>P02_repeat</td>
+      <td>P02</td>
       <td>500.0</td>
       <td>abneg</td>
       <td>delta_35_lib1_abneg</td>
       <td>ab_selection</td>
       <td>927272.0</td>
       <td>0.088</td>
-      <td>delta_35-P02_repeat-500-abneg</td>
-      <td>delta_35-P02_repeat-500-abneg_lib1</td>
-      <td>results/counts/delta_35-P02_repeat-500-abneg_lib1_counts.csv</td>
-      <td>results/counts/delta_35-P02_repeat-500-abneg_lib1_fates.csv</td>
+      <td>delta_35-P02-500-abneg</td>
+      <td>delta_35-P02-500-abneg_lib1</td>
+      <td>results/counts/delta_35-P02-500-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_35-P02-500-abneg_lib1_fates.csv</td>
     </tr>
     <tr>
       <td>211124</td>
       <td>delta_35</td>
       <td>lib2</td>
-      <td>P02_repeat</td>
+      <td>P02</td>
       <td>500.0</td>
       <td>abneg</td>
       <td>delta_35_lib2_abneg</td>
       <td>ab_selection</td>
       <td>808248.0</td>
       <td>0.079</td>
-      <td>delta_35-P02_repeat-500-abneg</td>
-      <td>delta_35-P02_repeat-500-abneg_lib2</td>
-      <td>results/counts/delta_35-P02_repeat-500-abneg_lib2_counts.csv</td>
-      <td>results/counts/delta_35-P02_repeat-500-abneg_lib2_fates.csv</td>
+      <td>delta_35-P02-500-abneg</td>
+      <td>delta_35-P02-500-abneg_lib2</td>
+      <td>results/counts/delta_35-P02-500-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_35-P02-500-abneg_lib2_fates.csv</td>
     </tr>
     <tr>
       <td>211124</td>
       <td>delta_36</td>
       <td>lib1</td>
-      <td>P04_repeat</td>
+      <td>P04</td>
       <td>1250.0</td>
       <td>abneg</td>
       <td>delta_36_lib1_abneg</td>
       <td>ab_selection</td>
       <td>1079672.0</td>
       <td>0.107</td>
-      <td>delta_36-P04_repeat-1250-abneg</td>
-      <td>delta_36-P04_repeat-1250-abneg_lib1</td>
-      <td>results/counts/delta_36-P04_repeat-1250-abneg_lib1_counts.csv</td>
-      <td>results/counts/delta_36-P04_repeat-1250-abneg_lib1_fates.csv</td>
+      <td>delta_36-P04-1250-abneg</td>
+      <td>delta_36-P04-1250-abneg_lib1</td>
+      <td>results/counts/delta_36-P04-1250-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_36-P04-1250-abneg_lib1_fates.csv</td>
     </tr>
     <tr>
       <td>211124</td>
       <td>delta_36</td>
       <td>lib2</td>
-      <td>P04_repeat</td>
+      <td>P04</td>
       <td>1250.0</td>
       <td>abneg</td>
       <td>delta_36_lib2_abneg</td>
       <td>ab_selection</td>
       <td>875369.0</td>
       <td>0.087</td>
-      <td>delta_36-P04_repeat-1250-abneg</td>
-      <td>delta_36-P04_repeat-1250-abneg_lib2</td>
-      <td>results/counts/delta_36-P04_repeat-1250-abneg_lib2_counts.csv</td>
-      <td>results/counts/delta_36-P04_repeat-1250-abneg_lib2_fates.csv</td>
+      <td>delta_36-P04-1250-abneg</td>
+      <td>delta_36-P04-1250-abneg_lib2</td>
+      <td>results/counts/delta_36-P04-1250-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_36-P04-1250-abneg_lib2_fates.csv</td>
     </tr>
     <tr>
       <td>211124</td>
       <td>delta_37</td>
       <td>lib1</td>
-      <td>P05_repeat</td>
+      <td>P05</td>
       <td>500.0</td>
       <td>abneg</td>
       <td>delta_37_lib1_abneg</td>
       <td>ab_selection</td>
       <td>909556.0</td>
       <td>0.085</td>
-      <td>delta_37-P05_repeat-500-abneg</td>
-      <td>delta_37-P05_repeat-500-abneg_lib1</td>
-      <td>results/counts/delta_37-P05_repeat-500-abneg_lib1_counts.csv</td>
-      <td>results/counts/delta_37-P05_repeat-500-abneg_lib1_fates.csv</td>
+      <td>delta_37-P05-500-abneg</td>
+      <td>delta_37-P05-500-abneg_lib1</td>
+      <td>results/counts/delta_37-P05-500-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_37-P05-500-abneg_lib1_fates.csv</td>
     </tr>
     <tr>
       <td>211124</td>
       <td>delta_37</td>
       <td>lib2</td>
-      <td>P05_repeat</td>
+      <td>P05</td>
       <td>500.0</td>
       <td>abneg</td>
       <td>delta_37_lib2_abneg</td>
       <td>ab_selection</td>
       <td>892227.0</td>
       <td>0.086</td>
-      <td>delta_37-P05_repeat-500-abneg</td>
-      <td>delta_37-P05_repeat-500-abneg_lib2</td>
-      <td>results/counts/delta_37-P05_repeat-500-abneg_lib2_counts.csv</td>
-      <td>results/counts/delta_37-P05_repeat-500-abneg_lib2_fates.csv</td>
+      <td>delta_37-P05-500-abneg</td>
+      <td>delta_37-P05-500-abneg_lib2</td>
+      <td>results/counts/delta_37-P05-500-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_37-P05-500-abneg_lib2_fates.csv</td>
     </tr>
     <tr>
       <td>211124</td>
       <td>delta_38</td>
       <td>lib1</td>
-      <td>P09_repeat</td>
+      <td>P09</td>
       <td>200.0</td>
       <td>abneg</td>
       <td>delta_38_lib1_abneg</td>
       <td>ab_selection</td>
       <td>964559.0</td>
       <td>0.096</td>
-      <td>delta_38-P09_repeat-200-abneg</td>
-      <td>delta_38-P09_repeat-200-abneg_lib1</td>
-      <td>results/counts/delta_38-P09_repeat-200-abneg_lib1_counts.csv</td>
-      <td>results/counts/delta_38-P09_repeat-200-abneg_lib1_fates.csv</td>
+      <td>delta_38-P09-200-abneg</td>
+      <td>delta_38-P09-200-abneg_lib1</td>
+      <td>results/counts/delta_38-P09-200-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_38-P09-200-abneg_lib1_fates.csv</td>
     </tr>
     <tr>
       <td>211124</td>
       <td>delta_38</td>
       <td>lib2</td>
-      <td>P09_repeat</td>
+      <td>P09</td>
       <td>200.0</td>
       <td>abneg</td>
       <td>delta_38_lib2_abneg</td>
       <td>ab_selection</td>
       <td>904976.0</td>
       <td>0.089</td>
-      <td>delta_38-P09_repeat-200-abneg</td>
-      <td>delta_38-P09_repeat-200-abneg_lib2</td>
-      <td>results/counts/delta_38-P09_repeat-200-abneg_lib2_counts.csv</td>
-      <td>results/counts/delta_38-P09_repeat-200-abneg_lib2_fates.csv</td>
+      <td>delta_38-P09-200-abneg</td>
+      <td>delta_38-P09-200-abneg_lib2</td>
+      <td>results/counts/delta_38-P09-200-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_38-P09-200-abneg_lib2_fates.csv</td>
     </tr>
     <tr>
       <td>211124</td>
       <td>delta_39</td>
       <td>lib1</td>
-      <td>P12_repeat</td>
+      <td>P12</td>
       <td>200.0</td>
       <td>abneg</td>
       <td>delta_39_lib1_abneg</td>
       <td>ab_selection</td>
       <td>1017353.0</td>
       <td>0.101</td>
-      <td>delta_39-P12_repeat-200-abneg</td>
-      <td>delta_39-P12_repeat-200-abneg_lib1</td>
-      <td>results/counts/delta_39-P12_repeat-200-abneg_lib1_counts.csv</td>
-      <td>results/counts/delta_39-P12_repeat-200-abneg_lib1_fates.csv</td>
+      <td>delta_39-P12-200-abneg</td>
+      <td>delta_39-P12-200-abneg_lib1</td>
+      <td>results/counts/delta_39-P12-200-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_39-P12-200-abneg_lib1_fates.csv</td>
     </tr>
     <tr>
       <td>211124</td>
       <td>delta_39</td>
       <td>lib2</td>
-      <td>P12_repeat</td>
+      <td>P12</td>
       <td>200.0</td>
       <td>abneg</td>
       <td>delta_39_lib2_abneg</td>
       <td>ab_selection</td>
       <td>964926.0</td>
       <td>0.096</td>
-      <td>delta_39-P12_repeat-200-abneg</td>
-      <td>delta_39-P12_repeat-200-abneg_lib2</td>
-      <td>results/counts/delta_39-P12_repeat-200-abneg_lib2_counts.csv</td>
-      <td>results/counts/delta_39-P12_repeat-200-abneg_lib2_fates.csv</td>
+      <td>delta_39-P12-200-abneg</td>
+      <td>delta_39-P12-200-abneg_lib2</td>
+      <td>results/counts/delta_39-P12-200-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_39-P12-200-abneg_lib2_fates.csv</td>
     </tr>
     <tr>
       <td>211124</td>
       <td>delta_40</td>
       <td>lib1</td>
-      <td>P14_repeat</td>
+      <td>P14</td>
       <td>1250.0</td>
       <td>abneg</td>
       <td>delta_40_lib1_abneg</td>
       <td>ab_selection</td>
       <td>953329.0</td>
       <td>0.094</td>
-      <td>delta_40-P14_repeat-1250-abneg</td>
-      <td>delta_40-P14_repeat-1250-abneg_lib1</td>
-      <td>results/counts/delta_40-P14_repeat-1250-abneg_lib1_counts.csv</td>
-      <td>results/counts/delta_40-P14_repeat-1250-abneg_lib1_fates.csv</td>
+      <td>delta_40-P14-1250-abneg</td>
+      <td>delta_40-P14-1250-abneg_lib1</td>
+      <td>results/counts/delta_40-P14-1250-abneg_lib1_counts.csv</td>
+      <td>results/counts/delta_40-P14-1250-abneg_lib1_fates.csv</td>
     </tr>
     <tr>
       <td>211124</td>
       <td>delta_40</td>
       <td>lib2</td>
-      <td>P14_repeat</td>
+      <td>P14</td>
       <td>1250.0</td>
       <td>abneg</td>
       <td>delta_40_lib2_abneg</td>
       <td>ab_selection</td>
       <td>872522.0</td>
       <td>0.087</td>
-      <td>delta_40-P14_repeat-1250-abneg</td>
-      <td>delta_40-P14_repeat-1250-abneg_lib2</td>
-      <td>results/counts/delta_40-P14_repeat-1250-abneg_lib2_counts.csv</td>
-      <td>results/counts/delta_40-P14_repeat-1250-abneg_lib2_fates.csv</td>
+      <td>delta_40-P14-1250-abneg</td>
+      <td>delta_40-P14-1250-abneg_lib2</td>
+      <td>results/counts/delta_40-P14-1250-abneg_lib2_counts.csv</td>
+      <td>results/counts/delta_40-P14-1250-abneg_lib2_fates.csv</td>
     </tr>
   </tbody>
 </table>
@@ -3206,7 +3206,7 @@ display(HTML(fates
       <td>4.8e+07</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">delta_17-P03_repeat-1250-abneg</th>
+      <th rowspan="2" valign="top">delta_17-P03-1250-abneg</th>
       <th>lib1</th>
       <td>3.9e+05</td>
       <td>1.7e+06</td>
@@ -3223,7 +3223,7 @@ display(HTML(fates
       <td>4.7e+06</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">delta_18-P08_repeat-500-abneg</th>
+      <th rowspan="2" valign="top">delta_18-P08-500-abneg</th>
       <th>lib1</th>
       <td>3.5e+05</td>
       <td>1.5e+06</td>
@@ -3240,7 +3240,7 @@ display(HTML(fates
       <td>5.3e+06</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">delta_19-268C_repeat-500-abneg</th>
+      <th rowspan="2" valign="top">delta_19-268C-500-abneg</th>
       <th>lib1</th>
       <td>3.3e+05</td>
       <td>1.4e+06</td>
@@ -3257,7 +3257,7 @@ display(HTML(fates
       <td>4.9e+06</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">delta_20-279C_repeat-1250-abneg</th>
+      <th rowspan="2" valign="top">delta_20-279C-1250-abneg</th>
       <th>lib1</th>
       <td>3.9e+05</td>
       <td>1.7e+06</td>
@@ -3291,7 +3291,7 @@ display(HTML(fates
       <td>3.2e+07</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">delta_21-267C_repeat-200-abneg</th>
+      <th rowspan="2" valign="top">delta_21-267C-200-abneg</th>
       <th>lib1</th>
       <td>1.3e+05</td>
       <td>1.3e+06</td>
@@ -3308,7 +3308,7 @@ display(HTML(fates
       <td>4.0e+06</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">delta_22-273C_repeat-500-abneg</th>
+      <th rowspan="2" valign="top">delta_22-273C-500-abneg</th>
       <th>lib1</th>
       <td>1.3e+05</td>
       <td>1.3e+06</td>
@@ -3325,7 +3325,7 @@ display(HTML(fates
       <td>4.0e+06</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">delta_23-274C_repeat-500-abneg</th>
+      <th rowspan="2" valign="top">delta_23-274C-500-abneg</th>
       <th>lib1</th>
       <td>1.3e+05</td>
       <td>1.4e+06</td>
@@ -3342,7 +3342,7 @@ display(HTML(fates
       <td>3.8e+06</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">delta_24-276C_repeat-500-abneg</th>
+      <th rowspan="2" valign="top">delta_24-276C-500-abneg</th>
       <th>lib1</th>
       <td>1.2e+05</td>
       <td>1.3e+06</td>
@@ -3359,7 +3359,7 @@ display(HTML(fates
       <td>4.3e+06</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">delta_25-277C_repeat-500-abneg</th>
+      <th rowspan="2" valign="top">delta_25-277C-500-abneg</th>
       <th>lib1</th>
       <td>1.3e+05</td>
       <td>1.4e+06</td>
@@ -3376,7 +3376,7 @@ display(HTML(fates
       <td>4.1e+06</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">delta_26-278C_repeat-1250-abneg</th>
+      <th rowspan="2" valign="top">delta_26-278C-1250-abneg</th>
       <th>lib1</th>
       <td>1.1e+05</td>
       <td>1.3e+06</td>
@@ -3563,7 +3563,7 @@ display(HTML(fates
       <td>2.9e+07</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">delta_35-P02_repeat-500-abneg</th>
+      <th rowspan="2" valign="top">delta_35-P02-500-abneg</th>
       <th>lib1</th>
       <td>9.9e+04</td>
       <td>1.1e+06</td>
@@ -3580,7 +3580,7 @@ display(HTML(fates
       <td>2.3e+06</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">delta_36-P04_repeat-1250-abneg</th>
+      <th rowspan="2" valign="top">delta_36-P04-1250-abneg</th>
       <th>lib1</th>
       <td>1.0e+05</td>
       <td>1.1e+06</td>
@@ -3597,7 +3597,7 @@ display(HTML(fates
       <td>3.0e+06</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">delta_37-P05_repeat-500-abneg</th>
+      <th rowspan="2" valign="top">delta_37-P05-500-abneg</th>
       <th>lib1</th>
       <td>8.7e+04</td>
       <td>9.6e+05</td>
@@ -3614,7 +3614,7 @@ display(HTML(fates
       <td>3.2e+06</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">delta_38-P09_repeat-200-abneg</th>
+      <th rowspan="2" valign="top">delta_38-P09-200-abneg</th>
       <th>lib1</th>
       <td>1.0e+05</td>
       <td>1.1e+06</td>
@@ -3631,7 +3631,7 @@ display(HTML(fates
       <td>2.5e+06</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">delta_39-P12_repeat-200-abneg</th>
+      <th rowspan="2" valign="top">delta_39-P12-200-abneg</th>
       <th>lib1</th>
       <td>9.5e+04</td>
       <td>1.0e+06</td>
@@ -3648,7 +3648,7 @@ display(HTML(fates
       <td>3.3e+06</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">delta_40-P14_repeat-1250-abneg</th>
+      <th rowspan="2" valign="top">delta_40-P14-1250-abneg</th>
       <th>lib1</th>
       <td>9.2e+04</td>
       <td>9.9e+05</td>

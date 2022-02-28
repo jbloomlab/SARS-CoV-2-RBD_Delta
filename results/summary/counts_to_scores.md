@@ -146,14 +146,14 @@ display(HTML(samples_df.head().to_html()))
       <td>211112</td>
       <td>delta_17</td>
       <td>lib1</td>
-      <td>P03_repeat</td>
+      <td>P03</td>
       <td>1250</td>
       <td>abneg</td>
       <td>delta_17_lib1_abneg</td>
       <td>ab_selection</td>
       <td>1022039.0</td>
       <td>0.094</td>
-      <td>delta_17-P03_repeat-1250-abneg</td>
+      <td>delta_17-P03-1250-abneg</td>
       <td>/shared/ngs/illumina/agreaney/211117_D00300_1372_BHNH7WBCX3/Unaligned/Project_agreaney/delta_17_lib1_abneg*R1*.fastq.gz</td>
       <td>escape</td>
     </tr>
@@ -162,14 +162,14 @@ display(HTML(samples_df.head().to_html()))
       <td>211112</td>
       <td>delta_17</td>
       <td>lib2</td>
-      <td>P03_repeat</td>
+      <td>P03</td>
       <td>1250</td>
       <td>abneg</td>
       <td>delta_17_lib2_abneg</td>
       <td>ab_selection</td>
       <td>1012373.0</td>
       <td>0.087</td>
-      <td>delta_17-P03_repeat-1250-abneg</td>
+      <td>delta_17-P03-1250-abneg</td>
       <td>/shared/ngs/illumina/agreaney/211117_D00300_1372_BHNH7WBCX3/Unaligned/Project_agreaney/delta_17_lib2_abneg*R1*.fastq.gz</td>
       <td>escape</td>
     </tr>
@@ -178,14 +178,14 @@ display(HTML(samples_df.head().to_html()))
       <td>211112</td>
       <td>delta_18</td>
       <td>lib1</td>
-      <td>P08_repeat</td>
+      <td>P08</td>
       <td>500</td>
       <td>abneg</td>
       <td>delta_18_lib1_abneg</td>
       <td>ab_selection</td>
       <td>1015086.0</td>
       <td>0.112</td>
-      <td>delta_18-P08_repeat-500-abneg</td>
+      <td>delta_18-P08-500-abneg</td>
       <td>/shared/ngs/illumina/agreaney/211117_D00300_1372_BHNH7WBCX3/Unaligned/Project_agreaney/delta_18_lib1_abneg*R1*.fastq.gz</td>
       <td>escape</td>
     </tr>
@@ -474,22 +474,22 @@ display(HTML(
       <td>431.9</td>
     </tr>
     <tr>
-      <th>delta_17-P03_repeat-1250-abneg</th>
+      <th>delta_17-P03-1250-abneg</th>
       <td>55.9</td>
       <td>42.3</td>
     </tr>
     <tr>
-      <th>delta_18-P08_repeat-500-abneg</th>
+      <th>delta_18-P08-500-abneg</th>
       <td>50.3</td>
       <td>48.1</td>
     </tr>
     <tr>
-      <th>delta_19-268C_repeat-500-abneg</th>
+      <th>delta_19-268C-500-abneg</th>
       <td>47.2</td>
       <td>44.2</td>
     </tr>
     <tr>
-      <th>delta_20-279C_repeat-1250-abneg</th>
+      <th>delta_20-279C-1250-abneg</th>
       <td>56.0</td>
       <td>53.4</td>
     </tr>
@@ -499,32 +499,32 @@ display(HTML(
       <td>292.6</td>
     </tr>
     <tr>
-      <th>delta_21-267C_repeat-200-abneg</th>
+      <th>delta_21-267C-200-abneg</th>
       <td>43.9</td>
       <td>36.7</td>
     </tr>
     <tr>
-      <th>delta_22-273C_repeat-500-abneg</th>
+      <th>delta_22-273C-500-abneg</th>
       <td>44.2</td>
       <td>36.3</td>
     </tr>
     <tr>
-      <th>delta_23-274C_repeat-500-abneg</th>
+      <th>delta_23-274C-500-abneg</th>
       <td>46.3</td>
       <td>34.1</td>
     </tr>
     <tr>
-      <th>delta_24-276C_repeat-500-abneg</th>
+      <th>delta_24-276C-500-abneg</th>
       <td>44.1</td>
       <td>39.3</td>
     </tr>
     <tr>
-      <th>delta_25-277C_repeat-500-abneg</th>
+      <th>delta_25-277C-500-abneg</th>
       <td>46.4</td>
       <td>37.6</td>
     </tr>
     <tr>
-      <th>delta_26-278C_repeat-1250-abneg</th>
+      <th>delta_26-278C-1250-abneg</th>
       <td>41.4</td>
       <td>33.8</td>
     </tr>
@@ -579,32 +579,32 @@ display(HTML(
       <td>266.3</td>
     </tr>
     <tr>
-      <th>delta_35-P02_repeat-500-abneg</th>
+      <th>delta_35-P02-500-abneg</th>
       <td>35.5</td>
       <td>21.2</td>
     </tr>
     <tr>
-      <th>delta_36-P04_repeat-1250-abneg</th>
+      <th>delta_36-P04-1250-abneg</th>
       <td>35.1</td>
       <td>26.9</td>
     </tr>
     <tr>
-      <th>delta_37-P05_repeat-500-abneg</th>
+      <th>delta_37-P05-500-abneg</th>
       <td>30.9</td>
       <td>29.2</td>
     </tr>
     <tr>
-      <th>delta_38-P09_repeat-200-abneg</th>
+      <th>delta_38-P09-200-abneg</th>
       <td>37.1</td>
       <td>22.9</td>
     </tr>
     <tr>
-      <th>delta_39-P12_repeat-200-abneg</th>
+      <th>delta_39-P12-200-abneg</th>
       <td>32.9</td>
       <td>29.5</td>
     </tr>
     <tr>
-      <th>delta_40-P14_repeat-1250-abneg</th>
+      <th>delta_40-P14-1250-abneg</th>
       <td>32.3</td>
       <td>36.4</td>
     </tr>
@@ -1150,193 +1150,193 @@ display(HTML(score_sample_df.to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>lib1</td>
-      <td>267C_repeat</td>
+      <td>267C</td>
       <td>200</td>
       <td>211119</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_21-267C_repeat-200-abneg</td>
+      <td>delta_21-267C-200-abneg</td>
       <td>0.112</td>
       <td>1206433.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>lib2</td>
-      <td>267C_repeat</td>
+      <td>267C</td>
       <td>200</td>
       <td>211119</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_21-267C_repeat-200-abneg</td>
+      <td>delta_21-267C-200-abneg</td>
       <td>0.094</td>
       <td>1078707.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>268C_repeat_500</td>
+      <td>268C_500</td>
       <td>lib1</td>
-      <td>268C_repeat</td>
+      <td>268C</td>
       <td>500</td>
       <td>211112</td>
       <td>delta_17-20-none-0-ref</td>
-      <td>delta_19-268C_repeat-500-abneg</td>
+      <td>delta_19-268C-500-abneg</td>
       <td>0.107</td>
       <td>1012056.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>268C_repeat_500</td>
+      <td>268C_500</td>
       <td>lib2</td>
-      <td>268C_repeat</td>
+      <td>268C</td>
       <td>500</td>
       <td>211112</td>
       <td>delta_17-20-none-0-ref</td>
-      <td>delta_19-268C_repeat-500-abneg</td>
+      <td>delta_19-268C-500-abneg</td>
       <td>0.119</td>
       <td>1023050.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>273C_repeat_500</td>
+      <td>273C_500</td>
       <td>lib1</td>
-      <td>273C_repeat</td>
+      <td>273C</td>
       <td>500</td>
       <td>211119</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_22-273C_repeat-500-abneg</td>
+      <td>delta_22-273C-500-abneg</td>
       <td>0.126</td>
       <td>1269137.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>273C_repeat_500</td>
+      <td>273C_500</td>
       <td>lib2</td>
-      <td>273C_repeat</td>
+      <td>273C</td>
       <td>500</td>
       <td>211119</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_22-273C_repeat-500-abneg</td>
+      <td>delta_22-273C-500-abneg</td>
       <td>0.125</td>
       <td>1249629.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>274C_repeat_500</td>
+      <td>274C_500</td>
       <td>lib1</td>
-      <td>274C_repeat</td>
+      <td>274C</td>
       <td>500</td>
       <td>211119</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_23-274C_repeat-500-abneg</td>
+      <td>delta_23-274C-500-abneg</td>
       <td>0.122</td>
       <td>1233005.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>274C_repeat_500</td>
+      <td>274C_500</td>
       <td>lib2</td>
-      <td>274C_repeat</td>
+      <td>274C</td>
       <td>500</td>
       <td>211119</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_23-274C_repeat-500-abneg</td>
+      <td>delta_23-274C-500-abneg</td>
       <td>0.108</td>
       <td>1094894.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>276C_repeat_500</td>
+      <td>276C_500</td>
       <td>lib1</td>
-      <td>276C_repeat</td>
+      <td>276C</td>
       <td>500</td>
       <td>211119</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_24-276C_repeat-500-abneg</td>
+      <td>delta_24-276C-500-abneg</td>
       <td>0.126</td>
       <td>1263014.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>276C_repeat_500</td>
+      <td>276C_500</td>
       <td>lib2</td>
-      <td>276C_repeat</td>
+      <td>276C</td>
       <td>500</td>
       <td>211119</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_24-276C_repeat-500-abneg</td>
+      <td>delta_24-276C-500-abneg</td>
       <td>0.108</td>
       <td>1091168.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>277C_repeat_500</td>
+      <td>277C_500</td>
       <td>lib1</td>
-      <td>277C_repeat</td>
+      <td>277C</td>
       <td>500</td>
       <td>211119</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_25-277C_repeat-500-abneg</td>
+      <td>delta_25-277C-500-abneg</td>
       <td>0.112</td>
       <td>1137613.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>277C_repeat_500</td>
+      <td>277C_500</td>
       <td>lib2</td>
-      <td>277C_repeat</td>
+      <td>277C</td>
       <td>500</td>
       <td>211119</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_25-277C_repeat-500-abneg</td>
+      <td>delta_25-277C-500-abneg</td>
       <td>0.108</td>
       <td>1135069.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>278C_repeat_1250</td>
+      <td>278C_1250</td>
       <td>lib1</td>
-      <td>278C_repeat</td>
+      <td>278C</td>
       <td>1250</td>
       <td>211119</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_26-278C_repeat-1250-abneg</td>
+      <td>delta_26-278C-1250-abneg</td>
       <td>0.110</td>
       <td>1106454.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>278C_repeat_1250</td>
+      <td>278C_1250</td>
       <td>lib2</td>
-      <td>278C_repeat</td>
+      <td>278C</td>
       <td>1250</td>
       <td>211119</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_26-278C_repeat-1250-abneg</td>
+      <td>delta_26-278C-1250-abneg</td>
       <td>0.106</td>
       <td>1106060.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>279C_repeat_1250</td>
+      <td>279C_1250</td>
       <td>lib1</td>
-      <td>279C_repeat</td>
+      <td>279C</td>
       <td>1250</td>
       <td>211112</td>
       <td>delta_17-20-none-0-ref</td>
-      <td>delta_20-279C_repeat-1250-abneg</td>
+      <td>delta_20-279C-1250-abneg</td>
       <td>0.097</td>
       <td>1026589.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>279C_repeat_1250</td>
+      <td>279C_1250</td>
       <td>lib2</td>
-      <td>279C_repeat</td>
+      <td>279C</td>
       <td>1250</td>
       <td>211112</td>
       <td>delta_17-20-none-0-ref</td>
-      <td>delta_20-279C_repeat-1250-abneg</td>
+      <td>delta_20-279C-1250-abneg</td>
       <td>0.097</td>
       <td>1077475.0</td>
       <td>NaN</td>
@@ -1534,193 +1534,193 @@ display(HTML(score_sample_df.to_html(index=False)))
       <td>NaN</td>
     </tr>
     <tr>
-      <td>P02_repeat_500</td>
+      <td>P02_500</td>
       <td>lib1</td>
-      <td>P02_repeat</td>
+      <td>P02</td>
       <td>500</td>
       <td>211124</td>
       <td>delta_35-40-none-0-ref</td>
-      <td>delta_35-P02_repeat-500-abneg</td>
+      <td>delta_35-P02-500-abneg</td>
       <td>0.088</td>
       <td>927272.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>P02_repeat_500</td>
+      <td>P02_500</td>
       <td>lib2</td>
-      <td>P02_repeat</td>
+      <td>P02</td>
       <td>500</td>
       <td>211124</td>
       <td>delta_35-40-none-0-ref</td>
-      <td>delta_35-P02_repeat-500-abneg</td>
+      <td>delta_35-P02-500-abneg</td>
       <td>0.079</td>
       <td>808248.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>P03_repeat_1250</td>
+      <td>P03_1250</td>
       <td>lib1</td>
-      <td>P03_repeat</td>
+      <td>P03</td>
       <td>1250</td>
       <td>211112</td>
       <td>delta_17-20-none-0-ref</td>
-      <td>delta_17-P03_repeat-1250-abneg</td>
+      <td>delta_17-P03-1250-abneg</td>
       <td>0.094</td>
       <td>1022039.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>P03_repeat_1250</td>
+      <td>P03_1250</td>
       <td>lib2</td>
-      <td>P03_repeat</td>
+      <td>P03</td>
       <td>1250</td>
       <td>211112</td>
       <td>delta_17-20-none-0-ref</td>
-      <td>delta_17-P03_repeat-1250-abneg</td>
+      <td>delta_17-P03-1250-abneg</td>
       <td>0.087</td>
       <td>1012373.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>P04_repeat_1250</td>
+      <td>P04_1250</td>
       <td>lib1</td>
-      <td>P04_repeat</td>
+      <td>P04</td>
       <td>1250</td>
       <td>211124</td>
       <td>delta_35-40-none-0-ref</td>
-      <td>delta_36-P04_repeat-1250-abneg</td>
+      <td>delta_36-P04-1250-abneg</td>
       <td>0.107</td>
       <td>1079672.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>P04_repeat_1250</td>
+      <td>P04_1250</td>
       <td>lib2</td>
-      <td>P04_repeat</td>
+      <td>P04</td>
       <td>1250</td>
       <td>211124</td>
       <td>delta_35-40-none-0-ref</td>
-      <td>delta_36-P04_repeat-1250-abneg</td>
+      <td>delta_36-P04-1250-abneg</td>
       <td>0.087</td>
       <td>875369.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>P05_repeat_500</td>
+      <td>P05_500</td>
       <td>lib1</td>
-      <td>P05_repeat</td>
+      <td>P05</td>
       <td>500</td>
       <td>211124</td>
       <td>delta_35-40-none-0-ref</td>
-      <td>delta_37-P05_repeat-500-abneg</td>
+      <td>delta_37-P05-500-abneg</td>
       <td>0.085</td>
       <td>909556.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>P05_repeat_500</td>
+      <td>P05_500</td>
       <td>lib2</td>
-      <td>P05_repeat</td>
+      <td>P05</td>
       <td>500</td>
       <td>211124</td>
       <td>delta_35-40-none-0-ref</td>
-      <td>delta_37-P05_repeat-500-abneg</td>
+      <td>delta_37-P05-500-abneg</td>
       <td>0.086</td>
       <td>892227.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>P08_repeat_500</td>
+      <td>P08_500</td>
       <td>lib1</td>
-      <td>P08_repeat</td>
+      <td>P08</td>
       <td>500</td>
       <td>211112</td>
       <td>delta_17-20-none-0-ref</td>
-      <td>delta_18-P08_repeat-500-abneg</td>
+      <td>delta_18-P08-500-abneg</td>
       <td>0.112</td>
       <td>1015086.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>P08_repeat_500</td>
+      <td>P08_500</td>
       <td>lib2</td>
-      <td>P08_repeat</td>
+      <td>P08</td>
       <td>500</td>
       <td>211112</td>
       <td>delta_17-20-none-0-ref</td>
-      <td>delta_18-P08_repeat-500-abneg</td>
+      <td>delta_18-P08-500-abneg</td>
       <td>0.121</td>
       <td>1045993.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>P09_repeat_200</td>
+      <td>P09_200</td>
       <td>lib1</td>
-      <td>P09_repeat</td>
+      <td>P09</td>
       <td>200</td>
       <td>211124</td>
       <td>delta_35-40-none-0-ref</td>
-      <td>delta_38-P09_repeat-200-abneg</td>
+      <td>delta_38-P09-200-abneg</td>
       <td>0.096</td>
       <td>964559.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>P09_repeat_200</td>
+      <td>P09_200</td>
       <td>lib2</td>
-      <td>P09_repeat</td>
+      <td>P09</td>
       <td>200</td>
       <td>211124</td>
       <td>delta_35-40-none-0-ref</td>
-      <td>delta_38-P09_repeat-200-abneg</td>
+      <td>delta_38-P09-200-abneg</td>
       <td>0.089</td>
       <td>904976.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>P12_repeat_200</td>
+      <td>P12_200</td>
       <td>lib1</td>
-      <td>P12_repeat</td>
+      <td>P12</td>
       <td>200</td>
       <td>211124</td>
       <td>delta_35-40-none-0-ref</td>
-      <td>delta_39-P12_repeat-200-abneg</td>
+      <td>delta_39-P12-200-abneg</td>
       <td>0.101</td>
       <td>1017353.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>P12_repeat_200</td>
+      <td>P12_200</td>
       <td>lib2</td>
-      <td>P12_repeat</td>
+      <td>P12</td>
       <td>200</td>
       <td>211124</td>
       <td>delta_35-40-none-0-ref</td>
-      <td>delta_39-P12_repeat-200-abneg</td>
+      <td>delta_39-P12-200-abneg</td>
       <td>0.096</td>
       <td>964926.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>P14_repeat_1250</td>
+      <td>P14_1250</td>
       <td>lib1</td>
-      <td>P14_repeat</td>
+      <td>P14</td>
       <td>1250</td>
       <td>211124</td>
       <td>delta_35-40-none-0-ref</td>
-      <td>delta_40-P14_repeat-1250-abneg</td>
+      <td>delta_40-P14-1250-abneg</td>
       <td>0.094</td>
       <td>953329.0</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>P14_repeat_1250</td>
+      <td>P14_1250</td>
       <td>lib2</td>
-      <td>P14_repeat</td>
+      <td>P14</td>
       <td>1250</td>
       <td>211124</td>
       <td>delta_35-40-none-0-ref</td>
-      <td>delta_40-P14_repeat-1250-abneg</td>
+      <td>delta_40-P14-1250-abneg</td>
       <td>0.087</td>
       <td>872522.0</td>
       <td>NaN</td>
@@ -1782,11 +1782,11 @@ display(HTML(escape_scores.head().to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>Delta</td>
       <td>lib1</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_21-267C_repeat-200-abneg</td>
+      <td>delta_21-267C-200-abneg</td>
       <td>GCTACAAAGTCCGCAG</td>
       <td>0.828418</td>
       <td>2.473896e-04</td>
@@ -1799,11 +1799,11 @@ display(HTML(escape_scores.head().to_html(index=False)))
       <td>1 nonsynonymous</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>Delta</td>
       <td>lib1</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_21-267C_repeat-200-abneg</td>
+      <td>delta_21-267C-200-abneg</td>
       <td>ATCGAAATTGAGTGAT</td>
       <td>0.300382</td>
       <td>6.634542e-05</td>
@@ -1816,11 +1816,11 @@ display(HTML(escape_scores.head().to_html(index=False)))
       <td>1 nonsynonymous</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>Delta</td>
       <td>lib1</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_21-267C_repeat-200-abneg</td>
+      <td>delta_21-267C-200-abneg</td>
       <td>TATGTTTCCGACCCGC</td>
       <td>0.002167</td>
       <td>3.763964e-07</td>
@@ -1833,11 +1833,11 @@ display(HTML(escape_scores.head().to_html(index=False)))
       <td>wildtype</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>Delta</td>
       <td>lib1</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_21-267C_repeat-200-abneg</td>
+      <td>delta_21-267C-200-abneg</td>
       <td>TGATGATTCCTAAGAA</td>
       <td>0.086772</td>
       <td>1.685747e-05</td>
@@ -1850,11 +1850,11 @@ display(HTML(escape_scores.head().to_html(index=False)))
       <td>1 nonsynonymous</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>Delta</td>
       <td>lib1</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_21-267C_repeat-200-abneg</td>
+      <td>delta_21-267C-200-abneg</td>
       <td>TTAAAGTAGTACGACA</td>
       <td>0.010496</td>
       <td>1.903876e-06</td>
@@ -2378,11 +2378,11 @@ display(HTML(escape_scores.query('not pass_ACE2bind_expr_filter & variant_class 
   </thead>
   <tbody>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>Delta</td>
       <td>lib1</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_21-267C_repeat-200-abneg</td>
+      <td>delta_21-267C-200-abneg</td>
       <td>GCTACAAAGTCCGCAG</td>
       <td>0.828418</td>
       <td>2.473896e-04</td>
@@ -2400,11 +2400,11 @@ display(HTML(escape_scores.query('not pass_ACE2bind_expr_filter & variant_class 
       <td>False</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>Delta</td>
       <td>lib1</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_21-267C_repeat-200-abneg</td>
+      <td>delta_21-267C-200-abneg</td>
       <td>ATCGAAATTGAGTGAT</td>
       <td>0.300382</td>
       <td>6.634542e-05</td>
@@ -2422,11 +2422,11 @@ display(HTML(escape_scores.query('not pass_ACE2bind_expr_filter & variant_class 
       <td>False</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>Delta</td>
       <td>lib1</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_21-267C_repeat-200-abneg</td>
+      <td>delta_21-267C-200-abneg</td>
       <td>TGATGATTCCTAAGAA</td>
       <td>0.086772</td>
       <td>1.685747e-05</td>
@@ -2444,11 +2444,11 @@ display(HTML(escape_scores.query('not pass_ACE2bind_expr_filter & variant_class 
       <td>False</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>Delta</td>
       <td>lib1</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_21-267C_repeat-200-abneg</td>
+      <td>delta_21-267C-200-abneg</td>
       <td>AAAGCCGAGTTAATAA</td>
       <td>0.130621</td>
       <td>2.763145e-05</td>
@@ -2466,11 +2466,11 @@ display(HTML(escape_scores.query('not pass_ACE2bind_expr_filter & variant_class 
       <td>False</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>Delta</td>
       <td>lib1</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_21-267C_repeat-200-abneg</td>
+      <td>delta_21-267C-200-abneg</td>
       <td>CGGAACTATACCCACT</td>
       <td>0.001626</td>
       <td>3.113976e-07</td>
@@ -2699,11 +2699,11 @@ print(f"Read {len(escape_scores_primary)} scores.")
   <tbody>
     <tr>
       <th>2</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>Delta</td>
       <td>lib1</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_21-267C_repeat-200-abneg</td>
+      <td>delta_21-267C-200-abneg</td>
       <td>TATGTTTCCGACCCGC</td>
       <td>0.002167</td>
       <td>3.763964e-07</td>
@@ -2722,11 +2722,11 @@ print(f"Read {len(escape_scores_primary)} scores.")
     </tr>
     <tr>
       <th>4</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>Delta</td>
       <td>lib1</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_21-267C_repeat-200-abneg</td>
+      <td>delta_21-267C-200-abneg</td>
       <td>TTAAAGTAGTACGACA</td>
       <td>0.010496</td>
       <td>1.903876e-06</td>
@@ -2745,11 +2745,11 @@ print(f"Read {len(escape_scores_primary)} scores.")
     </tr>
     <tr>
       <th>5</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>Delta</td>
       <td>lib1</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_21-267C_repeat-200-abneg</td>
+      <td>delta_21-267C-200-abneg</td>
       <td>ATAGCTGGTATCTTCT</td>
       <td>0.005315</td>
       <td>9.629094e-07</td>
@@ -2768,11 +2768,11 @@ print(f"Read {len(escape_scores_primary)} scores.")
     </tr>
     <tr>
       <th>6</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>Delta</td>
       <td>lib1</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_21-267C_repeat-200-abneg</td>
+      <td>delta_21-267C-200-abneg</td>
       <td>ACGTGAAACACCATGT</td>
       <td>0.001187</td>
       <td>2.170809e-07</td>
@@ -2791,11 +2791,11 @@ print(f"Read {len(escape_scores_primary)} scores.")
     </tr>
     <tr>
       <th>7</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>Delta</td>
       <td>lib1</td>
       <td>delta_21-26-none-0-ref</td>
-      <td>delta_21-267C_repeat-200-abneg</td>
+      <td>delta_21-267C-200-abneg</td>
       <td>TGGGAAAAACAAAGCT</td>
       <td>0.004334</td>
       <td>8.028598e-07</td>
@@ -2900,7 +2900,7 @@ display(HTML(effects_df.head().to_html()))
   <tbody>
     <tr>
       <th>0</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>lib1</td>
       <td>A105G</td>
       <td>0.005913</td>
@@ -2908,7 +2908,7 @@ display(HTML(effects_df.head().to_html()))
     </tr>
     <tr>
       <th>1</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>lib1</td>
       <td>A105S</td>
       <td>0.004895</td>
@@ -2916,7 +2916,7 @@ display(HTML(effects_df.head().to_html()))
     </tr>
     <tr>
       <th>2</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>lib1</td>
       <td>A105T</td>
       <td>0.007704</td>
@@ -2924,7 +2924,7 @@ display(HTML(effects_df.head().to_html()))
     </tr>
     <tr>
       <th>3</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>lib1</td>
       <td>A105Y</td>
       <td>0.008405</td>
@@ -2932,7 +2932,7 @@ display(HTML(effects_df.head().to_html()))
     </tr>
     <tr>
       <th>4</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>lib1</td>
       <td>A145C</td>
       <td>0.009317</td>
@@ -3164,35 +3164,35 @@ display(HTML(site_effects_df.head().to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>average</td>
       <td>1</td>
       <td>0.002808</td>
       <td>0.053357</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>average</td>
       <td>2</td>
       <td>0.004063</td>
       <td>0.077189</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>average</td>
       <td>3</td>
       <td>0.002969</td>
       <td>0.056408</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>average</td>
       <td>4</td>
       <td>0.006610</td>
       <td>0.125582</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>average</td>
       <td>5</td>
       <td>0.005317</td>
@@ -3342,9 +3342,9 @@ escape_fracs_to_write.to_csv(config['escape_fracs'], index=False, float_format='
   </thead>
   <tbody>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>average</td>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>1</td>
       <td>331</td>
       <td>N</td>
@@ -3357,9 +3357,9 @@ escape_fracs_to_write.to_csv(config['escape_fracs'], index=False, float_format='
       <td>2</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>average</td>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>1</td>
       <td>331</td>
       <td>N</td>
@@ -3372,9 +3372,9 @@ escape_fracs_to_write.to_csv(config['escape_fracs'], index=False, float_format='
       <td>2</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>average</td>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>1</td>
       <td>331</td>
       <td>N</td>
@@ -3387,9 +3387,9 @@ escape_fracs_to_write.to_csv(config['escape_fracs'], index=False, float_format='
       <td>2</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>average</td>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>1</td>
       <td>331</td>
       <td>N</td>
@@ -3402,9 +3402,9 @@ escape_fracs_to_write.to_csv(config['escape_fracs'], index=False, float_format='
       <td>2</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>average</td>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>1</td>
       <td>331</td>
       <td>N</td>

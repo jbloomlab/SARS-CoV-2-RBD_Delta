@@ -675,16 +675,18 @@ with multiprocessing.Pool(ncpus) as pool:
     
 
 
-
-    
-![png](early2020_escape_profiles_files/early2020_escape_profiles_26_2.png)
-    
-
-
     
     Plotted profile 2 to:
      results/early2020_escape_profiles/haarvi_sera_color_by_bind_stackedlogo.pdf
      results/early2020_escape_profiles/haarvi_sera_color_by_bind_stackedlogo.png.
+
+
+
+    
+![png](early2020_escape_profiles_files/early2020_escape_profiles_26_3.png)
+    
+
+
     
     Plotted profile 3 to:
      results/early2020_escape_profiles/haarvi_sera_color_by_expr_stackedlogo.pdf
@@ -693,7 +695,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](early2020_escape_profiles_files/early2020_escape_profiles_26_4.png)
+![png](early2020_escape_profiles_files/early2020_escape_profiles_26_5.png)
     
 
 
@@ -705,7 +707,7 @@ with multiprocessing.Pool(ncpus) as pool:
 
 
     
-![png](early2020_escape_profiles_files/early2020_escape_profiles_26_6.png)
+![png](early2020_escape_profiles_files/early2020_escape_profiles_26_7.png)
     
 
 

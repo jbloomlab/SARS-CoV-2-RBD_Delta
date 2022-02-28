@@ -88,7 +88,7 @@ display(HTML(escape_fracs.head().to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>N</td>
       <td>A</td>
@@ -100,7 +100,7 @@ display(HTML(escape_fracs.head().to_html(index=False)))
       <td>2</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>N</td>
       <td>C</td>
@@ -112,7 +112,7 @@ display(HTML(escape_fracs.head().to_html(index=False)))
       <td>2</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>N</td>
       <td>D</td>
@@ -124,7 +124,7 @@ display(HTML(escape_fracs.head().to_html(index=False)))
       <td>2</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>N</td>
       <td>E</td>
@@ -136,7 +136,7 @@ display(HTML(escape_fracs.head().to_html(index=False)))
       <td>2</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>N</td>
       <td>F</td>
@@ -366,7 +366,7 @@ strong_sites.to_csv(config['strong_escape_sites'], index=False)
   <tbody>
     <tr>
       <th>0</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>408</td>
       <td>1.086</td>
       <td>0.09786</td>
@@ -385,7 +385,7 @@ strong_sites.to_csv(config['strong_escape_sites'], index=False)
     </tr>
     <tr>
       <th>1</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>417</td>
       <td>1.297</td>
       <td>0.14350</td>
@@ -404,7 +404,7 @@ strong_sites.to_csv(config['strong_escape_sites'], index=False)
     </tr>
     <tr>
       <th>2</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>456</td>
       <td>1.837</td>
       <td>0.32900</td>
@@ -423,7 +423,7 @@ strong_sites.to_csv(config['strong_escape_sites'], index=False)
     </tr>
     <tr>
       <th>3</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>475</td>
       <td>1.228</td>
       <td>0.25500</td>
@@ -442,7 +442,7 @@ strong_sites.to_csv(config['strong_escape_sites'], index=False)
     </tr>
     <tr>
       <th>4</th>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>484</td>
       <td>1.470</td>
       <td>0.27400</td>

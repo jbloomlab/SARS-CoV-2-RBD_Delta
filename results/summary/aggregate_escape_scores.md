@@ -137,57 +137,57 @@ escape_fracs.to_csv(csv_file, index=False, float_format='%.4g')
   <tbody>
     <tr>
       <td>P02</td>
-      <td>331</td>
-      <td>N</td>
-      <td>A</td>
-      <td>0.001502</td>
-      <td>0.0456</td>
-      <td>0.006194</td>
-      <td>Delta</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
       <td>2x BNT162b2</td>
     </tr>
     <tr>
-      <td>P02</td>
-      <td>331</td>
-      <td>N</td>
-      <td>C</td>
-      <td>0.001763</td>
-      <td>0.0456</td>
-      <td>0.006194</td>
-      <td>Delta</td>
+      <td>P03</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
       <td>2x BNT162b2</td>
     </tr>
     <tr>
-      <td>P02</td>
-      <td>331</td>
-      <td>N</td>
-      <td>D</td>
-      <td>0.001599</td>
-      <td>0.0456</td>
-      <td>0.006194</td>
-      <td>Delta</td>
+      <td>P04</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
       <td>2x BNT162b2</td>
     </tr>
     <tr>
-      <td>P02</td>
-      <td>331</td>
-      <td>N</td>
-      <td>E</td>
-      <td>0.002393</td>
-      <td>0.0456</td>
-      <td>0.006194</td>
-      <td>Delta</td>
+      <td>P05</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
       <td>2x BNT162b2</td>
     </tr>
     <tr>
-      <td>P02</td>
-      <td>331</td>
-      <td>N</td>
-      <td>F</td>
-      <td>0.001360</td>
-      <td>0.0456</td>
-      <td>0.006194</td>
-      <td>Delta</td>
+      <td>P08</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
       <td>2x BNT162b2</td>
     </tr>
   </tbody>
