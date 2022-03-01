@@ -109,31 +109,31 @@ display(HTML(escape_fracs.head().to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>E</td>
       <td>0.05336</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>E</td>
       <td>0.05336</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>E</td>
       <td>0.05336</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>E</td>
       <td>0.05336</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>331</td>
       <td>E</td>
       <td>0.05336</td>

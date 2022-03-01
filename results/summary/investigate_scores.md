@@ -126,7 +126,7 @@ display(HTML(escape_scores
   </thead>
   <tbody>
     <tr>
-      <td>277C_repeat_500</td>
+      <td>277C_500</td>
       <td>lib2</td>
       <td>TCCCTTTCATTTAAAT</td>
       <td>1.0</td>
@@ -143,7 +143,7 @@ display(HTML(escape_scores
       <td>N</td>
     </tr>
     <tr>
-      <td>279C_repeat_1250</td>
+      <td>279C_1250</td>
       <td>lib2</td>
       <td>AAGTCCCTGGTTTATG</td>
       <td>1.0</td>
@@ -160,7 +160,7 @@ display(HTML(escape_scores
       <td>K</td>
     </tr>
     <tr>
-      <td>279C_repeat_1250</td>
+      <td>279C_1250</td>
       <td>lib2</td>
       <td>CAACAAGAGATAGCCA</td>
       <td>1.0</td>
@@ -194,7 +194,7 @@ display(HTML(escape_scores
       <td>H</td>
     </tr>
     <tr>
-      <td>276C_repeat_500</td>
+      <td>276C_500</td>
       <td>lib1</td>
       <td>GCAAGTTTCTTTTTTA</td>
       <td>1.0</td>
@@ -352,7 +352,7 @@ display(HTML(scores.head().to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>lib1</td>
       <td>GCTACAAAGTCCGCAG</td>
       <td>0.828400</td>
@@ -368,7 +368,7 @@ display(HTML(scores.head().to_html(index=False)))
       <td>-2.61807</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>lib1</td>
       <td>ATCGAAATTGAGTGAT</td>
       <td>0.300400</td>
@@ -384,7 +384,7 @@ display(HTML(scores.head().to_html(index=False)))
       <td>-2.10913</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>lib1</td>
       <td>TGATGATTCCTAAGAA</td>
       <td>0.086770</td>
@@ -400,7 +400,7 @@ display(HTML(scores.head().to_html(index=False)))
       <td>-1.62825</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>lib1</td>
       <td>TTAAAGTAGTACGACA</td>
       <td>0.010500</td>
@@ -416,7 +416,7 @@ display(HTML(scores.head().to_html(index=False)))
       <td>-0.24318</td>
     </tr>
     <tr>
-      <td>267C_repeat_200</td>
+      <td>267C_200</td>
       <td>lib1</td>
       <td>ACGTGAAACACCATGT</td>
       <td>0.001187</td>

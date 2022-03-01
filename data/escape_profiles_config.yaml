@@ -34,14 +34,14 @@
 
 Delta_breakthrough:
   conditions:
-    267C_repeat_200: 267C
-    268C_repeat_500: 268C
-    273C_repeat_500: 273C
-    274C_repeat_500: 274C
-    276C_repeat_500: 276C
-    277C_repeat_500: 277C
-    278C_repeat_1250: 278C
-    279C_repeat_1250: 279C
+    267C_200: 267C
+    268C_500: 268C
+    273C_500: 273C
+    274C_500: 274C
+    276C_500: 276C
+    277C_500: 277C
+    278C_1250: 278C
+    279C_1250: 279C
   plot_auto_identified_sites: default # sensitive
   # add_sites: [346,365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,472,477,478,484,494,501]
   add_sites: [417,452,477,478,484,501]
@@ -72,14 +72,14 @@ Delta_breakthrough:
 
 Pfizer:
   conditions:
-    P02_repeat_500: P02
-    P03_repeat_1250: P03
-    P04_repeat_1250: P04
-    P05_repeat_500: P05
-    P08_repeat_500: P08
-    P09_repeat_200: P09
-    P12_repeat_200: P12
-    P14_repeat_1250: P14
+    P02_500: P02
+    P03_1250: P03
+    P04_1250: P04
+    P05_500: P05
+    P08_500: P08
+    P09_200: P09
+    P12_200: P12
+    P14_1250: P14
   plot_auto_identified_sites: default # sensitive
   add_sites: [417,452,477,478,484,501]
   # add_sites: [346,365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,472,477,478,484,494,501]
@@ -110,14 +110,14 @@ Pfizer:
 
 # Pfizer_choose_sites:
 #   conditions:
-#     P02_repeat_500: P02
-#     P03_repeat_1250: P03
-#     P04_repeat_1250: P04
-#     P05_repeat_500: P05
-#     P08_repeat_500: P08
-#     P09_repeat_200: P09
-#     P12_repeat_200: P12
-#     P14_repeat_1250: P14
+#     P02_500: P02
+#     P03_1250: P03
+#     P04_1250: P04
+#     P05_500: P05
+#     P08_500: P08
+#     P09_200: P09
+#     P12_200: P12
+#     P14_1250: P14
 #   plot_auto_identified_sites: false
 #   add_sites: [383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,472,477,478,484,494,501]
 #   exclude_sites: [336, 361]
@@ -171,22 +171,22 @@ primary_Delta:
 
 all_Delta_lib:
   conditions:
-    P02_repeat_500: P02
-    P03_repeat_1250: P03
-    P04_repeat_1250: P04
-    P05_repeat_500: P05
-    P08_repeat_500: P08
-    P09_repeat_200: P09
-    P12_repeat_200: P12
-    P14_repeat_1250: P14
-    267C_repeat_200: 267C
-    268C_repeat_500: 268C
-    273C_repeat_500: 273C
-    274C_repeat_500: 274C
-    276C_repeat_500: 276C
-    277C_repeat_500: 277C
-    278C_repeat_1250: 278C
-    279C_repeat_1250: 279C
+    P02_500: P02
+    P03_1250: P03
+    P04_1250: P04
+    P05_500: P05
+    P08_500: P08
+    P09_200: P09
+    P12_200: P12
+    P14_1250: P14
+    267C_200: 267C
+    268C_500: 268C
+    273C_500: 273C
+    274C_500: 274C
+    276C_500: 276C
+    277C_500: 277C
+    278C_1250: 278C
+    279C_1250: 279C
     Delta_1_500: Delta 1
     Delta_3_350: Delta 3
     Delta_4_350: Delta 4
