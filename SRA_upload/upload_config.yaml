@@ -1,12 +1,15 @@
 # the BioSample accession
-biosample_accession:
+biosample_accession: SAMN26317640
 
 # name of CSV file listing barcode runs to uploade
-barcode_runs: barcode_runs_Delta_MAP.csv
+barcode_runs: barcode_runs_subset.csv
+
+# sample name, same name used when creating the *BioSample*
+sample_name: Delta_MAP_barcodes
 
 # the following come from the SRA FTP upload instructions
-ftp_username:
-ftp_account_folder:
+ftp_username: subftp
+ftp_account_folder: uploads/agreaney_uw.edu_hNzBp9b0
 
 # Meaningful name for this sample's FTP folder:
 ftp_subfolder: Delta_MAP_barcodes

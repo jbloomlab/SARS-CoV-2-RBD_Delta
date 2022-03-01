@@ -22,7 +22,7 @@ You will now be at the *Sample Type* page, and you have to select the package th
 Click *Microbe*--although we are studying a pathogen it's not a direct clinical sample but an experiment using yeast on a pathogen, which is why we choose this sample type.
 Then click `Continue`.
 Now you enter the sample attributes.
-For the sample name, provide a short name that describes the sample, such as `Crowe_antibody_barcodes`.
+For the sample name, provide a short name that describes the sample, such as `Delta_MAP_barcodes`.
 Also provide the rest of the information:
 
   - Organism: Severe acute respiratory syndrome coronavirus 2
@@ -43,7 +43,7 @@ We are adding to an existing BioProject, so enter [PRJNA770094](https://www.ncbi
 Finally, add a sample title, such as "Illumina barcode sequencing from mutational antigenic profiling of plasmas against the yeast-displayed SARS-CoV-2 Delta RBD."
 Then hit `Continue`, make sure everything looks correct, then hit `Submit`.
 
-After a brief bit of processing, the *BioSample* submission should show up, along with a sample accession that will be in the format of *SAMN16054076*.
+After a brief bit of processing, the *BioSample* submission should show up, along with a sample accession that will be in the format of *SAMN26317640*.
 Add this sample accession to [upload_config.yaml](upload_config.yaml) as the value for the *biosample_accession* key.
 
 ## Upload the sequencing data
@@ -67,7 +67,12 @@ In order to create the submission table, you need to specify which Illumina barc
 This can be done by editing the [upload_config.yaml](upload_config.yaml) file.
 This YAML has two entries:
 
- - The `barcode_runs` file, which is a CSV in the format of the repo's master barcode run file at [../data/barcode_runs.csv](../data/barcode_runs.csv). But importantly, this file should **only** have the barcode runs for the samples of interest for this *BioSample*. If you have already made a subset repo (see [../subset_data](../subset_data)) that just has those samples of interest, then you can put the path to the master [../data/barcode_runs.csv](../data/barcode_runs.csv) file for the whole repo. Otherwise you want to create a CSV file that just holds the barcode runs of interest (this can be done as described in [../subset_data](subset_data)) and put the path to that.
+ - The `barcode_runs` file, which is a CSV in the format of the repo's master barcode run file at [../data/barcode_runs.csv](../data/barcode_runs.csv). But importantly, this file should **only** have the barcode runs for the samples of interest for this *BioSample*. Create a CSV file that just holds the barcode runs of interest (this can be done as described in [../subset_data](subset_data)) and put the path to that. Do this as follows:
+
+     1. Edit the [samples_to_subset.csv](samples_to_subset.csv) file in this directory to contain just the names of the samples that you want to include in the new public subset-repo. These names should be specified in the same way as in the [../data/escape_profiles_config.yaml](../data/escape_profiles_config.yaml) file.
+
+     2. Then run the Jupyter notebook [subset_barcode_runs.ipynb](subset_barcode_runs.ipynb), which will output a list of all of the Illumina barcode runs that are needed for those samples. This list of Illumina barcode runs will be in the created file [barcode_runs_subset.csv](barcode_runs_subset.csv). These runs will be a subset of the collection of all runs in [../data/barcode_runs.csv](../data/barcode_runs.csv).
+
 
  - The `sample_name` which should be a concise description (no spaces) for the *BioSample*. This should be the same name used when creating the *BioSample* above.
 
@@ -100,7 +105,7 @@ It then uses FTP to upload them to the SRA.
 You can run the notebook interactively, but it will take a little while so make sure it doesn't time out.
 If you want to instead submit it via `slurm`, do this with:
 
-    sbatch --wrap="jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=-1 upload_to_SRA.ipynb" --time 2-0
+    sbatch --wrap="jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=-1 make_and_upload_tar.ipynb" --time 2-0
 
 After you have finished running [make_and_upload_tar.ipynb](make_and_upload_tar.ipynb), check carefully to make sure the FTP upload was completed.
 If needed, you can manually log into the FTP site to see the file and use `ls` to see the size of what has been transferred.
