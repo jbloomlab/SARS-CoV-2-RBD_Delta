@@ -3,7 +3,7 @@
 For experimental background, see our paper **here (update with link)**.
 
 ### What data are shown here?
-We are showing mutations to the SARS-CoV-2 Delta RBD that escape binding by polyclonal antibodies from individuals who received the Pfizer/BioNTech mRNA vaccine, primary Delta infection, or who were vaccinated with an mRNA vaccine (Moderna or Pfizer/BioNTech) and then had a Delta breakthrough infection, measured using mutational antigenic profiling. Raw data are available raw data are available [here]().
+We are showing mutations to the SARS-CoV-2 Delta RBD that escape binding by polyclonal antibodies from individuals who received the Pfizer/BioNTech mRNA vaccine, primary Delta infection, or who were vaccinated with an mRNA vaccine (Moderna or Pfizer/BioNTech) and then had a Delta breakthrough infection, measured using mutational antigenic profiling. Raw data are available raw data are available [here](https://github.com/jbloomlab/SARS-CoV-2-RBD_Delta/blob/main/results/supp_data/aggregate_raw_data.csv).
 The drop-down menus can be used to select the escape-mutation maps for each antibody or plasma.
 
 When you click on sites, they will be highlighted on the protein structure of the ACE2-bound Wuhan-Hu-1 RBD structure ([PDB 6M0J](https://www.rcsb.org/structure/6M0J)) or to the RBD of the Delta variant ([PDB 7V8B](https://www.rcsb.org/structure/7v8b)).
