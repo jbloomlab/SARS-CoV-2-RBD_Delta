@@ -1,12 +1,12 @@
 ﻿condition,name,class
-P02_repeat_500,P02,2x BNT162b2
-P03_repeat_1250,P03,2x BNT162b2
-P04_repeat_1250,P04,2x BNT162b2
-P05_repeat_500,P05,2x BNT162b2
-P08_repeat_500,P08,2x BNT162b2
-P09_repeat_200,P09,2x BNT162b2
-P12_repeat_200,P12,2x BNT162b2
-P14_repeat_1250,P14,2x BNT162b2
+P02_500,P02,2x BNT162b2
+P03_1250,P03,2x BNT162b2
+P04_1250,P04,2x BNT162b2
+P05_500,P05,2x BNT162b2
+P08_500,P08,2x BNT162b2
+P09_200,P09,2x BNT162b2
+P12_200,P12,2x BNT162b2
+P14_1250,P14,2x BNT162b2
 M02-day-119_200,M02-day-119,2x mRNA-1273
 M05-day-119_500,M05-day-119,2x mRNA-1273
 M08-day-119_200,M08-day-119,2x mRNA-1273
@@ -67,14 +67,14 @@ COV2-2082_400,COV2-2082,class 4
 COV2-2094_400,COV2-2094,class 4
 COV2-2677_400,COV2-2677,class 4
 CR3022_400,CR3022,class 4
-267C_repeat_200,267C,Delta breakthrough
-268C_repeat_500,268C,Delta breakthrough
-273C_repeat_500,273C,Delta breakthrough
-274C_repeat_500,274C,Delta breakthrough
-276C_repeat_500,276C,Delta breakthrough
-277C_repeat_500,277C,Delta breakthrough
-278C_repeat_1250,278C,Delta breakthrough
-279C_repeat_1250,279C,Delta breakthrough
+267C_200,267C,Delta breakthrough
+268C_500,268C,Delta breakthrough
+273C_500,273C,Delta breakthrough
+274C_500,274C,Delta breakthrough
+276C_500,276C,Delta breakthrough
+277C_500,277C,Delta breakthrough
+278C_1250,278C,Delta breakthrough
+279C_1250,279C,Delta breakthrough
 Delta_1_500,Delta 1,primary Delta infection
 Delta_3_350,Delta 3,primary Delta infection
 Delta_4_350,Delta 4,primary Delta infection
