@@ -32,19 +32,31 @@
 #   dmslogo_draw_logo_kwargs -> any keyword arguments to dmslogo.draw_logo
 #   dmslogo_draw_line_kwargs -> any keyword arguments to dmslogo.draw_line
 
+# these are the sites that are plotted by default for
+# delta Delta_breakthrough:
+# [408,417,452,456,475,477,478,484,485,486,501]
+# primary_Delta:
+# [365,384,417,452,456,472,475,477,478,484,485,486,490,501]
+# these are the sites I want to add regardless due to prevalence in nature (pre-Omicron)
+# [417,452,484,501,477,478]
+# (can't include all Omicron sites unfortunately as that would make the logo plots too wide to be visible in a figure)
+# new_list
+# [365, 384, 408, 417, 452, 456, 472, 475, 477, 478, 484, 485, 486, 490, 501]
+
 Delta_breakthrough:
   conditions:
-    267C_200: 267C
-    268C_500: 268C
+    279C_1250: 279C
+    278C_1250: 278C
+    276C_500: 276C
     273C_500: 273C
     274C_500: 274C
-    276C_500: 276C
+    268C_500: 268C
+    267C_200: 267C
     277C_500: 277C
-    278C_1250: 278C
-    279C_1250: 279C
   plot_auto_identified_sites: default # sensitive
   # add_sites: [346,365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,472,477,478,484,494,501]
-  add_sites: [417,452,477,478,484,501]
+  # add_sites: [417,452,477,478,484,501]
+  add_sites: [365, 384, 408, 417, 452, 456, 472, 475, 477, 478, 484, 485, 486, 490, 501]
   exclude_sites: [336, 361]
   site_color_scheme: barnes_serum_epitopes
   color_by_dms: True
@@ -143,7 +155,8 @@ primary_Delta:
     Delta_7_1250: Delta 7
   plot_auto_identified_sites: default # sensitive
   # add_sites: [346,365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,472,477,478,484,494,501]
-  add_sites: [417,452,477,478,484,501]
+  # add_sites: [417,452,477,478,484,501]
+  add_sites: [365, 384, 408, 417, 452, 456, 472, 475, 477, 478, 484, 485, 486, 490, 501]
   exclude_sites: [336, 361]
   site_color_scheme: barnes_serum_epitopes
   color_by_dms: True

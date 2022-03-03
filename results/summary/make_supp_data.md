@@ -167,14 +167,17 @@ for metric_type, (set_name, condition_set) in itertools.product(['mutation', 'si
                    data=corrs,
                    x=0.01 * xspan + xmin,
                    y=0.99 * yspan + ymin,
-                   size=10,
+                   size=14,
                    ha='left',
                    va='top',
                    ) +
          facet_wrap('~ selection', ncol=ncol) +
          theme_classic() +
          theme(figure_size=(2.5 * ncol, 2.5 * nrow),
-               plot_title=element_text(size=14)) +
+               text=element_text(size=16),
+               strip_text=element_text(size=20),
+               axis_title=element_text(size=20),
+               plot_title=element_text(size=24)) +
          ggtitle(f"{metric_type}-level escape")
          )
 
