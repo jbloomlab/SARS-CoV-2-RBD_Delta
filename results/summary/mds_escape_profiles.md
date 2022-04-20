@@ -392,6 +392,23 @@ for name, specs in mds_config.items():
 
 
     
+    Making plot Delta_breakthrough_vax, which has the following antibodies:
+    ['C105_400', 'CB6_400', 'COV2-2165_400', 'COV2-2196_400', 'COV2-2832_400', 'REGN10933_400', 'C002_400', 'C121_400', 'C144_400', 'COV2-2479_400', 'LY-CoV555_400', 'COV2-2050_400', 'C110_400', 'C135_400', 'COV2-2096_400', 'COV2-2130_400', 'COV2-2499_400', 'REGN10987_400', 'COV2-2082_400', 'COV2-2094_400', 'COV2-2677_400', 'CR3022_400', '267C_200', '268C_500', '273C_500', '274C_500', '276C_500', '277C_500', '278C_1250', '279C_1250', 'Delta_1_500', 'Delta_3_350', 'Delta_4_350', 'Delta_6_500', 'Delta_7_1250', 'Delta_8_500', 'Delta_10_1250', 'Delta_11_500', 'M02-day-119_200', 'M05-day-119_500', 'M08-day-119_200', 'M10-day-119_200', 'M12-day-119_200', 'M16-day-119_1250', 'M17-day-119_200', 'M18-day-119_80', 'M19-day-119_200', 'M01-day-119_80', 'M03-day-119_200', 'M04-day-119_200', 'M06-day-119_80', 'M07-day-119_200', 'M09-day-119_500', 'M11-day-119_200', 'M13-day-119_200', 'M14-day-119_500', 'M20-day-119_200', 'M21-day-119_200', 'M22-day-119_200', 'M23-day-119_200']
+    stress = 29.63965680250899 from iteration 452
+    Manual calculus of sklearn stress : 29.639656404532648
+    Kruskal's Stress : 0.2119094874039642
+    [Poor > 0.2 > Fair > 0.1 > Good > 0.05 > Excellent > 0.025 > Perfect > 0.0]
+    Using condition-level color scheme in column class_color of data/mds_color_schemes.csv
+    Saving plot to results/multidimensional_scaling/Delta_breakthrough_vax_mds.pdf
+
+
+
+    
+![png](mds_escape_profiles_files/mds_escape_profiles_18_7.png)
+    
+
+
+    
     Making plot primaries_breakthrough, which has the following antibodies:
     ['12C_d61_160', '13_d15_200', '1C_d26_200', '22C_d28_200', '23C_d26_80', '23_d21_1250', '24C_d32_200', '25C_d48_200', '25_d18_500', '6C_d33_500', '7C_d29_500', 'COV-021_500', 'COV-047_200', 'COV-057_50', 'COV-072_200', 'COV-107_80', 'C105_400', 'CB6_400', 'COV2-2165_400', 'COV2-2196_400', 'COV2-2832_400', 'REGN10933_400', 'C002_400', 'C121_400', 'C144_400', 'COV2-2479_400', 'LY-CoV555_400', 'COV2-2050_400', 'C110_400', 'C135_400', 'COV2-2096_400', 'COV2-2130_400', 'COV2-2499_400', 'REGN10987_400', 'COV2-2082_400', 'COV2-2094_400', 'COV2-2677_400', 'CR3022_400', '267C_200', '268C_500', '273C_500', '274C_500', '276C_500', '277C_500', '278C_1250', '279C_1250', 'Delta_1_500', 'Delta_3_350', 'Delta_4_350', 'Delta_6_500', 'Delta_7_1250', 'Delta_8_500', 'Delta_10_1250', 'Delta_11_500', 'K007_500', 'K031_500', 'K033_500', 'K040_500', 'K041_500', 'K046_200', 'K114_200', 'K115_old_80', 'K119_200']
     stress = 31.089955021533697 from iteration 270
@@ -404,7 +421,7 @@ for name, specs in mds_config.items():
 
 
     
-![png](mds_escape_profiles_files/mds_escape_profiles_18_7.png)
+![png](mds_escape_profiles_files/mds_escape_profiles_18_9.png)
     
 
 

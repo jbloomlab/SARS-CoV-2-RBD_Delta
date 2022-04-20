@@ -268,6 +268,12 @@ for supergroup, subgroup in line_plot_config.items():
     /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/scales/scale_alpha.py:68: PlotnineWarning: Using alpha for a discrete variable is not advised.
 
 
+    Saving to results/lineplots_by_group/primary_breakthrough_vax_grouped_lineplots.pdf
+
+
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2021/SARS-CoV-2-RBD_Delta/env/lib/python3.8/site-packages/plotnine/scales/scale_alpha.py:68: PlotnineWarning: Using alpha for a discrete variable is not advised.
+
+
     Saving to results/lineplots_by_group/mRNAvax_comparelibs_grouped_lineplots.pdf
 
 
@@ -283,18 +289,6 @@ for supergroup, subgroup in line_plot_config.items():
 
 
     
-![png](lineplots_by_group_files/lineplots_by_group_8_8.png)
-    
-
-
-
-    
-![png](lineplots_by_group_files/lineplots_by_group_8_9.png)
-    
-
-
-
-    
 ![png](lineplots_by_group_files/lineplots_by_group_8_10.png)
     
 
@@ -302,6 +296,24 @@ for supergroup, subgroup in line_plot_config.items():
 
     
 ![png](lineplots_by_group_files/lineplots_by_group_8_11.png)
+    
+
+
+
+    
+![png](lineplots_by_group_files/lineplots_by_group_8_12.png)
+    
+
+
+
+    
+![png](lineplots_by_group_files/lineplots_by_group_8_13.png)
+    
+
+
+
+    
+![png](lineplots_by_group_files/lineplots_by_group_8_14.png)
     
 
 

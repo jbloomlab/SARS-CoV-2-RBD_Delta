@@ -238,6 +238,75 @@ Delta_vs_breakthrough:
   default_circle_color: "#000000"
   no_labels: True
 
+Delta_breakthrough_vax:
+  conditions:
+    C105_400: C105_400
+    CB6_400: CB6_400
+    COV2-2165_400: COV2-2165_400
+    COV2-2196_400: COV2-2196_400
+    COV2-2832_400: COV2-2832_400
+    REGN10933_400: REGN10933_400
+    C002_400: C002_400
+    C121_400: C121_400
+    C144_400: C144_400
+    COV2-2479_400: COV2-2479_400
+    LY-CoV555_400: LY-CoV555_400
+    COV2-2050_400: COV2-2050_400
+    C110_400: C110_400
+    C135_400: C135_400
+    COV2-2096_400: COV2-2096_400
+    COV2-2130_400: COV2-2130_400
+    COV2-2499_400: COV2-2499_400
+    REGN10987_400: REGN10987_400
+    COV2-2082_400: COV2-2082_400
+    COV2-2094_400: COV2-2094_400
+    COV2-2677_400: COV2-2677_400
+    CR3022_400: CR3022_400
+    267C_200: 267C_200
+    268C_500: 268C_500
+    273C_500: 273C_500
+    274C_500: 274C_500
+    276C_500: 276C_500
+    277C_500: 277C_500
+    278C_1250: 278C_1250
+    279C_1250: 279C_1250
+    Delta_1_500: Delta_1_500
+    Delta_3_350: Delta_3_350
+    Delta_4_350: Delta_4_350
+    Delta_6_500: Delta_6_500
+    Delta_7_1250: Delta_7_1250
+    Delta_8_500: Delta_8_500
+    Delta_10_1250: Delta_10_1250
+    Delta_11_500: Delta_11_500
+    M02-day-119_200: M02-day-119_200
+    M05-day-119_500: M05-day-119_500
+    M08-day-119_200: M08-day-119_200
+    M10-day-119_200: M10-day-119_200
+    M12-day-119_200: M12-day-119_200
+    M16-day-119_1250: M16-day-119_1250
+    M17-day-119_200: M17-day-119_200
+    M18-day-119_80: M18-day-119_80
+    M19-day-119_200: M19-day-119_200
+    M01-day-119_80: M01-day-119_80
+    M03-day-119_200: M03-day-119_200
+    M04-day-119_200: M04-day-119_200
+    M06-day-119_80: M06-day-119_80
+    M07-day-119_200: M07-day-119_200
+    M09-day-119_500: M09-day-119_500
+    M11-day-119_200: M11-day-119_200
+    M13-day-119_200: M13-day-119_200
+    M14-day-119_500: M14-day-119_500
+    M20-day-119_200: M20-day-119_200
+    M21-day-119_200: M21-day-119_200
+    M22-day-119_200: M22-day-119_200
+    M23-day-119_200: M23-day-119_200
+  color_scheme: [data/mds_color_schemes.csv, class_color]
+  plot_size: 5.5
+  random_state: 3
+  pie_size: 200
+  default_circle_color: "#000000"
+  no_labels: True
+
 primaries_breakthrough:
   conditions:
     12C_d61_160: 12C_d61_160

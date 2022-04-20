@@ -57,6 +57,49 @@ Delta_primary_v_breakthrough:
       - 278C_1250
       - 279C_1250
 
+primary_breakthrough_vax:
+    "primary Delta infection (n=8)\nDelta library":
+      - Delta_1_500
+      - Delta_3_350
+      - Delta_4_350
+      - Delta_6_500
+      - Delta_7_1250
+      - Delta_8_500
+      - Delta_10_1250
+      - Delta_11_500
+    "Delta breakthrough after 2x mRNA (n=8)\nDelta library":
+      - 267C_200
+      - 268C_500
+      - 273C_500
+      - 274C_500
+      - 276C_500
+      - 277C_500
+      - 278C_1250
+      - 279C_1250
+    "2x mRNA-1273 (n=22)\nWuhan-Hu-1 library":
+      - M01-day-119_80
+      - M02-day-119_200
+      - M03-day-119_200
+      - M04-day-119_200
+      - M05-day-119_500
+      - M07-day-119_200
+      - M08-day-119_200
+      - M09-day-119_500
+      - M06-day-119_80
+      - M10-day-119_200
+      - M11-day-119_200
+      - M12-day-119_200
+      - M13-day-119_200
+      - M14-day-119_500
+      - M16-day-119_1250
+      - M17-day-119_200
+      - M18-day-119_80
+      - M19-day-119_200
+      - M20-day-119_200
+      - M21-day-119_200
+      - M22-day-119_200
+      - M23-day-119_200
+
 mRNAvax_comparelibs:
   "2x mRNA-1273 (n=22)\nWuhan-Hu-1 library":
     - M01-day-119_80
